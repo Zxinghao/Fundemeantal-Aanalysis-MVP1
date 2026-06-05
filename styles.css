@@ -270,11 +270,39 @@ button {
   gap: 10px;
 }
 
+.section-heading {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+.section-heading select {
+  max-width: 130px;
+  padding: 8px 10px;
+}
+
 .update-card {
   background: #fffdf8;
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 12px;
+}
+
+.update-card.approved {
+  border-color: rgba(35, 109, 91, 0.45);
+}
+
+.update-card.rejected {
+  border-color: rgba(163, 61, 49, 0.45);
+}
+
+.update-card.needs_more_evidence {
+  border-color: rgba(173, 95, 35, 0.5);
 }
 
 .update-card strong,
@@ -286,6 +314,30 @@ button {
 .update-card p {
   color: var(--muted);
   font-size: 13px;
+}
+
+.review-actions {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+}
+
+.review-actions button {
+  background: rgba(30, 28, 24, 0.08);
+  color: var(--ink);
+  font-size: 12px;
+  padding: 8px 6px;
+}
+
+.review-actions button:hover {
+  background: rgba(30, 28, 24, 0.14);
+}
+
+.empty-state,
+.load-error {
+  color: var(--muted);
+  padding: 24px;
 }
 
 form {

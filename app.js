@@ -30,6 +30,7 @@ const pendingUpdates = document.querySelector("#pending-updates");
 const dialog = document.querySelector("#company-dialog");
 const detail = document.querySelector("#company-detail");
 const form = document.querySelector("#submission-form");
+const reviewFilter = document.querySelector("#review-filter");
 
 async function boot() {
   try {
@@ -82,6 +83,8 @@ function bindInteractions() {
   document.querySelector("#close-dialog").addEventListener("click", () => dialog.close());
   document.querySelector("#reset-view").addEventListener("click", () => map.scrollTo({ left: 0, top: 0, behavior: "smooth" }));
   form.addEventListener("submit", handleSubmission);
+  reviewFilter.addEventListener("change", renderPendingUpdates);
+  pendingUpdates.addEventListener("click", handleReviewAction);
 }
 
 function render() {
@@ -161,14 +164,67 @@ function signalLabel(label) {
 }
 
 function renderPendingUpdates() {
-  const industryEvents = state.industry.updateEvents.map((event) => ({ company: event.companyId || event.nodeId || state.industry.name, impact: event.impactType, source: event.sourceUrl || event.sourceNote || "未提供来源", summary: event.summary, status: event.status }));
-  const allUpdates = [...industryEvents, ...state.pendingUpdates];
-  pendingUpdates.innerHTML = allUpdates.map((update) => `<article class="update-card"><strong>${update.company}</strong><span>${update.status} · ${update.impact}</span><p>${update.summary}</p><span>来源：${update.source}</span></article>`).join("");
+  const visibleUpdates = filterReviewQueue(buildReviewQueue());
+  if (visibleUpdates.length === 0) {
+    pendingUpdates.innerHTML = `<div class="empty-state">当前筛选条件下没有更新事件。</div>`;
+    return;
+  }
+  pendingUpdates.innerHTML = visibleUpdates.map((update) => `<article class="update-card ${update.reviewStatus}"><strong>${update.company}</strong><span>${reviewStatusLabel(update.reviewStatus)} · ${update.impact}</span><p>${update.summary}</p><span>来源：${update.source}</span><div class="review-actions"><button type="button" data-review-id="${update.id}" data-review-status="approved">通过</button><button type="button" data-review-id="${update.id}" data-review-status="needs_more_evidence">补证据</button><button type="button" data-review-id="${update.id}" data-review-status="rejected">拒绝</button></div></article>`).join("");
+}
+
+function buildReviewQueue() {
+  const industryEvents = state.industry.updateEvents.map((event) => ({ id: event.id, company: event.companyId || event.nodeId || state.industry.name, impact: event.impactType, source: event.sourceUrl || event.sourceNote || "未提供来源", summary: event.summary, reviewStatus: reviewStatusFor(event.id, event.status) }));
+  const userEvents = state.pendingUpdates.map((update) => ({ id: update.id || stableUpdateId(update), company: update.company, impact: update.impact, source: update.source, summary: update.summary, reviewStatus: reviewStatusFor(update.id || stableUpdateId(update), update.status) }));
+  return [...industryEvents, ...userEvents];
+}
+
+function stableUpdateId(update) {
+  return `legacy-${encodeURIComponent(`${update.company}-${update.source}-${update.summary}`)}`;
+}
+
+function filterReviewQueue(queue) {
+  const selected = reviewFilter.value;
+  if (selected === "all") return queue;
+  return queue.filter((update) => update.reviewStatus === selected);
+}
+
+function reviewStatusFor(id, fallbackStatus) {
+  const decisions = loadReviewDecisions();
+  return decisions[id] || normalizeReviewStatus(fallbackStatus);
+}
+
+function normalizeReviewStatus(status) {
+  if (["approved", "rejected", "needs_more_evidence", "pending"].includes(status)) return status;
+  return "pending";
+}
+
+function reviewStatusLabel(status) {
+  const labels = { pending: "待审核", approved: "已通过", rejected: "已拒绝", needs_more_evidence: "需补证据" };
+  return labels[status] || status;
+}
+
+function loadReviewDecisions() {
+  const saved = localStorage.getItem("reviewDecisions");
+  if (!saved) return {};
+  try { return JSON.parse(saved); } catch { return {}; }
+}
+
+function saveReviewDecision(id, status) {
+  const decisions = loadReviewDecisions();
+  decisions[id] = status;
+  localStorage.setItem("reviewDecisions", JSON.stringify(decisions));
+}
+
+function handleReviewAction(event) {
+  const button = event.target.closest("[data-review-id]");
+  if (!button) return;
+  saveReviewDecision(button.dataset.reviewId, button.dataset.reviewStatus);
+  renderPendingUpdates();
 }
 
 function handleSubmission(event) {
   event.preventDefault();
-  const update = { company: document.querySelector("#submission-company").value.trim(), source: document.querySelector("#submission-source").value.trim(), summary: document.querySelector("#submission-summary").value.trim(), impact: document.querySelector("#submission-impact").value, status: "用户提交" };
+  const update = { id: `user-${Date.now()}`, company: document.querySelector("#submission-company").value.trim(), source: document.querySelector("#submission-source").value.trim(), summary: document.querySelector("#submission-summary").value.trim(), impact: document.querySelector("#submission-impact").value, status: "pending" };
   saveUserUpdate(update);
   state.pendingUpdates.unshift(update);
   renderPendingUpdates();

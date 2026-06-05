@@ -58,7 +58,16 @@
 
       <aside class="panel updates-panel">
         <section>
-          <h2>待审核更新</h2>
+          <div class="section-heading">
+            <h2>更新审核台</h2>
+            <select id="review-filter" aria-label="筛选审核状态">
+              <option value="all">全部</option>
+              <option value="pending">待审核</option>
+              <option value="approved">已通过</option>
+              <option value="rejected">已拒绝</option>
+              <option value="needs_more_evidence">需补证据</option>
+            </select>
+          </div>
           <div id="pending-updates" class="pending-list"></div>
         </section>
 

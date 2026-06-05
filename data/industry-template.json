@@ -1,0 +1,103 @@
+{
+  "industry": {
+    "id": "example-industry",
+    "name": "示例行业",
+    "description": "一句话说明这个行业的供应链研究对象。",
+    "terminalDemand": "终端需求从哪里来，例如政策、成本下降、技术突破或新增应用。",
+    "researchThesis": "当前行业链的核心投资研究主线。",
+    "lastReviewedAt": null
+  },
+  "nodes": [
+    {
+      "id": "terminal-demand",
+      "industryId": "example-industry",
+      "type": "terminal",
+      "title": "终端需求",
+      "summary": "终端需求描述。",
+      "layer": "终端",
+      "tags": ["需求增长"],
+      "position": { "x": 40, "y": 260 }
+    },
+    {
+      "id": "key-component",
+      "industryId": "example-industry",
+      "type": "chain",
+      "title": "关键部件",
+      "summary": "该部件为什么重要。",
+      "layer": "部件",
+      "tags": ["核心环节"],
+      "position": { "x": 300, "y": 260 }
+    },
+    {
+      "id": "example-company",
+      "industryId": "example-industry",
+      "type": "zisu",
+      "title": "示例公司",
+      "summary": "公司在供应链中的角色。",
+      "layer": "企业",
+      "tags": ["紫苏叶候选", "重要供应商"],
+      "position": { "x": 560, "y": 260 }
+    }
+  ],
+  "relationships": [
+    {
+      "from": "terminal-demand",
+      "to": "key-component",
+      "relationshipType": "depends_on",
+      "confidence": "medium",
+      "sourceIds": []
+    },
+    {
+      "from": "key-component",
+      "to": "example-company",
+      "relationshipType": "supplies",
+      "confidence": "medium",
+      "sourceIds": []
+    }
+  ],
+  "companies": [
+    {
+      "id": "example-company",
+      "name": "示例公司",
+      "ticker": "EXAMPLE",
+      "region": "示例地区",
+      "businessRole": "说明公司在供应链中的角色。",
+      "linkedNodeIds": ["example-company", "key-component"],
+      "isKeySupplier": true,
+      "isBottleneck": true,
+      "isZisuCandidate": true,
+      "signals": {
+        "importantSupplier": "是否重要供应商，以及依据。",
+        "bottleneckPosition": "是否卡脖子，以及依据。",
+        "playerConcentration": "这个环节有多少核心玩家。",
+        "recentCatalyst": "近期值得关注的订单、财报、产能或政策。"
+      },
+      "scores": {
+        "supplyChainImportance": 80,
+        "scarcity": 75,
+        "pricingPower": 70,
+        "switchingCost": 72,
+        "validationBarrier": 78,
+        "marketUnderappreciation": 65
+      },
+      "recentUpdates": []
+    }
+  ],
+  "updateEvents": [
+    {
+      "id": "event-example",
+      "sourceType": "user_submission",
+      "status": "pending",
+      "industryId": "example-industry",
+      "companyId": "example-company",
+      "nodeId": "key-component",
+      "impactType": "bottleneck_judgement",
+      "summary": "用户提交的数据摘要。",
+      "sourceUrl": null,
+      "sourceNote": "用户提供的官方数据或分析说明。",
+      "submittedBy": "user",
+      "reviewDecision": null,
+      "reviewedAt": null
+    }
+  ]
+}

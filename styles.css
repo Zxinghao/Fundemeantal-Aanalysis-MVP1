@@ -334,6 +334,37 @@ button {
   background: rgba(30, 28, 24, 0.14);
 }
 
+.source-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.source-item {
+  background: rgba(30, 28, 24, 0.04);
+  border: 1px solid rgba(120, 92, 56, 0.12);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.source-item strong,
+.source-item span,
+.source-item a {
+  display: block;
+}
+
+.source-item span,
+.source-empty {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.source-item a {
+  color: var(--accent-dark);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
 .empty-state,
 .load-error {
   color: var(--muted);

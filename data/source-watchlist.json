@@ -1,0 +1,85 @@
+{
+  "fuel-cell": {
+    "daily": [
+      {
+        "id": "jm-news",
+        "companyId": "jm",
+        "nodeId": "catalyst",
+        "name": "Johnson Matthey news",
+        "url": "https://matthey.com/news",
+        "sourceType": "company_official",
+        "watchFor": ["fuel cell", "hydrogen", "catalyst", "MEA", "CCM"]
+      },
+      {
+        "id": "forvia-news",
+        "companyId": "forvia",
+        "nodeId": "tank",
+        "name": "FORVIA news",
+        "url": "https://www.forvia.com/en/newsroom",
+        "sourceType": "company_official",
+        "watchFor": ["hydrogen", "storage", "commercial vehicle", "tank"]
+      },
+      {
+        "id": "garrett-news",
+        "companyId": "garrett",
+        "nodeId": "compressor",
+        "name": "Garrett Motion news",
+        "url": "https://www.garrettmotion.com/news/",
+        "sourceType": "company_official",
+        "watchFor": ["fuel cell", "compressor", "hydrogen", "electric compressor"]
+      }
+    ],
+    "weekly": [
+      {
+        "id": "doe-fuel-cells",
+        "companyId": null,
+        "nodeId": "stack",
+        "name": "U.S. DOE fuel cells office",
+        "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+        "sourceType": "government",
+        "watchFor": ["fuel cell", "hydrogen", "funding", "storage", "infrastructure"]
+      },
+      {
+        "id": "umicore-ir",
+        "companyId": "umicore",
+        "nodeId": "catalyst",
+        "name": "Umicore investors",
+        "url": "https://www.umicore.com/en/investors/",
+        "sourceType": "company_official",
+        "watchFor": ["fuel cell", "catalyst", "precious metals", "guidance"]
+      },
+      {
+        "id": "sgl-ir",
+        "companyId": "sgl",
+        "nodeId": "gdl",
+        "name": "SGL Carbon investor relations",
+        "url": "https://www.sglcarbon.com/en/investor-relations/",
+        "sourceType": "company_official",
+        "watchFor": ["fuel cell", "GDL", "Sigracet", "carbon fiber"]
+      },
+      {
+        "id": "hexagon-purus-ir",
+        "companyId": "hexagon",
+        "nodeId": "tank",
+        "name": "Hexagon Purus investor relations",
+        "url": "https://hexagonpurus.com/investor-relations",
+        "sourceType": "company_official",
+        "watchFor": ["hydrogen", "storage", "Type 4", "commercial vehicle"]
+      }
+    ]
+  },
+  "ai-optics": {
+    "daily": [],
+    "weekly": [
+      {
+        "id": "ai-optics-placeholder",
+        "companyId": null,
+        "nodeId": "optical",
+        "name": "AI 光模块待补充来源",
+        "url": null,
+        "sourceType": "placeholder",
+        "watchFor": ["CPO", "optical module", "laser", "data center"]
+      }
+    ]
+  }
+}

@@ -12,12 +12,11 @@ function usage() {
 
 function normalizeImpact(impact) {
   const map = {
-    供应链重要性: "supply_chain_importance",
-    卡脖子判断: "bottleneck_judgement",
-    "财报/订单动态": "financial_update",
-    "新增玩家/关系": "relationship_change"
+    "Supply chain importance": "supply_chain_importance",
+    "Bottleneck judgement": "bottleneck_judgement",
+    "Financial or order update": "financial_update",
+    "New player or relationship": "relationship_change"
   };
-
   return map[impact] || impact || "supply_chain_importance";
 }
 
@@ -45,48 +44,37 @@ function eventFromReview(item, exportedAt) {
 function appendRecentUpdate(industry, item) {
   const company = industry.companies.find((candidate) => candidate.name === item.company || candidate.id === item.company);
   if (!company) return;
-
-  const note = `[已审核] ${item.summary}`;
-  if (!company.recentUpdates.includes(note)) {
-    company.recentUpdates.unshift(note);
-  }
+  const note = `[Reviewed] ${item.summary}`;
+  if (!company.recentUpdates.includes(note)) company.recentUpdates.unshift(note);
 }
 
 export function applyReviews(industries, reviewExport) {
   const approvedItems = (reviewExport.reviewedItems || []).filter((item) => item.reviewStatus === "approved");
   const applied = [];
-
   for (const item of approvedItems) {
     const industry = industries.find((candidate) => candidate.id === item.industryId);
     if (!industry) continue;
-
     const newEvent = eventFromReview(item, reviewExport.exportedAt);
     const exists = industry.updateEvents.some((event) => event.id === newEvent.id || event.originalEventId === item.id);
-    if (!exists) {
-      industry.updateEvents.unshift(newEvent);
-    }
-
+    if (!exists) industry.updateEvents.unshift(newEvent);
     appendRecentUpdate(industry, item);
     industry.lastReviewedAt = reviewExport.exportedAt || new Date().toISOString();
     applied.push(item.id);
   }
-
   return applied;
 }
 
 async function main() {
-  const reviewFile = process.argv[2];
+  const reviewFile = globalThis.process.argv[2];
   if (!reviewFile) {
     usage();
-    process.exitCode = 1;
+    globalThis.process.exitCode = 1;
     return;
   }
-
-  const reviewPath = path.resolve(process.cwd(), reviewFile);
+  const reviewPath = path.resolve(globalThis.process.cwd(), reviewFile);
   const industries = JSON.parse(await fs.readFile(industriesPath, "utf8"));
   const reviewExport = JSON.parse(await fs.readFile(reviewPath, "utf8"));
   const applied = applyReviews(industries, reviewExport);
-
   await fs.writeFile(outputPath, `${JSON.stringify(industries, null, 2)}\n`);
   console.log(`Applied ${applied.length} approved review decisions to ${outputPath}`);
 }

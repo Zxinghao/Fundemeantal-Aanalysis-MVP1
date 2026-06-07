@@ -25,11 +25,14 @@
 
     if (!detail || !header || !company) return;
 
-    detail.querySelector(".company-flags")?.remove();
-    header.insertAdjacentHTML("afterend", renderCompanyFlags(company));
+    const currentFlags = detail.querySelector(".company-flags");
+    if (currentFlags?.dataset.companyName === companyName) return;
+
+    currentFlags?.remove();
+    header.insertAdjacentHTML("afterend", renderCompanyFlags(company, companyName));
   }
 
-  function renderCompanyFlags(company) {
+  function renderCompanyFlags(company, companyName) {
     const flags = [
       ["Key supplier", company.isKeySupplier],
       ["Bottleneck", company.isBottleneck],
@@ -37,7 +40,7 @@
     ];
 
     return `
-      <div class="company-flags">
+      <div class="company-flags" data-company-name="${escapeAttribute(companyName)}">
         ${flags.map(([label, active]) => `
           <div class="flag-pill ${active ? "active" : "inactive"}">
             <span>${active ? "Yes" : "No"}</span>
@@ -46,5 +49,9 @@
         `).join("")}
       </div>
     `;
+  }
+
+  function escapeAttribute(value) {
+    return String(value).replace(/"/g, "&quot;");
   }
 })();

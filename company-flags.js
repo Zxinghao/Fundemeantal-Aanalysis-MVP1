@@ -1,20 +1,31 @@
 (function enhanceCompanyDialogFlags() {
-  const originalOpenCompany = window.openCompany;
+  let companies = [];
 
-  if (typeof originalOpenCompany !== "function") return;
+  fetch("data/industries.json", { cache: "no-store" })
+    .then((response) => response.ok ? response.json() : [])
+    .then((industries) => {
+      companies = industries.flatMap((industry) => industry.companies || []);
+      injectCompanyFlags();
+    })
+    .catch(() => {
+      companies = [];
+    });
 
-  window.openCompany = function openCompanyWithFlags(id) {
-    originalOpenCompany(id);
+  document.addEventListener("click", () => {
+    setTimeout(injectCompanyFlags, 0);
+  });
 
+  function injectCompanyFlags() {
     const detail = document.querySelector("#company-detail");
     const header = detail?.querySelector(".detail-header");
-    const company = typeof window.findCompany === "function" ? window.findCompany(id) : null;
+    const companyName = header?.querySelector("h2")?.textContent?.trim();
+    const company = companies.find((item) => item.name === companyName);
 
     if (!detail || !header || !company) return;
 
     detail.querySelector(".company-flags")?.remove();
     header.insertAdjacentHTML("afterend", renderCompanyFlags(company));
-  };
+  }
 
   function renderCompanyFlags(company) {
     const flags = [

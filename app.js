@@ -238,7 +238,7 @@ function renderMap() {
 
 function shortNodeMeta(node) {
   const company = findCompany(node.id);
-  if (company) return company.businessRole;
+  if (company) return "Company";
   return node.layer;
 }
 

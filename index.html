@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>供应链紫苏叶研究平台</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="review-export.css">
   </head>
   <body>
     <header class="hero">
@@ -68,6 +69,10 @@
               <option value="needs_more_evidence">需补证据</option>
             </select>
           </div>
+          <div class="review-tools">
+            <button id="export-review" type="button">导出审核结果</button>
+            <small id="export-status">审核决定会先保存在本机浏览器，导出后可用于回写正式数据。</small>
+          </div>
           <div id="pending-updates" class="pending-list"></div>
         </section>
 
@@ -98,5 +103,6 @@
     </dialog>
 
     <script src="app.js"></script>
+    <script src="review-export.js"></script>
   </body>
 </html>

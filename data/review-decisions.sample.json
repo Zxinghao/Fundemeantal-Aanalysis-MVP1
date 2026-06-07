@@ -1,0 +1,31 @@
+{
+  "exportedAt": "2026-06-07T00:00:00.000Z",
+  "industryId": "fuel-cell",
+  "industryName": "汽车燃料电池行业",
+  "reviewedItems": [
+    {
+      "id": "ai-fuel-cell-2026-06-07-jm-001",
+      "industryId": "fuel-cell",
+      "industryName": "汽车燃料电池行业",
+      "company": "Johnson Matthey",
+      "impact": "technology_change",
+      "origin": "AI 扫描",
+      "source": "https://matthey.com/news",
+      "sourceIds": ["jm-news"],
+      "summary": "测试审核通过事件。",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "ai-fuel-cell-2026-06-07-forvia-002",
+      "industryId": "fuel-cell",
+      "industryName": "汽车燃料电池行业",
+      "company": "FORVIA",
+      "impact": "capacity_change",
+      "origin": "AI 扫描",
+      "source": "https://www.forvia.com/en/newsroom",
+      "sourceIds": ["forvia-news"],
+      "summary": "测试拒绝事件。",
+      "reviewStatus": "rejected"
+    }
+  ]
+}

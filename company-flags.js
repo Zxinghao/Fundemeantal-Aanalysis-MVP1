@@ -11,9 +11,11 @@
       companies = [];
     });
 
-  document.addEventListener("click", () => {
-    setTimeout(injectCompanyFlags, 0);
-  });
+  const detail = document.querySelector("#company-detail");
+  if (detail) {
+    const observer = new MutationObserver(() => injectCompanyFlags());
+    observer.observe(detail, { childList: true, subtree: true });
+  }
 
   function injectCompanyFlags() {
     const detail = document.querySelector("#company-detail");

@@ -1,5 +1,6 @@
 {
   "fuel-cell": {
+    "sourceLanguagePolicy": "Prioritize English official sources, investor relations pages, filings, government sources, and standards bodies.",
     "daily": [
       {
         "id": "jm-news",
@@ -8,6 +9,7 @@
         "name": "Johnson Matthey news",
         "url": "https://matthey.com/news",
         "sourceType": "company_official",
+        "language": "en",
         "watchFor": ["fuel cell", "hydrogen", "catalyst", "MEA", "CCM"]
       },
       {
@@ -17,6 +19,7 @@
         "name": "FORVIA news",
         "url": "https://www.forvia.com/en/newsroom",
         "sourceType": "company_official",
+        "language": "en",
         "watchFor": ["hydrogen", "storage", "commercial vehicle", "tank"]
       },
       {
@@ -26,6 +29,7 @@
         "name": "Garrett Motion news",
         "url": "https://www.garrettmotion.com/news/",
         "sourceType": "company_official",
+        "language": "en",
         "watchFor": ["fuel cell", "compressor", "hydrogen", "electric compressor"]
       }
     ],
@@ -37,6 +41,7 @@
         "name": "U.S. DOE fuel cells office",
         "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
         "sourceType": "government",
+        "language": "en",
         "watchFor": ["fuel cell", "hydrogen", "funding", "storage", "infrastructure"]
       },
       {
@@ -46,6 +51,7 @@
         "name": "Umicore investors",
         "url": "https://www.umicore.com/en/investors/",
         "sourceType": "company_official",
+        "language": "en",
         "watchFor": ["fuel cell", "catalyst", "precious metals", "guidance"]
       },
       {
@@ -55,6 +61,7 @@
         "name": "SGL Carbon investor relations",
         "url": "https://www.sglcarbon.com/en/investor-relations/",
         "sourceType": "company_official",
+        "language": "en",
         "watchFor": ["fuel cell", "GDL", "Sigracet", "carbon fiber"]
       },
       {
@@ -64,20 +71,23 @@
         "name": "Hexagon Purus investor relations",
         "url": "https://hexagonpurus.com/investor-relations",
         "sourceType": "company_official",
+        "language": "en",
         "watchFor": ["hydrogen", "storage", "Type 4", "commercial vehicle"]
       }
     ]
   },
   "ai-optics": {
+    "sourceLanguagePolicy": "Use English official sources first. Placeholder only until authoritative sources are added.",
     "daily": [],
     "weekly": [
       {
         "id": "ai-optics-placeholder",
         "companyId": null,
         "nodeId": "optical",
-        "name": "AI 光模块待补充来源",
+        "name": "AI optical module source placeholder",
         "url": null,
         "sourceType": "placeholder",
+        "language": "en",
         "watchFor": ["CPO", "optical module", "laser", "data center"]
       }
     ]

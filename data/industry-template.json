@@ -1,10 +1,14 @@
 {
   "industry": {
     "id": "example-industry",
-    "name": "示例行业",
-    "description": "一句话说明这个行业的供应链研究对象。",
-    "terminalDemand": "终端需求从哪里来，例如政策、成本下降、技术突破或新增应用。",
-    "researchThesis": "当前行业链的核心投资研究主线。",
+    "name": "Example Industry",
+    "description": "One-sentence description of the supply chain research object.",
+    "terminalDemand": "Describe where end demand comes from, such as policy, cost decline, technology breakthrough, or new applications.",
+    "researchThesis": "Current core research thesis for the industry supply chain.",
+    "languagePolicy": {
+      "primaryLanguage": "en",
+      "sourcePreference": "Prioritize English official sources, filings, government sources, and investor materials."
+    },
     "lastReviewedAt": null
   },
   "nodes": [
@@ -12,30 +16,30 @@
       "id": "terminal-demand",
       "industryId": "example-industry",
       "type": "terminal",
-      "title": "终端需求",
-      "summary": "终端需求描述。",
-      "layer": "终端",
-      "tags": ["需求增长"],
+      "title": "End Demand",
+      "summary": "End demand description.",
+      "layer": "End market",
+      "tags": ["demand growth"],
       "position": { "x": 40, "y": 260 }
     },
     {
       "id": "key-component",
       "industryId": "example-industry",
       "type": "chain",
-      "title": "关键部件",
-      "summary": "该部件为什么重要。",
-      "layer": "部件",
-      "tags": ["核心环节"],
+      "title": "Key Component",
+      "summary": "Why this component matters.",
+      "layer": "Component",
+      "tags": ["core node"],
       "position": { "x": 300, "y": 260 }
     },
     {
       "id": "example-company",
       "industryId": "example-industry",
       "type": "zisu",
-      "title": "示例公司",
-      "summary": "公司在供应链中的角色。",
-      "layer": "企业",
-      "tags": ["紫苏叶候选", "重要供应商"],
+      "title": "Example Company",
+      "summary": "Company role in the supply chain.",
+      "layer": "Company",
+      "tags": ["hidden bottleneck", "important supplier"],
       "position": { "x": 560, "y": 260 }
     }
   ],
@@ -58,19 +62,19 @@
   "companies": [
     {
       "id": "example-company",
-      "name": "示例公司",
+      "name": "Example Company",
       "ticker": "EXAMPLE",
-      "region": "示例地区",
-      "businessRole": "说明公司在供应链中的角色。",
+      "region": "Example region",
+      "businessRole": "Describe the company's supply chain role.",
       "linkedNodeIds": ["example-company", "key-component"],
       "isKeySupplier": true,
       "isBottleneck": true,
       "isZisuCandidate": true,
       "signals": {
-        "importantSupplier": "是否重要供应商，以及依据。",
-        "bottleneckPosition": "是否卡脖子，以及依据。",
-        "playerConcentration": "这个环节有多少核心玩家。",
-        "recentCatalyst": "近期值得关注的订单、财报、产能或政策。"
+        "importantSupplier": "Whether the company is an important supplier and why.",
+        "bottleneckPosition": "Whether this is a bottleneck and why.",
+        "playerConcentration": "How many qualified players exist in this node.",
+        "recentCatalyst": "Recent orders, filings, capacity, or policy items to watch."
       },
       "scores": {
         "supplyChainImportance": 80,
@@ -92,9 +96,9 @@
       "companyId": "example-company",
       "nodeId": "key-component",
       "impactType": "bottleneck_judgement",
-      "summary": "用户提交的数据摘要。",
+      "summary": "Summary of user-submitted evidence.",
       "sourceUrl": null,
-      "sourceNote": "用户提供的官方数据或分析说明。",
+      "sourceNote": "Official data or analysis note provided by a user.",
       "submittedBy": "user",
       "reviewDecision": null,
       "reviewedAt": null

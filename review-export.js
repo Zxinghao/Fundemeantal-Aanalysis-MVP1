@@ -19,7 +19,7 @@ function exportReviewDecisions() {
     }));
 
   if (reviewedItems.length === 0) {
-    exportStatus.textContent = "当前还没有可导出的审核决定。";
+    exportStatus.textContent = "There are no review decisions to export yet.";
     return;
   }
 
@@ -39,7 +39,7 @@ function exportReviewDecisions() {
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  exportStatus.textContent = `已导出 ${reviewedItems.length} 条审核决定。`;
+  exportStatus.textContent = `Exported ${reviewedItems.length} review decision(s).`;
 }
 
 exportReview.addEventListener("click", exportReviewDecisions);

@@ -40,17 +40,15 @@ function eventId(industryId, date, source, index) {
   return `ai-${industryId}-${date}-${target}-${String(index + 1).padStart(3, "0")}`;
 }
 
-function describeSource(source, cadence) {
-  const keywords = source.watchFor.join("、");
+function describeSource(source) {
+  const keywords = source.watchFor.join(", ");
   if (source.sourceType === "government") {
-    return `${source.name} 若出现 ${keywords} 相关更新，需要核验是否影响行业需求、技术目标或关键环节判断。`;
+    return `${source.name} may publish updates related to ${keywords}. Verify whether the update affects industry demand, technical targets, or key node assumptions.`;
   }
-
   if (source.sourceType === "placeholder") {
-    return `${source.name} 尚未补充真实来源，当前仅作为 ${keywords} 相关监控占位。`;
+    return `${source.name} is a placeholder source for ${keywords}. Add authoritative English sources before using it as evidence.`;
   }
-
-  return `${source.name} 若披露 ${keywords} 相关信息，需要核验是否影响对应公司或供应链环节的重要性判断。`;
+  return `${source.name} may publish information related to ${keywords}. Verify whether the update affects the related company or supply chain node.`;
 }
 
 function proposedActionsFor(source, impactType) {
@@ -59,14 +57,13 @@ function proposedActionsFor(source, impactType) {
     {
       target: source.companyId ? `${targetRoot}.signals.recentCatalyst` : `${targetRoot}.summary`,
       action: actionByImpact[impactType] || "review",
-      reason: "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
+      reason: "If the candidate information is verified, update recent catalysts, node descriptions, or the research thesis."
     }
   ];
 }
 
 function eventFromSource(industryId, cadence, source, index, date) {
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
-
   return {
     id: eventId(industryId, date, source, index),
     sourceType: "ai_scan",
@@ -75,9 +72,9 @@ function eventFromSource(industryId, cadence, source, index, date) {
     companyId: source.companyId,
     nodeId: source.nodeId,
     impactType,
-    summary: describeSource(source, cadence),
+    summary: describeSource(source),
     sourceUrl: source.url,
-    sourceNote: `模拟扫描器根据 ${cadence} 监控源生成的候选事件，尚未读取真实网页正文。`,
+    sourceNote: `Mock scanner candidate generated from the ${cadence} English-priority watchlist. The real page body has not been read yet.`,
     sourceIds: [source.id],
     submittedBy: "ai",
     reviewDecision: null,
@@ -89,10 +86,9 @@ function eventFromSource(industryId, cadence, source, index, date) {
 }
 
 async function main() {
-  const scanDate = process.argv[2] || today();
+  const scanDate = globalThis.process.argv[2] || today();
   const watchlist = JSON.parse(await fs.readFile(watchlistPath, "utf8"));
   const events = [];
-
   for (const [industryId, cadenceMap] of Object.entries(watchlist)) {
     for (const cadence of ["daily", "weekly"]) {
       const sources = cadenceMap[cadence] || [];
@@ -102,12 +98,14 @@ async function main() {
       });
     }
   }
-
   await fs.writeFile(outputPath, `${JSON.stringify(events, null, 2)}\n`);
   console.log(`Generated ${events.length} events at ${outputPath}`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+const cliEntry = globalThis.process?.argv?.[1];
+if (cliEntry && fileURLToPath(import.meta.url) === path.resolve(cliEntry)) {
+  main().catch((error) => {
+    console.error(error);
+    globalThis.process.exitCode = 1;
+  });
+}

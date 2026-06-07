@@ -68,8 +68,7 @@ function eventId(industryId, date, source) {
 
 function eventFromSource({ industryId, source, title, hits, date }) {
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
-  const hitText = hits.length ? hits.join("、") : source.watchFor.join("、");
-
+  const hitText = hits.length ? hits.join(", ") : source.watchFor.join(", ");
   return {
     id: eventId(industryId, date, source),
     sourceType: "ai_scan",
@@ -78,9 +77,9 @@ function eventFromSource({ industryId, source, title, hits, date }) {
     companyId: source.companyId,
     nodeId: source.nodeId,
     impactType,
-    summary: `${source.name} 页面内容发生变化，标题为“${title}”，命中 ${hitText} 相关关键词，需要核验是否影响供应链判断。`,
+    summary: `${source.name} changed. The page title is "${title}" and the scan matched ${hitText}. Review whether the change affects the supply chain thesis.`,
     sourceUrl: source.url,
-    sourceNote: "真实网页扫描器检测到页面内容指纹变化后生成的候选事件，仍需人工审核正文含义。",
+    sourceNote: "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
     sourceIds: [source.id],
     submittedBy: "ai",
     reviewDecision: null,
@@ -91,41 +90,27 @@ function eventFromSource({ industryId, source, title, hits, date }) {
       {
         target: source.companyId ? `companies.${source.companyId}.signals.recentCatalyst` : `nodes.${source.nodeId}.summary`,
         action: "review",
-        reason: "网页内容发生变化，审核后再决定是否更新近期动态、节点描述或评分。"
+        reason: "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
       }
     ]
   };
 }
 
 async function fetchSource(source) {
-  const response = await fetch(source.url, {
-    headers: {
-      "User-Agent": "FinLAB supply-chain scanner/0.1"
-    }
-  });
-
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}`);
-  }
-
+  const response = await fetch(source.url, { headers: { "User-Agent": "FinLAB supply-chain scanner/0.1" } });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
   const html = await response.text();
   const text = normalizeHtml(html);
-  return {
-    title: extractTitle(html),
-    text,
-    hash: hash(text)
-  };
+  return { title: extractTitle(html), text, hash: hash(text) };
 }
 
 async function scanSource({ industryId, cadence, source, cache, date }) {
   const checkedAt = new Date().toISOString();
-
   try {
     const page = await fetchSource(source);
     const previous = cache[source.id];
     const changed = !previous || previous.hash !== page.hash;
     const hits = keywordHits(page.text, source.watchFor || []);
-
     cache[source.id] = {
       id: source.id,
       industryId,
@@ -137,7 +122,6 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
       lastChangedAt: changed ? checkedAt : previous.lastChangedAt,
       lastError: null
     };
-
     if (!changed) return null;
     return eventFromSource({ industryId, source, title: page.title, hits, date });
   } catch (error) {
@@ -158,7 +142,6 @@ export async function runWebScan(date = today()) {
   const watchlist = await readJson(watchlistPath, {});
   const cache = await readJson(cachePath, {});
   const events = [];
-
   for (const [industryId, cadenceMap] of Object.entries(watchlist)) {
     for (const cadence of ["daily", "weekly"]) {
       for (const source of cadenceMap[cadence] || []) {
@@ -168,7 +151,6 @@ export async function runWebScan(date = today()) {
       }
     }
   }
-
   await fs.writeFile(cachePath, `${JSON.stringify(cache, null, 2)}\n`);
   await fs.writeFile(outputPath, `${JSON.stringify(events, null, 2)}\n`);
   return { events, cache };
@@ -177,9 +159,7 @@ export async function runWebScan(date = today()) {
 const cliEntry = globalThis.process?.argv?.[1];
 if (cliEntry && pathToFileURL(cliEntry).href === import.meta.url) {
   runWebScan(globalThis.process.argv[2])
-    .then(({ events }) => {
-      console.log(`Generated ${events.length} changed-source events at ${outputPath}`);
-    })
+    .then(({ events }) => console.log(`Generated ${events.length} changed-source events at ${outputPath}`))
     .catch((error) => {
       console.error(error);
       globalThis.process.exitCode = 1;

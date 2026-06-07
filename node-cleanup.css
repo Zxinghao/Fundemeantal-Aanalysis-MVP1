@@ -1,0 +1,37 @@
+.node {
+  border-radius: 26px;
+  min-height: 96px;
+  padding: 16px;
+  text-align: center;
+  width: 184px;
+}
+
+.node-title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1.18;
+  min-height: 36px;
+}
+
+.node-meta {
+  font-size: 11px;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+}
+
+.tag {
+  margin-top: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

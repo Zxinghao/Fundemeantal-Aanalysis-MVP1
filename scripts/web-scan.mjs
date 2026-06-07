@@ -14,7 +14,14 @@ const impactByNode = {
   compressor: "technology_change",
   stack: "policy_change",
   gdl: "technology_change",
-  optical: "technology_change"
+  optical: "technology_change",
+  switching: "technology_change",
+  "optical-modules": "technology_change",
+  dsp: "technology_change",
+  "silicon-photonics": "technology_change",
+  laser: "technology_change",
+  "external-light-source": "technology_change",
+  "packaging-test": "capacity_change"
 };
 
 const evidenceBySourceType = {
@@ -69,6 +76,7 @@ function eventId(industryId, date, source) {
 function eventFromSource({ industryId, source, title, hits, date }) {
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
   const hitText = hits.length ? hits.join(", ") : source.watchFor.join(", ");
+
   return {
     id: eventId(industryId, date, source),
     sourceType: "ai_scan",
@@ -97,20 +105,34 @@ function eventFromSource({ industryId, source, title, hits, date }) {
 }
 
 async function fetchSource(source) {
-  const response = await fetch(source.url, { headers: { "User-Agent": "FinLAB supply-chain scanner/0.1" } });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const response = await fetch(source.url, {
+    headers: {
+      "User-Agent": "FinLAB supply-chain scanner/0.1"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+
   const html = await response.text();
   const text = normalizeHtml(html);
-  return { title: extractTitle(html), text, hash: hash(text) };
+  return {
+    title: extractTitle(html),
+    text,
+    hash: hash(text)
+  };
 }
 
 async function scanSource({ industryId, cadence, source, cache, date }) {
   const checkedAt = new Date().toISOString();
+
   try {
     const page = await fetchSource(source);
     const previous = cache[source.id];
     const changed = !previous || previous.hash !== page.hash;
     const hits = keywordHits(page.text, source.watchFor || []);
+
     cache[source.id] = {
       id: source.id,
       industryId,
@@ -122,6 +144,7 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
       lastChangedAt: changed ? checkedAt : previous.lastChangedAt,
       lastError: null
     };
+
     if (!changed) return null;
     return eventFromSource({ industryId, source, title: page.title, hits, date });
   } catch (error) {
@@ -142,6 +165,7 @@ export async function runWebScan(date = today()) {
   const watchlist = await readJson(watchlistPath, {});
   const cache = await readJson(cachePath, {});
   const events = [];
+
   for (const [industryId, cadenceMap] of Object.entries(watchlist)) {
     for (const cadence of ["daily", "weekly"]) {
       for (const source of cadenceMap[cadence] || []) {
@@ -151,6 +175,7 @@ export async function runWebScan(date = today()) {
       }
     }
   }
+
   await fs.writeFile(cachePath, `${JSON.stringify(cache, null, 2)}\n`);
   await fs.writeFile(outputPath, `${JSON.stringify(events, null, 2)}\n`);
   return { events, cache };
@@ -159,7 +184,9 @@ export async function runWebScan(date = today()) {
 const cliEntry = globalThis.process?.argv?.[1];
 if (cliEntry && pathToFileURL(cliEntry).href === import.meta.url) {
   runWebScan(globalThis.process.argv[2])
-    .then(({ events }) => console.log(`Generated ${events.length} changed-source events at ${outputPath}`))
+    .then(({ events }) => {
+      console.log(`Generated ${events.length} changed-source events at ${outputPath}`);
+    })
     .catch((error) => {
       console.error(error);
       globalThis.process.exitCode = 1;

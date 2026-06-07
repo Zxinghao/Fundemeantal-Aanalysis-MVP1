@@ -7,9 +7,9 @@
     "companyId": "jm",
     "nodeId": "catalyst",
     "impactType": "technology_change",
-    "summary": "Johnson Matthey news 若披露 fuel cell、hydrogen、catalyst、MEA、CCM 相关信息，需要核验是否影响对应公司或供应链环节的重要性判断。",
+    "summary": "Johnson Matthey news may contain updates related to fuel cells, hydrogen, catalysts, MEA, or CCM. Verify whether the update affects the company's bottleneck position or supply chain importance.",
     "sourceUrl": "https://matthey.com/news",
-    "sourceNote": "模拟扫描器根据 daily 监控源生成的候选事件，尚未读取真实网页正文。",
+    "sourceNote": "Candidate event generated from an English company source. The page body still requires human review.",
     "sourceIds": ["jm-news"],
     "submittedBy": "ai",
     "reviewDecision": null,
@@ -20,7 +20,7 @@
       {
         "target": "companies.jm.signals.recentCatalyst",
         "action": "review",
-        "reason": "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
+        "reason": "If verified, update recent catalysts, node descriptions, or the bottleneck thesis."
       }
     ]
   },
@@ -32,9 +32,9 @@
     "companyId": "forvia",
     "nodeId": "tank",
     "impactType": "capacity_change",
-    "summary": "FORVIA news 若披露 hydrogen、storage、commercial vehicle、tank 相关信息，需要核验是否影响对应公司或供应链环节的重要性判断。",
+    "summary": "FORVIA news may contain updates related to hydrogen storage, commercial vehicles, tanks, or capacity. Verify whether the update affects the onboard hydrogen storage node.",
     "sourceUrl": "https://www.forvia.com/en/newsroom",
-    "sourceNote": "模拟扫描器根据 daily 监控源生成的候选事件，尚未读取真实网页正文。",
+    "sourceNote": "Candidate event generated from an English company source. The page body still requires human review.",
     "sourceIds": ["forvia-news"],
     "submittedBy": "ai",
     "reviewDecision": null,
@@ -45,7 +45,7 @@
       {
         "target": "companies.forvia.signals.recentCatalyst",
         "action": "review",
-        "reason": "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
+        "reason": "If verified, update recent catalysts, node descriptions, or the bottleneck thesis."
       }
     ]
   },
@@ -57,9 +57,9 @@
     "companyId": "garrett",
     "nodeId": "compressor",
     "impactType": "technology_change",
-    "summary": "Garrett Motion news 若披露 fuel cell、compressor、hydrogen、electric compressor 相关信息，需要核验是否影响对应公司或供应链环节的重要性判断。",
+    "summary": "Garrett Motion news may contain updates related to fuel-cell compressors, hydrogen, or electric compressors. Verify whether the update affects the BOP compressor bottleneck thesis.",
     "sourceUrl": "https://www.garrettmotion.com/news/",
-    "sourceNote": "模拟扫描器根据 daily 监控源生成的候选事件，尚未读取真实网页正文。",
+    "sourceNote": "Candidate event generated from an English company source. The page body still requires human review.",
     "sourceIds": ["garrett-news"],
     "submittedBy": "ai",
     "reviewDecision": null,
@@ -70,21 +70,21 @@
       {
         "target": "companies.garrett.signals.recentCatalyst",
         "action": "review",
-        "reason": "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
+        "reason": "If verified, update recent catalysts, node descriptions, or the bottleneck thesis."
       }
     ]
   },
   {
-    "id": "ai-fuel-cell-2026-06-07-stack-001",
+    "id": "ai-fuel-cell-2026-06-07-stack-004",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
     "companyId": null,
     "nodeId": "stack",
     "impactType": "policy_change",
-    "summary": "U.S. DOE fuel cells office 若出现 fuel cell、hydrogen、funding、storage、infrastructure 相关更新，需要核验是否影响行业需求、技术目标或关键环节判断。",
+    "summary": "U.S. DOE fuel-cell updates may affect industry demand, funding, technical targets, or infrastructure assumptions. Verify whether the research thesis should change.",
     "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
-    "sourceNote": "模拟扫描器根据 weekly 监控源生成的候选事件，尚未读取真实网页正文。",
+    "sourceNote": "Candidate event generated from an English government source. The page body still requires human review.",
     "sourceIds": ["doe-fuel-cells"],
     "submittedBy": "ai",
     "reviewDecision": null,
@@ -95,82 +95,7 @@
       {
         "target": "nodes.stack.summary",
         "action": "review",
-        "reason": "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
-      }
-    ]
-  },
-  {
-    "id": "ai-fuel-cell-2026-06-07-umicore-002",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": "umicore",
-    "nodeId": "catalyst",
-    "impactType": "technology_change",
-    "summary": "Umicore investors 若披露 fuel cell、catalyst、precious metals、guidance 相关信息，需要核验是否影响对应公司或供应链环节的重要性判断。",
-    "sourceUrl": "https://www.umicore.com/en/investors/",
-    "sourceNote": "模拟扫描器根据 weekly 监控源生成的候选事件，尚未读取真实网页正文。",
-    "sourceIds": ["umicore-ir"],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.umicore.signals.recentCatalyst",
-        "action": "review",
-        "reason": "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
-      }
-    ]
-  },
-  {
-    "id": "ai-fuel-cell-2026-06-07-sgl-003",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": "sgl",
-    "nodeId": "gdl",
-    "impactType": "technology_change",
-    "summary": "SGL Carbon investor relations 若披露 fuel cell、GDL、Sigracet、carbon fiber 相关信息，需要核验是否影响对应公司或供应链环节的重要性判断。",
-    "sourceUrl": "https://www.sglcarbon.com/en/investor-relations/",
-    "sourceNote": "模拟扫描器根据 weekly 监控源生成的候选事件，尚未读取真实网页正文。",
-    "sourceIds": ["sgl-ir"],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.sgl.signals.recentCatalyst",
-        "action": "review",
-        "reason": "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
-      }
-    ]
-  },
-  {
-    "id": "ai-fuel-cell-2026-06-07-hexagon-004",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": "hexagon",
-    "nodeId": "tank",
-    "impactType": "capacity_change",
-    "summary": "Hexagon Purus investor relations 若披露 hydrogen、storage、Type 4、commercial vehicle 相关信息，需要核验是否影响对应公司或供应链环节的重要性判断。",
-    "sourceUrl": "https://hexagonpurus.com/investor-relations",
-    "sourceNote": "模拟扫描器根据 weekly 监控源生成的候选事件，尚未读取真实网页正文。",
-    "sourceIds": ["hexagon-purus-ir"],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.hexagon.signals.recentCatalyst",
-        "action": "review",
-        "reason": "若候选信息属实，可能需要更新近期动态、环节描述或研究判断。"
+        "reason": "If verified, update the stack node description or the industry thesis."
       }
     ]
   }

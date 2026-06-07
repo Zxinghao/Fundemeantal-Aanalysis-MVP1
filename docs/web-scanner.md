@@ -1,41 +1,22 @@
-# 真实网页扫描器雏形
+# Web Scanner
 
-## 作用
+`scripts/web-scan.mjs` is the first real scanner prototype.
 
-`scripts/web-scan.mjs` 是真实扫描器的第一版。它会访问 `source-watchlist.json` 里的来源 URL，提取网页标题和正文文本，计算正文指纹，并和 `data/source-cache.json` 里的历史指纹比较。
+It reads `data/source-watchlist.json`, visits source URLs, extracts page text, computes a content fingerprint, compares it with `data/source-cache.json`, and generates candidate events only when a page changes.
 
-只有当页面内容发生变化时，它才会生成候选 `UpdateEvent`。
+## Data Flow
 
-## 数据链路
-
-`source-watchlist.json` → `web-scan.mjs` → `source-cache.json` → `generated-update-events.json` → 网页审核台
-
-## 输出
-
-- `data/source-cache.json`: 保存每个来源最近一次扫描的标题、hash、检查时间和错误。
-- `data/generated-update-events.json`: 保存本轮扫描发现的变化事件。
-
-## 运行方式
-
-```bash
-node scripts/web-scan.mjs
+```text
+source-watchlist.json -> web-scan.mjs -> source-cache.json -> generated-update-events.json -> review desk
 ```
 
-也可以指定扫描日期：
+## Outputs
 
-```bash
-node scripts/web-scan.mjs 2026-06-07
-```
+- `data/source-cache.json`: latest title, hash, checked time, and errors for each source.
+- `data/generated-update-events.json`: candidate events from the scan.
 
-## 审核原则
+## Review Principle
 
-扫描器只能证明“网页内容变了”，不能证明“投资判断变了”。  
-因此生成的事件仍然必须进入人工审核台，由人确认是否影响供应链节点、公司评分或紫苏叶判断。
+The scanner proves that a page changed. It does not prove that the investment or supply chain thesis changed.
 
-## 后续升级
-
-1. 加入正文摘要模型，把变化内容压缩成更像研究笔记的 `summary`。
-2. 增加网页差异对比，只展示新增段落。
-3. 增加去重逻辑，避免同一个页面频繁生成重复事件。
-4. 增加财报 PDF、公告 PDF 和交易所公告抓取。
-5. 增加定时任务，每天或每周自动运行。
+Every generated event must enter the review desk for human confirmation.

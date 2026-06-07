@@ -6,7 +6,15 @@ The first fully populated industry is the automotive fuel cell industry.
 
 ## Preview
 
+Primary GitHub Pages URL, after the deployment workflow has run:
+
+https://zxinghao.github.io/Fundemeantal-Aanalysis-MVP1/
+
+RawGitHack fallback:
+
 https://raw.githack.com/Zxinghao/Fundemeantal-Aanalysis-MVP1/main/index.html
+
+RawGitHack can cache `main` branch URLs. If the page looks stale, use the latest commit-specific RawGitHack URL from the current work session or wait for the cache to refresh.
 
 ## Core Features
 
@@ -54,6 +62,7 @@ source-watchlist.json
 ## GitHub Actions
 
 - `Source Scan`: Scans source pages and generates candidate events.
+- `Deploy Static Site`: Publishes the static app to GitHub Pages on every push to `main`.
 - `Apply Review Decisions`: Reads exported review JSON and generates `industries.reviewed.json`.
 - `Promote Reviewed Data`: Promotes reviewed data to official `industries.json` after manual confirmation.
 

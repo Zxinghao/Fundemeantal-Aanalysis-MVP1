@@ -77,18 +77,99 @@
     ]
   },
   "ai-optics": {
-    "sourceLanguagePolicy": "Use English official sources first. Placeholder only until authoritative sources are added.",
-    "daily": [],
+    "sourceLanguagePolicy": "Prioritize English official sources, investor relations pages, product pages, filings, and company technical announcements.",
+    "daily": [
+      {
+        "id": "nvidia-spectrum-x-photonics",
+        "companyId": "nvidia",
+        "nodeId": "switching",
+        "name": "NVIDIA Spectrum-X Photonics announcement",
+        "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["Spectrum-X", "Quantum-X", "co-packaged optics", "silicon photonics", "AI factories"]
+      },
+      {
+        "id": "broadcom-cpo",
+        "companyId": "broadcom",
+        "nodeId": "external-light-source",
+        "name": "Broadcom co-packaged optics",
+        "url": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["co-packaged optics", "pluggable laser source", "DSP", "switch ASIC", "packaging"]
+      },
+      {
+        "id": "marvell-optical-dsp",
+        "companyId": "marvell",
+        "nodeId": "dsp",
+        "name": "Marvell optical DSPs",
+        "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["optical DSP", "PAM4", "1.6T", "AI infrastructure", "data center"]
+      },
+      {
+        "id": "coherent-datacenter",
+        "companyId": "coherent",
+        "nodeId": "laser",
+        "name": "Coherent data-center communications",
+        "url": "https://www.coherent.com/datacenter-communications",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["datacenter", "800G", "1.6T", "EML", "laser", "transceiver"]
+      },
+      {
+        "id": "lumentum-eml",
+        "companyId": "lumentum",
+        "nodeId": "laser",
+        "name": "Lumentum data-center EMLs",
+        "url": "https://www.lumentum.com/en/products/data-center/modulated-lasers/emls",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["EML", "modulated laser", "data center", "800G", "1.6T"]
+      },
+      {
+        "id": "fabrinet-optical-components",
+        "companyId": "fabrinet",
+        "nodeId": "packaging-test",
+        "name": "Fabrinet optical components",
+        "url": "https://fabrinet.com/services/optical-components",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["optical components", "packaging", "test", "precision assembly", "manufacturing"]
+      }
+    ],
     "weekly": [
       {
-        "id": "ai-optics-placeholder",
-        "companyId": null,
-        "nodeId": "optical",
-        "name": "AI optical module source placeholder",
-        "url": null,
-        "sourceType": "placeholder",
+        "id": "broadcom-bailly",
+        "companyId": "broadcom",
+        "nodeId": "silicon-photonics",
+        "name": "Broadcom Bailly CPO platform",
+        "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-delivers-industrys-first-512-tbps-co-packaged-optics",
+        "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["CPO", "optical module", "laser", "data center"]
+        "watchFor": ["Bailly", "51.2", "CPO", "Ethernet switch", "AI systems"]
+      },
+      {
+        "id": "marvell-pam4-dsp",
+        "companyId": "marvell",
+        "nodeId": "dsp",
+        "name": "Marvell PAM4 DSP products",
+        "url": "https://www.marvell.com/products/pam-dsp.html",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["PAM4", "DSP", "800G", "1.6T", "AI networks"]
+      },
+      {
+        "id": "eoptolink-800g",
+        "companyId": "eoptolink",
+        "nodeId": "optical-modules",
+        "name": "Eoptolink 800G products",
+        "url": "https://eoptolink.com/product-solutions/800g",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["800G", "optical transceiver", "data center", "module"]
       }
     ]
   }

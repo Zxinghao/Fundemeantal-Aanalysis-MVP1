@@ -1,0 +1,34 @@
+name: Promote Reviewed Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type PROMOTE to replace data/industries.json with data/industries.reviewed.json"
+        required: true
+        default: "PROMOTE"
+
+permissions:
+  contents: write
+
+jobs:
+  promote-reviewed:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Promote reviewed data
+        run: node scripts/promote-reviewed-data.mjs "${{ inputs.confirmation }}"
+
+      - name: Commit promoted industry data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Promote reviewed industry data"
+          file_pattern: "data/industries.json data/industries.previous.json"

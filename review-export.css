@@ -1,0 +1,18 @@
+.review-tools {
+  background: rgba(30, 28, 24, 0.04);
+  border: 1px solid rgba(120, 92, 56, 0.12);
+  border-radius: 16px;
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 12px;
+}
+
+.review-tools button {
+  width: 100%;
+}
+
+.review-tools small {
+  color: var(--muted);
+  line-height: 1.5;
+}

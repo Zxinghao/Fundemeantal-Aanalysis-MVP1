@@ -22,6 +22,12 @@ review-decisions-fuel-cell-2026-06-07.json
 node scripts/apply-review-decisions.mjs review-decisions-fuel-cell-2026-06-07.json
 ```
 
+也可以在 GitHub Actions 里手动运行 `Apply Review Decisions` 工作流，并填写审核 JSON 的仓库路径，例如：
+
+```text
+data/review-decisions.sample.json
+```
+
 ## 做了什么
 
 对每条 `approved` 审核项：

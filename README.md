@@ -6,7 +6,7 @@ The first fully populated industry is the automotive fuel cell industry.
 
 ## Preview
 
-Primary GitHub Pages URL, after the deployment workflow has run:
+Primary GitHub Pages URL, after the deployment workflow has run and the repository Pages source is set to the `gh-pages` branch:
 
 https://zxinghao.github.io/Fundemeantal-Aanalysis-MVP1/
 
@@ -61,10 +61,19 @@ source-watchlist.json
 
 ## GitHub Actions
 
-- `Source Scan`: Scans source pages and generates candidate events.
-- `Deploy Static Site`: Publishes the static app to GitHub Pages on every push to `main`.
+- `Source Scan`: runs daily at 06:15 UTC and commits changed-source candidate events.
+- `Publish Static Site`: mirrors `main` to the `gh-pages` branch on every push to `main`, so daily scans and approved promotions become visible on the public site.
 - `Apply Review Decisions`: Reads exported review JSON and generates `industries.reviewed.json`.
 - `Promote Reviewed Data`: Promotes reviewed data to official `industries.json` after manual confirmation.
+
+## Daily Operating Loop
+
+1. `Source Scan` runs every day and checks the English source watchlist.
+2. Changed source pages are written to `data/generated-update-events.json` as pending review candidates.
+3. The public site updates after the workflow commits those scan outputs and `Publish Static Site` mirrors `main` to `gh-pages`.
+4. User-submitted evidence and AI-scanned events remain pending until reviewed in the web app.
+5. Exported review decisions can be applied with `Apply Review Decisions`.
+6. Approved reviewed data can be promoted with `Promote Reviewed Data` using the confirmation word `PROMOTE`.
 
 ## Risk Controls
 

@@ -1,39 +1,19 @@
-# 自动化运行方案
+# Automation
 
-## 目标
+The automation layer is intentionally conservative.
 
-用 GitHub Actions 定时运行真实网页扫描器，把来源页面变化转换成待审核事件。
+## Source Scan
 
-## 工作流
+Runs the scanner and generates candidate events.
 
-`.github/workflows/source-scan.yml` 会执行：
+## Apply Review Decisions
 
-1. 检出仓库。
-2. 使用 Node.js 20。
-3. 运行 `node scripts/web-scan.mjs`。
-4. 如果 `data/source-cache.json` 或 `data/generated-update-events.json` 发生变化，就自动提交回仓库。
+Reads exported review JSON and generates reviewed candidate data.
 
-## 触发方式
+## Promote Reviewed Data
 
-- 每天自动运行一次：UTC 06:15。
-- 也可以在 GitHub Actions 页面手动运行。
+Publishes reviewed data only after manual confirmation.
 
-## 为什么先提交到仓库
+## Principle
 
-当前网页是静态网页，没有后端数据库。  
-把扫描结果写回仓库，是第一版最轻量、最容易在手机端预览的方案。
-
-## 风险控制
-
-- 扫描器只生成 `pending` 状态事件。
-- 不直接修改正式供应链图谱。
-- 不直接修改公司评分。
-- 页面变化不等于投资判断变化，仍需人工审核。
-
-## 后续升级
-
-1. 改成每个行业独立扫描频率。
-2. 增加失败通知。
-3. 增加网页差异摘要。
-4. 审核通过后再写回正式数据。
-5. 迁移到数据库和后台任务系统。
+Automation can collect and structure information, but official map updates require human review.

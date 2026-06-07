@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>供应链紫苏叶研究平台</title>
+    <title>Supply Chain Bottleneck Radar</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="apple-style.css">
     <link rel="stylesheet" href="review-export.css">
@@ -12,38 +12,39 @@
     <header class="hero">
       <div>
         <p class="eyebrow">Supply Chain Bottleneck Radar</p>
-        <h1>供应链紫苏叶研究平台</h1>
+        <h1>Supply Chain Bottleneck Radar</h1>
         <p class="subtitle">
-          从终端需求出发，一层层追到上游瓶颈，识别重要供应商、卡脖子环节和潜在紫苏叶玩家。
+          Map an industry from end demand back to upstream bottlenecks, identify key suppliers,
+          chokepoint positions, and underappreciated hidden compounders.
         </p>
       </div>
       <div class="hero-card">
-        <span>更新模式</span>
-        <strong>AI 候选 + 人工审核 + 用户提交</strong>
-        <small>每日/每周收集行业动态、财报、公告与用户提供的官方数据。</small>
+        <span>Update Model</span>
+        <strong>AI candidates + Human review + User-submitted evidence</strong>
+        <small>Daily and weekly scans prioritize English official sources, investor materials, filings, and verified industry evidence.</small>
       </div>
     </header>
 
     <main class="layout">
       <aside class="panel">
-        <label for="industry-select">选择行业</label>
+        <label for="industry-select">Select Industry</label>
         <select id="industry-select"></select>
 
         <section class="method-card">
-          <h2>紫苏叶方法</h2>
+          <h2>Hidden Bottleneck Method</h2>
           <ol>
-            <li>从确定性终端需求开始。</li>
-            <li>逐层向上游追问关键依赖。</li>
-            <li>寻找玩家少、替代难、验证长、定价权强的瓶颈。</li>
+            <li>Start from durable end-market demand.</li>
+            <li>Trace upstream dependencies layer by layer.</li>
+            <li>Look for scarce players, hard validation, high switching cost, and pricing power.</li>
           </ol>
         </section>
 
         <section class="legend">
-          <h2>图例</h2>
-          <div><span class="dot terminal"></span>终端需求</div>
-          <div><span class="dot chain"></span>供应链环节</div>
-          <div><span class="dot company"></span>重要企业</div>
-          <div><span class="dot zisu"></span>紫苏叶候选</div>
+          <h2>Legend</h2>
+          <div><span class="dot terminal"></span>End demand</div>
+          <div><span class="dot chain"></span>Supply chain node</div>
+          <div><span class="dot company"></span>Important company</div>
+          <div><span class="dot zisu"></span>Hidden bottleneck candidate</div>
         </section>
       </aside>
 
@@ -53,7 +54,7 @@
             <h2 id="industry-title"></h2>
             <p id="industry-description"></p>
           </div>
-          <button id="reset-view" type="button">重置视图</button>
+          <button id="reset-view" type="button">Reset View</button>
         </div>
         <div id="supply-chain-map" class="map"></div>
       </section>
@@ -61,45 +62,46 @@
       <aside class="panel updates-panel">
         <section>
           <div class="section-heading">
-            <h2>更新审核台</h2>
-            <select id="review-filter" aria-label="筛选审核状态">
-              <option value="all">全部</option>
-              <option value="pending">待审核</option>
-              <option value="approved">已通过</option>
-              <option value="rejected">已拒绝</option>
-              <option value="needs_more_evidence">需补证据</option>
+            <h2>Review Desk</h2>
+            <select id="review-filter" aria-label="Filter review status">
+              <option value="all">All</option>
+              <option value="pending">Pending</option>
+              <option value="approved">Approved</option>
+              <option value="rejected">Rejected</option>
+              <option value="needs_more_evidence">Need Evidence</option>
             </select>
           </div>
           <div class="review-tools">
-            <button id="export-review" type="button">导出审核结果</button>
-            <small id="export-status">审核决定会先保存在本机浏览器，导出后可用于回写正式数据。</small>
+            <button id="export-review" type="button">Export Review Decisions</button>
+            <small id="export-status">Review decisions are saved locally first. Export them as JSON before applying approved updates to the official dataset.</small>
           </div>
           <div id="pending-updates" class="pending-list"></div>
         </section>
 
         <section class="submit-card">
-          <h2>提交你的数据</h2>
+          <h2>Submit Evidence</h2>
           <p>
-            你找到的官方数据、财报、公告、分析笔记都可以提交。它会进入待审核队列，确认后再更新网页。
+            Add official data, filings, investor materials, announcements, or research notes.
+            Submissions enter the review queue before they update the supply chain map.
           </p>
           <form id="submission-form">
-            <input id="submission-company" placeholder="公司或环节，例如 Johnson Matthey" required>
-            <input id="submission-source" placeholder="来源链接或文件说明" required>
-            <textarea id="submission-summary" placeholder="简要说明：这条数据改变了什么？" required></textarea>
+            <input id="submission-company" placeholder="Company or node, e.g. Johnson Matthey" required>
+            <input id="submission-source" placeholder="Source link or file note" required>
+            <textarea id="submission-summary" placeholder="Briefly explain what this evidence changes." required></textarea>
             <select id="submission-impact">
-              <option value="供应链重要性">供应链重要性</option>
-              <option value="卡脖子判断">卡脖子判断</option>
-              <option value="财报/订单动态">财报/订单动态</option>
-              <option value="新增玩家/关系">新增玩家/关系</option>
+              <option value="supply_chain_importance">Supply chain importance</option>
+              <option value="bottleneck_judgement">Bottleneck judgement</option>
+              <option value="financial_update">Financial or order update</option>
+              <option value="new_player">New player or relationship</option>
             </select>
-            <button type="submit">提交到审核队列</button>
+            <button type="submit">Submit to Review Queue</button>
           </form>
         </section>
       </aside>
     </main>
 
     <dialog id="company-dialog">
-      <button class="close" id="close-dialog" type="button">×</button>
+      <button class="close" id="close-dialog" type="button">x</button>
       <div id="company-detail"></div>
     </dialog>
 

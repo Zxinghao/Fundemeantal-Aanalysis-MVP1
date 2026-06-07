@@ -1,110 +1,54 @@
-# 自动信息收集方案
+# Information Collection Plan
 
-## 目标
+## Goal
 
-自动信息收集不是直接改供应链图，而是生成待审核的 `UpdateEvent`。  
-所有自动抓取结果必须经过人工审核，才能更新公司标签、紫苏叶评分、供应链关系或最近动态。
+Automated collection should generate reviewable `UpdateEvent` candidates, not directly edit the official supply chain map.
 
-## 更新频率
+All automatic results must pass human review before updating company tags, scores, relationships, or recent updates.
 
-### 每日扫描
+## Source Priority
 
-适合捕捉短期催化剂：
+### A-Level Evidence
 
-- 公司新闻稿。
-- 投资者关系页面更新。
-- 重大订单和客户合作。
-- 产能扩张、工厂投产、项目延期。
-- 政策、补贴、行业规划。
-- 股价异常对应的公告或新闻。
+- Company websites and investor relations pages.
+- Annual reports, quarterly reports, investor presentations, and earnings transcripts.
+- Exchange filings.
+- Government agencies and authoritative industry bodies.
+- Standards, certifications, patents, and regulatory documents.
 
-### 每周扫描
+### B-Level Leads
 
-适合更新行业判断：
+- Mainstream financial media.
+- Industry media.
+- Company interviews.
+- Conference notes.
 
-- 财报、业绩电话会、投资者日材料。
-- 年报、半年报、10-K、20-F 等长期披露。
-- 供应链关系变化。
-- 玩家集中度变化。
-- 紫苏叶评分变化。
-- 新增公司或新增关键环节。
+### C-Level Leads
 
-## 来源优先级
+- Social media.
+- Forum discussions.
+- Anonymous report excerpts.
+- Second-hand summaries.
 
-### A 级：可直接作为证据
+## Language Rule
 
-- 公司官网和投资者关系页面。
-- 年报、季报、业绩演示材料。
-- 交易所公告。
-- 政府部门和权威产业机构。
-- 专利、认证、监管文件。
+Prioritize English sources. If a non-English source is used, the review event must summarize the evidence in English and explain why the source is necessary.
 
-### B 级：可作为提示，需二次验证
+## Cadence
 
-- 主流财经媒体。
-- 行业媒体。
-- 公司采访。
-- 会议纪要。
+Daily scans are useful for short-term catalysts:
 
-### C 级：只能作为线索
+- Press releases.
+- Investor relation updates.
+- Orders and customer partnerships.
+- Capacity expansion and delays.
+- Policy and subsidy updates.
 
-- 社交媒体。
-- 论坛讨论。
-- 未署名研报摘录。
-- 二手转述。
+Weekly scans are better for structural updates:
 
-## 抓取后生成的标准事件
-
-每条信息应被转换成如下字段：
-
-- `sourceType`: `ai_scan`。
-- `status`: `pending`。
-- `industryId`: 所属行业。
-- `companyId`: 关联公司，可为空。
-- `nodeId`: 关联供应链环节，可为空。
-- `impactType`: 影响类型。
-- `summary`: 一句话摘要。
-- `sourceUrl`: 来源链接。
-- `sourceNote`: 来源说明。
-- `sourceIds`: 关联来源 ID。
-- `submittedBy`: `ai`。
-- `reviewDecision`: 空。
-- `reviewedAt`: 空。
-
-## 影响类型
-
-- `supply_chain_importance`: 影响公司或环节重要性。
-- `bottleneck_judgement`: 影响卡脖子判断。
-- `financial_update`: 财报、订单、收入、利润率、现金流。
-- `new_player`: 新增玩家。
-- `relationship_change`: 新客户、新供应商、合作关系变化。
-- `capacity_change`: 产能扩张、投产、停产、延期。
-- `technology_change`: 技术路线、效率、成本、专利、认证变化。
-- `policy_change`: 政策、补贴、监管变化。
-
-## 审核规则
-
-自动生成事件后，审核员需要判断：
-
-1. 来源是否足够可信。
-2. 是否能明确对应公司或供应链环节。
-3. 是否改变当前判断。
-4. 是否需要补充第二来源。
-5. 是否应该更新紫苏叶评分。
-
-审核结果：
-
-- `approved`: 证据充分，可进入正式数据。
-- `needs_more_evidence`: 有价值但证据不足。
-- `rejected`: 不相关、不可靠或无法验证。
-
-## 第一版建议
-
-先不要做复杂爬虫，先做“来源清单 + 半自动摘要”：
-
-1. 每个行业维护一个 `source-watchlist.json`。
-2. AI 每日/每周读取清单中的网址。
-3. AI 只输出候选 `UpdateEvent`。
-4. 人工审核后再修改 `data/industries.json`。
-
-这样能最大限度避免自动化误报污染正式供应链数据。
+- Financial reports.
+- Annual reports and 10-K / 20-F style filings.
+- Supply chain relationship changes.
+- Player concentration changes.
+- Score changes.
+- New companies or new critical nodes.

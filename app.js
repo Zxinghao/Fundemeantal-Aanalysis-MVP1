@@ -25,14 +25,14 @@ const fallbackSources = [
   { id: "umicore-ir", title: "Umicore investors", type: "company_official", url: "https://www.umicore.com/en/investors/", note: "Tracks fuel-cell catalyst, precious-metals, and guidance disclosures." },
   { id: "sgl-ir", title: "SGL Carbon investor relations", type: "company_official", url: "https://www.sglcarbon.com/en/investor-relations/", note: "Tracks GDL, SIGRACET, carbon materials, and fuel-cell business disclosures." },
   { id: "hexagon-purus-ir", title: "Hexagon Purus investor relations", type: "company_official", url: "https://hexagonpurus.com/investor-relations", note: "Tracks high-pressure hydrogen tanks, Type IV cylinders, and commercial vehicle storage systems." },
-  { id: "doe-fuel-cell-parts", title: "U.S. DOE fuel cell parts overview", type: "government", url: "https://www.energy.gov/eere/fuelcells/parts-fuel-cell", note: "Supports PEM fuel-cell component, MEA, and stack structure." },
-  { id: "doe-hydrogen-storage", title: "U.S. DOE physical hydrogen storage", type: "government", url: "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage", note: "Supports 350 bar / 700 bar compressed hydrogen storage pathways." },
-  { id: "jm-fuel-cell-tech", title: "Johnson Matthey fuel cells technology", type: "company_official", url: "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology", note: "Supports Johnson Matthey's fuel-cell catalyst, CCM, and MEA-related activities." },
+  { id: "doe-fuel-cell-parts", title: "U.S. DOE fuel cell parts overview", type: "government", url: "https://www.energy.gov/eere/fuelcells/parts-fuel-cell", note: "Supports PEM fuel-cell component, MEA, and bipolar plate baseline structure." },
+  { id: "doe-hydrogen-storage", title: "U.S. DOE physical hydrogen storage", type: "government", url: "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage", note: "Supports the 350 bar / 700 bar compressed hydrogen storage pathway." },
+  { id: "jm-fuel-cell-tech", title: "Johnson Matthey fuel cells technology", type: "company_official", url: "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology", note: "Supports Johnson Matthey's role in catalysts, CCM, and MEA-related fuel-cell activities." },
   { id: "umicore-fuel-cell-catalysts", title: "Umicore fuel cell catalysts", type: "company_official", url: "https://www.umicore.com/en/markets-products/automotive-mobility/fuel-cell-catalysts/", note: "Supports Umicore's fuel-cell catalyst business." },
   { id: "sgl-gdl", title: "SGL Carbon SIGRACET fuel cell components", type: "company_official", url: "https://www.sglcarbon.com/en/markets-solutions/material/sigracet-fuel-cell-components/", note: "Supports SGL Carbon's GDL and fuel-cell component business." },
-  { id: "forvia-hydrogen-storage", title: "FORVIA hydrogen storage systems", type: "company_official", url: "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems", note: "Supports FORVIA onboard hydrogen storage systems." },
+  { id: "forvia-hydrogen-storage", title: "FORVIA hydrogen storage systems", type: "company_official", url: "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems", note: "Supports FORVIA's onboard hydrogen storage systems." },
   { id: "hexagon-purus", title: "Hexagon Purus hydrogen storage systems", type: "company_official", url: "https://hexagongroup.com/hexagon-purus", note: "Supports Hexagon Purus high-pressure hydrogen tanks and systems." },
-  { id: "garrett-fuel-cell", title: "Garrett fuel cell technology", type: "company_official", url: "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/", note: "Supports Garrett fuel-cell compressor and air management activities." }
+  { id: "garrett-fuel-cell", title: "Garrett fuel cell technology", type: "company_official", url: "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/", note: "Supports Garrett's fuel-cell compressor and air management activities." }
 ];
 
 const fallbackCompanySources = {
@@ -58,7 +58,12 @@ const impactLabels = {
   policy_change: "Policy change"
 };
 
-const state = { industry: null, generatedEvents: [], pendingUpdates: loadPendingUpdates() };
+const state = {
+  industry: null,
+  generatedEvents: [],
+  pendingUpdates: loadPendingUpdates()
+};
+
 const industrySelect = document.querySelector("#industry-select");
 const industryTitle = document.querySelector("#industry-title");
 const industryDescription = document.querySelector("#industry-description");
@@ -71,7 +76,11 @@ const reviewFilter = document.querySelector("#review-filter");
 
 async function boot() {
   try {
-    const [loadedIndustries, generatedEvents] = await Promise.all([loadIndustries(), loadGeneratedEvents()]);
+    const [loadedIndustries, generatedEvents] = await Promise.all([
+      loadIndustries(),
+      loadGeneratedEvents()
+    ]);
+
     industries = loadedIndustries;
     state.generatedEvents = generatedEvents;
     state.industry = industries[0];
@@ -85,20 +94,30 @@ async function boot() {
 
 async function loadIndustries() {
   const response = await fetch("data/industries.json", { cache: "no-store" });
-  if (!response.ok) throw new Error(`Industry data failed to load: ${response.status}`);
+  if (!response.ok) {
+    throw new Error(`Industry data failed to load: ${response.status}`);
+  }
+
   const data = await response.json();
-  if (!Array.isArray(data) || data.length === 0) throw new Error("Industry data is empty or malformed.");
+  if (!Array.isArray(data) || data.length === 0) {
+    throw new Error("Industry data is empty or malformed.");
+  }
+
   return data;
 }
 
 async function loadGeneratedEvents() {
-  return await fetchJsonIfAvailable("data/generated-update-events.json") || await fetchJsonIfAvailable("data/generated-update-events.sample.json") || [];
+  const data = await fetchJsonIfAvailable("data/generated-update-events.json");
+  if (data) return data;
+
+  return await fetchJsonIfAvailable("data/generated-update-events.sample.json") || [];
 }
 
 async function fetchJsonIfAvailable(url) {
   try {
     const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) return null;
+
     const data = await response.json();
     return Array.isArray(data) ? data : null;
   } catch {
@@ -109,7 +128,12 @@ async function fetchJsonIfAvailable(url) {
 function loadPendingUpdates() {
   const saved = localStorage.getItem("pendingUpdates");
   if (!saved) return defaultPendingUpdates;
-  try { return [...defaultPendingUpdates, ...JSON.parse(saved)]; } catch { return defaultPendingUpdates; }
+
+  try {
+    return [...defaultPendingUpdates, ...JSON.parse(saved)];
+  } catch {
+    return defaultPendingUpdates;
+  }
 }
 
 function saveUserUpdate(update) {
@@ -121,6 +145,7 @@ function saveUserUpdate(update) {
 
 function initIndustrySelect() {
   industrySelect.innerHTML = "";
+
   industries.forEach((industry) => {
     const option = document.createElement("option");
     option.value = industry.id;
@@ -134,8 +159,12 @@ function bindInteractions() {
     state.industry = industries.find((industry) => industry.id === industrySelect.value);
     render();
   });
+
   document.querySelector("#close-dialog").addEventListener("click", () => dialog.close());
-  document.querySelector("#reset-view").addEventListener("click", () => map.scrollTo({ left: 0, top: 0, behavior: "smooth" }));
+  document.querySelector("#reset-view").addEventListener("click", () => {
+    map.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+  });
+
   form.addEventListener("submit", handleSubmission);
   reviewFilter.addEventListener("change", renderPendingUpdates);
   pendingUpdates.addEventListener("click", handleReviewAction);
@@ -151,6 +180,7 @@ function render() {
 function renderMap() {
   const canvas = document.createElement("div");
   canvas.className = "map-canvas";
+
   const maxX = Math.max(...state.industry.nodes.map((node) => node.position.x)) + 250;
   const maxY = Math.max(...state.industry.nodes.map((node) => node.position.y)) + 140;
   canvas.style.width = `${maxX}px`;
@@ -165,6 +195,7 @@ function renderMap() {
     const start = state.industry.nodes.find((node) => node.id === from);
     const end = state.industry.nodes.find((node) => node.id === to);
     if (!start || !end) return;
+
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     const x1 = start.position.x + 190;
     const y1 = start.position.y + 41;
@@ -179,19 +210,52 @@ function renderMap() {
   });
 
   canvas.appendChild(svg);
+
   state.industry.nodes.forEach((node) => {
     const element = document.createElement("button");
     element.type = "button";
     element.className = `node ${node.type}`;
     element.style.left = `${node.position.x}px`;
     element.style.top = `${node.position.y}px`;
-    element.innerHTML = `<div class="node-title">${node.title}</div><div class="node-meta">${node.summary}</div><div class="tags">${node.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>`;
-    if (findCompany(node.id)) element.addEventListener("click", () => openCompany(node.id));
+    element.title = `${node.title}: ${node.summary}`;
+    element.setAttribute("aria-label", `${node.title}. ${node.summary}`);
+    element.innerHTML = `
+      <div class="node-title">${node.title}</div>
+      <div class="node-meta">${shortNodeMeta(node)}</div>
+      <div class="tags"><span class="tag">${primaryNodeBadge(node)}</span></div>
+    `;
+
+    if (findCompany(node.id)) {
+      element.addEventListener("click", () => openCompany(node.id));
+    }
+
     canvas.appendChild(element);
   });
 
   map.innerHTML = "";
   map.appendChild(canvas);
+}
+
+function shortNodeMeta(node) {
+  const company = findCompany(node.id);
+  if (company) return company.businessRole;
+  return node.layer;
+}
+
+function primaryNodeBadge(node) {
+  const company = findCompany(node.id);
+  if (company?.isZisuCandidate) return "Hidden";
+  if (company?.isBottleneck) return "Bottleneck";
+  if (company?.isKeySupplier) return "Key supplier";
+
+  const labels = {
+    terminal: "Demand",
+    chain: "Supply node",
+    company: "Company",
+    zisu: "Hidden"
+  };
+
+  return labels[node.type] || node.layer;
 }
 
 function findCompany(nodeId) {
@@ -201,88 +265,247 @@ function findCompany(nodeId) {
 function openCompany(id) {
   const company = findCompany(id);
   if (!company) return;
-  const scores = Object.entries(company.scores).map(([label, value]) => `<div class="score-row"><span>${scoreLabel(label)}</span><div class="bar"><span style="width: ${value}%"></span></div><strong>${value}</strong></div>`).join("");
-  const signals = Object.entries(company.signals).map(([label, value]) => `<div class="signal"><strong>${signalLabel(label)}</strong><span>${value}</span></div>`).join("");
-  detail.innerHTML = `<div class="detail-header"><h2>${company.name}</h2><div class="detail-subtitle">${company.ticker} - ${company.region} - ${company.businessRole}</div></div><div class="signal-grid">${signals}</div><h3>Hidden Bottleneck Score</h3>${scores}<h3>Recent Updates / Items to Verify</h3><ul class="recent-list">${company.recentUpdates.map((item) => `<li>${item}</li>`).join("")}</ul><h3>Evidence Sources</h3>${renderSources(sourceIdsForCompany(company))}`;
+
+  const scores = Object.entries(company.scores)
+    .map(([label, value]) => `
+      <div class="score-row">
+        <span>${scoreLabel(label)}</span>
+        <div class="bar"><span style="width: ${value}%"></span></div>
+        <strong>${value}</strong>
+      </div>
+    `)
+    .join("");
+
+  const signals = Object.entries(company.signals)
+    .map(([label, value]) => `
+      <div class="signal">
+        <strong>${signalLabel(label)}</strong>
+        <span>${value}</span>
+      </div>
+    `)
+    .join("");
+
+  detail.innerHTML = `
+    <div class="detail-header">
+      <h2>${company.name}</h2>
+      <div class="detail-subtitle">${company.ticker} - ${company.region} - ${company.businessRole}</div>
+    </div>
+    <div class="signal-grid">${signals}</div>
+    <h3>Hidden Bottleneck Score</h3>
+    ${scores}
+    <h3>Recent Updates / Items to Verify</h3>
+    <ul class="recent-list">${company.recentUpdates.map((item) => `<li>${item}</li>`).join("")}</ul>
+    <h3>Evidence Sources</h3>
+    ${renderSources(sourceIdsForCompany(company))}
+  `;
+
   dialog.showModal();
 }
 
 function scoreLabel(label) {
-  return ({ supplyChainImportance: "Supply chain importance", scarcity: "Scarcity", pricingPower: "Pricing power", switchingCost: "Switching cost", validationBarrier: "Validation barrier", marketUnderappreciation: "Market underappreciation" })[label] || label;
+  const labels = {
+    supplyChainImportance: "Supply chain importance",
+    scarcity: "Scarcity",
+    pricingPower: "Pricing power",
+    switchingCost: "Switching cost",
+    validationBarrier: "Validation barrier",
+    marketUnderappreciation: "Market underappreciation"
+  };
+
+  return labels[label] || label;
 }
 
 function signalLabel(label) {
-  return ({ importantSupplier: "Important supplier", bottleneckPosition: "Bottleneck position", playerConcentration: "Player concentration", recentCatalyst: "Recent catalyst" })[label] || label;
+  const labels = {
+    importantSupplier: "Important supplier",
+    bottleneckPosition: "Bottleneck position",
+    playerConcentration: "Player concentration",
+    recentCatalyst: "Recent catalyst"
+  };
+
+  return labels[label] || label;
 }
 
 function sourceById(id) {
   return [...(state.industry.sources || []), ...fallbackSources].find((source) => source.id === id);
 }
-function sourceIdsForCompany(company) { return company.sourceIds || fallbackCompanySources[company.id] || []; }
-function sourceIdsForEvent(event) { return event.sourceIds || (event.companyId && fallbackCompanySources[event.companyId]) || []; }
+
+function sourceIdsForCompany(company) {
+  return company.sourceIds || fallbackCompanySources[company.id] || [];
+}
+
+function sourceIdsForEvent(event) {
+  if (event.sourceIds) return event.sourceIds;
+  if (event.companyId && fallbackCompanySources[event.companyId]) return fallbackCompanySources[event.companyId];
+  return [];
+}
 
 function renderSources(sourceIds = []) {
   const sources = sourceIds.map(sourceById).filter(Boolean);
   if (sources.length === 0) return `<p class="source-empty">No linked sources yet.</p>`;
-  return `<div class="source-list">${sources.map((source) => `<div class="source-item"><strong>${source.title}</strong><span>${source.type} - ${source.note}</span>${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">Open source</a>` : ""}</div>`).join("")}</div>`;
+
+  return `
+    <div class="source-list">
+      ${sources.map((source) => `
+        <div class="source-item">
+          <strong>${source.title}</strong>
+          <span>${source.type} - ${source.note}</span>
+          ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">Open source</a>` : ""}
+        </div>
+      `).join("")}
+    </div>
+  `;
 }
 
 function renderPendingUpdates() {
-  const visibleUpdates = filterReviewQueue(buildReviewQueue());
+  const allUpdates = buildReviewQueue();
+  const visibleUpdates = filterReviewQueue(allUpdates);
+
   if (visibleUpdates.length === 0) {
     pendingUpdates.innerHTML = `<div class="empty-state">No update events match the current filter.</div>`;
     return;
   }
-  pendingUpdates.innerHTML = visibleUpdates.map((update) => `<article class="update-card ${update.reviewStatus}"><strong>${update.company}</strong><span>${reviewStatusLabel(update.reviewStatus)} - ${update.origin} - ${impactLabel(update.impact)}</span><p>${update.summary}</p><span>Source: ${update.source}</span>${renderSources(update.sourceIds)}<div class="review-actions"><button type="button" data-review-id="${update.id}" data-review-status="approved">Approve</button><button type="button" data-review-id="${update.id}" data-review-status="needs_more_evidence">Need Evidence</button><button type="button" data-review-id="${update.id}" data-review-status="rejected">Reject</button></div></article>`).join("");
+
+  pendingUpdates.innerHTML = visibleUpdates
+    .map((update) => `
+      <article class="update-card ${update.reviewStatus}">
+        <strong>${update.company}</strong>
+        <span>${reviewStatusLabel(update.reviewStatus)} - ${update.origin} - ${impactLabel(update.impact)}</span>
+        <p>${update.summary}</p>
+        <span>Source: ${update.source}</span>
+        ${renderSources(update.sourceIds)}
+        <div class="review-actions">
+          <button type="button" data-review-id="${update.id}" data-review-status="approved">Approve</button>
+          <button type="button" data-review-id="${update.id}" data-review-status="needs_more_evidence">Need Evidence</button>
+          <button type="button" data-review-id="${update.id}" data-review-status="rejected">Reject</button>
+        </div>
+      </article>
+    `)
+    .join("");
 }
 
 function buildReviewQueue() {
   const industryEvents = state.industry.updateEvents.map((event) => eventToReviewCard(event, "Map candidate"));
-  const generatedEvents = state.generatedEvents.filter((event) => event.industryId === state.industry.id).map((event) => eventToReviewCard(event, "AI scan"));
-  const userEvents = state.pendingUpdates.map((update) => ({ id: update.id || stableUpdateId(update), company: update.company, impact: update.impact, origin: "User submission", source: update.source, sourceIds: update.sourceIds || [], summary: update.summary, reviewStatus: reviewStatusFor(update.id || stableUpdateId(update), update.status) }));
+
+  const generatedEvents = state.generatedEvents
+    .filter((event) => event.industryId === state.industry.id)
+    .map((event) => eventToReviewCard(event, "AI scan"));
+
+  const userEvents = state.pendingUpdates.map((update) => ({
+    id: update.id || stableUpdateId(update),
+    company: update.company,
+    impact: update.impact,
+    origin: "User submission",
+    source: update.source,
+    sourceIds: update.sourceIds || [],
+    summary: update.summary,
+    reviewStatus: reviewStatusFor(update.id, update.status)
+  }));
+
   return [...generatedEvents, ...industryEvents, ...userEvents];
 }
 
 function eventToReviewCard(event, origin) {
-  return { id: event.id, company: companyLabelForEvent(event), impact: event.impactType, origin, source: event.sourceUrl || event.sourceNote || "No source provided", sourceIds: sourceIdsForEvent(event), summary: event.summary, reviewStatus: reviewStatusFor(event.id, event.status) };
+  return {
+    id: event.id,
+    company: companyLabelForEvent(event),
+    impact: event.impactType,
+    origin,
+    source: event.sourceUrl || event.sourceNote || "No source provided",
+    sourceIds: sourceIdsForEvent(event),
+    summary: event.summary,
+    reviewStatus: reviewStatusFor(event.id, event.status)
+  };
 }
+
 function companyLabelForEvent(event) {
   const company = state.industry.companies.find((item) => item.id === event.companyId);
   if (company) return company.name;
+
   const node = state.industry.nodes.find((item) => item.id === event.nodeId);
-  return node ? node.title : event.companyId || event.nodeId || state.industry.name;
+  if (node) return node.title;
+
+  return event.companyId || event.nodeId || state.industry.name;
 }
-function stableUpdateId(update) { return `legacy-${encodeURIComponent(`${update.company}-${update.source}-${update.summary}`)}`; }
-function filterReviewQueue(queue) { return reviewFilter.value === "all" ? queue : queue.filter((update) => update.reviewStatus === reviewFilter.value); }
-function reviewStatusFor(id, fallbackStatus) { return loadReviewDecisions()[id] || normalizeReviewStatus(fallbackStatus); }
-function normalizeReviewStatus(status) { return ["approved", "rejected", "needs_more_evidence", "pending"].includes(status) ? status : "pending"; }
-function reviewStatusLabel(status) { return ({ pending: "Pending", approved: "Approved", rejected: "Rejected", needs_more_evidence: "Need more evidence" })[status] || status; }
-function impactLabel(impact) { return impactLabels[impact] || impact; }
+
+function stableUpdateId(update) {
+  return `legacy-${encodeURIComponent(`${update.company}-${update.source}-${update.summary}`)}`;
+}
+
+function filterReviewQueue(queue) {
+  const selected = reviewFilter.value;
+  if (selected === "all") return queue;
+  return queue.filter((update) => update.reviewStatus === selected);
+}
+
+function reviewStatusFor(id, fallbackStatus) {
+  const decisions = loadReviewDecisions();
+  return decisions[id] || normalizeReviewStatus(fallbackStatus);
+}
+
+function normalizeReviewStatus(status) {
+  if (["approved", "rejected", "needs_more_evidence", "pending"].includes(status)) return status;
+  return "pending";
+}
+
+function reviewStatusLabel(status) {
+  const labels = {
+    pending: "Pending",
+    approved: "Approved",
+    rejected: "Rejected",
+    needs_more_evidence: "Need more evidence"
+  };
+
+  return labels[status] || status;
+}
+
+function impactLabel(impact) {
+  return impactLabels[impact] || impact;
+}
 
 function loadReviewDecisions() {
   const saved = localStorage.getItem("reviewDecisions");
   if (!saved) return {};
-  try { return JSON.parse(saved); } catch { return {}; }
+
+  try {
+    return JSON.parse(saved);
+  } catch {
+    return {};
+  }
 }
+
 function saveReviewDecision(id, status) {
   const decisions = loadReviewDecisions();
   decisions[id] = status;
   localStorage.setItem("reviewDecisions", JSON.stringify(decisions));
 }
+
 function handleReviewAction(event) {
   const button = event.target.closest("[data-review-id]");
   if (!button) return;
+
   saveReviewDecision(button.dataset.reviewId, button.dataset.reviewStatus);
   renderPendingUpdates();
 }
+
 function handleSubmission(event) {
   event.preventDefault();
-  const update = { id: `user-${Date.now()}`, company: document.querySelector("#submission-company").value.trim(), source: document.querySelector("#submission-source").value.trim(), summary: document.querySelector("#submission-summary").value.trim(), impact: document.querySelector("#submission-impact").value, status: "pending" };
+
+  const update = {
+    id: `user-${Date.now()}`,
+    company: document.querySelector("#submission-company").value.trim(),
+    source: document.querySelector("#submission-source").value.trim(),
+    summary: document.querySelector("#submission-summary").value.trim(),
+    impact: document.querySelector("#submission-impact").value,
+    status: "pending"
+  };
+
   saveUserUpdate(update);
   state.pendingUpdates.unshift(update);
   renderPendingUpdates();
   form.reset();
 }
+
 function renderLoadError(error) {
   industryTitle.textContent = "Industry data failed to load";
   industryDescription.textContent = "Open the page through a local web server or the hosted preview link. Some browsers block JSON loading when the file is opened directly.";

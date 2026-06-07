@@ -35,3 +35,61 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.company-flags {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20px 0;
+}
+
+.flag-pill {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 12px;
+}
+
+.flag-pill span,
+.flag-pill strong {
+  display: block;
+}
+
+.flag-pill span {
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  text-align: center;
+  width: fit-content;
+}
+
+.flag-pill strong {
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.flag-pill.active {
+  background: rgba(0, 113, 227, 0.08);
+  border-color: rgba(0, 113, 227, 0.22);
+}
+
+.flag-pill.active span {
+  background: rgba(0, 113, 227, 0.14);
+  color: #005bb5;
+}
+
+.flag-pill.inactive {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.flag-pill.inactive span {
+  background: rgba(0, 0, 0, 0.06);
+  color: #6e6e73;
+}
+
+@media (max-width: 640px) {
+  .company-flags {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,33 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-06-08-jm",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": "jm",
-    "nodeId": "catalyst",
-    "impactType": "technology_change",
-    "summary": "Johnson Matthey news changed. The page title is \"News | Johnson Matthey\" and the scan matched fuel cell, hydrogen, catalyst. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://matthey.com/news",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "jm-news"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.jm.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-fuel-cell-2026-06-08-forvia",
+    "id": "web-fuel-cell-2026-06-09-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -45,6 +18,20 @@
     "reviewedAt": null,
     "confidence": "medium",
     "evidenceLevel": "A",
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "hydrogen"
+      ],
+      "affectedTarget": "company:forvia",
+      "analystSummary": "The page changed, but keyword evidence is limited. Confirm whether the change is material before approving.",
+      "recommendedChecks": [
+        "Open the source URL and identify the exact changed disclosure.",
+        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+        "Approve only if the evidence is specific enough to update the official database."
+      ],
+      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.forvia.recentUpdates."
+    },
     "proposedActions": [
       {
         "target": "companies.forvia.signals.recentCatalyst",
@@ -54,61 +41,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-06-08-garrett",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": "garrett",
-    "nodeId": "compressor",
-    "impactType": "technology_change",
-    "summary": "Garrett Motion news changed. The page title is \"Newsroom Garrett Motion - Garrett Motion\" and the scan matched fuel cell, compressor, hydrogen, electric compressor. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.garrettmotion.com/news/",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "garrett-news"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.garrett.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-fuel-cell-2026-06-08-stack",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": null,
-    "nodeId": "stack",
-    "impactType": "policy_change",
-    "summary": "U.S. DOE fuel cells office changed. The page title is \"Hydrogen and Fuel Cell Technologies Office | Department of Energy\" and the scan matched fuel cell, hydrogen, funding, infrastructure. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "doe-fuel-cells"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "nodes.stack.summary",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-fuel-cell-2026-06-08-umicore",
+    "id": "web-fuel-cell-2026-06-09-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -126,279 +59,24 @@
     "reviewedAt": null,
     "confidence": "medium",
     "evidenceLevel": "A",
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "precious metals",
+        "guidance"
+      ],
+      "affectedTarget": "company:umicore",
+      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
+      "recommendedChecks": [
+        "Open the source URL and identify the exact changed disclosure.",
+        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+        "Approve only if the evidence is specific enough to update the official database."
+      ],
+      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.umicore.recentUpdates."
+    },
     "proposedActions": [
       {
         "target": "companies.umicore.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-fuel-cell-2026-06-08-sgl",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": "sgl",
-    "nodeId": "gdl",
-    "impactType": "technology_change",
-    "summary": "SGL Carbon investor relations changed. The page title is \"SGL Investor Relations – shares, publications &amp; events | SGL Carbon\" and the scan matched carbon fiber. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.sglcarbon.com/en/investor-relations/",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "sgl-ir"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.sgl.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-nvidia",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "nvidia",
-    "nodeId": "switching",
-    "impactType": "technology_change",
-    "summary": "NVIDIA Spectrum-X Photonics announcement changed. The page title is \"NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs\" and the scan matched Spectrum-X, Quantum-X, co-packaged optics, silicon photonics, AI factories. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "nvidia-spectrum-x-photonics"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.nvidia.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-broadcom",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "broadcom",
-    "nodeId": "external-light-source",
-    "impactType": "technology_change",
-    "summary": "Broadcom co-packaged optics changed. The page title is \"Co-Packaged Optics\" and the scan matched co-packaged optics. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "broadcom-cpo"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.broadcom.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-marvell",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "marvell",
-    "nodeId": "dsp",
-    "impactType": "technology_change",
-    "summary": "Marvell optical DSPs changed. The page title is \"Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell\" and the scan matched optical DSP, PAM4, 1.6T, AI infrastructure, data center. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "marvell-optical-dsp"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.marvell.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-coherent",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "coherent",
-    "nodeId": "laser",
-    "impactType": "technology_change",
-    "summary": "Coherent data-center communications changed. The page title is \"Datacenter and Communications | Coherent\" and the scan matched datacenter, laser, transceiver. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.coherent.com/datacenter-communications",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "coherent-datacenter"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.coherent.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-lumentum",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "lumentum",
-    "nodeId": "laser",
-    "impactType": "technology_change",
-    "summary": "Lumentum data-center EMLs changed. The page title is \"EMLs | Lumentum\" and the scan matched EML, modulated laser, data center, 800G, 1.6T. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.lumentum.com/en/products/data-center/modulated-lasers/emls",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "lumentum-eml"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.lumentum.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-fabrinet",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "fabrinet",
-    "nodeId": "packaging-test",
-    "impactType": "capacity_change",
-    "summary": "Fabrinet optical components changed. The page title is \"Optical Components - Fabrinet\" and the scan matched optical components, manufacturing. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://fabrinet.com/services/optical-components",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "fabrinet-optical-components"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.fabrinet.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-broadcom",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "broadcom",
-    "nodeId": "silicon-photonics",
-    "impactType": "technology_change",
-    "summary": "Broadcom Bailly CPO platform changed. The page title is \"Broadcom Delivers Industry’s First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems | Broadcom Inc.\" and the scan matched Bailly, 51.2, CPO, Ethernet switch, AI systems. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-delivers-industrys-first-512-tbps-co-packaged-optics",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "broadcom-bailly"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.broadcom.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-marvell",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "marvell",
-    "nodeId": "dsp",
-    "impactType": "technology_change",
-    "summary": "Marvell PAM4 DSP products changed. The page title is \"PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure\" and the scan matched PAM4, DSP, 800G, 1.6T, AI networks. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.marvell.com/products/pam-dsp.html",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "marvell-pam4-dsp"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.marvell.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-06-08-eoptolink",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "eoptolink",
-    "nodeId": "optical-modules",
-    "impactType": "technology_change",
-    "summary": "Eoptolink 800G products changed. The page title is \"800G\" and the scan matched 800G, optical transceiver, data center, module. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://eoptolink.com/product-solutions/800g",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "eoptolink-800g"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "proposedActions": [
-      {
-        "target": "companies.eoptolink.signals.recentCatalyst",
         "action": "review",
         "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
       }

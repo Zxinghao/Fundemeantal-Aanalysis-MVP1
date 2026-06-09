@@ -73,6 +73,30 @@ function eventId(industryId, date, source) {
   return `web-${industryId}-${date}-${target}`;
 }
 
+function buildAnalysis({ source, hits }) {
+  const matchedKeywords = hits.length ? hits : [];
+  const hasStrongMatch = matchedKeywords.length >= 2;
+  const reviewPriority = source.sourceType === "company_official" && hasStrongMatch ? "high" : "medium";
+  const affectedTarget = source.companyId ? `company:${source.companyId}` : `node:${source.nodeId}`;
+
+  return {
+    reviewPriority,
+    matchedKeywords,
+    affectedTarget,
+    analystSummary: hasStrongMatch
+      ? "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change."
+      : "The page changed, but keyword evidence is limited. Confirm whether the change is material before approving.",
+    recommendedChecks: [
+      "Open the source URL and identify the exact changed disclosure.",
+      "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+      "Approve only if the evidence is specific enough to update the official database."
+    ],
+    suggestedDatabaseAction: source.companyId
+      ? `If material, append a reviewed recent update to companies.${source.companyId}.recentUpdates.`
+      : `If material, update the summary or thesis for node ${source.nodeId}.`
+  };
+}
+
 function eventFromSource({ industryId, source, title, hits, date }) {
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
   const hitText = hits.length ? hits.join(", ") : source.watchFor.join(", ");
@@ -94,6 +118,7 @@ function eventFromSource({ industryId, source, title, hits, date }) {
     reviewedAt: null,
     confidence: hits.length ? "medium" : "low",
     evidenceLevel: evidenceBySourceType[source.sourceType] || "B",
+    analysis: buildAnalysis({ source, hits }),
     proposedActions: [
       {
         target: source.companyId ? `companies.${source.companyId}.signals.recentCatalyst` : `nodes.${source.nodeId}.summary`,

@@ -18,6 +18,14 @@
   line-height: 1.5;
 }
 
+#review-json-output {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 12px;
+  min-height: 160px;
+  resize: vertical;
+  width: 100%;
+}
+
 .signal {
   background: rgba(0, 0, 0, 0.035);
   border: 1px solid rgba(0, 0, 0, 0.055);

@@ -88,6 +88,30 @@
   color: #6e6e73;
 }
 
+.analysis-box {
+  background: rgba(0, 113, 227, 0.07);
+  border: 1px solid rgba(0, 113, 227, 0.13);
+  border-radius: 16px;
+  color: var(--muted);
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.analysis-box strong {
+  color: var(--ink);
+}
+
+.analysis-box p,
+.analysis-box ul {
+  margin: 0;
+}
+
+.analysis-box ul {
+  padding-left: 18px;
+}
+
 @media (max-width: 640px) {
   .company-flags {
     grid-template-columns: 1fr;

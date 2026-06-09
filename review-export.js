@@ -9,11 +9,14 @@ function exportReviewDecisions() {
       id: item.id,
       industryId: state.industry.id,
       industryName: state.industry.name,
+      companyId: item.companyId || null,
+      nodeId: item.nodeId || null,
       company: item.company,
       impact: item.impact,
       origin: item.origin,
       source: item.source,
       sourceIds: item.sourceIds,
+      analysis: item.analysis || null,
       summary: item.summary,
       reviewStatus: decisions[item.id]
     }));
@@ -30,7 +33,8 @@ function exportReviewDecisions() {
     reviewedItems
   };
 
-  const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: "application/json" });
+  const text = `${JSON.stringify(payload, null, 2)}\n`;
+  const blob = new Blob([text], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
@@ -39,7 +43,27 @@ function exportReviewDecisions() {
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  exportStatus.textContent = `Exported ${reviewedItems.length} review decision(s).`;
+  renderReviewPayload(text, reviewedItems.length);
+}
+
+function renderReviewPayload(text, count) {
+  let output = document.querySelector("#review-json-output");
+  if (!output) {
+    output = document.createElement("textarea");
+    output.id = "review-json-output";
+    output.readOnly = true;
+    output.rows = 8;
+    exportStatus.insertAdjacentElement("afterend", output);
+  }
+
+  output.value = text;
+  output.select();
+
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).catch(() => {});
+  }
+
+  exportStatus.textContent = `Exported ${count} review decision(s). The JSON is shown below and can be pasted into the Approve And Promote workflow.`;
 }
 
 exportReview.addEventListener("click", exportReviewDecisions);

@@ -1,5 +1,9 @@
 let industries = [];
 
+const supplementalIndustryFiles = [
+  "data/industries/ai-optics.json"
+];
+
 const defaultPendingUpdates = [
   {
     company: "Johnson Matthey",
@@ -103,7 +107,38 @@ async function loadIndustries() {
     throw new Error("Industry data is empty or malformed.");
   }
 
-  return data;
+  const supplementalIndustries = await loadSupplementalIndustries();
+  return mergeIndustries(data, supplementalIndustries);
+}
+
+async function loadSupplementalIndustries() {
+  const loaded = await Promise.all(
+    supplementalIndustryFiles.map((url) => fetchJsonObjectIfAvailable(url))
+  );
+
+  return loaded.filter(Boolean);
+}
+
+async function fetchJsonObjectIfAvailable(url) {
+  try {
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    return data && typeof data === "object" && !Array.isArray(data) ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+function mergeIndustries(baseIndustries, supplementalIndustries) {
+  const byId = new Map(baseIndustries.map((industry) => [industry.id, industry]));
+
+  supplementalIndustries.forEach((industry) => {
+    byId.set(industry.id, industry);
+  });
+
+  return Array.from(byId.values());
 }
 
 async function loadGeneratedEvents() {
@@ -290,6 +325,7 @@ function openCompany(id) {
       <h2>${company.name}</h2>
       <div class="detail-subtitle">${company.ticker} - ${company.region} - ${company.businessRole}</div>
     </div>
+    ${renderCompanyFlags(company)}
     <div class="signal-grid">${signals}</div>
     <h3>Hidden Bottleneck Score</h3>
     ${scores}
@@ -300,6 +336,25 @@ function openCompany(id) {
   `;
 
   dialog.showModal();
+}
+
+function renderCompanyFlags(company) {
+  const flags = [
+    ["Key supplier", company.isKeySupplier],
+    ["Bottleneck", company.isBottleneck],
+    ["Hidden candidate", company.isZisuCandidate]
+  ];
+
+  return `
+    <div class="company-flags">
+      ${flags.map(([label, active]) => `
+        <div class="flag-pill ${active ? "active" : "inactive"}">
+          <span>${active ? "Yes" : "No"}</span>
+          <strong>${label}</strong>
+        </div>
+      `).join("")}
+    </div>
+  `;
 }
 
 function scoreLabel(label) {
@@ -372,6 +427,7 @@ function renderPendingUpdates() {
         <strong>${update.company}</strong>
         <span>${reviewStatusLabel(update.reviewStatus)} - ${update.origin} - ${impactLabel(update.impact)}</span>
         <p>${update.summary}</p>
+        ${renderAnalysis(update.analysis)}
         <span>Source: ${update.source}</span>
         ${renderSources(update.sourceIds)}
         <div class="review-actions">
@@ -408,14 +464,34 @@ function buildReviewQueue() {
 function eventToReviewCard(event, origin) {
   return {
     id: event.id,
+    companyId: event.companyId || null,
+    nodeId: event.nodeId || null,
     company: companyLabelForEvent(event),
     impact: event.impactType,
     origin,
     source: event.sourceUrl || event.sourceNote || "No source provided",
     sourceIds: sourceIdsForEvent(event),
+    analysis: event.analysis || null,
     summary: event.summary,
     reviewStatus: reviewStatusFor(event.id, event.status)
   };
+}
+
+function renderAnalysis(analysis) {
+  if (!analysis) return "";
+
+  const checks = (analysis.recommendedChecks || [])
+    .map((item) => `<li>${item}</li>`)
+    .join("");
+
+  return `
+    <div class="analysis-box">
+      <strong>Analysis layer: ${analysis.reviewPriority || "medium"} priority</strong>
+      <p>${analysis.analystSummary || "Review the source before approving."}</p>
+      ${checks ? `<ul>${checks}</ul>` : ""}
+      ${analysis.suggestedDatabaseAction ? `<span>${analysis.suggestedDatabaseAction}</span>` : ""}
+    </div>
+  `;
 }
 
 function companyLabelForEvent(event) {

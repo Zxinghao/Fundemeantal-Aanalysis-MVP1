@@ -5,8 +5,12 @@ on:
     inputs:
       review_file:
         description: "Path to exported review decisions JSON"
-        required: true
+        required: false
         default: "data/review-decisions.sample.json"
+      review_payload:
+        description: "Optional pasted review decisions JSON. If provided, this overrides review_file."
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -24,8 +28,21 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Resolve review input
+        id: review-input
+        shell: bash
+        env:
+          REVIEW_PAYLOAD: ${{ inputs.review_payload }}
+        run: |
+          if [ -n "$REVIEW_PAYLOAD" ]; then
+            printf '%s\n' "$REVIEW_PAYLOAD" > /tmp/review-decisions.json
+            echo "review_file=/tmp/review-decisions.json" >> "$GITHUB_OUTPUT"
+          else
+            echo "review_file=${{ inputs.review_file }}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Apply approved review decisions
-        run: node scripts/apply-review-decisions.mjs "${{ inputs.review_file }}"
+        run: node scripts/apply-review-decisions.mjs "${{ steps.review-input.outputs.review_file }}"
 
       - name: Commit reviewed industry data
         uses: stefanzweifel/git-auto-commit-action@v5

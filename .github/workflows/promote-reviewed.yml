@@ -32,3 +32,10 @@ jobs:
         with:
           commit_message: "Promote reviewed industry data"
           file_pattern: "data/industries.json data/industries.previous.json"
+
+      - name: Publish current site
+        shell: bash
+        run: |
+          git fetch origin gh-pages || true
+          git checkout -B gh-pages
+          git push origin gh-pages --force

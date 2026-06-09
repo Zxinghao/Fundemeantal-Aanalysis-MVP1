@@ -1,0 +1,54 @@
+name: Approve And Promote
+
+on:
+  workflow_dispatch:
+    inputs:
+      review_payload:
+        description: "Paste exported review decisions JSON from the web app"
+        required: true
+      confirmation:
+        description: "Type PROMOTE to apply approved decisions to the official database"
+        required: true
+        default: "PROMOTE"
+
+permissions:
+  contents: write
+
+jobs:
+  approve-and-promote:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Write review payload
+        shell: bash
+        env:
+          REVIEW_PAYLOAD: ${{ inputs.review_payload }}
+        run: |
+          printf '%s\n' "$REVIEW_PAYLOAD" > /tmp/review-decisions.json
+
+      - name: Apply approved review decisions
+        run: node scripts/apply-review-decisions.mjs /tmp/review-decisions.json
+
+      - name: Promote reviewed data
+        run: node scripts/promote-reviewed-data.mjs "${{ inputs.confirmation }}"
+
+      - name: Commit promoted database
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Approve and promote reviewed data"
+          file_pattern: "data/industries.json data/industries.reviewed.json data/industries.previous.json"
+
+      - name: Publish current site
+        shell: bash
+        run: |
+          git fetch origin gh-pages || true
+          git checkout -B gh-pages
+          git push origin gh-pages --force

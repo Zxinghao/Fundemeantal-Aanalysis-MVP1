@@ -1,6 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-06-09-forvia",
+    "id": "web-fuel-cell-2026-06-10-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-06-09-umicore",
+    "id": "web-fuel-cell-2026-06-10-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -77,6 +77,96 @@
     "proposedActions": [
       {
         "target": "companies.umicore.signals.recentCatalyst",
+        "action": "review",
+        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
+      }
+    ]
+  },
+  {
+    "id": "web-ai-optics-2026-06-10-marvell",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "ai-optics",
+    "companyId": "marvell",
+    "nodeId": "dsp",
+    "impactType": "technology_change",
+    "summary": "Marvell optical DSPs changed. The page title is \"Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell\" and the scan matched optical DSP, PAM4, 1.6T, AI infrastructure, data center. Review whether the change affects the supply chain thesis.",
+    "sourceUrl": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
+    "sourceIds": [
+      "marvell-optical-dsp"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "optical DSP",
+        "PAM4",
+        "1.6T",
+        "AI infrastructure",
+        "data center"
+      ],
+      "affectedTarget": "company:marvell",
+      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
+      "recommendedChecks": [
+        "Open the source URL and identify the exact changed disclosure.",
+        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+        "Approve only if the evidence is specific enough to update the official database."
+      ],
+      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.marvell.recentUpdates."
+    },
+    "proposedActions": [
+      {
+        "target": "companies.marvell.signals.recentCatalyst",
+        "action": "review",
+        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
+      }
+    ]
+  },
+  {
+    "id": "web-ai-optics-2026-06-10-marvell",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "ai-optics",
+    "companyId": "marvell",
+    "nodeId": "dsp",
+    "impactType": "technology_change",
+    "summary": "Marvell PAM4 DSP products changed. The page title is \"PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure\" and the scan matched PAM4, DSP, 800G, 1.6T, AI networks. Review whether the change affects the supply chain thesis.",
+    "sourceUrl": "https://www.marvell.com/products/pam-dsp.html",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
+    "sourceIds": [
+      "marvell-pam4-dsp"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "PAM4",
+        "DSP",
+        "800G",
+        "1.6T",
+        "AI networks"
+      ],
+      "affectedTarget": "company:marvell",
+      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
+      "recommendedChecks": [
+        "Open the source URL and identify the exact changed disclosure.",
+        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+        "Approve only if the evidence is specific enough to update the official database."
+      ],
+      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.marvell.recentUpdates."
+    },
+    "proposedActions": [
+      {
+        "target": "companies.marvell.signals.recentCatalyst",
         "action": "review",
         "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
       }

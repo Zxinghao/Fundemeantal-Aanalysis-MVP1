@@ -1,6 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-06-22-forvia",
+    "id": "web-fuel-cell-2026-06-23-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -41,7 +41,51 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-06-22-umicore",
+    "id": "web-fuel-cell-2026-06-23-garrett",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "garrett",
+    "nodeId": "compressor",
+    "impactType": "technology_change",
+    "summary": "Garrett Motion news changed. The page title is \"Newsroom Garrett Motion - Garrett Motion\" and the scan matched fuel cell, compressor, hydrogen, electric compressor. Review whether the change affects the supply chain thesis.",
+    "sourceUrl": "https://www.garrettmotion.com/news/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
+    "sourceIds": [
+      "garrett-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "compressor",
+        "hydrogen",
+        "electric compressor"
+      ],
+      "affectedTarget": "company:garrett",
+      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
+      "recommendedChecks": [
+        "Open the source URL and identify the exact changed disclosure.",
+        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+        "Approve only if the evidence is specific enough to update the official database."
+      ],
+      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.garrett.recentUpdates."
+    },
+    "proposedActions": [
+      {
+        "target": "companies.garrett.signals.recentCatalyst",
+        "action": "review",
+        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
+      }
+    ]
+  },
+  {
+    "id": "web-fuel-cell-2026-06-23-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",

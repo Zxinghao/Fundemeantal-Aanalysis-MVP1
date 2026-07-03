@@ -1,6 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-07-02-forvia",
+    "id": "web-fuel-cell-2026-07-03-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -41,52 +41,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-07-02-stack",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": null,
-    "nodeId": "stack",
-    "impactType": "policy_change",
-    "summary": "U.S. DOE fuel cells office changed. The page title is \"Alternative Fuels and Feedstocks Office | Department of Energy\" and the scan matched fuel cell, hydrogen, funding, storage, infrastructure. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "doe-fuel-cells"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "analysis": {
-      "reviewPriority": "medium",
-      "matchedKeywords": [
-        "fuel cell",
-        "hydrogen",
-        "funding",
-        "storage",
-        "infrastructure"
-      ],
-      "affectedTarget": "node:stack",
-      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
-      "recommendedChecks": [
-        "Open the source URL and identify the exact changed disclosure.",
-        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
-        "Approve only if the evidence is specific enough to update the official database."
-      ],
-      "suggestedDatabaseAction": "If material, update the summary or thesis for node stack."
-    },
-    "proposedActions": [
-      {
-        "target": "nodes.stack.summary",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-fuel-cell-2026-07-02-umicore",
+    "id": "web-fuel-cell-2026-07-03-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -128,14 +83,14 @@
     ]
   },
   {
-    "id": "web-ai-optics-2026-07-02-eoptolink",
+    "id": "web-ai-optics-2026-07-03-eoptolink",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "ai-optics",
     "companyId": "eoptolink",
     "nodeId": "optical-modules",
     "impactType": "technology_change",
-    "summary": "Eoptolink 800G products changed. The page title is \"Untitled source page\" and the scan matched 800G, optical transceiver, data center, module. Review whether the change affects the supply chain thesis.",
+    "summary": "Eoptolink 800G products changed. The page title is \"800G\" and the scan matched 800G, optical transceiver, data center, module. Review whether the change affects the supply chain thesis.",
     "sourceUrl": "https://eoptolink.com/product-solutions/800g",
     "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
     "sourceIds": [
@@ -144,13 +99,18 @@
     "submittedBy": "ai",
     "reviewDecision": null,
     "reviewedAt": null,
-    "confidence": "low",
+    "confidence": "medium",
     "evidenceLevel": "A",
     "analysis": {
-      "reviewPriority": "medium",
-      "matchedKeywords": [],
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "800G",
+        "optical transceiver",
+        "data center",
+        "module"
+      ],
       "affectedTarget": "company:eoptolink",
-      "analystSummary": "The page changed, but keyword evidence is limited. Confirm whether the change is material before approving.",
+      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
       "recommendedChecks": [
         "Open the source URL and identify the exact changed disclosure.",
         "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",

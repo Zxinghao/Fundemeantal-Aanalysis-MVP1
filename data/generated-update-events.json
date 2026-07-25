@@ -1,49 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-07-24-jm",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": "jm",
-    "nodeId": "catalyst",
-    "impactType": "technology_change",
-    "summary": "Johnson Matthey news changed. The page title is \"News | Johnson Matthey\" and the scan matched fuel cell, hydrogen, catalyst. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://matthey.com/news",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "jm-news"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "analysis": {
-      "reviewPriority": "high",
-      "matchedKeywords": [
-        "fuel cell",
-        "hydrogen",
-        "catalyst"
-      ],
-      "affectedTarget": "company:jm",
-      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
-      "recommendedChecks": [
-        "Open the source URL and identify the exact changed disclosure.",
-        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
-        "Approve only if the evidence is specific enough to update the official database."
-      ],
-      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.jm.recentUpdates."
-    },
-    "proposedActions": [
-      {
-        "target": "companies.jm.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-fuel-cell-2026-07-24-forvia",
+    "id": "web-fuel-cell-2026-07-25-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -84,52 +41,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-07-24-stack",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "fuel-cell",
-    "companyId": null,
-    "nodeId": "stack",
-    "impactType": "policy_change",
-    "summary": "U.S. DOE fuel cells office changed. The page title is \"Alternative Fuels and Feedstocks Office | Department of Energy\" and the scan matched fuel cell, hydrogen, funding, storage, infrastructure. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "doe-fuel-cells"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "analysis": {
-      "reviewPriority": "medium",
-      "matchedKeywords": [
-        "fuel cell",
-        "hydrogen",
-        "funding",
-        "storage",
-        "infrastructure"
-      ],
-      "affectedTarget": "node:stack",
-      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
-      "recommendedChecks": [
-        "Open the source URL and identify the exact changed disclosure.",
-        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
-        "Approve only if the evidence is specific enough to update the official database."
-      ],
-      "suggestedDatabaseAction": "If material, update the summary or thesis for node stack."
-    },
-    "proposedActions": [
-      {
-        "target": "nodes.stack.summary",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-fuel-cell-2026-07-24-umicore",
+    "id": "web-fuel-cell-2026-07-25-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -165,51 +77,6 @@
     "proposedActions": [
       {
         "target": "companies.umicore.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-07-24-nvidia",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "nvidia",
-    "nodeId": "switching",
-    "impactType": "technology_change",
-    "summary": "NVIDIA Spectrum-X Photonics announcement changed. The page title is \"NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs\" and the scan matched Spectrum-X, Quantum-X, co-packaged optics, silicon photonics, AI factories. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "nvidia-spectrum-x-photonics"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "analysis": {
-      "reviewPriority": "high",
-      "matchedKeywords": [
-        "Spectrum-X",
-        "Quantum-X",
-        "co-packaged optics",
-        "silicon photonics",
-        "AI factories"
-      ],
-      "affectedTarget": "company:nvidia",
-      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
-      "recommendedChecks": [
-        "Open the source URL and identify the exact changed disclosure.",
-        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
-        "Approve only if the evidence is specific enough to update the official database."
-      ],
-      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.nvidia.recentUpdates."
-    },
-    "proposedActions": [
-      {
-        "target": "companies.nvidia.signals.recentCatalyst",
         "action": "review",
         "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
       }

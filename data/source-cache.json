@@ -6,7 +6,7 @@
     "url": "https://matthey.com/news",
     "title": "News | Johnson Matthey",
     "hash": "c332f553dc52e41575a310f512c7c3e1c8dacc25bb6001fcea56514c0eaf4b06",
-    "lastCheckedAt": "2026-07-27T10:09:29.401Z",
+    "lastCheckedAt": "2026-07-28T09:04:19.809Z",
     "lastChangedAt": "2026-07-27T10:09:29.401Z",
     "lastError": null
   },
@@ -16,9 +16,9 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "24005272fa3bf86a206bee1b11a5bce34b99cfd5e36556f22d7f1b3041389ef2",
-    "lastCheckedAt": "2026-07-27T10:09:29.937Z",
-    "lastChangedAt": "2026-07-27T10:09:29.937Z",
+    "hash": "71e5a033122055dabe21137ece01b68f84fb61f4996ea3f4a832cf1f98c42dc4",
+    "lastCheckedAt": "2026-07-28T09:04:20.263Z",
+    "lastChangedAt": "2026-07-28T09:04:20.263Z",
     "lastError": null
   },
   "garrett-news": {
@@ -28,7 +28,7 @@
     "url": "https://www.garrettmotion.com/news/",
     "title": "Newsroom Garrett Motion - Garrett Motion",
     "hash": "52462b94acb783b1733658899a6b2b02a4f098fab70dee475f46f6b46c830d32",
-    "lastCheckedAt": "2026-07-27T10:09:31.386Z",
+    "lastCheckedAt": "2026-07-28T09:04:21.265Z",
     "lastChangedAt": "2026-07-19T08:32:54.172Z",
     "lastError": null
   },
@@ -39,7 +39,7 @@
     "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
     "title": "Alternative Fuels and Feedstocks Office | Department of Energy",
     "hash": "2479e648ea8c6fc111e0e3db5766fdce8445a4ab17bff8fcdfd8e0c5249d020b",
-    "lastCheckedAt": "2026-07-27T10:09:32.467Z",
+    "lastCheckedAt": "2026-07-28T09:04:22.030Z",
     "lastChangedAt": "2026-07-27T10:09:32.467Z",
     "lastError": null
   },
@@ -49,9 +49,9 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/investors/",
     "title": "Investor relations | Umicore",
-    "hash": "3202b8ede89b61f1110d0684a82e0185addaa96aed9f9f7f529c0a6482ec6d42",
-    "lastCheckedAt": "2026-07-27T10:09:32.633Z",
-    "lastChangedAt": "2026-07-27T10:09:32.633Z",
+    "hash": "72ad74de81030e1fd61d32e678979f4356c6f056ece8bef90977089bb4324173",
+    "lastCheckedAt": "2026-07-28T09:04:22.112Z",
+    "lastChangedAt": "2026-07-28T09:04:22.112Z",
     "lastError": null
   },
   "sgl-ir": {
@@ -61,7 +61,7 @@
     "url": "https://www.sglcarbon.com/en/investor-relations/",
     "title": "SGL Investor Relations – shares, publications &amp; events | SGL Carbon",
     "hash": "d5ce543742db148cf38cfdd867a795e86d6bf42dda5fb859e80eb6f5d66c13ec",
-    "lastCheckedAt": "2026-07-27T10:09:34.191Z",
+    "lastCheckedAt": "2026-07-28T09:04:23.306Z",
     "lastChangedAt": "2026-06-18T08:01:36.457Z",
     "lastError": null
   },
@@ -70,7 +70,7 @@
     "industryId": "fuel-cell",
     "cadence": "weekly",
     "url": "https://hexagonpurus.com/investor-relations",
-    "lastCheckedAt": "2026-07-27T10:09:35.023Z",
+    "lastCheckedAt": "2026-07-28T09:04:23.396Z",
     "lastError": "fetch failed"
   },
   "nvidia-spectrum-x-photonics": {
@@ -80,7 +80,7 @@
     "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
     "title": "NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs",
     "hash": "ab33f61b19ae4c19b38503181c05a7fd254489de449abb411f323aaed3bb74f8",
-    "lastCheckedAt": "2026-07-27T10:09:35.980Z",
+    "lastCheckedAt": "2026-07-28T09:04:24.053Z",
     "lastChangedAt": "2026-07-24T08:42:43.671Z",
     "lastError": null
   },
@@ -91,7 +91,7 @@
     "url": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics",
     "title": "Co-Packaged Optics",
     "hash": "48d8d71b939b85393d1df33eef2b4c8927add307c13ae88de3629bb5311b6f85",
-    "lastCheckedAt": "2026-07-27T10:09:36.932Z",
+    "lastCheckedAt": "2026-07-28T09:04:25.333Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -102,7 +102,7 @@
     "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
     "title": "Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell",
     "hash": "58691e10c003b6aeff0a66703379d73400d8201e7a45c545303525cb6848401c",
-    "lastCheckedAt": "2026-07-27T10:09:37.298Z",
+    "lastCheckedAt": "2026-07-28T09:04:25.377Z",
     "lastChangedAt": "2026-06-13T07:35:07.611Z",
     "lastError": null
   },
@@ -113,7 +113,7 @@
     "url": "https://www.coherent.com/datacenter-communications",
     "title": "Datacenter and Communications | Coherent",
     "hash": "55c0c20557bc7d9615f7b7ceb284493b350dc6fe8021714c505008c6b3ddf6e2",
-    "lastCheckedAt": "2026-07-27T10:09:37.417Z",
+    "lastCheckedAt": "2026-07-28T09:04:25.747Z",
     "lastChangedAt": "2026-06-24T07:28:59.629Z",
     "lastError": null
   },
@@ -124,7 +124,7 @@
     "url": "https://www.lumentum.com/en/products/data-center/modulated-lasers/emls",
     "title": "EMLs | Lumentum",
     "hash": "33ddfbdf13b22c7738af9f7669ca8d405f8a7d61c3c8c070e6658f1d668a6459",
-    "lastCheckedAt": "2026-07-27T10:09:37.500Z",
+    "lastCheckedAt": "2026-07-28T09:04:26.192Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -135,7 +135,7 @@
     "url": "https://fabrinet.com/services/optical-components",
     "title": "Optical Components - Fabrinet",
     "hash": "26a3ffbfe26c099340ad2a7e2b72273b1b8f679006570543d3feffb975a79d13",
-    "lastCheckedAt": "2026-07-27T10:09:37.613Z",
+    "lastCheckedAt": "2026-07-28T09:04:26.297Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },
@@ -146,7 +146,7 @@
     "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-delivers-industrys-first-512-tbps-co-packaged-optics",
     "title": "Broadcom Delivers Industry’s First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems | Broadcom Inc.",
     "hash": "94a53825919aa1bfea63439bab502e582e564802f7b14c9ea27d6e3848f71a28",
-    "lastCheckedAt": "2026-07-27T10:09:39.683Z",
+    "lastCheckedAt": "2026-07-28T09:04:28.469Z",
     "lastChangedAt": "2026-06-08T08:07:27.965Z",
     "lastError": null
   },
@@ -157,7 +157,7 @@
     "url": "https://www.marvell.com/products/pam-dsp.html",
     "title": "PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure",
     "hash": "518e2306b41cb748a5bc8487506cf60d78327e16d793e5860b1a7cb191610451",
-    "lastCheckedAt": "2026-07-27T10:09:39.873Z",
+    "lastCheckedAt": "2026-07-28T09:04:28.601Z",
     "lastChangedAt": "2026-06-13T07:35:11.029Z",
     "lastError": null
   },
@@ -168,7 +168,7 @@
     "url": "https://eoptolink.com/product-solutions/800g",
     "title": "800G",
     "hash": "751faad189fe4bd2ae7d5b8c6f2e607045a746fcde8dc405af26b46d3eddaf8f",
-    "lastCheckedAt": "2026-07-27T10:09:39.949Z",
+    "lastCheckedAt": "2026-07-28T09:04:29.029Z",
     "lastChangedAt": "2026-07-16T08:34:18.290Z",
     "lastError": null
   }

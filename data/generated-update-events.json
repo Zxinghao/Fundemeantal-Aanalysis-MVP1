@@ -1,6 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-08-06-forvia",
+    "id": "web-fuel-cell-2026-08-07-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-08-06-stack",
+    "id": "web-fuel-cell-2026-08-07-stack",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -86,14 +86,14 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-08-06-umicore",
+    "id": "web-fuel-cell-2026-08-07-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
     "companyId": "umicore",
     "nodeId": "catalyst",
     "impactType": "technology_change",
-    "summary": "Umicore investors changed. The page title is \"Investor relations | Umicore\" and the scan matched precious metals. Review whether the change affects the supply chain thesis.",
+    "summary": "Umicore investors changed. The page title is \"Investor relations | Umicore\" and the scan matched precious metals, guidance. Review whether the change affects the supply chain thesis.",
     "sourceUrl": "https://www.umicore.com/en/investors/",
     "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
     "sourceIds": [
@@ -105,12 +105,13 @@
     "confidence": "medium",
     "evidenceLevel": "A",
     "analysis": {
-      "reviewPriority": "medium",
+      "reviewPriority": "high",
       "matchedKeywords": [
-        "precious metals"
+        "precious metals",
+        "guidance"
       ],
       "affectedTarget": "company:umicore",
-      "analystSummary": "The page changed, but keyword evidence is limited. Confirm whether the change is material before approving.",
+      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
       "recommendedChecks": [
         "Open the source URL and identify the exact changed disclosure.",
         "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
@@ -127,7 +128,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-08-06-sgl",
+    "id": "web-fuel-cell-2026-08-07-sgl",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",

@@ -1,1 +1,85 @@
-[]
+[
+  {
+    "id": "web-fuel-cell-2026-08-31-forvia",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA news changed. The page title is \"Press | FORVIA\" and the scan matched hydrogen. Review whether the change affects the supply chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/newsroom",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
+    "sourceIds": [
+      "forvia-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "hydrogen"
+      ],
+      "affectedTarget": "company:forvia",
+      "analystSummary": "The page changed, but keyword evidence is limited. Confirm whether the change is material before approving.",
+      "recommendedChecks": [
+        "Open the source URL and identify the exact changed disclosure.",
+        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+        "Approve only if the evidence is specific enough to update the official database."
+      ],
+      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.forvia.recentUpdates."
+    },
+    "proposedActions": [
+      {
+        "target": "companies.forvia.signals.recentCatalyst",
+        "action": "review",
+        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
+      }
+    ]
+  },
+  {
+    "id": "web-fuel-cell-2026-08-31-umicore",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "umicore",
+    "nodeId": "catalyst",
+    "impactType": "technology_change",
+    "summary": "Umicore investors changed. The page title is \"Investor relations | Umicore\" and the scan matched precious metals, guidance. Review whether the change affects the supply chain thesis.",
+    "sourceUrl": "https://www.umicore.com/en/investors/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
+    "sourceIds": [
+      "umicore-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "precious metals",
+        "guidance"
+      ],
+      "affectedTarget": "company:umicore",
+      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
+      "recommendedChecks": [
+        "Open the source URL and identify the exact changed disclosure.",
+        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
+        "Approve only if the evidence is specific enough to update the official database."
+      ],
+      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.umicore.recentUpdates."
+    },
+    "proposedActions": [
+      {
+        "target": "companies.umicore.signals.recentCatalyst",
+        "action": "review",
+        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
+      }
+    ]
+  }
+]

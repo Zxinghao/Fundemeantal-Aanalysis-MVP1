@@ -1,6 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-09-02-forvia",
+    "id": "web-fuel-cell-2026-09-03-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-09-02-stack",
+    "id": "web-fuel-cell-2026-09-03-stack",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-09-02-umicore",
+    "id": "web-fuel-cell-2026-09-03-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -123,49 +123,6 @@
     "proposedActions": [
       {
         "target": "companies.umicore.signals.recentCatalyst",
-        "action": "review",
-        "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
-  },
-  {
-    "id": "web-ai-optics-2026-09-02-coherent",
-    "sourceType": "ai_scan",
-    "status": "pending",
-    "industryId": "ai-optics",
-    "companyId": "coherent",
-    "nodeId": "laser",
-    "impactType": "technology_change",
-    "summary": "Coherent data-center communications changed. The page title is \"Datacenter and Communications | Coherent\" and the scan matched datacenter, laser, transceiver. Review whether the change affects the supply chain thesis.",
-    "sourceUrl": "https://www.coherent.com/datacenter-communications",
-    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
-    "sourceIds": [
-      "coherent-datacenter"
-    ],
-    "submittedBy": "ai",
-    "reviewDecision": null,
-    "reviewedAt": null,
-    "confidence": "medium",
-    "evidenceLevel": "A",
-    "analysis": {
-      "reviewPriority": "high",
-      "matchedKeywords": [
-        "datacenter",
-        "laser",
-        "transceiver"
-      ],
-      "affectedTarget": "company:coherent",
-      "analystSummary": "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change.",
-      "recommendedChecks": [
-        "Open the source URL and identify the exact changed disclosure.",
-        "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
-        "Approve only if the evidence is specific enough to update the official database."
-      ],
-      "suggestedDatabaseAction": "If material, append a reviewed recent update to companies.coherent.recentUpdates."
-    },
-    "proposedActions": [
-      {
-        "target": "companies.coherent.signals.recentCatalyst",
         "action": "review",
         "reason": "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
       }

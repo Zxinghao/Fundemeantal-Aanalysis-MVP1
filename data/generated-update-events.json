@@ -1,6 +1,6 @@
 [
   {
-    "id": "web-fuel-cell-2026-09-03-forvia",
+    "id": "web-fuel-cell-2026-09-04-forvia",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-09-03-stack",
+    "id": "web-fuel-cell-2026-09-04-stack",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "id": "web-fuel-cell-2026-09-03-umicore",
+    "id": "web-fuel-cell-2026-09-04-umicore",
     "sourceType": "ai_scan",
     "status": "pending",
     "industryId": "fuel-cell",

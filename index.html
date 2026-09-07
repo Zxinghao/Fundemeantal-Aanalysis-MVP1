@@ -19,6 +19,8 @@
           Click any node to inspect its role, connected companies, source evidence, and pending
           review updates from daily scans or user-submitted research.
         </p>
+        <button id="cloud-test-button" type="button">Test Cloud Development</button>
+        <p id="cloud-test-status" role="status" aria-live="polite"></p>
       </div>
     </header>
 
@@ -106,5 +108,10 @@
     <script src="node-details.js"></script>
     <script src="company-flags.js"></script>
     <script src="review-export.js"></script>
+    <script>
+      document.getElementById('cloud-test-button').addEventListener('click', () => {
+        document.getElementById('cloud-test-status').textContent = 'Cloud development is working';
+      });
+    </script>
   </body>
 </html>

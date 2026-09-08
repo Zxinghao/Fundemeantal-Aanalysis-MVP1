@@ -17,6 +17,7 @@ function exportReviewDecisions() {
       source: item.source,
       sourceIds: item.sourceIds,
       analysis: item.analysis || null,
+      researchPacket: item.researchPacket || null,
       summary: item.summary,
       reviewStatus: decisions[item.id]
     }));

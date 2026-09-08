@@ -7,6 +7,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const watchlistPath = path.join(root, "data", "source-watchlist.json");
 const cachePath = path.join(root, "data", "source-cache.json");
 const outputPath = path.join(root, "data", "generated-update-events.json");
+const WEEKLY_INTERVAL_MS = 6.5 * 24 * 60 * 60 * 1000;
 
 const impactByNode = {
   catalyst: "technology_change",
@@ -73,6 +74,17 @@ function eventId(industryId, date, source) {
   return `web-${industryId}-${date}-${target}`;
 }
 
+function cadenceDue(cadence, previous, checkedAt) {
+  if (cadence !== "weekly") return true;
+  if (!previous?.lastCheckedAt) return true;
+
+  const previousTime = Date.parse(previous.lastCheckedAt);
+  const currentTime = Date.parse(checkedAt);
+  if (!Number.isFinite(previousTime) || !Number.isFinite(currentTime)) return true;
+
+  return currentTime - previousTime >= WEEKLY_INTERVAL_MS;
+}
+
 function buildAnalysis({ source, hits }) {
   const matchedKeywords = hits.length ? hits : [];
   const hasStrongMatch = matchedKeywords.length >= 2;
@@ -97,7 +109,7 @@ function buildAnalysis({ source, hits }) {
   };
 }
 
-function eventFromSource({ industryId, source, title, hits, date }) {
+function eventFromSource({ industryId, source, title, hits, date, detectedAt }) {
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
   const hitText = hits.length ? hits.join(", ") : source.watchFor.join(", ");
 
@@ -116,6 +128,8 @@ function eventFromSource({ industryId, source, title, hits, date }) {
     submittedBy: "ai",
     reviewDecision: null,
     reviewedAt: null,
+    detectedAt,
+    lastSeenAt: detectedAt,
     confidence: hits.length ? "medium" : "low",
     evidenceLevel: evidenceBySourceType[source.sourceType] || "B",
     analysis: buildAnalysis({ source, hits }),
@@ -129,10 +143,46 @@ function eventFromSource({ industryId, source, title, hits, date }) {
   };
 }
 
+function mergeEventStore(existingEvents, detectedEvents) {
+  const byId = new Map(
+    (Array.isArray(existingEvents) ? existingEvents : [])
+      .filter((event) => event?.id)
+      .map((event) => [event.id, event])
+  );
+
+  for (const event of detectedEvents) {
+    const previous = byId.get(event.id);
+    if (!previous) {
+      byId.set(event.id, {
+        ...event,
+        firstDetectedAt: event.detectedAt || null
+      });
+      continue;
+    }
+
+    const preservedStatus = previous.status && previous.status !== "pending" ? previous.status : event.status;
+    byId.set(event.id, {
+      ...previous,
+      ...event,
+      status: preservedStatus,
+      reviewDecision: previous.reviewDecision ?? event.reviewDecision,
+      reviewedAt: previous.reviewedAt ?? event.reviewedAt,
+      firstDetectedAt: previous.firstDetectedAt || previous.detectedAt || event.detectedAt || null,
+      lastSeenAt: event.detectedAt || previous.lastSeenAt || null
+    });
+  }
+
+  return Array.from(byId.values()).sort((a, b) => {
+    const aTime = Date.parse(a.detectedAt || a.firstDetectedAt || "1970-01-01");
+    const bTime = Date.parse(b.detectedAt || b.firstDetectedAt || "1970-01-01");
+    return bTime - aTime;
+  });
+}
+
 async function fetchSource(source) {
   const response = await fetch(source.url, {
     headers: {
-      "User-Agent": "FinLAB supply-chain scanner/0.1"
+      "User-Agent": "FinLAB supply-chain scanner/0.2"
     }
   });
 
@@ -151,10 +201,14 @@ async function fetchSource(source) {
 
 async function scanSource({ industryId, cadence, source, cache, date }) {
   const checkedAt = new Date().toISOString();
+  const previous = cache[source.id];
+
+  if (!cadenceDue(cadence, previous, checkedAt)) {
+    return null;
+  }
 
   try {
     const page = await fetchSource(source);
-    const previous = cache[source.id];
     const changed = !previous || previous.hash !== page.hash;
     const hits = keywordHits(page.text, source.watchFor || []);
 
@@ -171,7 +225,7 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
     };
 
     if (!changed) return null;
-    return eventFromSource({ industryId, source, title: page.title, hits, date });
+    return eventFromSource({ industryId, source, title: page.title, hits, date, detectedAt: checkedAt });
   } catch (error) {
     cache[source.id] = {
       ...(cache[source.id] || {}),
@@ -189,28 +243,30 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
 export async function runWebScan(date = today()) {
   const watchlist = await readJson(watchlistPath, {});
   const cache = await readJson(cachePath, {});
-  const events = [];
+  const existingEvents = await readJson(outputPath, []);
+  const detectedEvents = [];
 
   for (const [industryId, cadenceMap] of Object.entries(watchlist)) {
     for (const cadence of ["daily", "weekly"]) {
       for (const source of cadenceMap[cadence] || []) {
         if (!source.url) continue;
         const event = await scanSource({ industryId, cadence, source, cache, date });
-        if (event) events.push(event);
+        if (event) detectedEvents.push(event);
       }
     }
   }
 
+  const eventStore = mergeEventStore(existingEvents, detectedEvents);
   await fs.writeFile(cachePath, `${JSON.stringify(cache, null, 2)}\n`);
-  await fs.writeFile(outputPath, `${JSON.stringify(events, null, 2)}\n`);
-  return { events, cache };
+  await fs.writeFile(outputPath, `${JSON.stringify(eventStore, null, 2)}\n`);
+  return { events: detectedEvents, eventStore, cache };
 }
 
 const cliEntry = globalThis.process?.argv?.[1];
 if (cliEntry && pathToFileURL(cliEntry).href === import.meta.url) {
   runWebScan(globalThis.process.argv[2])
-    .then(({ events }) => {
-      console.log(`Generated ${events.length} changed-source events at ${outputPath}`);
+    .then(({ events, eventStore }) => {
+      console.log(`Detected ${events.length} changed-source event(s); event store contains ${eventStore.length} total event(s).`);
     })
     .catch((error) => {
       console.error(error);

@@ -1,0 +1,5 @@
+OpenAI Research Smoke Test trigger.
+
+Update this file to run the isolated API connectivity smoke test from main.
+
+Last requested trigger: 2026-09-08T22:08:00Z

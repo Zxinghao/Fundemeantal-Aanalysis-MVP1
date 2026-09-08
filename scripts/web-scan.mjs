@@ -74,7 +74,7 @@ function eventId(industryId, date, source) {
   return `web-${industryId}-${date}-${target}`;
 }
 
-function cadenceDue(cadence, previous, checkedAt) {
+export function cadenceDue(cadence, previous, checkedAt) {
   if (cadence !== "weekly") return true;
   if (!previous?.lastCheckedAt) return true;
 
@@ -143,7 +143,7 @@ function eventFromSource({ industryId, source, title, hits, date, detectedAt }) 
   };
 }
 
-function mergeEventStore(existingEvents, detectedEvents) {
+export function mergeEventStore(existingEvents, detectedEvents) {
   const byId = new Map(
     (Array.isArray(existingEvents) ? existingEvents : [])
       .filter((event) => event?.id)

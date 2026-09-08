@@ -1,0 +1,42 @@
+name: Foundation Canonical Data Migration
+
+on:
+  push:
+    branches:
+      - foundation/p0-data-pipeline
+    paths:
+      - "scripts/migrate-canonical-industries.mjs"
+      - ".github/workflows/foundation-migrate.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: foundation/p0-data-pipeline
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run canonical data migration
+        run: node scripts/migrate-canonical-industries.mjs
+
+      - name: Commit migrated data
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/industries.json data/industries/ai-optics.json
+          if git diff --cached --quiet; then
+            echo "No migration changes to commit."
+          else
+            git commit -m "Migrate AI optics into canonical industry data"
+            git push origin HEAD:foundation/p0-data-pipeline
+          fi

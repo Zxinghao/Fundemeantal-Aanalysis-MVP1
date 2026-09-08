@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "name": "Hidden Bottleneck Composite",
+  "description": "A deterministic research rubric for ranking supply-chain bottleneck candidates. The composite is only as reliable as the underlying component evidence; current scores remain provisional until each dimension has explicit evidence coverage.",
+  "dimensions": {
+    "supplyChainImportance": {
+      "label": "Supply chain importance",
+      "weight": 0.20,
+      "question": "How materially does failure, delay, or shortage at this supplier/node constrain end-system output?"
+    },
+    "scarcity": {
+      "label": "Scarcity",
+      "weight": 0.20,
+      "question": "How limited is the pool of technically and commercially qualified alternatives?"
+    },
+    "pricingPower": {
+      "label": "Pricing power",
+      "weight": 0.10,
+      "question": "Can the supplier defend price or margins because substitution is difficult or supply is constrained?"
+    },
+    "switchingCost": {
+      "label": "Switching cost",
+      "weight": 0.15,
+      "question": "How costly, slow, or risky is customer substitution after design-in or qualification?"
+    },
+    "validationBarrier": {
+      "label": "Validation barrier",
+      "weight": 0.15,
+      "question": "How demanding are qualification, reliability, safety, yield, and customer-validation requirements?"
+    },
+    "marketUnderappreciation": {
+      "label": "Market underappreciation",
+      "weight": 0.20,
+      "question": "How poorly is the supplier's strategic role reflected in common market narratives or valuation attention?"
+    }
+  },
+  "anchors": [
+    { "score": 0, "meaning": "No evidence of a bottleneck characteristic." },
+    { "score": 25, "meaning": "Weak characteristic; alternatives are readily available or impact is limited." },
+    { "score": 50, "meaning": "Moderate characteristic; some friction exists but substitution or capacity response is plausible." },
+    { "score": 75, "meaning": "Strong characteristic supported by material qualification, concentration, or switching friction." },
+    { "score": 100, "meaning": "Extreme bottleneck characteristic with very limited substitutes and high system-level consequence." }
+  ],
+  "classifications": [
+    { "min": 80, "label": "High-conviction hidden bottleneck candidate" },
+    { "min": 70, "label": "Hidden bottleneck candidate" },
+    { "min": 60, "label": "Watchlist / partial bottleneck" },
+    { "min": 0, "label": "Not currently a hidden bottleneck" }
+  ],
+  "evidencePolicy": {
+    "status": "provisional",
+    "requirement": "A score should not be treated as evidence-backed until each material dimension has a written rationale and linked source IDs. The composite itself is arithmetic, not independent evidence."
+  }
+}

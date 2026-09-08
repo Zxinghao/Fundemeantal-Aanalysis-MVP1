@@ -115,6 +115,26 @@ test("LLM enrichment adds only a candidate and leaves claim and patch conservati
   assert.match(requestBody.instructions, /untrusted source data/);
 });
 
+test("OpenAI failure is isolated and does not attach an unsafe partial candidate", async () => {
+  const event = baseEvent();
+  const fetchImpl = async () => ({
+    ok: false,
+    status: 503,
+    async text() { return "temporary model outage"; }
+  });
+
+  const result = await enrichWithOpenAI([event], {
+    apiKey: "test-key",
+    fetchImpl
+  });
+
+  assert.equal(result.enriched, 0);
+  assert.equal(result.failures.length, 1);
+  assert.equal(event.researchPacket.llmCandidate, undefined);
+  assert.equal(event.researchPacket.claim.status, "unverified");
+  assert.equal(event.researchPacket.proposedPatch.executable, false);
+});
+
 test("agent candidate validator rejects score authority", () => {
   const candidate = {
     schemaVersion: "1.0",

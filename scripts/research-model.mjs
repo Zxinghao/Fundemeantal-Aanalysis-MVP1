@@ -14,6 +14,11 @@ const signalFields = new Set([
   "recentCatalyst"
 ]);
 
+const claimStatuses = new Set(["unverified", "supported", "rejected", "superseded"]);
+const confidenceLevels = new Set(["low", "medium", "high"]);
+const patchStatuses = new Set(["draft", "ready", "applied", "rejected"]);
+const evidenceLevels = new Set(["A", "B", "C"]);
+
 const impactLabels = {
   supply_chain_importance: "supply-chain importance",
   bottleneck_judgement: "bottleneck",
@@ -134,38 +139,69 @@ export function validateResearchPacket(packet) {
 
   if (!Array.isArray(packet.evidence) || packet.evidence.length === 0) {
     errors.push("researchPacket.evidence must contain at least one evidence item.");
+  } else {
+    for (const evidence of packet.evidence) {
+      if (!evidence?.sourceId || !evidence?.observation) {
+        errors.push("Each evidence item must include sourceId and observation.");
+      }
+      if (!evidenceLevels.has(evidence?.evidenceLevel)) {
+        errors.push("Each evidence item must use evidenceLevel A, B, or C.");
+      }
+    }
   }
 
   if (!packet.claim?.statement || !packet.claim?.status || !packet.claim?.target) {
     errors.push("researchPacket.claim must include statement, status, and target.");
+  } else {
+    if (!claimStatuses.has(packet.claim.status)) errors.push(`Invalid claim status: ${packet.claim.status}.`);
+    if (!confidenceLevels.has(packet.claim.confidence)) errors.push(`Invalid claim confidence: ${packet.claim.confidence}.`);
   }
 
   if (!packet.proposedPatch || !Array.isArray(packet.proposedPatch.operations)) {
     errors.push("researchPacket.proposedPatch.operations must be an array.");
+    return errors;
   }
 
-  if (packet.proposedPatch?.executable && packet.proposedPatch?.status !== "ready") {
-    errors.push("An executable proposedPatch must have status=ready.");
+  if (!patchStatuses.has(packet.proposedPatch.status)) {
+    errors.push(`Invalid proposedPatch status: ${packet.proposedPatch.status}.`);
+  }
+
+  if (packet.proposedPatch.executable) {
+    if (packet.proposedPatch.status !== "ready") {
+      errors.push("An executable proposedPatch must have status=ready.");
+    }
+    if (packet.claim?.status !== "supported") {
+      errors.push("An executable proposedPatch requires claim.status=supported.");
+    }
+    if (packet.proposedPatch.operations.length === 0) {
+      errors.push("An executable proposedPatch must contain at least one operation.");
+    }
+    if (packet.proposedPatch.operations.some((operation) => operation?.requiresHumanInput)) {
+      errors.push("An executable proposedPatch cannot contain operations that still require human input.");
+    }
   }
 
   return errors;
 }
 
 export function applyApprovedPatch(industry, packet) {
-  if (!packet?.proposedPatch?.executable || packet.proposedPatch.status !== "ready") {
-    return { applied: [], skipped: (packet?.proposedPatch?.operations || []).map((operation) => operation.path) };
+  const operations = packet?.proposedPatch?.operations || [];
+  if (!packet?.proposedPatch?.executable || packet.proposedPatch.status !== "ready" || packet?.claim?.status !== "supported") {
+    return { applied: [], skipped: operations.map((operation) => operation.path) };
   }
 
-  const applied = [];
-  const skipped = [];
-  for (const operation of packet.proposedPatch.operations || []) {
-    if (applyPatchOperation(industry, operation)) applied.push(operation.path);
-    else skipped.push(operation.path);
+  // Preflight the entire patch before mutating anything. A research patch is atomic:
+  // one invalid operation rejects the whole group rather than leaving reviewed data
+  // in a partially updated state.
+  if (operations.length === 0 || operations.some((operation) => !canApplyPatchOperation(industry, operation))) {
+    return { applied: [], skipped: operations.map((operation) => operation.path) };
   }
-  return { applied, skipped };
+
+  for (const operation of operations) applyPatchOperation(industry, operation);
+  return { applied: operations.map((operation) => operation.path), skipped: [] };
 }
 
-function applyPatchOperation(industry, operation) {
+function canApplyPatchOperation(industry, operation) {
   if (!operation || operation.requiresHumanInput) return false;
   const parts = String(operation.path || "").split(".");
   if (parts.length < 3) return false;
@@ -174,33 +210,71 @@ function applyPatchOperation(industry, operation) {
     const company = (industry.companies || []).find((candidate) => candidate.id === parts[1]);
     if (!company) return false;
 
-    if (parts[2] === "recentUpdates" && operation.op === "append" && typeof operation.value === "string") {
-      company.recentUpdates ||= [];
-      if (!company.recentUpdates.includes(operation.value)) company.recentUpdates.unshift(operation.value);
-      return true;
+    if (parts[2] === "recentUpdates") {
+      return parts.length === 3 && operation.op === "append" && typeof operation.value === "string" && operation.value.trim().length > 0;
     }
 
-    if (parts[2] === "signals" && parts.length === 4 && signalFields.has(parts[3]) && operation.op === "replace" && typeof operation.value === "string") {
-      company.signals ||= {};
-      company.signals[parts[3]] = operation.value;
-      return true;
+    if (parts[2] === "signals") {
+      return parts.length === 4
+        && signalFields.has(parts[3])
+        && operation.op === "replace"
+        && typeof operation.value === "string"
+        && operation.value.trim().length > 0;
     }
 
-    if (parts[2] === "scores" && parts.length === 4 && scoreDimensions.has(parts[3]) && operation.op === "replace") {
+    if (parts[2] === "scores") {
       const value = Number(operation.value);
-      if (!Number.isFinite(value) || value < 0 || value > 100) return false;
-      company.scores ||= {};
-      company.scores[parts[3]] = value;
-      return true;
+      return parts.length === 4
+        && scoreDimensions.has(parts[3])
+        && operation.op === "replace"
+        && Number.isFinite(value)
+        && value >= 0
+        && value <= 100;
     }
+
+    return false;
   }
 
-  if (parts[0] === "nodes" && parts.length === 3 && parts[2] === "summary" && operation.op === "replace" && typeof operation.value === "string") {
+  if (parts[0] === "nodes") {
     const node = (industry.nodes || []).find((candidate) => candidate.id === parts[1]);
-    if (!node) return false;
-    node.summary = operation.value;
-    return true;
+    return Boolean(node)
+      && parts.length === 3
+      && parts[2] === "summary"
+      && operation.op === "replace"
+      && typeof operation.value === "string"
+      && operation.value.trim().length > 0;
   }
 
   return false;
+}
+
+function applyPatchOperation(industry, operation) {
+  const parts = String(operation.path).split(".");
+
+  if (parts[0] === "companies") {
+    const company = industry.companies.find((candidate) => candidate.id === parts[1]);
+
+    if (parts[2] === "recentUpdates") {
+      company.recentUpdates ||= [];
+      if (!company.recentUpdates.includes(operation.value)) company.recentUpdates.unshift(operation.value);
+      return;
+    }
+
+    if (parts[2] === "signals") {
+      company.signals ||= {};
+      company.signals[parts[3]] = operation.value;
+      return;
+    }
+
+    if (parts[2] === "scores") {
+      company.scores ||= {};
+      company.scores[parts[3]] = Number(operation.value);
+      return;
+    }
+  }
+
+  if (parts[0] === "nodes") {
+    const node = industry.nodes.find((candidate) => candidate.id === parts[1]);
+    node.summary = operation.value;
+  }
 }

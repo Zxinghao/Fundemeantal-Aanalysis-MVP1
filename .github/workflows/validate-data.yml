@@ -31,6 +31,8 @@ jobs:
           node --check scripts/candidate-interpretation.mjs
           node --check scripts/enrich-semantic-candidates.mjs
           node --check scripts/validate-semantic-candidates.mjs
+          node --check scripts/openai-research-agent.mjs
+          node --check scripts/validate-llm-candidates.mjs
           node --check scripts/research-model.mjs
           node --check scripts/web-scan.mjs
           node --check scripts/apply-review-decisions.mjs
@@ -38,12 +40,16 @@ jobs:
           node --check scripts/validate-data.mjs
           node --check tests/research-pipeline.test.mjs
           node --check tests/semantic-candidate.test.mjs
+          node --check tests/llm-research-agent.test.mjs
 
       - name: Run research pipeline regression tests
-        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs
+        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs
 
       - name: Validate semantic candidate invariants
         run: node scripts/validate-semantic-candidates.mjs
+
+      - name: Validate LLM research candidate invariants
+        run: node scripts/validate-llm-candidates.mjs

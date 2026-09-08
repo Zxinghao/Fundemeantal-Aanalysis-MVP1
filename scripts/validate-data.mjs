@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { computeCompositeScore, validateResearchPacket } from "./research-model.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const scoreDimensions = [
@@ -37,7 +38,47 @@ function collectWatchlistSourceIds(watchlist, industryId) {
   ]);
 }
 
-function validateIndustry(industry, watchlist, errors) {
+function validateRubric(rubric, errors) {
+  if (!rubric?.version) errors.push("scoring rubric must have a version.");
+  if (!rubric?.dimensions || typeof rubric.dimensions !== "object") {
+    errors.push("scoring rubric must define dimensions.");
+    return;
+  }
+
+  const rubricDimensions = Object.keys(rubric.dimensions);
+  for (const dimension of scoreDimensions) {
+    if (!rubricDimensions.includes(dimension)) errors.push(`scoring rubric missing dimension: ${dimension}`);
+  }
+  for (const dimension of rubricDimensions) {
+    if (!scoreDimensions.includes(dimension)) errors.push(`scoring rubric has unknown dimension: ${dimension}`);
+  }
+
+  const weightTotal = Object.values(rubric.dimensions)
+    .reduce((sum, config) => sum + (Number(config?.weight) || 0), 0);
+  if (Math.abs(weightTotal - 1) > 0.000001) {
+    errors.push(`scoring rubric weights must sum to 1; received ${weightTotal}.`);
+  }
+
+  for (const [dimension, config] of Object.entries(rubric.dimensions)) {
+    if (!config.label || !config.question) errors.push(`scoring rubric dimension ${dimension} must have label and question.`);
+    if (!Number.isFinite(config.weight) || config.weight <= 0 || config.weight > 1) {
+      errors.push(`scoring rubric dimension ${dimension} has invalid weight.`);
+    }
+  }
+
+  if (!Array.isArray(rubric.classifications) || rubric.classifications.length === 0) {
+    errors.push("scoring rubric must define classifications.");
+  }
+}
+
+function validatePacket(packet, prefix, errors) {
+  if (!packet) return;
+  for (const error of validateResearchPacket(packet)) {
+    errors.push(`${prefix} ${error}`);
+  }
+}
+
+function validateIndustry(industry, watchlist, rubric, errors) {
   const prefix = `industry:${industry.id || "unknown"}`;
   if (!industry.id || !industry.name) errors.push(`${prefix} must have id and name.`);
   if (!Array.isArray(industry.nodes) || industry.nodes.length === 0) errors.push(`${prefix} must have nodes.`);
@@ -94,6 +135,10 @@ function validateIndustry(industry, watchlist, errors) {
         errors.push(`${prefix} company ${company.id} score ${dimension} must be between 0 and 100.`);
       }
     }
+    const composite = computeCompositeScore(company.scores, rubric);
+    if (!Number.isFinite(composite) || composite < 0 || composite > 100) {
+      errors.push(`${prefix} company ${company.id} cannot produce a valid composite score.`);
+    }
   }
 
   for (const event of updateEvents) {
@@ -105,6 +150,7 @@ function validateIndustry(industry, watchlist, errors) {
     for (const sourceId of event.sourceIds || []) {
       if (!knownEvidenceSourceIds.has(sourceId)) errors.push(`${prefix} event ${event.id} references unknown evidence source: ${sourceId}`);
     }
+    validatePacket(event.researchPacket, `${prefix} event ${event.id}`, errors);
   }
 }
 
@@ -154,14 +200,16 @@ function validateGeneratedEvents(events, industryById, watchlist, errors) {
     for (const sourceId of event.sourceIds || []) {
       if (!knownSourceIds.has(sourceId)) errors.push(`generated event ${event.id} references unknown source: ${sourceId}`);
     }
+    validatePacket(event.researchPacket, `generated event ${event.id}`, errors);
   }
 }
 
 async function main() {
-  const [industries, watchlist, generatedEvents] = await Promise.all([
+  const [industries, watchlist, generatedEvents, rubric] = await Promise.all([
     readJson("data/industries.json"),
     readJson("data/source-watchlist.json"),
-    readJson("data/generated-update-events.json")
+    readJson("data/generated-update-events.json"),
+    readJson("data/scoring-rubric.json")
   ]);
 
   const errors = [];
@@ -169,10 +217,11 @@ async function main() {
     errors.push("data/industries.json must be a non-empty array.");
   }
 
+  validateRubric(rubric, errors);
   for (const duplicate of duplicateIds(industries)) errors.push(`duplicate industry id: ${duplicate}`);
   const industryById = new Map((industries || []).map((industry) => [industry.id, industry]));
 
-  for (const industry of industries || []) validateIndustry(industry, watchlist, errors);
+  for (const industry of industries || []) validateIndustry(industry, watchlist, rubric, errors);
   validateWatchlist(watchlist, industryById, errors);
   validateGeneratedEvents(generatedEvents, industryById, watchlist, errors);
 
@@ -185,7 +234,7 @@ async function main() {
 
   const companyCount = industries.reduce((sum, industry) => sum + (industry.companies || []).length, 0);
   const nodeCount = industries.reduce((sum, industry) => sum + (industry.nodes || []).length, 0);
-  console.log(`Data validation passed: ${industries.length} industries, ${nodeCount} nodes, ${companyCount} companies, ${generatedEvents.length} scanner events.`);
+  console.log(`Data validation passed: rubric v${rubric.version}, ${industries.length} industries, ${nodeCount} nodes, ${companyCount} companies, ${generatedEvents.length} scanner events.`);
 }
 
 main().catch((error) => {

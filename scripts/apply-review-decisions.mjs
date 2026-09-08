@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { applyApprovedPatch } from "./research-model.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const industriesPath = path.join(root, "data", "industries.json");
@@ -32,7 +33,7 @@ function reviewTimestamp(reviewExport) {
   return reviewExport.exportedAt || new Date().toISOString();
 }
 
-function eventFromReview(item, exportedAt) {
+function eventFromReview(item, exportedAt, patchResult) {
   return {
     id: `reviewed-${item.id}`,
     sourceType: "manual_research",
@@ -49,7 +50,10 @@ function eventFromReview(item, exportedAt) {
     reviewDecision: "approved",
     reviewedAt: exportedAt,
     originalEventId: item.id,
-    origin: item.origin
+    origin: item.origin,
+    researchPacket: item.researchPacket || null,
+    patchApplied: patchResult?.applied || [],
+    patchSkipped: patchResult?.skipped || []
   };
 }
 
@@ -65,13 +69,18 @@ function appendRecentUpdate(industry, item) {
   }
 }
 
-function updateExistingIndustryEvent(industry, item, reviewedAt) {
+function updateExistingIndustryEvent(industry, item, reviewedAt, patchResult) {
   const existing = industry.updateEvents.find((event) => event.id === item.id);
   if (!existing) return false;
 
   existing.status = item.reviewStatus;
   existing.reviewDecision = item.reviewStatus;
   existing.reviewedAt = reviewedAt;
+  if (item.researchPacket) existing.researchPacket = item.researchPacket;
+  if (patchResult) {
+    existing.patchApplied = patchResult.applied;
+    existing.patchSkipped = patchResult.skipped;
+  }
   return true;
 }
 
@@ -85,11 +94,16 @@ export function applyReviews(industries, reviewExport) {
     const industry = industries.find((candidate) => candidate.id === item.industryId);
     if (!industry) continue;
 
-    const existingUpdated = updateExistingIndustryEvent(industry, item, reviewedAt);
+    let patchResult = null;
+    if (item.reviewStatus === "approved" && item.researchPacket) {
+      patchResult = applyApprovedPatch(industry, item.researchPacket);
+    }
+
+    const existingUpdated = updateExistingIndustryEvent(industry, item, reviewedAt, patchResult);
 
     if (item.reviewStatus === "approved") {
       if (!existingUpdated) {
-        const newEvent = eventFromReview(item, reviewedAt);
+        const newEvent = eventFromReview(item, reviewedAt, patchResult);
         const exists = industry.updateEvents.some((event) => {
           return event.id === newEvent.id || event.originalEventId === item.id;
         });
@@ -98,7 +112,11 @@ export function applyReviews(industries, reviewExport) {
         }
       }
 
-      appendRecentUpdate(industry, item);
+      // Legacy review items have no structured research packet, so preserve the old
+      // reviewed-note behavior. Structured packets mutate canonical fields only via
+      // an explicit executable patch; draft scanner placeholders do not silently
+      // become official company notes.
+      if (!item.researchPacket) appendRecentUpdate(industry, item);
     }
 
     industry.lastReviewedAt = reviewedAt;
@@ -115,6 +133,11 @@ export function applyEventReviewStatuses(events, reviewExport) {
       .map((item) => [item.id, normalizedReviewStatus(item.reviewStatus)])
       .filter(([, status]) => status)
   );
+  const packetById = new Map(
+    (reviewExport.reviewedItems || [])
+      .filter((item) => item.researchPacket)
+      .map((item) => [item.id, item.researchPacket])
+  );
   const updatedIds = [];
 
   const nextEvents = (Array.isArray(events) ? events : []).map((event) => {
@@ -126,7 +149,8 @@ export function applyEventReviewStatuses(events, reviewExport) {
       ...event,
       status: decision,
       reviewDecision: decision,
-      reviewedAt
+      reviewedAt,
+      researchPacket: packetById.get(event.id) || event.researchPacket || null
     };
   });
 

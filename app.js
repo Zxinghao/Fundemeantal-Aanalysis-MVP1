@@ -61,6 +61,7 @@ const impactLabels = {
 const state = {
   industry: null,
   generatedEvents: [],
+  scoringRubric: null,
   pendingUpdates: loadPendingUpdates()
 };
 
@@ -76,13 +77,15 @@ const reviewFilter = document.querySelector("#review-filter");
 
 async function boot() {
   try {
-    const [loadedIndustries, generatedEvents] = await Promise.all([
+    const [loadedIndustries, generatedEvents, scoringRubric] = await Promise.all([
       loadIndustries(),
-      loadGeneratedEvents()
+      loadGeneratedEvents(),
+      loadScoringRubric()
     ]);
 
     industries = loadedIndustries;
     state.generatedEvents = generatedEvents;
+    state.scoringRubric = scoringRubric;
     state.industry = industries[0];
     initIndustrySelect();
     bindInteractions();
@@ -111,6 +114,19 @@ async function loadGeneratedEvents() {
   if (data) return data;
 
   return await fetchJsonIfAvailable("data/generated-update-events.sample.json") || [];
+}
+
+async function loadScoringRubric() {
+  const response = await fetch("data/scoring-rubric.json", { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`Scoring rubric failed to load: ${response.status}`);
+  }
+
+  const data = await response.json();
+  if (!data?.version || !data?.dimensions) {
+    throw new Error("Scoring rubric is malformed.");
+  }
+  return data;
 }
 
 async function fetchJsonIfAvailable(url) {
@@ -266,14 +282,21 @@ function openCompany(id) {
   const company = findCompany(id);
   if (!company) return;
 
-  const scores = Object.entries(company.scores)
-    .map(([label, value]) => `
-      <div class="score-row">
-        <span>${scoreLabel(label)}</span>
-        <div class="bar"><span style="width: ${value}%"></span></div>
-        <strong>${value}</strong>
-      </div>
-    `)
+  const composite = computeCompositeScore(company.scores);
+  const classification = classifyComposite(composite);
+  const dimensions = Object.entries(state.scoringRubric?.dimensions || {});
+  const scores = dimensions
+    .map(([label, config]) => {
+      const value = company.scores?.[label];
+      const weight = Math.round((config.weight || 0) * 100);
+      return `
+        <div class="score-row">
+          <span>${config.label || scoreLabel(label)} <small>${weight}%</small></span>
+          <div class="bar"><span style="width: ${value}%"></span></div>
+          <strong>${value}</strong>
+        </div>
+      `;
+    })
     .join("");
 
   const signals = Object.entries(company.signals)
@@ -292,8 +315,15 @@ function openCompany(id) {
     </div>
     ${renderCompanyFlags(company)}
     <div class="signal-grid">${signals}</div>
-    <h3>Hidden Bottleneck Score</h3>
+    <h3>Hidden Bottleneck Composite</h3>
+    <div class="composite-score">
+      <strong>${Number.isFinite(composite) ? composite.toFixed(1) : "N/A"}</strong>
+      <span>${classification || "Unclassified"}</span>
+      <small>Rubric v${state.scoringRubric.version}. Component inputs are currently ${state.scoringRubric.evidencePolicy?.status || "provisional"}; the composite is arithmetic, not independent evidence.</small>
+    </div>
+    <h3>Component Scores</h3>
     ${scores}
+    <p class="score-policy">${state.scoringRubric.evidencePolicy?.requirement || "Component scores require explicit evidence coverage."}</p>
     <h3>Recent Updates / Items to Verify</h3>
     <ul class="recent-list">${company.recentUpdates.map((item) => `<li>${item}</li>`).join("")}</ul>
     <h3>Evidence Sources</h3>
@@ -301,6 +331,29 @@ function openCompany(id) {
   `;
 
   dialog.showModal();
+}
+
+function computeCompositeScore(scores) {
+  const dimensions = state.scoringRubric?.dimensions || {};
+  let weighted = 0;
+  let totalWeight = 0;
+
+  Object.entries(dimensions).forEach(([dimension, config]) => {
+    const value = scores?.[dimension];
+    const weight = Number(config?.weight);
+    if (!Number.isFinite(value) || !Number.isFinite(weight) || weight < 0) return;
+    weighted += value * weight;
+    totalWeight += weight;
+  });
+
+  return totalWeight > 0 ? Math.round((weighted / totalWeight) * 10) / 10 : null;
+}
+
+function classifyComposite(score) {
+  if (!Number.isFinite(score)) return null;
+  const classifications = [...(state.scoringRubric?.classifications || [])]
+    .sort((a, b) => b.min - a.min);
+  return classifications.find((entry) => score >= entry.min)?.label || null;
 }
 
 function renderCompanyFlags(company) {
@@ -392,6 +445,7 @@ function renderPendingUpdates() {
         <strong>${update.company}</strong>
         <span>${reviewStatusLabel(update.reviewStatus)} - ${update.origin} - ${impactLabel(update.impact)}</span>
         <p>${update.summary}</p>
+        ${renderResearchPacket(update.researchPacket)}
         ${renderAnalysis(update.analysis)}
         <span>Source: ${update.source}</span>
         ${renderSources(update.sourceIds)}
@@ -419,6 +473,8 @@ function buildReviewQueue() {
     origin: "User submission",
     source: update.source,
     sourceIds: update.sourceIds || [],
+    analysis: null,
+    researchPacket: null,
     summary: update.summary,
     reviewStatus: reviewStatusFor(update.id, update.status)
   }));
@@ -437,9 +493,48 @@ function eventToReviewCard(event, origin) {
     source: event.sourceUrl || event.sourceNote || "No source provided",
     sourceIds: sourceIdsForEvent(event),
     analysis: event.analysis || null,
+    researchPacket: event.researchPacket || null,
     summary: event.summary,
     reviewStatus: reviewStatusFor(event.id, event.status)
   };
+}
+
+function renderResearchPacket(packet) {
+  if (!packet) return "";
+
+  const evidence = (packet.evidence || [])
+    .map((item) => `
+      <div class="research-evidence">
+        <strong>Evidence ${item.evidenceLevel || "?"}: ${item.pageTitle || item.sourceId || "Source observation"}</strong>
+        <p>${item.observation || "No observation recorded."}</p>
+        ${item.limitation ? `<small>${item.limitation}</small>` : ""}
+      </div>
+    `)
+    .join("");
+
+  const operations = (packet.proposedPatch?.operations || [])
+    .map((operation) => `
+      <li><code>${operation.op}</code> <code>${operation.path}</code>${operation.requiresHumanInput ? " - human input required" : ""}</li>
+    `)
+    .join("");
+
+  return `
+    <div class="research-packet">
+      <div class="research-stage">
+        <span>1. Evidence</span>
+        ${evidence || "<p>No structured evidence.</p>"}
+      </div>
+      <div class="research-stage">
+        <span>2. Claim - ${packet.claim?.status || "unverified"} / ${packet.claim?.confidence || "low"} confidence</span>
+        <p>${packet.claim?.statement || "No claim statement."}</p>
+        ${packet.claim?.rationale ? `<small>${packet.claim.rationale}</small>` : ""}
+      </div>
+      <div class="research-stage">
+        <span>3. Proposed Patch - ${packet.proposedPatch?.status || "draft"}${packet.proposedPatch?.executable ? " / executable" : " / not executable"}</span>
+        ${operations ? `<ul>${operations}</ul>` : "<p>No patch operations.</p>"}
+      </div>
+    </div>
+  `;
 }
 
 function renderAnalysis(analysis) {
@@ -451,7 +546,7 @@ function renderAnalysis(analysis) {
 
   return `
     <div class="analysis-box">
-      <strong>Analysis layer: ${analysis.reviewPriority || "medium"} priority</strong>
+      <strong>Review guidance: ${analysis.reviewPriority || "medium"} priority</strong>
       <p>${analysis.analystSummary || "Review the source before approving."}</p>
       ${checks ? `<ul>${checks}</ul>` : ""}
       ${analysis.suggestedDatabaseAction ? `<span>${analysis.suggestedDatabaseAction}</span>` : ""}

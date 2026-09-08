@@ -34,9 +34,9 @@
 
   function renderCompanyFlags(company, companyName) {
     const flags = [
-      ["Key supplier", company.isKeySupplier],
-      ["Bottleneck", company.isBottleneck],
-      ["Hidden candidate", company.isZisuCandidate]
+      ["Key supplier (manual)", company.isKeySupplier],
+      ["Bottleneck (manual)", company.isBottleneck],
+      ["Hidden candidate (manual)", company.isZisuCandidate]
     ];
 
     return `

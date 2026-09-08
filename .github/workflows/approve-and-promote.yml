@@ -13,7 +13,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
 
 jobs:
   approve-and-promote:
@@ -46,22 +45,3 @@ jobs:
         with:
           commit_message: "Approve and promote reviewed data"
           file_pattern: "data/industries.json data/industries.reviewed.json data/industries.previous.json data/generated-update-events.json"
-
-      - name: Publish current site to gh-pages
-        shell: bash
-        run: |
-          git fetch origin main gh-pages || true
-          git checkout main
-          git pull --ff-only origin main
-          git checkout -B gh-pages
-          git push origin gh-pages --force
-
-      - name: Request GitHub Pages build
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          curl --fail-with-body -L -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${GH_TOKEN}" \
-            -H "X-GitHub-Api-Version: 2026-03-10" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds"

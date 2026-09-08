@@ -48,6 +48,25 @@ test("deterministic semantic candidate isolates a numeric before/after review le
   assert.equal(numeric.status, "candidate");
 });
 
+test("numeric candidate ignores an unchanged year and pairs comparable business quantities", () => {
+  const candidate = buildSemanticCandidate({
+    source,
+    hits: ["hydrogen", "capacity"],
+    impactType: "capacity_change",
+    changeEvidence: {
+      ...comparableChange,
+      removed: ["For 2026, hydrogen storage capacity was 10,000 systems per year."],
+      added: ["For 2026, hydrogen storage capacity increased to 20,000 systems per year."]
+    }
+  });
+
+  const numeric = candidate.observedFacts.find((fact) => fact.type === "numeric_change_candidate");
+  assert.ok(numeric);
+  assert.match(numeric.beforeValue, /10,000 systems/i);
+  assert.match(numeric.afterValue, /20,000 systems/i);
+  assert.doesNotMatch(numeric.statement, /2026 →/);
+});
+
 test("semantic candidate validation rejects unverified score direction or numeric score proposals", () => {
   const candidate = buildSemanticCandidate({
     source,

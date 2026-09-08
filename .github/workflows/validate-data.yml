@@ -32,6 +32,7 @@ jobs:
           node --check scripts/enrich-semantic-candidates.mjs
           node --check scripts/validate-semantic-candidates.mjs
           node --check scripts/openai-research-agent.mjs
+          node --check scripts/openai-research-smoke-test.mjs
           node --check scripts/validate-llm-candidates.mjs
           node --check scripts/research-model.mjs
           node --check scripts/web-scan.mjs

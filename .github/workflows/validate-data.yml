@@ -25,6 +25,7 @@ jobs:
           node --check app.js
           node --check node-details.js
           node --check review-export.js
+          node --check scripts/research-model.mjs
           node --check scripts/web-scan.mjs
           node --check scripts/apply-review-decisions.mjs
           node --check scripts/promote-reviewed-data.mjs

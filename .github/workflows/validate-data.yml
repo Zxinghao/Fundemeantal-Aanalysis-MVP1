@@ -23,9 +23,11 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           node --check app.js
+          node --check research-evidence-ui.js
           node --check node-details.js
           node --check company-flags.js
           node --check review-export.js
+          node --check scripts/disclosure-diff.mjs
           node --check scripts/research-model.mjs
           node --check scripts/web-scan.mjs
           node --check scripts/apply-review-decisions.mjs

@@ -22,19 +22,42 @@ const reviewDimensionsByImpact = {
   policy_change: ["supplyChainImportance", "marketUnderappreciation"]
 };
 
-const quantityPattern = /(?:\b\d{1,3}(?:[,. ]\d{3})+(?:\.\d+)?\b|\b\d+(?:\.\d+)?\b)\s?(?:%|million|billion|thousand|bn|mn|mw|gw|gwh|mwh|kw|kg|kt|mt|tons?|tonnes?|units?|systems?|vehicles?|bar|gbps|tbps)?/gi;
+const quantityPattern = /(?<number>\b\d{1,3}(?:[,. ]\d{3})+(?:\.\d+)?\b|\b\d+(?:\.\d+)?\b)\s?(?<unit>%|million|billion|thousand|bn|mn|mw|gw|gwh|mwh|kw|kg|kt|mt|tons?|tonnes?|units?|systems?|vehicles?|bar|gbps|tbps)?/gi;
 
 function normalizeSpace(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
 
-function normalizeQuantity(value) {
-  return normalizeSpace(value).toLowerCase().replace(/,(?=\d{3}\b)/g, "");
+function normalizeNumber(value) {
+  return normalizeSpace(value).toLowerCase().replace(/[ ,](?=\d{3}\b)/g, "");
+}
+
+function likelyYear(numberText, unit) {
+  if (unit) return false;
+  const value = Number(normalizeNumber(numberText));
+  return Number.isInteger(value) && value >= 1900 && value <= 2100;
 }
 
 function extractQuantities(text) {
-  const matches = normalizeSpace(text).match(quantityPattern) || [];
-  return [...new Set(matches.map((value) => normalizeSpace(value)).filter(Boolean))].slice(0, 8);
+  const quantities = [];
+  const seen = new Set();
+  const normalizedText = normalizeSpace(text);
+
+  for (const match of normalizedText.matchAll(quantityPattern)) {
+    const rawNumber = normalizeSpace(match.groups?.number || "");
+    const unit = normalizeSpace(match.groups?.unit || "").toLowerCase();
+    if (!rawNumber || likelyYear(rawNumber, unit)) continue;
+
+    const raw = normalizeSpace(match[0]);
+    const numberKey = normalizeNumber(rawNumber);
+    const key = `${numberKey}|${unit}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    quantities.push({ raw, numberKey, unit });
+    if (quantities.length >= 8) break;
+  }
+
+  return quantities;
 }
 
 function sharedKeywordCount(before, after, keywords) {
@@ -57,22 +80,36 @@ function bestSnippetPair(removed, added, keywords) {
   return best;
 }
 
+function comparableQuantityPairs(beforeValues, afterValues) {
+  const pairs = [];
+
+  for (const before of beforeValues) {
+    for (const after of afterValues) {
+      if (before.unit && after.unit && before.unit === after.unit) {
+        pairs.push({ before, after, unitStrength: 2 });
+      } else if (!before.unit && !after.unit) {
+        pairs.push({ before, after, unitStrength: 1 });
+      }
+    }
+  }
+
+  return pairs.sort((a, b) => b.unitStrength - a.unitStrength);
+}
+
 function numericChangeCandidate(pair) {
   if (!pair) return null;
   const beforeValues = extractQuantities(pair.before);
   const afterValues = extractQuantities(pair.after);
   if (!beforeValues.length || !afterValues.length) return null;
 
-  for (const before of beforeValues) {
-    for (const after of afterValues) {
-      if (normalizeQuantity(before) !== normalizeQuantity(after)) {
-        return {
-          before,
-          after,
-          statement: `Possible numeric disclosure change in watched context: ${before} → ${after}.`
-        };
-      }
-    }
+  for (const candidate of comparableQuantityPairs(beforeValues, afterValues)) {
+    if (candidate.before.numberKey === candidate.after.numberKey) continue;
+    return {
+      before: candidate.before.raw,
+      after: candidate.after.raw,
+      unit: candidate.before.unit || candidate.after.unit || null,
+      statement: `Possible numeric disclosure change in watched context: ${candidate.before.raw} → ${candidate.after.raw}.`
+    };
   }
   return null;
 }
@@ -121,6 +158,7 @@ export function buildSemanticCandidate({ source, hits = [], impactType, changeEv
       afterExcerpt: pair.after,
       beforeValue: numericChange.before,
       afterValue: numericChange.after,
+      unit: numericChange.unit,
       matchedKeywords: hits,
       statement: numericChange.statement,
       requiresPrimarySourceVerification: true
@@ -146,9 +184,9 @@ export function buildSemanticCandidate({ source, hits = [], impactType, changeEv
       statement: candidateInterpretationStatement({ source, impactType, numericChange }),
       confidence: numericChange && pair?.score > 0 ? "medium" : hasComparableChange ? "low" : "low",
       rationale: numericChange
-        ? "The same keyword-focused context contains a changed numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts."
+        ? "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts."
         : hasComparableChange
-          ? "Keyword-focused context changed, but no reliable numeric before/after candidate was isolated."
+          ? "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated."
           : "No comparable changed watched context is available for semantic interpretation.",
       requiresPrimarySourceVerification: true
     },

@@ -1,0 +1,5 @@
+Source Scan manual trigger file.
+
+Update this file to trigger a Source Scan from the default branch.
+
+Last requested trigger: 2026-09-08T22:03:00Z

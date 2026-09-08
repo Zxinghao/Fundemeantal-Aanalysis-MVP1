@@ -1,8 +1,26 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { cadenceDue, mergeEventStore } from "../scripts/web-scan.mjs";
+import { cadenceDue, eventFromSource, mergeEventStore } from "../scripts/web-scan.mjs";
 import { applyEventReviewStatuses, applyReviews } from "../scripts/apply-review-decisions.mjs";
+import { computeCompositeScore, classifyComposite } from "../scripts/research-model.mjs";
+
+const rubric = {
+  dimensions: {
+    supplyChainImportance: { weight: 0.20 },
+    scarcity: { weight: 0.20 },
+    pricingPower: { weight: 0.10 },
+    switchingCost: { weight: 0.15 },
+    validationBarrier: { weight: 0.15 },
+    marketUnderappreciation: { weight: 0.20 }
+  },
+  classifications: [
+    { min: 80, label: "High-conviction hidden bottleneck candidate" },
+    { min: 70, label: "Hidden bottleneck candidate" },
+    { min: 60, label: "Watchlist / partial bottleneck" },
+    { min: 0, label: "Not currently a hidden bottleneck" }
+  ]
+};
 
 test("persistent event store keeps an older pending event when a later scan detects nothing", () => {
   const existing = [{
@@ -111,4 +129,151 @@ test("rejected review updates status without adding a reviewed company note", ()
   assert.deepEqual(applied, ["map-event"]);
   assert.equal(industries[0].updateEvents[0].status, "rejected");
   assert.equal(industries[0].companies[0].recentUpdates.length, 0);
+});
+
+test("scanner event separates observed evidence from an unverified claim and non-executable draft patch", () => {
+  const event = eventFromSource({
+    industryId: "fuel-cell",
+    source: {
+      id: "forvia-news",
+      name: "FORVIA newsroom",
+      sourceType: "company_official",
+      url: "https://example.com/forvia",
+      companyId: "forvia",
+      nodeId: "tank",
+      watchFor: ["hydrogen", "capacity", "order"]
+    },
+    title: "Hydrogen storage update",
+    hits: ["hydrogen", "capacity"],
+    date: "2026-09-08",
+    detectedAt: "2026-09-08T10:00:00.000Z"
+  });
+
+  assert.equal(event.researchPacket.schemaVersion, "1.0");
+  assert.equal(event.researchPacket.evidence[0].evidenceLevel, "A");
+  assert.match(event.researchPacket.evidence[0].observation, /hydrogen, capacity/);
+  assert.equal(event.researchPacket.claim.status, "unverified");
+  assert.equal(event.researchPacket.claim.confidence, "medium");
+  assert.equal(event.researchPacket.proposedPatch.status, "draft");
+  assert.equal(event.researchPacket.proposedPatch.executable, false);
+  assert.equal(event.researchPacket.proposedPatch.operations[0].requiresHumanInput, true);
+});
+
+test("hidden bottleneck composite is deterministic from versioned weights", () => {
+  const score = computeCompositeScore({
+    supplyChainImportance: 92,
+    scarcity: 88,
+    pricingPower: 78,
+    switchingCost: 85,
+    validationBarrier: 90,
+    marketUnderappreciation: 74
+  }, rubric);
+
+  assert.equal(score, 84.9);
+  assert.equal(classifyComposite(score, rubric), "High-conviction hidden bottleneck candidate");
+});
+
+test("approved executable research patch can update a whitelisted score field", () => {
+  const industries = [{
+    id: "fuel-cell",
+    name: "Fuel Cell",
+    nodes: [{ id: "forvia" }],
+    relationships: [],
+    sources: [],
+    companies: [{
+      id: "forvia",
+      name: "FORVIA",
+      scores: { validationBarrier: 82 },
+      recentUpdates: [],
+      signals: {}
+    }],
+    updateEvents: []
+  }];
+
+  const reviewExport = {
+    exportedAt: "2026-09-08T12:00:00.000Z",
+    reviewedItems: [{
+      id: "scan-1",
+      industryId: "fuel-cell",
+      companyId: "forvia",
+      company: "FORVIA",
+      impact: "bottleneck_judgement",
+      source: "https://example.com/source",
+      sourceIds: [],
+      summary: "Qualification evidence strengthened.",
+      reviewStatus: "approved",
+      researchPacket: {
+        schemaVersion: "1.0",
+        evidence: [{ id: "e1", sourceId: "source", evidenceLevel: "A", observation: "Verified qualification disclosure." }],
+        claim: {
+          id: "c1",
+          status: "supported",
+          type: "bottleneck_judgement",
+          target: "company:forvia",
+          statement: "Qualification evidence supports a higher validation barrier.",
+          confidence: "high"
+        },
+        proposedPatch: {
+          status: "ready",
+          executable: true,
+          operations: [{
+            op: "replace",
+            path: "companies.forvia.scores.validationBarrier",
+            value: 86,
+            reason: "Verified qualification evidence.",
+            requiresHumanInput: false
+          }]
+        }
+      }
+    }]
+  };
+
+  applyReviews(industries, reviewExport);
+  assert.equal(industries[0].companies[0].scores.validationBarrier, 86);
+  assert.equal(industries[0].companies[0].recentUpdates.length, 0);
+  assert.deepEqual(industries[0].updateEvents[0].patchApplied, ["companies.forvia.scores.validationBarrier"]);
+});
+
+test("approved draft research packet does not silently become an official company note", () => {
+  const industries = [{
+    id: "fuel-cell",
+    name: "Fuel Cell",
+    nodes: [{ id: "forvia" }],
+    relationships: [],
+    sources: [],
+    companies: [{ id: "forvia", name: "FORVIA", recentUpdates: [] }],
+    updateEvents: []
+  }];
+
+  const reviewExport = {
+    exportedAt: "2026-09-08T12:00:00.000Z",
+    reviewedItems: [{
+      id: "scan-draft",
+      industryId: "fuel-cell",
+      companyId: "forvia",
+      company: "FORVIA",
+      summary: "Page changed; exact disclosure still needs verification.",
+      reviewStatus: "approved",
+      researchPacket: {
+        schemaVersion: "1.0",
+        evidence: [{ id: "e1", sourceId: "source", evidenceLevel: "A", observation: "Page changed." }],
+        claim: {
+          id: "c1",
+          status: "unverified",
+          target: "company:forvia",
+          statement: "Potential change.",
+          confidence: "low"
+        },
+        proposedPatch: {
+          status: "draft",
+          executable: false,
+          operations: [{ op: "review", path: "companies.forvia.recentUpdates", value: null, requiresHumanInput: true }]
+        }
+      }
+    }]
+  };
+
+  applyReviews(industries, reviewExport);
+  assert.equal(industries[0].companies[0].recentUpdates.length, 0);
+  assert.deepEqual(industries[0].updateEvents[0].patchApplied, []);
 });

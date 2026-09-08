@@ -10,55 +10,499 @@
       "sourcePreference": "Prioritize English official sources, investor relations materials, filings, government sources, and standards bodies. Non-English sources may be submitted only when they add primary evidence and should be summarized in English."
     },
     "sources": [
-      { "id": "doe-fuel-cell-parts", "title": "U.S. DOE fuel cell parts overview", "type": "government", "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell", "note": "Primary English source for PEM fuel-cell components, MEAs, and stack structure." },
-      { "id": "doe-hydrogen-storage", "title": "U.S. DOE physical hydrogen storage", "type": "government", "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage", "note": "Primary English source for 350 bar and 700 bar compressed hydrogen storage pathways." },
-      { "id": "jm-fuel-cell-tech", "title": "Johnson Matthey fuel cells technology", "type": "company_official", "url": "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology", "note": "Company source for Johnson Matthey's fuel-cell catalyst, CCM, and MEA-related activities." },
-      { "id": "umicore-fuel-cell-catalysts", "title": "Umicore fuel cell catalysts", "type": "company_official", "url": "https://www.umicore.com/en/markets-products/automotive-mobility/fuel-cell-catalysts/", "note": "Company source for Umicore's fuel-cell catalyst business." },
-      { "id": "sgl-gdl", "title": "SGL Carbon SIGRACET fuel cell components", "type": "company_official", "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet-fuel-cell-components/", "note": "Company source for SGL Carbon's GDL and fuel-cell component business." },
-      { "id": "forvia-hydrogen-storage", "title": "FORVIA hydrogen storage systems", "type": "company_official", "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems", "note": "Company source for FORVIA onboard hydrogen storage systems." },
-      { "id": "hexagon-purus", "title": "Hexagon Purus hydrogen storage systems", "type": "company_official", "url": "https://hexagongroup.com/hexagon-purus", "note": "Company source for Hexagon Purus high-pressure hydrogen tanks and systems." },
-      { "id": "garrett-fuel-cell", "title": "Garrett fuel cell technology", "type": "company_official", "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/", "note": "Company source for Garrett fuel-cell compressor and air management technologies." }
+      {
+        "id": "doe-fuel-cell-parts",
+        "title": "U.S. DOE fuel cell parts overview",
+        "type": "government",
+        "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
+        "note": "Primary English source for PEM fuel-cell components, MEAs, and stack structure."
+      },
+      {
+        "id": "doe-hydrogen-storage",
+        "title": "U.S. DOE physical hydrogen storage",
+        "type": "government",
+        "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
+        "note": "Primary English source for 350 bar and 700 bar compressed hydrogen storage pathways."
+      },
+      {
+        "id": "jm-fuel-cell-tech",
+        "title": "Johnson Matthey fuel cells technology",
+        "type": "company_official",
+        "url": "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology",
+        "note": "Company source for Johnson Matthey's fuel-cell catalyst, CCM, and MEA-related activities."
+      },
+      {
+        "id": "umicore-fuel-cell-catalysts",
+        "title": "Umicore fuel cell catalysts",
+        "type": "company_official",
+        "url": "https://www.umicore.com/en/markets-products/automotive-mobility/fuel-cell-catalysts/",
+        "note": "Company source for Umicore's fuel-cell catalyst business."
+      },
+      {
+        "id": "sgl-gdl",
+        "title": "SGL Carbon SIGRACET fuel cell components",
+        "type": "company_official",
+        "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet-fuel-cell-components/",
+        "note": "Company source for SGL Carbon's GDL and fuel-cell component business."
+      },
+      {
+        "id": "forvia-hydrogen-storage",
+        "title": "FORVIA hydrogen storage systems",
+        "type": "company_official",
+        "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+        "note": "Company source for FORVIA onboard hydrogen storage systems."
+      },
+      {
+        "id": "hexagon-purus",
+        "title": "Hexagon Purus hydrogen storage systems",
+        "type": "company_official",
+        "url": "https://hexagongroup.com/hexagon-purus",
+        "note": "Company source for Hexagon Purus high-pressure hydrogen tanks and systems."
+      },
+      {
+        "id": "garrett-fuel-cell",
+        "title": "Garrett fuel cell technology",
+        "type": "company_official",
+        "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
+        "note": "Company source for Garrett fuel-cell compressor and air management technologies."
+      }
     ],
     "nodes": [
-      { "id": "demand", "type": "terminal", "title": "End Demand", "summary": "Trucks / buses / logistics vehicles / forklifts", "layer": "End market", "tags": ["zero-emission", "policy driven"], "position": { "x": 40, "y": 280 } },
-      { "id": "vehicle", "type": "chain", "title": "Vehicle & System Integration", "summary": "Integrates fuel-cell systems into vehicles", "layer": "System", "tags": ["order gateway"], "position": { "x": 270, "y": 140 } },
-      { "id": "stack", "type": "chain", "title": "Fuel Cell Stack", "summary": "System core; determines efficiency and durability", "layer": "Core component", "tags": ["core component"], "position": { "x": 500, "y": 120 } },
-      { "id": "mea", "type": "chain", "title": "MEA", "summary": "Integrated membrane, catalyst, and GDL assembly", "layer": "Core component", "tags": ["high barrier", "long validation"], "position": { "x": 730, "y": 50 } },
-      { "id": "catalyst", "type": "chain", "title": "Platinum-based Catalyst", "summary": "Drives reaction efficiency and cost structure", "layer": "Material", "tags": ["material bottleneck"], "position": { "x": 970, "y": 20 } },
-      { "id": "gdl", "type": "chain", "title": "Gas Diffusion Layer", "summary": "Manages gas, water, heat, and electrical pathways", "layer": "Material", "tags": ["hidden key part"], "position": { "x": 970, "y": 140 } },
-      { "id": "tank", "type": "chain", "title": "High-pressure Hydrogen Storage", "summary": "350 bar / 700 bar onboard hydrogen tanks", "layer": "Storage", "tags": ["critical for trucks"], "position": { "x": 500, "y": 330 } },
-      { "id": "carbon", "type": "chain", "title": "Carbon Fiber Composite", "summary": "Key material for Type IV hydrogen tanks", "layer": "Material", "tags": ["upstream material"], "position": { "x": 730, "y": 350 } },
-      { "id": "bop", "type": "chain", "title": "BOP Auxiliary Systems", "summary": "Air compressors, hydrogen recirculation, valves, and thermal management", "layer": "Auxiliary system", "tags": ["engineering bottleneck"], "position": { "x": 500, "y": 530 } },
-      { "id": "compressor", "type": "chain", "title": "Fuel Cell Air Compressor", "summary": "Impacts system efficiency and power consumption", "layer": "Auxiliary system", "tags": ["often overlooked"], "position": { "x": 730, "y": 540 } },
-      { "id": "jm", "type": "zisu", "title": "Johnson Matthey", "summary": "Catalysts / CCM / MEA", "layer": "Company", "tags": ["hidden bottleneck", "core supplier"], "position": { "x": 1210, "y": 0 } },
-      { "id": "umicore", "type": "company", "title": "Umicore", "summary": "Fuel-cell catalysts", "layer": "Company", "tags": ["important supplier"], "position": { "x": 1210, "y": 115 } },
-      { "id": "toray", "type": "company", "title": "Toray", "summary": "GDL / carbon materials", "layer": "Company", "tags": ["material supplier"], "position": { "x": 1210, "y": 240 } },
-      { "id": "sgl", "type": "company", "title": "SGL Carbon", "summary": "GDL / carbon materials", "layer": "Company", "tags": ["important supplier"], "position": { "x": 1210, "y": 360 } },
-      { "id": "forvia", "type": "zisu", "title": "FORVIA", "summary": "Onboard hydrogen storage systems", "layer": "Company", "tags": ["hidden bottleneck", "hydrogen storage"], "position": { "x": 970, "y": 330 } },
-      { "id": "hexagon", "type": "company", "title": "Hexagon Purus", "summary": "Type IV high-pressure hydrogen tanks", "layer": "Company", "tags": ["hydrogen tanks"], "position": { "x": 970, "y": 455 } },
-      { "id": "garrett", "type": "zisu", "title": "Garrett Motion", "summary": "Fuel-cell electric air compressors", "layer": "Company", "tags": ["hidden bottleneck", "BOP"], "position": { "x": 970, "y": 590 } },
-      { "id": "toyota", "type": "company", "title": "Toyota", "summary": "Vehicle / stack / system", "layer": "Company", "tags": ["vehicle leader"], "position": { "x": 270, "y": 430 } },
-      { "id": "ballard", "type": "company", "title": "Ballard Power", "summary": "Stacks / systems", "layer": "Company", "tags": ["system player"], "position": { "x": 270, "y": 555 } }
+      {
+        "id": "demand",
+        "type": "terminal",
+        "title": "End Demand",
+        "summary": "Trucks / buses / logistics vehicles / forklifts",
+        "layer": "End market",
+        "tags": [
+          "zero-emission",
+          "policy driven"
+        ],
+        "position": {
+          "x": 40,
+          "y": 280
+        }
+      },
+      {
+        "id": "vehicle",
+        "type": "chain",
+        "title": "Vehicle & System Integration",
+        "summary": "Integrates fuel-cell systems into vehicles",
+        "layer": "System",
+        "tags": [
+          "order gateway"
+        ],
+        "position": {
+          "x": 270,
+          "y": 140
+        }
+      },
+      {
+        "id": "stack",
+        "type": "chain",
+        "title": "Fuel Cell Stack",
+        "summary": "System core; determines efficiency and durability",
+        "layer": "Core component",
+        "tags": [
+          "core component"
+        ],
+        "position": {
+          "x": 500,
+          "y": 120
+        }
+      },
+      {
+        "id": "mea",
+        "type": "chain",
+        "title": "MEA",
+        "summary": "Integrated membrane, catalyst, and GDL assembly",
+        "layer": "Core component",
+        "tags": [
+          "high barrier",
+          "long validation"
+        ],
+        "position": {
+          "x": 730,
+          "y": 50
+        }
+      },
+      {
+        "id": "catalyst",
+        "type": "chain",
+        "title": "Platinum-based Catalyst",
+        "summary": "Drives reaction efficiency and cost structure",
+        "layer": "Material",
+        "tags": [
+          "material bottleneck"
+        ],
+        "position": {
+          "x": 970,
+          "y": 20
+        }
+      },
+      {
+        "id": "gdl",
+        "type": "chain",
+        "title": "Gas Diffusion Layer",
+        "summary": "Manages gas, water, heat, and electrical pathways",
+        "layer": "Material",
+        "tags": [
+          "hidden key part"
+        ],
+        "position": {
+          "x": 970,
+          "y": 140
+        }
+      },
+      {
+        "id": "tank",
+        "type": "chain",
+        "title": "High-pressure Hydrogen Storage",
+        "summary": "350 bar / 700 bar onboard hydrogen tanks",
+        "layer": "Storage",
+        "tags": [
+          "critical for trucks"
+        ],
+        "position": {
+          "x": 500,
+          "y": 330
+        }
+      },
+      {
+        "id": "carbon",
+        "type": "chain",
+        "title": "Carbon Fiber Composite",
+        "summary": "Key material for Type IV hydrogen tanks",
+        "layer": "Material",
+        "tags": [
+          "upstream material"
+        ],
+        "position": {
+          "x": 730,
+          "y": 350
+        }
+      },
+      {
+        "id": "bop",
+        "type": "chain",
+        "title": "BOP Auxiliary Systems",
+        "summary": "Air compressors, hydrogen recirculation, valves, and thermal management",
+        "layer": "Auxiliary system",
+        "tags": [
+          "engineering bottleneck"
+        ],
+        "position": {
+          "x": 500,
+          "y": 530
+        }
+      },
+      {
+        "id": "compressor",
+        "type": "chain",
+        "title": "Fuel Cell Air Compressor",
+        "summary": "Impacts system efficiency and power consumption",
+        "layer": "Auxiliary system",
+        "tags": [
+          "often overlooked"
+        ],
+        "position": {
+          "x": 730,
+          "y": 540
+        }
+      },
+      {
+        "id": "jm",
+        "type": "zisu",
+        "title": "Johnson Matthey",
+        "summary": "Catalysts / CCM / MEA",
+        "layer": "Company",
+        "tags": [
+          "hidden bottleneck",
+          "core supplier"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 0
+        }
+      },
+      {
+        "id": "umicore",
+        "type": "company",
+        "title": "Umicore",
+        "summary": "Fuel-cell catalysts",
+        "layer": "Company",
+        "tags": [
+          "important supplier"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 115
+        }
+      },
+      {
+        "id": "toray",
+        "type": "company",
+        "title": "Toray",
+        "summary": "GDL / carbon materials",
+        "layer": "Company",
+        "tags": [
+          "material supplier"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 240
+        }
+      },
+      {
+        "id": "sgl",
+        "type": "company",
+        "title": "SGL Carbon",
+        "summary": "GDL / carbon materials",
+        "layer": "Company",
+        "tags": [
+          "important supplier"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 360
+        }
+      },
+      {
+        "id": "forvia",
+        "type": "zisu",
+        "title": "FORVIA",
+        "summary": "Onboard hydrogen storage systems",
+        "layer": "Company",
+        "tags": [
+          "hidden bottleneck",
+          "hydrogen storage"
+        ],
+        "position": {
+          "x": 970,
+          "y": 330
+        }
+      },
+      {
+        "id": "hexagon",
+        "type": "company",
+        "title": "Hexagon Purus",
+        "summary": "Type IV high-pressure hydrogen tanks",
+        "layer": "Company",
+        "tags": [
+          "hydrogen tanks"
+        ],
+        "position": {
+          "x": 970,
+          "y": 455
+        }
+      },
+      {
+        "id": "garrett",
+        "type": "zisu",
+        "title": "Garrett Motion",
+        "summary": "Fuel-cell electric air compressors",
+        "layer": "Company",
+        "tags": [
+          "hidden bottleneck",
+          "BOP"
+        ],
+        "position": {
+          "x": 970,
+          "y": 590
+        }
+      },
+      {
+        "id": "toyota",
+        "type": "company",
+        "title": "Toyota",
+        "summary": "Vehicle / stack / system",
+        "layer": "Company",
+        "tags": [
+          "vehicle leader"
+        ],
+        "position": {
+          "x": 270,
+          "y": 430
+        }
+      },
+      {
+        "id": "ballard",
+        "type": "company",
+        "title": "Ballard Power",
+        "summary": "Stacks / systems",
+        "layer": "Company",
+        "tags": [
+          "system player"
+        ],
+        "position": {
+          "x": 270,
+          "y": 555
+        }
+      }
     ],
     "relationships": [
-      { "from": "demand", "to": "vehicle", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "demand", "to": "tank", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["doe-hydrogen-storage"] },
-      { "from": "demand", "to": "bop", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "vehicle", "to": "stack", "relationshipType": "integrates", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "vehicle", "to": "toyota", "relationshipType": "integrates", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "stack", "to": "mea", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "stack", "to": "ballard", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "mea", "to": "catalyst", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "mea", "to": "gdl", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "catalyst", "to": "jm", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["jm-fuel-cell-tech"] },
-      { "from": "catalyst", "to": "umicore", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["umicore-fuel-cell-catalysts"] },
-      { "from": "gdl", "to": "toray", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["doe-fuel-cell-parts"] },
-      { "from": "gdl", "to": "sgl", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["sgl-gdl"] },
-      { "from": "tank", "to": "carbon", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["doe-hydrogen-storage"] },
-      { "from": "tank", "to": "forvia", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["forvia-hydrogen-storage"] },
-      { "from": "tank", "to": "hexagon", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["hexagon-purus"] },
-      { "from": "bop", "to": "compressor", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["garrett-fuel-cell"] },
-      { "from": "compressor", "to": "garrett", "relationshipType": "supplies", "confidence": "medium", "sourceIds": ["garrett-fuel-cell"] }
+      {
+        "from": "demand",
+        "to": "vehicle",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "demand",
+        "to": "tank",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-hydrogen-storage"
+        ]
+      },
+      {
+        "from": "demand",
+        "to": "bop",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "vehicle",
+        "to": "stack",
+        "relationshipType": "integrates",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "vehicle",
+        "to": "toyota",
+        "relationshipType": "integrates",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "stack",
+        "to": "mea",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "stack",
+        "to": "ballard",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "mea",
+        "to": "catalyst",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "mea",
+        "to": "gdl",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "catalyst",
+        "to": "jm",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "jm-fuel-cell-tech"
+        ]
+      },
+      {
+        "from": "catalyst",
+        "to": "umicore",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "umicore-fuel-cell-catalysts"
+        ]
+      },
+      {
+        "from": "gdl",
+        "to": "toray",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ]
+      },
+      {
+        "from": "gdl",
+        "to": "sgl",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "sgl-gdl"
+        ]
+      },
+      {
+        "from": "tank",
+        "to": "carbon",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "doe-hydrogen-storage"
+        ]
+      },
+      {
+        "from": "tank",
+        "to": "forvia",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "forvia-hydrogen-storage"
+        ]
+      },
+      {
+        "from": "tank",
+        "to": "hexagon",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "hexagon-purus"
+        ]
+      },
+      {
+        "from": "bop",
+        "to": "compressor",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "garrett-fuel-cell"
+        ]
+      },
+      {
+        "from": "compressor",
+        "to": "garrett",
+        "relationshipType": "supplies",
+        "confidence": "medium",
+        "sourceIds": [
+          "garrett-fuel-cell"
+        ]
+      }
     ],
     "companies": [
       {
@@ -67,8 +511,15 @@
         "ticker": "LSE: JMAT",
         "region": "United Kingdom",
         "businessRole": "Core supplier in fuel-cell catalysts, CCM, and MEA-related activities",
-        "linkedNodeIds": ["jm", "catalyst", "mea"],
-        "sourceIds": ["jm-fuel-cell-tech", "doe-fuel-cell-parts"],
+        "linkedNodeIds": [
+          "jm",
+          "catalyst",
+          "mea"
+        ],
+        "sourceIds": [
+          "jm-fuel-cell-tech",
+          "doe-fuel-cell-parts"
+        ],
         "isKeySupplier": true,
         "isBottleneck": true,
         "isZisuCandidate": true,
@@ -78,7 +529,14 @@
           "playerConcentration": "High. The global pool of qualified core players is limited.",
           "recentCatalyst": "Track orders, capacity plans, and customer validation for fuel-cell materials."
         },
-        "scores": { "supplyChainImportance": 92, "scarcity": 88, "pricingPower": 78, "switchingCost": 85, "validationBarrier": 90, "marketUnderappreciation": 74 },
+        "scores": {
+          "supplyChainImportance": 92,
+          "scarcity": 88,
+          "pricingPower": 78,
+          "switchingCost": 85,
+          "validationBarrier": 90,
+          "marketUnderappreciation": 74
+        },
         "recentUpdates": [
           "Fuel-cell materials are tied to PEM supply chain adoption; customer validation and capacity plans need ongoing monitoring.",
           "Platinum-group metal prices and catalyst thrifting technology can affect long-term margins."
@@ -90,8 +548,14 @@
         "ticker": "BRU: UMI",
         "region": "Belgium",
         "businessRole": "Fuel-cell catalyst and precious-metals recycling company",
-        "linkedNodeIds": ["umicore", "catalyst"],
-        "sourceIds": ["umicore-fuel-cell-catalysts", "doe-fuel-cell-parts"],
+        "linkedNodeIds": [
+          "umicore",
+          "catalyst"
+        ],
+        "sourceIds": [
+          "umicore-fuel-cell-catalysts",
+          "doe-fuel-cell-parts"
+        ],
         "isKeySupplier": true,
         "isBottleneck": true,
         "isZisuCandidate": false,
@@ -101,8 +565,17 @@
           "playerConcentration": "High.",
           "recentCatalyst": "Track catalyst orders, precious-metals recycling, and materials guidance."
         },
-        "scores": { "supplyChainImportance": 86, "scarcity": 80, "pricingPower": 72, "switchingCost": 80, "validationBarrier": 84, "marketUnderappreciation": 65 },
-        "recentUpdates": ["Precious-metals materials and recycling capability are underlying advantages for fuel-cell catalyst activity."]
+        "scores": {
+          "supplyChainImportance": 86,
+          "scarcity": 80,
+          "pricingPower": 72,
+          "switchingCost": 80,
+          "validationBarrier": 84,
+          "marketUnderappreciation": 65
+        },
+        "recentUpdates": [
+          "Precious-metals materials and recycling capability are underlying advantages for fuel-cell catalyst activity."
+        ]
       },
       {
         "id": "forvia",
@@ -110,8 +583,14 @@
         "ticker": "EPA: FRVIA",
         "region": "France",
         "businessRole": "Onboard hydrogen storage systems supplier",
-        "linkedNodeIds": ["forvia", "tank"],
-        "sourceIds": ["forvia-hydrogen-storage", "doe-hydrogen-storage"],
+        "linkedNodeIds": [
+          "forvia",
+          "tank"
+        ],
+        "sourceIds": [
+          "forvia-hydrogen-storage",
+          "doe-hydrogen-storage"
+        ],
         "isKeySupplier": true,
         "isBottleneck": true,
         "isZisuCandidate": true,
@@ -121,8 +600,17 @@
           "playerConcentration": "Medium-high.",
           "recentCatalyst": "Track commercial vehicle customers, capacity ramp, and hydrogen business orders."
         },
-        "scores": { "supplyChainImportance": 84, "scarcity": 76, "pricingPower": 70, "switchingCost": 78, "validationBarrier": 82, "marketUnderappreciation": 72 },
-        "recentUpdates": ["Hydrogen storage systems should scale with fuel-cell truck and bus demand."]
+        "scores": {
+          "supplyChainImportance": 84,
+          "scarcity": 76,
+          "pricingPower": 70,
+          "switchingCost": 78,
+          "validationBarrier": 82,
+          "marketUnderappreciation": 72
+        },
+        "recentUpdates": [
+          "Hydrogen storage systems should scale with fuel-cell truck and bus demand."
+        ]
       },
       {
         "id": "garrett",
@@ -130,8 +618,13 @@
         "ticker": "NYSE: GTX",
         "region": "United States",
         "businessRole": "Fuel-cell electric compressor and air management technology supplier",
-        "linkedNodeIds": ["garrett", "compressor"],
-        "sourceIds": ["garrett-fuel-cell"],
+        "linkedNodeIds": [
+          "garrett",
+          "compressor"
+        ],
+        "sourceIds": [
+          "garrett-fuel-cell"
+        ],
         "isKeySupplier": true,
         "isBottleneck": true,
         "isZisuCandidate": true,
@@ -141,8 +634,17 @@
           "playerConcentration": "Medium.",
           "recentCatalyst": "Track fuel-cell compressor customer partnerships and commercial vehicle programs."
         },
-        "scores": { "supplyChainImportance": 80, "scarcity": 74, "pricingPower": 68, "switchingCost": 76, "validationBarrier": 79, "marketUnderappreciation": 72 },
-        "recentUpdates": ["Fuel-cell compressors are an often underappreciated BOP bottleneck."]
+        "scores": {
+          "supplyChainImportance": 80,
+          "scarcity": 74,
+          "pricingPower": 68,
+          "switchingCost": 76,
+          "validationBarrier": 79,
+          "marketUnderappreciation": 72
+        },
+        "recentUpdates": [
+          "Fuel-cell compressors are an often underappreciated BOP bottleneck."
+        ]
       },
       {
         "id": "toray",
@@ -150,8 +652,14 @@
         "ticker": "TYO: 3402",
         "region": "Japan",
         "businessRole": "GDL, carbon paper, and carbon materials supplier",
-        "linkedNodeIds": ["toray", "gdl", "carbon"],
-        "sourceIds": ["doe-fuel-cell-parts"],
+        "linkedNodeIds": [
+          "toray",
+          "gdl",
+          "carbon"
+        ],
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ],
         "isKeySupplier": true,
         "isBottleneck": false,
         "isZisuCandidate": false,
@@ -161,8 +669,17 @@
           "playerConcentration": "Medium-high.",
           "recentCatalyst": "Track fuel-cell materials shipments and capacity."
         },
-        "scores": { "supplyChainImportance": 78, "scarcity": 72, "pricingPower": 64, "switchingCost": 70, "validationBarrier": 76, "marketUnderappreciation": 60 },
-        "recentUpdates": ["GDL is a low-visibility but critical material inside the MEA."]
+        "scores": {
+          "supplyChainImportance": 78,
+          "scarcity": 72,
+          "pricingPower": 64,
+          "switchingCost": 70,
+          "validationBarrier": 76,
+          "marketUnderappreciation": 60
+        },
+        "recentUpdates": [
+          "GDL is a low-visibility but critical material inside the MEA."
+        ]
       },
       {
         "id": "sgl",
@@ -170,8 +687,14 @@
         "ticker": "ETR: SGL",
         "region": "Germany",
         "businessRole": "GDL and carbon materials supplier",
-        "linkedNodeIds": ["sgl", "gdl"],
-        "sourceIds": ["sgl-gdl", "doe-fuel-cell-parts"],
+        "linkedNodeIds": [
+          "sgl",
+          "gdl"
+        ],
+        "sourceIds": [
+          "sgl-gdl",
+          "doe-fuel-cell-parts"
+        ],
         "isKeySupplier": true,
         "isBottleneck": false,
         "isZisuCandidate": false,
@@ -181,8 +704,17 @@
           "playerConcentration": "Medium-high.",
           "recentCatalyst": "Track growth in fuel-cell component shipments."
         },
-        "scores": { "supplyChainImportance": 76, "scarcity": 70, "pricingPower": 62, "switchingCost": 69, "validationBarrier": 75, "marketUnderappreciation": 60 },
-        "recentUpdates": ["Its GDL components are linked to the PEM fuel-cell supply chain."]
+        "scores": {
+          "supplyChainImportance": 76,
+          "scarcity": 70,
+          "pricingPower": 62,
+          "switchingCost": 69,
+          "validationBarrier": 75,
+          "marketUnderappreciation": 60
+        },
+        "recentUpdates": [
+          "Its GDL components are linked to the PEM fuel-cell supply chain."
+        ]
       },
       {
         "id": "hexagon",
@@ -190,8 +722,14 @@
         "ticker": "OSL: HPUR",
         "region": "Norway",
         "businessRole": "Type IV high-pressure hydrogen tanks and systems",
-        "linkedNodeIds": ["hexagon", "tank"],
-        "sourceIds": ["hexagon-purus", "doe-hydrogen-storage"],
+        "linkedNodeIds": [
+          "hexagon",
+          "tank"
+        ],
+        "sourceIds": [
+          "hexagon-purus",
+          "doe-hydrogen-storage"
+        ],
         "isKeySupplier": true,
         "isBottleneck": false,
         "isZisuCandidate": false,
@@ -201,8 +739,17 @@
           "playerConcentration": "Medium.",
           "recentCatalyst": "Track hydrogen tank orders and commercial vehicle platform partnerships."
         },
-        "scores": { "supplyChainImportance": 76, "scarcity": 68, "pricingPower": 61, "switchingCost": 68, "validationBarrier": 72, "marketUnderappreciation": 62 },
-        "recentUpdates": ["Tank demand is closely tied to hydrogen fuel-cell commercial vehicle penetration."]
+        "scores": {
+          "supplyChainImportance": 76,
+          "scarcity": 68,
+          "pricingPower": 61,
+          "switchingCost": 68,
+          "validationBarrier": 72,
+          "marketUnderappreciation": 62
+        },
+        "recentUpdates": [
+          "Tank demand is closely tied to hydrogen fuel-cell commercial vehicle penetration."
+        ]
       },
       {
         "id": "toyota",
@@ -210,8 +757,13 @@
         "ticker": "TYO: 7203",
         "region": "Japan",
         "businessRole": "Fuel-cell vehicle, system, and technology roadmap leader",
-        "linkedNodeIds": ["toyota", "vehicle"],
-        "sourceIds": ["doe-fuel-cell-parts"],
+        "linkedNodeIds": [
+          "toyota",
+          "vehicle"
+        ],
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ],
         "isKeySupplier": false,
         "isBottleneck": false,
         "isZisuCandidate": false,
@@ -221,8 +773,17 @@
           "playerConcentration": "Medium.",
           "recentCatalyst": "Track hydrogen models, commercial vehicle partnerships, and stack supply programs."
         },
-        "scores": { "supplyChainImportance": 82, "scarcity": 58, "pricingPower": 70, "switchingCost": 65, "validationBarrier": 88, "marketUnderappreciation": 45 },
-        "recentUpdates": ["Toyota is an important fuel-cell vehicle technology sponsor, but not a typical hidden bottleneck player."]
+        "scores": {
+          "supplyChainImportance": 82,
+          "scarcity": 58,
+          "pricingPower": 70,
+          "switchingCost": 65,
+          "validationBarrier": 88,
+          "marketUnderappreciation": 45
+        },
+        "recentUpdates": [
+          "Toyota is an important fuel-cell vehicle technology sponsor, but not a typical hidden bottleneck player."
+        ]
       },
       {
         "id": "ballard",
@@ -230,8 +791,13 @@
         "ticker": "NASDAQ: BLDP",
         "region": "Canada",
         "businessRole": "Fuel-cell stack and system supplier",
-        "linkedNodeIds": ["ballard", "stack"],
-        "sourceIds": ["doe-fuel-cell-parts"],
+        "linkedNodeIds": [
+          "ballard",
+          "stack"
+        ],
+        "sourceIds": [
+          "doe-fuel-cell-parts"
+        ],
         "isKeySupplier": true,
         "isBottleneck": false,
         "isZisuCandidate": false,
@@ -241,8 +807,17 @@
           "playerConcentration": "Medium.",
           "recentCatalyst": "Track orders, gross margin, capacity utilization, and commercial vehicle programs."
         },
-        "scores": { "supplyChainImportance": 79, "scarcity": 60, "pricingPower": 58, "switchingCost": 65, "validationBarrier": 80, "marketUnderappreciation": 52 },
-        "recentUpdates": ["System-layer players are more visible to the market, so their hidden bottleneck profile is weaker than upstream material nodes."]
+        "scores": {
+          "supplyChainImportance": 79,
+          "scarcity": 60,
+          "pricingPower": 58,
+          "switchingCost": 65,
+          "validationBarrier": 80,
+          "marketUnderappreciation": 52
+        },
+        "recentUpdates": [
+          "System-layer players are more visible to the market, so their hidden bottleneck profile is weaker than upstream material nodes."
+        ]
       }
     ],
     "updateEvents": [
@@ -257,7 +832,9 @@
         "summary": "Verify whether Johnson Matthey's catalyst, CCM, and MEA activities are gaining automotive customer validation.",
         "sourceUrl": null,
         "sourceNote": "Official materials / investor materials",
-        "sourceIds": ["jm-fuel-cell-tech"],
+        "sourceIds": [
+          "jm-fuel-cell-tech"
+        ],
         "submittedBy": "ai",
         "reviewDecision": null,
         "reviewedAt": null
@@ -273,7 +850,9 @@
         "summary": "Track new hydrogen storage orders, capacity utilization, and commercial vehicle customers.",
         "sourceUrl": null,
         "sourceNote": "Company announcements / financial reports",
-        "sourceIds": ["forvia-hydrogen-storage"],
+        "sourceIds": [
+          "forvia-hydrogen-storage"
+        ],
         "submittedBy": "ai",
         "reviewDecision": null,
         "reviewedAt": null
@@ -283,30 +862,883 @@
   {
     "id": "ai-optics",
     "name": "AI Optical Module Industry",
-    "description": "Placeholder industry: trace AI data-center demand into optical modules, lasers, external light sources, and critical materials.",
-    "terminalDemand": "High-speed data-center interconnect demand driven by AI training and inference.",
-    "researchThesis": "Start from GPU cluster expansion and trace into optical modules, lasers, external light sources, and critical materials.",
+    "description": "Trace AI data-center demand into high-speed switching, optical modules, DSPs, silicon photonics, lasers, external light sources, packaging, and module manufacturing.",
+    "terminalDemand": "High-speed data-center interconnect demand driven by AI training and inference clusters.",
+    "researchThesis": "Start from AI cluster scale-out demand, then trace upstream to scarce optical interconnect nodes: high-speed switches, pluggable optical modules, PAM4 DSPs, silicon photonics, EML and laser devices, CPO external light sources, packaging, and high-yield module manufacturing.",
     "languagePolicy": {
       "primaryLanguage": "en",
-      "sourcePreference": "Use English official sources first. Add non-English primary sources only when they provide unique evidence."
+      "sourcePreference": "Prioritize English official sources, investor relations materials, product pages, filings, standards bodies, and company technical announcements."
     },
     "sources": [
-      { "id": "ai-optics-placeholder", "title": "Official sources to be added", "type": "placeholder", "url": null, "note": "Placeholder for English official filings, data-center equipment materials, and authoritative industry sources." }
+      {
+        "id": "nvidia-spectrum-x-photonics",
+        "title": "NVIDIA Spectrum-X Photonics announcement",
+        "type": "company_official",
+        "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
+        "note": "Official NVIDIA source for co-packaged optics networking switches for AI factories."
+      },
+      {
+        "id": "broadcom-cpo",
+        "title": "Broadcom co-packaged optics product overview",
+        "type": "company_official",
+        "url": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics",
+        "note": "Official Broadcom source describing CPO, DSP, switch ASIC, packaging and test, and pluggable laser source capabilities."
+      },
+      {
+        "id": "broadcom-bailly",
+        "title": "Broadcom Bailly 51.2-Tbps CPO Ethernet switch platform",
+        "type": "company_official",
+        "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-delivers-industrys-first-512-tbps-co-packaged-optics",
+        "note": "Official Broadcom investor release on CPO Ethernet switching for scalable AI systems."
+      },
+      {
+        "id": "marvell-pam4-dsp",
+        "title": "Marvell PAM4 optical DSPs",
+        "type": "company_official",
+        "url": "https://www.marvell.com/products/pam-dsp.html",
+        "note": "Official Marvell source for PAM4 DSPs used in AI data-center optical interconnects."
+      },
+      {
+        "id": "marvell-optical-dsp",
+        "title": "Marvell optical DSPs for AI infrastructure",
+        "type": "company_official",
+        "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
+        "note": "Official Marvell source positioning optical DSPs across AI network tiers."
+      },
+      {
+        "id": "coherent-datacenter",
+        "title": "Coherent data-center communications",
+        "type": "company_official",
+        "url": "https://www.coherent.com/datacenter-communications",
+        "note": "Official Coherent source for data-center optical communications products."
+      },
+      {
+        "id": "coherent-200g-eml",
+        "title": "Coherent 200G InP EML announcement",
+        "type": "company_official",
+        "url": "https://www.coherent.com/news/press-releases/coherent-introduces-200g-indium-phosphide-electro-absorption-modulated-lasers",
+        "note": "Official Coherent source for 200G InP EML devices used in 800G and 1.6T transceivers."
+      },
+      {
+        "id": "lumentum-eml",
+        "title": "Lumentum data-center EML products",
+        "type": "company_official",
+        "url": "https://www.lumentum.com/en/products/data-center/modulated-lasers/emls",
+        "note": "Official Lumentum source for modulated lasers used in data-center optical modules."
+      },
+      {
+        "id": "fabrinet-optical-components",
+        "title": "Fabrinet optical component manufacturing services",
+        "type": "company_official",
+        "url": "https://fabrinet.com/services/optical-components",
+        "note": "Official Fabrinet source for optical component manufacturing, packaging, and test capabilities."
+      },
+      {
+        "id": "eoptolink-800g",
+        "title": "Eoptolink 800G optical module products",
+        "type": "company_official",
+        "url": "https://eoptolink.com/product-solutions/800g",
+        "note": "Official Eoptolink source for 800G optical transceiver products."
+      },
+      {
+        "id": "innolight-home",
+        "title": "Innolight optical transceiver products",
+        "type": "company_official",
+        "url": "https://www.innolight.com/",
+        "note": "Official Innolight source for optical transceiver product positioning."
+      }
     ],
     "nodes": [
-      { "id": "ai-demand", "type": "terminal", "title": "AI Compute Demand", "summary": "Training / inference / data centers", "layer": "End market", "tags": ["demand surge"], "position": { "x": 60, "y": 240 } },
-      { "id": "gpu", "type": "chain", "title": "GPU Clusters", "summary": "Drives high-speed interconnect demand", "layer": "System", "tags": ["core compute"], "position": { "x": 310, "y": 240 } },
-      { "id": "optical", "type": "chain", "title": "Optical Modules", "summary": "High-speed data-center transmission", "layer": "Component", "tags": ["critical link"], "position": { "x": 560, "y": 240 } },
-      { "id": "laser", "type": "chain", "title": "Lasers", "summary": "Core device inside optical modules", "layer": "Component", "tags": ["bottleneck candidate"], "position": { "x": 810, "y": 160 } },
-      { "id": "source", "type": "zisu", "title": "External Light Source Players", "summary": "CPO-related node", "layer": "Company", "tags": ["hidden bottleneck"], "position": { "x": 810, "y": 340 } }
+      {
+        "id": "ai-demand",
+        "type": "terminal",
+        "title": "AI Compute Demand",
+        "summary": "Training, inference, and hyperscale AI data centers drive optical interconnect demand.",
+        "layer": "End market",
+        "tags": [
+          "AI factories",
+          "cluster scale-out"
+        ],
+        "position": {
+          "x": 40,
+          "y": 300
+        }
+      },
+      {
+        "id": "gpu-cluster",
+        "type": "chain",
+        "title": "GPU Clusters",
+        "summary": "Large accelerator clusters create east-west bandwidth pressure.",
+        "layer": "System",
+        "tags": [
+          "scale-out",
+          "high bandwidth"
+        ],
+        "position": {
+          "x": 270,
+          "y": 210
+        }
+      },
+      {
+        "id": "switching",
+        "type": "chain",
+        "title": "AI Networking Switches",
+        "summary": "Ethernet and InfiniBand switching determine cluster fabric bandwidth.",
+        "layer": "System",
+        "tags": [
+          "switch ASIC",
+          "fabric"
+        ],
+        "position": {
+          "x": 500,
+          "y": 210
+        }
+      },
+      {
+        "id": "optical-modules",
+        "type": "chain",
+        "title": "Pluggable Optical Modules",
+        "summary": "800G and 1.6T transceivers connect servers, switches, and racks.",
+        "layer": "Module",
+        "tags": [
+          "800G",
+          "1.6T"
+        ],
+        "position": {
+          "x": 730,
+          "y": 210
+        }
+      },
+      {
+        "id": "linear-optics",
+        "type": "chain",
+        "title": "Linear-drive Optics",
+        "summary": "Lower-power module architecture can reduce DSP content in short-reach links.",
+        "layer": "Module architecture",
+        "tags": [
+          "power reduction",
+          "short reach"
+        ],
+        "position": {
+          "x": 730,
+          "y": 390
+        }
+      },
+      {
+        "id": "dsp",
+        "type": "chain",
+        "title": "PAM4 Optical DSP",
+        "summary": "Signal-processing silicon for high-speed optical modules.",
+        "layer": "Semiconductor",
+        "tags": [
+          "scarce IP",
+          "validation barrier"
+        ],
+        "position": {
+          "x": 970,
+          "y": 90
+        }
+      },
+      {
+        "id": "silicon-photonics",
+        "type": "chain",
+        "title": "Silicon Photonics Engine",
+        "summary": "Integrated optical functions move closer to switch silicon for CPO architectures.",
+        "layer": "Photonics semiconductor",
+        "tags": [
+          "CPO",
+          "integration"
+        ],
+        "position": {
+          "x": 970,
+          "y": 230
+        }
+      },
+      {
+        "id": "laser",
+        "type": "chain",
+        "title": "EML / Laser Devices",
+        "summary": "InP EML and laser devices are critical optical-source components.",
+        "layer": "Optical device",
+        "tags": [
+          "InP",
+          "laser bottleneck"
+        ],
+        "position": {
+          "x": 970,
+          "y": 370
+        }
+      },
+      {
+        "id": "external-light-source",
+        "type": "chain",
+        "title": "External Light Source",
+        "summary": "CPO architecture can move lasers outside the switch package.",
+        "layer": "CPO subsystem",
+        "tags": [
+          "hidden bottleneck",
+          "CPO"
+        ],
+        "position": {
+          "x": 970,
+          "y": 520
+        }
+      },
+      {
+        "id": "packaging-test",
+        "type": "chain",
+        "title": "Optical Packaging & Test",
+        "summary": "High-yield assembly, alignment, burn-in, and test constrain scale.",
+        "layer": "Manufacturing",
+        "tags": [
+          "yield",
+          "qualification"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 370
+        }
+      },
+      {
+        "id": "fiber-connectors",
+        "type": "chain",
+        "title": "Fiber Attach / Connectors",
+        "summary": "Dense optical I/O requires precise fiber handling and connector reliability.",
+        "layer": "Manufacturing",
+        "tags": [
+          "density",
+          "reliability"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 520
+        }
+      },
+      {
+        "id": "nvidia",
+        "type": "company",
+        "title": "NVIDIA",
+        "summary": "AI networking systems and photonics roadmap.",
+        "layer": "Company",
+        "tags": [
+          "AI fabric",
+          "CPO sponsor"
+        ],
+        "position": {
+          "x": 500,
+          "y": 430
+        }
+      },
+      {
+        "id": "broadcom",
+        "type": "zisu",
+        "title": "Broadcom",
+        "summary": "Switch ASIC, CPO platform, DSP, and pluggable laser source.",
+        "layer": "Company",
+        "tags": [
+          "CPO platform",
+          "hidden bottleneck"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 70
+        }
+      },
+      {
+        "id": "marvell",
+        "type": "company",
+        "title": "Marvell",
+        "summary": "PAM4 optical DSP silicon for AI data-center interconnects.",
+        "layer": "Company",
+        "tags": [
+          "DSP leader"
+        ],
+        "position": {
+          "x": 1210,
+          "y": 210
+        }
+      },
+      {
+        "id": "coherent",
+        "type": "zisu",
+        "title": "Coherent",
+        "summary": "Datacenter optics, InP EML, lasers, and optical components.",
+        "layer": "Company",
+        "tags": [
+          "laser bottleneck",
+          "optics supplier"
+        ],
+        "position": {
+          "x": 1450,
+          "y": 240
+        }
+      },
+      {
+        "id": "lumentum",
+        "type": "zisu",
+        "title": "Lumentum",
+        "summary": "EML and modulated lasers for datacenter modules.",
+        "layer": "Company",
+        "tags": [
+          "laser supplier",
+          "hidden bottleneck"
+        ],
+        "position": {
+          "x": 1450,
+          "y": 370
+        }
+      },
+      {
+        "id": "fabrinet",
+        "type": "zisu",
+        "title": "Fabrinet",
+        "summary": "Optical manufacturing, packaging, and test services.",
+        "layer": "Company",
+        "tags": [
+          "manufacturing bottleneck",
+          "yield"
+        ],
+        "position": {
+          "x": 1450,
+          "y": 510
+        }
+      },
+      {
+        "id": "innolight",
+        "type": "company",
+        "title": "Innolight",
+        "summary": "High-speed optical transceiver module supplier.",
+        "layer": "Company",
+        "tags": [
+          "800G modules"
+        ],
+        "position": {
+          "x": 970,
+          "y": 690
+        }
+      },
+      {
+        "id": "eoptolink",
+        "type": "company",
+        "title": "Eoptolink",
+        "summary": "800G optical transceiver module supplier.",
+        "layer": "Company",
+        "tags": [
+          "800G modules"
+        ],
+        "position": {
+          "x": 730,
+          "y": 690
+        }
+      }
     ],
     "relationships": [
-      { "from": "ai-demand", "to": "gpu", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["ai-optics-placeholder"] },
-      { "from": "gpu", "to": "optical", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["ai-optics-placeholder"] },
-      { "from": "optical", "to": "laser", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["ai-optics-placeholder"] },
-      { "from": "optical", "to": "source", "relationshipType": "depends_on", "confidence": "medium", "sourceIds": ["ai-optics-placeholder"] }
+      {
+        "from": "ai-demand",
+        "to": "gpu-cluster",
+        "relationshipType": "drives",
+        "confidence": "high",
+        "sourceIds": [
+          "nvidia-spectrum-x-photonics"
+        ]
+      },
+      {
+        "from": "gpu-cluster",
+        "to": "switching",
+        "relationshipType": "depends_on",
+        "confidence": "high",
+        "sourceIds": [
+          "nvidia-spectrum-x-photonics"
+        ]
+      },
+      {
+        "from": "switching",
+        "to": "optical-modules",
+        "relationshipType": "depends_on",
+        "confidence": "high",
+        "sourceIds": [
+          "nvidia-spectrum-x-photonics",
+          "broadcom-bailly"
+        ]
+      },
+      {
+        "from": "optical-modules",
+        "to": "dsp",
+        "relationshipType": "depends_on",
+        "confidence": "high",
+        "sourceIds": [
+          "marvell-pam4-dsp",
+          "marvell-optical-dsp"
+        ]
+      },
+      {
+        "from": "optical-modules",
+        "to": "silicon-photonics",
+        "relationshipType": "evolves_to",
+        "confidence": "medium",
+        "sourceIds": [
+          "nvidia-spectrum-x-photonics",
+          "broadcom-cpo"
+        ]
+      },
+      {
+        "from": "optical-modules",
+        "to": "laser",
+        "relationshipType": "depends_on",
+        "confidence": "high",
+        "sourceIds": [
+          "coherent-200g-eml",
+          "lumentum-eml"
+        ]
+      },
+      {
+        "from": "optical-modules",
+        "to": "linear-optics",
+        "relationshipType": "alternative_architecture",
+        "confidence": "medium",
+        "sourceIds": [
+          "marvell-optical-dsp"
+        ]
+      },
+      {
+        "from": "silicon-photonics",
+        "to": "external-light-source",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "broadcom-cpo"
+        ]
+      },
+      {
+        "from": "optical-modules",
+        "to": "packaging-test",
+        "relationshipType": "depends_on",
+        "confidence": "high",
+        "sourceIds": [
+          "fabrinet-optical-components"
+        ]
+      },
+      {
+        "from": "external-light-source",
+        "to": "fiber-connectors",
+        "relationshipType": "depends_on",
+        "confidence": "medium",
+        "sourceIds": [
+          "broadcom-cpo"
+        ]
+      },
+      {
+        "from": "switching",
+        "to": "nvidia",
+        "relationshipType": "system_provider",
+        "confidence": "high",
+        "sourceIds": [
+          "nvidia-spectrum-x-photonics"
+        ]
+      },
+      {
+        "from": "switching",
+        "to": "broadcom",
+        "relationshipType": "supplies_platform",
+        "confidence": "high",
+        "sourceIds": [
+          "broadcom-cpo",
+          "broadcom-bailly"
+        ]
+      },
+      {
+        "from": "dsp",
+        "to": "marvell",
+        "relationshipType": "supplies",
+        "confidence": "high",
+        "sourceIds": [
+          "marvell-pam4-dsp",
+          "marvell-optical-dsp"
+        ]
+      },
+      {
+        "from": "silicon-photonics",
+        "to": "broadcom",
+        "relationshipType": "supplies_platform",
+        "confidence": "high",
+        "sourceIds": [
+          "broadcom-cpo",
+          "broadcom-bailly"
+        ]
+      },
+      {
+        "from": "laser",
+        "to": "coherent",
+        "relationshipType": "supplies",
+        "confidence": "high",
+        "sourceIds": [
+          "coherent-datacenter",
+          "coherent-200g-eml"
+        ]
+      },
+      {
+        "from": "laser",
+        "to": "lumentum",
+        "relationshipType": "supplies",
+        "confidence": "high",
+        "sourceIds": [
+          "lumentum-eml"
+        ]
+      },
+      {
+        "from": "packaging-test",
+        "to": "fabrinet",
+        "relationshipType": "manufactures",
+        "confidence": "high",
+        "sourceIds": [
+          "fabrinet-optical-components"
+        ]
+      },
+      {
+        "from": "optical-modules",
+        "to": "innolight",
+        "relationshipType": "supplies_modules",
+        "confidence": "medium",
+        "sourceIds": [
+          "innolight-home"
+        ]
+      },
+      {
+        "from": "optical-modules",
+        "to": "eoptolink",
+        "relationshipType": "supplies_modules",
+        "confidence": "medium",
+        "sourceIds": [
+          "eoptolink-800g"
+        ]
+      }
     ],
-    "companies": [],
-    "updateEvents": []
+    "companies": [
+      {
+        "id": "nvidia",
+        "name": "NVIDIA",
+        "ticker": "NASDAQ: NVDA",
+        "region": "United States",
+        "businessRole": "AI networking system provider and major demand shaper for CPO and silicon-photonics architectures",
+        "linkedNodeIds": [
+          "nvidia",
+          "switching",
+          "gpu-cluster"
+        ],
+        "sourceIds": [
+          "nvidia-spectrum-x-photonics"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": false,
+        "isZisuCandidate": false,
+        "signals": {
+          "importantSupplier": "Yes. NVIDIA is a demand shaper and system architecture sponsor for AI optical interconnect roadmaps.",
+          "bottleneckPosition": "Medium. NVIDIA is strategic, but the tighter upstream bottlenecks sit in switch silicon, optical engines, lasers, packaging, and module manufacturing.",
+          "playerConcentration": "High at the AI system level.",
+          "recentCatalyst": "Track Spectrum-X Photonics, CPO networking switches, AI factory scale-out, and networking roadmap disclosures."
+        },
+        "scores": {
+          "supplyChainImportance": 95,
+          "scarcity": 72,
+          "pricingPower": 90,
+          "switchingCost": 88,
+          "validationBarrier": 86,
+          "marketUnderappreciation": 35
+        },
+        "recentUpdates": [
+          "NVIDIA is mapped as a system-level AI networking demand shaper using English official investor materials.",
+          "Refresh with official networking, Spectrum-X, and CPO product announcements."
+        ]
+      },
+      {
+        "id": "broadcom",
+        "name": "Broadcom",
+        "ticker": "NASDAQ: AVGO",
+        "region": "United States",
+        "businessRole": "Switch ASIC, CPO platform, DSP, optical engine, and pluggable laser source supplier",
+        "linkedNodeIds": [
+          "broadcom",
+          "switching",
+          "silicon-photonics",
+          "external-light-source"
+        ],
+        "sourceIds": [
+          "broadcom-cpo",
+          "broadcom-bailly"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": true,
+        "isZisuCandidate": true,
+        "signals": {
+          "importantSupplier": "Yes. Broadcom links several scarce nodes: switch ASIC, CPO, DSP, optical engine integration, and laser-source architecture.",
+          "bottleneckPosition": "High. CPO qualification, platform integration, and switching silicon create a hard-to-replace position.",
+          "playerConcentration": "High in merchant switching and CPO platform capability.",
+          "recentCatalyst": "Track CPO platform adoption, Bailly-class switching, pluggable laser source demand, and hyperscaler qualification."
+        },
+        "scores": {
+          "supplyChainImportance": 96,
+          "scarcity": 90,
+          "pricingPower": 86,
+          "switchingCost": 88,
+          "validationBarrier": 92,
+          "marketUnderappreciation": 60
+        },
+        "recentUpdates": [
+          "Broadcom is mapped as a hidden bottleneck candidate because it spans switch ASICs, CPO, DSP, optical engines, and laser-source architecture.",
+          "Verify customer adoption, CPO ramps, and laser source architecture disclosures through official product and investor materials."
+        ]
+      },
+      {
+        "id": "marvell",
+        "name": "Marvell",
+        "ticker": "NASDAQ: MRVL",
+        "region": "United States",
+        "businessRole": "PAM4 optical DSP silicon supplier for high-speed optical modules",
+        "linkedNodeIds": [
+          "marvell",
+          "dsp",
+          "optical-modules"
+        ],
+        "sourceIds": [
+          "marvell-pam4-dsp",
+          "marvell-optical-dsp"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": true,
+        "isZisuCandidate": false,
+        "signals": {
+          "importantSupplier": "Yes. PAM4 DSPs are core semiconductors inside high-speed optical modules.",
+          "bottleneckPosition": "High. DSP validation, power, signal integrity, and customer qualification create switching costs.",
+          "playerConcentration": "Medium-high.",
+          "recentCatalyst": "Track AI infrastructure DSP product updates, 800G/1.6T transitions, and linear-drive optics commentary."
+        },
+        "scores": {
+          "supplyChainImportance": 90,
+          "scarcity": 84,
+          "pricingPower": 78,
+          "switchingCost": 82,
+          "validationBarrier": 88,
+          "marketUnderappreciation": 58
+        },
+        "recentUpdates": [
+          "Marvell is mapped as a key DSP supplier for high-speed AI optical interconnects.",
+          "Review official DSP and AI data-center solution pages for product transitions and architecture changes."
+        ]
+      },
+      {
+        "id": "coherent",
+        "name": "Coherent",
+        "ticker": "NASDAQ: COHR",
+        "region": "United States",
+        "businessRole": "Datacenter optics, InP EML, lasers, and optical component supplier",
+        "linkedNodeIds": [
+          "coherent",
+          "laser",
+          "optical-modules"
+        ],
+        "sourceIds": [
+          "coherent-datacenter",
+          "coherent-200g-eml"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": true,
+        "isZisuCandidate": true,
+        "signals": {
+          "importantSupplier": "Yes. Coherent supplies optical components and lasers tied to 800G and 1.6T module ramps.",
+          "bottleneckPosition": "High. InP EML device performance, yield, and qualification can constrain optical module supply.",
+          "playerConcentration": "Medium-high among qualified datacenter laser suppliers.",
+          "recentCatalyst": "Track 200G EML, InP capacity, datacenter optical communications, and AI module customer demand."
+        },
+        "scores": {
+          "supplyChainImportance": 88,
+          "scarcity": 84,
+          "pricingPower": 74,
+          "switchingCost": 81,
+          "validationBarrier": 87,
+          "marketUnderappreciation": 70
+        },
+        "recentUpdates": [
+          "Coherent is mapped as a hidden bottleneck candidate in laser and datacenter optical component supply.",
+          "Monitor official EML, datacenter communications, and capacity disclosures."
+        ]
+      },
+      {
+        "id": "lumentum",
+        "name": "Lumentum",
+        "ticker": "NASDAQ: LITE",
+        "region": "United States",
+        "businessRole": "EML and modulated laser supplier for data-center optical modules",
+        "linkedNodeIds": [
+          "lumentum",
+          "laser"
+        ],
+        "sourceIds": [
+          "lumentum-eml"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": true,
+        "isZisuCandidate": true,
+        "signals": {
+          "importantSupplier": "Yes. Modulated lasers are critical optical-source components for high-speed modules.",
+          "bottleneckPosition": "High where laser performance, yield, and qualification gate module ramps.",
+          "playerConcentration": "Medium-high.",
+          "recentCatalyst": "Track EML product updates, hyperscale qualification, AI datacenter demand, and laser capacity."
+        },
+        "scores": {
+          "supplyChainImportance": 84,
+          "scarcity": 80,
+          "pricingPower": 70,
+          "switchingCost": 78,
+          "validationBarrier": 84,
+          "marketUnderappreciation": 72
+        },
+        "recentUpdates": [
+          "Lumentum is mapped as a hidden bottleneck candidate for EML and modulated lasers.",
+          "Refresh with official EML product and investor disclosures."
+        ]
+      },
+      {
+        "id": "fabrinet",
+        "name": "Fabrinet",
+        "ticker": "NYSE: FN",
+        "region": "Thailand / Cayman Islands",
+        "businessRole": "Optical component manufacturing, packaging, alignment, and test services provider",
+        "linkedNodeIds": [
+          "fabrinet",
+          "packaging-test",
+          "fiber-connectors"
+        ],
+        "sourceIds": [
+          "fabrinet-optical-components"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": true,
+        "isZisuCandidate": true,
+        "signals": {
+          "importantSupplier": "Yes. Optical packaging, alignment, manufacturing, and test are necessary to convert components into qualified modules and subassemblies.",
+          "bottleneckPosition": "High. Yield, process know-how, precision alignment, and capacity create bottleneck risk.",
+          "playerConcentration": "Medium-high among scaled qualified manufacturing partners.",
+          "recentCatalyst": "Track optical manufacturing capacity, AI-related customer demand, yield commentary, and product mix."
+        },
+        "scores": {
+          "supplyChainImportance": 86,
+          "scarcity": 78,
+          "pricingPower": 72,
+          "switchingCost": 82,
+          "validationBarrier": 85,
+          "marketUnderappreciation": 76
+        },
+        "recentUpdates": [
+          "Fabrinet is mapped as a hidden bottleneck candidate in optical packaging, manufacturing, and test.",
+          "Monitor official optical component services, capacity, and AI-related demand disclosures."
+        ]
+      },
+      {
+        "id": "innolight",
+        "name": "Innolight",
+        "ticker": "Private / China",
+        "region": "China",
+        "businessRole": "High-speed optical transceiver module supplier",
+        "linkedNodeIds": [
+          "innolight",
+          "optical-modules"
+        ],
+        "sourceIds": [
+          "innolight-home"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": false,
+        "isZisuCandidate": false,
+        "signals": {
+          "importantSupplier": "Yes. High-speed module vendors are direct suppliers into AI datacenter optical interconnect demand.",
+          "bottleneckPosition": "Medium. Module vendors matter, but upstream lasers, DSPs, CPO platforms, and packaging may be tighter chokepoints.",
+          "playerConcentration": "Medium.",
+          "recentCatalyst": "Track 800G and 1.6T module portfolio changes and customer qualification evidence."
+        },
+        "scores": {
+          "supplyChainImportance": 80,
+          "scarcity": 64,
+          "pricingPower": 60,
+          "switchingCost": 66,
+          "validationBarrier": 72,
+          "marketUnderappreciation": 58
+        },
+        "recentUpdates": [
+          "Innolight is mapped as a high-speed optical module supplier for AI datacenter demand.",
+          "Refresh with official product and portfolio updates."
+        ]
+      },
+      {
+        "id": "eoptolink",
+        "name": "Eoptolink",
+        "ticker": "SHE: 300502",
+        "region": "China",
+        "businessRole": "800G optical transceiver module supplier",
+        "linkedNodeIds": [
+          "eoptolink",
+          "optical-modules"
+        ],
+        "sourceIds": [
+          "eoptolink-800g"
+        ],
+        "isKeySupplier": true,
+        "isBottleneck": false,
+        "isZisuCandidate": false,
+        "signals": {
+          "importantSupplier": "Yes. Eoptolink participates in high-speed optical module supply for AI datacenter interconnects.",
+          "bottleneckPosition": "Medium. Important module exposure, with upstream device and semiconductor nodes likely more bottleneck-like.",
+          "playerConcentration": "Medium.",
+          "recentCatalyst": "Track 800G product updates, 1.6T transitions, and AI datacenter customer evidence."
+        },
+        "scores": {
+          "supplyChainImportance": 78,
+          "scarcity": 62,
+          "pricingPower": 58,
+          "switchingCost": 65,
+          "validationBarrier": 70,
+          "marketUnderappreciation": 62
+        },
+        "recentUpdates": [
+          "Eoptolink is mapped as an 800G optical transceiver supplier.",
+          "Refresh with official 800G and next-generation product disclosures."
+        ]
+      }
+    ],
+    "updateEvents": [
+      {
+        "id": "ai-optics-broadcom-cpo-review",
+        "sourceType": "ai_scan",
+        "status": "pending",
+        "industryId": "ai-optics",
+        "companyId": "broadcom",
+        "nodeId": "external-light-source",
+        "impactType": "bottleneck_judgement",
+        "summary": "Verify Broadcom CPO platform adoption and whether pluggable laser source demand becomes a separate bottleneck node.",
+        "sourceUrl": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics",
+        "sourceNote": "Official Broadcom product material",
+        "sourceIds": [
+          "broadcom-cpo"
+        ],
+        "submittedBy": "ai",
+        "reviewDecision": null,
+        "reviewedAt": null,
+        "analysis": {
+          "reviewPriority": "high",
+          "matchedKeywords": [
+            "CPO",
+            "laser",
+            "switch ASIC"
+          ],
+          "affectedTarget": "company:broadcom",
+          "analystSummary": "Broadcom spans multiple high-friction AI optical nodes. Review whether CPO and external light source evidence strengthens its bottleneck classification.",
+          "recommendedChecks": [
+            "Confirm exact product capability and customer adoption evidence.",
+            "Check whether laser-source architecture should be tracked as a separate node.",
+            "Only approve if official source evidence supports a database update."
+          ],
+          "suggestedDatabaseAction": "If material, update Broadcom recentUpdates or the external-light-source node thesis."
+        }
+      }
+    ]
   }
 ]

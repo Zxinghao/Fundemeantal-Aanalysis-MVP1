@@ -1,9 +1,5 @@
 let industries = [];
 
-const supplementalIndustryFiles = [
-  "data/industries/ai-optics.json"
-];
-
 const defaultPendingUpdates = [
   {
     company: "Johnson Matthey",
@@ -107,38 +103,7 @@ async function loadIndustries() {
     throw new Error("Industry data is empty or malformed.");
   }
 
-  const supplementalIndustries = await loadSupplementalIndustries();
-  return mergeIndustries(data, supplementalIndustries);
-}
-
-async function loadSupplementalIndustries() {
-  const loaded = await Promise.all(
-    supplementalIndustryFiles.map((url) => fetchJsonObjectIfAvailable(url))
-  );
-
-  return loaded.filter(Boolean);
-}
-
-async function fetchJsonObjectIfAvailable(url) {
-  try {
-    const response = await fetch(url, { cache: "no-store" });
-    if (!response.ok) return null;
-
-    const data = await response.json();
-    return data && typeof data === "object" && !Array.isArray(data) ? data : null;
-  } catch {
-    return null;
-  }
-}
-
-function mergeIndustries(baseIndustries, supplementalIndustries) {
-  const byId = new Map(baseIndustries.map((industry) => [industry.id, industry]));
-
-  supplementalIndustries.forEach((industry) => {
-    byId.set(industry.id, industry);
-  });
-
-  return Array.from(byId.values());
+  return data;
 }
 
 async function loadGeneratedEvents() {

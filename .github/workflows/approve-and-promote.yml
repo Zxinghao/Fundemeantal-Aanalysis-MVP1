@@ -34,21 +34,14 @@ jobs:
         run: |
           printf '%s\n' "$REVIEW_PAYLOAD" > /tmp/review-decisions.json
 
-      - name: Apply approved review decisions
+      - name: Apply review decisions
         run: node scripts/apply-review-decisions.mjs /tmp/review-decisions.json
 
       - name: Promote reviewed data
         run: node scripts/promote-reviewed-data.mjs "${{ inputs.confirmation }}"
 
-      - name: Commit promoted database
+      - name: Commit promoted database and review state
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Approve and promote reviewed data"
-          file_pattern: "data/industries.json data/industries.reviewed.json data/industries.previous.json"
-
-      - name: Publish current site
-        shell: bash
-        run: |
-          git fetch origin gh-pages || true
-          git checkout -B gh-pages
-          git push origin gh-pages --force
+          file_pattern: "data/industries.json data/industries.reviewed.json data/industries.previous.json data/generated-update-events.json"

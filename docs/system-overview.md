@@ -149,11 +149,11 @@ Purpose:
 - Validate review states.
 - Require all six score dimensions to remain numeric and within 0-100.
 
-The `Validate Research Data` GitHub Action also performs JavaScript syntax checks.
+The `Validate Research Data` GitHub Action also performs JavaScript syntax checks and research-pipeline regression tests.
 
 ### Publishing
 
-Publication workflows mirror current `main` to `gh-pages` and then explicitly request a GitHub Pages build. This avoids treating a successful branch push as proof that the public site was actually rebuilt.
+Publishing has one owner: `Publish Static Site`. Any workflow that changes persistent repository state commits to `main`; the resulting `main` push triggers `Publish Static Site`, which mirrors current `main` to `gh-pages` and explicitly requests a GitHub Pages build. Source-scan and promotion workflows do not publish independently, avoiding duplicate force-pushes and competing Pages builds.
 
 ## Usage Flow
 
@@ -164,7 +164,7 @@ Publication workflows mirror current `main` to `gh-pages` and then explicitly re
 5. `Apply Review Decisions` persists event state and creates `industries.reviewed.json`.
 6. The reviewed candidate database is inspected before promotion.
 7. `Promote Reviewed Data` is run only after explicit confirmation.
-8. Canonical `industries.json` is updated and the public Pages build is requested.
+8. Canonical `industries.json` is updated; its commit to `main` triggers the single publishing workflow and a real Pages build.
 
 ## Current Limits
 

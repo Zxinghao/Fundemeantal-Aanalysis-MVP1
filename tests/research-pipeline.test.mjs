@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 
 import { cadenceDue, eventFromSource, mergeEventStore } from "../scripts/web-scan.mjs";
 import { applyEventReviewStatuses, applyReviews } from "../scripts/apply-review-decisions.mjs";
-import { computeCompositeScore, classifyComposite } from "../scripts/research-model.mjs";
+import { computeCompositeScore, classifyComposite, validateResearchPacket } from "../scripts/research-model.mjs";
 
 const rubric = {
   dimensions: {
@@ -276,4 +276,99 @@ test("approved draft research packet does not silently become an official compan
   applyReviews(industries, reviewExport);
   assert.equal(industries[0].companies[0].recentUpdates.length, 0);
   assert.deepEqual(industries[0].updateEvents[0].patchApplied, []);
+});
+
+test("executable patch is invalid unless its claim is explicitly supported", () => {
+  const errors = validateResearchPacket({
+    schemaVersion: "1.0",
+    evidence: [{ sourceId: "source", evidenceLevel: "A", observation: "Verified disclosure." }],
+    claim: {
+      status: "unverified",
+      target: "company:forvia",
+      statement: "Potential qualification change.",
+      confidence: "medium"
+    },
+    proposedPatch: {
+      status: "ready",
+      executable: true,
+      operations: [{
+        op: "replace",
+        path: "companies.forvia.scores.validationBarrier",
+        value: 86,
+        requiresHumanInput: false
+      }]
+    }
+  });
+
+  assert.ok(errors.some((error) => error.includes("claim.status=supported")));
+});
+
+test("mixed valid and invalid operations reject the entire research patch atomically", () => {
+  const industries = [{
+    id: "fuel-cell",
+    name: "Fuel Cell",
+    nodes: [{ id: "forvia" }],
+    relationships: [],
+    sources: [],
+    companies: [{
+      id: "forvia",
+      name: "FORVIA",
+      scores: { validationBarrier: 82 },
+      recentUpdates: [],
+      signals: {}
+    }],
+    updateEvents: []
+  }];
+
+  const reviewExport = {
+    exportedAt: "2026-09-08T12:00:00.000Z",
+    reviewedItems: [{
+      id: "scan-atomic",
+      industryId: "fuel-cell",
+      companyId: "forvia",
+      company: "FORVIA",
+      impact: "bottleneck_judgement",
+      source: "https://example.com/source",
+      sourceIds: [],
+      summary: "Qualification evidence review.",
+      reviewStatus: "approved",
+      researchPacket: {
+        schemaVersion: "1.0",
+        evidence: [{ sourceId: "source", evidenceLevel: "A", observation: "Verified disclosure." }],
+        claim: {
+          status: "supported",
+          target: "company:forvia",
+          statement: "Qualification evidence supports a score review.",
+          confidence: "high"
+        },
+        proposedPatch: {
+          status: "ready",
+          executable: true,
+          operations: [
+            {
+              op: "replace",
+              path: "companies.forvia.scores.validationBarrier",
+              value: 86,
+              requiresHumanInput: false
+            },
+            {
+              op: "replace",
+              path: "companies.forvia.scores.notARealDimension",
+              value: 99,
+              requiresHumanInput: false
+            }
+          ]
+        }
+      }
+    }]
+  };
+
+  applyReviews(industries, reviewExport);
+  assert.equal(industries[0].companies[0].scores.validationBarrier, 82);
+  assert.equal(industries[0].companies[0].scores.notARealDimension, undefined);
+  assert.deepEqual(industries[0].updateEvents[0].patchApplied, []);
+  assert.deepEqual(industries[0].updateEvents[0].patchSkipped, [
+    "companies.forvia.scores.validationBarrier",
+    "companies.forvia.scores.notARealDimension"
+  ]);
 });

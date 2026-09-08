@@ -145,7 +145,11 @@
         }
 
         if (!card.querySelector(".semantic-candidate-panel")) {
-          appendSemanticCandidatePanel(card, event?.researchPacket?.semanticCandidate);
+          appendSemanticCandidatePanel(card, event?.researchPacket?.semanticCandidate, "Deterministic Semantic Candidate");
+        }
+
+        if (!card.querySelector(".llm-candidate-panel")) {
+          appendSemanticCandidatePanel(card, event?.researchPacket?.llmCandidate, "LLM Research Candidate", "llm-candidate-panel");
         }
       });
     } finally {
@@ -176,15 +180,16 @@
     else card.querySelector("p")?.insertAdjacentElement("afterend", panel);
   }
 
-  function appendSemanticCandidatePanel(card, candidate) {
+  function appendSemanticCandidatePanel(card, candidate, label = "Semantic Candidate", extraClass = "") {
     if (!candidate) return;
 
     const panel = document.createElement("div");
-    panel.className = "research-stage semantic-candidate-panel";
+    panel.className = `research-stage semantic-candidate-panel ${extraClass}`.trim();
 
     const title = document.createElement("span");
     const generator = candidate.generator?.type || "unknown";
-    title.textContent = `Semantic Candidate · ${candidate.status || "candidate"} · ${generator}`;
+    const model = candidate.generator?.model ? ` · ${candidate.generator.model}` : "";
+    title.textContent = `${label} · ${candidate.status || "candidate"} · ${generator}${model}`;
     panel.appendChild(title);
 
     const warning = document.createElement("p");
@@ -221,10 +226,11 @@
       : "No score impact has been assessed from this candidate.";
     panel.appendChild(scoreImpact);
 
-    const changePanel = card.querySelector(".change-evidence-panel");
-    const researchPacket = card.querySelector(".research-packet");
-    if (changePanel) changePanel.insertAdjacentElement("afterend", panel);
-    else if (researchPacket) researchPacket.insertAdjacentElement("afterend", panel);
+    const anchor = card.querySelector(".llm-candidate-panel")
+      || card.querySelector(".semantic-candidate-panel")
+      || card.querySelector(".change-evidence-panel")
+      || card.querySelector(".research-packet");
+    if (anchor) anchor.insertAdjacentElement("afterend", panel);
     else card.querySelector("p")?.insertAdjacentElement("afterend", panel);
   }
 

@@ -1,0 +1,42 @@
+name: Foundation Frontend Cleanup
+
+on:
+  push:
+    branches:
+      - foundation/p0-data-pipeline
+    paths:
+      - "scripts/cleanup-supplemental-loader.mjs"
+      - ".github/workflows/foundation-cleanup.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: foundation/p0-data-pipeline
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Remove obsolete supplemental loader
+        run: node scripts/cleanup-supplemental-loader.mjs
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js
+          if git diff --cached --quiet; then
+            echo "No cleanup changes to commit."
+          else
+            git commit -m "Use canonical industry data directly"
+            git push origin HEAD:foundation/p0-data-pipeline
+          fi

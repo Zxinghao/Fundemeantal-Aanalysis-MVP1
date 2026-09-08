@@ -29,6 +29,10 @@ jobs:
           node --check scripts/apply-review-decisions.mjs
           node --check scripts/promote-reviewed-data.mjs
           node --check scripts/validate-data.mjs
+          node --check tests/research-pipeline.test.mjs
+
+      - name: Run research pipeline regression tests
+        run: node --test tests/research-pipeline.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

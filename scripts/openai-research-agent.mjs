@@ -18,6 +18,10 @@ const scoreDimensions = [
   "marketUnderappreciation"
 ];
 
+const nullableString = {
+  anyOf: [{ type: "string" }, { type: "null" }]
+};
+
 const candidateSchema = {
   type: "object",
   additionalProperties: false,
@@ -33,8 +37,8 @@ const candidateSchema = {
         properties: {
           type: { type: "string" },
           statement: { type: "string" },
-          beforeExcerpt: { type: ["string", "null"] },
-          afterExcerpt: { type: ["string", "null"] }
+          beforeExcerpt: nullableString,
+          afterExcerpt: nullableString
         }
       }
     },
@@ -55,7 +59,6 @@ const candidateSchema = {
       properties: {
         candidateDimensions: {
           type: "array",
-          uniqueItems: true,
           items: { type: "string", enum: scoreDimensions }
         },
         reason: { type: "string" }
@@ -129,6 +132,7 @@ export function validateAgentCandidate(candidate, expectedTarget = null) {
 
 function stampCandidate(raw, event, model) {
   const deterministic = event.researchPacket?.semanticCandidate || {};
+  const candidateDimensions = [...new Set(raw.scoreImpact?.candidateDimensions || [])];
   return {
     schemaVersion: "1.0",
     status: "candidate",
@@ -158,8 +162,8 @@ function stampCandidate(raw, event, model) {
       requiresPrimarySourceVerification: true
     },
     scoreImpact: {
-      status: (raw.scoreImpact?.candidateDimensions || []).length ? "review_required" : "not_assessed",
-      candidateDimensions: raw.scoreImpact?.candidateDimensions || [],
+      status: candidateDimensions.length ? "review_required" : "not_assessed",
+      candidateDimensions,
       direction: null,
       proposedScores: {},
       reason: raw.scoreImpact?.reason || "No score change is proposed before human verification."
@@ -258,7 +262,9 @@ if (cliEntry && pathToFileURL(cliEntry).href === import.meta.url) {
       }
       console.log(`LLM research enrichment added ${result.enriched} candidate(s); ${result.failures.length} failure(s).`);
       for (const failure of result.failures) console.warn(`${failure.eventId}: ${failure.error}`);
-      if (result.failures.length) process.exitCode = 1;
+      // LLM enrichment is optional. API/model failures must not block the deterministic
+      // scanner from committing new evidence or baselines. Unsafe/invalid candidates are
+      // never attached, and stored candidates are checked by validate-llm-candidates.mjs.
     })
     .catch((error) => {
       console.error(error);

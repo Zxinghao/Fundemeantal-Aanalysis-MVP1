@@ -2,15 +2,53 @@
 
 ## Purpose
 
-The product should distinguish observed evidence from an investment or supply-chain claim, and distinguish both of those from the database mutation that would follow if the claim is accepted.
+The product must distinguish four different things:
 
-The core review unit is therefore:
+```text
+Observed source change
+  -> Candidate evidence
+  -> Research claim
+  -> Proposed database mutation
+```
+
+Those stages are deliberately separate. A page change is not a thesis change, a changed excerpt is not automatically a supported claim, and an approved claim does not mutate research data unless its explicit patch passes validation.
+
+The review unit is therefore:
 
 ```text
 Evidence -> Claim -> Proposed Patch -> Human Review -> Reviewed Candidate -> Promotion
 ```
 
-A source-page change is not itself a thesis change.
+## Source Change Detection
+
+The scanner keeps a full normalized page fingerprint to answer a narrow question: **did the fetched page representation change?**
+
+A first successful fetch establishes a baseline. It does not create a candidate event because there is no previous successful version to compare against.
+
+The full-page fingerprint is intentionally separate from the disclosure-diff layer. A changed fingerprint may come from navigation, timestamps, metadata, dynamic page elements, or a genuinely material disclosure.
+
+## Watched-Context Diff v1
+
+`scripts/disclosure-diff.mjs` stores a bounded snapshot of text windows surrounding configured `watchFor` keywords. The design avoids storing full copies of third-party web pages in the repository.
+
+Each cached segment contains:
+
+- a deterministic hash;
+- a short bounded excerpt;
+- the watch keyword(s) that selected the excerpt.
+
+A snapshot stores at most 30 excerpts, each capped at 220 characters.
+
+When a later full-page fingerprint changes and both old and new watched-context snapshots are available, the scanner computes:
+
+- added watched-context excerpts;
+- removed watched-context excerpts;
+- total added and removed counts;
+- method identifier `watched-context-diff-v1`.
+
+If an old cache entry has no watched-context snapshot, the scanner uses `baseline_missing`. It may show current relevant excerpts, but it must not label them as additions because there is no comparable prior context snapshot.
+
+A watched-context diff is still deterministic text comparison, not semantic analysis. It narrows the human review target but may capture nearby boilerplate, reordered text, or dynamic content.
 
 ## Structured Research Packet
 
@@ -18,48 +56,55 @@ Scanner events may include a `researchPacket` with schema version `1.0`.
 
 ### Evidence
 
-Evidence records what was actually observed from a source. The deterministic scanner currently records:
+Evidence records what was actually observed from a source:
 
 - source ID and source type;
 - source URL and page title;
 - observation time;
 - evidence level;
 - matched watch keywords;
-- a factual observation that the page fingerprint changed;
-- an explicit limitation that the scanner does not identify the exact changed sentence.
+- a factual observation about the page/change state;
+- optional watched-context `changeSet`;
+- an explicit limitation describing what the deterministic scanner cannot infer.
 
-Evidence levels are intentionally coarse:
+Evidence levels are coarse source-quality labels:
 
 - `A`: company official source, government source, or exchange filing;
 - `B`: industry media or general media;
 - `C`: placeholder or weak source.
 
-Evidence level is a source-quality label, not a claim-confidence score.
+Evidence level is not claim confidence.
 
 ### Claim
 
-A claim is a statement about what the evidence may imply for the supply-chain thesis.
+A claim is a statement about what evidence may imply for the supply-chain thesis.
 
-The deterministic scanner creates only an `unverified` claim. It must not infer that an order, capacity expansion, qualification, customer win, pricing change, or bottleneck change occurred merely because a page fingerprint changed.
+The deterministic scanner always creates an `unverified` claim. Even when the watched-context diff isolates a plausible disclosure, the scanner must not assert an order, capacity expansion, qualification, customer win, pricing change, or bottleneck change without explicit verification.
 
-A future semantic research agent may promote a claim to `supported` only when it identifies the exact disclosure and can explain why the evidence supports the statement.
+A claim can become `supported` only when the reviewer has enough source context to state precisely what occurred and why it matters.
 
 ### Proposed Patch
 
-The patch is the explicit database mutation implied by an accepted claim.
+The patch is the explicit database mutation implied by a supported claim.
 
-Scanner-generated packets use a non-executable `draft` placeholder. They cannot silently modify official research data.
+Scanner-generated packets use a non-executable `draft` placeholder. They cannot silently modify reviewed research data.
 
-The patch engine currently allows only whitelisted operations:
+The patch engine allows only a narrow whitelist:
 
 - append a string to `companies.<companyId>.recentUpdates`;
-- replace one of the approved `companies.<companyId>.signals.*` fields;
+- replace an approved `companies.<companyId>.signals.*` field;
 - replace one of the six `companies.<companyId>.scores.*` dimensions with a value from 0 to 100;
+- replace `companies.<companyId>.scoreEvidence.<dimension>` with a valid evidence record;
 - replace `nodes.<nodeId>.summary`.
 
-An executable patch must have `status: "ready"`, `executable: true`, and must not require human input.
+An executable patch requires:
 
-Approval of a draft research packet records the review decision but does not turn a generic source-change observation into an official company note.
+- `claim.status: "supported"`;
+- `proposedPatch.status: "ready"`;
+- `proposedPatch.executable: true`;
+- no operation still marked as requiring human input.
+
+Patch application is atomic. Every operation is preflighted before the first mutation. If any operation fails, the entire patch is skipped.
 
 ## Hidden Bottleneck Composite
 
@@ -87,26 +132,78 @@ The composite is the weighted arithmetic mean of those six inputs.
 
 These thresholds are ranking aids, not investment recommendations.
 
-## Critical Limitation: Current Scores Are Provisional
+## scoreEvidence
 
-The v1.0 formula is now explicit and deterministic, but the existing component inputs were created before a per-dimension evidence schema existed.
+The formula can be deterministic while the inputs remain weak. A component score becomes evidence-backed only when the company has a valid record at:
 
-Therefore the current composite score must be treated as **provisional**.
+```text
+company.scoreEvidence.<dimension>
+```
 
-The next quality milestone is `scoreEvidence` coverage for each material dimension. A score should become evidence-backed only when it has:
+A record contains:
 
-1. a written rationale;
-2. one or more linked source IDs;
-3. an evidence date;
-4. a reviewer or model provenance field;
-5. enough specific evidence to justify the numeric band.
+- `score`: the exact numeric component value it supports;
+- `rationale`: why the evidence supports that score/band;
+- `sourceIds`: one or more known source IDs;
+- `evidenceDate`: `YYYY-MM-DD`;
+- `provenance`: how the record entered the reviewed dataset.
 
-Until then, the arithmetic is auditable but the inputs are not fully auditable.
+Supported provenance types:
+
+- `reviewed_research_packet`;
+- `manual_research`;
+- `legacy_backfill`.
+
+For `reviewed_research_packet`, provenance must also identify the source review `eventId` and `claimId`.
+
+### Score/evidence coupling rule
+
+A patch that changes:
+
+```text
+companies.<id>.scores.<dimension>
+```
+
+must include, in the same atomic patch:
+
+```text
+companies.<id>.scoreEvidence.<dimension>
+```
+
+and the evidence record's `score` must equal the new score.
+
+This prevents a reviewer from changing a numeric ranking input without simultaneously recording the reason, sources, date, and provenance.
+
+Evidence may be backfilled without changing a legacy score, but its `score` must match the current component value exactly.
+
+## Legacy Scores Remain Provisional
+
+The existing company scores predate the `scoreEvidence` schema. The system deliberately does not fabricate retrospective rationales or sources merely to make coverage look complete.
+
+The UI therefore displays evidence coverage explicitly. A missing record is an evidence gap, not an implicit validation.
+
+A useful migration strategy is to backfill the highest-ranked or most decision-relevant companies first rather than filling every dimension mechanically.
 
 ## Manual Flags Versus Rubric Classification
 
-The existing fields `isKeySupplier`, `isBottleneck`, and `isZisuCandidate` are manually curated research labels.
+The fields `isKeySupplier`, `isBottleneck`, and `isZisuCandidate` are manually curated research labels.
 
-They are intentionally not rewritten automatically by rubric v1.0. The UI labels these as manual flags, while the composite shows a separate provisional rubric classification.
+They remain separate from the provisional rubric classification. The quantitative composite does not automatically rewrite manual research conclusions until its component inputs have sufficient evidence coverage.
 
-This separation prevents a new formula from silently changing an existing research conclusion before the underlying score evidence has been reviewed.
+## Current Boundary
+
+The platform can now answer more precisely:
+
+- whether a monitored page changed;
+- whether keyword-focused nearby text changed;
+- which short excerpts were added or removed;
+- whether a reviewed score has dimension-specific evidence coverage.
+
+It still cannot reliably answer, without human or future semantic analysis:
+
+- what the changed disclosure means in business terms;
+- whether the disclosure is incremental or already known;
+- whether it changes the supply-chain thesis;
+- which exact numeric score change is justified.
+
+The next research milestone is semantic disclosure review over the surfaced excerpts plus systematic score-evidence backfill for the most important companies.

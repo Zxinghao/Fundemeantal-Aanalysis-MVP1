@@ -24,6 +24,7 @@ jobs:
         run: |
           node --check app.js
           node --check node-details.js
+          node --check company-flags.js
           node --check review-export.js
           node --check scripts/research-model.mjs
           node --check scripts/web-scan.mjs

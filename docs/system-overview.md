@@ -17,14 +17,17 @@ Files:
 - `styles.css`
 - `apple-style.css`
 - `node-details.js`
+- `company-flags.js`
+- `research-model.css`
 
 Functions:
 
 - Read the single canonical `data/industries.json` database.
+- Read the versioned `data/scoring-rubric.json` methodology.
 - Render industry nodes and relationship edges.
-- Open a company detail dialog when a company node is clicked.
-- Open a supply-chain node detail view for non-company nodes.
-- Display linked evidence and hidden-bottleneck signals.
+- Open company and supply-chain node detail views.
+- Display linked evidence and manually curated bottleneck flags.
+- Compute and display a deterministic Hidden Bottleneck Composite separately from the manual flags.
 
 ### Review Desk
 
@@ -33,13 +36,15 @@ Files:
 - `app.js`
 - `review-export.js`
 - `review-export.css`
+- `research-model.css`
 
 Functions:
 
 - Merge persistent scanner events, map candidates, and user submissions into one review queue.
+- Display structured Evidence -> Claim -> Proposed Patch packets when available.
 - Support review states: pending, approved, rejected, and needs more evidence.
 - Keep immediate browser review state in local storage.
-- Export review decisions as JSON.
+- Export review decisions, including structured research packets, as JSON.
 - Persist exported scanner-event review state back to repository data when `Apply Review Decisions` runs.
 
 ## Data Modules
@@ -50,18 +55,19 @@ File:
 
 - `data/industries.json`
 
-This is the only canonical industry-map source. It includes:
-
-- Industry descriptions and research theses.
-- Supply-chain nodes.
-- Relationships.
-- Company profiles.
-- Scores and signals.
-- Evidence sources.
-- Reviewed update events.
-- `languagePolicy`, which declares English as the primary language and prioritizes English official sources.
+This is the only canonical industry-map source. It includes industry descriptions, nodes, relationships, companies, evidence sources, signals, component scores, and reviewed update events.
 
 Industry-specific supplemental files must not override canonical data.
+
+### Scoring Rubric
+
+File:
+
+- `data/scoring-rubric.json`
+
+This versioned methodology defines the six score dimensions, weights, anchors, classification thresholds, and evidence policy. The browser and validation layer both read the same data file so the methodology is not hidden in presentation code.
+
+The current component scores are provisional because most predate per-dimension evidence records. The composite arithmetic is reproducible; the underlying inputs are not yet fully evidence-auditable.
 
 ### Watchlist
 
@@ -69,13 +75,7 @@ File:
 
 - `data/source-watchlist.json`
 
-Includes:
-
-- Daily and weekly monitored sources.
-- Company IDs.
-- Node IDs.
-- Keywords.
-- Source language metadata.
+Includes daily and weekly monitored sources, company IDs, node IDs, keywords, and source language metadata.
 
 ### Persistent Scanner Event Store
 
@@ -83,7 +83,13 @@ File:
 
 - `data/generated-update-events.json`
 
-This is a persistent candidate-event store. New detected events are merged with existing events rather than replacing the file's history. Review state can be written back to these events so approved, rejected, and needs-more-evidence decisions survive later scans.
+This is a persistent candidate-event store. New detected events are merged with existing events rather than replacing history. New scanner events may contain a `researchPacket` with:
+
+- observed evidence;
+- an explicitly unverified claim;
+- a draft, non-executable proposed patch.
+
+Review state can be written back so decisions survive later scans.
 
 ### Source Cache
 
@@ -95,6 +101,23 @@ Stores the latest fingerprint, source title, last check time, last change time, 
 
 ## Automation Modules
 
+### Research Model
+
+File:
+
+- `scripts/research-model.mjs`
+
+Purpose:
+
+- Build conservative structured research packets.
+- Map source type to coarse evidence level.
+- Compute the versioned Hidden Bottleneck Composite.
+- Classify the composite using rubric thresholds.
+- Validate research-packet shape.
+- Apply only whitelisted explicit patch operations.
+
+Supported executable patch targets are intentionally narrow: company recent updates, selected company signals, the six score dimensions, and node summaries.
+
 ### Source Scan
 
 File:
@@ -103,12 +126,14 @@ File:
 
 Purpose:
 
-- Scan English-priority source pages that are due for their configured cadence.
+- Scan source pages that are due for their configured cadence.
 - Detect page-content fingerprint changes.
-- Merge new source-change candidates into the persistent event store.
+- Record keyword context.
+- Build a structured research packet whose claim remains `unverified`.
+- Merge new candidates into the persistent event store.
 - Update `source-cache.json`.
 
-This is a change detector with keyword context. It does not yet semantically interpret the investment meaning of a disclosure.
+This remains a deterministic change detector. It does not identify the exact changed sentence or autonomously assert that an investment thesis changed.
 
 ### Apply Review Decisions
 
@@ -121,8 +146,11 @@ Purpose:
 - Read exported review JSON.
 - Persist scanner-event review status.
 - Record review state on matching existing industry update events.
-- Apply approved research notes to a reviewed candidate database.
+- Apply a structured patch only when it is explicitly `ready`, executable, and supported by the whitelist.
+- Prevent a generic approved scanner observation from silently becoming an official company note.
 - Generate `data/industries.reviewed.json` without directly overwriting canonical data.
+
+Legacy review items without a structured research packet retain the previous reviewed-note behavior for backward compatibility.
 
 ### Promote Reviewed Data
 
@@ -146,23 +174,26 @@ Purpose:
 - Reject duplicate industry, node, company, source, and event IDs.
 - Reject broken node/company/source references.
 - Validate watchlist targets and scanner-event references.
-- Validate review states.
-- Require all six score dimensions to remain numeric and within 0-100.
+- Validate review states and structured research packets.
+- Require all six component scores to remain numeric and within 0-100.
+- Require scoring-rubric dimensions to match the supported score model.
+- Require rubric weights to sum to 1.
+- Confirm that every company can produce a valid 0-100 composite.
 
 The `Validate Research Data` GitHub Action also performs JavaScript syntax checks and research-pipeline regression tests.
 
 ### Publishing
 
-Publishing has one owner: `Publish Static Site`. Any workflow that changes persistent repository state commits to `main`; the resulting `main` push triggers `Publish Static Site`, which mirrors current `main` to `gh-pages` and explicitly requests a GitHub Pages build. Source-scan and promotion workflows do not publish independently, avoiding duplicate force-pushes and competing Pages builds.
+Publishing has one owner: `Publish Static Site`. Any workflow that changes persistent repository state commits to `main`; the resulting push triggers `Publish Static Site`, which mirrors current `main` to `gh-pages` and explicitly requests a GitHub Pages build. Source-scan and promotion workflows do not publish independently, avoiding duplicate force-pushes and competing Pages builds.
 
 ## Usage Flow
 
 1. Automated scans check due source pages.
-2. Changed pages become persistent pending candidates in `generated-update-events.json`.
-3. The reviewer inspects the source evidence in the web review desk.
+2. Changed pages become persistent pending candidates with observed evidence, an unverified claim, and a draft patch.
+3. The reviewer opens the source and distinguishes what was actually disclosed from what the evidence may imply.
 4. The reviewer records approve, reject, or needs-more-evidence and exports the decisions.
-5. `Apply Review Decisions` persists event state and creates `industries.reviewed.json`.
-6. The reviewed candidate database is inspected before promotion.
+5. `Apply Review Decisions` persists event state. Only an explicit executable patch can mutate reviewed candidate fields.
+6. `industries.reviewed.json` is inspected before promotion.
 7. `Promote Reviewed Data` is run only after explicit confirmation.
 8. Canonical `industries.json` is updated; its commit to `main` triggers the single publishing workflow and a real Pages build.
 
@@ -170,8 +201,9 @@ Publishing has one owner: `Publish Static Site`. Any workflow that changes persi
 
 - The product is still a static web app without a database, authentication, or server-side multi-user review state.
 - Browser review state still requires an export/apply step before it becomes repository-persistent.
-- The scanner detects page changes and keyword matches but does not extract claims or interpret investment meaning semantically.
-- Review application does not automatically produce structured patches to scores, nodes, relationships, or bottleneck flags.
-- Existing hidden-bottleneck scores are not yet backed by a formal evidence-to-score rubric.
+- The scanner does not yet extract the exact changed disclosure or produce a semantically supported claim automatically.
+- Scanner-generated proposed patches are deliberately non-executable placeholders until the evidence is verified.
+- Existing component scores are provisional and usually lack per-dimension rationale/source/date/provenance records.
+- Manual supplier/bottleneck/hidden flags remain separate from rubric classification until score evidence coverage is strong enough to justify reconciliation.
 
-The next research-layer milestone is an Evidence -> Claim -> Proposed Patch model with explicit evidence links, before/after values, rationale, confidence, and human approval for every material thesis change.
+The next research-quality milestone is per-dimension score evidence plus semantic disclosure extraction. See `docs/research-methodology.md`.

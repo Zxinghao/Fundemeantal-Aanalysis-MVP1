@@ -41,11 +41,11 @@ jobs:
             echo "review_file=${{ inputs.review_file }}" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Apply approved review decisions
+      - name: Apply review decisions
         run: node scripts/apply-review-decisions.mjs "${{ steps.review-input.outputs.review_file }}"
 
-      - name: Commit reviewed industry data
+      - name: Commit reviewed industry and event data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Apply approved review decisions"
-          file_pattern: "data/industries.reviewed.json"
+          commit_message: "Apply review decisions"
+          file_pattern: "data/industries.reviewed.json data/generated-update-events.json"

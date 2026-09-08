@@ -3,24 +3,47 @@ const exportStatus = document.querySelector("#export-status");
 
 function exportReviewDecisions() {
   const decisions = loadReviewDecisions();
-  const reviewedItems = buildReviewQueue()
-    .filter((item) => decisions[item.id] && decisions[item.id] !== "pending")
-    .map((item) => ({
-      id: item.id,
-      industryId: state.industry.id,
-      industryName: state.industry.name,
-      companyId: item.companyId || null,
-      nodeId: item.nodeId || null,
-      company: item.company,
-      impact: item.impact,
-      origin: item.origin,
-      source: item.source,
-      sourceIds: item.sourceIds,
-      analysis: item.analysis || null,
-      researchPacket: item.researchPacket || null,
-      summary: item.summary,
-      reviewStatus: decisions[item.id]
-    }));
+  const exportedAt = new Date().toISOString();
+  let reviewedItems;
+
+  try {
+    reviewedItems = buildReviewQueue()
+      .filter((item) => decisions[item.id] && decisions[item.id] !== "pending")
+      .map((item) => {
+        const reviewStatus = decisions[item.id];
+        let researchPacket = item.researchPacket || null;
+        let analystReview = null;
+
+        if (item.researchPacket) {
+          if (!window.AnalystReview) {
+            throw new Error("Analyst review module is not ready. Reload the page and try again.");
+          }
+          researchPacket = window.AnalystReview.buildReviewedPacket(item, reviewStatus, { reviewedAt: exportedAt });
+          analystReview = window.AnalystReview.getExportReview(item.id);
+        }
+
+        return {
+          id: item.id,
+          industryId: state.industry.id,
+          industryName: state.industry.name,
+          companyId: item.companyId || null,
+          nodeId: item.nodeId || null,
+          company: item.company,
+          impact: item.impact,
+          origin: item.origin,
+          source: item.source,
+          sourceIds: item.sourceIds,
+          analysis: item.analysis || null,
+          analystReview,
+          researchPacket,
+          summary: item.summary,
+          reviewStatus
+        };
+      });
+  } catch (error) {
+    exportStatus.textContent = `Export blocked: ${error.message}`;
+    return;
+  }
 
   if (reviewedItems.length === 0) {
     exportStatus.textContent = "There are no review decisions to export yet.";
@@ -28,7 +51,8 @@ function exportReviewDecisions() {
   }
 
   const payload = {
-    exportedAt: new Date().toISOString(),
+    schemaVersion: "2.0",
+    exportedAt,
     industryId: state.industry.id,
     industryName: state.industry.name,
     reviewedItems
@@ -39,7 +63,7 @@ function exportReviewDecisions() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `review-decisions-${state.industry.id}-${new Date().toISOString().slice(0, 10)}.json`;
+  link.download = `review-decisions-${state.industry.id}-${exportedAt.slice(0, 10)}.json`;
   document.body.appendChild(link);
   link.click();
   link.remove();
@@ -64,7 +88,7 @@ function renderReviewPayload(text, count) {
     navigator.clipboard.writeText(text).catch(() => {});
   }
 
-  exportStatus.textContent = `Exported ${count} review decision(s). The JSON is shown below and can be pasted into the Approve And Promote workflow.`;
+  exportStatus.textContent = `Exported ${count} review decision(s). Structured approvals now include the human-verification record and final patch packet.`;
 }
 
 exportReview.addEventListener("click", exportReviewDecisions);

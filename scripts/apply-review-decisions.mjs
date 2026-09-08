@@ -1,7 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { applyApprovedPatch } from "./research-model.mjs";
+import { applyApprovedPatch, validateResearchPacket } from "./research-model.mjs";
+import { validateApprovedPacketAuthority } from "./analyst-review-model.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const industriesPath = path.join(root, "data", "industries.json");
@@ -51,6 +52,7 @@ function eventFromReview(item, exportedAt, patchResult) {
     reviewedAt: exportedAt,
     originalEventId: item.id,
     origin: item.origin,
+    analystReview: item.analystReview || null,
     researchPacket: item.researchPacket || null,
     patchApplied: patchResult?.applied || [],
     patchSkipped: patchResult?.skipped || []
@@ -76,12 +78,22 @@ function updateExistingIndustryEvent(industry, item, reviewedAt, patchResult) {
   existing.status = item.reviewStatus;
   existing.reviewDecision = item.reviewStatus;
   existing.reviewedAt = reviewedAt;
+  if (item.analystReview) existing.analystReview = item.analystReview;
   if (item.researchPacket) existing.researchPacket = item.researchPacket;
   if (patchResult) {
     existing.patchApplied = patchResult.applied;
     existing.patchSkipped = patchResult.skipped;
   }
   return true;
+}
+
+function validateStructuredApproval(item) {
+  const authorityErrors = validateApprovedPacketAuthority(item.researchPacket);
+  const packetErrors = validateResearchPacket(item.researchPacket);
+  const errors = [...authorityErrors, ...packetErrors];
+  if (errors.length) {
+    throw new Error(`Structured approval ${item.id} failed validation: ${errors.join(" ")}`);
+  }
 }
 
 export function applyReviews(industries, reviewExport) {
@@ -96,7 +108,13 @@ export function applyReviews(industries, reviewExport) {
 
     let patchResult = null;
     if (item.reviewStatus === "approved" && item.researchPacket) {
+      validateStructuredApproval(item);
       patchResult = applyApprovedPatch(industry, item.researchPacket);
+
+      const operations = item.researchPacket.proposedPatch?.operations || [];
+      if (item.researchPacket.proposedPatch?.executable && patchResult.applied.length !== operations.length) {
+        throw new Error(`Structured approval ${item.id} failed atomic patch preflight; no reviewed data was accepted.`);
+      }
     }
 
     const existingUpdated = updateExistingIndustryEvent(industry, item, reviewedAt, patchResult);
@@ -114,8 +132,7 @@ export function applyReviews(industries, reviewExport) {
 
       // Legacy review items have no structured research packet, so preserve the old
       // reviewed-note behavior. Structured packets mutate canonical fields only via
-      // an explicit executable patch; draft scanner placeholders do not silently
-      // become official company notes.
+      // an explicit human-verified executable patch.
       if (!item.researchPacket) appendRecentUpdate(industry, item);
     }
 
@@ -128,15 +145,21 @@ export function applyReviews(industries, reviewExport) {
 
 export function applyEventReviewStatuses(events, reviewExport) {
   const reviewedAt = reviewTimestamp(reviewExport);
+  const reviewedItems = reviewExport.reviewedItems || [];
   const decisions = new Map(
-    (reviewExport.reviewedItems || [])
+    reviewedItems
       .map((item) => [item.id, normalizedReviewStatus(item.reviewStatus)])
       .filter(([, status]) => status)
   );
   const packetById = new Map(
-    (reviewExport.reviewedItems || [])
+    reviewedItems
       .filter((item) => item.researchPacket)
       .map((item) => [item.id, item.researchPacket])
+  );
+  const analystReviewById = new Map(
+    reviewedItems
+      .filter((item) => item.analystReview)
+      .map((item) => [item.id, item.analystReview])
   );
   const updatedIds = [];
 
@@ -150,6 +173,7 @@ export function applyEventReviewStatuses(events, reviewExport) {
       status: decision,
       reviewDecision: decision,
       reviewedAt,
+      analystReview: analystReviewById.get(event.id) || event.analystReview || null,
       researchPacket: packetById.get(event.id) || event.researchPacket || null
     };
   });

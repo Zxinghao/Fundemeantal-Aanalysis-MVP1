@@ -5,6 +5,9 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const industriesPath = path.join(root, "data", "industries.json");
 const outputPath = path.join(root, "data", "industries.reviewed.json");
+const generatedEventsPath = path.join(root, "data", "generated-update-events.json");
+
+const reviewStatuses = new Set(["approved", "rejected", "needs_more_evidence"]);
 
 function usage() {
   console.log("Usage: node scripts/apply-review-decisions.mjs <review-decisions.json>");
@@ -19,6 +22,14 @@ function normalizeImpact(impact) {
   };
 
   return map[impact] || impact || "supply_chain_importance";
+}
+
+function normalizedReviewStatus(status) {
+  return reviewStatuses.has(status) ? status : null;
+}
+
+function reviewTimestamp(reviewExport) {
+  return reviewExport.exportedAt || new Date().toISOString();
 }
 
 function eventFromReview(item, exportedAt) {
@@ -36,7 +47,7 @@ function eventFromReview(item, exportedAt) {
     sourceIds: item.sourceIds || [],
     submittedBy: "review_export",
     reviewDecision: "approved",
-    reviewedAt: exportedAt || new Date().toISOString(),
+    reviewedAt: exportedAt,
     originalEventId: item.id,
     origin: item.origin
   };
@@ -54,26 +65,80 @@ function appendRecentUpdate(industry, item) {
   }
 }
 
+function updateExistingIndustryEvent(industry, item, reviewedAt) {
+  const existing = industry.updateEvents.find((event) => event.id === item.id);
+  if (!existing) return false;
+
+  existing.status = item.reviewStatus;
+  existing.reviewDecision = item.reviewStatus;
+  existing.reviewedAt = reviewedAt;
+  return true;
+}
+
 export function applyReviews(industries, reviewExport) {
-  const approvedItems = (reviewExport.reviewedItems || []).filter((item) => item.reviewStatus === "approved");
+  const reviewedAt = reviewTimestamp(reviewExport);
+  const reviewedItems = (reviewExport.reviewedItems || [])
+    .filter((item) => normalizedReviewStatus(item.reviewStatus));
   const applied = [];
 
-  for (const item of approvedItems) {
+  for (const item of reviewedItems) {
     const industry = industries.find((candidate) => candidate.id === item.industryId);
     if (!industry) continue;
 
-    const newEvent = eventFromReview(item, reviewExport.exportedAt);
-    const exists = industry.updateEvents.some((event) => event.id === newEvent.id || event.originalEventId === item.id);
-    if (!exists) {
-      industry.updateEvents.unshift(newEvent);
+    const existingUpdated = updateExistingIndustryEvent(industry, item, reviewedAt);
+
+    if (item.reviewStatus === "approved") {
+      if (!existingUpdated) {
+        const newEvent = eventFromReview(item, reviewedAt);
+        const exists = industry.updateEvents.some((event) => {
+          return event.id === newEvent.id || event.originalEventId === item.id;
+        });
+        if (!exists) {
+          industry.updateEvents.unshift(newEvent);
+        }
+      }
+
+      appendRecentUpdate(industry, item);
     }
 
-    appendRecentUpdate(industry, item);
-    industry.lastReviewedAt = reviewExport.exportedAt || new Date().toISOString();
+    industry.lastReviewedAt = reviewedAt;
     applied.push(item.id);
   }
 
   return applied;
+}
+
+export function applyEventReviewStatuses(events, reviewExport) {
+  const reviewedAt = reviewTimestamp(reviewExport);
+  const decisions = new Map(
+    (reviewExport.reviewedItems || [])
+      .map((item) => [item.id, normalizedReviewStatus(item.reviewStatus)])
+      .filter(([, status]) => status)
+  );
+  const updatedIds = [];
+
+  const nextEvents = (Array.isArray(events) ? events : []).map((event) => {
+    const decision = decisions.get(event.id);
+    if (!decision) return event;
+
+    updatedIds.push(event.id);
+    return {
+      ...event,
+      status: decision,
+      reviewDecision: decision,
+      reviewedAt
+    };
+  });
+
+  return { events: nextEvents, updatedIds };
+}
+
+async function readJson(filePath, fallback) {
+  try {
+    return JSON.parse(await fs.readFile(filePath, "utf8"));
+  } catch {
+    return fallback;
+  }
 }
 
 async function main() {
@@ -87,10 +152,16 @@ async function main() {
   const reviewPath = path.resolve(globalThis.process.cwd(), reviewFile);
   const industries = JSON.parse(await fs.readFile(industriesPath, "utf8"));
   const reviewExport = JSON.parse(await fs.readFile(reviewPath, "utf8"));
+  const generatedEvents = await readJson(generatedEventsPath, []);
+
   const applied = applyReviews(industries, reviewExport);
+  const eventReviewResult = applyEventReviewStatuses(generatedEvents, reviewExport);
 
   await fs.writeFile(outputPath, `${JSON.stringify(industries, null, 2)}\n`);
-  console.log(`Applied ${applied.length} approved review decisions to ${outputPath}`);
+  await fs.writeFile(generatedEventsPath, `${JSON.stringify(eventReviewResult.events, null, 2)}\n`);
+
+  console.log(`Applied ${applied.length} review decision(s) to ${outputPath}`);
+  console.log(`Persisted ${eventReviewResult.updatedIds.length} scanner event status update(s) to ${generatedEventsPath}`);
 }
 
 const cliEntry = globalThis.process?.argv?.[1];

@@ -24,6 +24,12 @@ jobs:
       - name: Run web scanner
         run: node scripts/web-scan.mjs
 
+      - name: Enrich scanner events with semantic candidates
+        run: node scripts/enrich-semantic-candidates.mjs
+
+      - name: Validate semantic candidate invariants
+        run: node scripts/validate-semantic-candidates.mjs
+
       - name: Commit scan outputs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

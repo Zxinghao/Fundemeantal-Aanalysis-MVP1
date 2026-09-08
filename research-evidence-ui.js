@@ -135,35 +135,97 @@
     try {
       pending.querySelectorAll(".update-card").forEach((card) => {
         const reviewId = card.querySelector("[data-review-id]")?.dataset.reviewId;
-        if (!reviewId || card.querySelector(".change-evidence-panel")) return;
+        if (!reviewId) return;
         const event = generatedEvents.find((candidate) => candidate.id === reviewId);
-        const changeSet = event?.researchPacket?.evidence?.[0]?.changeSet || event?.changeEvidence;
-        if (!changeSet || changeSet.status === "unchanged") return;
+        if (!event) return;
 
-        const panel = document.createElement("div");
-        panel.className = `change-evidence-panel ${changeSet.status}`;
+        if (!card.querySelector(".change-evidence-panel")) {
+          const changeSet = event?.researchPacket?.evidence?.[0]?.changeSet || event?.changeEvidence;
+          if (changeSet && changeSet.status !== "unchanged") appendChangeEvidencePanel(card, changeSet);
+        }
 
-        const title = document.createElement("strong");
-        title.textContent = changeSet.status === "comparable"
-          ? `Watched-context diff · +${changeSet.addedCount || 0} / -${changeSet.removedCount || 0}`
-          : "Watched-context baseline not yet comparable";
-        panel.appendChild(title);
-
-        const note = document.createElement("p");
-        note.textContent = changeSet.note || "Review the primary source before supporting a claim.";
-        panel.appendChild(note);
-
-        appendSnippetGroup(panel, "Added context", changeSet.added, "added");
-        appendSnippetGroup(panel, "Removed context", changeSet.removed, "removed");
-        appendSnippetGroup(panel, "Current relevant context", changeSet.currentRelevant, "current");
-
-        const researchPacket = card.querySelector(".research-packet");
-        if (researchPacket) researchPacket.insertAdjacentElement("afterend", panel);
-        else card.querySelector("p")?.insertAdjacentElement("afterend", panel);
+        if (!card.querySelector(".semantic-candidate-panel")) {
+          appendSemanticCandidatePanel(card, event?.researchPacket?.semanticCandidate);
+        }
       });
     } finally {
       reviewEnhancing = false;
     }
+  }
+
+  function appendChangeEvidencePanel(card, changeSet) {
+    const panel = document.createElement("div");
+    panel.className = `change-evidence-panel ${changeSet.status}`;
+
+    const title = document.createElement("strong");
+    title.textContent = changeSet.status === "comparable"
+      ? `Watched-context diff · +${changeSet.addedCount || 0} / -${changeSet.removedCount || 0}`
+      : "Watched-context baseline not yet comparable";
+    panel.appendChild(title);
+
+    const note = document.createElement("p");
+    note.textContent = changeSet.note || "Review the primary source before supporting a claim.";
+    panel.appendChild(note);
+
+    appendSnippetGroup(panel, "Added context", changeSet.added, "added");
+    appendSnippetGroup(panel, "Removed context", changeSet.removed, "removed");
+    appendSnippetGroup(panel, "Current relevant context", changeSet.currentRelevant, "current");
+
+    const researchPacket = card.querySelector(".research-packet");
+    if (researchPacket) researchPacket.insertAdjacentElement("afterend", panel);
+    else card.querySelector("p")?.insertAdjacentElement("afterend", panel);
+  }
+
+  function appendSemanticCandidatePanel(card, candidate) {
+    if (!candidate) return;
+
+    const panel = document.createElement("div");
+    panel.className = "research-stage semantic-candidate-panel";
+
+    const title = document.createElement("span");
+    const generator = candidate.generator?.type || "unknown";
+    title.textContent = `Semantic Candidate · ${candidate.status || "candidate"} · ${generator}`;
+    panel.appendChild(title);
+
+    const warning = document.createElement("p");
+    warning.textContent = candidate.status === "verified"
+      ? "This candidate has been verified. Review the linked evidence and claim before applying any patch."
+      : "This is a review lead, not a verified fact or investment conclusion. Open the primary source before supporting the claim.";
+    panel.appendChild(warning);
+
+    const facts = Array.isArray(candidate.observedFacts) ? candidate.observedFacts : [];
+    if (facts.length) {
+      const factsHeading = document.createElement("strong");
+      factsHeading.textContent = "Candidate observed facts";
+      panel.appendChild(factsHeading);
+
+      const list = document.createElement("ul");
+      facts.forEach((fact) => {
+        const item = document.createElement("li");
+        item.textContent = fact.statement || fact.type || "Candidate fact";
+        list.appendChild(item);
+      });
+      panel.appendChild(list);
+    }
+
+    if (candidate.interpretation?.statement) {
+      const interpretation = document.createElement("p");
+      interpretation.textContent = `Interpretation (${candidate.interpretation.confidence || "low"}): ${candidate.interpretation.statement}`;
+      panel.appendChild(interpretation);
+    }
+
+    const dimensions = candidate.scoreImpact?.candidateDimensions || [];
+    const scoreImpact = document.createElement("small");
+    scoreImpact.textContent = dimensions.length
+      ? `Score review only: ${dimensions.join(", ")}. No score direction or numeric change is authorized at candidate stage.`
+      : "No score impact has been assessed from this candidate.";
+    panel.appendChild(scoreImpact);
+
+    const changePanel = card.querySelector(".change-evidence-panel");
+    const researchPacket = card.querySelector(".research-packet");
+    if (changePanel) changePanel.insertAdjacentElement("afterend", panel);
+    else if (researchPacket) researchPacket.insertAdjacentElement("afterend", panel);
+    else card.querySelector("p")?.insertAdjacentElement("afterend", panel);
   }
 
   function appendSnippetGroup(panel, label, snippets, kind) {

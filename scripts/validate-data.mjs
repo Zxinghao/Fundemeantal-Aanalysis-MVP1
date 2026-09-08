@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { computeCompositeScore, validateResearchPacket } from "./research-model.mjs";
+import { computeCompositeScore, validateResearchPacket, validateScoreEvidenceRecord } from "./research-model.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const scoreDimensions = [
@@ -78,6 +78,30 @@ function validatePacket(packet, prefix, errors) {
   }
 }
 
+function validateScoreEvidence(company, knownEvidenceSourceIds, prefix, errors) {
+  if (company.scoreEvidence === undefined) return;
+  if (!company.scoreEvidence || typeof company.scoreEvidence !== "object" || Array.isArray(company.scoreEvidence)) {
+    errors.push(`${prefix} company ${company.id} scoreEvidence must be an object when present.`);
+    return;
+  }
+
+  for (const [dimension, record] of Object.entries(company.scoreEvidence)) {
+    if (!scoreDimensions.includes(dimension)) {
+      errors.push(`${prefix} company ${company.id} scoreEvidence has unknown dimension: ${dimension}`);
+      continue;
+    }
+
+    for (const error of validateScoreEvidenceRecord(record, company.scores?.[dimension])) {
+      errors.push(`${prefix} company ${company.id} scoreEvidence ${dimension}: ${error}`);
+    }
+    for (const sourceId of record?.sourceIds || []) {
+      if (!knownEvidenceSourceIds.has(sourceId)) {
+        errors.push(`${prefix} company ${company.id} scoreEvidence ${dimension} references unknown source: ${sourceId}`);
+      }
+    }
+  }
+}
+
 function validateIndustry(industry, watchlist, rubric, errors) {
   const prefix = `industry:${industry.id || "unknown"}`;
   if (!industry.id || !industry.name) errors.push(`${prefix} must have id and name.`);
@@ -135,6 +159,8 @@ function validateIndustry(industry, watchlist, rubric, errors) {
         errors.push(`${prefix} company ${company.id} score ${dimension} must be between 0 and 100.`);
       }
     }
+    validateScoreEvidence(company, knownEvidenceSourceIds, prefix, errors);
+
     const composite = computeCompositeScore(company.scores, rubric);
     if (!Number.isFinite(composite) || composite < 0 || composite > 100) {
       errors.push(`${prefix} company ${company.id} cannot produce a valid composite score.`);
@@ -172,6 +198,7 @@ function validateWatchlist(watchlist, industryById, errors) {
         seenSourceIds.add(source.id);
         if (source.companyId && !companyIds.has(source.companyId)) errors.push(`watchlist ${source.id} references unknown company: ${source.companyId}`);
         if (source.nodeId && !nodeIds.has(source.nodeId)) errors.push(`watchlist ${source.id} references unknown node: ${source.nodeId}`);
+        if (!Array.isArray(source.watchFor) || source.watchFor.length === 0) errors.push(`watchlist ${source.id} must define watchFor keywords.`);
       }
     }
   }
@@ -204,12 +231,42 @@ function validateGeneratedEvents(events, industryById, watchlist, errors) {
   }
 }
 
+function validateSourceCache(sourceCache, industryById, watchlist, errors) {
+  for (const [cacheId, entry] of Object.entries(sourceCache || {})) {
+    if (!entry || typeof entry !== "object") {
+      errors.push(`source cache ${cacheId} must be an object.`);
+      continue;
+    }
+    if (entry.id && entry.id !== cacheId) errors.push(`source cache key ${cacheId} mismatches entry id ${entry.id}.`);
+    if (!industryById.has(entry.industryId)) errors.push(`source cache ${cacheId} references unknown industry: ${entry.industryId}`);
+    if (entry.industryId && !collectWatchlistSourceIds(watchlist, entry.industryId).has(cacheId)) {
+      errors.push(`source cache ${cacheId} is not present in the ${entry.industryId} watchlist.`);
+    }
+
+    const snapshot = entry.watchSnapshot;
+    if (!snapshot) continue;
+    if (snapshot.version !== "1.0") errors.push(`source cache ${cacheId} watchSnapshot must use version 1.0.`);
+    if (!Array.isArray(snapshot.keywords)) errors.push(`source cache ${cacheId} watchSnapshot keywords must be an array.`);
+    if (!Array.isArray(snapshot.segments)) {
+      errors.push(`source cache ${cacheId} watchSnapshot segments must be an array.`);
+      continue;
+    }
+    if (snapshot.segments.length > 30) errors.push(`source cache ${cacheId} watchSnapshot exceeds 30 stored segments.`);
+    for (const segment of snapshot.segments) {
+      if (!segment?.hash || !segment?.excerpt) errors.push(`source cache ${cacheId} watchSnapshot segment requires hash and excerpt.`);
+      if (typeof segment?.excerpt === "string" && segment.excerpt.length > 220) errors.push(`source cache ${cacheId} watchSnapshot excerpt exceeds 220 characters.`);
+      if (!Array.isArray(segment?.matchedKeywords)) errors.push(`source cache ${cacheId} watchSnapshot segment matchedKeywords must be an array.`);
+    }
+  }
+}
+
 async function main() {
-  const [industries, watchlist, generatedEvents, rubric] = await Promise.all([
+  const [industries, watchlist, generatedEvents, rubric, sourceCache] = await Promise.all([
     readJson("data/industries.json"),
     readJson("data/source-watchlist.json"),
     readJson("data/generated-update-events.json"),
-    readJson("data/scoring-rubric.json")
+    readJson("data/scoring-rubric.json"),
+    readJson("data/source-cache.json")
   ]);
 
   const errors = [];
@@ -224,6 +281,7 @@ async function main() {
   for (const industry of industries || []) validateIndustry(industry, watchlist, rubric, errors);
   validateWatchlist(watchlist, industryById, errors);
   validateGeneratedEvents(generatedEvents, industryById, watchlist, errors);
+  validateSourceCache(sourceCache, industryById, watchlist, errors);
 
   if (errors.length) {
     console.error(`Data validation failed with ${errors.length} error(s):`);
@@ -234,7 +292,10 @@ async function main() {
 
   const companyCount = industries.reduce((sum, industry) => sum + (industry.companies || []).length, 0);
   const nodeCount = industries.reduce((sum, industry) => sum + (industry.nodes || []).length, 0);
-  console.log(`Data validation passed: rubric v${rubric.version}, ${industries.length} industries, ${nodeCount} nodes, ${companyCount} companies, ${generatedEvents.length} scanner events.`);
+  const scoreEvidenceCount = industries.reduce((sum, industry) => {
+    return sum + (industry.companies || []).reduce((companySum, company) => companySum + Object.keys(company.scoreEvidence || {}).length, 0);
+  }, 0);
+  console.log(`Data validation passed: rubric v${rubric.version}, ${industries.length} industries, ${nodeCount} nodes, ${companyCount} companies, ${scoreEvidenceCount} score-evidence records, ${generatedEvents.length} scanner events.`);
 }
 
 main().catch((error) => {

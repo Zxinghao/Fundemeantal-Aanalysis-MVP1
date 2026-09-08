@@ -10,51 +10,40 @@ Primary GitHub Pages URL:
 
 https://zxinghao.github.io/Fundemeantal-Aanalysis-MVP1/
 
-The repository publishes `main` to `gh-pages` and explicitly requests a GitHub Pages build so that repository updates are reflected on the public site.
+The repository publishes `main` to `gh-pages` and explicitly requests a GitHub Pages build so repository updates are reflected on the public site.
 
 ## Core Features
 
-- Render an industry supply chain map from a single canonical industry database.
-- Click a company or supply-chain node to inspect its role, linked companies, bottleneck signals, scores, and evidence sources.
-- Compute a versioned Hidden Bottleneck Composite from six explicit weighted dimensions.
-- Let users submit official data, filings, announcements, or research notes for review.
-- Detect watched-source page changes and route persistent candidate events into a review desk.
-- Represent scanner candidates as structured `Evidence -> Claim -> Proposed Patch` research packets.
+- Render an industry supply-chain map from one canonical industry database.
+- Inspect company/node roles, evidence, manually curated flags, and a versioned six-factor Hidden Bottleneck Composite.
+- Monitor official/priority sources with daily or weekly cadence.
+- Preserve a small keyword-focused context snapshot for monitored sources and compare it with the next version when the full-page fingerprint changes.
+- Surface bounded added/removed watched-context excerpts in the Review Desk without treating them as semantic conclusions.
+- Represent scanner candidates as `Evidence -> Claim -> Proposed Patch` research packets.
+- Keep scanner claims `unverified` and scanner patches non-executable by default.
 - Support review states: pending, approved, rejected, and needs more evidence.
-- Export review decisions as JSON and persist reviewed scanner-event status back to the repository.
-- Apply only explicit, whitelisted executable patches to reviewed candidate data.
-- Promote reviewed candidate data separately after human confirmation.
-- Validate data integrity, research-packet shape, scoring-rubric invariants, and JavaScript syntax on repository changes.
-
-## Language And Source Policy
-
-- English is the primary product language.
-- Data fields, UI labels, review events, scanner output, and documentation should be written in English.
-- Source collection prioritizes English official sources, investor relations pages, filings, government sources, standards bodies, and company materials.
-- Non-English sources may be used when they provide primary evidence that is not available in English; they should be summarized in English before entering the review workflow.
-
-## Canonical Data Model
-
-`data/industries.json` is the single canonical source for industry maps. Industry-specific supplemental files must not override the canonical database.
-
-The canonical data contains industry descriptions, nodes, relationships, companies, evidence sources, signals, scores, and reviewed update events. `scripts/validate-data.mjs` checks cross-references and structural invariants before changes are accepted.
-
-The scoring methodology is separately versioned in `data/scoring-rubric.json` so arithmetic methodology is not hidden inside UI code.
+- Apply only explicit, whitelisted, atomic patches to reviewed candidate data.
+- Require any reviewed component-score change to carry a matching `scoreEvidence` record in the same patch.
+- Validate data integrity, research-packet shape, scoring-rubric invariants, score-evidence records, source-cache snapshots, and JavaScript syntax.
 
 ## Research Data Flow
 
 ```text
 source-watchlist.json
   -> web-scan.mjs
+       -> full-page fingerprint
+       -> bounded watched-context snapshot
+       -> watched-context diff when a comparable baseline exists
   -> persistent generated-update-events.json
        -> Evidence
        -> unverified Claim
        -> draft Proposed Patch
-  -> review desk
+  -> Review Desk
   -> exported review-decisions JSON
   -> apply-review-decisions.mjs
        -> persist review status
-       -> apply only explicit executable whitelisted patches
+       -> preflight the whole patch atomically
+       -> require score + scoreEvidence coupling for score changes
        -> industries.reviewed.json
   -> human inspection
   -> promote-reviewed-data.mjs
@@ -62,20 +51,36 @@ source-watchlist.json
   -> GitHub Pages
 ```
 
-`generated-update-events.json` is a persistent event store. A later scan does not delete an older unreviewed candidate merely because the source did not change again.
+A first successful fetch establishes a baseline and is not treated as a source change. Existing cache entries created before watched-context snapshots are upgraded silently when their full-page hash is unchanged. If a page changes before a comparable context baseline exists, the event is marked `baseline_missing` rather than inventing an added/removed diff.
 
-A scanner-generated research packet is intentionally conservative: it records that a page changed and what watched terms are present, but it does not claim that an order, customer win, capacity expansion, qualification, or thesis change occurred unless that disclosure has been explicitly verified.
+## Watched-Context Disclosure Diff
+
+The scanner still computes a full normalized page hash to detect that something changed. It now also stores a bounded snapshot of text windows around configured `watchFor` keywords.
+
+When a later page version changes, `scripts/disclosure-diff.mjs` compares the old and new watched-context windows and records:
+
+- `added` excerpts;
+- `removed` excerpts;
+- total added/removed counts;
+- baseline status;
+- the deterministic method identifier `watched-context-diff-v1`.
+
+The cache deliberately stores only a limited number of short excerpts instead of archiving full third-party pages.
+
+This narrows the review target, but it is **not** semantic disclosure extraction. A dynamic navigation element, nearby boilerplate, or reordered text may still create noise. The reviewer must open the primary source and verify the disclosure in context before supporting a claim.
 
 ## Hidden Bottleneck Composite
 
-Rubric v1.0 uses the following weights:
+Rubric v1.0 is stored in `data/scoring-rubric.json`.
 
-- Supply chain importance: 20%
-- Scarcity: 20%
-- Pricing power: 10%
-- Switching cost: 15%
-- Validation barrier: 15%
-- Market underappreciation: 20%
+| Dimension | Weight |
+| --- | ---: |
+| Supply chain importance | 20% |
+| Scarcity | 20% |
+| Pricing power | 10% |
+| Switching cost | 15% |
+| Validation barrier | 15% |
+| Market underappreciation | 20% |
 
 Classification thresholds:
 
@@ -84,64 +89,72 @@ Classification thresholds:
 - `>= 60`: Watchlist / partial bottleneck
 - `< 60`: Not currently a hidden bottleneck
 
-The composite is deterministic, but the current component inputs are still **provisional** because most scores predate per-dimension evidence records. The existing manual fields `isKeySupplier`, `isBottleneck`, and `isZisuCandidate` remain separate from the provisional rubric classification.
+The formula is reproducible, but legacy component inputs remain provisional until evidence is backfilled.
 
-See `docs/research-methodology.md` for methodology details and limitations.
+## scoreEvidence
+
+A company may attach dimension-specific evidence under:
+
+```text
+companies.<companyId>.scoreEvidence.<dimension>
+```
+
+A valid record contains:
+
+```json
+{
+  "score": 86,
+  "rationale": "Why the evidence supports this numeric band.",
+  "sourceIds": ["official-source-id"],
+  "evidenceDate": "2026-09-08",
+  "provenance": {
+    "type": "reviewed_research_packet",
+    "eventId": "event-id",
+    "claimId": "claim-id"
+  }
+}
+```
+
+Allowed provenance types are `reviewed_research_packet`, `manual_research`, and `legacy_backfill`.
+
+A reviewed patch cannot change `companies.<id>.scores.<dimension>` unless the same atomic patch also replaces `companies.<id>.scoreEvidence.<dimension>` with a record whose `score` matches the new value. Evidence can be backfilled without changing the score, but the evidence record must match the current score exactly.
+
+The public company detail view displays evidence coverage dimension by dimension. Missing records are shown as evidence gaps instead of being silently treated as validated inputs.
 
 ## Important Files
 
-- `index.html`: Web entry point.
-- `app.js`: Supply-chain map, composite-score presentation, and review-desk logic.
-- `node-details.js`: Non-company node detail view.
-- `company-flags.js`: Displays manually curated supplier/bottleneck/hidden flags separately from rubric classification.
-- `review-export.js`: Review-decision and structured research-packet export.
-- `research-model.css`: Research-packet and composite-score presentation styles.
-- `data/industries.json`: Canonical industry research database.
-- `data/scoring-rubric.json`: Versioned Hidden Bottleneck Composite methodology.
-- `data/source-watchlist.json`: Daily and weekly source watchlist.
-- `data/source-cache.json`: Latest source fingerprints, check timestamps, and fetch errors.
-- `data/generated-update-events.json`: Persistent source-change candidate event store.
-- `scripts/research-model.mjs`: Research-packet construction, scoring helpers, and whitelisted patch engine.
-- `scripts/web-scan.mjs`: Source-change detector and event-store writer.
-- `scripts/apply-review-decisions.mjs`: Persists review status and applies approved explicit patches to reviewed candidate data.
-- `scripts/promote-reviewed-data.mjs`: Promotes reviewed data after human confirmation.
-- `scripts/validate-data.mjs`: Validates IDs, references, scores, rubric invariants, packet shape, event status, and watchlist consistency.
-
-## GitHub Actions
-
-- `Source Scan`: runs daily at 06:15 UTC. Daily sources are checked each run; weekly sources are skipped until their weekly interval is due. Changed-source candidates are merged into the persistent event store.
-- `Validate Research Data`: runs syntax, regression, rubric, and data-integrity checks on pushes and pull requests.
-- `Apply Review Decisions`: reads exported review JSON, persists scanner-event review state, and generates `industries.reviewed.json`.
-- `Promote Reviewed Data`: promotes reviewed data to canonical `industries.json` after manual confirmation.
-- `Approve And Promote`: combines review application and promotion when a reviewer intentionally chooses the one-step path.
-- `Publish Static Site`: mirrors current `main` to `gh-pages` and explicitly requests a GitHub Pages build.
-
-## Daily Operating Loop
-
-1. `Source Scan` checks sources that are due for their configured cadence.
-2. A detected page change is merged into the persistent event store as a pending candidate with structured evidence, an unverified claim, and a non-executable draft patch.
-3. The public site exposes the candidate in the review desk.
-4. A reviewer opens the underlying evidence and records approve, reject, or needs-more-evidence.
-5. Exported decisions are applied so review state survives across devices and future scans.
-6. Only an explicit `ready` and executable whitelisted patch can mutate reviewed candidate fields; a generic scanner observation cannot silently become official research data.
-7. Reviewed candidate data is inspected before promotion.
-8. Only a separate promotion step can replace canonical `industries.json`.
-9. Publication then triggers a real GitHub Pages build.
+- `index.html`: web entry point.
+- `app.js`: supply-chain map, composite-score presentation, and review-desk logic.
+- `research-evidence-ui.js`: displays score-evidence coverage and watched-context diff excerpts.
+- `research-model.css`: research, score-evidence, and diff presentation styles.
+- `data/industries.json`: canonical industry research database.
+- `data/scoring-rubric.json`: versioned Hidden Bottleneck Composite methodology.
+- `data/source-watchlist.json`: monitored sources, cadence, targets, and watch keywords.
+- `data/source-cache.json`: fingerprints, bounded watched-context snapshots, timestamps, and fetch errors.
+- `data/generated-update-events.json`: persistent candidate-event store.
+- `scripts/disclosure-diff.mjs`: watched-context snapshot and diff logic.
+- `scripts/research-model.mjs`: research-packet construction, score-evidence validation, scoring helpers, and atomic whitelisted patch engine.
+- `scripts/web-scan.mjs`: source scanner and event-store writer.
+- `scripts/apply-review-decisions.mjs`: persists review state and creates reviewed candidate data.
+- `scripts/promote-reviewed-data.mjs`: promotes reviewed data after explicit human confirmation.
+- `scripts/validate-data.mjs`: structural, research, score-evidence, cache, and reference validation.
+- `tests/research-pipeline.test.mjs`: research-pipeline regression tests.
 
 ## Risk Controls
 
-- The scanner detects source changes; it does not claim that a supply-chain or investment thesis changed.
-- Evidence, claim, and proposed database mutation are stored as separate objects.
-- Scanner-generated patches are draft and non-executable by default.
-- The patch engine only accepts a small whitelist of company/node fields and score values from 0 to 100.
-- Approval of a draft research packet does not silently append a generic page-change note to official company research.
-- Promotion requires explicit human confirmation using `PROMOTE` and preserves the previous official data version.
-- The validator blocks duplicate IDs, broken references, invalid review states, malformed packets, invalid rubric weights, and out-of-range scores.
+- A first source fetch creates a baseline; it does not create a fake change event.
+- Page fingerprint change, changed watched context, supported claim, and database mutation are separate concepts.
+- Scanner-generated claims remain `unverified` and patches remain draft/non-executable.
+- Short watched-context excerpts are review aids, not automatic statements of materiality.
+- Score changes require a matching score-evidence record in the same atomic patch.
+- If any patch operation fails whitelist, target, value, or score-evidence coupling checks, the entire patch is rejected without partial mutation.
+- Existing manual fields `isKeySupplier`, `isBottleneck`, and `isZisuCandidate` remain separate from the provisional quantitative classification.
+- Promotion remains an explicit human-controlled step.
 
-## Known Research Limits
+## Current Research Limits
 
-The current source scanner is still a deterministic change detector plus keyword layer, not a semantic AI research analyst. It now produces a correct research *structure*, but it does not yet extract the exact changed disclosure or write a supported investment claim automatically.
+The scanner is now better at answering **where the relevant text changed**, but it still does not reliably answer **what the disclosure means**. It does not autonomously turn an excerpt into a supported statement about orders, qualification, capacity, pricing power, customer wins, or bottleneck status.
 
-The scoring formula is now explicit and versioned, but the existing six component values remain provisional until each material dimension has its own rationale, linked evidence, evidence date, and provenance.
+The `scoreEvidence` schema and enforcement now exist, but the legacy company scores have not been retroactively given invented evidence. They remain visibly under-evidenced until reviewed research is backfilled dimension by dimension.
 
-The next research-quality milestone is therefore **per-dimension score evidence coverage plus semantic disclosure extraction**. That is the point where the system can begin to justify not only its arithmetic, but also the inputs that drive the ranking.
+The next high-value milestone is therefore a semantic disclosure-review layer that converts the surfaced changed excerpts into a precise candidate claim with citation-grade context, while systematically backfilling score evidence for the highest-ranked companies first.

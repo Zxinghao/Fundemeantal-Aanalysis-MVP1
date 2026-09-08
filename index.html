@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="node-cleanup.css">
     <link rel="stylesheet" href="hero-cleanup.css">
     <link rel="stylesheet" href="research-model.css">
+    <link rel="stylesheet" href="analyst-review.css">
   </head>
   <body>
     <header class="hero">
@@ -72,7 +73,7 @@
           </div>
           <div class="review-tools">
             <button id="export-review" type="button">Export Review Decisions</button>
-            <small id="export-status">Review decisions are saved locally first. Export them as JSON before applying approved updates to the official dataset.</small>
+            <small id="export-status">Structured scanner events require a completed Analyst Worksheet before approval. Decisions and human review notes are saved locally first, then exported as JSON for the apply workflow.</small>
           </div>
           <div id="pending-updates" class="pending-list"></div>
         </section>
@@ -108,6 +109,7 @@
     <script src="research-evidence-ui.js"></script>
     <script src="node-details.js"></script>
     <script src="company-flags.js"></script>
+    <script type="module" src="analyst-review.js"></script>
     <script src="review-export.js"></script>
   </body>
 </html>

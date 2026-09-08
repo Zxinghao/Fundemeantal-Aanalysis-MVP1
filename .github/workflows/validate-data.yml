@@ -24,6 +24,7 @@ jobs:
         run: |
           node --check app.js
           node --check research-evidence-ui.js
+          node --check analyst-review.js
           node --check node-details.js
           node --check company-flags.js
           node --check review-export.js
@@ -34,6 +35,7 @@ jobs:
           node --check scripts/openai-research-agent.mjs
           node --check scripts/openai-research-smoke-test.mjs
           node --check scripts/validate-llm-candidates.mjs
+          node --check scripts/analyst-review-model.mjs
           node --check scripts/research-model.mjs
           node --check scripts/web-scan.mjs
           node --check scripts/apply-review-decisions.mjs
@@ -42,9 +44,10 @@ jobs:
           node --check tests/research-pipeline.test.mjs
           node --check tests/semantic-candidate.test.mjs
           node --check tests/llm-research-agent.test.mjs
+          node --check tests/analyst-review-workflow.test.mjs
 
       - name: Run research pipeline regression tests
-        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs
+        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs tests/analyst-review-workflow.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

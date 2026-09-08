@@ -1,0 +1,132 @@
+.analyst-workbench {
+  margin: 12px 0;
+  border: 1px solid rgba(52, 77, 102, 0.18);
+  border-radius: 16px;
+  background: rgba(44, 70, 96, 0.035);
+  overflow: hidden;
+}
+
+.analyst-workbench summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.analyst-readiness {
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: rgba(173, 95, 35, 0.1);
+  color: var(--accent);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.analyst-readiness.ready {
+  background: rgba(44, 116, 76, 0.1);
+  color: var(--green);
+}
+
+.analyst-form {
+  display: grid;
+  gap: 10px;
+  padding: 0 14px 14px;
+  border-top: 1px solid rgba(52, 77, 102, 0.12);
+}
+
+.analyst-intro {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.analyst-field {
+  display: grid;
+  gap: 5px;
+}
+
+.analyst-field > span,
+.analyst-check > span {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.analyst-field input,
+.analyst-field textarea,
+.analyst-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  padding: 9px 10px;
+}
+
+.analyst-field textarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.analyst-check {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 8px;
+  border: 1px solid rgba(44, 116, 76, 0.18);
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(44, 116, 76, 0.04);
+}
+
+.analyst-check input {
+  margin-top: 2px;
+}
+
+.analyst-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.analyst-actions button {
+  font-size: 12px;
+}
+
+.analyst-status {
+  min-height: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.analyst-status.success {
+  color: var(--green);
+}
+
+.analyst-status.warning {
+  color: var(--accent);
+}
+
+.analyst-status.error {
+  color: var(--red);
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .analyst-workbench summary {
+    align-items: flex-start;
+  }
+
+  .analyst-actions {
+    display: grid;
+  }
+}

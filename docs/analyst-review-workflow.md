@@ -1,0 +1,54 @@
+# Analyst Review Workflow
+
+The Review Desk is the human authority boundary between machine-generated research candidates and canonical industry data.
+
+## Golden path
+
+`source change -> watched-context evidence -> deterministic candidate -> optional LLM candidate -> primary-source verification -> human claim -> explicit patch -> export schema v2 -> apply -> promotion`
+
+Machine outputs remain review aids. A deterministic or LLM candidate never becomes a supported claim by itself.
+
+## Analyst Worksheet
+
+Structured scanner events include an Analyst Worksheet. Before an event can be approved, the reviewer must:
+
+1. open the primary source and confirm the relevant disclosure in context;
+2. write the verified fact / claim in their own words;
+3. explain why the evidence supports that claim;
+4. assign human confidence (`low`, `medium`, or `high`);
+5. choose the canonical patch disposition.
+
+The `Use AI candidate as draft` control only copies candidate text into editable fields. It does not mark the source verified or save the worksheet.
+
+## Patch dispositions
+
+Supported v1 worksheet patch modes are deliberately narrow:
+
+- `none`: the claim is supported but no canonical data field should change; a reason is required;
+- `recent_update`: append a reviewed company update;
+- `recent_catalyst`: replace a company's recent-catalyst signal;
+- `score`: replace one score and its matching `scoreEvidence` record atomically;
+- `node_summary`: replace one supply-chain node summary.
+
+Score changes always produce two operations in the same patch: the score replacement and the dimension-specific evidence record. The evidence record contains rationale, source IDs, evidence date, and reviewed-research provenance.
+
+## Review export schema v2
+
+New Review Desk exports use `schemaVersion: "2.0"`. For structured approvals, the apply step requires:
+
+- `claim.status = supported`;
+- `humanReview.status = verified`;
+- `humanReview.primarySourceVerified = true`;
+- a human finding, rationale, and confidence;
+- a valid research packet;
+- if the patch is executable, every operation must pass the existing atomic patch preflight.
+
+If any v2 authority or patch check fails, the apply workflow fails rather than recording a partial or silently skipped approval.
+
+Legacy review exports without schema v2 remain readable for backward compatibility, but all newly generated exports use the stricter v2 path.
+
+## Storage and current limitation
+
+The worksheet is saved in browser `localStorage` until it is exported. The exported JSON carries both the analyst-review snapshot and the resulting `researchPacket.humanReview` record so the review provenance can be persisted by the apply workflow.
+
+This is still a static-site workflow: there is no multi-user identity, server-side draft store, or concurrent review locking yet. Those should only be added when collaboration becomes a real requirement.

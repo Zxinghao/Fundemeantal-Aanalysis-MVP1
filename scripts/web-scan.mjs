@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { buildResearchPacket, evidenceLevelForSourceType } from "./research-model.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const watchlistPath = path.join(root, "data", "source-watchlist.json");
@@ -23,15 +24,6 @@ const impactByNode = {
   laser: "technology_change",
   "external-light-source": "technology_change",
   "packaging-test": "capacity_change"
-};
-
-const evidenceBySourceType = {
-  company_official: "A",
-  government: "A",
-  exchange_filing: "A",
-  industry_media: "B",
-  media: "B",
-  placeholder: "C"
 };
 
 function today() {
@@ -96,32 +88,41 @@ function buildAnalysis({ source, hits }) {
     matchedKeywords,
     affectedTarget,
     analystSummary: hasStrongMatch
-      ? "The changed page matched multiple watched terms. Review whether the company role, bottleneck thesis, recent updates, or source evidence should change."
+      ? "The changed page matched multiple watched terms. Verify the exact disclosure before changing the thesis or database."
       : "The page changed, but keyword evidence is limited. Confirm whether the change is material before approving.",
     recommendedChecks: [
       "Open the source URL and identify the exact changed disclosure.",
-      "Check whether the update affects a node, company role, bottleneck judgement, or recent catalyst.",
-      "Approve only if the evidence is specific enough to update the official database."
+      "Separate the observed evidence from the investment claim.",
+      "Approve a database patch only when the claim is specific and evidence-backed."
     ],
     suggestedDatabaseAction: source.companyId
-      ? `If material, append a reviewed recent update to companies.${source.companyId}.recentUpdates.`
-      : `If material, update the summary or thesis for node ${source.nodeId}.`
+      ? `Review companies.${source.companyId} and prepare an explicit patch only if the disclosure changes a supported field.`
+      : `Review node ${source.nodeId} and prepare an explicit patch only if the disclosure changes the node thesis.`
   };
 }
 
-function eventFromSource({ industryId, source, title, hits, date, detectedAt }) {
+export function eventFromSource({ industryId, source, title, hits, date, detectedAt }) {
+  const id = eventId(industryId, date, source);
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
-  const hitText = hits.length ? hits.join(", ") : source.watchFor.join(", ");
+  const hitText = hits.length ? hits.join(", ") : (source.watchFor || []).join(", ");
+  const researchPacket = buildResearchPacket({
+    eventId: id,
+    source,
+    title,
+    hits,
+    impactType,
+    detectedAt
+  });
 
   return {
-    id: eventId(industryId, date, source),
+    id,
     sourceType: "ai_scan",
     status: "pending",
     industryId,
     companyId: source.companyId,
     nodeId: source.nodeId,
     impactType,
-    summary: `${source.name} changed. The page title is "${title}" and the scan matched ${hitText}. Review whether the change affects the supply chain thesis.`,
+    summary: `${source.name} changed. The page title is "${title}" and the scan matched ${hitText || "no configured keyword"}. Verify the exact disclosure before changing the supply-chain thesis.`,
     sourceUrl: source.url,
     sourceNote: "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
     sourceIds: [source.id],
@@ -130,16 +131,10 @@ function eventFromSource({ industryId, source, title, hits, date, detectedAt }) 
     reviewedAt: null,
     detectedAt,
     lastSeenAt: detectedAt,
-    confidence: hits.length ? "medium" : "low",
-    evidenceLevel: evidenceBySourceType[source.sourceType] || "B",
+    confidence: researchPacket.claim.confidence,
+    evidenceLevel: evidenceLevelForSourceType(source.sourceType),
     analysis: buildAnalysis({ source, hits }),
-    proposedActions: [
-      {
-        target: source.companyId ? `companies.${source.companyId}.signals.recentCatalyst` : `nodes.${source.nodeId}.summary`,
-        action: "review",
-        reason: "The page changed. Review the evidence before updating recent catalysts, node descriptions, or scores."
-      }
-    ]
+    researchPacket
   };
 }
 
@@ -182,7 +177,7 @@ export function mergeEventStore(existingEvents, detectedEvents) {
 async function fetchSource(source) {
   const response = await fetch(source.url, {
     headers: {
-      "User-Agent": "FinLAB supply-chain scanner/0.2"
+      "User-Agent": "FinLAB supply-chain scanner/0.3"
     }
   });
 

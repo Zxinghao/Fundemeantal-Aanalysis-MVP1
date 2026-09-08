@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { buildResearchPacket, evidenceLevelForSourceType } from "./research-model.mjs";
+import { buildChangeEvidence, buildWatchSnapshot } from "./disclosure-diff.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const watchlistPath = path.join(root, "data", "source-watchlist.json");
@@ -62,8 +63,7 @@ function keywordHits(text, keywords) {
 }
 
 function eventId(industryId, date, source) {
-  const target = source.companyId || source.nodeId || source.id;
-  return `web-${industryId}-${date}-${target}`;
+  return `web-${industryId}-${date}-${source.id}`;
 }
 
 export function cadenceDue(cadence, previous, checkedAt) {
@@ -77,41 +77,66 @@ export function cadenceDue(cadence, previous, checkedAt) {
   return currentTime - previousTime >= WEEKLY_INTERVAL_MS;
 }
 
-function buildAnalysis({ source, hits }) {
+function relevantChangeCount(changeEvidence) {
+  return Number(changeEvidence?.addedCount || 0) + Number(changeEvidence?.removedCount || 0);
+}
+
+function buildAnalysis({ source, hits, changeEvidence }) {
   const matchedKeywords = hits.length ? hits : [];
-  const hasStrongMatch = matchedKeywords.length >= 2;
-  const reviewPriority = source.sourceType === "company_official" && hasStrongMatch ? "high" : "medium";
+  const relevantChanges = relevantChangeCount(changeEvidence);
+  const comparable = changeEvidence?.status === "comparable";
+  const hasRelevantDiff = comparable && relevantChanges > 0;
+  const reviewPriority = source.sourceType === "company_official" && hasRelevantDiff
+    ? "high"
+    : comparable && relevantChanges === 0
+      ? "low"
+      : "medium";
   const affectedTarget = source.companyId ? `company:${source.companyId}` : `node:${source.nodeId}`;
 
   return {
     reviewPriority,
     matchedKeywords,
     affectedTarget,
-    analystSummary: hasStrongMatch
-      ? "The changed page matched multiple watched terms. Verify the exact disclosure before changing the thesis or database."
-      : "The page changed, but keyword evidence is limited. Confirm whether the change is material before approving.",
+    changeEvidenceStatus: changeEvidence?.status || "unknown",
+    analystSummary: hasRelevantDiff
+      ? `The page changed and ${relevantChanges} keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.`
+      : comparable
+        ? "The page changed, but watched contexts did not. Treat this as low-priority until the source shows a material disclosure."
+        : "The page changed, but a comparable watched-context baseline is not available. Review the source manually and use the new snapshot as the next baseline.",
     recommendedChecks: [
-      "Open the source URL and identify the exact changed disclosure.",
-      "Separate the observed evidence from the investment claim.",
-      "Approve a database patch only when the claim is specific and evidence-backed."
+      "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+      "Separate the observed text change from the investment claim it may support.",
+      "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
     ],
     suggestedDatabaseAction: source.companyId
-      ? `Review companies.${source.companyId} and prepare an explicit patch only if the disclosure changes a supported field.`
-      : `Review node ${source.nodeId} and prepare an explicit patch only if the disclosure changes the node thesis.`
+      ? `Review companies.${source.companyId}; prepare an explicit evidence-backed patch only if the disclosure changes a supported field.`
+      : `Review node ${source.nodeId}; prepare an explicit patch only if the disclosure changes the node thesis.`
   };
 }
 
-export function eventFromSource({ industryId, source, title, hits, date, detectedAt }) {
+function changeSummary(source, title, changeEvidence) {
+  if (changeEvidence?.status === "comparable") {
+    const count = relevantChangeCount(changeEvidence);
+    if (count > 0) {
+      return `${source.name} changed. The scanner isolated ${changeEvidence.addedCount} added and ${changeEvidence.removedCount} removed keyword-focused context window(s) on "${title}". Review the excerpts before changing the supply-chain thesis.`;
+    }
+    return `${source.name} changed, but its keyword-focused context windows did not change on "${title}". The change may be unrelated page boilerplate or dynamic content.`;
+  }
+
+  return `${source.name} changed on "${title}", but the previous watched-context baseline is unavailable. Current relevant excerpts were captured for future comparison; manual review is required.`;
+}
+
+export function eventFromSource({ industryId, source, title, hits, date, detectedAt, changeEvidence = null }) {
   const id = eventId(industryId, date, source);
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
-  const hitText = hits.length ? hits.join(", ") : (source.watchFor || []).join(", ");
   const researchPacket = buildResearchPacket({
     eventId: id,
     source,
     title,
     hits,
     impactType,
-    detectedAt
+    detectedAt,
+    changeEvidence
   });
 
   return {
@@ -122,9 +147,9 @@ export function eventFromSource({ industryId, source, title, hits, date, detecte
     companyId: source.companyId,
     nodeId: source.nodeId,
     impactType,
-    summary: `${source.name} changed. The page title is "${title}" and the scan matched ${hitText || "no configured keyword"}. Verify the exact disclosure before changing the supply-chain thesis.`,
+    summary: changeSummary(source, title, changeEvidence),
     sourceUrl: source.url,
-    sourceNote: "Candidate event generated after the web scanner detected a page-content fingerprint change. Human review is still required.",
+    sourceNote: "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
     sourceIds: [source.id],
     submittedBy: "ai",
     reviewDecision: null,
@@ -133,7 +158,8 @@ export function eventFromSource({ industryId, source, title, hits, date, detecte
     lastSeenAt: detectedAt,
     confidence: researchPacket.claim.confidence,
     evidenceLevel: evidenceLevelForSourceType(source.sourceType),
-    analysis: buildAnalysis({ source, hits }),
+    changeEvidence,
+    analysis: buildAnalysis({ source, hits, changeEvidence }),
     researchPacket
   };
 }
@@ -177,7 +203,7 @@ export function mergeEventStore(existingEvents, detectedEvents) {
 async function fetchSource(source) {
   const response = await fetch(source.url, {
     headers: {
-      "User-Agent": "FinLAB supply-chain scanner/0.3"
+      "User-Agent": "FinLAB supply-chain scanner/0.4"
     }
   });
 
@@ -204,8 +230,15 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
 
   try {
     const page = await fetchSource(source);
-    const changed = !previous || previous.hash !== page.hash;
+    const hasBaseline = Boolean(previous?.hash);
+    const changed = hasBaseline && previous.hash !== page.hash;
     const hits = keywordHits(page.text, source.watchFor || []);
+    const watchSnapshot = buildWatchSnapshot(page.text, source.watchFor || [], checkedAt);
+    const changeEvidence = buildChangeEvidence({
+      previousSnapshot: previous?.watchSnapshot,
+      currentSnapshot: watchSnapshot,
+      pageChanged: changed
+    });
 
     cache[source.id] = {
       id: source.id,
@@ -214,13 +247,27 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
       url: source.url,
       title: page.title,
       hash: page.hash,
+      baselineAt: previous?.baselineAt || checkedAt,
+      watchSnapshot,
       lastCheckedAt: checkedAt,
-      lastChangedAt: changed ? checkedAt : previous.lastChangedAt,
+      lastChangedAt: changed ? checkedAt : previous?.lastChangedAt || null,
       lastError: null
     };
 
-    if (!changed) return null;
-    return eventFromSource({ industryId, source, title: page.title, hits, date, detectedAt: checkedAt });
+    // A first successful fetch establishes a baseline; it is not evidence that the
+    // source changed. Existing cache entries without a watched-context snapshot are
+    // upgraded silently when the full-page hash is unchanged.
+    if (!hasBaseline || !changed) return null;
+
+    return eventFromSource({
+      industryId,
+      source,
+      title: page.title,
+      hits,
+      date,
+      detectedAt: checkedAt,
+      changeEvidence
+    });
   } catch (error) {
     cache[source.id] = {
       ...(cache[source.id] || {}),

@@ -6,7 +6,203 @@
     "url": "https://matthey.com/news",
     "title": "News | Johnson Matthey",
     "hash": "9d5e28a2d65261ef88b8d4430f8ed8d8c8fb1a16d2d47216dc4bd1de7f0beb6c",
-    "lastCheckedAt": "2026-09-08T11:19:53.335Z",
+    "baselineAt": "2026-09-08T22:06:30.139Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:30.139Z",
+      "keywords": [
+        "fuel cell",
+        "hydrogen",
+        "catalyst",
+        "MEA",
+        "CCM"
+      ],
+      "segments": [
+        {
+          "hash": "edd7abbe9ceaeb365b8239ae62bae57b97e798272690838c1e413753fc12ee08",
+          "excerpt": "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "4c3e2313349e9cc5fa40cc80da10679be5a2951513541ba8ec2cd221ee326ed2",
+          "excerpt": "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "6a9cf76513faab1918d08d67b18460cd029328b7f884aeb8906d16707ca03476",
+          "excerpt": "g Emissions control Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Life scie…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "96d8aedf678372d086669e912b5b21d710dcb66c70c391d78711a82962d148fe",
+          "excerpt": "bile Solid oxide fuel cells Hydrogen solutions Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Life science technologies Biocatalysis Catalyst screening / optimisation Pharma an…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "ab8f1c4999769039641103289982dc61ecb3c6b87fb239a991294f27f75a20e1",
+          "excerpt": "atalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enab…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "442bea8cb1fe72db84df029e4d24d4842beebdab625ed5a09a56bca1dcdc8f9a",
+          "excerpt": "Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals P…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "198ec8b801dd374807f86ff4af4025eb569a2020bbac8802efada895ae477b83",
+          "excerpt": "mmonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals Petrochemicals Purification for syngas production Purifica…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "6764738433502d9aa64c1d0bc88d408f28ac909c3ee00b6ff7e7632faa7aee93",
+          "excerpt": "control Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Life science technolo…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "6fea4f875f3484f8cf0d6a5218fdd619b4a626afcb1aff42a6ba145f896bed86",
+          "excerpt": "control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Life science technologies Biocatalysis …",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "8553477cf71250226d1edcd6cc99b70c805c9ee5cef8290c2396a6546dfdb933",
+          "excerpt": "neywell Technologies Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals P…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "c98ba15fcdd075f05e75dd56819b239cb419302bfa0e8dea49999217139e6ffb",
+          "excerpt": "2026 Johnson Matthey and Syensqo demonstrate circular recovery of critical materials from hydrogen technologies --> --> --> 04 Mar 2026 Johnson Matthey and Syensqo demonstrate circular recovery of critical materials fro…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "78698a15f95348225af4bed9efd63403815c1d66ce65d2c8e5d20272ed77d842",
+          "excerpt": "2026 Johnson Matthey and Syensqo demonstrate circular recovery of critical materials from hydrogen technologies --> --> --> 23 Feb 2026 Transaction update --> --> --> 23 Feb 2026 Transaction update --> --> --> 19 Feb 20…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "722d0ac4880a676aa569ad706bc1181ece5865a135712dd0fa3df63cfa1bdd5b",
+          "excerpt": "e of industrial innovation --> --> --> 11 Dec 2025 Johnson Matthey officially opens first hydrogen internal combustion engine facility in Gothenburg --> --> --> 11 Dec 2025 Johnson Matthey officially opens first hydroge…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "cf31b051169d90ed1b487b4d0aa4c611d9bb80f91924842e6d1ac359bcd93dc5",
+          "excerpt": "ine facility in Gothenburg --> --> --> 11 Dec 2025 Johnson Matthey officially opens first hydrogen internal combustion engine facility in Gothenburg --> --> --> 20 Nov 2025 Half year results for the six months ended 30t…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "431275e686ddb3190451ff3e56bd7ea669ce63f893e809d5d622725bb1aee96a",
+          "excerpt": "new SAF facility in Texas, USA --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydrogen internal combustion engine testing facility in Gothenburg --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydro…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "5fd764937a449c7df361e9a849f4bf81449817193636edf1897da33feebed722",
+          "excerpt": "testing facility in Gothenburg --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydrogen internal combustion engine testing facility in Gothenburg --> --> 20 Entries &nbsp;Per Page 4 &nbsp;Entries per Page 8 &n…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "e7f011970080ad53c9f378263e41211accf03e2540fcd43d36e62dd00b33658d",
+          "excerpt": "nering with us FIND A PRODUCT Products and markets PGMs and circularity PGM chemicals and catalysts PGM industrial products PGM prices and trading PGM markets PGM refining and recycling Life science technologies Biocata…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "9a613c21b0023766614b23e109dce9feabc79ce9049dce8e9652b18d6cae6d0c",
+          "excerpt": "and trading PGM markets PGM refining and recycling Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid o…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "bd4b12f786562a0f82061d6356aecbc222935bfe850369146a18af882aa94455",
+          "excerpt": "e science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser compon…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "9026d024a74bd3f2a3b53447768995017f7fdd75447b199506b21f7cd8dbfae8",
+          "excerpt": "PRODUCT Products and markets PGMs and circularity PGMs and circularity PGM chemicals and catalysts PGM industrial products PGM prices and trading PGM markets PGM refining and recycling Emissions control Emissions contro…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "fd06ed963ad41b053b27406eb24d5be5c06fad3c571eae81fa315093111c3ea5",
+          "excerpt": "nts Fuel cell components Life science technologies Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Acquired by Honeywell Technologies Acquired by Honeywell Technolo…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "4cd092d6e948e2485c7155b0fc4d32fc4bab817696ee518acbac745794a8ab2a",
+          "excerpt": "e science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Acquired by Honeywell Technologies Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemic…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "c326fd402d037177cc9c491d8aaf9924bce7cb83dd8297f0a662966c6b92e22d",
+          "excerpt": "s acquisition of CORMETECH Inc. --> --> --> 17 Jul 2026 Johnson Matthey completes sale of Catalyst Technologies to Honeywell --> --> --> 17 Jul 2026 Johnson Matthey completes sale of Catalyst Technologies to Honeywell -…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "441c8964af7c1caa6b47403cfee89bc7ff3fa8d8010aafa1a205f089519f6e6d",
+          "excerpt": "alyst Technologies to Honeywell --> --> --> 17 Jul 2026 Johnson Matthey completes sale of Catalyst Technologies to Honeywell --> --> --> 16 Jun 2026 Johnson Matthey selected by Phelan Green for landmark e SAF plant in S…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "76858b8c3dd7d9da53bb681526cf7481a3d63db21f5558fba9c74a88f11b420d",
+          "excerpt": "Financial Officer and Chief Operating Officer --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre clos…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "de9d4ce258605363ac5d8d5e7a556a250a0bd2ad2082a57b1d0a07ebb44fee01",
+          "excerpt": "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> --> 10 Sep 2025 USA BioEnergy secures JM and Honeywell technologies fo…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:30.139Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -16,9 +212,36 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "e40868dddb6a6122a54af07b987bf7c059429cb938de1693a407e05eb73c3477",
-    "lastCheckedAt": "2026-09-08T11:19:54.218Z",
-    "lastChangedAt": "2026-09-08T11:19:54.218Z",
+    "hash": "2b3e897263aaea987e0e3313cf4017a36622f3ba7753a4bb7b00994739224aaf",
+    "baselineAt": "2026-09-08T22:06:30.788Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:30.788Z",
+      "keywords": [
+        "hydrogen",
+        "storage",
+        "commercial vehicle",
+        "tank"
+      ],
+      "segments": [
+        {
+          "hash": "75f61dca3a5b45bd279ba81acbc51f2c8be7e0e932d7676a4a1733c1384f2e98",
+          "excerpt": "Ultra-low emissions Lighting Vehicle electrification Car interiors Sustainable materials Hydrogen mobility Modularity Intelligent seating comfort Seating solutions for electric vehicles Advanced safety seating systems V…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "11c8e65d07c6b27dacf5ce84ec293dd174ae986cd1c9c6619410f974171066f7",
+          "excerpt": "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…",
+          "matchedKeywords": [
+            "commercial vehicle"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:30.788Z",
+    "lastChangedAt": "2026-09-08T22:06:30.788Z",
     "lastError": null
   },
   "garrett-news": {
@@ -28,7 +251,174 @@
     "url": "https://www.garrettmotion.com/news/",
     "title": "Newsroom Garrett Motion - Garrett Motion",
     "hash": "4a6ccba0e6a79f46770e1c11f771375a4fc7978fef63d0a7081fe5f5adfc223a",
-    "lastCheckedAt": "2026-09-08T11:19:55.559Z",
+    "baselineAt": "2026-09-08T22:06:32.629Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:32.629Z",
+      "keywords": [
+        "fuel cell",
+        "compressor",
+        "hydrogen",
+        "electric compressor"
+      ],
+      "segments": [
+        {
+          "hash": "5e01455cd6deda724e4dc1e51b53e44d9076a795028283ab2931f62fc4b25fae",
+          "excerpt": "ins Light Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Compressors Hydrogen Fuel Cell Compressors Industrial Applications Solutions for Marine, Energy and Gas Service Center Locator E-Cooling Compressors f…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "b4a6e443e9fb198632f70a0b0c6c0a63273148b000a2ed20c806e05e957dd98f",
+          "excerpt": "ses Events Calendar Video Hub Zero Emission Technology 3 in 1 E-Axle E-Cooling Compressor Fuel Cell Technology Investors Emission Reduction Technology Award-Winning E-Turbo Technology Electric Compressor for Mild Hybrid…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "1a0fda15efdde28f9472be5e02b06deb4f3e3b23118d6e86a6ff9fe78d82380a",
+          "excerpt": "rcial Vehicles Turbochargers Off-Highway and Large Engine Turbochargers E-Turbos Electric Compressors Zero Emission Technology E-Powertrains Light Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Compressors H…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "9095c465c16588a4ce8c9be5d38d2a9f84a3ed5efd03620d0c26272cac5af017",
+          "excerpt": "Technology E-Powertrains Light Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Compressors Hydrogen Fuel Cell Compressors Industrial Applications Solutions for Marine, Energy and Gas Service Center Locator E-…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "d55b672d92e89af64cc10c07ae8260cab6b2ebaffe335e8c953a87736df58d96",
+          "excerpt": "Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Compressors Hydrogen Fuel Cell Compressors Industrial Applications Solutions for Marine, Energy and Gas Service Center Locator E-Cooling Compressors for HVAC Ga…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "891252d3193e904f1fef27641ec9748d7718f64f7f373da11166fe7297c02b4c",
+          "excerpt": "strial Applications Solutions for Marine, Energy and Gas Service Center Locator E-Cooling Compressors for HVAC Gain expert insights and practical knowledge on the technologies shaping future mobility. Visit the Knowledg…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "18af995e948ea70ca4257c396d1bad74b154653aca50d91ac99391f8e8a9cf61",
+          "excerpt": "nd power-generation markets. READ MORE Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions With the growth of BESS, liquid cooling is critical for ensuring hig…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "8e823d3b6301512c9935156da17505b87f85b10f039fa6e148a63631046be3aa",
+          "excerpt": "ency infrastructure. READ MORE Garrett Motion Showcases Breakthrough Oil-Free Centrifugal Compressor Portfolio at China Refrigeration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal comp…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "2b0e190cf1fe30d2fdb6595245d4d2c141a342fa1d1ea75ce1bffa586dc581e2",
+          "excerpt": "geration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal compressors covering cooling demands from 7 to 500 tons (25 to 1,750 kWc), enabling scalable, high-efficiency cooling architectur…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "30282933d28a5f416ef667a90e1535ee6ad66bc683d76f1d2c0daa4e2a5304f2",
+          "excerpt": "outperforming traditional scroll and screw designs. READ MORE Garrett Motion’s E-Cooling Compressor is Redefining Thermal Management Efficiency &amp; Power for Electric Buses and Trucks in China Truck and Bus HVAC integ…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "55b19afa4e484b878b7fc3ac5532a55a087a6b9e9374eaeebf5071a643a9aa3e",
+          "excerpt": "awarded Garrett volume production of its breakthrough oil-free, foil bearing centrifugal compressor, with start of production in 2027. READ MORE Garrett Motion Introduces Garrett Original MAXLIFE: A New Aftermarket Turb…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "bfd626705de3b348b6e07b095baaed3220f8d0a41283482889f13f0ef0fc105a",
+          "excerpt": "ompany’s mission,&#8230; February 20, 2026 Commercial Vehicles Garrett Motion’s E-Cooling Compressor is Redefining Thermal Management Efficiency &#038; Power for Electric Buses and Trucks in China Truck and Bus HVAC int…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "c5dcc8ef38c4cb1acd0ab0adb3d1b6aa4303450d7aa586a0c000c9ba6509cd0d",
+          "excerpt": "awarded Garrett volume production of its breakthrough oil-free, foil bearing centrifugal compressor, with start of production in&#8230; February 12, 2026 Emission Reduction Garrett Motion Launching First Commercial Appl…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "41c52b1302180eee75c5bdcea531b5633e1c31907c51ee51c592665a5c956f71",
+          "excerpt": "bruary 2, 2026 Zero Emissions Garrett Motion introduces breakthrough oil-free centrifugal compressor technology for HVAC systems at AHR Expo 2026 in Las Vegas. Garrett’s compressors enable a fundamental step-change in e…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "744693b13497d3485bc67c0859c532041febf314d3c637cb904075420d0db9cc",
+          "excerpt": "ntrifugal compressor technology for HVAC systems at AHR Expo 2026 in Las Vegas. Garrett’s compressors enable a fundamental step-change in energy efficiency and use of ultra-low GWP refrigerants. They draw on the company…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "5e4f87ff4c42fb7fe58b5b8dce8ab869f8fb2f39863bc3b59d6c56e452d4c85a",
+          "excerpt": "arrett Motion enter a multiyear strategic partnership to advance next generation oil‑free compressor technology for industrial air compression systems across key verticals,&#8230; April 27, 2026 Zero Emissions Garrett M…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "60688a446db16fdd0c98712400b54d585e523e8ce8f6db33a431a0eeb81cf429",
+          "excerpt": ",&#8230; April 27, 2026 Zero Emissions Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions &nbsp; Powering TONFY’s next generation battery energy storage (BESS…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "ef15a498d32b5dbf48c8558ccf23b64866741fc01bc49c6b29a9f6604288a647",
+          "excerpt": "Press Releases Events Calendar Video Hub Zero Emission Technology 3 in 1 E-Axle E-Cooling Compressor Fuel Cell Technology Investors Emission Reduction Technology Award-Winning E-Turbo Technology Electric Compressor for …",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "316c9bc8ba4dbdb56febe5106869978328bc5eb060ff8f009ff9ff4c2862b839",
+          "excerpt": "hnology Investors Emission Reduction Technology Award-Winning E-Turbo Technology Electric Compressor for Mild Hybrid Vehicles Turbo Technology Off-Highway and Large Engine Turbos How a Turbo Works Alternative Fuels Raci…",
+          "matchedKeywords": [
+            "compressor"
+          ]
+        },
+        {
+          "hash": "f0fb882b773be455ebe98de85e384634c77aed4ea7ffae208586e2519640e398",
+          "excerpt": "-Powertrains Light Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Compressors Hydrogen Fuel Cell Compressors Industrial Applications Solutions for Marine, Energy and Gas Service Center Locator E-Cooling Comp…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "b8f75b958891b9a9532a5436440e3415a2badd7a3483f94ebd958773e3b12310",
+          "excerpt": "way Commercial Vehicles Turbochargers Off-Highway and Large Engine Turbochargers E-Turbos Electric Compressors Zero Emission Technology E-Powertrains Light Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Comp…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        },
+        {
+          "hash": "3161c3448e1d8144ba41dad9c446c26135a3936a25b1312b64ab670ec9b23ca3",
+          "excerpt": "Cell Technology Investors Emission Reduction Technology Award-Winning E-Turbo Technology Electric Compressor for Mild Hybrid Vehicles Turbo Technology Off-Highway and Large Engine Turbos How a Turbo Works Alternative Fu…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:32.629Z",
     "lastChangedAt": "2026-08-28T18:43:05.919Z",
     "lastError": null
   },
@@ -80,7 +470,231 @@
     "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
     "title": "NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs",
     "hash": "ab33f61b19ae4c19b38503181c05a7fd254489de449abb411f323aaed3bb74f8",
-    "lastCheckedAt": "2026-09-08T11:20:00.265Z",
+    "baselineAt": "2026-09-08T22:06:33.750Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:33.750Z",
+      "keywords": [
+        "Spectrum-X",
+        "Quantum-X",
+        "co-packaged optics",
+        "silicon photonics",
+        "AI factories"
+      ],
+      "segments": [
+        {
+          "hash": "09e30c63a5f9316a7f50018e587e89961f000d4bafef19287e2eb7dccb9016a8",
+          "excerpt": "NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs Skip to main content Skip to main content News Events &am",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "4b1fa86e4dff5a55ec880d089960b088c90515d1303efb802798e24aedeac82f",
+          "excerpt": "uest Information FAQs Email Alerts RSS Application Catalog View all news NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs March 18, 2025 Download th…",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "e4eb05a9ebf731e3eb3cc664b872d2c448d1753513f841e358b8589ee2c340bb",
+          "excerpt": "SAN JOSE, Calif., March 18, 2025 (GLOBE NEWSWIRE) -- GTC -- NVIDIA today unveiled NVIDIA Spectrum-X™ and NVIDIA Quantum-X silicon photonics networking switches, which enable AI factories to connect millions of GPUs acro…",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "5605c7c683fc03d398f39109165267a623e53fd0dbbbf183c4440cff1864ac27",
+          "excerpt": "tories.” NVIDIA silicon photonics networking switches are available as part of the NVIDIA Spectrum-X Photonics Ethernet and NVIDIA Quantum-X Photonics InfiniBand platforms. The Spectrum-X Ethernet networking platform de…",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "bc5b1c8fae6371360b6cce72c263c321921847242a00832841d218547d6a0e14",
+          "excerpt": "IA Spectrum-X Photonics Ethernet and NVIDIA Quantum-X Photonics InfiniBand platforms. The Spectrum-X Ethernet networking platform delivers superior performance and 1.6x bandwidth density compared with traditional Ethern…",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "d78fd5cab8ae135e32194a817832fecf56d80125886184abeb9f9a27103d39ba",
+          "excerpt": "enant, hyperscale AI factories, including the largest supercomputer in the world . NVIDIA Spectrum-X Photonics switches include multiple configurations, including 128 ports of 800Gb/s or 512 ports of 200Gb/s, delivering…",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "a6218932f0b5d48a7dd89b441b9ac48cdb459b9b3f78c57e57fd9d10eff8e9b0",
+          "excerpt": "X Photonics InfiniBand switches are expected to be available later this year, with NVIDIA Spectrum-X Photonics Ethernet switches coming in 2026 from leading infrastructure and system vendors. Learn more by watching the …",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "8a0809e013e44a94862b9ecdbb65692107e7b170e27e044028fb84741c2d58e0",
+          "excerpt": "ances. © 2025 NVIDIA Corporation. All rights reserved. NVIDIA, the NVIDIA logo and NVIDIA Spectrum-X are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and p…",
+          "matchedKeywords": [
+            "Spectrum-X"
+          ]
+        },
+        {
+          "hash": "430d8ba6fdd4ca683bfe47c8f7eae0c6132164c074f103aeb612dd06e7952caf",
+          "excerpt": "h 18, 2025 (GLOBE NEWSWIRE) -- GTC -- NVIDIA today unveiled NVIDIA Spectrum-X™ and NVIDIA Quantum-X silicon photonics networking switches, which enable AI factories to connect millions of GPUs across sites while drastic…",
+          "matchedKeywords": [
+            "Quantum-X"
+          ]
+        },
+        {
+          "hash": "4bc260196e5bedfe35e8c24eb18d122b1ddc7cf56d38ef743704c5ffae8d8180",
+          "excerpt": "ing switches are available as part of the NVIDIA Spectrum-X Photonics Ethernet and NVIDIA Quantum-X Photonics InfiniBand platforms. The Spectrum-X Ethernet networking platform delivers superior performance and 1.6x band…",
+          "matchedKeywords": [
+            "Quantum-X"
+          ]
+        },
+        {
+          "hash": "533e732757c3ddf910936fb95563a570589487fd40d5001569561fce2b951071",
+          "excerpt": "512 ports of 800Gb/s or 2,048 ports of 200Gb/s, for a total throughput of 400Tb/s. NVIDIA Quantum-X Photonics switches provide 144 ports of 800Gb/s InfiniBand based on 200Gb/s SerDes and use a liquid-cooled design to ef…",
+          "matchedKeywords": [
+            "Quantum-X"
+          ]
+        },
+        {
+          "hash": "86bd1e6d87557f4ae77bc3732c101935842abe1ec465d63a78ffa011dcc9ebd4",
+          "excerpt": "and use a liquid-cooled design to efficiently cool the onboard silicon photonics. NVIDIA Quantum-X Photonics switches offer 2x faster speeds and 5x higher scalability for AI compute fabrics compared with the previous ge…",
+          "matchedKeywords": [
+            "Quantum-X"
+          ]
+        },
+        {
+          "hash": "839b336af2fbac1ad7e38052fcdbb95b1356a5453560c56b6e0054bf7a183975",
+          "excerpt": "dustry leaders including Coherent, Eoptolink, Fabrinet and Innolight. Availability NVIDIA Quantum-X Photonics InfiniBand switches are expected to be available later this year, with NVIDIA Spectrum-X Photonics Ethernet s…",
+          "matchedKeywords": [
+            "Quantum-X"
+          ]
+        },
+        {
+          "hash": "aa72b871fc7900a629ad3f9c3000215087168c0059de2ae692880ad69ea38c63",
+          "excerpt": "NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs Skip to main content Skip to main content News Events &amp; Presentations Even…",
+          "matchedKeywords": [
+            "co-packaged optics"
+          ]
+        },
+        {
+          "hash": "6f0d32d6ee584ae76103f68be68cce015087c6c9b4b4026e4861c14018e4acff",
+          "excerpt": "Email Alerts RSS Application Catalog View all news NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs March 18, 2025 Download this Press Release PDF F…",
+          "matchedKeywords": [
+            "co-packaged optics"
+          ]
+        },
+        {
+          "hash": "bef93fec8397f336c108d5ed211549f8e242e10637218db49c00feb7803aab63",
+          "excerpt": "(GLOBE NEWSWIRE) -- GTC -- NVIDIA today unveiled NVIDIA Spectrum-X™ and NVIDIA Quantum-X silicon photonics networking switches, which enable AI factories to connect millions of GPUs across sites while drastically reduci…",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "2869c8099776925db11472e111c68adccf8efcb5dc469f33c719f144d9b2185d",
+          "excerpt": "e reinvented to keep pace,” said Jensen Huang, founder and CEO of NVIDIA. “By integrating silicon photonics directly into switches, NVIDIA is shattering the old limitations of hyperscale and enterprise networks and open…",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "226ff5a9dcf21afd208f163ead543fae8a60b1883b565bef35554ff565223d1f",
+          "excerpt": "erscale and enterprise networks and opening the gate to million-GPU AI factories.” NVIDIA silicon photonics networking switches are available as part of the NVIDIA Spectrum-X Photonics Ethernet and NVIDIA Quantum-X Phot…",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "9d06700803eb53f0f7873bedf125ec21fa6e89f46336f8ea0cb3cf86f86e94e2",
+          "excerpt": "nd based on 200Gb/s SerDes and use a liquid-cooled design to efficiently cool the onboard silicon photonics. NVIDIA Quantum-X Photonics switches offer 2x faster speeds and 5x higher scalability for AI compute fabrics co…",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "2e508d931aed25d917ff98c2b389e7c9110e516d634594fa1644da1d4cdc67e4",
+          "excerpt": "AI compute fabrics compared with the previous generation. A Networked Ecosystem NVIDIA’s silicon photonics ecosystem includes TSMC, Browave, Coherent, Corning Incorporated , Fabrinet, Foxconn, Lumentum, SENKO, SPIL, Sum…",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "f9dd054c75478ad912cdf2c7b7a344ec42b8a790fb335097def25d381702dc53",
+          "excerpt": "equired for next-generation workloads,” said C. C. Wei, chairman and CEO of TSMC. “TSMC’s silicon photonics solution combines our strengths in both cutting-edge chip manufacturing and TSMC-SoIC 3D chip stacking to help …",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "66eed2a35e39a1ec3c73cb9173c127ee88da8398b660b1e2b6ceaa9e2fd7c15a",
+          "excerpt": "third parties adopting or offering NVIDIA’s products and technologies; and by integrating silicon photonics directly into switches, NVIDIA is shattering the old limitations of hyperscale and enterprise networks and open…",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "bae3cd1763db14bc4b283462b199789c38e1a30b1d60118c9a45af9b81c927b8",
+          "excerpt": "https://www.globenewswire.com/NewsRoom/AttachmentNg/fff1c2c4-5853-4e6f-a262-e41e95d2301a Silicon Photonics Networking NVIDIA has achieved the fusion of electronic circuits and optical communications at massive scale wit…",
+          "matchedKeywords": [
+            "silicon photonics"
+          ]
+        },
+        {
+          "hash": "8de7cff714b0001c11c11116347d39b708b3ce388b8abc822f360757ed3e7fb0",
+          "excerpt": "- NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs Skip to main content Skip to main content News Events &amp; Presentations Events &amp; Presentati…",
+          "matchedKeywords": [
+            "AI factories"
+          ]
+        },
+        {
+          "hash": "a2971cf0afcc47b6cd345307f3f3975794c89baa9e8d1bc0b4ff582c98e7bcd0",
+          "excerpt": "ws NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs March 18, 2025 Download this Press Release PDF Format (opens in new window) 1.6 Terabits Per Sec…",
+          "matchedKeywords": [
+            "AI factories"
+          ]
+        },
+        {
+          "hash": "1063ab38b0389e2efa88604c10ad10bc5fc8b9630392d6dcb64a649d78a9db64",
+          "excerpt": "erabits Per Second Per Port Switches to Deliver 3.5x Energy Savings and 10x Resilience in AI Factories Joint Inventions and Collaborations With TSMC, Coherent, Corning Incorporated, Foxconn, Lumentum and SENKO to Create…",
+          "matchedKeywords": [
+            "AI factories"
+          ]
+        },
+        {
+          "hash": "3ab45f0facba7c74a5d4484861a9215736fc19f203a7dd8b9517a2a3faf62479",
+          "excerpt": "IDIA Spectrum-X™ and NVIDIA Quantum-X silicon photonics networking switches, which enable AI factories to connect millions of GPUs across sites while drastically reducing energy consumption and operational costs. NVIDIA…",
+          "matchedKeywords": [
+            "AI factories"
+          ]
+        },
+        {
+          "hash": "dad745f439eda3ea34d10fba12215a293838723277da14f856d4700966cdf396",
+          "excerpt": "chieved the fusion of electronic circuits and optical communications at massive scale. As AI factories grow to unprecedented sizes, networks must evolve to keep pace. NVIDIA photonics switches are the world’s most advan…",
+          "matchedKeywords": [
+            "AI factories"
+          ]
+        },
+        {
+          "hash": "aef300ff5a35d98842103571e863df81ffdfe9c26ae651129c1313024296de59",
+          "excerpt": "etwork resiliency at scale and 1.3x faster deployment compared with traditional methods. “AI factories are a new class of data centers with extreme scale, and networking infrastructure must be reinvented to keep pace,” …",
+          "matchedKeywords": [
+            "AI factories"
+          ]
+        },
+        {
+          "hash": "290f78ef261746c17aa2a74ccda186e0a3feaef39f97d35702e3efcfb1769eda",
+          "excerpt": "old limitations of hyperscale and enterprise networks and opening the gate to million-GPU AI factories.” NVIDIA silicon photonics networking switches are available as part of the NVIDIA Spectrum-X Photonics Ethernet and…",
+          "matchedKeywords": [
+            "AI factories"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:33.750Z",
     "lastChangedAt": "2026-07-24T08:42:43.671Z",
     "lastError": null
   },
@@ -91,7 +705,28 @@
     "url": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics",
     "title": "Co-Packaged Optics",
     "hash": "48d8d71b939b85393d1df33eef2b4c8927add307c13ae88de3629bb5311b6f85",
-    "lastCheckedAt": "2026-09-08T11:20:01.280Z",
+    "baselineAt": "2026-09-08T22:06:34.846Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:34.846Z",
+      "keywords": [
+        "co-packaged optics",
+        "pluggable laser source",
+        "DSP",
+        "switch ASIC",
+        "packaging"
+      ],
+      "segments": [
+        {
+          "hash": "733b827f0294ffbd45d97af826cb07d84de670230c4a887d702ce16b6e0fbdc3",
+          "excerpt": "Co-Packaged Optics",
+          "matchedKeywords": [
+            "co-packaged optics"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:34.846Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -102,7 +737,231 @@
     "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
     "title": "Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell",
     "hash": "58691e10c003b6aeff0a66703379d73400d8201e7a45c545303525cb6848401c",
-    "lastCheckedAt": "2026-09-08T11:20:01.335Z",
+    "baselineAt": "2026-09-08T22:06:34.938Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:34.938Z",
+      "keywords": [
+        "optical DSP",
+        "PAM4",
+        "1.6T",
+        "AI infrastructure",
+        "data center"
+      ],
+      "segments": [
+        {
+          "hash": "e5ec95d3d70d6dd473dce6d36a30dcf299e50d8dfcd4f0051c80aa26e4286c7c",
+          "excerpt": "Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell Close Close Skip to content PRODUCTS COMPANY SUPPORT English 中文 (Chinese) 日本語 (Japanese) Login",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "3645b77945ff7bc116033a1179ae4495a18ff2af553193273934e6dca882c003",
+          "excerpt": "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "d2c5e7e686644f24eab6a3f614656ccff3e74d772a7ab08d16fe0454f0dfe1d1",
+          "excerpt": "Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the Modern AI Infrastructure The explosion of AI, cloud and hyperscal…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "e7ca5c66c374874d309bd54424e40c0688685156beea66ae889170957c7736da",
+          "excerpt": "ving networks to new extremes. As bandwidth needs surge beyond 800G and move toward 1.6T, optical DSPs are the foundation enabling high-throughput, low-latency, low-power and resilient optical links. Marvell® is at the …",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "db65fd9b2208aaae39f1c172f4ac1a6753ad87c9a65ec9eec2376addd71b6395",
+          "excerpt": "a transmission across every distance regime in modern AI infrastructure. Growing Need for Optical DSPs Types of Optical DSPs Leadership &amp; Innovation DSP Products Awards Use Cases Marvell Vision FAQs Why Are Optical …",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "e3495ae39ac73f9c50cfa68b0e466c6fd406c2991a5f8b67939b74696cbb0ce7",
+          "excerpt": "every distance regime in modern AI infrastructure. Growing Need for Optical DSPs Types of Optical DSPs Leadership &amp; Innovation DSP Products Awards Use Cases Marvell Vision FAQs Why Are Optical DSPs Essential for AI …",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "4730caf4b7839070be400e4387def10701806513917ae00446314e5a947bb8c5",
+          "excerpt": "SPs Leadership &amp; Innovation DSP Products Awards Use Cases Marvell Vision FAQs Why Are Optical DSPs Essential for AI Infrastructure? AI workloads generate massive data flows between AI servers, network switches stora…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "edec2bf7e08235aec06a96ab7563b6d8721cecd8dcf838e76bf1f950cf99e5ab",
+          "excerpt": "rconnects can’t meet the bandwidth and reach required inside and between AI data centers. Optical DSPs are at the heart of the pluggable optical modules that enable data transmission over fiberoptic cables. They convert…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "f6591e640e378b756d4733297a14aa767920088d628a05e7c9501ff3e82ebf1f",
+          "excerpt": "across data center campuses and between geographically dispersed data centers. What is an optical DSP? An optical digital signal processor (DSP) converts high-speed electrical data into optical signals and corrects erro…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "02ababdeae64e25a9773f69bbcc405102c6fb022fb672fa5b90cc68910e39b28",
+          "excerpt": "l data into optical signals and corrects errors to ensure signal integrity over distance. Optical DSPs are used in the pluggable optical modules essential for enabling high-bandwidth, low-latency and power-efficient opt…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "4c9d9ae67e0117b84b59cacdbb740a5bd15d0e12dc5312371adb076ac3508a1d",
+          "excerpt": "w-latency and power-efficient optical links in AI, cloud and data center networks. How do optical DSPs differ from copper links? Optical DSPs, and the optical modules in which they’re used, transmit data over fiber in t…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "f0f903afa9a31af0dd2937888dae3917e6d0c1c7169a4c96dba7b757771108b5",
+          "excerpt": "inks in AI, cloud and data center networks. How do optical DSPs differ from copper links? Optical DSPs, and the optical modules in which they’re used, transmit data over fiber in the form of light, whereas copper interc…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "7ab7e1a4efc9498f0fdf90180a0529467e8bf474cb828fef177afd8fd86e2e68",
+          "excerpt": "copper interconnects only suitable for short-reach connections. Optical modules based on optical DSPs, meanwhile, are used for distances of tens of meters to thousands of kilometers. What Are the Types of Optical DSPs? …",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "6b091f4004711100a8317feb587d30bf9f4ec7977cd515a0b50a2ae81928a1ad",
+          "excerpt": "re used for distances of tens of meters to thousands of kilometers. What Are the Types of Optical DSPs? PAM4 DSPs: Inside the Data Center These devices are optimized for interconnect distances up to about 500m within cl…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "bfeb96e79c3d97f390a4e518f3a4a3eb3c0b950e7a7ef58b8962a5e5a331e17e",
+          "excerpt": "er per bit) as interconnect bandwidth requirements rise. Marvell Leadership and Legacy in Optical DSP Innovation Marvell optical leadership is grounded in a long history of system design, silicon photonics and digital s…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "376fed8daf6a52595b6be643cc52f3f39eae8ad2cff13688fa7e6df00ea084fd",
+          "excerpt": "ion of Inphi Corporation (acquired April 2021). The Inphi acquisition brought world-class optical DSP IP and engineering talent into Marvell; the combined capabilities enabled Marvell to accelerate the development of bo…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "1a9e980a31530521a854de4c7bf245416ccbd7e41e5f14e7d7d346c6e2cfd943",
+          "excerpt": "rrier markets. Recent product announcements illustrate the leading-edge nature of Marvell optical DSP portfolio: the 3nm Marvell® Ara 1.6 Tbps PAM4 platform, the Marvell® Aquila 1.6 Tbps O-band optimized coherent-lite p…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "b47a41000fa508e7c80bd103dbe78efd5cb916d77a5286a7d10ab6e0ffeef2b4",
+          "excerpt": "d, energy-efficient optical interconnect solutions delivered at scale. LEARN MORE Marvell Optical DSP Product Table Product Type Products Key Specifications Primary Use Case PAM DSPs Ara, Nova, Spica, Perseus, Porrima, …",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "bfce622789760b156fbffdf13d67acecbb4458686bff1fdeb5995739f60f7727",
+          "excerpt": "compute fabrics Awards and Industry Recognition The cutting-edge work Marvell has done in optical DSPs, next-generation interconnects and pluggable optics continues to gain industry validation. Below are some of the key…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "9bfbb8b9f2ac3d111df32ff33fa0a534f1bb3e0d56af434a8d0775310f4f72bd",
+          "excerpt": "leader in connectivity innovation: Leading EDGE Award (2025) : The Marvell Ara 1.6T PAM4 optical DSP (built using 3nm process technology) was selected as the overall Leading EDGE winner, recognizing design innovation in…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "eb1d95ffb6b19497dc4148f65f2a1ab5ba8fa2f2869f9f6032984994022995f0",
+          "excerpt": "s. Lightwave Innovation Awards (2021-2025) : For five consecutive years, multiple Marvell optical DSP and connectivity products or product lines received honors, showcasing the company’s leadership across the optical ec…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "8ec0ceed5a21472bb0e8fdeae391818ae6eab21700908ed8ea26065da8b47a21",
+          "excerpt": "ith awards. Electronic Products 2024 Products of the Year : The 5nm Marvell® Spica Gen2-T optical DSP was selected for its low-power 800G operation. Most Innovative Pluggable Transceiver / Co-packaged Module : At ECOC 2…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "ae9e54eaf1ac459cd3701ce3347e68c15c91849bfb68650006355e2f8f0647a4",
+          "excerpt": "contribute to its growing authority and influence in AI infrastructure. Marvell 1.6 Tbps Optical DSP Solutions Application DESCRIPTION Products Campus Connects buildings in large data center campuses over distances of 2…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "3301c90af06d97506c97c397a049ff1c901ea0da5ca1424c7bb8547fa3ab7a61",
+          "excerpt": "s of optical performance, ensuring that every bit in the AI era moves faster and greener. Optical DSP FAQs How do DSP chips work inside optical transceivers? DSP chips convert electrical data into optical signals, corre…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "3b55267c28fb4cd760d9d4e23fef97c06cf38c22617b462e1581a3b46738f483",
+          "excerpt": "erformance-optimized for 2–20km campus connections. How does Marvell ensure efficiency in optical DSPs? Marvell uses process-node leadership, architectural optimization, and advanced IP to ensure its optical DSPs are ef…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "7373299b916617ac0ab1e968d005a434e8cc116d47b268fa070ecba9a565fbb8",
+          "excerpt": "l uses process-node leadership, architectural optimization, and advanced IP to ensure its optical DSPs are efficient and provide a competitive advantage. Which companies are leaders in the optical DSP market? Analysts c…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "9f6058c5502342e02f7e4f512f9c5e9c52ce542c206000006303bc2d833d47da",
+          "excerpt": "SPs are efficient and provide a competitive advantage. Which companies are leaders in the optical DSP market? Analysts consistently recognize Marvell among the global leaders in PAM4 and coherent optical DSP innovation.…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "438f15b963ec402a6c114bd91678919ccf6e536c9a74a8e5cad38d7794815d6a",
+          "excerpt": "et? Analysts consistently recognize Marvell among the global leaders in PAM4 and coherent optical DSP innovation. How do optical DSPs enable AI workloads? Optical DSPs ensure high-bandwidth, low-latency connections betw…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "841b649f2b062ae274a9565388dc8aebf991d011f237c457a92609287d0176c6",
+          "excerpt": "nize Marvell among the global leaders in PAM4 and coherent optical DSP innovation. How do optical DSPs enable AI workloads? Optical DSPs ensure high-bandwidth, low-latency connections between compute racks, rows and dat…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        },
+        {
+          "hash": "a8c85083d8b48d6d70a7e317ffdfe5c87c04d3201184c6caf24715c5a70e95a5",
+          "excerpt": "ers in PAM4 and coherent optical DSP innovation. How do optical DSPs enable AI workloads? Optical DSPs ensure high-bandwidth, low-latency connections between compute racks, rows and data centers, which is critical for A…",
+          "matchedKeywords": [
+            "optical DSP"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:34.938Z",
     "lastChangedAt": "2026-06-13T07:35:07.611Z",
     "lastError": null
   },
@@ -113,7 +972,113 @@
     "url": "https://www.coherent.com/datacenter-communications",
     "title": "Datacenter and Communications | Coherent",
     "hash": "bfafaf340d78c8cea1c9b2be87fd23e3842d0ec0884ebc4b73174b2eacd01a76",
-    "lastCheckedAt": "2026-09-08T11:20:01.553Z",
+    "baselineAt": "2026-09-08T22:06:35.436Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:35.436Z",
+      "keywords": [
+        "datacenter",
+        "800G",
+        "1.6T",
+        "EML",
+        "laser",
+        "transceiver"
+      ],
+      "segments": [
+        {
+          "hash": "dc504b86ec8307320f524c793a3a56398dd56c1dcbf6e01cbf189b1fb961f6c1",
+          "excerpt": "Datacenter and Communications | Coherent --> Open Navigation Menu Close Navigation Menu Contact Sales English (US) English (US) English (US) Deutsch 中文 日本語 한국어",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "d9769fb5483cee55eb1d3e6ca8339824dce459f7449076cfe6b0cef13cd127a6",
+          "excerpt": "red field If you need technical support or service, please visit Support . Privacy Policy Datacenter and Communications Industrial Company Products End-to-End Optical Connectivity and Photonic Innovation​ AI-driven infr…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "7f0c0f90caa16666297e53e18e4a208d030ddf6639fdc63114e1f761ba677d29",
+          "excerpt": "d and scale. Our advanced optical solutions power next-generation AI networks, hyperscale datacenters, and global communications.​ Applications Connecting The World​​ Learn how we are enabling the next generation of hig…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "4ded17055a6216e0c0b0265c05d7056859e936210cba1a3aa936e65d328aac66",
+          "excerpt": "re enabling the next generation of high-speed optical transmission systems, networks, and datacenter solutions. Products Engineered Materials and High-Precision Laser Solutions​ Advancing industrial performance with eng…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "06ee5667e2a66e3be66b4ae10a0fd169a70730b3f175396d1fdb1f5ec067fd04",
+          "excerpt": "pany Open Careers Coherent Labs Locations Events Legal ISO Certificates Contact Us Home > Datacenter and Communications Datacenter and Communications AI-driven infrastructure demands unprecedented speed and scale. Our a…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "a99120a7e4573a4fc3f8040a523e2a1faa2720057ca263ed9944a6641e827536",
+          "excerpt": "s Locations Events Legal ISO Certificates Contact Us Home > Datacenter and Communications Datacenter and Communications AI-driven infrastructure demands unprecedented speed and scale. Our advanced optical solutions powe…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "e73edbbf046bd2bd86d92391d55f870a1642a1de05910a61aacc2b7925fe1d9d",
+          "excerpt": "d and scale. Our advanced optical solutions power next-generation AI networks, hyperscale datacenters, and global communications. Optical Transceiver • Datacom • Telecom Optical Circuit Switch Interconnect Cables • Acti…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "076f890feb779fb728b2ba70b400d56017bb702b5c801c00e8f07fe0da1f1e04",
+          "excerpt": "ems, networks, and datacenter solutions. Products Engineered Materials and High-Precision Laser Solutions​ Advancing industrial performance with engineered materials and high-precision laser technologies that drive next…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "105e90a6f422d5c35ab3c4dc6e1cf69a1324e7f8d36cd00cc78d9f63e794831f",
+          "excerpt": "Solutions​ Advancing industrial performance with engineered materials and high-precision laser technologies that drive next-generation manufacturing and research applications. Solutions Solutions Start Here​ Discover ho…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "b5ce2f624b71ca94c3f888cc0bf901fd8e32be7a29b39f0e1dcf4d4fb0294fb2",
+          "excerpt": "wafers to medical diagnostics. Support Maximize Performance ​ Coherent Service keeps your laser systems performing at their peak — safeguarding productivity, maximizing uptime, and protecting your investment. Company Ab…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "05a999e47f0be9c0e35186837c8d99b4dcbda73d61f1303b7f0adde46cafdc6d",
+          "excerpt": "ables • Direct Attach Cables Optical Instrument Optoelectronic Devices • GaAs VCSEL • InP Lasers • Photodiodes • Integrated Circuit Communication Components • Photodetectors &amp; Receivers • Dynamic Components • Integr…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "1a62fcd78c0e81b5eeb9274eb434a04ff91c91bf2a4c9f8e5dd295cae395ff84",
+          "excerpt": "p; Receivers • Dynamic Components • Integrated Sub Assemblies • Passive Components • Pump Lasers Wavelength Management • Amplifiers • Dynamic Modules • Optical Monitoring • Passive Modules • Pluggable Optical Line Syste…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "ccadba6d24193f9ee35cc5e1b37bfa5a13db227a320207f76face089dc91657e",
+          "excerpt": "r next-generation AI networks, hyperscale datacenters, and global communications. Optical Transceiver • Datacom • Telecom Optical Circuit Switch Interconnect Cables • Active Optical Cables • Direct Attach Cables Optical…",
+          "matchedKeywords": [
+            "transceiver"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:35.436Z",
     "lastChangedAt": "2026-09-02T11:19:29.684Z",
     "lastError": null
   },
@@ -124,7 +1089,120 @@
     "url": "https://www.lumentum.com/en/products/data-center/modulated-lasers/emls",
     "title": "EMLs | Lumentum",
     "hash": "33ddfbdf13b22c7738af9f7669ca8d405f8a7d61c3c8c070e6658f1d668a6459",
-    "lastCheckedAt": "2026-09-08T11:20:01.646Z",
+    "baselineAt": "2026-09-08T22:06:35.710Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:35.710Z",
+      "keywords": [
+        "EML",
+        "modulated laser",
+        "data center",
+        "800G",
+        "1.6T"
+      ],
+      "segments": [
+        {
+          "hash": "72aaaaf4958311e52acb0b4f2c13bf7825eb3a9868a9b7b0db7e4779f02c2c97",
+          "excerpt": "EMLs | Lumentum Products Solutions About Us Contact Us Home Products Data Center Modulated Lasers EMLs EMLs High-performance externally modulated lasers",
+          "matchedKeywords": [
+            "EML"
+          ]
+        },
+        {
+          "hash": "532ba7419bb6b59ffc006382df38cf0b4621ba3ae59a338a98916d21f12b4c14",
+          "excerpt": "umentum Products Solutions About Us Contact Us Home Products Data Center Modulated Lasers EMLs EMLs High-performance externally modulated lasers providing low-chirp, high-signal-fidelity optical transmission. Explore Ou…",
+          "matchedKeywords": [
+            "EML"
+          ]
+        },
+        {
+          "hash": "1846d9ad2a98fed2798d13e672a97f1dc3a1d2f9c642ecfe02f387a2a1a9f16f",
+          "excerpt": "um Products Solutions About Us Contact Us Home Products Data Center Modulated Lasers EMLs EMLs High-performance externally modulated lasers providing low-chirp, high-signal-fidelity optical transmission. Explore Our Pro…",
+          "matchedKeywords": [
+            "EML"
+          ]
+        },
+        {
+          "hash": "95d6ca20794a76686f1844562d1fc44117ba865b4385780f03b925348f074d26",
+          "excerpt": "ptical transmission. Explore Our Products Lumentum’s electro-absorption modulated lasers (EMLs) provide the high bandwidth, signal integrity, and efficiency essential for short- and medium-reach optical connectivity ins…",
+          "matchedKeywords": [
+            "EML"
+          ]
+        },
+        {
+          "hash": "7af76bf7a3362980901b2614941b37cb83354135bb2fecfd30a36de84dbb7906",
+          "excerpt": "l for short- and medium-reach optical connectivity inside AI and cloud data centers. Each EML integrates a wavelength-locked DFB laser with a monolithic electro-absorption modulator, producing low-chirp, high-fidelity o…",
+          "matchedKeywords": [
+            "EML"
+          ]
+        },
+        {
+          "hash": "6aea166f378a6162db20afe512c24626539bd09835234785a9401e68144e6aef",
+          "excerpt": "gh-volume manufacturing and deployed across hyperscale networks, Lumentum’s 100G and 200G EMLs power today’s 400G and 800G DR4 and FR4 modules while providing an upgrade path toward 1.6T performance. They combine robust…",
+          "matchedKeywords": [
+            "EML"
+          ]
+        },
+        {
+          "hash": "b77e49784b501f8dda43452cd1185770a295be86647249627176da14bc7bb4ef",
+          "excerpt": "EMLs | Lumentum Products Solutions About Us Contact Us Home Products Data Center Modulated Lasers EMLs EMLs High-performance externally modulated lasers providing low-chirp, high-signal-fidelity optical transmission. Ex…",
+          "matchedKeywords": [
+            "modulated laser",
+            "data center"
+          ]
+        },
+        {
+          "hash": "554068c080785f0bc1df96c960ccf3d67249612321eb5cc2740fcf01599e8db2",
+          "excerpt": "ntact Us Home Products Data Center Modulated Lasers EMLs EMLs High-performance externally modulated lasers providing low-chirp, high-signal-fidelity optical transmission. Explore Our Products Lumentum’s electro-absorpti…",
+          "matchedKeywords": [
+            "modulated laser"
+          ]
+        },
+        {
+          "hash": "d55a211e44781f9d3fb5732cf10c83c393e70ae55abcb94e11220414fa759bae",
+          "excerpt": "-signal-fidelity optical transmission. Explore Our Products Lumentum’s electro-absorption modulated lasers (EMLs) provide the high bandwidth, signal integrity, and efficiency essential for short- and medium-reach optica…",
+          "matchedKeywords": [
+            "modulated laser"
+          ]
+        },
+        {
+          "hash": "eedaf7717198a310a983348f27c2a7da2e67c592a99acc9a86f67f055a676fbf",
+          "excerpt": "efficiency essential for short- and medium-reach optical connectivity inside AI and cloud data centers. Each EML integrates a wavelength-locked DFB laser with a monolithic electro-absorption modulator, producing low-chi…",
+          "matchedKeywords": [
+            "data center"
+          ]
+        },
+        {
+          "hash": "a83f4d7aef5d17707c4c3b83b2730f4b6f847176d83f6951c21842966022206f",
+          "excerpt": "otes, white papers, and more for Lumentum products. Product Documentation Center Products Data Center DCI, Metro, Long Haul, Submarine Industrial Laser Sensing VCSEL Solutions AI Infrastructure Data Center Connectivity …",
+          "matchedKeywords": [
+            "data center"
+          ]
+        },
+        {
+          "hash": "83ef903a554c2288d7ff48e1fc3e06901cb96d76424ce071b1676bc1237590c0",
+          "excerpt": "I, Metro, Long Haul, Submarine Industrial Laser Sensing VCSEL Solutions AI Infrastructure Data Center Connectivity Telecom Industrial Sensing About Us Careers Company Investors Newsroom © 2026 Lumentum Operations LLC Le…",
+          "matchedKeywords": [
+            "data center"
+          ]
+        },
+        {
+          "hash": "08c08e8aa4439f17e6c530bbd4c3c4036e0fcfcc785292f309ead22620316c1f",
+          "excerpt": "deployed across hyperscale networks, Lumentum’s 100G and 200G EMLs power today’s 400G and 800G DR4 and FR4 modules while providing an upgrade path toward 1.6T performance. They combine robust operation over extended tem…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "79236b4c3176d0fd3398e98e2614a8f655b60ca77cce96a718103a35a8b3a5ef",
+          "excerpt": "Ls power today’s 400G and 800G DR4 and FR4 modules while providing an upgrade path toward 1.6T performance. They combine robust operation over extended temperature ranges with low power per bit and stable output—ensurin…",
+          "matchedKeywords": [
+            "1.6T"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:35.710Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -135,7 +1213,91 @@
     "url": "https://fabrinet.com/services/optical-components",
     "title": "Optical Components - Fabrinet",
     "hash": "26a3ffbfe26c099340ad2a7e2b72273b1b8f679006570543d3feffb975a79d13",
-    "lastCheckedAt": "2026-09-08T11:20:01.735Z",
+    "baselineAt": "2026-09-08T22:06:35.829Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-08T22:06:35.829Z",
+      "keywords": [
+        "optical components",
+        "packaging",
+        "test",
+        "precision assembly",
+        "manufacturing"
+      ],
+      "segments": [
+        {
+          "hash": "c3e051fa28c3e991f5f51fbc7319fab6391f69ef04f322c71fcdb2efbd37e596",
+          "excerpt": "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components",
+          "matchedKeywords": [
+            "optical components"
+          ]
+        },
+        {
+          "hash": "7c9fc772f572b539a352b3e72ed5c2338194d4d63dce0e0db38b5e045dc3f3c3",
+          "excerpt": "rvices About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and activ…",
+          "matchedKeywords": [
+            "optical components"
+          ]
+        },
+        {
+          "hash": "b58fa80354fc18b259b39f2877288d46fac2ad2becbe470b274a386534a841b7",
+          "excerpt": "s Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products.…",
+          "matchedKeywords": [
+            "optical components"
+          ]
+        },
+        {
+          "hash": "715534f8e8bb1aaf6bfefc34cf34719cc4a9352a2ad4f9579d9cdfabdc296e7d",
+          "excerpt": "Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products. We produce millions of units annually, making the company o…",
+          "matchedKeywords": [
+            "optical components"
+          ]
+        },
+        {
+          "hash": "52f73b330dc1b3f6b12b78cb6225c1d959badb48d2589ff2da8e79ee0edaa2e5",
+          "excerpt": "s to offer extreme precision and quality for the manufacturing of the following products: Optical Components Lenses (aspherical, cylindrical, and spherical) Windows Prisms Beam splitters Waveplates Polarizers Laser crys…",
+          "matchedKeywords": [
+            "optical components"
+          ]
+        },
+        {
+          "hash": "0a419b98c96a7d4df1b50673f06cd6869795fb676b47f8361c01bc4c7a4803b2",
+          "excerpt": "Assembly Complex Systems Direct Order IP Protection Laser Manufacturing New Product Intro Optical Components Optical Computing Process Development Sensors &#038; Microelectronics Supply Chain Supplier Information White …",
+          "matchedKeywords": [
+            "optical components"
+          ]
+        },
+        {
+          "hash": "205feb384c4f731b5cd5dd4f8bc729aa8bdb8e21a060ef1ed0cdb8ea34972858",
+          "excerpt": "d embedded quality systems. This allows us to offer extreme precision and quality for the manufacturing of the following products: Optical Components Lenses (aspherical, cylindrical, and spherical) Windows Prisms Beam s…",
+          "matchedKeywords": [
+            "manufacturing"
+          ]
+        },
+        {
+          "hash": "d41b5c286f3f904f3a0cf9dc3dd0991824c0b6c220e5b9bb2028423c5c3f3450",
+          "excerpt": "iobate modulators Circuit Board Assembly Complex Systems Direct Order IP Protection Laser Manufacturing New Product Intro Optical Components Optical Computing Process Development Sensors &#038; Microelectronics Supply C…",
+          "matchedKeywords": [
+            "manufacturing"
+          ]
+        },
+        {
+          "hash": "a073822d67385fffd67b702ba41a892e0d62fe80c3d55262a484d22590bb8bb0",
+          "excerpt": "pment Sensors &#038; Microelectronics Supply Chain Supplier Information White Paper, Lean Manufacturing White Paper, Sustainable Manufacturing Wafer Processing Markets Services About Careers Investors Contact Partner Lo…",
+          "matchedKeywords": [
+            "manufacturing"
+          ]
+        },
+        {
+          "hash": "501ba4263842cb898b48857e6aa78f94d07d62fab967bfb9004c4c2a5ab35f8d",
+          "excerpt": "upply Chain Supplier Information White Paper, Lean Manufacturing White Paper, Sustainable Manufacturing Wafer Processing Markets Services About Careers Investors Contact Partner Login © Copyright - Fabrinet | Privacy Po…",
+          "matchedKeywords": [
+            "manufacturing"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-08T22:06:35.829Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

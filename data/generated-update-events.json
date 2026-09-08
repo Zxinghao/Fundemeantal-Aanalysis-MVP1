@@ -1,5 +1,141 @@
 [
   {
+    "id": "web-fuel-cell-2026-09-08-forvia-news",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA news changed on \"Press | FORVIA\", but the previous watched-context baseline is unavailable. Current relevant excerpts were captured for future comparison; manual review is required.",
+    "sourceUrl": "https://www.forvia.com/en/newsroom",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-08T22:06:30.788Z",
+    "lastSeenAt": "2026-09-08T22:06:30.788Z",
+    "confidence": "low",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "baseline_missing",
+      "method": "watched-context-diff-v1",
+      "added": [],
+      "removed": [],
+      "addedCount": 0,
+      "removedCount": 0,
+      "currentRelevant": [
+        "Ultra-low emissions Lighting Vehicle electrification Car interiors Sustainable materials Hydrogen mobility Modularity Intelligent seating comfort Seating solutions for electric vehicles Advanced safety seating systems V…",
+        "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…"
+      ],
+      "note": "A comparable watched-context baseline is not available yet. Current relevant excerpts were captured for future scans."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "hydrogen",
+        "commercial vehicle"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "baseline_missing",
+      "analystSummary": "The page changed, but a comparable watched-context baseline is not available. Review the source manually and use the new snapshot as the next baseline.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-08-forvia-news-evidence-1",
+          "sourceId": "forvia-news",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/newsroom",
+          "pageTitle": "Press | FORVIA",
+          "observedAt": "2026-09-08T22:06:30.788Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen",
+            "commercial vehicle"
+          ],
+          "observation": "The page fingerprint changed, but no comparable watched-context baseline exists yet. Current relevant excerpts were captured for the next scan.",
+          "changeSet": {
+            "status": "baseline_missing",
+            "method": "watched-context-diff-v1",
+            "added": [],
+            "removed": [],
+            "addedCount": 0,
+            "removedCount": 0,
+            "currentRelevant": [
+              "Ultra-low emissions Lighting Vehicle electrification Car interiors Sustainable materials Hydrogen mobility Modularity Intelligent seating comfort Seating solutions for electric vehicles Advanced safety seating systems V…",
+              "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…"
+            ],
+            "note": "A comparable watched-context baseline is not available yet. Current relevant excerpts were captured for future scans."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-08-forvia-news-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "low",
+        "rationale": "A page fingerprint change without a verified disclosure is insufficient to infer a material thesis change."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-08T22:06:30.788Z",
+        "target": "company:forvia",
+        "observedFacts": [],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "No comparable changed watched context is available for semantic interpretation.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-08T22:06:30.788Z"
+  },
+  {
     "id": "web-fuel-cell-2026-09-08-forvia",
     "sourceType": "ai_scan",
     "status": "pending",

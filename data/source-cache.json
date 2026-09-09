@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:58:57.716Z",
+      "capturedAt": "2026-09-09T06:04:11.156Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -202,7 +202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:58:57.716Z",
+    "lastCheckedAt": "2026-09-09T06:04:11.156Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -216,7 +216,7 @@
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:58:59.005Z",
+      "capturedAt": "2026-09-09T06:04:11.708Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,7 +240,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:58:59.005Z",
+    "lastCheckedAt": "2026-09-09T06:04:11.708Z",
     "lastChangedAt": "2026-09-08T22:06:30.788Z",
     "lastError": null
   },
@@ -254,7 +254,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:59:00.382Z",
+      "capturedAt": "2026-09-09T06:04:13.387Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +418,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:59:00.382Z",
+    "lastCheckedAt": "2026-09-09T06:04:13.387Z",
     "lastChangedAt": "2026-08-28T18:43:05.919Z",
     "lastError": null
   },
@@ -473,7 +473,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:59:01.253Z",
+      "capturedAt": "2026-09-09T06:04:26.597Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -694,7 +694,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:59:01.253Z",
+    "lastCheckedAt": "2026-09-09T06:04:26.597Z",
     "lastChangedAt": "2026-09-09T05:59:01.253Z",
     "lastError": null
   },
@@ -708,7 +708,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:59:02.667Z",
+      "capturedAt": "2026-09-09T06:04:26.888Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -726,7 +726,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:59:02.667Z",
+    "lastCheckedAt": "2026-09-09T06:04:26.888Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -740,7 +740,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:59:03.364Z",
+      "capturedAt": "2026-09-09T06:04:27.000Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -961,7 +961,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:59:03.364Z",
+    "lastCheckedAt": "2026-09-09T06:04:27.000Z",
     "lastChangedAt": "2026-06-13T07:35:07.611Z",
     "lastError": null
   },
@@ -975,7 +975,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:59:04.164Z",
+      "capturedAt": "2026-09-09T06:04:27.788Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1078,7 +1078,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:59:04.164Z",
+    "lastCheckedAt": "2026-09-09T06:04:27.788Z",
     "lastChangedAt": "2026-09-02T11:19:29.684Z",
     "lastError": null
   },
@@ -1092,7 +1092,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:59:04.411Z",
+      "capturedAt": "2026-09-09T06:04:27.971Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1202,7 +1202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:59:04.411Z",
+    "lastCheckedAt": "2026-09-09T06:04:27.971Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1216,7 +1216,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T05:59:04.763Z",
+      "capturedAt": "2026-09-09T06:04:28.131Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1297,7 +1297,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T05:59:04.763Z",
+    "lastCheckedAt": "2026-09-09T06:04:28.131Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },
@@ -1332,6 +1332,1276 @@
     "hash": "751faad189fe4bd2ae7d5b8c6f2e607045a746fcde8dc405af26b46d3eddaf8f",
     "lastCheckedAt": "2026-09-08T11:20:03.316Z",
     "lastChangedAt": "2026-08-10T08:04:11.605Z",
+    "lastError": null
+  },
+  "jm-fuel-cell-tech": {
+    "id": "jm-fuel-cell-tech",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology",
+    "title": "Fuel cells technology | Johnson Matthey",
+    "hash": "0436c502ffa534fe14404981cf44b617fa417f557f60a2e392807b34ca65cc4e",
+    "baselineAt": "2026-09-09T06:04:16.623Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:04:16.623Z",
+      "keywords": [
+        "fuel cell",
+        "catalyst coated membrane",
+        "CCM",
+        "membrane electrode assembly",
+        "MEA"
+      ],
+      "segments": [
+        {
+          "hash": "b8dc89cafaa26a0e9a81535367ea95112451a84027694f2d8bb9cefe2f9eb203",
+          "excerpt": "Fuel cells technology | Johnson Matthey Skip to Main Content Search About us What we do Locations Strategy Leadership Our heritage Our behaviours Governance Pa",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "edd7abbe9ceaeb365b8239ae62bae57b97e798272690838c1e413753fc12ee08",
+          "excerpt": "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "4c3e2313349e9cc5fa40cc80da10679be5a2951513541ba8ec2cd221ee326ed2",
+          "excerpt": "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "6a9cf76513faab1918d08d67b18460cd029328b7f884aeb8906d16707ca03476",
+          "excerpt": "g Emissions control Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Life scie…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "96d8aedf678372d086669e912b5b21d710dcb66c70c391d78711a82962d148fe",
+          "excerpt": "bile Solid oxide fuel cells Hydrogen solutions Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Life science technologies Biocatalysis Catalyst screening / optimisation Pharma an…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "26f18f1b859d12da50187903e0d0914bfc6a49796939fd9226cf93f8828fb516",
+          "excerpt": "rs Life at JM Apply Now FIND A PRODUCT Contact Us Products and markets Hydrogen solutions Fuel cell components Fuel cells technology Our fuel cell technology Our fuel cell technology has moved the industry forward for o…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "88823df151c0fc4421e0bb74ddefdc3cf366cb6ff251cdb9298a513e3cbb3d7c",
+          "excerpt": "ow FIND A PRODUCT Contact Us Products and markets Hydrogen solutions Fuel cell components Fuel cells technology Our fuel cell technology Our fuel cell technology has moved the industry forward for over two decades. We h…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "a0989db615acd1d1c1b42d9b6af33ce66b31fee7012466ce6a6c9ad74c06e180",
+          "excerpt": "Us Products and markets Hydrogen solutions Fuel cell components Fuel cells technology Our fuel cell technology Our fuel cell technology has moved the industry forward for over two decades. We have provided solutions to …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "cbb9ce51b2e5c65901766b2dca5680ec076da06bd48e98675b5ee6ade24fb573",
+          "excerpt": "ydrogen solutions Fuel cell components Fuel cells technology Our fuel cell technology Our fuel cell technology has moved the industry forward for over two decades. We have provided solutions to problems for some of the …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "b8679ff31f84bce009cddcc2407055a5e21c465919974676e544608cc5571efc",
+          "excerpt": "decades. We have provided solutions to problems for some of the world's most established fuel cell players, expanding our reach globally and investing heavily in our R&amp;D along the way. Ensuring exceptional performan…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "2dadb67f274599ad1993466d35d48c12a2665af5e886a95409aca40c8a74af16",
+          "excerpt": "ur supplier partners. All our teams build long-lasting relationships and bring the latest fuel cell technology to market quicker. Outperform competitors and maximise power output and minimise pgm loading We are experts …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "732b8ab059f9e2328016034de190d4f0a116ec435e146f08ba9295d3b418ab8b",
+          "excerpt": "ng We are experts in getting the most out of platinum group metals. A leading supplier of fuel cell catalysts and MEAs since the beginning of fuel cell commercialisation, our layers offer some of the best performance an…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "bf8742c9211d1eaf16ba83dc0d8001ca1a23a313c093feb35d703a3cfd4636bc",
+          "excerpt": "m group metals. A leading supplier of fuel cell catalysts and MEAs since the beginning of fuel cell commercialisation, our layers offer some of the best performance and durability in the market. We are constantly strivi…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "8b5f93e7e57bd1206f5ececfef9c3f35679a1850869139f840cda34690e48126",
+          "excerpt": "oxygen evolution reaction to protect the carbon in the anode and prolong the life of the fuel cell. Scaling to global demand with our mass-production techniques As you develop your supply chain, you need reliable partne…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "036ab3a5ebb626d21dfa8ade6f61f972b609e627883db27c10620422595a4d8a",
+          "excerpt": "bly Read more CCM - catalyst coated membrane Read more Fuel processor catalysts Read more Fuel cells recycling Explore Get in touch Nick Lindfield SEND A MESSAGE Go back Go back for an overview of JM's electrolytic (gre…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "7882c3a3ecd6a9d0625d8aee384513a7ec4221744ce38700de7f4965fd4da858",
+          "excerpt": "market faster and with superior quality. MEA Membrane electrode assembly Read more CCM - catalyst coated membrane Read more Fuel processor catalysts Read more Fuel cells recycling Explore Get in touch Nick Lindfield SEN…",
+          "matchedKeywords": [
+            "catalyst coated membrane"
+          ]
+        },
+        {
+          "hash": "e7a57b97452343f9599424cb899c0fdd749cc8da0b88e0df9ce57194eeb2afa7",
+          "excerpt": "gns to market faster and with superior quality. MEA Membrane electrode assembly Read more CCM - catalyst coated membrane Read more Fuel processor catalysts Read more Fuel cells recycling Explore Get in touch Nick Lindfi…",
+          "matchedKeywords": [
+            "CCM"
+          ]
+        },
+        {
+          "hash": "1736b52b231ea7a2587818f0046c56887cf0bdf53d1b5762d8e4cec31f1c3874",
+          "excerpt": "'re able to bring your unique MEA designs to market faster and with superior quality. MEA Membrane electrode assembly Read more CCM - catalyst coated membrane Read more Fuel processor catalysts Read more Fuel cells recy…",
+          "matchedKeywords": [
+            "membrane electrode assembly"
+          ]
+        },
+        {
+          "hash": "4f476da52add35005bbfa3ba152d3710a0a63dcb89a95958fa548c4153040053",
+          "excerpt": "ting the most out of platinum group metals. A leading supplier of fuel cell catalysts and MEAs since the beginning of fuel cell commercialisation, our layers offer some of the best performance and durability in the mark…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "6d66a89421dbf2d2854d28bb7e2acd5e0e34672c0164eb175df845bf58997e35",
+          "excerpt": "ign for the most demanding of applications such as those in the automotive industry, with MEAs on the road for both light-duty and heavy-duty. We develop our membranes in parallel with our catalyst layers, optimising fo…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "339000dfe3f7db6f7f490b94edca65f51d11fb60cae4edebf8fbdef2a79c4211",
+          "excerpt": "e-of-the-art facilities are growing. We are continually investing in automated high-speed MEA manufacturing processes and inspection techniques to meet automotive standards and comply with IATF 16949. With years of expe…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "7a24a1cfb7c22c4e262ebc9f6c58e83098500812b3b668b0e0d4e701983aec9f",
+          "excerpt": "to highly efficient deposition and lamination processes, we're able to bring your unique MEA designs to market faster and with superior quality. MEA Membrane electrode assembly Read more CCM - catalyst coated membrane R…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "3e8049aab9c8c08a52d1c8410cc95e06507f72399ffd4da8e6ca51f7abbef694",
+          "excerpt": ", we're able to bring your unique MEA designs to market faster and with superior quality. MEA Membrane electrode assembly Read more CCM - catalyst coated membrane Read more Fuel processor catalysts Read more Fuel cells …",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:04:16.623Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "umicore-fuel-cell-catalysts": {
+    "id": "umicore-fuel-cell-catalysts",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://www.umicore.com/en/markets-products/automotive-mobility/fuel-cell-catalysts/",
+    "title": "Fuel cell catalysts | Umicore",
+    "hash": "c3904f441810cdb7ae28e1b92b948b1d3fe53ee6542f6c8a43300bd8050fbbb9",
+    "baselineAt": "2026-09-09T06:04:17.480Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:04:17.480Z",
+      "keywords": [
+        "fuel cell catalyst",
+        "PEM",
+        "platinum",
+        "catalyst",
+        "hydrogen"
+      ],
+      "segments": [
+        {
+          "hash": "0f3cd40d5baf210662ab561303355a21442b20b4696fd8f31438465a0a393eda",
+          "excerpt": "Fuel cell catalysts | Umicore (opens in new tab) Close Umicore Homepage About Close About Umicore is creating a sustainable future for people and the planet. Discover U",
+          "matchedKeywords": [
+            "fuel cell catalyst",
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "14a2329112e478629438b2c66bc6843bb2bb7f8e5673ba36688682c6a48b96d4",
+          "excerpt": "er-gray-light' : ''\" > Close search Home Markets &amp; Products Automotive &amp; Mobility Fuel cell catalysts Catalysts for clean air and green hydrogen. Umicore’s proton exchange membrane (PEM) fuel cell catalysts are …",
+          "matchedKeywords": [
+            "fuel cell catalyst"
+          ]
+        },
+        {
+          "hash": "69b886e8092fc1fe8b978c04ec4202c59c58adf401e2de078ef192014d40a9d4",
+          "excerpt": "ysts Catalysts for clean air and green hydrogen. Umicore’s proton exchange membrane (PEM) fuel cell catalysts are developed to provide the automotive industry and green hydrogen production with high performance fuel cel…",
+          "matchedKeywords": [
+            "fuel cell catalyst"
+          ]
+        },
+        {
+          "hash": "a404b13dbb61269795c3b4bc4a03f4cce7fffe7b6b011dd6156b5488cf753cdc",
+          "excerpt": "n production with high performance fuel cells. With 30 years’ experience of manufacturing fuel cell catalysts, covering both anode and cathode electrode applications, Umicore has proven know-how in catalyst development,…",
+          "matchedKeywords": [
+            "fuel cell catalyst"
+          ]
+        },
+        {
+          "hash": "f557cb2e068794e24c222ff2b30c4dc69eb81a601c55dceeefd48a79a3fa7b3e",
+          "excerpt": "being key components of commercial stack platforms available on the market today, our PEM fuel cell catalysts are benchmark materials at leading fuel cell companies. Our catalyst powders are also ideally suited for elec…",
+          "matchedKeywords": [
+            "fuel cell catalyst"
+          ]
+        },
+        {
+          "hash": "63ac359350e51404a717af165477cc68ae7720063f9e660b56d02c106064f5e7",
+          "excerpt": "ology: 5 reasons why Fuel cells vs. batteries: what's the difference? Creating tomorrow's fuel cell catalysts at industrial scale Towards circular fuel cells: overcoming 3 challenges Previous slide Next slide More infor…",
+          "matchedKeywords": [
+            "fuel cell catalyst"
+          ]
+        },
+        {
+          "hash": "61fdd39b769e515b14a06ab9f4dd991e920e71800beab9a34ed4d01ebdd6069a",
+          "excerpt": "rcoming 3 challenges Previous slide Next slide More information Explore our chemicals for fuel cell catalysts Get in touch Discover our fuel cell catalysts for the automotive industry Contact us Umicore Homepage Markets…",
+          "matchedKeywords": [
+            "fuel cell catalyst"
+          ]
+        },
+        {
+          "hash": "9e417fec49d68528c4df421fab0f2a2f500d1278b6b4a21acabb61f0b34843db",
+          "excerpt": "More information Explore our chemicals for fuel cell catalysts Get in touch Discover our fuel cell catalysts for the automotive industry Contact us Umicore Homepage Markets & products About Umicore Join us Sustainabilit…",
+          "matchedKeywords": [
+            "fuel cell catalyst"
+          ]
+        },
+        {
+          "hash": "b30f767716e079e824301dd32773ff3890b07054c15f1cea06a7e1f39fddd970",
+          "excerpt": "catalysts Catalysts for clean air and green hydrogen. Umicore’s proton exchange membrane (PEM) fuel cell catalysts are developed to provide the automotive industry and green hydrogen production with high performance fue…",
+          "matchedKeywords": [
+            "PEM"
+          ]
+        },
+        {
+          "hash": "b18f45f1616091e1d36b7d803982e40fca08fef252785172bbb27354f9461ca5",
+          "excerpt": "as being key components of commercial stack platforms available on the market today, our PEM fuel cell catalysts are benchmark materials at leading fuel cell companies. Our catalyst powders are also ideally suited for e…",
+          "matchedKeywords": [
+            "PEM"
+          ]
+        },
+        {
+          "hash": "55199310b8b88959a6a00e834a4c3327d7a9840826dbdae3ac25988b61bad297",
+          "excerpt": "ght' : ''\" > Close search Home Markets &amp; Products Automotive &amp; Mobility Fuel cell catalysts Catalysts for clean air and green hydrogen. Umicore’s proton exchange membrane (PEM) fuel cell catalysts are developed …",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "931a14fba45b674ac838d35755a7929a9d620203fb1270ae3ca977b99848d590",
+          "excerpt": "> Close search Home Markets &amp; Products Automotive &amp; Mobility Fuel cell catalysts Catalysts for clean air and green hydrogen. Umicore’s proton exchange membrane (PEM) fuel cell catalysts are developed to provide …",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "40d14008c8a5c62891d890b291b35a93a78cee86d584e99770249de35b83c945",
+          "excerpt": "ysts for clean air and green hydrogen. Umicore’s proton exchange membrane (PEM) fuel cell catalysts are developed to provide the automotive industry and green hydrogen production with high performance fuel cells. With 3…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "8b8022b8757bd465ac14c89efac634ed44d2ccdb92a392fffda8393714495d21",
+          "excerpt": "on with high performance fuel cells. With 30 years’ experience of manufacturing fuel cell catalysts, covering both anode and cathode electrode applications, Umicore has proven know-how in catalyst development, scale up …",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "f20a8749c12d4aa6b208336ef5c621754cdf1b67f9fdd9fef048bbb97f8f3c7f",
+          "excerpt": "s, covering both anode and cathode electrode applications, Umicore has proven know-how in catalyst development, scale up and industrial scale production. As well as being key components of commercial stack platforms ava…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "948c625fa63d3b37d8e057f3f0a4b21b6347c2d51fd69cb1f785d5d4c4a93494",
+          "excerpt": "components of commercial stack platforms available on the market today, our PEM fuel cell catalysts are benchmark materials at leading fuel cell companies. Our catalyst powders are also ideally suited for electrolyzer a…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "322431a7df9e04d5860db5bd8eed172675f21fe33b5e7b7b5a806354bb4a0bf1",
+          "excerpt": ", our PEM fuel cell catalysts are benchmark materials at leading fuel cell companies. Our catalyst powders are also ideally suited for electrolyzer applications. We work to minimize the impact on your business by making…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "ced8017e425e3de10d6de953b4a9c199af83dd0163c0ae9fd0b5c83300a5a88d",
+          "excerpt": "easons why Fuel cells vs. batteries: what's the difference? Creating tomorrow's fuel cell catalysts at industrial scale Towards circular fuel cells: overcoming 3 challenges Previous slide Next slide More information Exp…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "022d10c990ca3d5f71d1b4731fec478a10dacec625d825420d856ea9e5269c20",
+          "excerpt": "challenges Previous slide Next slide More information Explore our chemicals for fuel cell catalysts Get in touch Discover our fuel cell catalysts for the automotive industry Contact us Umicore Homepage Markets & product…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "24f8e1f0b591396ae658520182676704ae202f704eeb43ef2a06e1f7acde1abf",
+          "excerpt": "rmation Explore our chemicals for fuel cell catalysts Get in touch Discover our fuel cell catalysts for the automotive industry Contact us Umicore Homepage Markets & products About Umicore Join us Sustainability Investo…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "3bd202fa864c0ae6b67965a0101190553f75aa9732de6a3509e6a6bfc3d727b4",
+          "excerpt": "Products Automotive &amp; Mobility Fuel cell catalysts Catalysts for clean air and green hydrogen. Umicore’s proton exchange membrane (PEM) fuel cell catalysts are developed to provide the automotive industry and green …",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "a018e3a98be091ee2fcf8337a89e555d300dda9e8514d9e10b57ea59c77f3043",
+          "excerpt": "rane (PEM) fuel cell catalysts are developed to provide the automotive industry and green hydrogen production with high performance fuel cells. With 30 years’ experience of manufacturing fuel cell catalysts, covering bo…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:04:17.480Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "sgl-gdl": {
+    "id": "sgl-gdl",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet-fuel-cell-components/",
+    "lastCheckedAt": "2026-09-09T06:04:18.722Z",
+    "lastError": "HTTP 404"
+  },
+  "forvia-hydrogen-storage": {
+    "id": "forvia-hydrogen-storage",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "title": "Hydrogen storage systems | FORVIA",
+    "hash": "0af527515540ff333e46f8d1b75c29959a34fdfa05fc9da5739d90607e794473",
+    "baselineAt": "2026-09-09T06:04:19.454Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:04:19.454Z",
+      "keywords": [
+        "hydrogen storage",
+        "Type IV",
+        "tank",
+        "700 bar",
+        "capacity",
+        "commercial vehicle"
+      ],
+      "segments": [
+        {
+          "hash": "a4db970f6cbba25298d70e603af0a2a74b63b6c9a4c43171512f7d513eae1b4a",
+          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.88€ -0.12% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "7c5ac504eba5e05f31c2868e5bbb4d7808274d8dd8e255996392127c6b724e43",
+          "excerpt": "e Search Breadcrumb Accueil Pioneering Technologies Electrification And Energy Management Hydrogen Storage Systems Hydrogen storage systems Pioneering solutions for hydrogen mobility and distribution See it in action #1…",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "80cf5fa13ce8bc5c71c8cb6421a08fcd62e3bc6f3be7384d07e527bc9ef2ba2d",
+          "excerpt": "il Pioneering Technologies Electrification And Energy Management Hydrogen Storage Systems Hydrogen storage systems Pioneering solutions for hydrogen mobility and distribution See it in action #1 global supplier of hydro…",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "349891fadcdf3ed25ef8e16548bc5e3474860f335b04b43d034367f147fa1e44",
+          "excerpt": "g solutions for hydrogen mobility and distribution See it in action #1 global supplier of hydrogen storage systems 4 production plants across Europe and Asia 34M+ kilometers driven with FORVIA hydrogen storage solutions…",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "c1c05f5118efae328b050f60f07e0b4f631371d17c325dfec5e6f45862a43aa0",
+          "excerpt": "age systems 4 production plants across Europe and Asia 34M+ kilometers driven with FORVIA hydrogen storage solutions since 2016 70K+ hydrogen tanks delivered since 2016 Powering hydrogen storage, enabling the rise of a …",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "7ddface4250782163e9bbeff87ebe7a932accf99263f9072de49f316f1225805",
+          "excerpt": "A hydrogen storage solutions since 2016 70K+ hydrogen tanks delivered since 2016 Powering hydrogen storage, enabling the rise of a hydrogen ecosystem Our conviction: hydrogen is essential to effectively decarbonizing th…",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "aaef286aff6f5ac101400bc00abf446906d4a0cfa017a68ef71ebcfe17df869f",
+          "excerpt": "both stationary infrastructure and mobile containers transported by truck for refueling. Hydrogen storage: the key to hydrogen mobility Function 1 Optimizing hydrogen storage High-energy potential unlocked Tanks&nbsp;ca…",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "bdca8bf1c09357d4c7f3625740b8d17bf3a7e9e81101baa28d8d9c3df9099db8",
+          "excerpt": "truck for refueling. Hydrogen storage: the key to hydrogen mobility Function 1 Optimizing hydrogen storage High-energy potential unlocked Tanks&nbsp;can withstand different pressures. The most common pressures for mobil…",
+          "matchedKeywords": [
+            "hydrogen storage"
+          ]
+        },
+        {
+          "hash": "2b8f314b9b06d3d76d3e647c023c2244baa23ec3d67118886a16b641e3397435",
+          "excerpt": "ia 34M+ kilometers driven with FORVIA hydrogen storage solutions since 2016 70K+ hydrogen tanks delivered since 2016 Powering hydrogen storage, enabling the rise of a hydrogen ecosystem Our conviction: hydrogen is essen…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "f37fcd82f234a56ac72ac572331a54ea477b7295fd7ee30b02710498e9b27e63",
+          "excerpt": "able mobility. This makes solutions that support hydrogen infrastructure—like our storage tanks and systems—more critical than ever. Storage solutions for mobility Vehicles equipped with FORVIA’s tanks are already on th…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "581085ae0e280ce2f44496f4577b272553b54f2c33916aab5b8f98d6773eb77f",
+          "excerpt": "s—more critical than ever. Storage solutions for mobility Vehicles equipped with FORVIA’s tanks are already on the road. Our comprehensive portfolio includes Type III and IV tanks, certified for mobility use. They are a…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "e0da720e8d2f52d7945c4a2db1542b1dd978db5e09b0320b6022f078ce732aaf",
+          "excerpt": "VIA’s tanks are already on the road. Our comprehensive portfolio includes Type III and IV tanks, certified for mobility use. They are available in various sizes (from S to XL) and pressure levels to meet diverse client …",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "dad5c43f1af2d1caa501d8bdf7684df9ff24097565e125e4832abc391541ae14",
+          "excerpt": "gen’s transportation and distribution. Thanks to our high-pressure carbon fiber composite tanks and system expertise, we’re providing tanks for containerized solutions (including MEGCs - Multiple Element Gas Containers)…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "229ba27aac23600536a33b82da3fac750cb3197be3a46023caa138ad6750c08f",
+          "excerpt": "s to our high-pressure carbon fiber composite tanks and system expertise, we’re providing tanks for containerized solutions (including MEGCs - Multiple Element Gas Containers), for distribution to both stationary infras…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "5d9b5d021458403edc6f7928897aced6820f51d22de4645a80345155fbe09420",
+          "excerpt": "o hydrogen mobility Function 1 Optimizing hydrogen storage High-energy potential unlocked Tanks&nbsp;can withstand different pressures. The most common pressures for mobility applications are 350 bar and 700 bar, depend…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "1543371a949e5926bfacf0d05457ec9b63c386f4844a534fc6e7e52b58f5cbff",
+          "excerpt": "for mobility applications are 350 bar and 700 bar, depending on the needs of the vehicle. Tanks must therefore combine high-pressure resistance with lightness, safety compliance, and efficient energy storage. As they st…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "206ca7846e00b5969fb0dbd164f7b56dc314e868129c160b9201e0266a1424cb",
+          "excerpt": ", safety compliance, and efficient energy storage. As they store energy onboard, hydrogen tanks also help maximize journeys and improve vehicle autonomy. Depending on the tank size, they enable a range of 400 to 1,000 k…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "d4c9c01518afbf5a8d0b2f489d67618b79e72b4fd66f6505da49b890dcad528a",
+          "excerpt": "hydrogen tanks also help maximize journeys and improve vehicle autonomy. Depending on the tank size, they enable a range of 400 to 1,000 km. Function 2 Versatile hydrogen tanks Scalability and technological versatility …",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "36cf7dbfb72fb9233c56096ea8bd3866414d2c2eb5b438150a5727409aa7ce77",
+          "excerpt": "g on the tank size, they enable a range of 400 to 1,000 km. Function 2 Versatile hydrogen tanks Scalability and technological versatility for mobility FORVIA’s hydrogen tanks offer high versatility to meet diverse mobil…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "51c91b2893b57f46ea449aa015051a9799d5271f9798cb30a3f8e6de04ecd203",
+          "excerpt": "e hydrogen tanks Scalability and technological versatility for mobility FORVIA’s hydrogen tanks offer high versatility to meet diverse mobility needs. With 33 certified containers and 10 in development, and sizes rangin…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "28e1d7e0a85bed4a58e2504599900bcf3fd8ce899a69dae548ea3e377c98d44b",
+          "excerpt": "ment, and sizes ranging from S to XL, they adapt easily to vehicle packaging constraints. Tank configurations—vertical, horizontal, or multi-cavity—can be tailored to each fleet’s space and use. Compatible with both H₂ …",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "01ad633db16a78e2d2e7c1b3030eaca4cdf5cac8aacfb52af3b9c80b3b992058",
+          "excerpt": "gen operations more responsible, especially as it develops the next generation of storage tanks. By using recyclable thermoplastics and low CO₂ emission carbon fibers, the Group plays a key role in advancing sustainabil…",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "157fc31bddd0adb784727079bf456e63b17b621d3b3ddb8de6a82e3c595e4a96",
+          "excerpt": "e chain. As part of the partnership, FORVIA will supply H2 Energy with type III composite tanks for MEGCs. The goal: strengthen hydrogen infrastructure and support the development of tomorrow’s mobility solutions. Read …",
+          "matchedKeywords": [
+            "tank"
+          ]
+        },
+        {
+          "hash": "625fe8436b8399c43302a3bf4273dc6482d63374d0e47127212b1f49cf9bd0b2",
+          "excerpt": "different pressures. The most common pressures for mobility applications are 350 bar and 700 bar, depending on the needs of the vehicle. Tanks must therefore combine high-pressure resistance with lightness, safety compl…",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:04:19.454Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "hexagon-purus": {
+    "id": "hexagon-purus",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://hexagongroup.com/hexagon-purus",
+    "title": "Hexagon | Hexagon Purus",
+    "hash": "ee539d99fcf110a3f5aef4f5d44be6d95c274a024b5ba42e3b60e8fc9db89e12",
+    "baselineAt": "2026-09-09T06:04:20.529Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:04:20.529Z",
+      "keywords": [
+        "hydrogen storage",
+        "Type 4",
+        "Type IV",
+        "700 bar",
+        "commercial vehicle"
+      ],
+      "segments": [
+        {
+          "hash": "94d1739b0f77f51fa1310dc51ec4f3552203bbd76a84ee0a53a9a292b5b98f55",
+          "excerpt": "global leaders in key technologies needed for zero emission mobility, providing hydrogen Type 4 high-pressure cylinders and systems, battery systems and vehicle integration solutions for fuel cell electric and battery e…",
+          "matchedKeywords": [
+            "Type 4"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:04:20.529Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "garrett-fuel-cell": {
+    "id": "garrett-fuel-cell",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
+    "title": "Fuel Cell Technology: Boosting Hydrogen-Powered Vehicles",
+    "hash": "d4a42a559ca6cc3b7fba26044d92e75c341e1adf7a3456893a69333f6489794d",
+    "baselineAt": "2026-09-09T06:04:22.984Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:04:22.984Z",
+      "keywords": [
+        "fuel cell compressor",
+        "electric compressor",
+        "air compressor",
+        "hydrogen",
+        "fuel cell"
+      ],
+      "segments": [
+        {
+          "hash": "5e01455cd6deda724e4dc1e51b53e44d9076a795028283ab2931f62fc4b25fae",
+          "excerpt": "ins Light Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Compressors Hydrogen Fuel Cell Compressors Industrial Applications Solutions for Marine, Energy and Gas Service Center Locator E-Cooling Compressors f…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "8273151239db3bbad1fad16f5f65fab22d6d4cdc6445873ba316392defaebcbf",
+          "excerpt": "e and Pick-up Light and Medium Size Commercial Vehicle Heavy-Duty and Off-highway Vehicle Fuel Cell Compressor Gen3 Unlock peak performance for fuel cell applications with Garrett’s Fuel Cell Compressor Gen3. This new g…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "652e87f7f1eb6dcf96830516674e5cdf80f5c0707efec3198e83e6cdb96c7e46",
+          "excerpt": "el Cell Compressor Gen3 Unlock peak performance for fuel cell applications with Garrett’s Fuel Cell Compressor Gen3. This new generation is offering higher efficiency, compact design, and an integrated inverter. View Fe…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "b760820e32f925be06e28634074232143e969de47ccb1f862b2f44685af195ec",
+          "excerpt": "motor experience, and oil-free bearing experience. Capable of more than 150,000 RPM, our fuel cell compressor delivers leading performance and efficiency in a compact size. &nbsp; View Features Two Stage Electric Compre…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "9f4c14f9f9cd266f32414e3a564aeca68992132c7383c9b416451cf85ac35969",
+          "excerpt": "to a zero-emissions future. View Features Latest Fuel Cell videos March 8, 2024 Hydrogen fuel cell compressor for vehicles Garrett’s high-pressure ratio electric compressors significantly increases the power density of …",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "16c5d4e7724955ac29da3d71cabd270a47d347ce20f856e7526d2c0e4423a1df",
+          "excerpt": "1, 2022 Lutz Glaeser, Fuel Cell GM, presents Garrett&#8217;s Fuel Cell offering Garrett’s fuel cell compressor is one of 3 main components within a fuel cell system – alongside the stack and the tank. Our compressor det…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "e3dd27a554d56fc5bd00393306999cbbeb5e579e21e17f0131fc7f49339ff775",
+          "excerpt": "and differentiated&#8230; Garrett Fuel Cell Innovation Timeline 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "be62d7f6ffb53a3485a45b17cebe80a70302b25108c07b98c51388fbf4fa2aca",
+          "excerpt": "FCC22 for LCV and SUV FCC32 for HDV and beyond Automotive 2022 New generation of modular Fuel Cell Compressor: Optional Turbine Expander presented at Vienna Motor Symposium 2016 Series Production Motor Driven Compressor…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "3553a68a5fa9c968b99b6c1f1602fe47a9ba42040ff20913889c70b59f564fc3",
+          "excerpt": "Cell Power Plant INCREASED POWER & EFFICIENCY Why do customers choose us? Durability Our fuel cell compressor achieves best-in-class durability with >1 million start-and-stop cycles and over 25,000 hours of life. Effici…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "80f0dd194eae6c348b29377acc4eef154811787289fd308dd5d037a5f8580543",
+          "excerpt": "n from our turbocharger business to address core performance and durability challenges in fuel cell compressors; DOWNLOAD WHITEPAPER Have a Question? Connect with Us First Name: * Last Name: * Email: * Phone: Subject: I…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "286a2b05632a418bf48905ac9dcddbf8e38efdace98d1c8d92633d2e7f0c9e59",
+          "excerpt": "ect: I’m interested in info about Garrett’s Fuel Cell technology I want to test Garrett’s Fuel Cell Compressor I want Garrett’s Fuel Cell Compressor for service production Others Describe your project: * Company: * Coun…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "c743df916c6b246614437a65afcb1f68702d6e19062b14d67f84605c647f09c5",
+          "excerpt": "ett’s Fuel Cell technology I want to test Garrett’s Fuel Cell Compressor I want Garrett’s Fuel Cell Compressor for service production Others Describe your project: * Company: * Country: * --None-- Afghanistan Albania Al…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "5247be35058c22624cdc7c2eb8d20f6be7c1ebdfa1b6d21bde348e367fadc79b",
+          "excerpt": "rial Innovation ...applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "8058e08d406d34af22cd24c7f160fb2c8a00f50c900705f65575fedbca675eb5",
+          "excerpt": "ugh Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ... fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "329d3386682c8f70ed1454fbf884785b0024b3cdcf6aa16d5dc9ad66685dbcaf",
+          "excerpt": "o at China Refrigeration Expo 2026 ...leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "e0524d793fbf0a12698ff22bf243a0e79b876f4ef2cbcac48b8912c7e305b411",
+          "excerpt": "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for... February 20, 2026 Garrett Motion’s E-Cooling Compressor is Redefining Thermal Management Efficiency …",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "d8cecf18b71a5f5c46010a528bb5f9e7aa5bcaf7df499e51e59c77d5b6326aa9",
+          "excerpt": "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell ... February 17, 2026 Garrett Motion Introduces Garrett Original MAXLIFE: A New Afte…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "f04e7338618439772ddba154f33686ae3319a8f54d70b4e67b3b0f011f542e00",
+          "excerpt": "act by developing differentiated technology solutions for Zero Emission Vehicles, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as... February 12, 2026 Garrett Motion Launching First Commercial …",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "c6bdc6d1918d7628353efda54dea58a9b0976e7c18b6a1b6df3a98a40817c57f",
+          "excerpt": "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles,... February 2, 2026 Garrett Motion introduces breakthrough oil-free centri…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "28d1ea4561737c6a69743bf42ef6e0ca0574ad430af2a3851c08c96378ba151c",
+          "excerpt": "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management... February 2, 2026 …",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "3057cc4b63415bfe8f08c1329f16b86d41d1bf27944a10744cd3548697e8bebe",
+          "excerpt": "Solutions ...turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "8b16c36139e4ebb532cb2c94434d3689ee2e0b2f35e2543205a6feb6bcbc922f",
+          "excerpt": ";s portfolio reflects a bold transformation toward zero-emission technologies, including: Fuel Cell Compressors &ndash; enabling hydrogen-powered mobility through high-efficiency air management. E-Powertrain Systems &nd…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "b8f75b958891b9a9532a5436440e3415a2badd7a3483f94ebd958773e3b12310",
+          "excerpt": "way Commercial Vehicles Turbochargers Off-Highway and Large Engine Turbochargers E-Turbos Electric Compressors Zero Emission Technology E-Powertrains Light Vehicle E-Axles Commercial Vehicle E-Powertrains E-Cooling Comp…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        },
+        {
+          "hash": "8504ff51e3b2810347c53070aa4883f916929db91d5b7a4194c7185009600ec8",
+          "excerpt": "drive worldwide adoption of this zero-emissions technology. Garrett’s high-pressure ratio electric compressors significantly increases the power density of Proton Exchange Membrane (PEM) fuel cells while reducing compre…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        },
+        {
+          "hash": "0779bcf31130a8b0148fbbcb1c291d354abcd45895fa6c8c8ca6b47b02b99416",
+          "excerpt": "vers leading performance and efficiency in a compact size. &nbsp; View Features Two Stage Electric Compressor Our Two-Stage electric compressor boosts fuel cell stacks to higher pressures and flows, significantly improv…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        },
+        {
+          "hash": "b77c1ae2020b9be054f994f8d3609d9f908454dc00e5ec14b08e04d9e1c1e0e2",
+          "excerpt": "iency in a compact size. &nbsp; View Features Two Stage Electric Compressor Our Two-Stage electric compressor boosts fuel cell stacks to higher pressures and flows, significantly improving efficiency and power density a…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        },
+        {
+          "hash": "6737be4b0392fd4b3a415826ede89e3805d5762b810eec7a933d2be63bb450c4",
+          "excerpt": "os March 8, 2024 Hydrogen fuel cell compressor for vehicles Garrett’s high-pressure ratio electric compressors significantly increases the power density of Proton Exchange Membrane (PEM) fuel cells while reducing compre…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        },
+        {
+          "hash": "3161c3448e1d8144ba41dad9c446c26135a3936a25b1312b64ab670ec9b23ca3",
+          "excerpt": "Cell Technology Investors Emission Reduction Technology Award-Winning E-Turbo Technology Electric Compressor for Mild Hybrid Vehicles Turbo Technology Off-Highway and Large Engine Turbos How a Turbo Works Alternative Fu…",
+          "matchedKeywords": [
+            "electric compressor"
+          ]
+        },
+        {
+          "hash": "bdd52f0c302613ee4fac2c26bf6bd1ee4e1e4dfd0f949e5f74926604ec7a7f53",
+          "excerpt": "ion agreement with Shanghai-based REFIRE Technology Co., Ltd. to jointly develop advanced air compressor technology solutions for the future powertrain system of hydrogen fuel cell vehicles (FCVs). READ MORE A key chall…",
+          "matchedKeywords": [
+            "air compressor"
+          ]
+        },
+        {
+          "hash": "dfb375e19847467ff310c81115802c93e7333e2a65567f62c68bca1bf1934d58",
+          "excerpt": "to equal the performance of a V-6-powered sedan. EXPAND YOUR FUEL CELL KNOWLEDGE Electric Air Compressor Development to Meet Future PEM Fuel Cell Needs Discover the major design requirements of air compressors for Proto…",
+          "matchedKeywords": [
+            "air compressor"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:04:22.984Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "doe-fuel-cell-parts": {
+    "id": "doe-fuel-cell-parts",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
+    "title": "Parts of a Fuel Cell | Department of Energy",
+    "hash": "60df84aad7bdf6c233db5f874b4af9ff548d956effa2edd9d062f6e816b59c46",
+    "baselineAt": "2026-09-09T06:04:26.236Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:04:26.236Z",
+      "keywords": [
+        "membrane electrode assembly",
+        "MEA",
+        "gas diffusion layer",
+        "catalyst",
+        "bipolar plate"
+      ],
+      "segments": [
+        {
+          "hash": "719680990f125906b3f2245fa2b94392d8ca516b71cf839809f04f67ed670bf9",
+          "excerpt": "he main parts of a PEM fuel cell are described below. The heart of a PEM fuel cell is the membrane electrode assembly (MEA), which includes the membrane, the catalyst layers, and gas diffusion layers (GDLs). Hardware co…",
+          "matchedKeywords": [
+            "membrane electrode assembly"
+          ]
+        },
+        {
+          "hash": "79b48b97b9131fbf573f3278855bab04737b16468cd0d71a60d836b17bd06cd9",
+          "excerpt": "PEM fuel cells into a fuel cell stack and provide channels for the gaseous fuel and air. Membrane Electrode Assembly The membrane, catalyst layers (anode and cathode), and diffusion media together form the membrane elec…",
+          "matchedKeywords": [
+            "membrane electrode assembly"
+          ]
+        },
+        {
+          "hash": "88678c9cc700ec73d71f07461146b7039b8d62a2369237c1f77ef4f36840660c",
+          "excerpt": "The membrane, catalyst layers (anode and cathode), and diffusion media together form the membrane electrode assembly (MEA) of a PEM fuel cell. Polymer Electrolyte Membrane The polymer electrolyte membrane, or PEM (also …",
+          "matchedKeywords": [
+            "membrane electrode assembly"
+          ]
+        },
+        {
+          "hash": "670849e688d9a4e1f0f82a3fcf2656f0e292d472de5818b0af706b9970bc3706",
+          "excerpt": "United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. Policy &amp; Pri…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "36af61334d7d39af1afcfb3f7c6a55c5eedd02bb5726841ecf3044df49c721cd",
+          "excerpt": "Nevada EM SSAB Meeting (September 2026) Sep 10 3:00PM EDT - 4:30PM EDT Energy Efficiency Measures on Tribal Facilities Sep 11 1:00PM EDT - 2:00PM EDT Informational Webinar: Accelerating Scale-up and Pre-piloting of Emer…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "9650cb33ec21f06717e3766b0694c966c55e539a012b064fc9db2bb69d48a751",
+          "excerpt": "ell are described below. The heart of a PEM fuel cell is the membrane electrode assembly (MEA), which includes the membrane, the catalyst layers, and gas diffusion layers (GDLs). Hardware components used to incorporate …",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "086e545abeaffdcd78b3efe9896ce4be97ac4ca223624edeedcd3ad7e45cf17f",
+          "excerpt": "alyst layers, and gas diffusion layers (GDLs). Hardware components used to incorporate an MEA into a fuel cell include gaskets, which provide a seal around the MEA to prevent leakage of gases, and bipolar plates, which …",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "8ef35d218f66c18bc7d39acf2c6ae63e3311fdf2d69e3243e6556b03bab6d522",
+          "excerpt": "d to incorporate an MEA into a fuel cell include gaskets, which provide a seal around the MEA to prevent leakage of gases, and bipolar plates, which are used to assemble individual PEM fuel cells into a fuel cell stack …",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "1768937bbdd8c2156f8ee8b61bb2d164e7521b51632355449059834b8e040adf",
+          "excerpt": "s (anode and cathode), and diffusion media together form the membrane electrode assembly (MEA) of a PEM fuel cell. Polymer Electrolyte Membrane The polymer electrolyte membrane, or PEM (also called a proton exchange mem…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "8cae79ef0956b051ed5939c4d9de9f3a239e3071a98e8e2bff3caf1a6f41f928",
+          "excerpt": "keep the pores open so hydrogen and oxygen can diffuse into the electrodes). Hardware The MEA is the part of the fuel cell where power is produced, but hardware components are required to enable effective MEA operation.…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "a8f1e1ca4fdc5539d83348d88b0c75d62e522bd33a7a34b9a9473142e6257261",
+          "excerpt": "el cell where power is produced, but hardware components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most application…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "5f7b5417dec8deb762998d6f65a597c8f8a5d44e96491d47c9f78e0269a473cc",
+          "excerpt": "components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most applications require higher voltages. Therefore, multiple…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "06296873fc456b093ce00ae2f95ee4ee6c7469b94f0559be9f27eeaf168491af",
+          "excerpt": "operating conditions, but most applications require higher voltages. Therefore, multiple MEAs are usually connected in series by stacking them on top of each other to provide a usable output voltage. Each cell in the st…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "ac0bd72ac203067e2d8fcb7473f0acd0511a4d5c65cc5c1e8eac8ac3b04088e5",
+          "excerpt": "h is a set of channels machined or stamped into the plate to allow gases to flow over the MEA. Additional channels inside each plate may be used to circulate a liquid coolant. Gaskets Each MEA in a fuel cell stack is sa…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "923abb38fbd503b9202b6d96163f6006d9d0437a12abb85b3bf927367ab68b57",
+          "excerpt": "tional channels inside each plate may be used to circulate a liquid coolant. Gaskets Each MEA in a fuel cell stack is sandwiched between two bipolar plates, but gaskets must be added around the edges of the MEA to make …",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "285a3cbefd5b988e7dc660b0941cd5ebffbe9121604e8cd079941861e8c86863",
+          "excerpt": "sandwiched between two bipolar plates, but gaskets must be added around the edges of the MEA to make a gas-tight seal. These gaskets are usually made of a rubbery polymer. More Information Fuel Cells May 22, 2026 Fuel C…",
+          "matchedKeywords": [
+            "MEA"
+          ]
+        },
+        {
+          "hash": "c6a064de75ed555bf885f8351d823e5734b2247e39fb2dad8b22c17c72223bae",
+          "excerpt": "membrane electrode assembly (MEA), which includes the membrane, the catalyst layers, and gas diffusion layers (GDLs). Hardware components used to incorporate an MEA into a fuel cell include gaskets, which provide a seal…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "50624b03680549ed97f9af05c6bf7fb17d0aa6f6837b49147ca300f55271e1a9",
+          "excerpt": "ionomer mixed into the catalyst layers allows the protons to travel through these layers. Gas Diffusion Layers The GDLs sit outside the catalyst layers and facilitate transport of reactants into the catalyst layer, as w…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "60273f630c5453b1a00e7c3349ba3122f677e6b9f60b66048de61e28357b8d21",
+          "excerpt": "PEM fuel cell is the membrane electrode assembly (MEA), which includes the membrane, the catalyst layers, and gas diffusion layers (GDLs). Hardware components used to incorporate an MEA into a fuel cell include gaskets,…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "f11026d131e716d2a462a78089953f6a754863daf8a990a9ce2a5ac8fc723344",
+          "excerpt": "provide channels for the gaseous fuel and air. Membrane Electrode Assembly The membrane, catalyst layers (anode and cathode), and diffusion media together form the membrane electrode assembly (MEA) of a PEM fuel cell. P…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "8e9702504c2274c08de3a16198c091c994c693146bd6fb5c6e34d0789b697b79",
+          "excerpt": "or transportation applications, the membrane is very thin—in some cases under 20 microns. Catalyst Layers A layer of catalyst is added on both sides of the membrane—the anode layer on one side and the cathode layer on t…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "dbb6963853b7c441f59a17a1b13de2f0ac875d03b418cefac32918bdb3585a9e",
+          "excerpt": "ons, the membrane is very thin—in some cases under 20 microns. Catalyst Layers A layer of catalyst is added on both sides of the membrane—the anode layer on one side and the cathode layer on the other. Conventional cata…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "1aa6ad4c741e08b58f1d2694a7c5358fc4c615e88d3c49d78c6f57ce16ab60bc",
+          "excerpt": "the membrane—the anode layer on one side and the cathode layer on the other. Conventional catalyst layers include nanometer-sized particles of platinum dispersed on a high-surface-area carbon support. This supported pla…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "c85e1e7a186c8eccb19ffd8fed061cc5b801934f2e9d89905030958a4b28aff5",
+          "excerpt": "cles of platinum dispersed on a high-surface-area carbon support. This supported platinum catalyst is mixed with an ion-conducting polymer (ionomer) and sandwiched between the membrane and the GDLs. On the anode side, t…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "635460f98f05113a73042943105b1948be34549cb9813cceac6f6b3e303ba309",
+          "excerpt": "onomer) and sandwiched between the membrane and the GDLs. On the anode side, the platinum catalyst enables hydrogen molecules to be split into protons and electrons. On the cathode side, the platinum catalyst enables ox…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "eddb2dce127e4d7a20b5d1b882710ead9ffa9e03c03f583376b96b6089430aee",
+          "excerpt": "rogen molecules to be split into protons and electrons. On the cathode side, the platinum catalyst enables oxygen reduction by reacting with the protons generated by the anode, producing water. The ionomer mixed into th…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "2cd7efd1198908538e9ff4ea54d54996d97786585855dd1ce20c905b6fe5a4be",
+          "excerpt": "ting with the protons generated by the anode, producing water. The ionomer mixed into the catalyst layers allows the protons to travel through these layers. Gas Diffusion Layers The GDLs sit outside the catalyst layers …",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "51f6e255523bef8566db42258c134b98a33e614a0881efc21be606067a86633c",
+          "excerpt": "the protons to travel through these layers. Gas Diffusion Layers The GDLs sit outside the catalyst layers and facilitate transport of reactants into the catalyst layer, as well as removal of product water. Each GDL is t…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "9fb6d705a9ddda905abaab4642dca2a58b9963ed53f2b16b5735b26791c8d4d1",
+          "excerpt": "s The GDLs sit outside the catalyst layers and facilitate transport of reactants into the catalyst layer, as well as removal of product water. Each GDL is typically composed of a sheet of carbon paper in which the carbo…",
+          "matchedKeywords": [
+            "catalyst"
+          ]
+        },
+        {
+          "hash": "46c83d690bbcfcebb5309b0c7f4708b968c8767ed2b43ed45c46245ed7af2360",
+          "excerpt": "ell include gaskets, which provide a seal around the MEA to prevent leakage of gases, and bipolar plates, which are used to assemble individual PEM fuel cells into a fuel cell stack and provide channels for the gaseous …",
+          "matchedKeywords": [
+            "bipolar plate"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:04:26.236Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "doe-hydrogen-storage": {
+    "id": "doe-hydrogen-storage",
+    "industryId": "fuel-cell",
+    "cadence": "weekly",
+    "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
+    "title": "Physical Hydrogen Storage | Department of Energy",
+    "hash": "324ce6709b4c32b31420c40da964c8480f2c25ddb2338cc90d24400de3da3aa4",
+    "baselineAt": "2026-09-09T06:04:26.527Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:04:26.527Z",
+      "keywords": [
+        "350 bar",
+        "700 bar",
+        "compressed hydrogen",
+        "Type IV",
+        "storage tank"
+      ],
+      "segments": [
+        {
+          "hash": "42e3d88f9dc4aa2ef7f8396f237fa9180203da25e075d996e1ba720c1d3fba74",
+          "excerpt": "ch 700 bar compressed systems currently fall short of DOE's 2020 targets. Distribution of 350 bar and 700 bar Compressed Hydrogen System Costs The cost of current compressed gas systems for automotive applications is do…",
+          "matchedKeywords": [
+            "350 bar"
+          ]
+        },
+        {
+          "hash": "a51c36dd4df3bd2e1e52db4273a280d814cacb00eff30f8da69fd22c982c0fd4",
+          "excerpt": "he pressure vessel to help meet DOE targets. These pie charts show cost distributions for 350 bar and 700 bar Type IV single-tank compressed hydrogen systems at 500,000 units. See DOE Hydrogen and Fuel Cells Program Rec…",
+          "matchedKeywords": [
+            "350 bar"
+          ]
+        },
+        {
+          "hash": "ba69015e10ae0907eec079ed6132dde105d3eb55c965a5e536d73e79d2c49ac7",
+          "excerpt": "These bar charts show how the estimated system costs vary based on production volume for 350 bar (top) and 700 bar (bottom) compressed hydrogen storage systems. See DOE Hydrogen and Fuel Cells Program Record 15013 . 700…",
+          "matchedKeywords": [
+            "350 bar"
+          ]
+        },
+        {
+          "hash": "53c61e20976dc16d2defc5f978c7e073f36c8c97496b093f4ce93392365c13a2",
+          "excerpt": "current near-term technology for onboard automotive physical hydrogen storage is 350 and 700 bar (5,000 and 10,000 psi) nominal working-pressure compressed gas vessels—that is, \"tanks.\" Components of a pressurized hydro…",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "3d341211d47940a8939aac5523f7c2b69eb36d096b093f58f1d3923e5eed25ff",
+          "excerpt": "2 /kg system) Volumetric Density kWh/L system (kg H 2 /L system) Cost b $/kWh ($/kg H 2 ) 700 bar compressed (Type IV, single tank) 1.4 (0.042) 0.8 (0.024) $15 c ($500) a Assumes a storage capacity of 5.6 kg of usable h…",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "050795d047cd70ff2ddecbd4e9358b8c46c382f6d4e774480e3ff8735b0f683d",
+          "excerpt": "hicle Storage Targets This system projections graph conveniently shows how a conventional 700 bar Type IV compressed hydrogen storage system at 300 K compares against all of DOE's 2020 onboard vehicle storage targets. T…",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "e9eb62992c2c2309f4b99bd6ba73d949fe6ad78d194d75e547f69c28361ef485",
+          "excerpt": "blue space indicates current performance and the white space indicates the areas in which 700 bar compressed systems currently fall short of DOE's 2020 targets. Distribution of 350 bar and 700 bar Compressed Hydrogen Sy…",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "2b18b3e571cfa5a3a0fafcb2eb20674a50c7af45ab943db24e1ce12150f7db3a",
+          "excerpt": "ompressed systems currently fall short of DOE's 2020 targets. Distribution of 350 bar and 700 bar Compressed Hydrogen System Costs The cost of current compressed gas systems for automotive applications is dominated by t…",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "ced264a3a1a02e22785d2917baafa61346c9691d306baf90eb0bd33721c779ab",
+          "excerpt": "vessel to help meet DOE targets. These pie charts show cost distributions for 350 bar and 700 bar Type IV single-tank compressed hydrogen systems at 500,000 units. See DOE Hydrogen and Fuel Cells Program Record 15013 . …",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "6a739d73233b3810943cfd745782662456c4e9bbab64e982380f03bcd23c1643",
+          "excerpt": "show how the estimated system costs vary based on production volume for 350 bar (top) and 700 bar (bottom) compressed hydrogen storage systems. See DOE Hydrogen and Fuel Cells Program Record 15013 . 700-bar compressed h…",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "6f666967e7930c7edec5e6e21e7a35d3bb1e676e6b8e7f3be1249568aa2c92c1",
+          "excerpt": "f balance of plant components. This chart shows one potential cost reduction strategy for 700 bar compressed systems. Committed to Restoring America’s Energy Dominance. Follow Us Link to Facebook Link to Instagram Link …",
+          "matchedKeywords": [
+            "700 bar"
+          ]
+        },
+        {
+          "hash": "e642f0542c8b0e1f8dc0ef47dda790e27e717a79e67f23c6d4ba72be59d89342",
+          "excerpt": "rt, there is currently little activity in developing it for onboard automotive use. While compressed hydrogen typically is stored at near-ambient temperatures, \"cold\" (sub-ambient but greater than 150 K) and \"cryogenic\"…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "4547b2b4baf353c2c02e97001577ad46971bb5a015f35d7de1bf2cc28926d7f5",
+          "excerpt": "mperatures, \"cold\" (sub-ambient but greater than 150 K) and \"cryogenic\" (150 K and below) compressed hydrogen storage are being investigated due to the higher hydrogen densities that can be achieved at reduced temperatu…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "22da0d38316cf0b91500ca32d808967beb8cd9a9aa8483284fb90044e89efcd1",
+          "excerpt": "ogen densities that can be achieved at reduced temperatures. Technical Targets and Status Compressed hydrogen storage systems have been demonstrated in hundreds of prototype fuel cell vehicles and are available commerci…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "ec9d556d42dcf668ef4eab362d394dd02228053de44ef460495bb8bc611bfe48",
+          "excerpt": "cost. Expand each of the menu items below to learn more about the performance and cost of compressed hydrogen storage systems. Status and Targets for Gravimetric Density, Volumetric Density, and Cost Projected Performan…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "9ab7dadf1f9ec50161125bac037d95ffe60fa1b5217660399cdd5a81239391af",
+          "excerpt": "rgets This system projections graph conveniently shows how a conventional 700 bar Type IV compressed hydrogen storage system at 300 K compares against all of DOE's 2020 onboard vehicle storage targets. The blue space in…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "2bdf2dd98824273389e7d6c99a8f210b822a5b63c09f5ef3d9e0ec40e5e58ece",
+          "excerpt": "d systems currently fall short of DOE's 2020 targets. Distribution of 350 bar and 700 bar Compressed Hydrogen System Costs The cost of current compressed gas systems for automotive applications is dominated by the carbo…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "8977a78208b0fda60a48b86a5b497a6775800994dbb77bc2cc5910fea45de81d",
+          "excerpt": "ets. These pie charts show cost distributions for 350 bar and 700 bar Type IV single-tank compressed hydrogen systems at 500,000 units. See DOE Hydrogen and Fuel Cells Program Record 15013 . &nbsp; 700-bar compressed hy…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "7264afacbed41bca5657663d8f6a6f3a9bcffa6bf0e5894ddcae9910de17c3d4",
+          "excerpt": "s at 500,000 units. See DOE Hydrogen and Fuel Cells Program Record 15013 . &nbsp; 700-bar compressed hydrogen storage system cost breakout (single tank system) from 2015 DOE Hydrogen and Fuel Cells Program Record #15013…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "016de7d1796228d4dcf417b557cd50ebd14ad9ec0bb7f10fe716019801acdee2",
+          "excerpt": "mated system costs vary based on production volume for 350 bar (top) and 700 bar (bottom) compressed hydrogen storage systems. See DOE Hydrogen and Fuel Cells Program Record 15013 . 700-bar compressed hydrogen storage s…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "3cef849da3362e666db0d3f14850b06c73b3041883c5bc174415c2eb6eaf1746",
+          "excerpt": "hydrogen storage systems. See DOE Hydrogen and Fuel Cells Program Record 15013 . 700-bar compressed hydrogen storage system cost breakout by volume from 2015 DOE Hydrogen and Fuel Cells Program Record #15013. Pathways t…",
+          "matchedKeywords": [
+            "compressed hydrogen"
+          ]
+        },
+        {
+          "hash": "815920b5f3ae589297b87be59e39967f75fd072aa7b422c375df3237ce2b1a27",
+          "excerpt": "tric Density kWh/L system (kg H 2 /L system) Cost b $/kWh ($/kg H 2 ) 700 bar compressed (Type IV, single tank) 1.4 (0.042) 0.8 (0.024) $15 c ($500) a Assumes a storage capacity of 5.6 kg of usable hydrogen. b Cost proj…",
+          "matchedKeywords": [
+            "Type IV"
+          ]
+        },
+        {
+          "hash": "6836acbc35e556fbf7b0e07ef9ed2574c6ffee560e1307cdb031e30f8e434889",
+          "excerpt": "orage Targets This system projections graph conveniently shows how a conventional 700 bar Type IV compressed hydrogen storage system at 300 K compares against all of DOE's 2020 onboard vehicle storage targets. The blue …",
+          "matchedKeywords": [
+            "Type IV"
+          ]
+        },
+        {
+          "hash": "77f8b4471273c17b5018daa589e40048221d47c44a59e18653407c36f5fe0700",
+          "excerpt": "o help meet DOE targets. These pie charts show cost distributions for 350 bar and 700 bar Type IV single-tank compressed hydrogen systems at 500,000 units. See DOE Hydrogen and Fuel Cells Program Record 15013 . &nbsp; 7…",
+          "matchedKeywords": [
+            "Type IV"
+          ]
+        },
+        {
+          "hash": "2b4d82a73b96931d97c37f750aca11b4c14e3c1ed4287d3d7af6b67f9929870f",
+          "excerpt": "ng-pressure compressed gas vessels—that is, \"tanks.\" Components of a pressurized hydrogen storage tank. While low-pressure liquid hydrogen, near the normal boiling point of 20 K, is routinely used for bulk hydrogen stor…",
+          "matchedKeywords": [
+            "storage tank"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:04:26.527Z",
+    "lastChangedAt": null,
     "lastError": null
   }
 }

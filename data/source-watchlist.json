@@ -73,6 +73,86 @@
         "sourceType": "company_official",
         "language": "en",
         "watchFor": ["hydrogen", "storage", "Type 4", "commercial vehicle"]
+      },
+      {
+        "id": "jm-fuel-cell-tech",
+        "companyId": "jm",
+        "nodeId": "catalyst",
+        "name": "Johnson Matthey fuel cells technology",
+        "url": "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["fuel cell", "catalyst coated membrane", "CCM", "membrane electrode assembly", "MEA"]
+      },
+      {
+        "id": "umicore-fuel-cell-catalysts",
+        "companyId": "umicore",
+        "nodeId": "catalyst",
+        "name": "Umicore fuel cell catalysts",
+        "url": "https://www.umicore.com/en/markets-products/automotive-mobility/fuel-cell-catalysts/",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["fuel cell catalyst", "PEM", "platinum", "catalyst", "hydrogen"]
+      },
+      {
+        "id": "sgl-gdl",
+        "companyId": "sgl",
+        "nodeId": "gdl",
+        "name": "SGL Carbon SIGRACET fuel cell components",
+        "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet-fuel-cell-components/",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["SIGRACET", "gas diffusion layer", "GDL", "fuel cell"]
+      },
+      {
+        "id": "forvia-hydrogen-storage",
+        "companyId": "forvia",
+        "nodeId": "tank",
+        "name": "FORVIA hydrogen storage systems",
+        "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["hydrogen storage", "Type IV", "tank", "700 bar", "capacity", "commercial vehicle"]
+      },
+      {
+        "id": "hexagon-purus",
+        "companyId": "hexagon",
+        "nodeId": "tank",
+        "name": "Hexagon Purus hydrogen storage systems",
+        "url": "https://hexagongroup.com/hexagon-purus",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["hydrogen storage", "Type 4", "Type IV", "700 bar", "commercial vehicle"]
+      },
+      {
+        "id": "garrett-fuel-cell",
+        "companyId": "garrett",
+        "nodeId": "compressor",
+        "name": "Garrett fuel cell technology",
+        "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": ["fuel cell compressor", "electric compressor", "air compressor", "hydrogen", "fuel cell"]
+      },
+      {
+        "id": "doe-fuel-cell-parts",
+        "companyId": null,
+        "nodeId": "mea",
+        "name": "U.S. DOE fuel cell parts overview",
+        "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
+        "sourceType": "government",
+        "language": "en",
+        "watchFor": ["membrane electrode assembly", "MEA", "gas diffusion layer", "catalyst", "bipolar plate"]
+      },
+      {
+        "id": "doe-hydrogen-storage",
+        "companyId": null,
+        "nodeId": "tank",
+        "name": "U.S. DOE physical hydrogen storage",
+        "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
+        "sourceType": "government",
+        "language": "en",
+        "watchFor": ["350 bar", "700 bar", "compressed hydrogen", "Type IV", "storage tank"]
       }
     ]
   },

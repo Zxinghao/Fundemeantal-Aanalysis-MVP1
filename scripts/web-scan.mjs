@@ -90,6 +90,11 @@ export function cadenceDue(cadence, previous, checkedAt, currentUrl = null) {
   if (previous?.lastError) return true;
   if (!previous?.lastCheckedAt) return true;
 
+  // Legacy cache rows can have a successful full-page hash but no watched-context
+  // snapshot. They are operationally "baseline pending" and cannot produce a real
+  // comparable disclosure diff yet, so do not make them wait another week.
+  if (!previous?.watchSnapshot) return true;
+
   const previousTime = Date.parse(previous.lastCheckedAt);
   const currentTime = Date.parse(checkedAt);
   if (!Number.isFinite(previousTime) || !Number.isFinite(currentTime)) return true;
@@ -98,7 +103,7 @@ export function cadenceDue(cadence, previous, checkedAt, currentUrl = null) {
 }
 
 export function sourceBaselineIsComparable(previous, source) {
-  return Boolean(previous?.hash) && previous?.url === source?.url;
+  return Boolean(previous?.hash && previous?.watchSnapshot) && previous?.url === source?.url;
 }
 
 function relevantChangeCount(changeEvidence) {
@@ -106,15 +111,10 @@ function relevantChangeCount(changeEvidence) {
 }
 
 export function shouldCreateReviewEvent(changeEvidence) {
-  if (changeEvidence?.status === "comparable") {
-    return relevantChangeCount(changeEvidence) > 0;
-  }
-
-  if (changeEvidence?.status === "baseline_missing") {
-    return Array.isArray(changeEvidence.currentRelevant) && changeEvidence.currentRelevant.length > 0;
-  }
-
-  return false;
+  // Baseline establishment is an operational state, not a research event. Research
+  // Operations owns baseline readiness; Review Desk receives only comparable changes
+  // with at least one changed watched-context window.
+  return changeEvidence?.status === "comparable" && relevantChangeCount(changeEvidence) > 0;
 }
 
 function buildAnalysis({ source, hits, changeEvidence }) {
@@ -302,14 +302,14 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
       lastError: null
     };
 
-    // A first successful fetch, including the first fetch after a configured source
-    // URL changes, establishes a fresh baseline. Content from two different URLs is
-    // never treated as a disclosure diff.
+    // A first successful fetch, a legacy-cache baseline backfill, and the first fetch
+    // after a configured source URL change are operational baseline work only. Content
+    // without a watched-context predecessor is never treated as a disclosure event.
     if (!comparableBaseline || !changed) return null;
 
-    // Scanner v0.5 deliberately suppresses full-page changes that do not alter any
-    // watched context. They remain visible in the cache fingerprint/history but no
-    // longer consume analyst attention as Review Desk events.
+    // Scanner deliberately suppresses full-page changes that do not alter any watched
+    // context. They remain visible in the cache fingerprint/history but do not consume
+    // analyst attention as Review Desk events.
     if (!shouldCreateReviewEvent(changeEvidence)) return null;
 
     const eventIdOverride = eventIdForChange(industryId, date, source, changeEvidence);

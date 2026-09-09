@@ -68,11 +68,11 @@
         "id": "hexagon-purus-ir",
         "companyId": "hexagon",
         "nodeId": "tank",
-        "name": "Hexagon Purus investor relations",
-        "url": "https://hexagonpurus.com/investor-relations",
-        "sourceType": "company_official",
+        "name": "Hexagon Purus regulated news (Euronext)",
+        "url": "https://live.euronext.com/en/listview/company-press-release/251919",
+        "sourceType": "exchange_filing",
         "language": "en",
-        "watchFor": ["hydrogen", "storage", "Type 4", "commercial vehicle"]
+        "watchFor": ["results", "order", "hydrogen", "storage", "commercial vehicle", "capacity", "customer"]
       },
       {
         "id": "jm-fuel-cell-tech",

@@ -41,6 +41,7 @@ jobs:
           node --check scripts/apply-review-decisions.mjs
           node --check scripts/promote-reviewed-data.mjs
           node --check scripts/validate-data.mjs
+          node --check scripts/validate-watchlist.mjs
           node --check tests/research-pipeline.test.mjs
           node --check tests/semantic-candidate.test.mjs
           node --check tests/llm-research-agent.test.mjs
@@ -52,6 +53,9 @@ jobs:
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs
+
+      - name: Validate source watchlist integrity
+        run: node scripts/validate-watchlist.mjs
 
       - name: Validate semantic candidate invariants
         run: node scripts/validate-semantic-candidates.mjs

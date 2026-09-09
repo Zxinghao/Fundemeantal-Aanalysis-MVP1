@@ -47,9 +47,10 @@ jobs:
           node --check tests/llm-research-agent.test.mjs
           node --check tests/analyst-review-workflow.test.mjs
           node --check tests/scanner-signal-quality.test.mjs
+          node --check tests/source-retry.test.mjs
 
       - name: Run research pipeline regression tests
-        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs tests/analyst-review-workflow.test.mjs tests/scanner-signal-quality.test.mjs
+        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs tests/analyst-review-workflow.test.mjs tests/scanner-signal-quality.test.mjs tests/source-retry.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

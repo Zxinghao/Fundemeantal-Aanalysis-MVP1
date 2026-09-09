@@ -2,5 +2,5 @@ Source Scan manual trigger file.
 
 Update this file to trigger a Source Scan from the default branch.
 
-Last requested trigger: 2026-09-09T06:26:00Z
-Reason: verify failed-source retry and repaired SGL SIGRACET source.
+Last requested trigger: 2026-09-09T07:03:00Z
+Reason: backfill legacy watched-context baselines after scanner-readiness completion.

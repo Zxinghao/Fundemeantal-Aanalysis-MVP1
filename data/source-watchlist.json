@@ -99,7 +99,7 @@
         "companyId": "sgl",
         "nodeId": "gdl",
         "name": "SGL Carbon SIGRACET fuel cell components",
-        "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet-fuel-cell-components/",
+        "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet/",
         "sourceType": "company_official",
         "language": "en",
         "watchFor": ["SIGRACET", "gas diffusion layer", "GDL", "fuel cell"]

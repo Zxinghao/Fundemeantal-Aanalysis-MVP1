@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:11.156Z",
+      "capturedAt": "2026-09-09T06:26:01.338Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -202,7 +202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:11.156Z",
+    "lastCheckedAt": "2026-09-09T06:26:01.338Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -216,7 +216,7 @@
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:11.708Z",
+      "capturedAt": "2026-09-09T06:26:01.869Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,7 +240,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:11.708Z",
+    "lastCheckedAt": "2026-09-09T06:26:01.869Z",
     "lastChangedAt": "2026-09-08T22:06:30.788Z",
     "lastError": null
   },
@@ -254,7 +254,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:13.387Z",
+      "capturedAt": "2026-09-09T06:26:02.845Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +418,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:13.387Z",
+    "lastCheckedAt": "2026-09-09T06:26:02.845Z",
     "lastChangedAt": "2026-08-28T18:43:05.919Z",
     "lastError": null
   },
@@ -460,7 +460,7 @@
     "industryId": "fuel-cell",
     "cadence": "weekly",
     "url": "https://hexagonpurus.com/investor-relations",
-    "lastCheckedAt": "2026-09-08T11:19:59.299Z",
+    "lastCheckedAt": "2026-09-09T06:26:03.393Z",
     "lastError": "fetch failed"
   },
   "nvidia-spectrum-x-photonics": {
@@ -473,7 +473,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:26.597Z",
+      "capturedAt": "2026-09-09T06:26:08.484Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -694,7 +694,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:26.597Z",
+    "lastCheckedAt": "2026-09-09T06:26:08.484Z",
     "lastChangedAt": "2026-09-09T05:59:01.253Z",
     "lastError": null
   },
@@ -708,7 +708,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:26.888Z",
+      "capturedAt": "2026-09-09T06:26:08.693Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -726,7 +726,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:26.888Z",
+    "lastCheckedAt": "2026-09-09T06:26:08.693Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -740,7 +740,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:27.000Z",
+      "capturedAt": "2026-09-09T06:26:08.762Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -961,7 +961,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:27.000Z",
+    "lastCheckedAt": "2026-09-09T06:26:08.762Z",
     "lastChangedAt": "2026-06-13T07:35:07.611Z",
     "lastError": null
   },
@@ -975,7 +975,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:27.788Z",
+      "capturedAt": "2026-09-09T06:26:09.114Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1078,7 +1078,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:27.788Z",
+    "lastCheckedAt": "2026-09-09T06:26:09.114Z",
     "lastChangedAt": "2026-09-02T11:19:29.684Z",
     "lastError": null
   },
@@ -1092,7 +1092,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:27.971Z",
+      "capturedAt": "2026-09-09T06:26:09.532Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1202,7 +1202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:27.971Z",
+    "lastCheckedAt": "2026-09-09T06:26:09.532Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1216,7 +1216,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:04:28.131Z",
+      "capturedAt": "2026-09-09T06:26:09.593Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1297,7 +1297,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:04:28.131Z",
+    "lastCheckedAt": "2026-09-09T06:26:09.593Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },
@@ -1704,9 +1704,235 @@
     "id": "sgl-gdl",
     "industryId": "fuel-cell",
     "cadence": "weekly",
-    "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet-fuel-cell-components/",
-    "lastCheckedAt": "2026-09-09T06:04:18.722Z",
-    "lastError": "HTTP 404"
+    "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet/",
+    "title": "SIGRACET® Fuel Cell Components | SGL Carbon",
+    "hash": "12f1dadc88ed448097e38203983bc76525e3317f7a3714764f778053277f719e",
+    "baselineAt": "2026-09-09T06:26:04.221Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T06:26:04.221Z",
+      "keywords": [
+        "SIGRACET",
+        "gas diffusion layer",
+        "GDL",
+        "fuel cell"
+      ],
+      "segments": [
+        {
+          "hash": "8ea9242110e804ad1023b1836711c728baf5582e9db84abf4a55a263597ecf06",
+          "excerpt": "SIGRACET® Fuel Cell Components | SGL Carbon jump to Menu jump to Content jump to Footer Careers Contact DE EN --> Markets &amp; Solutions Overview of our mate",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "a7f42d23598573a71b04d48bb7a4e78b1e6af4b0c27d538c751672a66ec3e82b",
+          "excerpt": "ts Contact &amp; Service Search Basket Careers Contact DE EN Home Markets &amp; Solutions SIGRACET ® Fuel Cell Components Contact Share 0 SIGRACET ® Fuel Cell Components ® Gas Diffusion Layer\" data-src=\"/data/_processed…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "67375f9160da45ef637c396c850793c4ee6a7bb7300e8d108f5634218112abd7",
+          "excerpt": "ontact DE EN Home Markets &amp; Solutions SIGRACET ® Fuel Cell Components Contact Share 0 SIGRACET ® Fuel Cell Components ® Gas Diffusion Layer\" data-src=\"/data/_processed_/b/5/csm_SGL-SIGRACET-Gas-Diffusion-Layer_63fa0…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "237e62513476721804c444c5f3a8532d203ffb35df9eea50869713bf4b7ec9d3",
+          "excerpt": "CET ® Fuel Cell Components ® Gas Diffusion Layer\" data-src=\"/data/_processed_/b/5/csm_SGL-SIGRACET-Gas-Diffusion-Layer_63fa09e7b8.jpg\" /> SGL Carbon develops and manufactures carbon-based products for Polymer-Electrolyt…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "6ad25b9e57e00dff582aed3377034af0c75a611398bd8a732a1c6625d2d761bb",
+          "excerpt": "nufacture of gas diffusion electrodes (GDEs). SGL Carbon has been producing fully-treated SIGRACET ® gas diffusion layers by reel-to-reel processes since 1999. Carbon paper-type (prepared by wet-laying of chopped PAN-ba…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "a850116eadfd63d5d7e7aa2e3bf5bab8c48f5e67d7a07576311d756cb49aebcd",
+          "excerpt": "ll as to adjust the desired porosity level. Carbon Paper Substrate Manufacturing route of SIGRACET ® (carbon paper-based) gas diffusion layer backings Finishing of GDL comprises hydrophobic treatment of the substrate wi…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "ff69913b57b8a630572b38fd40646d8c83fbad2e751300816d9181ea233cb69d",
+          "excerpt": "E and coating with a microporous layer (MPL). Finishing Treatment Finishing treatments of SIGRACET ® (carbon paper-based) gas diffusion layers A loading of the substrate with 5% (w/w) PTFE has proven to be sufficient fo…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "9df565e93faf0342387609c024530a304fca6754ee35050406d9e026ce72c856",
+          "excerpt": "or PEMFC performance across a broad range of operating conditions. Mean pore diameters of SIGRACET ® GDLs are typically in a range from 0.1 to 0.3 µm (Hg-Porosimetry) or 1.5 to 3 µm (calculated from capillary flow porom…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "035751239958f5d34fb6e8bd17510991d729fc600a5786d62b9b0770ab50a420",
+          "excerpt": "L (water contact angles by sessile drop method &gt; 130°). Typical properties of standard SIGRACET ® GDL grades. &nbsp; Unit 22BB 36BB Basic parameters &nbsp; &nbsp; &nbsp; Thickness µm 215 280 Area weight g m -2 70 105…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "43aec6bf593dd9769b13bef63724defafabbec149e8d689cc4c59c837c898250",
+          "excerpt": "please contact our partners: IonPower MFC Technology Fuel Cell Store Downloads Brochures SIGRACET Whitepaper PDF, 747 KB Download Collect SIGRACET Whitepaper, Chinese PDF, 923 KB Download Collect Collect Downloads Furth…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "62d9dc799b01c169281190d8f3fc1873170aa0ea60ce4806998158ad5e4906d1",
+          "excerpt": "logy Fuel Cell Store Downloads Brochures SIGRACET Whitepaper PDF, 747 KB Download Collect SIGRACET Whitepaper, Chinese PDF, 923 KB Download Collect Collect Downloads Further information Everything About Graphite Graphit…",
+          "matchedKeywords": [
+            "SIGRACET"
+          ]
+        },
+        {
+          "hash": "beb39c514552ef46544e17bfa13f5fd99b97aa523713eac0bb29803d0e081b6c",
+          "excerpt": "lutions SIGRACET ® Fuel Cell Components Contact Share 0 SIGRACET ® Fuel Cell Components ® Gas Diffusion Layer\" data-src=\"/data/_processed_/b/5/csm_SGL-SIGRACET-Gas-Diffusion-Layer_63fa09e7b8.jpg\" /> SGL Carbon develops …",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "f3aa69f66e2bac611e37f22ee62b80f3c723ff1eee6ed111df5e23e4fa47834f",
+          "excerpt": "manufactures carbon-based products for Polymer-Electrolyte-Membrane Fuel Cells (PEMFC) : Gas Diffusion Layers (GDL) Foils used as separator plates for fuel cells and redox-flow batteries (Expanded Graphite) Quick naviga…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "932c0ac371de76e0ed013832f181890c60f108e282f7005f067aa8e7c5a601d2",
+          "excerpt": "uel cells and redox-flow batteries (Expanded Graphite) Quick navigation SGL Carbon&#039;s Gas Diffusion Layers (GDL) GDLs are typically designed as a bilayer structure consisting of a macro-porous backing material (carb…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "a99de9ada2d29911d753eaaacb15b251003400927f45f0822def5865d1bfabaf",
+          "excerpt": "rious pore sizes) is advantageous for the performance. Sketch of the bilayer structure of Gas Diffusion Layers Hydrophobic properties in the backing and the MPL are maintained by adding defined amounts of polytetrafluor…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "35e9bc760873cf9c24585a00a2437f1769ea9c746074003c797ef828b6ad249b",
+          "excerpt": "f gas diffusion electrodes (GDEs). SGL Carbon has been producing fully-treated SIGRACET ® gas diffusion layers by reel-to-reel processes since 1999. Carbon paper-type (prepared by wet-laying of chopped PAN-based carbon …",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "79583b7591df7bbd9070de9cbdc04d5c5ae8cd4157ff7cfe3559a4a932fad63e",
+          "excerpt": "since 1999. Carbon paper-type (prepared by wet-laying of chopped PAN-based carbon fibers) gas diffusion layers are the preferred solution since they can be manufactured at high volumes (scalability) and low thickness. T…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "dfdbe74ef5e582a87e0e86ba59c0869dba88d8f13ee432b72dc3494e69bdc60d",
+          "excerpt": "sity level. Carbon Paper Substrate Manufacturing route of SIGRACET ® (carbon paper-based) gas diffusion layer backings Finishing of GDL comprises hydrophobic treatment of the substrate with PTFE and coating with a micro…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "1d5c8ba91d7c1eb7de9e1dbcd499c65a2746c452db3cfa60e2f0b0e6423013e1",
+          "excerpt": "layer (MPL). Finishing Treatment Finishing treatments of SIGRACET ® (carbon paper-based) gas diffusion layers A loading of the substrate with 5% (w/w) PTFE has proven to be sufficient for obtaining a pronounced hydropho…",
+          "matchedKeywords": [
+            "gas diffusion layer"
+          ]
+        },
+        {
+          "hash": "59ca99cc39ae8dd668c2ce2002605138c904e9a949f28029cf1e5109fdad6236",
+          "excerpt": "ased products for Polymer-Electrolyte-Membrane Fuel Cells (PEMFC) : Gas Diffusion Layers (GDL) Foils used as separator plates for fuel cells and redox-flow batteries (Expanded Graphite) Quick navigation SGL Carbon&#039;…",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "eb0dde98ee55d6211f6617ca8fb0023c2079f50b4b6ec2afcd4aa33a3f19018e",
+          "excerpt": "ow batteries (Expanded Graphite) Quick navigation SGL Carbon&#039;s Gas Diffusion Layers (GDL) GDLs are typically designed as a bilayer structure consisting of a macro-porous backing material (carbon fiber paper support…",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "b102833d9ec847d63dc427c8aa3ad4d99afebc64e3377fcaf91ff1b6303181cf",
+          "excerpt": "tteries (Expanded Graphite) Quick navigation SGL Carbon&#039;s Gas Diffusion Layers (GDL) GDLs are typically designed as a bilayer structure consisting of a macro-porous backing material (carbon fiber paper support) and…",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "8f6ba466f7daffe8f0c27d3e9ab0f64cd49d073c899c1e3f8be7ac73b93c15aa",
+          "excerpt": "-based layer (MPL). The fibrous backing material governs the mechanical properties of the GDL (behavior upon compression, bending and shear strength, etc.) while the MPL ensures intimate contact to the catalyst layers, …",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "7cc95cea3ef50cb7e94619d464029e49f56ca660fe75963a45e2ef15fef0072d",
+          "excerpt": "umes (scalability) and low thickness. The following figures show the whole value chain of GDL manufacturing. All commercially available GDL materials to date are based on carbon fibers derived from polyacrylonitrile (PA…",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "11b5375b45c8cfeeffe816d310ce68a22efa81745a10f1e4a47eec9399ec9c93",
+          "excerpt": "owing figures show the whole value chain of GDL manufacturing. All commercially available GDL materials to date are based on carbon fibers derived from polyacrylonitrile (PAN). PAN (co)polymers are processed into precur…",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "c6173b952185f515d365b7284a4951b62dc46159f4e304a38fc20d8f0ca7591c",
+          "excerpt": "turing route of SIGRACET ® (carbon paper-based) gas diffusion layer backings Finishing of GDL comprises hydrophobic treatment of the substrate with PTFE and coating with a microporous layer (MPL). Finishing Treatment Fi…",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "0db8054049f7a06c5e126773e3871d0dc3d748d156bd4d7156a7094d9d77837e",
+          "excerpt": "rformance across a broad range of operating conditions. Mean pore diameters of SIGRACET ® GDLs are typically in a range from 0.1 to 0.3 µm (Hg-Porosimetry) or 1.5 to 3 µm (calculated from capillary flow porometry). The …",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "e2185e4b3961af3aed1a9b0768eb367b798922ea36a30e4fcce041177c9752da",
+          "excerpt": "ntact angles by sessile drop method &gt; 130°). Typical properties of standard SIGRACET ® GDL grades. &nbsp; Unit 22BB 36BB Basic parameters &nbsp; &nbsp; &nbsp; Thickness µm 215 280 Area weight g m -2 70 105 &nbsp; To …",
+          "matchedKeywords": [
+            "GDL"
+          ]
+        },
+        {
+          "hash": "ca936bc21fa116584f67c0f0cd31278a40eaa0120b165e8fc648e34e0b346fb9",
+          "excerpt": "SIGRACET® Fuel Cell Components | SGL Carbon jump to Menu jump to Content jump to Footer Careers Contact DE EN --> Markets &amp; Solutions Overview of our materials Autom",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "45da99fcd1f1e59ba6328733f46c53a9a99d61307fc7f5cf55a15d6c23c1d54d",
+          "excerpt": "&amp; Service Search Basket Careers Contact DE EN Home Markets &amp; Solutions SIGRACET ® Fuel Cell Components Contact Share 0 SIGRACET ® Fuel Cell Components ® Gas Diffusion Layer\" data-src=\"/data/_processed_/b/5/csm_S…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T06:26:04.221Z",
+    "lastChangedAt": null,
+    "lastError": null
   },
   "forvia-hydrogen-storage": {
     "id": "forvia-hydrogen-storage",

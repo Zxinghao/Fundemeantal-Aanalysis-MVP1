@@ -1,5 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import vm from "node:vm";
 import policy from "../scanner-event-policy.js";
 
 function scannerEvent(changeSet = null) {
@@ -10,6 +12,14 @@ function scannerEvent(changeSet = null) {
     researchPacket: changeSet
       ? { evidence: [{ changeSet }] }
       : null
+  };
+}
+
+function reviewCard(id, origin, changeSet = null) {
+  return {
+    id,
+    origin,
+    researchPacket: changeSet ? { evidence: [{ changeSet }] } : null
   };
 }
 
@@ -74,4 +84,26 @@ test("current historical fuel-cell shape summarizes as three suppressed records"
   assert.equal(summary.suppressed, 3);
   assert.equal(summary.categories.operational_baseline, 1);
   assert.equal(summary.categories.legacy_unverifiable, 2);
+});
+
+test("Review Desk gate suppresses only non-actionable AI scan cards", async () => {
+  const gateSource = await fs.readFile(new URL("../review-queue-gate.js", import.meta.url), "utf8");
+  const cards = [
+    reviewCard("baseline", "AI scan", { status: "baseline_missing", addedCount: 0, removedCount: 0 }),
+    reviewCard("legacy", "AI scan"),
+    reviewCard("actionable", "AI scan", { status: "comparable", addedCount: 1, removedCount: 0 }),
+    reviewCard("user", "User submission"),
+    reviewCard("map", "Map candidate")
+  ];
+
+  const context = vm.createContext({
+    ScannerEventPolicy: policy,
+    buildReviewQueue: () => cards
+  });
+  vm.runInContext(gateSource, context);
+
+  assert.deepEqual(
+    Array.from(context.buildReviewQueue(), (item) => item.id),
+    ["actionable", "user", "map"]
+  );
 });

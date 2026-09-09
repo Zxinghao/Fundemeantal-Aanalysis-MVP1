@@ -1,4 +1,5 @@
 import {
+  buildPatchPreview,
   buildReviewedPacket,
   validateAnalystReview
 } from "./scripts/analyst-review-model.mjs";
@@ -12,6 +13,25 @@ const scoreDimensionLabels = {
   validationBarrier: "Validation barrier",
   marketUnderappreciation: "Market underappreciation"
 };
+
+let canonicalIndustries = [];
+let canonicalDataStatus = "loading";
+
+const canonicalDataPromise = fetch("data/industries.json", { cache: "no-store" })
+  .then((response) => {
+    if (!response.ok) throw new Error(`Canonical industry data failed to load: ${response.status}`);
+    return response.json();
+  })
+  .then((data) => {
+    if (!Array.isArray(data)) throw new Error("Canonical industry data is malformed.");
+    canonicalIndustries = data;
+    canonicalDataStatus = "ready";
+    refreshAllPreviews();
+  })
+  .catch(() => {
+    canonicalDataStatus = "error";
+    refreshAllPreviews();
+  });
 
 function loadAllReviews() {
   try {
@@ -38,6 +58,10 @@ function saveReview(id, review) {
 function currentItem(id) {
   if (typeof window.buildReviewQueue !== "function") return null;
   return window.buildReviewQueue().find((item) => item.id === id) || null;
+}
+
+function canonicalIndustryFor(item) {
+  return canonicalIndustries.find((industry) => industry.id === item?.industryId) || null;
 }
 
 function text(value) {
@@ -105,6 +129,29 @@ function selectElement(name, options, selected) {
     select.appendChild(option);
   }
   return select;
+}
+
+function buildPreviewShell() {
+  const section = document.createElement("section");
+  section.className = "final-patch-preview";
+
+  const heading = document.createElement("div");
+  heading.className = "patch-preview-heading";
+  const title = document.createElement("strong");
+  title.textContent = "Final Patch Preview";
+  const badge = document.createElement("span");
+  badge.className = "patch-preview-badge";
+  heading.append(title, badge);
+
+  const intro = document.createElement("p");
+  intro.className = "patch-preview-intro";
+  intro.textContent = "This is generated from the same canonical-operation builder used by the exported approved research packet.";
+
+  const body = document.createElement("div");
+  body.className = "patch-preview-body";
+
+  section.append(heading, intro, body);
+  return section;
 }
 
 function buildWorksheet(item) {
@@ -206,6 +253,8 @@ function buildWorksheet(item) {
   scoreRationaleField.dataset.patchField = "score";
   form.appendChild(scoreRationaleField);
 
+  form.appendChild(buildPreviewShell());
+
   const actions = document.createElement("div");
   actions.className = "analyst-actions";
   const seed = document.createElement("button");
@@ -228,6 +277,7 @@ function buildWorksheet(item) {
   details.appendChild(form);
   updatePatchFields(details);
   updateReadiness(details, item);
+  updatePatchPreview(details, item);
   return details;
 }
 
@@ -258,9 +308,19 @@ function updatePatchFields(details) {
   });
 }
 
+function approvalErrors(item, review) {
+  const errors = validateAnalystReview(item, review);
+  if (errors.length) return errors;
+  if (canonicalDataStatus === "loading") return ["Wait for canonical industry data to finish loading before approval."];
+  if (canonicalDataStatus === "error") return ["Canonical industry data could not be loaded for patch preflight."];
+
+  const preview = buildPatchPreview(item, review, canonicalIndustryFor(item));
+  return preview.errors || [];
+}
+
 function updateReadiness(details, item, explicitReview = null) {
   const review = explicitReview || getReview(item.id);
-  const errors = validateAnalystReview(item, review);
+  const errors = approvalErrors(item, review);
   const badge = details.querySelector(".analyst-readiness");
   if (!badge) return errors;
   badge.textContent = errors.length ? "Approval locked" : "Ready to approve";
@@ -273,6 +333,126 @@ function showStatus(details, message, kind = "") {
   if (!status) return;
   status.textContent = message;
   status.className = `analyst-status ${kind}`.trim();
+}
+
+function formatPreviewValue(value) {
+  if (value === null || value === undefined) return "Not set";
+  if (typeof value === "string") return value;
+  return JSON.stringify(value, null, 2);
+}
+
+function labeledValue(labelText, value, className = "") {
+  const wrap = document.createElement("div");
+  wrap.className = `patch-preview-value ${className}`.trim();
+  const label = document.createElement("span");
+  label.textContent = labelText;
+  const pre = document.createElement("pre");
+  pre.textContent = formatPreviewValue(value);
+  wrap.append(label, pre);
+  return wrap;
+}
+
+function renderPatchPreviewBody(section, preview) {
+  const badge = section.querySelector(".patch-preview-badge");
+  const body = section.querySelector(".patch-preview-body");
+  body.replaceChildren();
+
+  if (preview.status === "loading") {
+    badge.textContent = "Loading";
+    const note = document.createElement("p");
+    note.textContent = "Loading canonical values for preflight comparison…";
+    body.appendChild(note);
+    return;
+  }
+
+  if (preview.status === "blocked") {
+    badge.textContent = "Blocked";
+    badge.classList.remove("ready");
+    const list = document.createElement("ul");
+    for (const error of preview.errors || []) {
+      const item = document.createElement("li");
+      item.textContent = error;
+      list.appendChild(item);
+    }
+    body.appendChild(list);
+    return;
+  }
+
+  badge.textContent = preview.executable ? "Canonical change" : "No canonical change";
+  badge.classList.add("ready");
+
+  const sourceLine = document.createElement("small");
+  sourceLine.className = "patch-preview-sources";
+  sourceLine.textContent = `Linked source IDs: ${(preview.sourceIds || []).join(", ") || "none"}`;
+  body.appendChild(sourceLine);
+
+  if (!preview.executable) {
+    const note = document.createElement("p");
+    note.className = "patch-preview-no-change";
+    note.textContent = preview.noCanonicalChangeReason || "Verified claim will be recorded without modifying canonical fields.";
+    body.appendChild(note);
+    return;
+  }
+
+  for (const operation of preview.operations || []) {
+    const card = document.createElement("article");
+    card.className = `patch-preview-operation ${operation.wouldChange ? "will-change" : "no-op"}`;
+
+    const header = document.createElement("div");
+    header.className = "patch-preview-operation-heading";
+    const op = document.createElement("strong");
+    op.textContent = operation.op.toUpperCase();
+    const path = document.createElement("code");
+    path.textContent = operation.path;
+    const effect = document.createElement("span");
+    effect.textContent = operation.wouldChange ? "Will change canonical data" : "Idempotent / current value already matches";
+    header.append(op, path, effect);
+
+    const values = document.createElement("div");
+    values.className = "patch-preview-values";
+    values.append(
+      labeledValue(operation.op === "append" ? "Current canonical collection" : "Current canonical value", operation.currentValue, "current"),
+      labeledValue(operation.op === "append" ? "Value to append" : "Proposed canonical value", operation.proposedValue, "proposed")
+    );
+
+    const reason = document.createElement("small");
+    reason.className = "patch-preview-reason";
+    reason.textContent = `Reason: ${operation.reason || "No reason recorded."}`;
+
+    card.append(header, values, reason);
+    body.appendChild(card);
+  }
+}
+
+function updatePatchPreview(details, item) {
+  const section = details.querySelector(".final-patch-preview");
+  if (!section || !item) return;
+
+  if (canonicalDataStatus === "loading") {
+    renderPatchPreviewBody(section, { status: "loading" });
+    return;
+  }
+
+  if (canonicalDataStatus === "error") {
+    renderPatchPreviewBody(section, {
+      status: "blocked",
+      errors: ["Canonical industry data could not be loaded, so exact patch preflight is unavailable."]
+    });
+    return;
+  }
+
+  const review = reviewFromWorksheet(details);
+  const preview = buildPatchPreview(item, review, canonicalIndustryFor(item));
+  renderPatchPreviewBody(section, preview);
+}
+
+function refreshAllPreviews() {
+  document.querySelectorAll(".analyst-workbench").forEach((details) => {
+    const item = currentItem(details.dataset.analystReviewId);
+    if (!item) return;
+    updatePatchPreview(details, item);
+    updateReadiness(details, item);
+  });
 }
 
 function enhanceCards() {
@@ -299,6 +479,7 @@ function handleSeed(button) {
   const rationale = details.querySelector('[name="analystRationale"]');
   if (finding && !finding.value.trim()) finding.value = draft.finding;
   if (rationale && !rationale.value.trim()) rationale.value = draft.rationale;
+  updatePatchPreview(details, item);
   showStatus(details, "AI text copied as an editable draft. It is still unverified until you check the primary source.");
 }
 
@@ -310,10 +491,11 @@ function handleSave(button) {
   const review = reviewFromWorksheet(details);
   const saved = saveReview(id, review);
   const errors = updateReadiness(details, item, saved);
+  updatePatchPreview(details, item);
   if (errors.length) {
     showStatus(details, `Saved, but approval remains locked: ${errors.join(" ")}`, "warning");
   } else {
-    showStatus(details, "Saved. Human verification is complete and this event is ready for approval/export.", "success");
+    showStatus(details, "Saved. Human verification and canonical patch preflight are complete; this event is ready for approval/export.", "success");
   }
 }
 
@@ -323,7 +505,7 @@ function approvalGuard(event) {
   const item = currentItem(button.dataset.reviewId);
   if (!item?.researchPacket) return;
   const review = getReview(item.id);
-  const errors = validateAnalystReview(item, review);
+  const errors = approvalErrors(item, review);
   if (errors.length === 0) return;
 
   event.preventDefault();
@@ -331,6 +513,7 @@ function approvalGuard(event) {
   const details = button.closest(".update-card")?.querySelector(".analyst-workbench");
   if (details) {
     details.open = true;
+    updatePatchPreview(details, item);
     showStatus(details, `Approval blocked: ${errors.join(" ")}`, "error");
   }
 }
@@ -342,9 +525,16 @@ function init() {
   new MutationObserver(enhanceCards).observe(pending, { childList: true, subtree: true });
   enhanceCards();
 
-  pending.addEventListener("change", (event) => {
-    if (event.target.matches('[name="patchMode"]')) updatePatchFields(event.target.closest(".analyst-workbench"));
-  });
+  const updateFromField = (event) => {
+    const details = event.target.closest?.(".analyst-workbench");
+    if (!details) return;
+    if (event.target.matches('[name="patchMode"]')) updatePatchFields(details);
+    const item = currentItem(details.dataset.analystReviewId);
+    if (item) updatePatchPreview(details, item);
+  };
+
+  pending.addEventListener("change", updateFromField);
+  pending.addEventListener("input", updateFromField);
   pending.addEventListener("click", (event) => {
     const seed = event.target.closest("[data-analyst-seed]");
     if (seed) return handleSeed(seed);
@@ -357,10 +547,20 @@ function init() {
 window.AnalystReview = {
   getReview,
   validateForApproval(item) {
-    return validateAnalystReview(item, getReview(item.id));
+    return approvalErrors(item, getReview(item.id));
   },
   buildReviewedPacket(item, reviewStatus, options = {}) {
-    return buildReviewedPacket(item, getReview(item.id), reviewStatus, options);
+    const review = getReview(item.id);
+    if (reviewStatus === "approved") {
+      const errors = approvalErrors(item, review);
+      if (errors.length) throw new Error(errors.join(" "));
+    }
+    return buildReviewedPacket(item, review, reviewStatus, options);
+  },
+  getPatchPreview(item) {
+    const review = getReview(item.id);
+    if (canonicalDataStatus !== "ready") return null;
+    return buildPatchPreview(item, review, canonicalIndustryFor(item));
   },
   getExportReview(id) {
     return cloneExportReview(getReview(id));
@@ -371,4 +571,5 @@ function cloneExportReview(review) {
   return review ? JSON.parse(JSON.stringify(review)) : null;
 }
 
+void canonicalDataPromise;
 init();

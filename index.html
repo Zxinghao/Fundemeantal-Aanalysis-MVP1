@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="hero-cleanup.css">
     <link rel="stylesheet" href="research-model.css">
     <link rel="stylesheet" href="analyst-review.css">
+    <link rel="stylesheet" href="research-ops.css">
   </head>
   <body>
     <header class="hero">
@@ -60,6 +61,16 @@
       </section>
 
       <aside class="panel updates-panel">
+        <section class="research-ops">
+          <div class="section-heading">
+            <h2>Research Operations</h2>
+          </div>
+          <p class="research-ops-intro">
+            Live scanner readiness for the selected industry. “Comparable-ready” means a watched-context baseline exists for future diffing; it does not mean a material event exists now.
+          </p>
+          <div id="source-health" aria-live="polite">Loading source health…</div>
+        </section>
+
         <section>
           <div class="section-heading">
             <h2>Review Desk</h2>
@@ -110,6 +121,7 @@
     <script src="node-details.js"></script>
     <script src="company-flags.js"></script>
     <script type="module" src="analyst-review.js"></script>
+    <script type="module" src="research-ops.js"></script>
     <script src="review-export.js"></script>
   </body>
 </html>

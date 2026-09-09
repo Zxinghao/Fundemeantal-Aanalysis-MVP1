@@ -22,6 +22,8 @@ jobs:
 
       - name: Check JavaScript syntax
         run: |
+          node --check scanner-event-policy.js
+          node --check review-queue-gate.js
           node --check app.js
           node --check research-evidence-ui.js
           node --check analyst-review.js
@@ -51,9 +53,10 @@ jobs:
           node --check tests/scanner-signal-quality.test.mjs
           node --check tests/source-retry.test.mjs
           node --check tests/source-health.test.mjs
+          node --check tests/scanner-event-policy.test.mjs
 
       - name: Run research pipeline regression tests
-        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs tests/analyst-review-workflow.test.mjs tests/scanner-signal-quality.test.mjs tests/source-retry.test.mjs tests/source-health.test.mjs
+        run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs tests/analyst-review-workflow.test.mjs tests/scanner-signal-quality.test.mjs tests/source-retry.test.mjs tests/source-health.test.mjs tests/scanner-event-policy.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

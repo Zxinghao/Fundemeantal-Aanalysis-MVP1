@@ -8,6 +8,7 @@ const industrySelect = document.querySelector("#industry-select");
 
 let watchlist = {};
 let sourceCache = {};
+let generatedEvents = [];
 
 function node(tag, className = "", text = "") {
   const element = document.createElement(tag);
@@ -61,6 +62,16 @@ function readinessNote(summary) {
     return "All configured sources for this industry have current comparable baselines. This means the scanner is ready to detect a future watched-context change; it does not mean a material event exists now.";
   }
   return "No monitored sources are configured for this industry.";
+}
+
+function scannerQueueNote(industryId) {
+  const policy = globalThis.ScannerEventPolicy;
+  if (!policy?.summarizeScannerEvents) return "Scanner event actionability policy is unavailable.";
+
+  const summary = policy.summarizeScannerEvents(generatedEvents, industryId);
+  if (summary.total === 0) return "Scanner event store has no historical records for this industry yet.";
+
+  return `Scanner queue: ${summary.actionable} actionable comparable event${summary.actionable === 1 ? "" : "s"}; ${summary.suppressed} historical/non-comparable record${summary.suppressed === 1 ? "" : "s"} preserved in the event store but suppressed from Review Desk.`;
 }
 
 function sourceRow(row) {
@@ -120,6 +131,9 @@ function render() {
   const note = node("p", "source-health-summary", readinessNote(summary));
   container.append(note);
 
+  const queueNote = node("p", "source-health-summary", scannerQueueNote(industryId));
+  container.append(queueNote);
+
   if (!rows.length) return;
 
   const details = node("details", "source-health-details");
@@ -134,9 +148,10 @@ function render() {
 async function bootResearchOperations() {
   if (!container) return;
   container.textContent = "Loading source health…";
-  [watchlist, sourceCache] = await Promise.all([
+  [watchlist, sourceCache, generatedEvents] = await Promise.all([
     fetchJson("data/source-watchlist.json", {}),
-    fetchJson("data/source-cache.json", {})
+    fetchJson("data/source-cache.json", {}),
+    fetchJson("data/generated-update-events.json", [])
   ]);
   render();
 

@@ -61,7 +61,20 @@ function currentItem(id) {
 }
 
 function canonicalIndustryFor(item) {
-  return canonicalIndustries.find((industry) => industry.id === item?.industryId) || null;
+  if (item?.industryId) {
+    const explicit = canonicalIndustries.find((industry) => industry.id === item.industryId);
+    if (explicit) return explicit;
+  }
+
+  const matches = canonicalIndustries.filter((industry) => {
+    const companyMatches = !item?.companyId
+      || (industry.companies || []).some((company) => company.id === item.companyId);
+    const nodeMatches = !item?.nodeId
+      || (industry.nodes || []).some((node) => node.id === item.nodeId);
+    return companyMatches && nodeMatches;
+  });
+
+  return matches.length === 1 ? matches[0] : null;
 }
 
 function text(value) {
@@ -356,6 +369,7 @@ function renderPatchPreviewBody(section, preview) {
   const badge = section.querySelector(".patch-preview-badge");
   const body = section.querySelector(".patch-preview-body");
   body.replaceChildren();
+  badge.classList.remove("ready");
 
   if (preview.status === "loading") {
     badge.textContent = "Loading";
@@ -367,7 +381,6 @@ function renderPatchPreviewBody(section, preview) {
 
   if (preview.status === "blocked") {
     badge.textContent = "Blocked";
-    badge.classList.remove("ready");
     const list = document.createElement("ul");
     for (const error of preview.errors || []) {
       const item = document.createElement("li");

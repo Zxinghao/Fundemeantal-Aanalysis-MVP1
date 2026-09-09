@@ -90,10 +90,10 @@ export function cadenceDue(cadence, previous, checkedAt, currentUrl = null) {
   if (previous?.lastError) return true;
   if (!previous?.lastCheckedAt) return true;
 
-  // Legacy cache rows can have a successful full-page hash but no watched-context
-  // snapshot. They are operationally "baseline pending" and cannot produce a real
-  // comparable disclosure diff yet, so do not make them wait another week.
-  if (!previous?.watchSnapshot) return true;
+  // A successful legacy cache row can have a full-page hash but no watched-context
+  // snapshot. It is operationally "baseline pending" and cannot produce a real
+  // comparable disclosure diff, so do not make it wait another week for backfill.
+  if (previous?.hash && !previous?.watchSnapshot) return true;
 
   const previousTime = Date.parse(previous.lastCheckedAt);
   const currentTime = Date.parse(checkedAt);

@@ -10,6 +10,7 @@ const watchlistPath = path.join(root, "data", "source-watchlist.json");
 const cachePath = path.join(root, "data", "source-cache.json");
 const outputPath = path.join(root, "data", "generated-update-events.json");
 const WEEKLY_INTERVAL_MS = 6.5 * 24 * 60 * 60 * 1000;
+const CHANGE_SIGNATURE_LENGTH = 12;
 
 const impactByNode = {
   catalyst: "technology_change",
@@ -62,8 +63,25 @@ function keywordHits(text, keywords) {
   return keywords.filter((keyword) => lower.includes(String(keyword).toLowerCase()));
 }
 
-function eventId(industryId, date, source) {
+function legacyEventId(industryId, date, source) {
   return `web-${industryId}-${date}-${source.id}`;
+}
+
+function signaturePayload(changeEvidence) {
+  return {
+    status: changeEvidence?.status || "unknown",
+    added: Array.isArray(changeEvidence?.added) ? changeEvidence.added : [],
+    removed: Array.isArray(changeEvidence?.removed) ? changeEvidence.removed : [],
+    currentRelevant: Array.isArray(changeEvidence?.currentRelevant) ? changeEvidence.currentRelevant : []
+  };
+}
+
+export function changeSignature(changeEvidence) {
+  return hash(JSON.stringify(signaturePayload(changeEvidence))).slice(0, CHANGE_SIGNATURE_LENGTH);
+}
+
+export function eventIdForChange(industryId, date, source, changeEvidence) {
+  return `${legacyEventId(industryId, date, source)}-${changeSignature(changeEvidence)}`;
 }
 
 export function cadenceDue(cadence, previous, checkedAt) {
@@ -79,6 +97,18 @@ export function cadenceDue(cadence, previous, checkedAt) {
 
 function relevantChangeCount(changeEvidence) {
   return Number(changeEvidence?.addedCount || 0) + Number(changeEvidence?.removedCount || 0);
+}
+
+export function shouldCreateReviewEvent(changeEvidence) {
+  if (changeEvidence?.status === "comparable") {
+    return relevantChangeCount(changeEvidence) > 0;
+  }
+
+  if (changeEvidence?.status === "baseline_missing") {
+    return Array.isArray(changeEvidence.currentRelevant) && changeEvidence.currentRelevant.length > 0;
+  }
+
+  return false;
 }
 
 function buildAnalysis({ source, hits, changeEvidence }) {
@@ -126,8 +156,17 @@ function changeSummary(source, title, changeEvidence) {
   return `${source.name} changed on "${title}", but the previous watched-context baseline is unavailable. Current relevant excerpts were captured for future comparison; manual review is required.`;
 }
 
-export function eventFromSource({ industryId, source, title, hits, date, detectedAt, changeEvidence = null }) {
-  const id = eventId(industryId, date, source);
+export function eventFromSource({
+  industryId,
+  source,
+  title,
+  hits,
+  date,
+  detectedAt,
+  changeEvidence = null,
+  eventIdOverride = null
+}) {
+  const id = eventIdOverride || legacyEventId(industryId, date, source);
   const impactType = impactByNode[source.nodeId] || "supply_chain_importance";
   const researchPacket = buildResearchPacket({
     eventId: id,
@@ -156,6 +195,7 @@ export function eventFromSource({ industryId, source, title, hits, date, detecte
     reviewedAt: null,
     detectedAt,
     lastSeenAt: detectedAt,
+    changeSignature: changeSignature(changeEvidence),
     confidence: researchPacket.claim.confidence,
     evidenceLevel: evidenceLevelForSourceType(source.sourceType),
     changeEvidence,
@@ -203,7 +243,7 @@ export function mergeEventStore(existingEvents, detectedEvents) {
 async function fetchSource(source) {
   const response = await fetch(source.url, {
     headers: {
-      "User-Agent": "FinLAB supply-chain scanner/0.4"
+      "User-Agent": "FinLAB supply-chain scanner/0.5"
     }
   });
 
@@ -259,6 +299,12 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
     // upgraded silently when the full-page hash is unchanged.
     if (!hasBaseline || !changed) return null;
 
+    // Scanner v0.5 deliberately suppresses full-page changes that do not alter any
+    // watched context. They remain visible in the cache fingerprint/history but no
+    // longer consume analyst attention as Review Desk events.
+    if (!shouldCreateReviewEvent(changeEvidence)) return null;
+
+    const eventIdOverride = eventIdForChange(industryId, date, source, changeEvidence);
     return eventFromSource({
       industryId,
       source,
@@ -266,7 +312,8 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
       hits,
       date,
       detectedAt: checkedAt,
-      changeEvidence
+      changeEvidence,
+      eventIdOverride
     });
   } catch (error) {
     cache[source.id] = {
@@ -308,7 +355,7 @@ const cliEntry = globalThis.process?.argv?.[1];
 if (cliEntry && pathToFileURL(cliEntry).href === import.meta.url) {
   runWebScan(globalThis.process.argv[2])
     .then(({ events, eventStore }) => {
-      console.log(`Detected ${events.length} changed-source event(s); event store contains ${eventStore.length} total event(s).`);
+      console.log(`Detected ${events.length} review-worthy changed-source event(s); event store contains ${eventStore.length} total event(s).`);
     })
     .catch((error) => {
       console.error(error);

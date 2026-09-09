@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:01.338Z",
+      "capturedAt": "2026-09-09T07:03:48.918Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -202,7 +202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:01.338Z",
+    "lastCheckedAt": "2026-09-09T07:03:48.918Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -216,7 +216,7 @@
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:01.869Z",
+      "capturedAt": "2026-09-09T07:03:50.215Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,7 +240,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:01.869Z",
+    "lastCheckedAt": "2026-09-09T07:03:50.215Z",
     "lastChangedAt": "2026-09-08T22:06:30.788Z",
     "lastError": null
   },
@@ -254,7 +254,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:02.845Z",
+      "capturedAt": "2026-09-09T07:03:51.177Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +418,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:02.845Z",
+    "lastCheckedAt": "2026-09-09T07:03:51.177Z",
     "lastChangedAt": "2026-08-28T18:43:05.919Z",
     "lastError": null
   },
@@ -428,9 +428,233 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
     "title": "Alternative Fuels and Feedstocks Office | Department of Energy",
-    "hash": "77aa94a0f9c94747040ce2569c611937afaef762590707effa5722e036b0dfe9",
-    "lastCheckedAt": "2026-09-08T11:19:56.875Z",
-    "lastChangedAt": "2026-09-05T10:36:21.318Z",
+    "hash": "23a6733fa3e828cf7a7fe142415ff454e395532589e10bda14f9be832a345638",
+    "baselineAt": "2026-09-09T07:03:51.954Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T07:03:51.954Z",
+      "keywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "segments": [
+        {
+          "hash": "1ac2c07692e2218764d33467b1441209047ef040d8ee5a710815acf24271bdd0",
+          "excerpt": "ion, AFFO integrates legacy efforts in the Bioenergy Technologies Office and Hydrogen and Fuel Cell Technologies Office under one office. AFFO focuses on: Cost-effective conversion of feedstocks to affordable chemicals …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "6f7dfed0e4b5551c8e05b5a2a3e530a02ca5172c470488937cd34db838b2eaca",
+          "excerpt": "ctive conversion of feedstocks to affordable chemicals and strategic fuels; Fuel-flexible fuel cells to provide prime and backup power for U.S. data centers and other growing electrical loads; Production of performance-…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "c5be6060d153d291d4137767fa3c10b3dc4a0dd0a1b542bf8ac3b1ab2447f426",
+          "excerpt": "ks to bioenergy information and resources. Basics Technologies &nbsp; &nbsp; Hydrogen and Fuel Cells ​​​Quick links to hydrogen and fuel cells information and resources. Hydrogen Fuel Cells Program Areas Analysis July 2…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "6ded23088ff5f8c04e5e505374d09ebca3f5939856e5d63acd900f7c443a33f1",
+          "excerpt": "Basics Technologies &nbsp; &nbsp; Hydrogen and Fuel Cells ​​​Quick links to hydrogen and fuel cells information and resources. Hydrogen Fuel Cells Program Areas Analysis July 25, 2019 Analysis, Codes, and Standards The …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "72862e26603879f18ddd465fb4aa420b0a1f82d8326b12b8c03d404dac9ccd6b",
+          "excerpt": "Fuel Cells ​​​Quick links to hydrogen and fuel cells information and resources. Hydrogen Fuel Cells Program Areas Analysis July 25, 2019 Analysis, Codes, and Standards The Analysis, Codes, and Standards program conducts…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "af6469a0f29a383cdb9253e24e7e536b5ad4222e9059476607d89ebb86766161",
+          "excerpt": "and high-value bioproducts that will advance&nbsp;national security and energy dominance. Fuel Cells Fuel Cell Technologies The Fuel Cell Technologies program develops fuel cells that are fuel-flexible and cost-competit…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "735edd8c886c7c68c9e578d210e303ad4c4f1c1b77d9c3527570658ef4288c34",
+          "excerpt": "lue bioproducts that will advance&nbsp;national security and energy dominance. Fuel Cells Fuel Cell Technologies The Fuel Cell Technologies program develops fuel cells that are fuel-flexible and cost-competitive with in…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "1cfb4e1b18165038d312f3ee8dc3faeb3623f1861921c0c9373477c521002d46",
+          "excerpt": "dvance&nbsp;national security and energy dominance. Fuel Cells Fuel Cell Technologies The Fuel Cell Technologies program develops fuel cells that are fuel-flexible and cost-competitive with incumbent and emerging techno…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "86d32323aac04057e1c5902328c0a0fa2fff73f7d0177accb6530cd939774f2a",
+          "excerpt": "dominance. Fuel Cells Fuel Cell Technologies The Fuel Cell Technologies program develops fuel cells that are fuel-flexible and cost-competitive with incumbent and emerging technologies for use as stationary power (e.g. …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "97ceff8643d6beb7cc49f3ca570555d110ce34b8df7c48b5040d3a8d06dccd3b",
+          "excerpt": "nter expansion, nuclear-hydrogen synergies, and alternatives to critical minerals used in fuel cell technologies. Infrastructure Infrastructure The Infrastructure R&amp;D program advances infrastructure technologies to …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "b22e8e6be016b564fe89f2369468d53c18d85b4530905dec40dc57a33bbeed40",
+          "excerpt": "s together legacy efforts under the former Bioenergy Technologies Office and Hydrogen and Fuel Cell Technologies Office, provides funding for bioenergy industry and hydrogen and full cell technologies lab-led consortia.…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "4b80375c17ddf5f98978be2064415bfdbe61500fdf5b2c53640bb7131fbf7069",
+          "excerpt": "ember 8, 2026 2023 Billion-Ton Report 2023 Billion-Ton Report March 14, 2024 Hydrogen and Fuel Cell Technologies Multi-Year Program Plan The Multi-Year Program Plan (MYPP), published in May 2024, set forth the Hydrogen …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "bab914d53dcc25f74b8ef3c7c32cf9c05a1caf0845326a53caaf826e826174bd",
+          "excerpt": "lan The Multi-Year Program Plan (MYPP), published in May 2024, set forth the Hydrogen and Fuel Cell Technologies Office&#039;s mission, goals, and strategic approach relative to broader clean energy priorities of the U.…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "4797568af32467cdd3787a36d9daecf639ffbadc2aa86287a9cfad716928e8bc",
+          "excerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Unleashing American Energy Innovation U…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "e9a3e63a4ca237ea8f863275f5e791ba268f163a59a34890000dd9a94ff8f6ed",
+          "excerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Sep 11 Informational Webinar: Accelerating Scale-up and Pre-piloting of Emerging Chem…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "5600b6e151fd9c5cafb70ddff46d505347e961f942efa0f4a84035f15aedc8dd",
+          "excerpt": "y Biofuels Education &amp; Training Careers Bioenergy Resources June 4, 2026 Hydrogen and Fuel Cell Technologies Information Resources June 17, 2026 Contact Us Alternative Fuels and Feedstocks Office Office of the Assis…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "8a1bf683264c575f09ce89620215122b8254fcdd9ed62a9a36b02e2076748ab3",
+          "excerpt": "nergy Innovation, AFFO integrates legacy efforts in the Bioenergy Technologies Office and Hydrogen and Fuel Cell Technologies Office under one office. AFFO focuses on: Cost-effective conversion of feedstocks to affordab…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "00242ab32b5f5062d1e0267804d309a4863475a0416b2116c7c210c7835eddc9",
+          "excerpt": "; Reduction of imported fertilizer by providing cost-effective domestic alternatives from hydrogen and biomass; and Leveraging growing use of artificial intelligence to spur innovation, advance technology readiness leve…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "5bcc21ffc233a97e937d6354ec2090f6d47aae6d6af9dd89d88ab6be2275ef24",
+          "excerpt": "​​​Quick links to bioenergy information and resources. Basics Technologies &nbsp; &nbsp; Hydrogen and Fuel Cells ​​​Quick links to hydrogen and fuel cells information and resources. Hydrogen Fuel Cells Program Areas Ana…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "788bacdbdd4b652ce7c0be54eac6bdbda7b5a562fe0f20df335adaff9d81ced5",
+          "excerpt": "nd resources. Basics Technologies &nbsp; &nbsp; Hydrogen and Fuel Cells ​​​Quick links to hydrogen and fuel cells information and resources. Hydrogen Fuel Cells Program Areas Analysis July 25, 2019 Analysis, Codes, and …",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "b6cdb8fac3355e34b6d8dc67a017ba079dcb8446f33b8eaedf560ddf6a8c2c6f",
+          "excerpt": "rogen and Fuel Cells ​​​Quick links to hydrogen and fuel cells information and resources. Hydrogen Fuel Cells Program Areas Analysis July 25, 2019 Analysis, Codes, and Standards The Analysis, Codes, and Standards progra…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "3b199ba7d7e60302a7f8a01498da8e855589706fc54731a5a667de58e9ebccf5",
+          "excerpt": "domestic biomass and waste feedstocks for conversion into alternative fuels, fertilizers, hydrogen, performance-enhanced chemicals, and high-value bioproducts that will advance&nbsp;national security and energy dominanc…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "af6ee149f7bb6744358d714290f1ff65e7cec42e42f9fb91d52e2572db32c1d0",
+          "excerpt": "ata centers) and other applications. These efforts support data center expansion, nuclear-hydrogen synergies, and alternatives to critical minerals used in fuel cell technologies. Infrastructure Infrastructure The Infra…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "6fdada3905c7aacf28ca4a60a391a036fd23e37c02dd16744d4d53be14d78fac",
+          "excerpt": "ansporting, storing, and dispensing alternative fuels and feedstocks. Cost-effective bulk hydrogen storage and transport can support efforts such as improving data center reliability and enhancing nuclear plant efficien…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "b261e05d49e03a118318a4ef12b181c51e0f73abe157722e230b46b848d95b9a",
+          "excerpt": "s program reduces costs and enables expanded, resilient options for fuels, chemicals, and hydrogen using a variety of energy resources, feedstocks, and conversion technologies.&nbsp;This work includes R&amp;D aimed at a…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "0e2b8da3063b965640cba27c72a3ebb7550706a2f09aa45ca4f187325c82e490",
+          "excerpt": "tion, Not Subtraction Alternative Fuel Vehicles Bioenergy Critical Materials and Minerals Hydrogen Unleashing American Energy Innovation AFFO Consortia The Alternative Fuels and Feedstocks Office (AFFO), which brings to…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "f4d5b2082e82cf9b07ee07d052bcb12c76de407708e1693e30c8ba4cff19d8bd",
+          "excerpt": ", which brings together legacy efforts under the former Bioenergy Technologies Office and Hydrogen and Fuel Cell Technologies Office, provides funding for bioenergy industry and hydrogen and full cell technologies lab-l…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "05eaa5f9bc2714bf6cecb5219d36882b1385ff914c75dd3374290a48fd437ac8",
+          "excerpt": "d Hydrogen and Fuel Cell Technologies Office, provides funding for bioenergy industry and hydrogen and full cell technologies lab-led consortia. September 8, 2026 2023 Billion-Ton Report 2023 Billion-Ton Report March 14…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "ab010753578b80fe0a497482c059c40ae4e994eeb56509c84aca2373eb4f1f42",
+          "excerpt": "nsortia. September 8, 2026 2023 Billion-Ton Report 2023 Billion-Ton Report March 14, 2024 Hydrogen and Fuel Cell Technologies Multi-Year Program Plan The Multi-Year Program Plan (MYPP), published in May 2024, set forth …",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        },
+        {
+          "hash": "3506aac6337580781807e735fcfaaa7675f79688a8d7c373ade2ccc323c83d7d",
+          "excerpt": "ear Program Plan The Multi-Year Program Plan (MYPP), published in May 2024, set forth the Hydrogen and Fuel Cell Technologies Office&#039;s mission, goals, and strategic approach relative to broader clean energy priorit…",
+          "matchedKeywords": [
+            "hydrogen"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T07:03:51.954Z",
+    "lastChangedAt": null,
     "lastError": null
   },
   "umicore-ir": {
@@ -439,9 +663,43 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/investors/",
     "title": "Investor relations | Umicore",
-    "hash": "0aac2f8375c66f16498f40a0f59ef0468d2607d68f9034c177533d8267ca10cd",
-    "lastCheckedAt": "2026-09-08T11:19:56.955Z",
-    "lastChangedAt": "2026-09-08T11:19:56.955Z",
+    "hash": "1e518effc20eea867df922ab3fded75d82bf7a7adab6aade9efb9b48e971da69",
+    "baselineAt": "2026-09-09T07:03:52.032Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T07:03:52.032Z",
+      "keywords": [
+        "fuel cell",
+        "catalyst",
+        "precious metals",
+        "guidance"
+      ],
+      "segments": [
+        {
+          "hash": "09ec4c271727c58de02a8113eb5d174fe73804cd0b3a59f53959be4745b2589a",
+          "excerpt": "atteries Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…",
+          "matchedKeywords": [
+            "precious metals"
+          ]
+        },
+        {
+          "hash": "19a37a7565535fed2ce02b5210b0aae07543a0631ef2b9993c5a8325d15ff79f",
+          "excerpt": "enu Markets &amp; products Markets & products overview Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability o…",
+          "matchedKeywords": [
+            "precious metals"
+          ]
+        },
+        {
+          "hash": "fc4190698fee0aece44b3f280ac357eced85e7dbf2e60cba5cd1ca8241832414",
+          "excerpt": "026 Earnings uplift across the board over the first half of 2026 Upgrading full-year 2026 guidance Discover more Full year 2025 performance Adj. EBITDA 2025 847 million € Adj. EBITDA margin 2025 24 % ROCE 2025 15.7 % Ne…",
+          "matchedKeywords": [
+            "guidance"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T07:03:52.032Z",
+    "lastChangedAt": null,
     "lastError": null
   },
   "sgl-ir": {
@@ -451,8 +709,28 @@
     "url": "https://www.sglcarbon.com/en/investor-relations/",
     "title": "SGL Investor Relations – shares, publications &amp; events | SGL Carbon",
     "hash": "1552951ec25d79988fc08549b7bcac9d37afa0ef715532e15aa0dbbfccbbae0b",
-    "lastCheckedAt": "2026-09-08T11:19:58.430Z",
-    "lastChangedAt": "2026-08-07T07:41:32.742Z",
+    "baselineAt": "2026-09-09T07:03:53.205Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T07:03:53.205Z",
+      "keywords": [
+        "fuel cell",
+        "GDL",
+        "Sigracet",
+        "carbon fiber"
+      ],
+      "segments": [
+        {
+          "hash": "79bb2acda3516115202ea71955fcf1a02de7623881733dbe867d9ead3018fe01",
+          "excerpt": "ngers for corrosive and demanding processes Tailgate drives with carbon friction elements Carbon fiber stacks HybCar Exoskeletons Carbon Rear Panels for Mercedes AMG GT CFRP Components in Machine Building Silicon-Carbid…",
+          "matchedKeywords": [
+            "carbon fiber"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T07:03:53.205Z",
+    "lastChangedAt": null,
     "lastError": null
   },
   "hexagon-purus-ir": {
@@ -460,7 +738,7 @@
     "industryId": "fuel-cell",
     "cadence": "weekly",
     "url": "https://hexagonpurus.com/investor-relations",
-    "lastCheckedAt": "2026-09-09T06:26:03.393Z",
+    "lastCheckedAt": "2026-09-09T07:03:53.591Z",
     "lastError": "fetch failed"
   },
   "nvidia-spectrum-x-photonics": {
@@ -473,7 +751,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:08.484Z",
+      "capturedAt": "2026-09-09T07:03:54.501Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -694,7 +972,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:08.484Z",
+    "lastCheckedAt": "2026-09-09T07:03:54.501Z",
     "lastChangedAt": "2026-09-09T05:59:01.253Z",
     "lastError": null
   },
@@ -708,7 +986,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:08.693Z",
+      "capturedAt": "2026-09-09T07:03:54.649Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -726,7 +1004,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:08.693Z",
+    "lastCheckedAt": "2026-09-09T07:03:54.649Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -740,7 +1018,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:08.762Z",
+      "capturedAt": "2026-09-09T07:03:54.717Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -961,7 +1239,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:08.762Z",
+    "lastCheckedAt": "2026-09-09T07:03:54.717Z",
     "lastChangedAt": "2026-06-13T07:35:07.611Z",
     "lastError": null
   },
@@ -975,7 +1253,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:09.114Z",
+      "capturedAt": "2026-09-09T07:03:55.197Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1078,7 +1356,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:09.114Z",
+    "lastCheckedAt": "2026-09-09T07:03:55.197Z",
     "lastChangedAt": "2026-09-02T11:19:29.684Z",
     "lastError": null
   },
@@ -1092,7 +1370,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:09.532Z",
+      "capturedAt": "2026-09-09T07:03:55.604Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1202,7 +1480,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:09.532Z",
+    "lastCheckedAt": "2026-09-09T07:03:55.604Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1216,7 +1494,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T06:26:09.593Z",
+      "capturedAt": "2026-09-09T07:03:55.760Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1297,7 +1575,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T06:26:09.593Z",
+    "lastCheckedAt": "2026-09-09T07:03:55.760Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },
@@ -1308,8 +1586,232 @@
     "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-delivers-industrys-first-512-tbps-co-packaged-optics",
     "title": "Broadcom Delivers Industry’s First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems | Broadcom Inc.",
     "hash": "94a53825919aa1bfea63439bab502e582e564802f7b14c9ea27d6e3848f71a28",
-    "lastCheckedAt": "2026-09-08T11:20:02.879Z",
-    "lastChangedAt": "2026-06-08T08:07:27.965Z",
+    "baselineAt": "2026-09-09T07:03:57.992Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T07:03:57.992Z",
+      "keywords": [
+        "Bailly",
+        "51.2",
+        "CPO",
+        "Ethernet switch",
+        "AI systems"
+      ],
+      "segments": [
+        {
+          "hash": "3e0ddfd31b639b3e0c18d4efa106ceba9a93a54c7c21de635476ca212c6b29d3",
+          "excerpt": "51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems PDF Version Bailly 51.2T CPO switch delivers 70% improvement in optical interconnect power PALO ALTO, Calif. , March 14, 2024 (GLOBE NEWSWIRE…",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "c6da127dd52ee62f65509a6339db4e4fe8924334cdd397d025f288fb2a6d70bf",
+          "excerpt": "24 (GLOBE NEWSWIRE) -- Broadcom Inc. (NASDAQ: AVGO) announced today that it has delivered Bailly, the industry’s first 51.2 terabits per sec (Tbps) co-packaged optics (CPO) Ethernet switch, to its customers. The product…",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "1fb30cf6e95ea2c3242b87adc2f59bb89d92741e1dfaf20346c6268ee7458478",
+          "excerpt": "6.4-Tbps optical engines with Broadcom’s best-in-class StrataXGS® Tomahawk®5 switch chip. Bailly enables the optical interconnect to operate at 70% lower power consumption and delivers an 8x improvement in silicon area …",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "65d678b050fcfb6a700d47e2730d82769a8556eef59bd7d0a13bf404383db9d5",
+          "excerpt": "t solution to meet this need and can help build large-scale, power-efficient AI clusters. Bailly integrates hundreds of optical components and hundreds of millions of transistors in a single optical engine. The high deg…",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "932818267094f50d72bbfc0f964f2e0bd1214de8fa528ec05eedcbced886a2cb",
+          "excerpt": "rconnect to operate at 70% lower power consumption as compared to pluggable transceivers. Bailly’s high-volume production is made possible by Broadcom’s innovative manufacturing approach that utilizes proven CMOS foundr…",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "a8b73a6025e2b6c38e4f32247a54fcdc552bfbe34fdd8b478e91fe87c2c5568e",
+          "excerpt": "nd system integrators to accelerate adoption of CPO platforms. Broadcom will showcase the Bailly 51.2T CPO system at the Optical Fiber Communication (OFC) 2024 exhibition. “As AI clusters demand higher bandwidth density…",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "b88596b8c3bf78923887d897a1487257f8eb5a6243424cb86e6a659224023bc5",
+          "excerpt": "Ph. D., vice president and general manager of the Optical Systems Division at Broadcom. “Bailly will enable hyperscalers to deploy lower-power, cost-efficient, large-scale AI and compute clusters. Broadcom’s technology …",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "1b7ed3b0f3ba4b80676dc1eeaf148c71554a56538c17ac222e054e4ba599d091",
+          "excerpt": "and compute clusters. Broadcom’s technology leadership and manufacturing innovations help Bailly deliver 70% better power efficiency and ensure an optical I/O roadmap that can walk in tandem with the future bandwidth an…",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "85e54f0decba95de079de37333321b2cea780cfd25c43292f598fbbdf17e2eb2",
+          "excerpt": "elerating the development of innovative optical connectivity solutions such as Broadcom's Bailly co-packaged optics platform, aiming to meet the demands of AI clusters while solving cost and power consumption hurdles.” …",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "6b7263537bf5736784b575d6ea3812c24c7e23503f3219a79fe6e69a14f13124",
+          "excerpt": "uct Highlights: Broadcom 51.2-Tbps StrataXGS® Tomahawk®5 switch silicon Broadcom 6.4T-FR4 Bailly SCIP optical engines with Broadcom Fiber Connector (BFC) for CPO systems 4RU system design with high-efficiency air coolin…",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "db8d1e4863acbd22781c4f789712b63c87851a145a57e68d3d1dcc6975c4660d",
+          "excerpt": "Showcase at OFC 2024 Broadcom will showcase the following CPO products and technologies: Bailly 51.2T CPO Ethernet switch system 6.4T optical engine co-packaged with a multi-chip module that includes HBM, logic and PHY …",
+          "matchedKeywords": [
+            "Bailly"
+          ]
+        },
+        {
+          "hash": "dd3bd80358f9e2ac0fb0f763d524d6cc43bd0ed13e43973dbdaadb20df99ffea",
+          "excerpt": "Broadcom Delivers Industry’s First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems | Broadcom Inc. Skip to main navigation MENU --> Products Solutions Support",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "9a7352f60460ae2267b1efe6f46af7b42faa1e7ff9621af03096401120466e05",
+          "excerpt": "Services Company How To Buy Breadcrumb Investor Center Broadcom Delivers Industry’s First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems Financial News In this section Investor Center Comp…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "21003ae5917b75b0caee77fe119d77d88afb8866c52ca6c1485ec8410e1b4ed1",
+          "excerpt": "SS Feeds --> &nbsp; View printer-friendly version Back Broadcom Delivers Industry’s First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems PDF Version Bailly 51.2T CPO switch delivers 70% im…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "dc3f1dcbdb949adac74ebb562fd2f0fd051ecae1ae9fa47b9e550c92b2e16578",
+          "excerpt": "ps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems PDF Version Bailly 51.2T CPO switch delivers 70% improvement in optical interconnect power PALO ALTO, Calif. , March 14, 2024 (GLOBE NEWSWIRE) -- Br…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "1b68b109ea3f104705d0d44a2f1269c83ae5d75ab6c520ee86a83104aec139eb",
+          "excerpt": "om Inc. (NASDAQ: AVGO) announced today that it has delivered Bailly, the industry’s first 51.2 terabits per sec (Tbps) co-packaged optics (CPO) Ethernet switch, to its customers. The product integrates eight silicon pho…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "48d8fe21fffad6101a17c9ec0e46b2f7cc1121db04ebfd737529c579c52800c7",
+          "excerpt": "em integrators to accelerate adoption of CPO platforms. Broadcom will showcase the Bailly 51.2T CPO system at the Optical Fiber Communication (OFC) 2024 exhibition. “As AI clusters demand higher bandwidth density, lower…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "cf277061a2f9ec14c5e2e7a0e97a18f14d9920cca2051bd518b0b6169e11c377",
+          "excerpt": "onsumption and lower latency, we are pleased to announce delivery of the industry’s first 51.2-Tbps CPO switch,” said Near Margalit, Ph. D., vice president and general manager of the Optical Systems Division at Broadcom…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "95abc232b20494231dbb744c1024799513d0347d93e7820bed852793e18a76de",
+          "excerpt": "rtion of power consumption at a system level, exceeding 50% of the switch system power at 51.2 Tbps and beyond. This issue will be further exacerbated as Cloud Service Providers build their next-generation AI networks a…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "cf7f4a4732f9488eb1df4b2cb4165d0b84f6a38f8a1feb1f95fa28367198d500",
+          "excerpt": "ghly integrated co-packaged optics will enable a more power efficient future network. The 51.2 Tbps switch that Micas co-developed with Broadcom will reduce communication latency and power consumption in data centers an…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "f749224467707a8387b9359e60e156eef26c69ba331b8ce59b2de6383b722f21",
+          "excerpt": "e communication latency and power consumption in data centers and unleash more AI power.” 51.2-Tbps CPO Switch Product Highlights: Broadcom 51.2-Tbps StrataXGS® Tomahawk®5 switch silicon Broadcom 6.4T-FR4 Bailly SCIP op…",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "a187b8dd5ae0c65e6c45f574685c8be3f730f52714462b8551ad9aeef597d956",
+          "excerpt": "ata centers and unleash more AI power.” 51.2-Tbps CPO Switch Product Highlights: Broadcom 51.2-Tbps StrataXGS® Tomahawk®5 switch silicon Broadcom 6.4T-FR4 Bailly SCIP optical engines with Broadcom Fiber Connector (BFC) …",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "8674ac8e4acaa633b5503832b5c72b2bbdcf990f28f77d17707e5e854b96b7cb",
+          "excerpt": "se at OFC 2024 Broadcom will showcase the following CPO products and technologies: Bailly 51.2T CPO Ethernet switch system 6.4T optical engine co-packaged with a multi-chip module that includes HBM, logic and PHY These …",
+          "matchedKeywords": [
+            "51.2"
+          ]
+        },
+        {
+          "hash": "9a76c1be81bb88c112bdc567772f3c4a965d2b0ad1407f7a4766039efcee8939",
+          "excerpt": "Packaged Optics Ethernet Switch Platform for Scalable AI Systems PDF Version Bailly 51.2T CPO switch delivers 70% improvement in optical interconnect power PALO ALTO, Calif. , March 14, 2024 (GLOBE NEWSWIRE) -- Broadcom…",
+          "matchedKeywords": [
+            "CPO"
+          ]
+        },
+        {
+          "hash": "570c1842519e7e61c0823fce8cf8851df0e11332aadee95675b05cb1cd141116",
+          "excerpt": "s delivered Bailly, the industry’s first 51.2 terabits per sec (Tbps) co-packaged optics (CPO) Ethernet switch, to its customers. The product integrates eight silicon photonics based 6.4-Tbps optical engines with Broadc…",
+          "matchedKeywords": [
+            "CPO"
+          ]
+        },
+        {
+          "hash": "9987f6c22e2285d5f1d522a1ddfa0b0cadcf3c583c1aceaf00669cba7b059dba",
+          "excerpt": "nd cost-efficient optical interconnects that extend beyond discrete solutions. Broadcom’s CPO and silicon photonics technology platform, with its high degree of integration, provides the lowest latency, highest bandwidt…",
+          "matchedKeywords": [
+            "CPO"
+          ]
+        },
+        {
+          "hash": "d72edac2b9c260fd5bb1accdff1294c916392e5d3a080b9d834f86a005fa5b4c",
+          "excerpt": "orms with cloud service providers (CSPs) and system integrators to accelerate adoption of CPO platforms. Broadcom will showcase the Bailly 51.2T CPO system at the Optical Fiber Communication (OFC) 2024 exhibition. “As A…",
+          "matchedKeywords": [
+            "CPO"
+          ]
+        },
+        {
+          "hash": "d4e6a497d0e6114dfb3ccdb5997928d9248b06c346dfed9ae91cd18576b0d973",
+          "excerpt": "egrators to accelerate adoption of CPO platforms. Broadcom will showcase the Bailly 51.2T CPO system at the Optical Fiber Communication (OFC) 2024 exhibition. “As AI clusters demand higher bandwidth density, lower power…",
+          "matchedKeywords": [
+            "CPO"
+          ]
+        },
+        {
+          "hash": "5127113766e4b7ccdc1670c8b6c821166ef05ef4b80f78cdde6d30de22439fe2",
+          "excerpt": "and lower latency, we are pleased to announce delivery of the industry’s first 51.2-Tbps CPO switch,” said Near Margalit, Ph. D., vice president and general manager of the Optical Systems Division at Broadcom. “Bailly w…",
+          "matchedKeywords": [
+            "CPO"
+          ]
+        },
+        {
+          "hash": "09e61568060478cf76983cf095bf8689ac8529abe86952befec4b00d950dc6d6",
+          "excerpt": "ation latency and power consumption in data centers and unleash more AI power.” 51.2-Tbps CPO Switch Product Highlights: Broadcom 51.2-Tbps StrataXGS® Tomahawk®5 switch silicon Broadcom 6.4T-FR4 Bailly SCIP optical engi…",
+          "matchedKeywords": [
+            "CPO"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T07:03:57.992Z",
+    "lastChangedAt": null,
     "lastError": null
   },
   "marvell-pam4-dsp": {
@@ -1319,8 +1821,232 @@
     "url": "https://www.marvell.com/products/pam-dsp.html",
     "title": "PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure",
     "hash": "518e2306b41cb748a5bc8487506cf60d78327e16d793e5860b1a7cb191610451",
-    "lastCheckedAt": "2026-09-08T11:20:03.150Z",
-    "lastChangedAt": "2026-06-13T07:35:11.029Z",
+    "baselineAt": "2026-09-09T07:03:58.124Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T07:03:58.124Z",
+      "keywords": [
+        "PAM4",
+        "DSP",
+        "800G",
+        "1.6T",
+        "AI networks"
+      ],
+      "segments": [
+        {
+          "hash": "71aa72421c75b160dad217ddfc90f0003d4e6f5f34140fe47069c0892dee7ec4",
+          "excerpt": "PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure Close Close Skip to content PRODUCTS COMPANY SUPPORT English 中文 (C",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "4d16b168e591a9aba4423a259853ffd782c2e84a7447242add20b4ae103789d2",
+          "excerpt": "gh-bandwidth optical interconnects for AI infrastructure Products PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, add…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "c041c5448507446b3f47411a5600bc1f59d93fef5270cb83f67436f38a94b5b8",
+          "excerpt": "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical the need for high-bandwidth optical interconne…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "2a14f6d2efb61082608945bb4fa34dbd8ed0cd88536dff75eb2f49becd709e57",
+          "excerpt": "ership Market leader with field proven innovation Proven Architecture Highest performance PAM4 DSP Innovation Achievements Winner of multiple Lightwave innovation awards Networking Optical Interconnects PAM4 Ecosystem T…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "e0ba79e5097efe194736bb675b3df0e724b6cff3c352a0d00afca2ec4229be19",
+          "excerpt": "ievements Winner of multiple Lightwave innovation awards Networking Optical Interconnects PAM4 Ecosystem The ever-growing demand for higher bandwidth, lower power, and smaller footprint driven by AI, cloud services, vid…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "40f8cdc805ae092a3d0294a5964b4c092fead01bfe4e167ddc4f908b62bdcb3b",
+          "excerpt": "aming, and 5G wireless megatrends requires advanced solutions. Marvell&#39;s field-proven PAM4 DSPs offer an ideal solution for high-speed optical interconnects in cloud data centers and carrier networks. PAM4 DSPs Tele…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "4d1512f194a8fcff93e0eaf7e869fff36d44740656fcc5cd340c5443d3ea88c8",
+          "excerpt": "solution for high-speed optical interconnects in cloud data centers and carrier networks. PAM4 DSPs Telemetry Software PAM4 DSPs Marvell PAM4 optical digital signal processors (DSPs) power the optical interconnects insi…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "47659c9641d4705aae0f90e660dbdfc2c9f69160ac858e29377ce84d090d5124",
+          "excerpt": "al interconnects in cloud data centers and carrier networks. PAM4 DSPs Telemetry Software PAM4 DSPs Marvell PAM4 optical digital signal processors (DSPs) power the optical interconnects inside the world’s cloud and AI d…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "b71669b00f913d2777f6a7040e6478c80595ead5555cb4ad32b9d88cef2999c6",
+          "excerpt": "n cloud data centers and carrier networks. PAM4 DSPs Telemetry Software PAM4 DSPs Marvell PAM4 optical digital signal processors (DSPs) power the optical interconnects inside the world’s cloud and AI data centers, and s…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "a6fb9a6f86ca386e43316d07fa7250e93352f9d981740afc1d8c78b5eb3d6605",
+          "excerpt": "scale out their networks with reliable, low-latency, high-bandwidth connectivity. Marvell PAM4 DSPs deliver the performance and versatility needed to support AI and cloud frontend and backend networks at 1.6T, 800G, 400…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "472af538ccc75a44c899da1fe4e84bb221dd871b5fdff78cdafbd2052defa860",
+          "excerpt": "oud frontend and backend networks at 1.6T, 800G, 400G, 200G and 100G. Supports up to 200G PAM4 on host side and line side Support for both Ethernet and InfiniBand applications (select products) Low power consumption Com…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "ab81d2945be3d9c0df73b76143ad17b9c4f7f2e32acad3aae06f9d8938a64f16",
+          "excerpt": "aud or 112Gbaud laser drivers Integrated 56Gbaud TIA (transimpedance amplifier) Ara™ 1.6T PAM4 DSP Family Ara 1.6T PAM4 DSPs enable 1.6T optical transceiver modules for GenAI and next-gen cloud data center networks. Sup…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "d4c8723f0080b0cd0d0409df70ba7fe97a4d51f2a5cdd2dcb893d46183ee040e",
+          "excerpt": "vers Integrated 56Gbaud TIA (transimpedance amplifier) Ara™ 1.6T PAM4 DSP Family Ara 1.6T PAM4 DSPs enable 1.6T optical transceiver modules for GenAI and next-gen cloud data center networks. Supports both Ethernet and I…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "80cce966982da0d201c6f9bd7bc606f357c967b8c8fe346539d84808a611691d",
+          "excerpt": "InfiniBand applications. (P/N: MV-CD83x) ARA PRODUCT BRIEF ARA T PRODUCT BRIEF Nova™ 1.6T PAM4 DSP Family Nova 1.6T PAM4 DSPs enable 1.6T and 800G optical transceiver modules for Al/ML and next-gen cloud data center net…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "d1f589c22ec0e6b98d67d00e68cae379a3f6c1f2a2fb813a5e162adddbe1c466",
+          "excerpt": "P/N: MV-CD83x) ARA PRODUCT BRIEF ARA T PRODUCT BRIEF Nova™ 1.6T PAM4 DSP Family Nova 1.6T PAM4 DSPs enable 1.6T and 800G optical transceiver modules for Al/ML and next-gen cloud data center networks. Supports both Ether…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "06aa41ed26bdcce201cc20ce5ab2bcd35b197e20ff6bb685e1ffeccdc575fe5e",
+          "excerpt": "-CD43x) PETRA (GEARBOX) PRODUCT BRIEF Nova 2 Product Brief Nova Product Brief Spica™ 800G PAM4 DSP Family Spica 800G PAM4 DSP Family, including the Spica Gen2 DSP, to enable 800G optical transceiver modules for hypersca…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "4729b165df924ad1cc93ea83fa847f5381fbd0893d40e77b4357b2a2fb87d9d6",
+          "excerpt": "DUCT BRIEF Nova 2 Product Brief Nova Product Brief Spica™ 800G PAM4 DSP Family Spica 800G PAM4 DSP Family, including the Spica Gen2 DSP, to enable 800G optical transceiver modules for hyperscale data centers and Al netw…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "554ec8b46ea95c459cd569d77e1ba2d3b59ab92f922cba32fcb5e2ab49a52fe9",
+          "excerpt": "th Ethernet and InfiniBand applications. (P/N: MV-CD822) Product brief Perseus™ 400G/800G PAM4 DSP Family The Perseus 400G/800G PAM4 DSP with integrated TIAs and laser drivers, enables 400G/800G optical transceiver modu…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "4add130dcc831bc8992d677e9c53670368d1cee9ffaff4158108a49745904789",
+          "excerpt": "s. (P/N: MV-CD822) Product brief Perseus™ 400G/800G PAM4 DSP Family The Perseus 400G/800G PAM4 DSP with integrated TIAs and laser drivers, enables 400G/800G optical transceiver modules and optimizes for short-reach inte…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "6fffad653e57b6573430e17b1e9488728ea79a97a3aa57560b8f3e8734d9d040",
+          "excerpt": "upports both Ethernet and InfiniBand applications. (P/N: MV-CD422) Product brief Porrima™ PAM4 DSP Family The Porrima 100G PAM4 platform family to build 100G, 400G networks for hyperscale data center networks. (P/N: IN0…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "28920b1e44ea74970b467f5173acca90a6387003501b8ae38d5018ae802513be",
+          "excerpt": "and applications. (P/N: MV-CD422) Product brief Porrima™ PAM4 DSP Family The Porrima 100G PAM4 platform family to build 100G, 400G networks for hyperscale data center networks. (P/N: IN040C50) Product brief Alcor™ 100G …",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "2aaf2a28c7b92d359130f134061b25ef43437eddef5a5f1c7614a29f361a4d9d",
+          "excerpt": "G networks for hyperscale data center networks. (P/N: IN040C50) Product brief Alcor™ 100G PAM4 DSP The Alcor PAM4 platform solution to accelerate the industry’s transition from 25G to 100G per wavelength. (P/N: IN010C25…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "3ce86fbc711dc0af4d39551bf53848d4aa3a8d0174c795236d11ac90129ce14e",
+          "excerpt": "rscale data center networks. (P/N: IN040C50) Product brief Alcor™ 100G PAM4 DSP The Alcor PAM4 platform solution to accelerate the industry’s transition from 25G to 100G per wavelength. (P/N: IN010C25) Product brief Pol…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "55ae0815da3643c47a45e944331e14e9e38d7fcaea0efc98b055fd6071688561",
+          "excerpt": "’s transition from 25G to 100G per wavelength. (P/N: IN010C25) Product brief Polaris™ 50G PAM4 DSP Family The Polaris™ 50G PAM4 family to build 50G,100G,200G, 400G networks for high-performance hyperscale data center, c…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "a62d2cb8a7131b74db9f17cc673570f9df883515fd0c48e2282f5cfc13f4ee42",
+          "excerpt": "r wavelength. (P/N: IN010C25) Product brief Polaris™ 50G PAM4 DSP Family The Polaris™ 50G PAM4 family to build 50G,100G,200G, 400G networks for high-performance hyperscale data center, cloud computing and emerging AI ap…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "6b44c59631af903afd5d2437cbb31e0604c2a736ac4591ca2331815f6f6f8154",
+          "excerpt": "ports both Ethernet and InfiniBand applications. (P/N: IN015050) Product brief Atlas™ 50G PAM4 DSP The Atlas 50G PAM4 DSP chipset with integrated TIAs and laser drivers, is in bare die form to enable high-performance cl…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "e1cf47aabc483d4efa649e00b62c1ea9bee2ce5bfcfdda870c19115552f25e9e",
+          "excerpt": "InfiniBand applications. (P/N: IN015050) Product brief Atlas™ 50G PAM4 DSP The Atlas 50G PAM4 DSP chipset with integrated TIAs and laser drivers, is in bare die form to enable high-performance cloud data center and emer…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "540a2b869869a6210c4a45588f835bbdd40988c80b1a62b7e3611818597f9ba0",
+          "excerpt": "loud data center and emerging AI applications. (P/N: IN025050) Product brief AtlasOne 50G PAM4 DSP The AtlasOne™ PAM4 DSP with TIA chipset is a next-generation solution for next-generation 5G RAN optical fronthaul. (P/N…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "1adf9d423eec75e5422484abe855de297ed0dcb4b3e5f73921c0495702465e44",
+          "excerpt": "erging AI applications. (P/N: IN025050) Product brief AtlasOne 50G PAM4 DSP The AtlasOne™ PAM4 DSP with TIA chipset is a next-generation solution for next-generation 5G RAN optical fronthaul. (P/N: IN055050) Product bri…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        },
+        {
+          "hash": "f3aeb3870c3d587a13165299718967f9506ce93da4d4ba1e9b6dfc2ceb1c9fed",
+          "excerpt": "low latency, and energy efficiency. Marvell is leading this transformation with advanced PAM4 and coherent DSP solutions that power AI fabrics, data center interconnects, and telecom networks—driving the future of high-…",
+          "matchedKeywords": [
+            "PAM4"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T07:03:58.124Z",
+    "lastChangedAt": null,
     "lastError": null
   },
   "eoptolink-800g": {
@@ -1330,8 +2056,231 @@
     "url": "https://eoptolink.com/product-solutions/800g",
     "title": "800G",
     "hash": "751faad189fe4bd2ae7d5b8c6f2e607045a746fcde8dc405af26b46d3eddaf8f",
-    "lastCheckedAt": "2026-09-08T11:20:03.316Z",
-    "lastChangedAt": "2026-08-10T08:04:11.605Z",
+    "baselineAt": "2026-09-09T07:03:58.260Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T07:03:58.260Z",
+      "keywords": [
+        "800G",
+        "optical transceiver",
+        "data center",
+        "module"
+      ],
+      "segments": [
+        {
+          "hash": "e108e4421f950d6bb643b4f17095f4b5dc6ebdbc11fb248ac4d53cd83b1794b0",
+          "excerpt": "800G Product solutions Eoptolink 1.6T OSFP transceivers are compliant to the latest version of the OSFP MSAs. The firmware supports CMIS 5.0 and newer rel",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "e5dcc4184f4dbb563eef1f4ca64f292434c54407f3d865676aa180fca354202a",
+          "excerpt": ". Main Application Scenarios: AI clusters Cloud data centers 1.6T Ethernet 1.6T OSFP 1.6T 800G 400G 200G 100G 50G 40G 25G 10G Lower than 10G xPON Other OSA Eoptolink's 800G transceivers are compliant to the latest relea…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "ee1765b1b5ecda0c8f38361e3a4fdef3117bf0e893257fe7a83e21f51b1d0d0f",
+          "excerpt": "T OSFP 1.6T 800G 400G 200G 100G 50G 40G 25G 10G Lower than 10G xPON Other OSA Eoptolink's 800G transceivers are compliant to the latest releases of the QSFP-DD800 and OSP MSAs. The firmware supports CMIS 5.0 and newer r…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "583630f1cdf4ce70e49f5a826bed268d5967dd737fc84bc8f1f89e904aaa9f18",
+          "excerpt": "upport 2xDR4, DR8, 2xFR4, 2xLR4 on both form-factors. In addition we offer a selection of 800G AOCs. All modules are compliant to CMIS5.0 and higher. Main Application Scenarios: AI clusters Cloud data centers 800G Ether…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "53d64254000f54c9e19ee6713a430dfdbfcabf59661b9ab0adb79afbfa90c7d2",
+          "excerpt": "mpliant to CMIS5.0 and higher. Main Application Scenarios: AI clusters Cloud data centers 800G Ethernet 800G LPO OSFP 800G LPO QSFP-DD800 800G OSFP (200G per lane) 800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lan…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "8e08b0bffaf26e604d9ab24c916efe9695d8fc92f58a990350c174097dafab47",
+          "excerpt": "S5.0 and higher. Main Application Scenarios: AI clusters Cloud data centers 800G Ethernet 800G LPO OSFP 800G LPO QSFP-DD800 800G OSFP (200G per lane) 800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lane) 800G AOC OS…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "0151b6b1b4b8483d010412925318fb27b9e6c92338e01b5636bb879de5f69e1a",
+          "excerpt": "r. Main Application Scenarios: AI clusters Cloud data centers 800G Ethernet 800G LPO OSFP 800G LPO QSFP-DD800 800G OSFP (200G per lane) 800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lane) 800G AOC OSFP &amp; QSFP-…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "b5d9269793f6c0c69a6e265e66e0752d788679f83e0dfee54b7a55bd2040d216",
+          "excerpt": "Scenarios: AI clusters Cloud data centers 800G Ethernet 800G LPO OSFP 800G LPO QSFP-DD800 800G OSFP (200G per lane) 800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lane) 800G AOC OSFP &amp; QSFP-DD800 800G OSFP ZR C…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "adf0dae20b8881f79337393d14723ae754353cc3910b50ef46172d5cea70ffb6",
+          "excerpt": "ud data centers 800G Ethernet 800G LPO OSFP 800G LPO QSFP-DD800 800G OSFP (200G per lane) 800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lane) 800G AOC OSFP &amp; QSFP-DD800 800G OSFP ZR Coherent 800G OSFP MCF Eopt…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "cc02576344ec7c65f043c54aa4e46eef8f5e29d7d91eb94b0947359d7aea6b81",
+          "excerpt": "0G LPO OSFP 800G LPO QSFP-DD800 800G OSFP (200G per lane) 800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lane) 800G AOC OSFP &amp; QSFP-DD800 800G OSFP ZR Coherent 800G OSFP MCF Eoptolink is a market leader with th…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "a85b64116e5b9515cad29f4d3e8820efb2a89f7bd2c0eb5e45cc688f42436a43",
+          "excerpt": "DD800 800G OSFP (200G per lane) 800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lane) 800G AOC OSFP &amp; QSFP-DD800 800G OSFP ZR Coherent 800G OSFP MCF Eoptolink is a market leader with the industry broadest portfo…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "e1056998ca85b23d3efa1e2fa18c32f0523972916485bdac6457acb71359be43",
+          "excerpt": "800G QSFP-DD800 (100G per lane) 800G OSFP (100G per lane) 800G AOC OSFP &amp; QSFP-DD800 800G OSFP ZR Coherent 800G OSFP MCF Eoptolink is a market leader with the industry broadest portfolio of QSFP56-DD, QSFP112, LPO Q…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "b8452fca6e3373f945a04e6b91d04848c6a02cb58d25bc0292e374c512522f4f",
+          "excerpt": "per lane) 800G OSFP (100G per lane) 800G AOC OSFP &amp; QSFP-DD800 800G OSFP ZR Coherent 800G OSFP MCF Eoptolink is a market leader with the industry broadest portfolio of QSFP56-DD, QSFP112, LPO QSFP112 and OSFP plugga…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "4f59f26596d6cefb9ff8da4f500d3a00dea2c090d7e44de30326332488f94381",
+          "excerpt": "PON SFP GEPON SFP Eoptolink manufactures optical components with the speed range 0.1Mb to 800Gb that are used in Optical Modules and Assemblies, BOSA (Bidirectional Optical Sub. Assembly), ROSA (Receiver Optical Sub-Ass…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "df3665d59cb2697510e79bd5f9cb6c4721122deaee66fcd50f80dd79efb72f41",
+          "excerpt": "issions Disclosure Newsroom News Subscribe Support Partners Become a Partner Supply Chain 800G You are here: &#160; Home Product solutions 800G 800G LPO OSFP Eoptolink OSFP 800G LPO transceivers are compliant to the lat…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "72fcd7761fe56801f61633acd4eec018eb65c827315b47808e7e81e0e66454d2",
+          "excerpt": "t Partners Become a Partner Supply Chain 800G You are here: &#160; Home Product solutions 800G 800G LPO OSFP Eoptolink OSFP 800G LPO transceivers are compliant to the latest releases of the OSFP MSA. The firmware suppor…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "f557d1a64ff0d05138145d55f1eaf053d0f3aadf2c08071e591a2d1712a2a2a8",
+          "excerpt": "tners Become a Partner Supply Chain 800G You are here: &#160; Home Product solutions 800G 800G LPO OSFP Eoptolink OSFP 800G LPO transceivers are compliant to the latest releases of the OSFP MSA. The firmware supports CM…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "b8b6f9e8c119680f5a7c0eca88cea1cd6c85cd718319673967d53ed10f2bc7e2",
+          "excerpt": "Chain 800G You are here: &#160; Home Product solutions 800G 800G LPO OSFP Eoptolink OSFP 800G LPO transceivers are compliant to the latest releases of the OSFP MSA. The firmware supports CMIS 5.0 and newer release. We o…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "7a335846bc9375e79913e60c5bc226da48c903f7ccb50656cb74cd4868beff74",
+          "excerpt": "vertical integration for optical engines enables leading performance and per consumption. 800G LPO QSFP-DD800 Eoptolink QSFP-DD 800G LPO transceivers are compliant to the latest releases of the QSFP-DD800 MSA. The firmw…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "dd2e8ea97c5e36b16ef7c6aca3c66ccaa85d997a623127784e3a84d982904e37",
+          "excerpt": "es enables leading performance and per consumption. 800G LPO QSFP-DD800 Eoptolink QSFP-DD 800G LPO transceivers are compliant to the latest releases of the QSFP-DD800 MSA. The firmware supports CMIS 5.0 and newer releas…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "e03aff8e9237969729af743d57e9a3e4ae892e6683ec0abc4b98b88fa9885f10",
+          "excerpt": "vertical integration for optical engines enables leading performance and per consumption. 800G OSFP (200G per lane) Eoptolink 200G/lane 800G OSFP transceivers are compliant to the latest releases of the OSP MSAs. The fi…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "4792f8c87a61ac1d95583d5a87125881031194e87a47c6336ef4baeabf699722",
+          "excerpt": "es leading performance and per consumption. 800G OSFP (200G per lane) Eoptolink 200G/lane 800G OSFP transceivers are compliant to the latest releases of the OSP MSAs. The firmware supports CMIS 5.0 and newer releases. W…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "19f3c1fd2f25d11b8cd59c0b2c23cd2e2e2b9b084f01c4eac9ebad3d6659205d",
+          "excerpt": "ases. We offer DR4, DR4-2&nbsp;and FR4 transceivers for different reach and applications. 800G QSFP-DD800 (100G per lane) Eoptolink 800G transceivers are compliant to the latest releases of the QSFP-DD800 MSAs. The firm…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "8a7efe4d8e87a85ff79b604241ea00259f0dad9a6bc57334c74b9b82778b75dd",
+          "excerpt": "nsceivers for different reach and applications. 800G QSFP-DD800 (100G per lane) Eoptolink 800G transceivers are compliant to the latest releases of the QSFP-DD800 MSAs. The firmware supports CMIS 5.0 and newer releases.…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "a81d74b9ff6d4126d7bbd72dd30bd71dca6483104680f45ffee2bc12e85b85f3",
+          "excerpt": "rtical integration for optical engines enables leading performance and power consumption. 800G OSFP (100G per lane) Eoptolink OSFP 800G transceivers are compliant to the latest releases of the OSFP MSA. Firmware support…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "ba54e0ed92ae8101ae003a3524e38befdc90b0fdc93ec21c4a31a5649746304e",
+          "excerpt": "ables leading performance and power consumption. 800G OSFP (100G per lane) Eoptolink OSFP 800G transceivers are compliant to the latest releases of the OSFP MSA. Firmware supports CMIS 5.0 and newer release. We offer tr…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "ec07e4794a0038fc8581ceaf04146e2fcfa4177071ef4eced6161ed17dd87194",
+          "excerpt": "rtical integration for optical engines enables leading performance and power consumption. 800G AOC OSFP &amp; QSFP-DD800 Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSF…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "9bec8c75037ba547c88ede93a150c93584804d6766da59ab3b3025632091a54b",
+          "excerpt": "ables leading performance and power consumption. 800G AOC OSFP &amp; QSFP-DD800 Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP …",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "e7f5e921ffaa57c810aca010e475aee67bfaad1a885fd49a8fc721120af4bd94",
+          "excerpt": "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is b…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "c42ccc7883e8dbcf2c9b2e2822f73716b6ae4323dd32607c53f2cea1ae700cbe",
+          "excerpt": "leases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is based optical engine and the latest coherent DSP f…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T07:03:58.260Z",
+    "lastChangedAt": null,
     "lastError": null
   },
   "jm-fuel-cell-tech": {

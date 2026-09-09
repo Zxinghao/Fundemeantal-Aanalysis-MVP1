@@ -86,6 +86,7 @@ export function eventIdForChange(industryId, date, source, changeEvidence) {
 
 export function cadenceDue(cadence, previous, checkedAt) {
   if (cadence !== "weekly") return true;
+  if (previous?.lastError) return true;
   if (!previous?.lastCheckedAt) return true;
 
   const previousTime = Date.parse(previous.lastCheckedAt);

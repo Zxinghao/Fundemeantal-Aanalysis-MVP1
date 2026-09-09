@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:48.918Z",
+      "capturedAt": "2026-09-09T07:08:05.478Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -202,7 +202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:48.918Z",
+    "lastCheckedAt": "2026-09-09T07:08:05.478Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -216,7 +216,7 @@
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:50.215Z",
+      "capturedAt": "2026-09-09T07:08:06.056Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,7 +240,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:50.215Z",
+    "lastCheckedAt": "2026-09-09T07:08:06.056Z",
     "lastChangedAt": "2026-09-08T22:06:30.788Z",
     "lastError": null
   },
@@ -254,7 +254,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:51.177Z",
+      "capturedAt": "2026-09-09T07:08:07.087Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +418,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:51.177Z",
+    "lastCheckedAt": "2026-09-09T07:08:07.087Z",
     "lastChangedAt": "2026-08-28T18:43:05.919Z",
     "lastError": null
   },
@@ -737,9 +737,70 @@
     "id": "hexagon-purus-ir",
     "industryId": "fuel-cell",
     "cadence": "weekly",
-    "url": "https://hexagonpurus.com/investor-relations",
-    "lastCheckedAt": "2026-09-09T07:03:53.591Z",
-    "lastError": "fetch failed"
+    "url": "https://live.euronext.com/en/listview/company-press-release/251919",
+    "title": "Company press releases - Euronext exchange Live quotes",
+    "hash": "4741b125ba410515f7d4a1282400d0e6dbb0c2d4ed1ebefa100156e7f8a0e855",
+    "baselineAt": "2026-09-09T07:08:07.547Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-09-09T07:08:07.547Z",
+      "keywords": [
+        "results",
+        "order",
+        "hydrogen",
+        "storage",
+        "commercial vehicle",
+        "capacity",
+        "customer"
+      ],
+      "segments": [
+        {
+          "hash": "3eb5c50afed415cd3f7ea81eb0bfaab21e9448ec6fc86c3bc47d870460a7ea9f",
+          "excerpt": "rights attaching to the classes of shares or securities Commercial operations Commercial results Corporate life Dividend Ex Date General meeting / Board Meeting Half yearly financial reports and audit reports/limited re…",
+          "matchedKeywords": [
+            "results"
+          ]
+        },
+        {
+          "hash": "a9f08c3e1a22a8158e3ce62dd8cf5a43c9bb0f5810f70115e6c3631780c1d821",
+          "excerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 4 of 4 results Released Company Title Industry Topic 16 Jul 2026 09:44 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the second …",
+          "matchedKeywords": [
+            "results"
+          ]
+        },
+        {
+          "hash": "1839ce73f2eb09f6e510c95a08c0ef5b8f9564574e314fbd5e646db2438077b6",
+          "excerpt": "Company Title Industry Topic 16 Jul 2026 09:44 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the second quarter 2026 50204050 Machinery: Specialty Half yearly financial reports and audit reports/limited reviews …",
+          "matchedKeywords": [
+            "results"
+          ]
+        },
+        {
+          "hash": "65b896517a614ba92d31b44b124458fe2f75003625faf4e5afb8ebe34b540adc",
+          "excerpt": "EXAGON PURUS ASA Hexagon Purus ASA: Invitation to the presentation of second quarter 2026 results 50204050 Machinery: Specialty Additional regulated information required to be disclosed under the laws of a Member State …",
+          "matchedKeywords": [
+            "results"
+          ]
+        },
+        {
+          "hash": "f235b6e5e11066c1c7ed65df3b6e76b3d7983ecc6a00637be8697bace9fee1a3",
+          "excerpt": "u Overview All Structured Products Activity Reports Extended Trading Hours Good Till Date Order Recycling Bid-Only trading status Trading Turbos in the Netherlands Derivatives close menu Overview News Index Futures Inde…",
+          "matchedKeywords": [
+            "order"
+          ]
+        },
+        {
+          "hash": "b5eca1ca6a08a90e8b61a97f7fe7edb286844fa8da444f8d2cbcfd2a569374e0",
+          "excerpt": "d Products All Structured Products Activity Reports Extended Trading Hours Good Till Date Order Recycling Bid-Only trading status Trading Turbos in the Netherlands Derivatives News Index Futures Index Futures directory …",
+          "matchedKeywords": [
+            "order"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-09-09T07:08:07.547Z",
+    "lastChangedAt": null,
+    "lastError": null
   },
   "nvidia-spectrum-x-photonics": {
     "id": "nvidia-spectrum-x-photonics",
@@ -751,7 +812,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:54.501Z",
+      "capturedAt": "2026-09-09T07:08:08.470Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -972,7 +1033,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:54.501Z",
+    "lastCheckedAt": "2026-09-09T07:08:08.470Z",
     "lastChangedAt": "2026-09-09T05:59:01.253Z",
     "lastError": null
   },
@@ -986,7 +1047,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:54.649Z",
+      "capturedAt": "2026-09-09T07:08:08.671Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1004,7 +1065,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:54.649Z",
+    "lastCheckedAt": "2026-09-09T07:08:08.671Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1018,7 +1079,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:54.717Z",
+      "capturedAt": "2026-09-09T07:08:08.739Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1239,7 +1300,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:54.717Z",
+    "lastCheckedAt": "2026-09-09T07:08:08.739Z",
     "lastChangedAt": "2026-06-13T07:35:07.611Z",
     "lastError": null
   },
@@ -1253,7 +1314,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:55.197Z",
+      "capturedAt": "2026-09-09T07:08:09.098Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1356,7 +1417,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:55.197Z",
+    "lastCheckedAt": "2026-09-09T07:08:09.098Z",
     "lastChangedAt": "2026-09-02T11:19:29.684Z",
     "lastError": null
   },
@@ -1370,7 +1431,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:55.604Z",
+      "capturedAt": "2026-09-09T07:08:09.547Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1480,7 +1541,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:55.604Z",
+    "lastCheckedAt": "2026-09-09T07:08:09.547Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1494,7 +1555,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-09T07:03:55.760Z",
+      "capturedAt": "2026-09-09T07:08:09.734Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1575,7 +1636,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-09T07:03:55.760Z",
+    "lastCheckedAt": "2026-09-09T07:08:09.734Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

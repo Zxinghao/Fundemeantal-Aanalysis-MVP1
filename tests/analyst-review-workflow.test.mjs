@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  buildPatchPreview,
   buildReviewedPacket,
   validateAnalystReview,
   validateApprovedPacketAuthority
@@ -84,6 +85,25 @@ function verifiedReview(overrides = {}) {
   };
 }
 
+function industryFixture() {
+  return {
+    id: "fuel-cell",
+    name: "Fuel Cell",
+    nodes: [{ id: "tank", summary: "Hydrogen storage systems" }],
+    relationships: [],
+    sources: [],
+    companies: [{
+      id: "forvia",
+      name: "FORVIA",
+      scores: { validationBarrier: 82 },
+      scoreEvidence: {},
+      signals: { recentCatalyst: "Prior catalyst" },
+      recentUpdates: ["Earlier reviewed update"]
+    }],
+    updateEvents: []
+  };
+}
+
 test("structured approval is locked until the primary source is verified", () => {
   const item = itemFixture();
   const errors = validateAnalystReview(item, verifiedReview({ primarySourceVerified: false }));
@@ -107,6 +127,64 @@ test("human review turns an unverified packet into a supported claim without pro
   assert.deepEqual(validateApprovedPacketAuthority(packet), []);
 });
 
+test("final patch preview uses the same operation path and value as the approved packet without mutating canonical data", () => {
+  const item = itemFixture();
+  const review = verifiedReview();
+  const industry = industryFixture();
+  const before = JSON.stringify(industry);
+  const preview = buildPatchPreview(item, review, industry);
+  const packet = buildReviewedPacket(item, review, "approved", {
+    reviewedAt: "2026-09-09T00:10:00.000Z"
+  });
+
+  assert.equal(preview.status, "ready");
+  assert.equal(preview.executable, true);
+  assert.equal(preview.operations.length, packet.proposedPatch.operations.length);
+  assert.equal(preview.operations[0].op, packet.proposedPatch.operations[0].op);
+  assert.equal(preview.operations[0].path, packet.proposedPatch.operations[0].path);
+  assert.deepEqual(preview.operations[0].proposedValue, packet.proposedPatch.operations[0].value);
+  assert.deepEqual(preview.operations[0].currentValue, ["Earlier reviewed update"]);
+  assert.equal(preview.operations[0].wouldChange, true);
+  assert.equal(JSON.stringify(industry), before);
+});
+
+test("final patch preview marks an already-present append as idempotent", () => {
+  const item = itemFixture();
+  const review = verifiedReview();
+  const industry = industryFixture();
+  industry.companies[0].recentUpdates.unshift(review.patchValue);
+
+  const preview = buildPatchPreview(item, review, industry);
+  assert.equal(preview.status, "ready");
+  assert.equal(preview.operations[0].wouldChange, false);
+});
+
+test("no-canonical-change review produces an explicit non-executable preview", () => {
+  const item = itemFixture();
+  const review = verifiedReview({
+    patchMode: "none",
+    patchValue: "",
+    noCanonicalChangeReason: "The verified disclosure confirms existing canonical information and does not change the tracked thesis fields."
+  });
+
+  const preview = buildPatchPreview(item, review, industryFixture());
+  assert.equal(preview.status, "ready");
+  assert.equal(preview.executable, false);
+  assert.equal(preview.disposition, "no_canonical_change");
+  assert.equal(preview.operations.length, 0);
+  assert.match(preview.noCanonicalChangeReason, /does not change/);
+});
+
+test("patch preview blocks approval when the canonical target entity is missing", () => {
+  const item = itemFixture();
+  const industry = industryFixture();
+  industry.companies = [];
+
+  const preview = buildPatchPreview(item, verifiedReview(), industry);
+  assert.equal(preview.status, "blocked");
+  assert.ok(preview.errors.some((error) => error.includes("companies.forvia.recentUpdates")));
+});
+
 test("score review emits score and scoreEvidence operations as one atomic pair", () => {
   const item = itemFixture();
   const packet = buildReviewedPacket(item, verifiedReview({
@@ -125,6 +203,27 @@ test("score review emits score and scoreEvidence operations as one atomic pair",
   assert.deepEqual(packet.proposedPatch.operations[1].value.sourceIds, ["forvia-news"]);
   assert.equal(packet.proposedPatch.operations[1].value.provenance.eventId, item.id);
   assert.equal(packet.proposedPatch.operations[1].value.provenance.claimId, "c1");
+});
+
+test("score patch preview shows current score and the exact proposed score-evidence record", () => {
+  const item = itemFixture();
+  const review = verifiedReview({
+    patchMode: "score",
+    scoreDimension: "validationBarrier",
+    scoreValue: "86",
+    evidenceDate: "2026-09-09",
+    scoreRationale: "Verified customer qualification requirements materially increase the validation barrier for replacement suppliers."
+  });
+  const preview = buildPatchPreview(item, review, industryFixture());
+
+  assert.equal(preview.status, "ready");
+  assert.equal(preview.operations.length, 2);
+  assert.equal(preview.operations[0].currentValue, 82);
+  assert.equal(preview.operations[0].proposedValue, 86);
+  assert.equal(preview.operations[1].currentValue, null);
+  assert.equal(preview.operations[1].proposedValue.score, 86);
+  assert.deepEqual(preview.operations[1].proposedValue.sourceIds, ["forvia-news"]);
+  assert.equal(preview.operations[1].proposedValue.provenance.eventId, item.id);
 });
 
 test("schema v2 golden path applies a human-verified packet and records provenance", () => {

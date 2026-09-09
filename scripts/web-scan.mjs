@@ -84,7 +84,8 @@ export function eventIdForChange(industryId, date, source, changeEvidence) {
   return `${legacyEventId(industryId, date, source)}-${changeSignature(changeEvidence)}`;
 }
 
-export function cadenceDue(cadence, previous, checkedAt) {
+export function cadenceDue(cadence, previous, checkedAt, currentUrl = null) {
+  if (currentUrl && previous?.url && previous.url !== currentUrl) return true;
   if (cadence !== "weekly") return true;
   if (previous?.lastError) return true;
   if (!previous?.lastCheckedAt) return true;
@@ -94,6 +95,10 @@ export function cadenceDue(cadence, previous, checkedAt) {
   if (!Number.isFinite(previousTime) || !Number.isFinite(currentTime)) return true;
 
   return currentTime - previousTime >= WEEKLY_INTERVAL_MS;
+}
+
+export function sourceBaselineIsComparable(previous, source) {
+  return Boolean(previous?.hash) && previous?.url === source?.url;
 }
 
 function relevantChangeCount(changeEvidence) {
@@ -265,18 +270,18 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
   const checkedAt = new Date().toISOString();
   const previous = cache[source.id];
 
-  if (!cadenceDue(cadence, previous, checkedAt)) {
+  if (!cadenceDue(cadence, previous, checkedAt, source.url)) {
     return null;
   }
 
   try {
     const page = await fetchSource(source);
-    const hasBaseline = Boolean(previous?.hash);
-    const changed = hasBaseline && previous.hash !== page.hash;
+    const comparableBaseline = sourceBaselineIsComparable(previous, source);
+    const changed = comparableBaseline && previous.hash !== page.hash;
     const hits = keywordHits(page.text, source.watchFor || []);
     const watchSnapshot = buildWatchSnapshot(page.text, source.watchFor || [], checkedAt);
     const changeEvidence = buildChangeEvidence({
-      previousSnapshot: previous?.watchSnapshot,
+      previousSnapshot: comparableBaseline ? previous?.watchSnapshot : null,
       currentSnapshot: watchSnapshot,
       pageChanged: changed
     });
@@ -288,17 +293,19 @@ async function scanSource({ industryId, cadence, source, cache, date }) {
       url: source.url,
       title: page.title,
       hash: page.hash,
-      baselineAt: previous?.baselineAt || checkedAt,
+      baselineAt: comparableBaseline ? previous?.baselineAt || checkedAt : checkedAt,
       watchSnapshot,
       lastCheckedAt: checkedAt,
-      lastChangedAt: changed ? checkedAt : previous?.lastChangedAt || null,
+      lastChangedAt: comparableBaseline
+        ? (changed ? checkedAt : previous?.lastChangedAt || null)
+        : null,
       lastError: null
     };
 
-    // A first successful fetch establishes a baseline; it is not evidence that the
-    // source changed. Existing cache entries without a watched-context snapshot are
-    // upgraded silently when the full-page hash is unchanged.
-    if (!hasBaseline || !changed) return null;
+    // A first successful fetch, including the first fetch after a configured source
+    // URL changes, establishes a fresh baseline. Content from two different URLs is
+    // never treated as a disclosure diff.
+    if (!comparableBaseline || !changed) return null;
 
     // Scanner v0.5 deliberately suppresses full-page changes that do not alter any
     // watched context. They remain visible in the cache fingerprint/history but no

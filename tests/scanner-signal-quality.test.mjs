@@ -47,7 +47,7 @@ test("comparable watched-context change remains review-worthy", () => {
   assert.equal(shouldCreateReviewEvent(comparable()), true);
 });
 
-test("baseline migration creates an event only when relevant watched context exists", () => {
+test("baseline establishment is operational state, not a Review Desk research event", () => {
   assert.equal(shouldCreateReviewEvent({
     status: "baseline_missing",
     added: [],
@@ -55,7 +55,7 @@ test("baseline migration creates an event only when relevant watched context exi
     addedCount: 0,
     removedCount: 0,
     currentRelevant: ["Hydrogen storage systems for commercial vehicles"]
-  }), true);
+  }), false);
 
   assert.equal(shouldCreateReviewEvent({
     status: "baseline_missing",

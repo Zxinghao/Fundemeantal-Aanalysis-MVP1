@@ -17,6 +17,10 @@ function nonEmpty(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+function sameValue(left, right) {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
 function sourceIdsForItem(item) {
   const direct = Array.isArray(item?.sourceIds) ? item.sourceIds.filter(nonEmpty) : [];
   if (direct.length) return [...new Set(direct)];
@@ -121,7 +125,7 @@ function humanReviewRecord(review, status, reviewedAt) {
   };
 }
 
-function buildOperations(item, packet, review) {
+export function buildCanonicalOperations(item, packet, review) {
   const reason = review.analystRationale.trim();
 
   if (review.patchMode === "none") return [];
@@ -194,6 +198,92 @@ function buildOperations(item, packet, review) {
   return [];
 }
 
+function resolveCanonicalTarget(industry, operation) {
+  const parts = String(operation?.path || "").split(".");
+  if (!industry || parts.length < 3) return { targetExists: false, currentValue: null };
+
+  if (parts[0] === "companies") {
+    const company = (industry.companies || []).find((candidate) => candidate.id === parts[1]);
+    if (!company) return { targetExists: false, currentValue: null };
+
+    if (parts.length === 3 && parts[2] === "recentUpdates") {
+      return { targetExists: true, currentValue: clone(company.recentUpdates || []) };
+    }
+
+    if (parts.length === 4 && parts[2] === "signals") {
+      return { targetExists: true, currentValue: clone(company.signals?.[parts[3]] ?? null) };
+    }
+
+    if (parts.length === 4 && parts[2] === "scores") {
+      return { targetExists: true, currentValue: clone(company.scores?.[parts[3]] ?? null) };
+    }
+
+    if (parts.length === 4 && parts[2] === "scoreEvidence") {
+      return { targetExists: true, currentValue: clone(company.scoreEvidence?.[parts[3]] ?? null) };
+    }
+
+    return { targetExists: false, currentValue: null };
+  }
+
+  if (parts[0] === "nodes" && parts.length === 3 && parts[2] === "summary") {
+    const node = (industry.nodes || []).find((candidate) => candidate.id === parts[1]);
+    return node
+      ? { targetExists: true, currentValue: clone(node.summary ?? null) }
+      : { targetExists: false, currentValue: null };
+  }
+
+  return { targetExists: false, currentValue: null };
+}
+
+export function buildPatchPreview(item, review, industry) {
+  const validationErrors = validateAnalystReview(item, review);
+  if (validationErrors.length) {
+    return {
+      status: "blocked",
+      executable: false,
+      disposition: null,
+      sourceIds: sourceIdsForItem(item),
+      errors: validationErrors,
+      operations: []
+    };
+  }
+
+  const packet = clone(item.researchPacket);
+  const operations = buildCanonicalOperations(item, packet, review);
+  const previewOperations = operations.map((operation) => {
+    const resolved = resolveCanonicalTarget(industry, operation);
+    const currentValue = resolved.currentValue;
+    const proposedValue = clone(operation.value);
+    const wouldChange = operation.op === "append"
+      ? !Array.isArray(currentValue) || !currentValue.includes(operation.value)
+      : !sameValue(currentValue, proposedValue);
+
+    return {
+      op: operation.op,
+      path: operation.path,
+      currentValue,
+      proposedValue,
+      reason: operation.reason,
+      targetExists: resolved.targetExists,
+      wouldChange
+    };
+  });
+
+  const targetErrors = previewOperations
+    .filter((operation) => !operation.targetExists)
+    .map((operation) => `Canonical target is missing for ${operation.path}.`);
+
+  return {
+    status: targetErrors.length ? "blocked" : "ready",
+    executable: operations.length > 0 && targetErrors.length === 0,
+    disposition: operations.length > 0 ? "canonical_change" : "no_canonical_change",
+    sourceIds: sourceIdsForItem(item),
+    noCanonicalChangeReason: review.noCanonicalChangeReason?.trim() || null,
+    errors: targetErrors,
+    operations: previewOperations
+  };
+}
+
 export function buildReviewedPacket(item, review, reviewStatus, { reviewedAt = new Date().toISOString() } = {}) {
   if (!item?.researchPacket) return null;
   const packet = clone(item.researchPacket);
@@ -239,7 +329,7 @@ export function buildReviewedPacket(item, review, reviewStatus, { reviewedAt = n
     reviewedAt
   };
 
-  const operations = buildOperations(item, packet, review);
+  const operations = buildCanonicalOperations(item, packet, review);
   packet.proposedPatch = {
     status: "ready",
     executable: operations.length > 0,

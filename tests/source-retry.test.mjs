@@ -3,6 +3,15 @@ import assert from "node:assert/strict";
 
 import { cadenceDue, sourceBaselineIsComparable } from "../scripts/web-scan.mjs";
 
+function readySnapshot() {
+  return {
+    version: "1.0",
+    capturedAt: "2026-09-09T06:04:18.722Z",
+    keywords: ["hydrogen"],
+    segments: []
+  };
+}
+
 test("failed weekly sources retry on the next scan instead of waiting a week", () => {
   const previous = {
     lastCheckedAt: "2026-09-09T06:04:18.722Z",
@@ -15,10 +24,11 @@ test("failed weekly sources retry on the next scan instead of waiting a week", (
   );
 });
 
-test("successful weekly sources still respect their normal cadence", () => {
+test("successful weekly sources with a watched-context baseline respect normal cadence", () => {
   const previous = {
     lastCheckedAt: "2026-09-09T06:04:18.722Z",
-    lastError: null
+    lastError: null,
+    watchSnapshot: readySnapshot()
   };
 
   assert.equal(
@@ -31,12 +41,27 @@ test("successful weekly sources still respect their normal cadence", () => {
   );
 });
 
+test("legacy weekly cache without watched-context baseline is due immediately", () => {
+  const previous = {
+    url: "https://example.com/source",
+    hash: "legacy-full-page-hash",
+    lastCheckedAt: "2026-09-09T06:04:18.722Z",
+    lastError: null
+  };
+
+  assert.equal(
+    cadenceDue("weekly", previous, "2026-09-09T06:30:00.000Z", "https://example.com/source"),
+    true
+  );
+});
+
 test("a configured source URL change is due immediately even when weekly cadence is not", () => {
   const previous = {
     url: "https://example.com/old-source",
     lastCheckedAt: "2026-09-09T06:04:18.722Z",
     lastError: null,
-    hash: "old-hash"
+    hash: "old-hash",
+    watchSnapshot: readySnapshot()
   };
 
   assert.equal(
@@ -50,18 +75,23 @@ test("a configured source URL change is due immediately even when weekly cadence
   );
 });
 
-test("a source URL change invalidates the old content baseline", () => {
-  const previous = {
-    url: "https://example.com/old-source",
-    hash: "old-hash"
+test("comparable baseline requires matching URL, hash, and watched-context snapshot", () => {
+  const readyPrevious = {
+    url: "https://example.com/source",
+    hash: "old-hash",
+    watchSnapshot: readySnapshot()
   };
 
   assert.equal(
-    sourceBaselineIsComparable(previous, { url: "https://example.com/new-source" }),
+    sourceBaselineIsComparable(readyPrevious, { url: "https://example.com/source" }),
+    true
+  );
+  assert.equal(
+    sourceBaselineIsComparable(readyPrevious, { url: "https://example.com/new-source" }),
     false
   );
   assert.equal(
-    sourceBaselineIsComparable(previous, { url: "https://example.com/old-source" }),
-    true
+    sourceBaselineIsComparable({ url: "https://example.com/source", hash: "old-hash" }, { url: "https://example.com/source" }),
+    false
   );
 });

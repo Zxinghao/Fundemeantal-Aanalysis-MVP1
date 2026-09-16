@@ -1,5 +1,886 @@
 [
   {
+    "id": "web-ai-optics-2026-09-16-eoptolink-800g-f0a1e8d01215",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "ai-optics",
+    "companyId": "eoptolink",
+    "nodeId": "optical-modules",
+    "impactType": "technology_change",
+    "summary": "Eoptolink 800G products changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"800G\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://eoptolink.com/product-solutions/800g",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "eoptolink-800g"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-16T11:35:40.428Z",
+    "lastSeenAt": "2026-09-16T11:35:40.428Z",
+    "changeSignature": "f0a1e8d01215",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the 800ZR standard. The modules is based…",
+        "leases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the 800ZR standard. The modules is based optical engine and the latest coherent DSP for 8…"
+      ],
+      "removed": [
+        "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is b…",
+        "leases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is based optical engine and the latest coherent DSP f…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "800G",
+        "optical transceiver",
+        "data center",
+        "module"
+      ],
+      "affectedTarget": "company:eoptolink",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.eoptolink; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-ai-optics-2026-09-16-eoptolink-800g-f0a1e8d01215-evidence-1",
+          "sourceId": "eoptolink-800g",
+          "sourceType": "company_official",
+          "url": "https://eoptolink.com/product-solutions/800g",
+          "pageTitle": "800G",
+          "observedAt": "2026-09-16T11:35:40.428Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "800G",
+            "optical transceiver",
+            "data center",
+            "module"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the 800ZR standard. The modules is based…",
+              "leases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the 800ZR standard. The modules is based optical engine and the latest coherent DSP for 8…"
+            ],
+            "removed": [
+              "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is b…",
+              "leases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is based optical engine and the latest coherent DSP f…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-ai-optics-2026-09-16-eoptolink-800g-f0a1e8d01215-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:eoptolink",
+        "statement": "Potential technology change affecting company:eoptolink; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.eoptolink.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:35:40.428Z",
+        "target": "company:eoptolink",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is b…",
+            "afterExcerpt": "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the 800ZR standard. The modules is based…",
+            "matchedKeywords": [
+              "800G",
+              "optical transceiver",
+              "data center",
+              "module"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:eoptolink; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:39:40.857Z",
+        "target": "company:eoptolink",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied company-official context changed from referring to the OIF-800ZR standard to referring to the 800ZR standard for Eoptolink’s 800G OSFP ZR/ZR+ transceiver. The excerpts also mention compliance with OSFP and QSFP-DD800 MSA releases.",
+            "beforeExcerpt": "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the OIF-800ZR standard. The modules is b…",
+            "afterExcerpt": "Eoptolink 800G AOC are compliant to the latest releases of the OSFP &amp; QSFP-DD800 MSA. 800G OSFP ZR Coherent The EOLO-168HG-B/E-5X OSFP 800G ZR/ZR+ transceiver is complaint to the 800ZR standard. The modules is based…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The snapshot change may reflect an update or wording change in the company’s description of its 800G coherent optical transceiver; the supplied excerpts do not establish a substantive product, technology, or standards change.",
+          "rationale": "Only a truncated textual difference is available, and the current excerpt does not provide enough context to determine whether “OIF-800ZR” versus “800ZR” represents a material standards distinction. Primary-source verification of the full page and relevant standard references is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "The event may warrant review of validation and switching-cost considerations for 800G optical modules, but the supplied evidence does not support a score direction or change."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-16T11:35:40.428Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-09-16-doe-fuel-cell-parts-2d25dc16de09",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "mea",
+    "impactType": "supply_chain_importance",
+    "summary": "U.S. DOE fuel cell parts overview changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Parts of a Fuel Cell | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cell-parts"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-16T11:35:33.561Z",
+    "lastSeenAt": "2026-09-16T11:35:33.561Z",
+    "changeSignature": "2d25dc16de09",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ower is produced, but hardware components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most applications require highe…"
+      ],
+      "removed": [
+        "Nevada EM SSAB Meeting (September 2026) Sep 10 3:00PM EDT - 4:30PM EDT Energy Efficiency Measures on Tribal Facilities Sep 11 1:00PM EDT - 2:00PM EDT Informational Webinar: Accelerating Scale-up and Pre-piloting of Emer…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "membrane electrode assembly",
+        "MEA",
+        "gas diffusion layer",
+        "catalyst",
+        "bipolar plate"
+      ],
+      "affectedTarget": "node:mea",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node mea; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-16-doe-fuel-cell-parts-2d25dc16de09-evidence-1",
+          "sourceId": "doe-fuel-cell-parts",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
+          "pageTitle": "Parts of a Fuel Cell | Department of Energy",
+          "observedAt": "2026-09-16T11:35:33.561Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "membrane electrode assembly",
+            "MEA",
+            "gas diffusion layer",
+            "catalyst",
+            "bipolar plate"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ower is produced, but hardware components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most applications require highe…"
+            ],
+            "removed": [
+              "Nevada EM SSAB Meeting (September 2026) Sep 10 3:00PM EDT - 4:30PM EDT Energy Efficiency Measures on Tribal Facilities Sep 11 1:00PM EDT - 2:00PM EDT Informational Webinar: Accelerating Scale-up and Pre-piloting of Emer…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-16-doe-fuel-cell-parts-2d25dc16de09-claim-1",
+        "status": "unverified",
+        "type": "supply_chain_importance",
+        "target": "node:mea",
+        "statement": "Potential supply-chain importance change affecting node:mea; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.mea.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:35:33.561Z",
+        "target": "node:mea",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Nevada EM SSAB Meeting (September 2026) Sep 10 3:00PM EDT - 4:30PM EDT Energy Efficiency Measures on Tribal Facilities Sep 11 1:00PM EDT - 2:00PM EDT Informational Webinar: Accelerating Scale-up and Pre-piloting of Emer…",
+            "afterExcerpt": "ower is produced, but hardware components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most applications require highe…",
+            "matchedKeywords": [
+              "membrane electrode assembly",
+              "MEA",
+              "gas diffusion layer",
+              "catalyst",
+              "bipolar plate"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Nevada EM SSAB Meeting (September 2026) Sep 10 3:00PM EDT - 4:30PM EDT Energy Efficiency Measures on Tribal Facilities Sep 11 1:00PM EDT - 2:00PM EDT Informational Webinar: Accelerating Scale-up and Pre-piloting of Emer…",
+            "afterExcerpt": "ower is produced, but hardware components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most applications require highe…",
+            "beforeValue": "10",
+            "afterValue": "1",
+            "unit": null,
+            "matchedKeywords": [
+              "membrane electrode assembly",
+              "MEA",
+              "gas diffusion layer",
+              "catalyst",
+              "bipolar plate"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 10 → 1.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "supply_chain_importance",
+          "statement": "Potential supply chain importance disclosure change for node:mea; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:39:47.006Z",
+        "target": "node:mea",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The keyword-focused source context changed between snapshots. The earlier excerpt concerns scheduled events, while the later excerpt discusses hardware components associated with membrane electrode assembly (MEA) operation, including bipolar plates.",
+            "beforeExcerpt": "Nevada EM SSAB Meeting (September 2026) Sep 10 3:00PM EDT - 4:30PM EDT Energy Efficiency Measures on Tribal Facilities Sep 11 1:00PM EDT - 2:00PM EDT Informational Webinar: Accelerating Scale-up and Pre-piloting of Emer…",
+            "afterExcerpt": "ower is produced, but hardware components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most applications require highe…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "possible_numeric_token_change",
+            "status": "candidate",
+            "statement": "The supplied metadata identifies a possible change from “10” to “1” within the watched context, but the excerpts do not establish that these values refer to the same metric or subject.",
+            "beforeExcerpt": "Nevada EM SSAB Meeting (September 2026) Sep 10 3:00PM EDT - 4:30PM EDT Energy Efficiency Measures on Tribal Facilities Sep 11 1:00PM EDT - 2:00PM EDT Informational Webinar: Accelerating Scale-up and Pre-piloting of Emer…",
+            "afterExcerpt": "ower is produced, but hardware components are required to enable effective MEA operation. Bipolar Plates Each individual MEA produces less than 1 V under typical operating conditions, but most applications require highe…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "supply_chain_importance",
+          "statement": "This is a review candidate for possible supply-chain relevance involving MEA-related hardware components, particularly bipolar plates. The evidence is not sufficient to determine whether the numeric change is a substantive disclosure or whether it has implications for the MEA supply chain.",
+          "rationale": "The later excerpt explicitly references hardware components required for MEA operation and states that an individual MEA produces less than 1 V, while the earlier excerpt is unrelated event-schedule text. The apparent “10” to “1” change may therefore reflect different content rather than a comparable business metric. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "The excerpt may warrant review of MEA hardware-component relevance, but no score direction or change is proposed because the underlying source context and numeric comparison are ambiguous."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-16T11:35:33.561Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-09-16-forvia-hydrogen-storage-5860498bfe9b",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-16T11:35:26.972Z",
+    "lastSeenAt": "2026-09-16T11:35:26.972Z",
+    "changeSignature": "5860498bfe9b",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.88€ -0.12% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-16-forvia-hydrogen-storage-5860498bfe9b-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-09-16T11:35:26.972Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.88€ -0.12% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-16-forvia-hydrogen-storage-5860498bfe9b-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:35:26.972Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.88€ -0.12% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.88€ -0.12% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "0.12%",
+            "afterValue": "0.04%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 0.12% → 0.04%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:39:54.268Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied snapshots for a FORVIA page titled “Hydrogen storage systems” differ in displayed share-price text: the earlier excerpt shows 9.88€ and the later excerpt shows 9.25€. The excerpts also include the keywords “hydrogen storage,” “tank,” and “700 bar.”",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.88€ -0.12% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A displayed percentage token changed from 0.12% to 0.04% between the supplied excerpts. The excerpts do not establish that this token represents hydrogen-storage capacity, production capacity, or another operating metric.",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.88€ -0.12% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "missing_relevant_context",
+            "status": "candidate",
+            "statement": "No substantive hydrogen-storage disclosure, tank specification, 700-bar detail, or capacity figure is included in the supplied current relevant context.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "This is a weak review lead for a possible change in a hydrogen-storage-related source page, but the supplied evidence does not substantiate a capacity change.",
+          "rationale": "The observed differences are limited to displayed share-price and percentage text surrounding a page title and keywords. They may reflect market-data updates or page rendering rather than a change in FORVIA’s hydrogen-storage operations. Primary-source verification of the relevant page content is required before drawing a supply-chain conclusion.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions could become relevant if primary-source material confirms a material change in FORVIA’s hydrogen-storage systems or capacity. No score direction or adjustment is proposed from the supplied excerpts alone."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-16T11:35:26.972Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-09-16-doe-fuel-cells-acc07ca512a4",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-16T11:35:16.675Z",
+    "lastSeenAt": "2026-09-16T11:35:16.675Z",
+    "changeSignature": "acc07ca512a4",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…"
+      ],
+      "removed": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Unleashing American Energy Innovation U…",
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Sep 11 Informational Webinar: Accelerating Scale-up and Pre-piloting of Emerging Chem…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-16-doe-fuel-cells-acc07ca512a4-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-09-16T11:35:16.675Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…"
+            ],
+            "removed": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Unleashing American Energy Innovation U…",
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Sep 11 Informational Webinar: Accelerating Scale-up and Pre-piloting of Emerging Chem…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-16-doe-fuel-cells-acc07ca512a4-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:35:16.675Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Unleashing American Energy Innovation U…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-16T11:40:00.358Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied metadata reports a change in a keyword-focused source context related to fuel cells, hydrogen, funding, storage, and infrastructure.",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Unleashing American Energy Innovation U…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The event is labeled as a government-sourced policy-change candidate with evidence level A, but the supplied material does not include a complete primary-source disclosure or enough detail to establish the policy's substance or effects.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "This is a low-confidence candidate for a potentially relevant policy or funding disclosure affecting the fuel-cell and hydrogen ecosystem. The available evidence shows only a change in monitored context, not a confirmed policy change or identifiable supply-chain consequence.",
+          "rationale": "The excerpts are truncated and do not provide the program terms, affected entities, funding allocation, timing, eligibility, or implementation details. Primary-source verification is required before drawing business or supply-chain conclusions.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may warrant review if primary-source materials confirm a material policy, funding, storage, or infrastructure development. No score direction or numeric change is proposed from the supplied evidence."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-16T11:35:16.675Z"
+  },
+  {
     "id": "web-fuel-cell-2026-09-08-forvia-news",
     "sourceType": "ai_scan",
     "status": "pending",

@@ -1,5 +1,237 @@
 [
   {
+    "id": "web-fuel-cell-2026-09-23-forvia-hydrogen-storage-b679f87e17cc",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-23T11:37:57.286Z",
+    "lastSeenAt": "2026-09-23T11:37:57.286Z",
+    "changeSignature": "b679f87e17cc",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-23-forvia-hydrogen-storage-b679f87e17cc-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-09-23T11:37:57.286Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-23-forvia-hydrogen-storage-b679f87e17cc-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-23T11:37:57.286Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "0.04%",
+            "afterValue": "3.69%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 0.04% → 3.69%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-23T11:42:11.265Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "source_context_change",
+            "status": "candidate",
+            "statement": "The supplied before and after excerpts from a FORVIA page titled “Hydrogen storage systems” differ in displayed share-price text: the before excerpt shows “9.25€ -0.04%,” while the after excerpt shows “8.94€ -3.69%.”",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "keyword_match",
+            "status": "candidate",
+            "statement": "The monitored context was associated with the keywords “hydrogen storage,” “tank,” and “700 bar.”",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A displayed percentage changed from “-0.04%” to “-3.69%,” but the excerpts identify these values as share-price information rather than hydrogen-storage capacity or operating metrics.",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low-Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low-Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "The supplied material does not establish a hydrogen-storage capacity change or a change in tank production, 700-bar capability, or related operating conditions.",
+          "rationale": "The only changed numeric fields are the displayed share price and percentage movement. Their relationship to hydrogen-storage capacity is not shown in the excerpts. Primary-source verification of the underlying page content and any relevant company disclosure is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions could be reviewed if primary-source material confirms a material change in FORVIA’s hydrogen-storage activities. The supplied excerpts alone do not support a directional assessment or any score change."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-23T11:37:57.286Z"
+  },
+  {
     "id": "web-ai-optics-2026-09-16-eoptolink-800g-f0a1e8d01215",
     "sourceType": "ai_scan",
     "status": "pending",

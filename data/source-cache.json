@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:24.682Z",
+      "capturedAt": "2026-09-23T11:37:45.766Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -202,7 +202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:24.682Z",
+    "lastCheckedAt": "2026-09-23T11:37:45.766Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -212,11 +212,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "d4a538c6e0f971b7648eca8201651e651d8179d03a5d2b24d19ea150299aba75",
+    "hash": "51af418abd25fb42380f9fa818aa370a3fb9797041a832a5b0a34274c23a698d",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:25.356Z",
+      "capturedAt": "2026-09-23T11:37:46.380Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,8 +240,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:25.356Z",
-    "lastChangedAt": "2026-09-22T11:39:25.356Z",
+    "lastCheckedAt": "2026-09-23T11:37:46.380Z",
+    "lastChangedAt": "2026-09-23T11:37:46.380Z",
     "lastError": null
   },
   "garrett-news": {
@@ -254,7 +254,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:26.705Z",
+      "capturedAt": "2026-09-23T11:37:47.748Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +418,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:26.705Z",
+    "lastCheckedAt": "2026-09-23T11:37:47.748Z",
     "lastChangedAt": "2026-08-28T18:43:05.919Z",
     "lastError": null
   },
@@ -428,11 +428,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
     "title": "Alternative Fuels and Feedstocks Office | Department of Energy",
-    "hash": "55043800b75affb20bec85e95d493c8dc62c770eae8474136b1a4dba65260b41",
+    "hash": "7642393dd41c61bc469de82f2f903875dc86bbf5c0b774a03aaba1ecd80a41de",
     "baselineAt": "2026-09-09T07:03:51.954Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:16.675Z",
+      "capturedAt": "2026-09-23T11:37:48.570Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -653,8 +653,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:16.675Z",
-    "lastChangedAt": "2026-09-16T11:35:16.675Z",
+    "lastCheckedAt": "2026-09-23T11:37:48.570Z",
+    "lastChangedAt": "2026-09-23T11:37:48.570Z",
     "lastError": null
   },
   "umicore-ir": {
@@ -663,11 +663,11 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/investors/",
     "title": "Investor relations | Umicore",
-    "hash": "5e1cab1077e28b6c9f240aac5c2131718d5d34cc304fed547ac31704c0dd761d",
+    "hash": "3704fc26409799b59e51a9e315d8d5d065ac552d92708209f65304f11888f5e4",
     "baselineAt": "2026-09-09T07:03:52.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:16.936Z",
+      "capturedAt": "2026-09-23T11:37:48.832Z",
       "keywords": [
         "fuel cell",
         "catalyst",
@@ -698,8 +698,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:16.936Z",
-    "lastChangedAt": "2026-09-16T11:35:16.936Z",
+    "lastCheckedAt": "2026-09-23T11:37:48.832Z",
+    "lastChangedAt": "2026-09-23T11:37:48.832Z",
     "lastError": null
   },
   "sgl-ir": {
@@ -712,7 +712,7 @@
     "baselineAt": "2026-09-09T07:03:53.205Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:18.440Z",
+      "capturedAt": "2026-09-23T11:37:50.396Z",
       "keywords": [
         "fuel cell",
         "GDL",
@@ -729,7 +729,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:18.440Z",
+    "lastCheckedAt": "2026-09-23T11:37:50.396Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -743,7 +743,7 @@
     "baselineAt": "2026-09-09T07:08:07.547Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:19.202Z",
+      "capturedAt": "2026-09-23T11:37:51.231Z",
       "keywords": [
         "results",
         "order",
@@ -798,7 +798,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:19.202Z",
+    "lastCheckedAt": "2026-09-23T11:37:51.231Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -812,7 +812,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:27.648Z",
+      "capturedAt": "2026-09-23T11:38:04.132Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1033,7 +1033,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:27.648Z",
+    "lastCheckedAt": "2026-09-23T11:38:04.132Z",
     "lastChangedAt": "2026-09-09T05:59:01.253Z",
     "lastError": null
   },
@@ -1047,7 +1047,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:27.978Z",
+      "capturedAt": "2026-09-23T11:38:05.330Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1065,7 +1065,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:27.978Z",
+    "lastCheckedAt": "2026-09-23T11:38:05.330Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1079,7 +1079,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:28.097Z",
+      "capturedAt": "2026-09-23T11:38:05.374Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1300,7 +1300,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:28.097Z",
+    "lastCheckedAt": "2026-09-23T11:38:05.374Z",
     "lastChangedAt": "2026-06-13T07:35:07.611Z",
     "lastError": null
   },
@@ -1314,7 +1314,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:28.438Z",
+      "capturedAt": "2026-09-23T11:38:05.544Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1417,7 +1417,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:28.438Z",
+    "lastCheckedAt": "2026-09-23T11:38:05.544Z",
     "lastChangedAt": "2026-09-22T11:39:28.438Z",
     "lastError": null
   },
@@ -1431,7 +1431,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:28.698Z",
+      "capturedAt": "2026-09-23T11:38:05.698Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1541,7 +1541,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:28.698Z",
+    "lastCheckedAt": "2026-09-23T11:38:05.698Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1555,7 +1555,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-22T11:39:28.842Z",
+      "capturedAt": "2026-09-23T11:38:05.798Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1636,7 +1636,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-22T11:39:28.842Z",
+    "lastCheckedAt": "2026-09-23T11:38:05.798Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },
@@ -1650,7 +1650,7 @@
     "baselineAt": "2026-09-09T07:03:57.992Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:39.954Z",
+      "capturedAt": "2026-09-23T11:38:08.876Z",
       "keywords": [
         "Bailly",
         "51.2",
@@ -1871,7 +1871,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:39.954Z",
+    "lastCheckedAt": "2026-09-23T11:38:08.876Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -1885,7 +1885,7 @@
     "baselineAt": "2026-09-09T07:03:58.124Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:40.283Z",
+      "capturedAt": "2026-09-23T11:38:09.014Z",
       "keywords": [
         "PAM4",
         "DSP",
@@ -2106,7 +2106,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:40.283Z",
+    "lastCheckedAt": "2026-09-23T11:38:09.014Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -2120,7 +2120,7 @@
     "baselineAt": "2026-09-09T07:03:58.260Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:40.428Z",
+      "capturedAt": "2026-09-23T11:38:09.077Z",
       "keywords": [
         "800G",
         "optical transceiver",
@@ -2340,7 +2340,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:40.428Z",
+    "lastCheckedAt": "2026-09-23T11:38:09.077Z",
     "lastChangedAt": "2026-09-16T11:35:40.428Z",
     "lastError": null
   },
@@ -2354,7 +2354,7 @@
     "baselineAt": "2026-09-09T06:04:16.623Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:21.126Z",
+      "capturedAt": "2026-09-23T11:37:52.360Z",
       "keywords": [
         "fuel cell",
         "catalyst coated membrane",
@@ -2526,7 +2526,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:21.126Z",
+    "lastCheckedAt": "2026-09-23T11:37:52.360Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -2540,7 +2540,7 @@
     "baselineAt": "2026-09-09T06:04:17.480Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:22.188Z",
+      "capturedAt": "2026-09-23T11:37:53.293Z",
       "keywords": [
         "fuel cell catalyst",
         "PEM",
@@ -2706,7 +2706,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:22.188Z",
+    "lastCheckedAt": "2026-09-23T11:37:53.293Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -2720,7 +2720,7 @@
     "baselineAt": "2026-09-09T06:26:04.221Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:23.259Z",
+      "capturedAt": "2026-09-23T11:37:54.104Z",
       "keywords": [
         "SIGRACET",
         "gas diffusion layer",
@@ -2940,7 +2940,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:23.259Z",
+    "lastCheckedAt": "2026-09-23T11:37:54.104Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -2950,11 +2950,11 @@
     "cadence": "weekly",
     "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
     "title": "Hydrogen storage systems | FORVIA",
-    "hash": "7c8416a27119d2346e4e122620d709bd7306effb2386770d65fa1dae2250b629",
+    "hash": "1e1d6061902bad956fd9cbe0e9e3e86feb6a56a6310d6adfaf849e0f585729d6",
     "baselineAt": "2026-09-09T06:04:19.454Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:26.972Z",
+      "capturedAt": "2026-09-23T11:37:57.286Z",
       "keywords": [
         "hydrogen storage",
         "Type IV",
@@ -2965,8 +2965,8 @@
       ],
       "segments": [
         {
-          "hash": "accebe5438e9f8ff28eabcaee428f2a4e352ae2c8ab3a73fde560a10c3da7bc9",
-          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.25€ -0.04% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+          "hash": "a64a8d189b70feba95d1b5010eb6741d1add1d2cf34489495aafa3473d4ea050",
+          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
           "matchedKeywords": [
             "hydrogen storage"
           ]
@@ -3134,8 +3134,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:26.972Z",
-    "lastChangedAt": "2026-09-16T11:35:26.972Z",
+    "lastCheckedAt": "2026-09-23T11:37:57.286Z",
+    "lastChangedAt": "2026-09-23T11:37:57.286Z",
     "lastError": null
   },
   "hexagon-purus": {
@@ -3148,7 +3148,7 @@
     "baselineAt": "2026-09-09T06:04:20.529Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:27.618Z",
+      "capturedAt": "2026-09-23T11:37:58.035Z",
       "keywords": [
         "hydrogen storage",
         "Type 4",
@@ -3166,7 +3166,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:27.618Z",
+    "lastCheckedAt": "2026-09-23T11:37:58.035Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3180,7 +3180,7 @@
     "baselineAt": "2026-09-09T06:04:22.984Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:30.065Z",
+      "capturedAt": "2026-09-23T11:38:00.104Z",
       "keywords": [
         "fuel cell compressor",
         "electric compressor",
@@ -3401,7 +3401,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:30.065Z",
+    "lastCheckedAt": "2026-09-23T11:38:00.104Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3411,11 +3411,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
     "title": "Parts of a Fuel Cell | Department of Energy",
-    "hash": "4e5b576a505c1569d94fb5ae0869704412c7d1af2c00582c4e2ff277895f3969",
+    "hash": "b3bf8d32c86c4f7e61938316572a65a0e7ab2b066e407588937401c4bf36a330",
     "baselineAt": "2026-09-09T06:04:26.236Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:33.561Z",
+      "capturedAt": "2026-09-23T11:38:03.976Z",
       "keywords": [
         "membrane electrode assembly",
         "MEA",
@@ -3636,8 +3636,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:33.561Z",
-    "lastChangedAt": "2026-09-16T11:35:33.561Z",
+    "lastCheckedAt": "2026-09-23T11:38:03.976Z",
+    "lastChangedAt": "2026-09-23T11:38:03.976Z",
     "lastError": null
   },
   "doe-hydrogen-storage": {
@@ -3646,11 +3646,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
     "title": "Physical Hydrogen Storage | Department of Energy",
-    "hash": "494e96f7ba22b4f2e380227d4481ccb46cf3dfe79359a63a2f590cfcf9571f7c",
+    "hash": "7b1777c48c6d085f490293dcca48d57f653bebdd1eb424e285aa7a37b3822998",
     "baselineAt": "2026-09-09T06:04:26.527Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-16T11:35:33.920Z",
+      "capturedAt": "2026-09-23T11:38:04.101Z",
       "keywords": [
         "350 bar",
         "700 bar",
@@ -3836,8 +3836,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-16T11:35:33.920Z",
-    "lastChangedAt": "2026-09-16T11:35:33.920Z",
+    "lastCheckedAt": "2026-09-23T11:38:04.101Z",
+    "lastChangedAt": "2026-09-23T11:38:04.101Z",
     "lastError": null
   }
 }

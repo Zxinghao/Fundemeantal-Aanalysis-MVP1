@@ -1,5 +1,647 @@
 [
   {
+    "id": "web-fuel-cell-2026-09-30-forvia-hydrogen-storage-691170c52e2b",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-30T12:35:41.718Z",
+    "lastSeenAt": "2026-09-30T12:35:41.718Z",
+    "changeSignature": "691170c52e2b",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-30-forvia-hydrogen-storage-691170c52e2b-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-09-30T12:35:41.718Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-30-forvia-hydrogen-storage-691170c52e2b-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-30T12:35:41.718Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "3.69%",
+            "afterValue": "1.62%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 3.69% → 1.62%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-30T12:36:01.643Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied snapshots for a FORVIA page titled “Hydrogen storage systems” differ in the displayed share-price text: the earlier excerpt shows €8.94 and -3.69%, while the later excerpt shows €8.77 and +1.62%.",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.94€ -3.69% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A displayed percentage changed from -3.69% to +1.62% between the supplied snapshots. The excerpts do not establish that this percentage represents hydrogen-storage capacity, production volume, or another operating metric.",
+            "beforeExcerpt": "Share price : 8.94€ -3.69%",
+            "afterExcerpt": "Share price : 8.77€ +1.62%",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "The evidence supports only a possible change in page context or displayed market data, not a demonstrated change in FORVIA’s hydrogen-storage capacity.",
+          "rationale": "Although the page title and matched keywords concern hydrogen storage, tanks, and 700 bar systems, the only changed numeric information shown is share-price performance. No capacity, manufacturing, order, or facility disclosure is present in the supplied excerpts. Primary-source verification of the underlying page and any associated operating disclosure is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions could be reviewed if a primary source confirms a material hydrogen-storage capacity or supply disclosure. The supplied evidence does not support a score direction or score change."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-30T12:35:41.718Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-09-30-umicore-ir-5c18049d4e42",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "umicore",
+    "nodeId": "catalyst",
+    "impactType": "technology_change",
+    "summary": "Umicore investors changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Investor relations | Umicore\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.umicore.com/en/investors/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "umicore-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-30T12:35:26.817Z",
+    "lastSeenAt": "2026-09-30T12:35:26.817Z",
+    "changeSignature": "5c18049d4e42",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "to Home menu Markets &amp; products Markets & products Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability O…"
+      ],
+      "removed": [
+        "enu Markets &amp; products Markets & products overview Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability o…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "precious metals",
+        "guidance"
+      ],
+      "affectedTarget": "company:umicore",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.umicore; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-30-umicore-ir-5c18049d4e42-evidence-1",
+          "sourceId": "umicore-ir",
+          "sourceType": "company_official",
+          "url": "https://www.umicore.com/en/investors/",
+          "pageTitle": "Investor relations | Umicore",
+          "observedAt": "2026-09-30T12:35:26.817Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "precious metals",
+            "guidance"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "to Home menu Markets &amp; products Markets & products Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability O…"
+            ],
+            "removed": [
+              "enu Markets &amp; products Markets & products overview Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability o…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-30-umicore-ir-5c18049d4e42-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:umicore",
+        "statement": "Potential technology change affecting company:umicore; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.umicore.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-30T12:35:26.817Z",
+        "target": "company:umicore",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "enu Markets &amp; products Markets & products overview Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability o…",
+            "afterExcerpt": "to Home menu Markets &amp; products Markets & products Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability O…",
+            "matchedKeywords": [
+              "precious metals",
+              "guidance"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:umicore; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-30T12:36:06.928Z",
+        "target": "company:umicore",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied metadata indicates that a keyword-focused source context changed between prior and current snapshots. The matched keywords were “precious metals” and “guidance.”",
+            "beforeExcerpt": "enu Markets &amp; products Markets &amp; products overview Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability o…",
+            "afterExcerpt": "to Home menu Markets &amp; products Markets & products Markets Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Back to Home menu Sustainability Sustainability O…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The context change may indicate a change in the company’s disclosure or website content, but the supplied excerpts do not establish that a technology change occurred.",
+          "rationale": "Only navigation-like fragments are provided, with no substantive statement, comparable before-and-after disclosure, guidance figure, or technology detail. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant if primary-source review confirms a substantive technology or product change. No score direction or change is proposed based on the supplied evidence."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-30T12:35:26.817Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-09-30-doe-fuel-cells-1d21b379d828",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-09-30T12:35:26.643Z",
+    "lastSeenAt": "2026-09-30T12:35:26.643Z",
+    "changeSignature": "1d21b379d828",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 26 Agile BioFoundry’s Industry Day Starts October 26th, 2026 - 8:00 AM PDT View E…"
+      ],
+      "removed": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-09-30-doe-fuel-cells-1d21b379d828-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-09-30T12:35:26.643Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 26 Agile BioFoundry’s Industry Day Starts October 26th, 2026 - 8:00 AM PDT View E…"
+            ],
+            "removed": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-09-30-doe-fuel-cells-1d21b379d828-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-30T12:35:26.643Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-09-30T12:36:14.838Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The monitored source context changed between snapshots: a prior reference to an Energy Department $16 million prize concerning mining and critical minerals was replaced by a reference to a DOE release of up to $41 million for a laboratory call to accelerate commercialization of American energy technologies.",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Energy Department Launches $16 Million Prize To Grow the Mining and Critical Miner…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The event is categorized as a potential policy change, with a government source type, evidence level A, and matched keywords including fuel cell, hydrogen, funding, storage, and infrastructure.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "verification_requirement",
+            "status": "candidate",
+            "statement": "The supplied material does not establish the full content, timing, eligibility, or applicability of either referenced DOE item; primary-source verification is required.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "This is a low-confidence candidate for a policy-related change affecting the monitored fuel-cell and hydrogen context. The snapshot change indicates different DOE-related funding or commercialization content, but the excerpts are truncated and do not establish a direct effect on any specific company, technology, supply chain, or market.",
+          "rationale": "The evidence consists of a changed keyword-focused context and truncated titles rather than the underlying DOE announcements. Primary-source review is required to determine whether the change reflects a substantive policy action, a page-update artifact, or unrelated content substitution.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may warrant review if primary sources confirm that the DOE action materially affects relevant fuel-cell, hydrogen, storage, or infrastructure markets. No score direction or numeric change is proposed."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-09-30T12:35:26.643Z"
+  },
+  {
     "id": "web-fuel-cell-2026-09-23-forvia-hydrogen-storage-b679f87e17cc",
     "sourceType": "ai_scan",
     "status": "pending",

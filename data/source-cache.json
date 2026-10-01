@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:23.903Z",
+      "capturedAt": "2026-10-01T13:16:14.551Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -202,7 +202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:23.903Z",
+    "lastCheckedAt": "2026-10-01T13:16:14.551Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -212,11 +212,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "31a623688f165259a12fef5e4e4c356cd6ebd1e1741fc5031c90b09e1d7ae040",
+    "hash": "62306de6674f95e6d6102bd89eb601c8b3ae1aaa9e10d605ee68a76d5f90880a",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:24.570Z",
+      "capturedAt": "2026-10-01T13:16:15.162Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,8 +240,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:24.570Z",
-    "lastChangedAt": "2026-09-30T12:35:24.570Z",
+    "lastCheckedAt": "2026-10-01T13:16:15.162Z",
+    "lastChangedAt": "2026-10-01T13:16:15.162Z",
     "lastError": null
   },
   "garrett-news": {
@@ -254,7 +254,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:25.829Z",
+      "capturedAt": "2026-10-01T13:16:16.685Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +418,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:25.829Z",
+    "lastCheckedAt": "2026-10-01T13:16:16.685Z",
     "lastChangedAt": "2026-09-25T11:51:38.820Z",
     "lastError": null
   },
@@ -812,7 +812,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:47.243Z",
+      "capturedAt": "2026-10-01T13:16:17.726Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1033,7 +1033,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:47.243Z",
+    "lastCheckedAt": "2026-10-01T13:16:17.726Z",
     "lastChangedAt": "2026-09-25T11:51:39.417Z",
     "lastError": null
   },
@@ -1047,7 +1047,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:47.532Z",
+      "capturedAt": "2026-10-01T13:16:17.953Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1065,7 +1065,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:47.532Z",
+    "lastCheckedAt": "2026-10-01T13:16:17.953Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1075,11 +1075,11 @@
     "cadence": "daily",
     "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
     "title": "Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell",
-    "hash": "58691e10c003b6aeff0a66703379d73400d8201e7a45c545303525cb6848401c",
+    "hash": "f8c1ebc330648590d4ecbfb61ff095aa7482183bf620bf09ff77f67eff296a5a",
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:47.633Z",
+      "capturedAt": "2026-10-01T13:16:18.194Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1096,15 +1096,15 @@
           ]
         },
         {
-          "hash": "3645b77945ff7bc116033a1179ae4495a18ff2af553193273934e6dca882c003",
-          "excerpt": "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the…",
+          "hash": "b915ab5b573b6dded4a21091dc2373e3a4ed0df54dfa61bc3bcc8c4d113e69c1",
+          "excerpt": "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for …",
           "matchedKeywords": [
             "optical DSP"
           ]
         },
         {
-          "hash": "d2c5e7e686644f24eab6a3f614656ccff3e74d772a7ab08d16fe0454f0dfe1d1",
-          "excerpt": "Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the Modern AI Infrastructure The explosion of AI, cloud and hyperscal…",
+          "hash": "71125cee3fd9bc054b162fef421075cc80377f5b043c2fb350a4fa0e51ca84d1",
+          "excerpt": "duct Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for the Modern AI Infrastructure The explosion of AI, cloud and hyperscal…",
           "matchedKeywords": [
             "optical DSP"
           ]
@@ -1300,8 +1300,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:47.633Z",
-    "lastChangedAt": "2026-06-13T07:35:07.611Z",
+    "lastCheckedAt": "2026-10-01T13:16:18.194Z",
+    "lastChangedAt": "2026-10-01T13:16:18.194Z",
     "lastError": null
   },
   "coherent-datacenter": {
@@ -1314,7 +1314,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:48.265Z",
+      "capturedAt": "2026-10-01T13:16:18.698Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1417,7 +1417,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:48.265Z",
+    "lastCheckedAt": "2026-10-01T13:16:18.698Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1431,7 +1431,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:48.634Z",
+      "capturedAt": "2026-10-01T13:16:18.851Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1541,7 +1541,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:48.634Z",
+    "lastCheckedAt": "2026-10-01T13:16:18.851Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1555,7 +1555,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-09-30T12:35:48.905Z",
+      "capturedAt": "2026-10-01T13:16:18.979Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1636,7 +1636,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-09-30T12:35:48.905Z",
+    "lastCheckedAt": "2026-10-01T13:16:18.979Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

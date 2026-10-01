@@ -1,5 +1,230 @@
 [
   {
+    "id": "web-ai-optics-2026-10-01-marvell-optical-dsp-a1ff6fa2d487",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "ai-optics",
+    "companyId": "marvell",
+    "nodeId": "dsp",
+    "impactType": "technology_change",
+    "summary": "Marvell optical DSPs changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "marvell-optical-dsp"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-01T13:16:18.194Z",
+    "lastSeenAt": "2026-10-01T13:16:18.194Z",
+    "changeSignature": "a1ff6fa2d487",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for …",
+        "duct Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for the Modern AI Infrastructure The explosion of AI, cloud and hyperscal…"
+      ],
+      "removed": [
+        "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the…",
+        "Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the Modern AI Infrastructure The explosion of AI, cloud and hyperscal…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "optical DSP",
+        "PAM4",
+        "1.6T",
+        "AI infrastructure",
+        "data center"
+      ],
+      "affectedTarget": "company:marvell",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.marvell; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-ai-optics-2026-10-01-marvell-optical-dsp-a1ff6fa2d487-evidence-1",
+          "sourceId": "marvell-optical-dsp",
+          "sourceType": "company_official",
+          "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
+          "pageTitle": "Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell",
+          "observedAt": "2026-10-01T13:16:18.194Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "optical DSP",
+            "PAM4",
+            "1.6T",
+            "AI infrastructure",
+            "data center"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for …",
+              "duct Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for the Modern AI Infrastructure The explosion of AI, cloud and hyperscal…"
+            ],
+            "removed": [
+              "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the…",
+              "Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the Modern AI Infrastructure The explosion of AI, cloud and hyperscal…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-ai-optics-2026-10-01-marvell-optical-dsp-a1ff6fa2d487-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:marvell",
+        "statement": "Potential technology change affecting company:marvell; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.marvell.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-01T13:16:18.194Z",
+        "target": "company:marvell",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the…",
+            "afterExcerpt": "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for …",
+            "matchedKeywords": [
+              "optical DSP",
+              "PAM4",
+              "1.6T",
+              "AI infrastructure",
+              "data center"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:marvell; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-01T13:16:29.696Z",
+        "target": "company:marvell",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The supplied event identifies Marvell, classifies the event as a potential technology change, and labels the source as company official with evidence level A.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The prior and current source-context excerpts both reference Marvell optical DSPs, AI infrastructure, and high-speed optical connectivity, while the current excerpt additionally includes the phrase “AI Data Center Optical DSPs.”",
+            "beforeExcerpt": "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure Data Center Optical DSPs Redefining High-speed Optical Connectivity for the…",
+            "afterExcerpt": "omer Portal Login Public Document Library Public Driver Downloads Product Security Center Optical DSPs Powering the future of AI infrastructure AI Data Center Optical DSPs Redefining High-speed Optical Connectivity for …",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "keyword_match",
+            "status": "candidate",
+            "statement": "The event metadata lists matches for “optical DSP,” “PAM4,” “1.6T,” “AI infrastructure,” and “data center.”",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The source-context change may indicate an update or reframing of Marvell’s optical DSP materials for AI data-center connectivity, but the supplied excerpts do not establish a specific product change, technical specification, launch, customer, or commercial effect.",
+          "rationale": "The before and after excerpts are truncated and largely overlapping. The available evidence does not provide a reliable comparable disclosure or explain whether the change reflects new technology, revised wording, or webpage indexing. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant for review because the event concerns optical DSP technology and high-speed data-center connectivity. No score direction or change is proposed without a complete primary-source disclosure."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-01T13:16:18.194Z"
+  },
+  {
     "id": "web-fuel-cell-2026-09-30-forvia-hydrogen-storage-691170c52e2b",
     "sourceType": "ai_scan",
     "status": "pending",

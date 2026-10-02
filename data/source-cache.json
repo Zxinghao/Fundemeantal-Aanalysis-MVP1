@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:14.551Z",
+      "capturedAt": "2026-10-02T12:35:57.165Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -202,7 +202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:14.551Z",
+    "lastCheckedAt": "2026-10-02T12:35:57.165Z",
     "lastChangedAt": "2026-09-01T11:40:01.656Z",
     "lastError": null
   },
@@ -212,11 +212,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "62306de6674f95e6d6102bd89eb601c8b3ae1aaa9e10d605ee68a76d5f90880a",
+    "hash": "372969f66c37f3ebf31f981557d850cff0ba7b515082db97f85d9a0a0b7e48b8",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:15.162Z",
+      "capturedAt": "2026-10-02T12:35:57.722Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,8 +240,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:15.162Z",
-    "lastChangedAt": "2026-10-01T13:16:15.162Z",
+    "lastCheckedAt": "2026-10-02T12:35:57.722Z",
+    "lastChangedAt": "2026-10-02T12:35:57.722Z",
     "lastError": null
   },
   "garrett-news": {
@@ -254,7 +254,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:16.685Z",
+      "capturedAt": "2026-10-02T12:35:59.176Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +418,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:16.685Z",
+    "lastCheckedAt": "2026-10-02T12:35:59.176Z",
     "lastChangedAt": "2026-09-25T11:51:38.820Z",
     "lastError": null
   },
@@ -808,11 +808,11 @@
     "cadence": "daily",
     "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
     "title": "NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs",
-    "hash": "abd7bff283dff0cab4831c3c0cf1f9ce63e252db519db3e55cefe674b5dcf6f8",
+    "hash": "fd89c311d859649334088aa2608cf8f12f1a4819c7836dae78f7e9e63d02631f",
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:17.726Z",
+      "capturedAt": "2026-10-02T12:36:00.161Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1033,8 +1033,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:17.726Z",
-    "lastChangedAt": "2026-09-25T11:51:39.417Z",
+    "lastCheckedAt": "2026-10-02T12:36:00.161Z",
+    "lastChangedAt": "2026-10-02T12:36:00.161Z",
     "lastError": null
   },
   "broadcom-cpo": {
@@ -1047,7 +1047,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:17.953Z",
+      "capturedAt": "2026-10-02T12:36:01.390Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1065,7 +1065,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:17.953Z",
+    "lastCheckedAt": "2026-10-02T12:36:01.390Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1079,7 +1079,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:18.194Z",
+      "capturedAt": "2026-10-02T12:36:01.490Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1300,7 +1300,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:18.194Z",
+    "lastCheckedAt": "2026-10-02T12:36:01.490Z",
     "lastChangedAt": "2026-10-01T13:16:18.194Z",
     "lastError": null
   },
@@ -1314,7 +1314,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:18.698Z",
+      "capturedAt": "2026-10-02T12:36:01.942Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1417,7 +1417,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:18.698Z",
+    "lastCheckedAt": "2026-10-02T12:36:01.942Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1431,7 +1431,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:18.851Z",
+      "capturedAt": "2026-10-02T12:36:02.102Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1541,7 +1541,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:18.851Z",
+    "lastCheckedAt": "2026-10-02T12:36:02.102Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1555,7 +1555,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-01T13:16:18.979Z",
+      "capturedAt": "2026-10-02T12:36:02.229Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1636,7 +1636,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-01T13:16:18.979Z",
+    "lastCheckedAt": "2026-10-02T12:36:02.229Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

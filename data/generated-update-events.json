@@ -1,5 +1,465 @@
 [
   {
+    "id": "web-fuel-cell-2026-10-07-forvia-hydrogen-storage-4f73e839a1b0",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-07T13:25:10.168Z",
+    "lastSeenAt": "2026-10-07T13:25:10.168Z",
+    "changeSignature": "4f73e839a1b0",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 10.04€ +5.72% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-07-forvia-hydrogen-storage-4f73e839a1b0-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-10-07T13:25:10.168Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 10.04€ +5.72% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-07-forvia-hydrogen-storage-4f73e839a1b0-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-07T13:25:10.168Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 10.04€ +5.72% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 10.04€ +5.72% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "1.62%",
+            "afterValue": "5.72%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 1.62% → 5.72%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-07T13:29:02.582Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied FORVIA page-context excerpts changed from a displayed share price of 8.77€ with +1.62% to 10.04€ with +5.72%. The excerpts also include the page title “Hydrogen storage systems” and matched keywords “hydrogen storage,” “tank,” and “700 bar,” but do not show a capacity disclosure.",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.77€ +1.62% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 10.04€ +5.72% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A numeric token changed from +1.62% to +5.72% between the supplied snapshots. Its relationship to hydrogen-storage capacity or operations is not established by the excerpts.",
+            "beforeExcerpt": "Share price : 8.77€ +1.62%",
+            "afterExcerpt": "Share price : 10.04€ +5.72%",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "This is a low-confidence review lead for a possible context change on a FORVIA hydrogen-storage webpage, not evidence of a capacity change.",
+          "rationale": "The excerpts document only changes in displayed share-price information. They do not provide production capacity, tank quantities, 700-bar specifications, facility changes, or timing. Primary-source verification of the underlying FORVIA page and any relevant disclosure is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions could be relevant if primary-source materials confirm a material hydrogen-storage capacity or technology disclosure. The supplied excerpts alone do not support a direction or score change."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-07T13:25:10.168Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-07-doe-fuel-cells-74fadf48edc8",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 6 added and 6 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-07T13:24:56.139Z",
+    "lastSeenAt": "2026-10-07T13:24:56.139Z",
+    "changeSignature": "74fadf48edc8",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Meeting - October 7, 2026 (Virtual) Oct 8 12:00AM EDT - 12:59PM EDT National Hydrogen and Fuel Cell Day 2026 Oct 6 9:00AM EDT - 5:00PM EDT NEI Nuclear Energy Workforce Summit View all Events About Main Menu About Missio…",
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels AFF…",
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 8 National Hydrogen and Fuel Cell Day 2026 Starts October 8th, 2026 - 12:00 AM ED…",
+        "and hydrogen and fuel cell technologies meetings and events. Oct 8 National Hydrogen and Fuel Cell Day 2026 Starts October 8th, 2026 - 12:00 AM EDT View Event Details for National Hydrogen and Fuel Cell Day 2026 Oct 23 …",
+        "2026 Starts October 8th, 2026 - 12:00 AM EDT View Event Details for National Hydrogen and Fuel Cell Day 2026 Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Event Details for National Bi…"
+      ],
+      "removed": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 26 Agile BioFoundry’s Industry Day Starts October 26th, 2026 - 8:00 AM PDT View E…",
+        ", which brings together legacy efforts under the former Bioenergy Technologies Office and Hydrogen and Fuel Cell Technologies Office, provides funding for bioenergy industry and hydrogen and full cell technologies lab-l…",
+        "d Hydrogen and Fuel Cell Technologies Office, provides funding for bioenergy industry and hydrogen and full cell technologies lab-led consortia. September 8, 2026 2023 Billion-Ton Report 2023 Billion-Ton Report March 14…",
+        "nsortia. September 8, 2026 2023 Billion-Ton Report 2023 Billion-Ton Report March 14, 2024 Hydrogen and Fuel Cell Technologies Multi-Year Program Plan The Multi-Year Program Plan (MYPP), published in May 2024, set forth …"
+      ],
+      "addedCount": 6,
+      "removedCount": 6,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 12 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-07-doe-fuel-cells-74fadf48edc8-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-10-07T13:24:56.139Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 6 added and 6 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Meeting - October 7, 2026 (Virtual) Oct 8 12:00AM EDT - 12:59PM EDT National Hydrogen and Fuel Cell Day 2026 Oct 6 9:00AM EDT - 5:00PM EDT NEI Nuclear Energy Workforce Summit View all Events About Main Menu About Missio…",
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels AFF…",
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 8 National Hydrogen and Fuel Cell Day 2026 Starts October 8th, 2026 - 12:00 AM ED…",
+              "and hydrogen and fuel cell technologies meetings and events. Oct 8 National Hydrogen and Fuel Cell Day 2026 Starts October 8th, 2026 - 12:00 AM EDT View Event Details for National Hydrogen and Fuel Cell Day 2026 Oct 23 …",
+              "2026 Starts October 8th, 2026 - 12:00 AM EDT View Event Details for National Hydrogen and Fuel Cell Day 2026 Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Event Details for National Bi…"
+            ],
+            "removed": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 26 Agile BioFoundry’s Industry Day Starts October 26th, 2026 - 8:00 AM PDT View E…",
+              ", which brings together legacy efforts under the former Bioenergy Technologies Office and Hydrogen and Fuel Cell Technologies Office, provides funding for bioenergy industry and hydrogen and full cell technologies lab-l…",
+              "d Hydrogen and Fuel Cell Technologies Office, provides funding for bioenergy industry and hydrogen and full cell technologies lab-led consortia. September 8, 2026 2023 Billion-Ton Report 2023 Billion-Ton Report March 14…",
+              "nsortia. September 8, 2026 2023 Billion-Ton Report 2023 Billion-Ton Report March 14, 2024 Hydrogen and Fuel Cell Technologies Multi-Year Program Plan The Multi-Year Program Plan (MYPP), published in May 2024, set forth …"
+            ],
+            "addedCount": 6,
+            "removedCount": 6,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-07-doe-fuel-cells-74fadf48edc8-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-07T13:24:56.139Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+            "afterExcerpt": "Meeting - October 7, 2026 (Virtual) Oct 8 12:00AM EDT - 12:59PM EDT National Hydrogen and Fuel Cell Day 2026 Oct 6 9:00AM EDT - 5:00PM EDT NEI Nuclear Energy Workforce Summit View all Events About Main Menu About Missio…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-07T13:29:12.717Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The monitored source context changed between snapshots. The earlier context included a reference to a DOE release of up to $41 million for a lab call related to commercialization of American energy technologies; the later context instead displayed hydrogen and fuel-cell-related events and general navigation text.",
+            "beforeExcerpt": "DOE Releases Up to $41M Lab Call to Accelerate Commercialization of American Energ…",
+            "afterExcerpt": "Meeting - October 7, 2026 (Virtual) ... National Hydrogen and Fuel Cell Day 2026 ... View all Events About Main Menu About Missio…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "keyword_match",
+            "status": "candidate",
+            "statement": "The monitored context was associated with the keywords fuel cell, hydrogen, funding, storage, and infrastructure.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The supplied metadata identifies the source type as government and the evidence level as A, but the excerpts do not provide a complete underlying announcement or policy document.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "The snapshot may indicate a change in the displayed government-source content relevant to hydrogen and fuel-cell technologies, but it does not establish that a policy change occurred.",
+          "rationale": "The supplied material shows a context change and keyword matches, while the current excerpt contains event and navigation text rather than operative policy terms, funding conditions, implementation details, or affected parties. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions could be relevant if primary-source review confirms a substantive policy, funding, storage, or infrastructure change. No score direction or numeric adjustment is proposed from the supplied excerpts."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-07T13:24:56.139Z"
+  },
+  {
     "id": "web-ai-optics-2026-10-01-marvell-optical-dsp-a1ff6fa2d487",
     "sourceType": "ai_scan",
     "status": "pending",

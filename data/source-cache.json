@@ -5,11 +5,11 @@
     "cadence": "daily",
     "url": "https://matthey.com/news",
     "title": "News | Johnson Matthey",
-    "hash": "9d5e28a2d65261ef88b8d4430f8ed8d8c8fb1a16d2d47216dc4bd1de7f0beb6c",
+    "hash": "38ece37f7cff8a351a80b3257046e34dff887c5a57136797329af693257e6fc4",
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:11.477Z",
+      "capturedAt": "2026-10-17T10:44:57.276Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -19,15 +19,15 @@
       ],
       "segments": [
         {
-          "hash": "edd7abbe9ceaeb365b8239ae62bae57b97e798272690838c1e413753fc12ee08",
-          "excerpt": "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+          "hash": "eaa1489d976aca51ff6be6bbb82f1da63f5bec173053fb883ad2b8c7118a29d7",
+          "excerpt": "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
           "matchedKeywords": [
             "fuel cell"
           ]
         },
         {
-          "hash": "4c3e2313349e9cc5fa40cc80da10679be5a2951513541ba8ec2cd221ee326ed2",
-          "excerpt": "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…",
+          "hash": "8a6b883919a6fc4e408e8d6f9cc64ce359be204c58ab52be8d1e4278d6b197cb",
+          "excerpt": "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A…",
           "matchedKeywords": [
             "fuel cell"
           ]
@@ -47,22 +47,8 @@
           ]
         },
         {
-          "hash": "ab8f1c4999769039641103289982dc61ecb3c6b87fb239a991294f27f75a20e1",
-          "excerpt": "atalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enab…",
-          "matchedKeywords": [
-            "hydrogen"
-          ]
-        },
-        {
-          "hash": "442bea8cb1fe72db84df029e4d24d4842beebdab625ed5a09a56bca1dcdc8f9a",
-          "excerpt": "Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals P…",
-          "matchedKeywords": [
-            "hydrogen"
-          ]
-        },
-        {
-          "hash": "198ec8b801dd374807f86ff4af4025eb569a2020bbac8802efada895ae477b83",
-          "excerpt": "mmonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals Petrochemicals Purification for syngas production Purifica…",
+          "hash": "2469263eaac6ba108af32656a10e78cbaa846e049c7328923d9981907b17a5ab",
+          "excerpt": "ecycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optim…",
           "matchedKeywords": [
             "hydrogen"
           ]
@@ -77,13 +63,6 @@
         {
           "hash": "6fea4f875f3484f8cf0d6a5218fdd619b4a626afcb1aff42a6ba145f896bed86",
           "excerpt": "control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Life science technologies Biocatalysis …",
-          "matchedKeywords": [
-            "hydrogen"
-          ]
-        },
-        {
-          "hash": "8553477cf71250226d1edcd6cc99b70c805c9ee5cef8290c2396a6546dfdb933",
-          "excerpt": "neywell Technologies Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals P…",
           "matchedKeywords": [
             "hydrogen"
           ]
@@ -131,22 +110,22 @@
           ]
         },
         {
-          "hash": "e7f011970080ad53c9f378263e41211accf03e2540fcd43d36e62dd00b33658d",
-          "excerpt": "nering with us FIND A PRODUCT Products and markets PGMs and circularity PGM chemicals and catalysts PGM industrial products PGM prices and trading PGM markets PGM refining and recycling Life science technologies Biocata…",
+          "hash": "17f7f98ed32b628d5e4a0debe1d61b760ac32b9a9c7829e9e88e06323c5324a8",
+          "excerpt": "nering with us FIND A PRODUCT Products and markets PGMs and circularity PGM chemicals and catalysts PGM industrial products PGM prices and trading PGM markets PGM refining and recycling Emissions control Data centres Ga…",
           "matchedKeywords": [
             "catalyst"
           ]
         },
         {
-          "hash": "9a613c21b0023766614b23e109dce9feabc79ce9049dce8e9652b18d6cae6d0c",
-          "excerpt": "and trading PGM markets PGM refining and recycling Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid o…",
+          "hash": "4ee74cd683ffae04295f1eec29a3598ecdaff779d2f7d8156c919744855a8b9f",
+          "excerpt": "tions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A PRODUCT Products and markets PGMs and circularity PGMs and…",
           "matchedKeywords": [
             "catalyst"
           ]
         },
         {
-          "hash": "bd4b12f786562a0f82061d6356aecbc222935bfe850369146a18af882aa94455",
-          "excerpt": "e science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser compon…",
+          "hash": "8a9a87d144b421d220e5c5c1978d9018f2b01d9c772c8afaf46fbb20769b3281",
+          "excerpt": "e science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A PRODUCT Products and markets PGMs and circularity PGMs and circularity PGM chemicals and catalysts PGM industria…",
           "matchedKeywords": [
             "catalyst"
           ]
@@ -159,15 +138,15 @@
           ]
         },
         {
-          "hash": "fd06ed963ad41b053b27406eb24d5be5c06fad3c571eae81fa315093111c3ea5",
-          "excerpt": "nts Fuel cell components Life science technologies Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Acquired by Honeywell Technologies Acquired by Honeywell Technolo…",
+          "hash": "3cc983e97f5ce3f58ebb5c8ed16c3fa3d6acf64b0ee2ab2c95aae0adc96a2b97",
+          "excerpt": "nts Fuel cell components Life science technologies Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A PRODUCT Science and innovation Technical capabilities Coll…",
           "matchedKeywords": [
             "catalyst"
           ]
         },
         {
-          "hash": "4cd092d6e948e2485c7155b0fc4d32fc4bab817696ee518acbac745794a8ab2a",
-          "excerpt": "e science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts Acquired by Honeywell Technologies Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemic…",
+          "hash": "0ad0b80c0a5cdca30c7af10b81fcc8f15c6e31f929be33173a864da219b8e726",
+          "excerpt": "e science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A PRODUCT Science and innovation Technical capabilities Collaboration Expert insights Case studies Johnson Matthey…",
           "matchedKeywords": [
             "catalyst"
           ]
@@ -202,8 +181,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:11.477Z",
-    "lastChangedAt": "2026-09-01T11:40:01.656Z",
+    "lastCheckedAt": "2026-10-17T10:44:57.276Z",
+    "lastChangedAt": "2026-10-17T10:44:57.276Z",
     "lastError": null
   },
   "forvia-news": {
@@ -212,11 +191,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "55a64a428dc47df81db4dea93801aed8d4c1da6e21ce2e4ba13299e409525a66",
+    "hash": "519d492c25a67253905f6af9f4af0ac1f1201a3bba7ffd8627f59e218a07455e",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:12.010Z",
+      "capturedAt": "2026-10-17T10:44:57.856Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -240,8 +219,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:12.010Z",
-    "lastChangedAt": "2026-10-16T11:25:12.010Z",
+    "lastCheckedAt": "2026-10-17T10:44:57.856Z",
+    "lastChangedAt": "2026-10-17T10:44:57.856Z",
     "lastError": null
   },
   "garrett-news": {
@@ -254,7 +233,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:13.085Z",
+      "capturedAt": "2026-10-17T10:44:59.262Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -418,7 +397,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:13.085Z",
+    "lastCheckedAt": "2026-10-17T10:44:59.262Z",
     "lastChangedAt": "2026-09-25T11:51:38.820Z",
     "lastError": null
   },
@@ -819,7 +798,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:13.653Z",
+      "capturedAt": "2026-10-17T10:44:59.786Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1040,7 +1019,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:13.653Z",
+    "lastCheckedAt": "2026-10-17T10:44:59.786Z",
     "lastChangedAt": "2026-10-16T11:25:13.653Z",
     "lastError": null
   },
@@ -1054,7 +1033,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:13.744Z",
+      "capturedAt": "2026-10-17T10:44:59.973Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1072,7 +1051,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:13.744Z",
+    "lastCheckedAt": "2026-10-17T10:44:59.973Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1082,11 +1061,11 @@
     "cadence": "daily",
     "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
     "title": "Marvell Optical DSPs | Powering the Future of AI Infrastructure - Marvell",
-    "hash": "f8c1ebc330648590d4ecbfb61ff095aa7482183bf620bf09ff77f67eff296a5a",
+    "hash": "fcf2f25d316ee42b39e49ef60cf4a3ce0dec3016c747a94dbbafcff2522b5883",
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:13.832Z",
+      "capturedAt": "2026-10-17T10:45:00.074Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1307,8 +1286,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:13.832Z",
-    "lastChangedAt": "2026-10-01T13:16:18.194Z",
+    "lastCheckedAt": "2026-10-17T10:45:00.074Z",
+    "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
   "coherent-datacenter": {
@@ -1321,7 +1300,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:14.322Z",
+      "capturedAt": "2026-10-17T10:45:00.507Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1424,7 +1403,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:14.322Z",
+    "lastCheckedAt": "2026-10-17T10:45:00.507Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1438,7 +1417,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:14.767Z",
+      "capturedAt": "2026-10-17T10:45:00.797Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1548,7 +1527,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:14.767Z",
+    "lastCheckedAt": "2026-10-17T10:45:00.797Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1562,7 +1541,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-16T11:25:15.224Z",
+      "capturedAt": "2026-10-17T10:45:00.960Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1643,7 +1622,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-16T11:25:15.224Z",
+    "lastCheckedAt": "2026-10-17T10:45:00.960Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

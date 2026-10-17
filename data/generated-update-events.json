@@ -1,5 +1,236 @@
 [
   {
+    "id": "web-fuel-cell-2026-10-17-jm-news-c465e12946b2",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "jm",
+    "nodeId": "catalyst",
+    "impactType": "technology_change",
+    "summary": "Johnson Matthey news changed. The scanner isolated 8 added and 11 removed keyword-focused context window(s) on \"News | Johnson Matthey\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://matthey.com/news",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "jm-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-17T10:44:57.276Z",
+    "lastSeenAt": "2026-10-17T10:44:57.276Z",
+    "changeSignature": "c465e12946b2",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+        "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A…",
+        "ecycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optim…",
+        "nering with us FIND A PRODUCT Products and markets PGMs and circularity PGM chemicals and catalysts PGM industrial products PGM prices and trading PGM markets PGM refining and recycling Emissions control Data centres Ga…",
+        "tions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A PRODUCT Products and markets PGMs and circularity PGMs and…"
+      ],
+      "removed": [
+        "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+        "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…",
+        "atalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enab…",
+        "Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals P…",
+        "mmonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals Petrochemicals Purification for syngas production Purifica…"
+      ],
+      "addedCount": 8,
+      "removedCount": 11,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "catalyst"
+      ],
+      "affectedTarget": "company:jm",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 19 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.jm; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-17-jm-news-c465e12946b2-evidence-1",
+          "sourceId": "jm-news",
+          "sourceType": "company_official",
+          "url": "https://matthey.com/news",
+          "pageTitle": "News | Johnson Matthey",
+          "observedAt": "2026-10-17T10:44:57.276Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "catalyst"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 8 added and 11 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+              "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A…",
+              "ecycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optim…",
+              "nering with us FIND A PRODUCT Products and markets PGMs and circularity PGM chemicals and catalysts PGM industrial products PGM prices and trading PGM markets PGM refining and recycling Emissions control Data centres Ga…",
+              "tions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A PRODUCT Products and markets PGMs and circularity PGMs and…"
+            ],
+            "removed": [
+              "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+              "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…",
+              "atalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enab…",
+              "Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals P…",
+              "mmonia Biorenewables CCS-enabled hydrogen Chemical intermediate technologies Conventional hydrogen Edible oils FCC Additives Formaldehyde Methanol Oleochemicals Petrochemicals Purification for syngas production Purifica…"
+            ],
+            "addedCount": 8,
+            "removedCount": 11,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-17-jm-news-c465e12946b2-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:jm",
+        "statement": "Potential technology change affecting company:jm; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.jm.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-17T10:44:57.276Z",
+        "target": "company:jm",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+            "afterExcerpt": "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "catalyst"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:jm; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-17T10:45:08.712Z",
+        "target": "company:jm",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied source metadata reports a change in keyword-focused context associated with JM, including references to fuel cells, hydrogen, catalysts, electrolyser components, and related technologies.",
+            "beforeExcerpt": "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…",
+            "afterExcerpt": "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "source_classification",
+            "status": "candidate",
+            "statement": "The event is labeled as a company-official source with evidence level A in the supplied metadata.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "keyword_match",
+            "status": "candidate",
+            "statement": "The supplied metadata identifies fuel cell, hydrogen, and catalyst as matched keywords.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "This is a candidate for a technology-related disclosure change, but the excerpts do not establish what specifically changed in JM's technology, products, capabilities, or commercial position.",
+          "rationale": "The before and after snippets are truncated and differ in surrounding navigation or contextual text. No reliable, directly comparable primary-source statement, quantitative detail, customer information, timing, or causal business implication is provided. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant if primary-source material confirms a substantive change in fuel-cell, hydrogen, catalyst, or electrolyser technology. No score direction or numeric change is proposed based on the supplied excerpts alone."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-17T10:44:57.276Z"
+  },
+  {
     "id": "web-fuel-cell-2026-10-14-doe-fuel-cell-parts-7951cd094730",
     "sourceType": "ai_scan",
     "status": "pending",

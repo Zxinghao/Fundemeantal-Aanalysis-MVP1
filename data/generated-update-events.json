@@ -1,5 +1,865 @@
 [
   {
+    "id": "web-fuel-cell-2026-10-21-forvia-hydrogen-storage-40678ebd2c8a",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-21T11:50:07.949Z",
+    "lastSeenAt": "2026-10-21T11:50:07.949Z",
+    "changeSignature": "40678ebd2c8a",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.95€ +2.4% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-21-forvia-hydrogen-storage-40678ebd2c8a-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-10-21T11:50:07.949Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.95€ +2.4% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-21-forvia-hydrogen-storage-40678ebd2c8a-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:07.949Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.95€ +2.4% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.95€ +2.4% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "beforeValue": "2.4%",
+            "afterValue": "1.1%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 2.4% → 1.1%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:27.966Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied snapshots of a FORVIA hydrogen-storage webpage differ in the displayed share-price text: the earlier snapshot shows “8.95€ +2.4%,” while the later snapshot shows “9.00€ -1.1%.”",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.95€ +2.4% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A displayed percentage changed from 2.4% in the earlier snapshot to 1.1% in the later snapshot; the excerpts do not establish that these values represent capacity, production, or another supply-chain metric.",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.95€ +2.4% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "keyword_context",
+            "status": "candidate",
+            "statement": "The source metadata associates the page with “hydrogen storage,” “tank,” and “700 bar,” but the supplied excerpts contain no disclosure about capacity, output, orders, customers, or production changes.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "This is a review lead rather than evidence of a FORVIA capacity change. The observed change appears to concern displayed share-price information, and its relationship to hydrogen-storage operations cannot be established from the supplied excerpts.",
+          "rationale": "The event is labeled as a capacity change, but the excerpts only show differing share-price values and generic page text. Primary-source verification of the underlying FORVIA disclosure is required before drawing any supply-chain conclusion.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "not_assessed",
+          "candidateDimensions": [],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "No supply-chain score dimension should be advanced from these excerpts alone because they do not substantiate a capacity change or its implications for supply-chain importance, scarcity, pricing power, switching cost, validation barriers, or market underappreciation."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-21T11:50:07.949Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-21-jm-fuel-cell-tech-4cb07eaa2af5",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "jm",
+    "nodeId": "catalyst",
+    "impactType": "technology_change",
+    "summary": "Johnson Matthey fuel cells technology changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Fuel cells technology | Johnson Matthey\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "jm-fuel-cell-tech"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-21T11:50:02.678Z",
+    "lastSeenAt": "2026-10-21T11:50:02.678Z",
+    "changeSignature": "4cb07eaa2af5",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+        "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A…"
+      ],
+      "removed": [
+        "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+        "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "catalyst coated membrane",
+        "CCM",
+        "membrane electrode assembly",
+        "MEA"
+      ],
+      "affectedTarget": "company:jm",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.jm; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-21-jm-fuel-cell-tech-4cb07eaa2af5-evidence-1",
+          "sourceId": "jm-fuel-cell-tech",
+          "sourceType": "company_official",
+          "url": "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology",
+          "pageTitle": "Fuel cells technology | Johnson Matthey",
+          "observedAt": "2026-10-21T11:50:02.678Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "catalyst coated membrane",
+            "CCM",
+            "membrane electrode assembly",
+            "MEA"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+              "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screening / optimisation Pharma and agrochem catalysts FIND A…"
+            ],
+            "removed": [
+              "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+              "turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewables CCS-enabled hydrogen Chemical intermediate technolog…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-21-jm-fuel-cell-tech-4cb07eaa2af5-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:jm",
+        "statement": "Potential technology change affecting company:jm; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.jm.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:02.678Z",
+        "target": "company:jm",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+            "afterExcerpt": "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+            "matchedKeywords": [
+              "fuel cell",
+              "catalyst coated membrane",
+              "CCM",
+              "membrane electrode assembly",
+              "MEA"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:jm; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:32.882Z",
+        "target": "company:jm",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "A keyword-focused source context for company:jm changed between prior and current snapshots. The prior context included “Acquired by Honeywell Technologies,” “Ammonia,” and “Biorenewables,” while the current context includes “Life science technologies,” “Biocatalysis,” and “Catalyst screening / optimisation.” The supplied metadata also identifies fuel-cell-related keywords, including catalyst-coated membrane, CCM, membrane electrode assembly, and MEA.",
+            "beforeExcerpt": "agrochem catalysts Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Acquired by Honeywell Technologies Ammonia Biorenewable…",
+            "afterExcerpt": "ining and recycling Emissions control Data centres Gas turbines Mining Mobile Solid oxide fuel cells Hydrogen solutions Electrolyser components Fuel cell components Life science technologies Biocatalysis Catalyst screen…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The snapshot change may indicate a change in the source page’s displayed or indexed technology context, but it does not by itself establish a change in JM’s fuel-cell technology, product offering, customer relationships, or competitive position.",
+          "rationale": "The evidence consists of truncated before-and-after context strings rather than a direct disclosure explaining what changed. The currentRelevantContext is empty, and no reliable comparable technical, commercial, or quantitative detail is supplied. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant for review because the event is categorized as a potential technology change involving fuel-cell components, but the supplied excerpts do not establish any effect or direction. No score change is proposed."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-21T11:50:02.678Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-21-hexagon-purus-ir-ae7604cce34c",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "hexagon",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "Hexagon Purus regulated news (Euronext) changed. The scanner isolated 2 added and 1 removed keyword-focused context window(s) on \"Company press releases - Euronext exchange Live quotes\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://live.euronext.com/en/listview/company-press-release/251919",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "hexagon-purus-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-21T11:50:01.429Z",
+    "lastSeenAt": "2026-10-21T11:50:01.429Z",
+    "changeSignature": "ae7604cce34c",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+        "Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…"
+      ],
+      "removed": [
+        "Visibility All Today This week This month Custom date range From To Displaying 1 - 5 of 5 results Released Company Title Industry Topic 13 Oct 2026 09:02 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Invitation to the prese…"
+      ],
+      "addedCount": 2,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "results",
+        "order"
+      ],
+      "affectedTarget": "company:hexagon",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 3 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.hexagon; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-21-hexagon-purus-ir-ae7604cce34c-evidence-1",
+          "sourceId": "hexagon-purus-ir",
+          "sourceType": "exchange_filing",
+          "url": "https://live.euronext.com/en/listview/company-press-release/251919",
+          "pageTitle": "Company press releases - Euronext exchange Live quotes",
+          "observedAt": "2026-10-21T11:50:01.429Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "results",
+            "order"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+              "Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…"
+            ],
+            "removed": [
+              "Visibility All Today This week This month Custom date range From To Displaying 1 - 5 of 5 results Released Company Title Industry Topic 13 Oct 2026 09:02 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Invitation to the prese…"
+            ],
+            "addedCount": 2,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-21-hexagon-purus-ir-ae7604cce34c-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:hexagon",
+        "statement": "Potential capacity change affecting company:hexagon; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.hexagon.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:01.429Z",
+        "target": "company:hexagon",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 5 of 5 results Released Company Title Industry Topic 13 Oct 2026 09:02 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Invitation to the prese…",
+            "afterExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+            "matchedKeywords": [
+              "results",
+              "order"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 5 of 5 results Released Company Title Industry Topic 13 Oct 2026 09:02 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Invitation to the prese…",
+            "afterExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+            "beforeValue": "1",
+            "afterValue": "6",
+            "unit": null,
+            "matchedKeywords": [
+              "results",
+              "order"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 1 → 6.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:hexagon; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:37.683Z",
+        "target": "company:hexagon",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied source-context snapshot changed from a listing showing 1–5 results, including an invitation to a presentation dated 13 October 2026, to a listing showing 1–6 results, including “Results for the third quarter 2026” dated 20 October 2026.",
+            "beforeExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 5 of 5 results Released Company Title Industry Topic 13 Oct 2026 09:02 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Invitation to the prese…",
+            "afterExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A displayed result count changed from 5 total results to 6 total results; the excerpts do not establish that this represents a capacity change or an operational metric.",
+            "beforeExcerpt": "Displaying 1 - 5 of 5 results",
+            "afterExcerpt": "Displaying 1 - 6 of 6 results",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "The evidence is a candidate lead for reviewing a potentially relevant Hexagon Purus disclosure, but it does not substantiate a capacity change.",
+          "rationale": "The excerpts show only a change in the number of search results and the appearance of a quarterly-results title. They provide no capacity figures, order details, production information, or causal business implications. Primary-source verification of the 20 October 2026 exchange filing is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may warrant review if the primary filing confirms a material capacity-related disclosure. No score direction or numeric change is proposed from the supplied excerpts."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-21T11:50:01.429Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-21-doe-fuel-cells-cc4c8e52c15d",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-21T11:50:00.115Z",
+    "lastSeenAt": "2026-10-21T11:50:00.115Z",
+    "changeSignature": "cc4c8e52c15d",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…"
+      ],
+      "removed": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Hydrogen Hydrogen Hydrogen National Hyd…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-21-doe-fuel-cells-cc4c8e52c15d-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-10-21T11:50:00.115Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…"
+            ],
+            "removed": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Hydrogen Hydrogen Hydrogen National Hyd…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-21-doe-fuel-cells-cc4c8e52c15d-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:00.115Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Hydrogen Hydrogen Hydrogen National Hyd…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-21T11:50:41.501Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied metadata reports a change in a watched source context related to hydrogen and fuel-cell technologies, funding, storage, and infrastructure keywords.",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Hydrogen Hydrogen Hydrogen National Hyd…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "The context change may indicate a change in policy-related source content relevant to hydrogen or fuel-cell technologies, but the excerpts do not establish what changed substantively.",
+          "rationale": "Only truncated before-and-after navigation or context text is supplied. No primary policy document, effective date, funding amount, affected entity, or specific rule change is provided. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may warrant review because the event is tagged as a government policy-change candidate involving hydrogen, fuel cells, funding, storage, and infrastructure. No score direction or numeric change is proposed without primary-source verification."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-21T11:50:00.115Z"
+  },
+  {
     "id": "web-fuel-cell-2026-10-17-jm-news-c465e12946b2",
     "sourceType": "ai_scan",
     "status": "pending",

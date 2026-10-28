@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:31.638Z",
+      "capturedAt": "2026-10-28T12:55:16.126Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:31.638Z",
+    "lastCheckedAt": "2026-10-28T12:55:16.126Z",
     "lastChangedAt": "2026-10-17T10:44:57.276Z",
     "lastError": null
   },
@@ -191,11 +191,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "41dcd7ee13b50add8aed592f94ecfc6cd247160437df6caeb4bec4f122019414",
+    "hash": "a528d994a67f6c78487aaf7bf09a74a8119e7c0c4381a3d62310a991a3519fd9",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:32.178Z",
+      "capturedAt": "2026-10-28T12:55:17.097Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -219,8 +219,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:32.178Z",
-    "lastChangedAt": "2026-10-27T12:12:32.178Z",
+    "lastCheckedAt": "2026-10-28T12:55:17.097Z",
+    "lastChangedAt": "2026-10-28T12:55:17.097Z",
     "lastError": null
   },
   "garrett-news": {
@@ -233,7 +233,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:33.871Z",
+      "capturedAt": "2026-10-28T12:55:18.029Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -397,7 +397,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:33.871Z",
+    "lastCheckedAt": "2026-10-28T12:55:18.029Z",
     "lastChangedAt": "2026-09-25T11:51:38.820Z",
     "lastError": null
   },
@@ -407,11 +407,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
     "title": "Alternative Fuels and Feedstocks Office | Department of Energy",
-    "hash": "f972b7e1a0d8b81a34e4f1bc97622c970e30bcb2215cd1fe07959d35d06b0758",
+    "hash": "40cf9b78c5f372280eff2d674e7fb5a40a20c79e80e90e071717856730ef58fc",
     "baselineAt": "2026-09-09T07:03:51.954Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:00.115Z",
+      "capturedAt": "2026-10-28T12:55:18.326Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -526,8 +526,8 @@
           ]
         },
         {
-          "hash": "6407ac9bf23651ed46bce7a7b78140519fc96b2e8f96fd50d9b510f2d563c8d9",
-          "excerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Even…",
+          "hash": "d910e481fba27b2f0d90f592073be074e927a0e6744bfb5b1c4573cc65aee23c",
+          "excerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…",
           "matchedKeywords": [
             "fuel cell"
           ]
@@ -547,8 +547,8 @@
           ]
         },
         {
-          "hash": "00242ab32b5f5062d1e0267804d309a4863475a0416b2116c7c210c7835eddc9",
-          "excerpt": "; Reduction of imported fertilizer by providing cost-effective domestic alternatives from hydrogen and biomass; and Leveraging growing use of artificial intelligence to spur innovation, advance technology readiness leve…",
+          "hash": "903b9c18f2a6cd6a134b643106420d36e33b8942db75a31972127f2e318941fc",
+          "excerpt": "; Reduction of imported fertilizer by providing cost-effective domestic alternatives from hydrogen and biomass; and Leveraging growing use of super intelligence to spur innovation, advance technology readiness levels, a…",
           "matchedKeywords": [
             "hydrogen"
           ]
@@ -632,8 +632,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:00.115Z",
-    "lastChangedAt": "2026-10-21T11:50:00.115Z",
+    "lastCheckedAt": "2026-10-28T12:55:18.326Z",
+    "lastChangedAt": "2026-10-28T12:55:18.326Z",
     "lastError": null
   },
   "umicore-ir": {
@@ -642,11 +642,11 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/investors/",
     "title": "Investor relations | Umicore",
-    "hash": "6ae7eb808bf5713d5cd187c850fd338d8999adba7c04c3af57f3ce9841e7563a",
+    "hash": "4b8d544ad015b33d5927fbd398fd88789a59d13418453f135bd5f0eae02c91c0",
     "baselineAt": "2026-09-09T07:03:52.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:00.230Z",
+      "capturedAt": "2026-10-28T12:55:18.451Z",
       "keywords": [
         "fuel cell",
         "catalyst",
@@ -677,8 +677,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:00.230Z",
-    "lastChangedAt": "2026-10-21T11:50:00.230Z",
+    "lastCheckedAt": "2026-10-28T12:55:18.451Z",
+    "lastChangedAt": "2026-10-28T12:55:18.451Z",
     "lastError": null
   },
   "sgl-ir": {
@@ -687,11 +687,11 @@
     "cadence": "weekly",
     "url": "https://www.sglcarbon.com/en/investor-relations/",
     "title": "SGL Investor Relations – shares, publications &amp; events | SGL Carbon",
-    "hash": "41c911cff7416161364bee3337b8e365e41a7422cf103ad771fb913c226ecbe7",
+    "hash": "6b6570b411405be6c5b2508c014c9a9397bb63e7ab3959558c5e0fb2bb36f25f",
     "baselineAt": "2026-09-09T07:03:53.205Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:01.358Z",
+      "capturedAt": "2026-10-28T12:55:19.641Z",
       "keywords": [
         "fuel cell",
         "GDL",
@@ -705,11 +705,18 @@
           "matchedKeywords": [
             "carbon fiber"
           ]
+        },
+        {
+          "hash": "0ecb41c5d8ff93e8537a9b25a0882179815ffac559b9ddb9be640e7a61c30b13",
+          "excerpt": "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…",
+          "matchedKeywords": [
+            "carbon fiber"
+          ]
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:01.358Z",
-    "lastChangedAt": "2026-10-14T11:53:15.371Z",
+    "lastCheckedAt": "2026-10-28T12:55:19.641Z",
+    "lastChangedAt": "2026-10-28T12:55:19.641Z",
     "lastError": null
   },
   "hexagon-purus-ir": {
@@ -718,11 +725,11 @@
     "cadence": "weekly",
     "url": "https://live.euronext.com/en/listview/company-press-release/251919",
     "title": "Company press releases - Euronext exchange Live quotes",
-    "hash": "f303758db76773a14a0e623e926e3c0473ec23aab5a091b6c429244566c4f8d8",
+    "hash": "31dad8a7c10ebff05a36db0215f0b6552250c1b92c0f1c1208052a0ac70a16a2",
     "baselineAt": "2026-09-09T07:08:07.547Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:01.429Z",
+      "capturedAt": "2026-10-28T12:55:24.819Z",
       "keywords": [
         "results",
         "order",
@@ -741,15 +748,15 @@
           ]
         },
         {
-          "hash": "9e5693fe2c8d88df70d6cff13acd1baa2f8d0256c5ac51cff7f4e818187cffcb",
-          "excerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+          "hash": "7ae05fed1db81f1591c057e0b983d77e123560dfa8d4a1e545a30394f30ba2fc",
+          "excerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 7 of 7 results Released Company Title Industry Topic 21 Oct 2026 21:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: CEO transition 50204050…",
           "matchedKeywords": [
             "results"
           ]
         },
         {
-          "hash": "586c5639e31e7b6347105e980fe9fe2b3288c05103e85f6266600aa9f55afa18",
-          "excerpt": "Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…",
+          "hash": "46ca8d39bb24f44323e7df61d01ecb3a9cc5c8cfd215a2048eddd778b0fdf52d",
+          "excerpt": "Specialty Inside information 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…",
           "matchedKeywords": [
             "results"
           ]
@@ -791,8 +798,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:01.429Z",
-    "lastChangedAt": "2026-10-21T11:50:01.429Z",
+    "lastCheckedAt": "2026-10-28T12:55:24.819Z",
+    "lastChangedAt": "2026-10-28T12:55:24.819Z",
     "lastError": null
   },
   "nvidia-spectrum-x-photonics": {
@@ -805,7 +812,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:34.447Z",
+      "capturedAt": "2026-10-28T12:55:33.878Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1026,7 +1033,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:34.447Z",
+    "lastCheckedAt": "2026-10-28T12:55:33.878Z",
     "lastChangedAt": "2026-10-16T11:25:13.653Z",
     "lastError": null
   },
@@ -1040,7 +1047,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:34.701Z",
+      "capturedAt": "2026-10-28T12:55:34.049Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1058,7 +1065,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:34.701Z",
+    "lastCheckedAt": "2026-10-28T12:55:34.049Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1072,7 +1079,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:34.801Z",
+      "capturedAt": "2026-10-28T12:55:34.153Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1293,7 +1300,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:34.801Z",
+    "lastCheckedAt": "2026-10-28T12:55:34.153Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1307,7 +1314,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:35.120Z",
+      "capturedAt": "2026-10-28T12:55:34.331Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1410,7 +1417,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:35.120Z",
+    "lastCheckedAt": "2026-10-28T12:55:34.331Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1424,7 +1431,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:35.344Z",
+      "capturedAt": "2026-10-28T12:55:34.712Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1534,7 +1541,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:35.344Z",
+    "lastCheckedAt": "2026-10-28T12:55:34.712Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1548,7 +1555,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-27T12:12:35.454Z",
+      "capturedAt": "2026-10-28T12:55:34.781Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1629,7 +1636,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-27T12:12:35.454Z",
+    "lastCheckedAt": "2026-10-28T12:55:34.781Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },
@@ -1643,7 +1650,7 @@
     "baselineAt": "2026-09-09T07:03:57.992Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:18.920Z",
+      "capturedAt": "2026-10-28T12:55:36.922Z",
       "keywords": [
         "Bailly",
         "51.2",
@@ -1864,7 +1871,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:18.920Z",
+    "lastCheckedAt": "2026-10-28T12:55:36.922Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -1874,11 +1881,11 @@
     "cadence": "weekly",
     "url": "https://www.marvell.com/products/pam-dsp.html",
     "title": "PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure",
-    "hash": "3788dfe08e14a5056a68519b4b3efbbe063a0fd6a23108f51a9521091c90714d",
+    "hash": "da9ec0e1052053e17c6b336a0e87c1f002f4218024c31d85ebebb18186811ee0",
     "baselineAt": "2026-09-09T07:03:58.124Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:19.012Z",
+      "capturedAt": "2026-10-28T12:55:37.229Z",
       "keywords": [
         "PAM4",
         "DSP",
@@ -1902,8 +1909,8 @@
           ]
         },
         {
-          "hash": "c041c5448507446b3f47411a5600bc1f59d93fef5270cb83f67436f38a94b5b8",
-          "excerpt": "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical the need for high-bandwidth optical interconne…",
+          "hash": "58e2b942e9ed44be9d69394ac9db0f159ed579937fc5c78709a659f5240a21e6",
+          "excerpt": "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical need for high-bandwidth optical interconnects …",
           "matchedKeywords": [
             "PAM4"
           ]
@@ -2099,8 +2106,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:19.012Z",
-    "lastChangedAt": "2026-10-21T11:50:19.012Z",
+    "lastCheckedAt": "2026-10-28T12:55:37.229Z",
+    "lastChangedAt": "2026-10-28T12:55:37.229Z",
     "lastError": null
   },
   "eoptolink-800g": {
@@ -2113,7 +2120,7 @@
     "baselineAt": "2026-09-09T07:03:58.260Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:19.106Z",
+      "capturedAt": "2026-10-28T12:55:37.263Z",
       "keywords": [
         "800G",
         "optical transceiver",
@@ -2333,7 +2340,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:19.106Z",
+    "lastCheckedAt": "2026-10-28T12:55:37.263Z",
     "lastChangedAt": "2026-09-16T11:35:40.428Z",
     "lastError": null
   },
@@ -2347,7 +2354,7 @@
     "baselineAt": "2026-09-09T06:04:16.623Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:02.678Z",
+      "capturedAt": "2026-10-28T12:55:25.448Z",
       "keywords": [
         "fuel cell",
         "catalyst coated membrane",
@@ -2519,7 +2526,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:02.678Z",
+    "lastCheckedAt": "2026-10-28T12:55:25.448Z",
     "lastChangedAt": "2026-10-21T11:50:02.678Z",
     "lastError": null
   },
@@ -2533,7 +2540,7 @@
     "baselineAt": "2026-09-09T06:04:17.480Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:03.392Z",
+      "capturedAt": "2026-10-28T12:55:25.927Z",
       "keywords": [
         "fuel cell catalyst",
         "PEM",
@@ -2699,7 +2706,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:03.392Z",
+    "lastCheckedAt": "2026-10-28T12:55:25.927Z",
     "lastChangedAt": "2026-09-30T12:35:36.507Z",
     "lastError": null
   },
@@ -2709,11 +2716,11 @@
     "cadence": "weekly",
     "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet/",
     "title": "SIGRACET® Fuel Cell Components | SGL Carbon",
-    "hash": "f497b24fa6a409c210a2feab22dd484093a47f507169907b09ecf19a1c2c62a7",
+    "hash": "df8725f45f99ff8a42fff9ff189f4a97baaf5a6ac0fc69ba3be0d9d1f1c617d0",
     "baselineAt": "2026-09-09T06:26:04.221Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:04.147Z",
+      "capturedAt": "2026-10-28T12:55:26.801Z",
       "keywords": [
         "SIGRACET",
         "gas diffusion layer",
@@ -2933,8 +2940,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:04.147Z",
-    "lastChangedAt": "2026-10-21T11:50:04.147Z",
+    "lastCheckedAt": "2026-10-28T12:55:26.801Z",
+    "lastChangedAt": "2026-10-28T12:55:26.801Z",
     "lastError": null
   },
   "forvia-hydrogen-storage": {
@@ -2943,11 +2950,11 @@
     "cadence": "weekly",
     "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
     "title": "Hydrogen storage systems | FORVIA",
-    "hash": "d0dd1bcbc38f3b3b887a7e377be91387def9ee7ff15d2d73289974b65100cc43",
+    "hash": "cfc2ee72f7c03f7f99d5df32a42df2f35b1787f6e260b776d7f07124a3f88790",
     "baselineAt": "2026-09-09T06:04:19.454Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:07.949Z",
+      "capturedAt": "2026-10-28T12:55:30.780Z",
       "keywords": [
         "hydrogen storage",
         "Type IV",
@@ -2958,8 +2965,8 @@
       ],
       "segments": [
         {
-          "hash": "195967eae2344e12d73b0b2a10607437dc7f96dccdba82df0a4aa78633f60d26",
-          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+          "hash": "98fc34200b0cf79e57f1927fac39c8d61949b703aeac605f11b78f23f19cbda7",
+          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
           "matchedKeywords": [
             "hydrogen storage"
           ]
@@ -3127,8 +3134,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:07.949Z",
-    "lastChangedAt": "2026-10-21T11:50:07.949Z",
+    "lastCheckedAt": "2026-10-28T12:55:30.780Z",
+    "lastChangedAt": "2026-10-28T12:55:30.780Z",
     "lastError": null
   },
   "hexagon-purus": {
@@ -3141,7 +3148,7 @@
     "baselineAt": "2026-09-09T06:04:20.529Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:08.418Z",
+      "capturedAt": "2026-10-28T12:55:31.498Z",
       "keywords": [
         "hydrogen storage",
         "Type 4",
@@ -3159,7 +3166,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:08.418Z",
+    "lastCheckedAt": "2026-10-28T12:55:31.498Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3173,7 +3180,7 @@
     "baselineAt": "2026-09-09T06:04:22.984Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:10.094Z",
+      "capturedAt": "2026-10-28T12:55:33.197Z",
       "keywords": [
         "fuel cell compressor",
         "electric compressor",
@@ -3394,7 +3401,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:10.094Z",
+    "lastCheckedAt": "2026-10-28T12:55:33.197Z",
     "lastChangedAt": "2026-09-30T12:35:44.138Z",
     "lastError": null
   },
@@ -3404,11 +3411,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
     "title": "Parts of a Fuel Cell | Department of Energy",
-    "hash": "e7f4e0f23cee1d54e7939fb3cec35f6535f2d32b8f5252fd9ed78dbc2be8eb17",
+    "hash": "cb5fbbc3112b5e85e484add41e0802a0b6b5bdc3e8b934cc03f258d4b60ebcdc",
     "baselineAt": "2026-09-09T06:04:26.236Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:12.466Z",
+      "capturedAt": "2026-10-28T12:55:33.799Z",
       "keywords": [
         "membrane electrode assembly",
         "MEA",
@@ -3629,8 +3636,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:12.466Z",
-    "lastChangedAt": "2026-10-21T11:50:12.466Z",
+    "lastCheckedAt": "2026-10-28T12:55:33.799Z",
+    "lastChangedAt": "2026-10-28T12:55:33.799Z",
     "lastError": null
   },
   "doe-hydrogen-storage": {
@@ -3639,11 +3646,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
     "title": "Physical Hydrogen Storage | Department of Energy",
-    "hash": "cfdba931b8a13a5a74ed2fd0772076489d87fa479aab853f90ff1fdf92ff9d8f",
+    "hash": "bf36dc7ba7f2770f067131864b4eaaafa7edc812e438b99bd24cc4cd9b280495",
     "baselineAt": "2026-09-09T06:04:26.527Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-21T11:50:13.000Z",
+      "capturedAt": "2026-10-28T12:55:33.842Z",
       "keywords": [
         "350 bar",
         "700 bar",
@@ -3829,8 +3836,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-21T11:50:13.000Z",
-    "lastChangedAt": "2026-10-21T11:50:13.000Z",
+    "lastCheckedAt": "2026-10-28T12:55:33.842Z",
+    "lastChangedAt": "2026-10-28T12:55:33.842Z",
     "lastError": null
   }
 }

@@ -1,5 +1,1103 @@
 [
   {
+    "id": "web-ai-optics-2026-10-28-marvell-pam4-dsp-77dfbbc5a2cc",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "ai-optics",
+    "companyId": "marvell",
+    "nodeId": "dsp",
+    "impactType": "technology_change",
+    "summary": "Marvell PAM4 DSP products changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.marvell.com/products/pam-dsp.html",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "marvell-pam4-dsp"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-28T12:55:37.229Z",
+    "lastSeenAt": "2026-10-28T12:55:37.229Z",
+    "changeSignature": "77dfbbc5a2cc",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical need for high-bandwidth optical interconnects …"
+      ],
+      "removed": [
+        "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical the need for high-bandwidth optical interconne…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "PAM4",
+        "DSP",
+        "800G",
+        "1.6T",
+        "AI networks"
+      ],
+      "affectedTarget": "company:marvell",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.marvell; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-ai-optics-2026-10-28-marvell-pam4-dsp-77dfbbc5a2cc-evidence-1",
+          "sourceId": "marvell-pam4-dsp",
+          "sourceType": "company_official",
+          "url": "https://www.marvell.com/products/pam-dsp.html",
+          "pageTitle": "PAM4 Optical DSPs | Enabling high-bandwidth optical interconnects for AI infrastructure",
+          "observedAt": "2026-10-28T12:55:37.229Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "PAM4",
+            "DSP",
+            "800G",
+            "1.6T",
+            "AI networks"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical need for high-bandwidth optical interconnects …"
+            ],
+            "removed": [
+              "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical the need for high-bandwidth optical interconne…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-ai-optics-2026-10-28-marvell-pam4-dsp-77dfbbc5a2cc-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:marvell",
+        "statement": "Potential technology change affecting company:marvell; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.marvell.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:37.229Z",
+        "target": "company:marvell",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical the need for high-bandwidth optical interconne…",
+            "afterExcerpt": "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical need for high-bandwidth optical interconnects …",
+            "matchedKeywords": [
+              "PAM4",
+              "DSP",
+              "800G",
+              "1.6T",
+              "AI networks"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:marvell; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:44.821Z",
+        "target": "company:marvell",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied record identifies a change between prior and current keyword-focused source contexts concerning Marvell’s PAM4 optical DSP portfolio. The matched keywords include PAM4, DSP, 800G, 1.6T, and AI networks.",
+            "beforeExcerpt": "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical the need for high-bandwidth optical interconne…",
+            "afterExcerpt": "PAM DSP Cloud-optimized PAM4 DSPs enable high-bandwidth for AI applications The Marvell® PAM4 optical DSP portfolio, including Spica™ and Nova™ DSPs, addresses the critical need for high-bandwidth optical interconnects …",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The event is labeled as a technology-change event for Marvell, with company_official as the source type and evidence level A in the supplied metadata.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The record may indicate an updated or corrected disclosure concerning Marvell’s PAM4 optical DSP portfolio and its stated relevance to high-bandwidth AI-network interconnects, but it does not establish a substantive technology change.",
+          "rationale": "The visible difference between the excerpts appears to include wording and truncation changes, including removal of the duplicated word “the.” The supplied material does not provide a reliable full before/after comparison, technical specifications, customer evidence, deployment evidence, or other basis for inferring a change in product capability or supply-chain importance. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant for later review if primary-source materials substantiate differentiated PAM4 DSP technology or design-in dependence. The supplied excerpts do not support a score direction or any numeric change."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-28T12:55:37.229Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-28-forvia-hydrogen-storage-303ffe3d7824",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-28T12:55:30.780Z",
+    "lastSeenAt": "2026-10-28T12:55:30.780Z",
+    "changeSignature": "303ffe3d7824",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-28-forvia-hydrogen-storage-303ffe3d7824-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-10-28T12:55:30.780Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-28-forvia-hydrogen-storage-303ffe3d7824-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:30.780Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "1.1%",
+            "afterValue": "2.98%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 1.1% → 2.98%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:50.894Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied FORVIA page excerpts show a change in the displayed share-price text from “9.00€ -1.1%” to “8.70€ +2.98%.”",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 9.00€ -1.1% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A percentage display changed from “-1.1%” in the earlier excerpt to “+2.98%” in the later excerpt. The excerpts do not establish that this percentage relates to hydrogen-storage capacity or another operating metric.",
+            "beforeExcerpt": "Share price : 9.00€ -1.1%",
+            "afterExcerpt": "Share price : 8.70€ +2.98%",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "keyword_context",
+            "status": "candidate",
+            "statement": "The source metadata associates the page with the keywords “hydrogen storage,” “tank,” and “700 bar,” but the supplied excerpts do not contain a capacity disclosure, production volume, or other operating change.",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "The evidence supports a page-context and share-price display change, but does not substantiate a hydrogen-storage capacity change.",
+          "rationale": "The only changed numeric information is embedded in the displayed share-price text. No comparable operating metric, date, production figure, facility information, or explicit capacity statement is present. Primary-source verification of the underlying FORVIA page and any relevant hydrogen-storage disclosure is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions could be reviewed if a primary source confirms a material hydrogen-storage capacity or supply change. The supplied excerpts alone do not support a score direction or adjustment."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-28T12:55:30.780Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-28-hexagon-purus-ir-c4737101a605",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "hexagon",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "Hexagon Purus regulated news (Euronext) changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Company press releases - Euronext exchange Live quotes\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://live.euronext.com/en/listview/company-press-release/251919",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "hexagon-purus-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-28T12:55:24.819Z",
+    "lastSeenAt": "2026-10-28T12:55:24.819Z",
+    "changeSignature": "c4737101a605",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Visibility All Today This week This month Custom date range From To Displaying 1 - 7 of 7 results Released Company Title Industry Topic 21 Oct 2026 21:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: CEO transition 50204050…",
+        "Specialty Inside information 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…"
+      ],
+      "removed": [
+        "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+        "Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "results",
+        "order"
+      ],
+      "affectedTarget": "company:hexagon",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.hexagon; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-28-hexagon-purus-ir-c4737101a605-evidence-1",
+          "sourceId": "hexagon-purus-ir",
+          "sourceType": "exchange_filing",
+          "url": "https://live.euronext.com/en/listview/company-press-release/251919",
+          "pageTitle": "Company press releases - Euronext exchange Live quotes",
+          "observedAt": "2026-10-28T12:55:24.819Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "results",
+            "order"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Visibility All Today This week This month Custom date range From To Displaying 1 - 7 of 7 results Released Company Title Industry Topic 21 Oct 2026 21:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: CEO transition 50204050…",
+              "Specialty Inside information 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…"
+            ],
+            "removed": [
+              "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+              "Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third quarter 2026 50204050 Machinery: Specialty Additional regulated information required to be disclosed under t…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-28-hexagon-purus-ir-c4737101a605-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:hexagon",
+        "statement": "Potential capacity change affecting company:hexagon; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.hexagon.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:24.819Z",
+        "target": "company:hexagon",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+            "afterExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 7 of 7 results Released Company Title Industry Topic 21 Oct 2026 21:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: CEO transition 50204050…",
+            "matchedKeywords": [
+              "results",
+              "order"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+            "afterExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 7 of 7 results Released Company Title Industry Topic 21 Oct 2026 21:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: CEO transition 50204050…",
+            "beforeValue": "1",
+            "afterValue": "7",
+            "unit": null,
+            "matchedKeywords": [
+              "results",
+              "order"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 1 → 7.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:hexagon; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:55.931Z",
+        "target": "company:hexagon",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied source metadata indicates that the monitored Hexagon Purus results context changed from 6 displayed results to 7, with a newly listed item titled “Hexagon Purus ASA: CEO transition.”",
+            "beforeExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 6 of 6 results Released Company Title Industry Topic 20 Oct 2026 07:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: Results for the third q…",
+            "afterExcerpt": "Visibility All Today This week This month Custom date range From To Displaying 1 - 7 of 7 results Released Company Title Industry Topic 21 Oct 2026 21:00 CEST HEXAGON PURUS ASA Hexagon Purus ASA: CEO transition 50204050…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "The excerpts contain a displayed-result count change from 6 to 7. The supplied metadata identifies this as a possible numeric disclosure change, but does not establish that it represents production capacity, an order, or another comparable business metric.",
+            "beforeExcerpt": "Displaying 1 - 6 of 6 results",
+            "afterExcerpt": "Displaying 1 - 7 of 7 results",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "This is a candidate for a change in monitored disclosure context, not confirmed evidence of a capacity change.",
+          "rationale": "The source is identified as an exchange filing with evidence level A, but the supplied excerpts show only search-result context and a CEO-transition listing. They do not provide the underlying filing text or any capacity, order, production, or supply-chain figures. Primary-source verification of the relevant filing is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant if the underlying filing confirms a material capacity or supply-related development. No score direction or numeric change is proposed based on the supplied excerpts alone."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-28T12:55:24.819Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-28-sgl-ir-5a0434dd9dd1",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "sgl",
+    "nodeId": "gdl",
+    "impactType": "technology_change",
+    "summary": "SGL Carbon investor relations changed. The scanner isolated 1 added and 0 removed keyword-focused context window(s) on \"SGL Investor Relations – shares, publications &amp; events | SGL Carbon\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.sglcarbon.com/en/investor-relations/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "sgl-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-28T12:55:19.641Z",
+    "lastSeenAt": "2026-10-28T12:55:19.641Z",
+    "changeSignature": "5a0434dd9dd1",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…"
+      ],
+      "removed": [],
+      "addedCount": 1,
+      "removedCount": 0,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "carbon fiber"
+      ],
+      "affectedTarget": "company:sgl",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 1 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.sgl; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-28-sgl-ir-5a0434dd9dd1-evidence-1",
+          "sourceId": "sgl-ir",
+          "sourceType": "company_official",
+          "url": "https://www.sglcarbon.com/en/investor-relations/",
+          "pageTitle": "SGL Investor Relations – shares, publications &amp; events | SGL Carbon",
+          "observedAt": "2026-10-28T12:55:19.641Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "carbon fiber"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 0 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…"
+            ],
+            "removed": [],
+            "addedCount": 1,
+            "removedCount": 0,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-28-sgl-ir-5a0434dd9dd1-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:sgl",
+        "statement": "Potential technology change affecting company:sgl; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.sgl.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:19.641Z",
+        "target": "company:sgl",
+        "observedFacts": [],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:sgl; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:56:00.617Z",
+        "target": "company:sgl",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The supplied record identifies the source type as company_official, evidence level A, and the target as company:sgl.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "keyword_match",
+            "status": "candidate",
+            "statement": "The record lists “carbon fiber” as a matched keyword.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "context_change",
+            "status": "candidate",
+            "statement": "The added context includes an SGL Carbon ad hoc notification dated 2026/10/13 concerning the sale of its former Carbon Fiber facility in Moses Lake, USA, and a news item dated 2026 concerning capacity expansion at its St. Marys site.",
+            "beforeExcerpt": null,
+            "afterExcerpt": "Ad hoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA); SGL Carbon celebrates capacity expansion at its St. Marys site",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The supplied metadata indicates potentially relevant changes involving SGL Carbon’s carbon-fiber facilities, but it does not establish the nature, scale, timing, or business implications of any technology change.",
+          "rationale": "Only context titles and event metadata are provided; the underlying primary-source disclosures and a reliable before/after comparison were not supplied. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may warrant review if the underlying disclosures demonstrate a material change in carbon-fiber production capabilities or customer qualification requirements. No direction or score change is proposed without primary-source verification."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-28T12:55:19.641Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-10-28-doe-fuel-cells-252b764721e2",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-28T12:55:18.326Z",
+    "lastSeenAt": "2026-10-28T12:55:18.326Z",
+    "changeSignature": "252b764721e2",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…",
+        "; Reduction of imported fertilizer by providing cost-effective domestic alternatives from hydrogen and biomass; and Leveraging growing use of super intelligence to spur innovation, advance technology readiness levels, a…"
+      ],
+      "removed": [
+        "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Even…",
+        "; Reduction of imported fertilizer by providing cost-effective domestic alternatives from hydrogen and biomass; and Leveraging growing use of artificial intelligence to spur innovation, advance technology readiness leve…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-28-doe-fuel-cells-252b764721e2-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-10-28T12:55:18.326Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…",
+              "; Reduction of imported fertilizer by providing cost-effective domestic alternatives from hydrogen and biomass; and Leveraging growing use of super intelligence to spur innovation, advance technology readiness levels, a…"
+            ],
+            "removed": [
+              "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Even…",
+              "; Reduction of imported fertilizer by providing cost-effective domestic alternatives from hydrogen and biomass; and Leveraging growing use of artificial intelligence to spur innovation, advance technology readiness leve…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-28-doe-fuel-cells-252b764721e2-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:55:18.326Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Even…",
+            "afterExcerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Even…",
+            "afterExcerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…",
+            "beforeValue": "23",
+            "afterValue": "19",
+            "unit": null,
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 23 → 19.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-28T12:56:07.013Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied source metadata identifies a government-source event concerning fuel cells, hydrogen, funding, storage, and infrastructure. The watched context changed from an excerpt referencing National Bioenergy Day 2026 beginning October 23, 2026, to an excerpt referencing an AFFO 2027 Peer Review Meeting beginning April 19, 2027.",
+            "beforeExcerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Oct 23 National Bioenergy Day 2026 Starts October 23rd, 2026 - 12:00 AM EDT View Even…",
+            "afterExcerpt": "ind more information about upcoming AFFO and past bioenergy technologies and hydrogen and fuel cell technologies meetings and events. Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "The excerpts contain different day numbers, 23 and 19, but the supplied text does not establish that these numbers refer to the same item or have the same business meaning.",
+            "beforeExcerpt": "… Oct 23 National Bioenergy Day 2026 Starts October 23th, 2026 - 12:00 AM EDT View Even…",
+            "afterExcerpt": "… Apr 19 Save the Date: AFFO 2027 Peer Review Meeting Starts April 19th, 2027 - 9:00 AM…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "This is a potential change in government-source web content related to fuel-cell and hydrogen topics, but the excerpts alone do not demonstrate a substantive policy change or a business impact.",
+          "rationale": "The event metadata labels the item as a policy change and lists relevant keywords, while the visible excerpts primarily show different event-calendar entries. The apparent 23-to-19 change may reflect different dates rather than a changed policy or numeric disclosure. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity",
+            "pricingPower",
+            "switchingCost",
+            "validationBarrier",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "The event may warrant review across these dimensions if primary-source materials establish a substantive change affecting fuel-cell, hydrogen, storage, infrastructure, or funding conditions. No score direction or numeric score is proposed from the supplied excerpts."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-28T12:55:18.326Z"
+  },
+  {
     "id": "web-fuel-cell-2026-10-21-forvia-hydrogen-storage-40678ebd2c8a",
     "sourceType": "ai_scan",
     "status": "pending",

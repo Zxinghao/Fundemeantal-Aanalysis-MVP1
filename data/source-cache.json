@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:16.126Z",
+      "capturedAt": "2026-10-29T13:01:41.810Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:16.126Z",
+    "lastCheckedAt": "2026-10-29T13:01:41.810Z",
     "lastChangedAt": "2026-10-17T10:44:57.276Z",
     "lastError": null
   },
@@ -191,11 +191,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "a528d994a67f6c78487aaf7bf09a74a8119e7c0c4381a3d62310a991a3519fd9",
+    "hash": "af22d1c566281153a50424cb537ac2cc596c622c990d0f696b034afcffd362cf",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:17.097Z",
+      "capturedAt": "2026-10-29T13:01:42.399Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -219,8 +219,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:17.097Z",
-    "lastChangedAt": "2026-10-28T12:55:17.097Z",
+    "lastCheckedAt": "2026-10-29T13:01:42.399Z",
+    "lastChangedAt": "2026-10-29T13:01:42.399Z",
     "lastError": null
   },
   "garrett-news": {
@@ -233,7 +233,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:18.029Z",
+      "capturedAt": "2026-10-29T13:01:44.038Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -397,7 +397,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:18.029Z",
+    "lastCheckedAt": "2026-10-29T13:01:44.038Z",
     "lastChangedAt": "2026-09-25T11:51:38.820Z",
     "lastError": null
   },
@@ -812,7 +812,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:33.878Z",
+      "capturedAt": "2026-10-29T13:01:44.698Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1033,7 +1033,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:33.878Z",
+    "lastCheckedAt": "2026-10-29T13:01:44.698Z",
     "lastChangedAt": "2026-10-16T11:25:13.653Z",
     "lastError": null
   },
@@ -1047,7 +1047,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:34.049Z",
+      "capturedAt": "2026-10-29T13:01:44.975Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1065,7 +1065,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:34.049Z",
+    "lastCheckedAt": "2026-10-29T13:01:44.975Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1079,7 +1079,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:34.153Z",
+      "capturedAt": "2026-10-29T13:01:45.085Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1300,7 +1300,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:34.153Z",
+    "lastCheckedAt": "2026-10-29T13:01:45.085Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1314,7 +1314,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:34.331Z",
+      "capturedAt": "2026-10-29T13:01:45.358Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1417,7 +1417,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:34.331Z",
+    "lastCheckedAt": "2026-10-29T13:01:45.358Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1431,7 +1431,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:34.712Z",
+      "capturedAt": "2026-10-29T13:01:45.616Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1541,7 +1541,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:34.712Z",
+    "lastCheckedAt": "2026-10-29T13:01:45.616Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1555,7 +1555,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-28T12:55:34.781Z",
+      "capturedAt": "2026-10-29T13:01:47.253Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1636,7 +1636,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-28T12:55:34.781Z",
+    "lastCheckedAt": "2026-10-29T13:01:47.253Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

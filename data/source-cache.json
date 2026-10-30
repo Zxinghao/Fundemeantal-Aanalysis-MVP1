@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:41.810Z",
+      "capturedAt": "2026-10-30T12:56:38.941Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:41.810Z",
+    "lastCheckedAt": "2026-10-30T12:56:38.941Z",
     "lastChangedAt": "2026-10-17T10:44:57.276Z",
     "lastError": null
   },
@@ -191,11 +191,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "af22d1c566281153a50424cb537ac2cc596c622c990d0f696b034afcffd362cf",
+    "hash": "00ba3011672c81ed3da9d8f64990bf97cebecc715364391fd497f0513afd0756",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:42.399Z",
+      "capturedAt": "2026-10-30T12:56:39.472Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -219,8 +219,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:42.399Z",
-    "lastChangedAt": "2026-10-29T13:01:42.399Z",
+    "lastCheckedAt": "2026-10-30T12:56:39.472Z",
+    "lastChangedAt": "2026-10-30T12:56:39.472Z",
     "lastError": null
   },
   "garrett-news": {
@@ -229,11 +229,11 @@
     "cadence": "daily",
     "url": "https://www.garrettmotion.com/news/",
     "title": "Newsroom Garrett Motion - Garrett Motion",
-    "hash": "c5fb0a2374d37fe98772376f784f1746c2963674ae1492a0fe74e39bed455a44",
+    "hash": "711e629f862abbab078834dffb6daca8a131fcef195e95da81c3333a94509e4e",
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:44.038Z",
+      "capturedAt": "2026-10-30T12:56:41.163Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -284,36 +284,22 @@
           ]
         },
         {
-          "hash": "18af995e948ea70ca4257c396d1bad74b154653aca50d91ac99391f8e8a9cf61",
-          "excerpt": "nd power-generation markets. READ MORE Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions With the growth of BESS, liquid cooling is critical for ensuring hig…",
+          "hash": "67c41aa277d89e436f655a85dc864a06e061ee1825dbe571addc7bce607fa8f6",
+          "excerpt": "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…",
           "matchedKeywords": [
             "compressor"
           ]
         },
         {
-          "hash": "8e823d3b6301512c9935156da17505b87f85b10f039fa6e148a63631046be3aa",
-          "excerpt": "ency infrastructure. READ MORE Garrett Motion Showcases Breakthrough Oil-Free Centrifugal Compressor Portfolio at China Refrigeration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal comp…",
+          "hash": "50c5425d8ef06cad0c01f2bf77214fa0d4fc34bdcd7e09b80b57e39690383b0b",
+          "excerpt": "neered for industrial HVAC and cooling applications, Garrett&#8217;s oil-free centrifugal compressor combines high-speed centrifugal compression and oil-free air foil bearing technology to deliver high efficiency and re…",
           "matchedKeywords": [
             "compressor"
           ]
         },
         {
-          "hash": "2b0e190cf1fe30d2fdb6595245d4d2c141a342fa1d1ea75ce1bffa586dc581e2",
-          "excerpt": "geration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal compressors covering cooling demands from 7 to 500 tons (25 to 1,750 kWc), enabling scalable, high-efficiency cooling architectur…",
-          "matchedKeywords": [
-            "compressor"
-          ]
-        },
-        {
-          "hash": "30282933d28a5f416ef667a90e1535ee6ad66bc683d76f1d2c0daa4e2a5304f2",
-          "excerpt": "outperforming traditional scroll and screw designs. READ MORE Garrett Motion’s E-Cooling Compressor is Redefining Thermal Management Efficiency &amp; Power for Electric Buses and Trucks in China Truck and Bus HVAC integ…",
-          "matchedKeywords": [
-            "compressor"
-          ]
-        },
-        {
-          "hash": "55b19afa4e484b878b7fc3ac5532a55a087a6b9e9374eaeebf5071a643a9aa3e",
-          "excerpt": "awarded Garrett volume production of its breakthrough oil-free, foil bearing centrifugal compressor, with start of production in 2027. READ MORE Garrett Motion Introduces Garrett Original MAXLIFE: A New Aftermarket Turb…",
+          "hash": "933e2a5620694bd8342f542f61db13a151cfe6fcb89127f9a15984b48fc3c9d6",
+          "excerpt": "liability while reducing maintenance requirements. Operating at more than 90,000 RPM, the compressor supports the adoption of next-generation low-GWP refrigerants. Its compact design is more than 50% smaller and 80% lig…",
           "matchedKeywords": [
             "compressor"
           ]
@@ -347,15 +333,15 @@
           ]
         },
         {
-          "hash": "5e4f87ff4c42fb7fe58b5b8dce8ab869f8fb2f39863bc3b59d6c56e452d4c85a",
-          "excerpt": "arrett Motion enter a multiyear strategic partnership to advance next generation oil‑free compressor technology for industrial air compression systems across key verticals,&#8230; April 27, 2026 Zero Emissions Garrett M…",
+          "hash": "8f9565b2fd081b2eeeea17ac030248a3ffae88e065d93270da8aa205d6a287be",
+          "excerpt": "Technology October 29, 2026 Industrial Applications Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Enabling Multistack’s next-generation CRAC-DX (direct expansion c…",
           "matchedKeywords": [
             "compressor"
           ]
         },
         {
-          "hash": "60688a446db16fdd0c98712400b54d585e523e8ce8f6db33a431a0eeb81cf429",
-          "excerpt": ",&#8230; April 27, 2026 Zero Emissions Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions &nbsp; Powering TONFY’s next generation battery energy storage (BESS…",
+          "hash": "a3b304470d24857219bf66f15ebf00bdfb5af7a6df9277df97d60a977f975cf9",
+          "excerpt": "arrett Motion enter a multiyear strategic partnership to advance next generation oil‑free compressor technology for industrial air compression systems across key verticals,&#8230; See all advancing tech Performance &#03…",
           "matchedKeywords": [
             "compressor"
           ]
@@ -397,8 +383,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:44.038Z",
-    "lastChangedAt": "2026-09-25T11:51:38.820Z",
+    "lastCheckedAt": "2026-10-30T12:56:41.163Z",
+    "lastChangedAt": "2026-10-30T12:56:41.163Z",
     "lastError": null
   },
   "doe-fuel-cells": {
@@ -808,11 +794,11 @@
     "cadence": "daily",
     "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
     "title": "NVIDIA Corporation - NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of GPUs",
-    "hash": "6e2d640c5a3ecf7f5239f5d54938e820c62c10bcfa0d3e68525400461fa4ee56",
+    "hash": "9b6e70f48c4e8cca560efaa60ee8d3aa310f4be5dc2bcffae02053408698eb82",
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:44.698Z",
+      "capturedAt": "2026-10-30T12:56:41.568Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1033,8 +1019,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:44.698Z",
-    "lastChangedAt": "2026-10-16T11:25:13.653Z",
+    "lastCheckedAt": "2026-10-30T12:56:41.568Z",
+    "lastChangedAt": "2026-10-30T12:56:41.568Z",
     "lastError": null
   },
   "broadcom-cpo": {
@@ -1047,7 +1033,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:44.975Z",
+      "capturedAt": "2026-10-30T12:56:41.827Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1065,7 +1051,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:44.975Z",
+    "lastCheckedAt": "2026-10-30T12:56:41.827Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1079,7 +1065,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:45.085Z",
+      "capturedAt": "2026-10-30T12:56:41.972Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1300,7 +1286,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:45.085Z",
+    "lastCheckedAt": "2026-10-30T12:56:41.972Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1314,7 +1300,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:45.358Z",
+      "capturedAt": "2026-10-30T12:56:43.113Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1417,7 +1403,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:45.358Z",
+    "lastCheckedAt": "2026-10-30T12:56:43.113Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1431,7 +1417,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:45.616Z",
+      "capturedAt": "2026-10-30T12:56:43.486Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1541,7 +1527,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:45.616Z",
+    "lastCheckedAt": "2026-10-30T12:56:43.486Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1555,7 +1541,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-29T13:01:47.253Z",
+      "capturedAt": "2026-10-30T12:56:43.653Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1636,7 +1622,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-29T13:01:47.253Z",
+    "lastCheckedAt": "2026-10-30T12:56:43.653Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

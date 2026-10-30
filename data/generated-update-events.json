@@ -1,5 +1,249 @@
 [
   {
+    "id": "web-fuel-cell-2026-10-30-garrett-news-201fae1894b4",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "garrett",
+    "nodeId": "compressor",
+    "impactType": "technology_change",
+    "summary": "Garrett Motion news changed. The scanner isolated 5 added and 7 removed keyword-focused context window(s) on \"Newsroom Garrett Motion - Garrett Motion\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.garrettmotion.com/news/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "garrett-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-10-30T12:56:41.163Z",
+    "lastSeenAt": "2026-10-30T12:56:41.163Z",
+    "changeSignature": "201fae1894b4",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…",
+        "neered for industrial HVAC and cooling applications, Garrett&#8217;s oil-free centrifugal compressor combines high-speed centrifugal compression and oil-free air foil bearing technology to deliver high efficiency and re…",
+        "liability while reducing maintenance requirements. Operating at more than 90,000 RPM, the compressor supports the adoption of next-generation low-GWP refrigerants. Its compact design is more than 50% smaller and 80% lig…",
+        "Technology October 29, 2026 Industrial Applications Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Enabling Multistack’s next-generation CRAC-DX (direct expansion c…",
+        "arrett Motion enter a multiyear strategic partnership to advance next generation oil‑free compressor technology for industrial air compression systems across key verticals,&#8230; See all advancing tech Performance &#03…"
+      ],
+      "removed": [
+        "nd power-generation markets. READ MORE Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions With the growth of BESS, liquid cooling is critical for ensuring hig…",
+        "ency infrastructure. READ MORE Garrett Motion Showcases Breakthrough Oil-Free Centrifugal Compressor Portfolio at China Refrigeration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal comp…",
+        "geration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal compressors covering cooling demands from 7 to 500 tons (25 to 1,750 kWc), enabling scalable, high-efficiency cooling architectur…",
+        "outperforming traditional scroll and screw designs. READ MORE Garrett Motion’s E-Cooling Compressor is Redefining Thermal Management Efficiency &amp; Power for Electric Buses and Trucks in China Truck and Bus HVAC integ…",
+        "awarded Garrett volume production of its breakthrough oil-free, foil bearing centrifugal compressor, with start of production in 2027. READ MORE Garrett Motion Introduces Garrett Original MAXLIFE: A New Aftermarket Turb…"
+      ],
+      "addedCount": 5,
+      "removedCount": 7,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "compressor",
+        "hydrogen",
+        "electric compressor"
+      ],
+      "affectedTarget": "company:garrett",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 12 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.garrett; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-10-30-garrett-news-201fae1894b4-evidence-1",
+          "sourceId": "garrett-news",
+          "sourceType": "company_official",
+          "url": "https://www.garrettmotion.com/news/",
+          "pageTitle": "Newsroom Garrett Motion - Garrett Motion",
+          "observedAt": "2026-10-30T12:56:41.163Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "compressor",
+            "hydrogen",
+            "electric compressor"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 5 added and 7 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…",
+              "neered for industrial HVAC and cooling applications, Garrett&#8217;s oil-free centrifugal compressor combines high-speed centrifugal compression and oil-free air foil bearing technology to deliver high efficiency and re…",
+              "liability while reducing maintenance requirements. Operating at more than 90,000 RPM, the compressor supports the adoption of next-generation low-GWP refrigerants. Its compact design is more than 50% smaller and 80% lig…",
+              "Technology October 29, 2026 Industrial Applications Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Enabling Multistack’s next-generation CRAC-DX (direct expansion c…",
+              "arrett Motion enter a multiyear strategic partnership to advance next generation oil‑free compressor technology for industrial air compression systems across key verticals,&#8230; See all advancing tech Performance &#03…"
+            ],
+            "removed": [
+              "nd power-generation markets. READ MORE Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions With the growth of BESS, liquid cooling is critical for ensuring hig…",
+              "ency infrastructure. READ MORE Garrett Motion Showcases Breakthrough Oil-Free Centrifugal Compressor Portfolio at China Refrigeration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal comp…",
+              "geration Expo 2026 Garrett is launching a comprehensive portfolio of oil-free centrifugal compressors covering cooling demands from 7 to 500 tons (25 to 1,750 kWc), enabling scalable, high-efficiency cooling architectur…",
+              "outperforming traditional scroll and screw designs. READ MORE Garrett Motion’s E-Cooling Compressor is Redefining Thermal Management Efficiency &amp; Power for Electric Buses and Trucks in China Truck and Bus HVAC integ…",
+              "awarded Garrett volume production of its breakthrough oil-free, foil bearing centrifugal compressor, with start of production in 2027. READ MORE Garrett Motion Introduces Garrett Original MAXLIFE: A New Aftermarket Turb…"
+            ],
+            "addedCount": 5,
+            "removedCount": 7,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-10-30-garrett-news-201fae1894b4-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:garrett",
+        "statement": "Potential technology change affecting company:garrett; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.garrett.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-30T12:56:41.163Z",
+        "target": "company:garrett",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "nd power-generation markets. READ MORE Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions With the growth of BESS, liquid cooling is critical for ensuring hig…",
+            "afterExcerpt": "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…",
+            "matchedKeywords": [
+              "fuel cell",
+              "compressor",
+              "hydrogen",
+              "electric compressor"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:garrett; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-10-30T12:56:54.979Z",
+        "target": "company:garrett",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The supplied event identifies Garrett Motion as the target company, classifies the event as a potential technology change, and labels the source type as company official with evidence level A.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "disclosed_product_application",
+            "status": "candidate",
+            "statement": "The current excerpt describes Garrett’s oil-free centrifugal compressor technology as being used or advanced for industrial HVAC, cooling, and data-center cooling applications, including Multistack’s next-generation CRAC-DX system.",
+            "beforeExcerpt": null,
+            "afterExcerpt": "Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications … Engineered for industrial HVAC and cooling applications, Garrett’s oil-free centrifugal compressor combines high-speed centrifugal compression and oil-free air foil bearing technology …",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "technical_characteristics",
+            "status": "candidate",
+            "statement": "The current excerpt states that the compressor operates at more than 90,000 RPM and is described as more than 50% smaller and 80% lighter, although the comparison basis is not provided in the supplied text.",
+            "beforeExcerpt": null,
+            "afterExcerpt": "Operating at more than 90,000 RPM … Its compact design is more than 50% smaller and 80% lig…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-4",
+            "type": "context_change",
+            "status": "candidate",
+            "statement": "The supplied metadata indicates that the watched context changed from excerpts concerning liquid-cooling solutions and oil-free centrifugal compressor portfolios to an excerpt focused on data-center cooling applications.",
+            "beforeExcerpt": "nd power-generation markets. READ MORE Garrett Motion’s Breakthrough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions …",
+            "afterExcerpt": "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications …",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The material is a candidate technology-disclosure change involving Garrett’s oil-free centrifugal compressor technology and its stated use in data-center cooling. The excerpt may warrant review of whether the application, product scope, or technical claims represent a meaningful change relative to the prior context.",
+          "rationale": "The supplied current excerpt contains a specific application area and technical characteristics, while the prior excerpt references broader liquid-cooling solutions. However, the excerpts are truncated, their publication relationship is unclear, and no primary-page comparison or independent corroboration is supplied. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "If verified, the disclosure could be relevant for reviewing Garrett’s role in specialized cooling hardware and the potential technical or qualification considerations associated with oil-free, high-speed compressor technology. The supplied material does not establish customer dependence, market position, switching costs, or any score direction."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-10-30T12:56:41.163Z"
+  },
+  {
     "id": "web-ai-optics-2026-10-28-marvell-pam4-dsp-77dfbbc5a2cc",
     "sourceType": "ai_scan",
     "status": "pending",

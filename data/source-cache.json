@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:28.615Z",
+      "capturedAt": "2026-11-01T13:25:19.492Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:28.615Z",
+    "lastCheckedAt": "2026-11-01T13:25:19.492Z",
     "lastChangedAt": "2026-10-17T10:44:57.276Z",
     "lastError": null
   },
@@ -195,7 +195,7 @@
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:29.704Z",
+      "capturedAt": "2026-11-01T13:25:19.940Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -219,7 +219,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:29.704Z",
+    "lastCheckedAt": "2026-11-01T13:25:19.940Z",
     "lastChangedAt": "2026-10-31T12:30:29.704Z",
     "lastError": null
   },
@@ -233,7 +233,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:31.304Z",
+      "capturedAt": "2026-11-01T13:25:20.944Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -383,7 +383,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:31.304Z",
+    "lastCheckedAt": "2026-11-01T13:25:20.944Z",
     "lastChangedAt": "2026-10-30T12:56:41.163Z",
     "lastError": null
   },
@@ -798,7 +798,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:31.794Z",
+      "capturedAt": "2026-11-01T13:25:21.451Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1019,7 +1019,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:31.794Z",
+    "lastCheckedAt": "2026-11-01T13:25:21.451Z",
     "lastChangedAt": "2026-10-30T12:56:41.568Z",
     "lastError": null
   },
@@ -1033,7 +1033,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:32.088Z",
+      "capturedAt": "2026-11-01T13:25:21.564Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1051,7 +1051,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:32.088Z",
+    "lastCheckedAt": "2026-11-01T13:25:21.564Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1065,7 +1065,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:32.272Z",
+      "capturedAt": "2026-11-01T13:25:21.657Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1286,7 +1286,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:32.272Z",
+    "lastCheckedAt": "2026-11-01T13:25:21.657Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1300,7 +1300,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:32.399Z",
+      "capturedAt": "2026-11-01T13:25:21.827Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1403,7 +1403,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:32.399Z",
+    "lastCheckedAt": "2026-11-01T13:25:21.827Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1417,7 +1417,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:32.600Z",
+      "capturedAt": "2026-11-01T13:25:22.203Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1527,7 +1527,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:32.600Z",
+    "lastCheckedAt": "2026-11-01T13:25:22.203Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1541,7 +1541,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-10-31T12:30:32.723Z",
+      "capturedAt": "2026-11-01T13:25:22.285Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1622,7 +1622,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-10-31T12:30:32.723Z",
+    "lastCheckedAt": "2026-11-01T13:25:22.285Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:55.604Z",
+      "capturedAt": "2026-11-03T14:14:49.094Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:55.604Z",
+    "lastCheckedAt": "2026-11-03T14:14:49.094Z",
     "lastChangedAt": "2026-10-17T10:44:57.276Z",
     "lastError": null
   },
@@ -191,11 +191,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "8ba9e71d68ea849815ff2a7e57c70d26330b511de80e6f6f027666dc6d47039a",
+    "hash": "9522ca107d77ede8cdfd88602b9b3b1b502d8f88e19ae173b847a37f8db22605",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:56.000Z",
+      "capturedAt": "2026-11-03T14:14:49.594Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -211,16 +211,16 @@
           ]
         },
         {
-          "hash": "11c8e65d07c6b27dacf5ce84ec293dd174ae986cd1c9c6619410f974171066f7",
-          "excerpt": "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…",
+          "hash": "cd767b2c69faecc1ee5c5b155ae884a73c15d339b413040b7d1c5b0f30054f7d",
+          "excerpt": "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow More …",
           "matchedKeywords": [
             "commercial vehicle"
           ]
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:56.000Z",
-    "lastChangedAt": "2026-11-02T15:53:56.000Z",
+    "lastCheckedAt": "2026-11-03T14:14:49.594Z",
+    "lastChangedAt": "2026-11-03T14:14:49.594Z",
     "lastError": null
   },
   "garrett-news": {
@@ -233,7 +233,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:56.955Z",
+      "capturedAt": "2026-11-03T14:14:50.925Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -383,7 +383,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:56.955Z",
+    "lastCheckedAt": "2026-11-03T14:14:50.925Z",
     "lastChangedAt": "2026-10-30T12:56:41.163Z",
     "lastError": null
   },
@@ -798,7 +798,7 @@
     "baselineAt": "2026-09-08T22:06:33.750Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:57.018Z",
+      "capturedAt": "2026-11-03T14:14:51.427Z",
       "keywords": [
         "Spectrum-X",
         "Quantum-X",
@@ -1019,7 +1019,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:57.018Z",
+    "lastCheckedAt": "2026-11-03T14:14:51.427Z",
     "lastChangedAt": "2026-10-30T12:56:41.568Z",
     "lastError": null
   },
@@ -1033,7 +1033,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:57.149Z",
+      "capturedAt": "2026-11-03T14:14:51.602Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1051,7 +1051,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:57.149Z",
+    "lastCheckedAt": "2026-11-03T14:14:51.602Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1065,7 +1065,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:57.244Z",
+      "capturedAt": "2026-11-03T14:14:52.329Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1286,7 +1286,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:57.244Z",
+    "lastCheckedAt": "2026-11-03T14:14:52.329Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1300,7 +1300,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:57.355Z",
+      "capturedAt": "2026-11-03T14:14:52.678Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1403,7 +1403,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:57.355Z",
+    "lastCheckedAt": "2026-11-03T14:14:52.678Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1417,7 +1417,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:57.684Z",
+      "capturedAt": "2026-11-03T14:14:53.114Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1527,7 +1527,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:57.684Z",
+    "lastCheckedAt": "2026-11-03T14:14:53.114Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1541,7 +1541,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-02T15:53:57.720Z",
+      "capturedAt": "2026-11-03T14:14:53.237Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1622,7 +1622,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-02T15:53:57.720Z",
+    "lastCheckedAt": "2026-11-03T14:14:53.237Z",
     "lastChangedAt": "2026-06-08T08:07:24.831Z",
     "lastError": null
   },

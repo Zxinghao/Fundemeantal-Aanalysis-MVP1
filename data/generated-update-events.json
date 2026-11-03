@@ -1,5 +1,208 @@
 [
   {
+    "id": "web-fuel-cell-2026-11-03-forvia-news-f2b17dbd29e7",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA news changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Press | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/newsroom",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-03T14:14:49.594Z",
+    "lastSeenAt": "2026-11-03T14:14:49.594Z",
+    "changeSignature": "f2b17dbd29e7",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow More …"
+      ],
+      "removed": [
+        "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen",
+        "commercial vehicle"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-03-forvia-news-f2b17dbd29e7-evidence-1",
+          "sourceId": "forvia-news",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/newsroom",
+          "pageTitle": "Press | FORVIA",
+          "observedAt": "2026-11-03T14:14:49.594Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen",
+            "commercial vehicle"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow More …"
+            ],
+            "removed": [
+              "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-03-forvia-news-f2b17dbd29e7-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-03T14:14:49.594Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…",
+            "afterExcerpt": "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow More …",
+            "matchedKeywords": [
+              "hydrogen",
+              "commercial vehicle"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-03T14:15:02.199Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The keyword-focused source context for FORVIA changed between the previous and current snapshots. The matched keywords were “hydrogen” and “commercial vehicle.”",
+            "beforeExcerpt": "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow Corpo…",
+            "afterExcerpt": "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment Finance Press Release 31th July 2026 H1 2026 RESULTS - Margin Expansion and Strong Net Cash Flow More …",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The event is attributed to a company-official source and classified as a potential capacity-change event, but the supplied excerpts do not provide a reliable comparable capacity figure or an explicit capacity-change statement.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "This is a low-confidence candidate for a potentially relevant disclosure involving FORVIA, hydrogen, and commercial vehicles; it should not yet be treated as evidence of an actual capacity change.",
+          "rationale": "The supplied data shows only a change in keyword-focused context. No clear before-and-after capacity information, production volume, facility detail, or other primary-source disclosure is included. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant if primary-source review confirms a material capacity change, but the current evidence does not support a directional assessment or score change."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-03T14:14:49.594Z"
+  },
+  {
     "id": "web-fuel-cell-2026-10-30-garrett-news-201fae1894b4",
     "sourceType": "ai_scan",
     "status": "pending",

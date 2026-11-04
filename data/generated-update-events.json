@@ -1,5 +1,1084 @@
 [
   {
+    "id": "web-fuel-cell-2026-11-04-garrett-fuel-cell-78ac201de19a",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "garrett",
+    "nodeId": "compressor",
+    "impactType": "technology_change",
+    "summary": "Garrett fuel cell technology changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Fuel Cell Technology: Boosting Hydrogen-Powered Vehicles\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "garrett-fuel-cell"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-04T14:33:04.402Z",
+    "lastSeenAt": "2026-11-04T14:33:04.402Z",
+    "changeSignature": "78ac201de19a",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Center Cooling Applications ...while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automotiv…"
+      ],
+      "removed": [
+        ";s portfolio reflects a bold transformation toward zero-emission technologies, including: Fuel Cell Compressors &ndash; enabling hydrogen-powered mobility through high-efficiency air management. E-Powertrain Systems &nd…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell compressor",
+        "electric compressor",
+        "air compressor",
+        "hydrogen",
+        "fuel cell"
+      ],
+      "affectedTarget": "company:garrett",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.garrett; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-04-garrett-fuel-cell-78ac201de19a-evidence-1",
+          "sourceId": "garrett-fuel-cell",
+          "sourceType": "company_official",
+          "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
+          "pageTitle": "Fuel Cell Technology: Boosting Hydrogen-Powered Vehicles",
+          "observedAt": "2026-11-04T14:33:04.402Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell compressor",
+            "electric compressor",
+            "air compressor",
+            "hydrogen",
+            "fuel cell"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Center Cooling Applications ...while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automotiv…"
+            ],
+            "removed": [
+              ";s portfolio reflects a bold transformation toward zero-emission technologies, including: Fuel Cell Compressors &ndash; enabling hydrogen-powered mobility through high-efficiency air management. E-Powertrain Systems &nd…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-04-garrett-fuel-cell-78ac201de19a-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:garrett",
+        "statement": "Potential technology change affecting company:garrett; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.garrett.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:33:04.402Z",
+        "target": "company:garrett",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": ";s portfolio reflects a bold transformation toward zero-emission technologies, including: Fuel Cell Compressors &ndash; enabling hydrogen-powered mobility through high-efficiency air management. E-Powertrain Systems &nd…",
+            "afterExcerpt": "Center Cooling Applications ...while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automotiv…",
+            "matchedKeywords": [
+              "fuel cell compressor",
+              "electric compressor",
+              "air compressor",
+              "hydrogen",
+              "fuel cell"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:garrett; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:37:13.096Z",
+        "target": "company:garrett",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "source_metadata",
+            "status": "candidate",
+            "statement": "The supplied event is tagged as a potential technology-change event for Garrett, sourced from a company-official channel with evidence level A.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The prior context referenced fuel cell compressors as enabling hydrogen-powered mobility through high-efficiency air management, while the current context references fuel cell compressors for hydrogen fuel cell vehicles together with electric propulsion and thermal management systems for automotive applications.",
+            "beforeExcerpt": ";s portfolio reflects a bold transformation toward zero-emission technologies, including: Fuel Cell Compressors &ndash; enabling hydrogen-powered mobility through high-efficiency air management. E-Powertrain Systems &nd…",
+            "afterExcerpt": "Center Cooling Applications ...while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automotiv…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "keyword_match",
+            "status": "candidate",
+            "statement": "The supplied metadata identifies matches for fuel cell compressor, electric compressor, air compressor, hydrogen, and fuel cell.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "The excerpts indicate a change in the wording or surrounding context of Garrett’s discussion of fuel-cell-compressor and related zero-emission technologies. The evidence does not establish whether product scope, technology capabilities, commercial status, or strategic importance changed.",
+          "rationale": "Only truncated before-and-after context is supplied, and the excerpts are not directly comparable in full. Primary-source verification of the complete company disclosures is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may warrant review because the material concerns specialized fuel-cell-compressor and related automotive technologies. No score direction or change is proposed without clearer primary-source evidence."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-04T14:33:04.402Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-04-forvia-hydrogen-storage-1191ded58357",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-04T14:33:01.692Z",
+    "lastSeenAt": "2026-11-04T14:33:01.692Z",
+    "changeSignature": "1191ded58357",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-04-forvia-hydrogen-storage-1191ded58357-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-11-04T14:33:01.692Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-04-forvia-hydrogen-storage-1191ded58357-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:33:01.692Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "2.98%",
+            "afterValue": "1.75%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 2.98% → 1.75%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:37:18.304Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied snapshots for a FORVIA page titled “Hydrogen storage systems” differ in the displayed share-price text: the earlier excerpt shows 8.70€ and +2.98%, while the later excerpt shows 8.73€ and +1.75%.",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.70€ +2.98% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "A displayed percentage changed from 2.98% to 1.75% between the supplied snapshots. The excerpts do not establish that this percentage represents hydrogen-storage capacity, production capacity, or another operating metric.",
+            "beforeExcerpt": "Share price : 8.70€ +2.98%",
+            "afterExcerpt": "Share price : 8.73€ +1.75%",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "This is a weak review lead for a possible change in a hydrogen-storage-related source context, but the supplied excerpts provide no direct evidence of a capacity change.",
+          "rationale": "The page title and matched keywords reference hydrogen storage, tanks, and 700 bar, while the only visible changed numeric information is share-price text. The relationship between the percentage change and operational capacity is ambiguous. Primary-source verification of the underlying page content and any relevant capacity disclosure is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant if primary-source review confirms a material hydrogen-storage capacity or supply-chain disclosure. No score direction or numeric change is proposed from the supplied excerpts."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-04T14:33:01.692Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-04-sgl-ir-e08d2ed28424",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "sgl",
+    "nodeId": "gdl",
+    "impactType": "technology_change",
+    "summary": "SGL Carbon investor relations changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"SGL Investor Relations – shares, publications &amp; events | SGL Carbon\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.sglcarbon.com/en/investor-relations/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "sgl-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-04T14:32:56.784Z",
+    "lastSeenAt": "2026-11-04T14:32:56.784Z",
+    "changeSignature": "e08d2ed28424",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…"
+      ],
+      "removed": [
+        "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "carbon fiber"
+      ],
+      "affectedTarget": "company:sgl",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.sgl; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-04-sgl-ir-e08d2ed28424-evidence-1",
+          "sourceId": "sgl-ir",
+          "sourceType": "company_official",
+          "url": "https://www.sglcarbon.com/en/investor-relations/",
+          "pageTitle": "SGL Investor Relations – shares, publications &amp; events | SGL Carbon",
+          "observedAt": "2026-11-04T14:32:56.784Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "carbon fiber"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…"
+            ],
+            "removed": [
+              "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-04-sgl-ir-e08d2ed28424-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:sgl",
+        "statement": "Potential technology change affecting company:sgl; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.sgl.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:32:56.784Z",
+        "target": "company:sgl",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…",
+            "afterExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…",
+            "matchedKeywords": [
+              "carbon fiber"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…",
+            "afterExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…",
+            "beforeValue": "10",
+            "afterValue": "23",
+            "unit": null,
+            "matchedKeywords": [
+              "carbon fiber"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 10 → 23.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:sgl; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:37:23.646Z",
+        "target": "company:sgl",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The keyword-focused source context changed between the previous and current snapshots, with both excerpts referencing SGL Carbon’s former Carbon Fiber facility in Moses Lake and capacity expansion at its St. Marys site.",
+            "beforeExcerpt": "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…",
+            "afterExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "statement": "The excerpts contain different visible numeric tokens, including a possible change from 10 to 23. Their business meaning and comparability cannot be determined from the supplied excerpts.",
+            "beforeExcerpt": "st news 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site 2026/1…",
+            "afterExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential change in a carbon-fiber-related company disclosure warrants review, but the supplied snippets do not establish a technology change or explain the numeric difference.",
+          "rationale": "The context includes references to a former carbon-fiber facility sale and capacity expansion, while the visible excerpts are truncated and do not provide the underlying disclosure or comparable definitions. Primary-source verification is required.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant for review because the context references carbon-fiber facilities and capacity expansion, but the excerpts do not establish customer dependence, scarcity, qualification requirements, or any resulting business impact. No score direction or numeric change is proposed."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-04T14:32:56.784Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-04-umicore-ir-d1f882249888",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "umicore",
+    "nodeId": "catalyst",
+    "impactType": "technology_change",
+    "summary": "Umicore investors changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Investor relations | Umicore\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.umicore.com/en/investors/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "umicore-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-04T14:32:55.587Z",
+    "lastSeenAt": "2026-11-04T14:32:55.587Z",
+    "changeSignature": "d1f882249888",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "m Energy Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…"
+      ],
+      "removed": [
+        "atteries Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "precious metals",
+        "guidance"
+      ],
+      "affectedTarget": "company:umicore",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.umicore; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-04-umicore-ir-d1f882249888-evidence-1",
+          "sourceId": "umicore-ir",
+          "sourceType": "company_official",
+          "url": "https://www.umicore.com/en/investors/",
+          "pageTitle": "Investor relations | Umicore",
+          "observedAt": "2026-11-04T14:32:55.587Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "precious metals",
+            "guidance"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "m Energy Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…"
+            ],
+            "removed": [
+              "atteries Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-04-umicore-ir-d1f882249888-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:umicore",
+        "statement": "Potential technology change affecting company:umicore; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.umicore.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:32:55.587Z",
+        "target": "company:umicore",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "atteries Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…",
+            "afterExcerpt": "m Energy Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…",
+            "matchedKeywords": [
+              "precious metals",
+              "guidance"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:umicore; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:37:28.315Z",
+        "target": "company:umicore",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied source snapshot shows a change in keyword-focused context: the prior excerpt begins with “atteries,” while the current excerpt begins with “m Energy”; both excerpts otherwise include references to Healthcare & Life Sciences, Industrial & Manufacturing, Jewelry & Lifestyle, Optics, Precious Metals Trading & Industry, Recycling Solutions, metals and elements, Innovation, and Sustainability.",
+            "beforeExcerpt": "atteries Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…",
+            "afterExcerpt": "m Energy Healthcare & Life Sciences Industrial & Manufacturing Jewelry & Lifestyle Optics Precious Metals Trading & Industry Recycling Solutions Explore our solutions by Our metals and elements Innovation Sustainability…",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-2",
+            "type": "keyword_match",
+            "status": "candidate",
+            "statement": "The supplied metadata lists “precious metals” and “guidance” as matched keywords.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "llm-fact-3",
+            "type": "evidence_limitation",
+            "status": "candidate",
+            "statement": "No specific technology disclosure, guidance figure, customer, product, order, date, or causal explanation is included in the supplied excerpts.",
+            "beforeExcerpt": null,
+            "afterExcerpt": null,
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "This is a candidate change in watched source context, but it does not by itself establish a technology change or a material supply-chain development.",
+          "rationale": "The evidence consists of partial, non-comparable text fragments and keyword metadata. Primary-source verification is required to determine whether the change reflects an actual company disclosure rather than a snapshot or extraction artifact.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may be relevant if primary-source review confirms a substantive technology or product change, but the supplied evidence supports no directional assessment or score change."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-04T14:32:55.587Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-04-doe-fuel-cells-166a82ad7ca6",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-04T14:32:55.453Z",
+    "lastSeenAt": "2026-11-04T14:32:55.453Z",
+    "changeSignature": "166a82ad7ca6",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…",
+        "ear Program Plan The Multi-Year Program Plan (MYPP), published in May 2024, set forth the Hydrogen and Fuel Cell Technologies Office&#039;s mission, goals, and strategic approach relative to broader clean energy priorit…"
+      ],
+      "removed": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…",
+        "vancing Energy Addition, Not Subtraction Hydrogen Hydrogen Hydrogen National Hydrogen and Fuel Cell Day 2026: Celebrating the “Swiss Army Knife” of the Periodic Table October 8, 2026 Advancing Energy Addition, Not Subtr…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-04-doe-fuel-cells-166a82ad7ca6-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-11-04T14:32:55.453Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…",
+              "ear Program Plan The Multi-Year Program Plan (MYPP), published in May 2024, set forth the Hydrogen and Fuel Cell Technologies Office&#039;s mission, goals, and strategic approach relative to broader clean energy priorit…"
+            ],
+            "removed": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…",
+              "vancing Energy Addition, Not Subtraction Hydrogen Hydrogen Hydrogen National Hydrogen and Fuel Cell Day 2026: Celebrating the “Swiss Army Knife” of the Periodic Table October 8, 2026 Advancing Energy Addition, Not Subtr…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-04-doe-fuel-cells-166a82ad7ca6-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:32:55.453Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      },
+      "llmCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "llm_research_agent",
+          "provider": "openai",
+          "model": "gpt-5.6-luna",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-04T14:37:31.746Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "llm-fact-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "statement": "The supplied record reports that keyword-focused source context related to fuel cells, hydrogen, funding, storage, and infrastructure changed between two snapshots.",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Tax Credits, Rebates, Savings DOE Notices and Rules Energy Department Releases Emi…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "This is a low-confidence candidate for a possible policy-related disclosure change affecting the watched node.",
+          "rationale": "The supplied excerpts show changed page context, but do not identify a specific policy, funding action, effective date, affected entity, or operational consequence. Primary-source verification is required before drawing supply-chain conclusions.",
+          "confidence": "low",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These dimensions may warrant review because the event is labeled as a government policy-change candidate involving fuel cells and hydrogen. No score direction or numeric change is proposed without primary-source verification."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-04T14:32:55.453Z"
+  },
+  {
     "id": "web-fuel-cell-2026-11-03-forvia-news-f2b17dbd29e7",
     "sourceType": "ai_scan",
     "status": "pending",

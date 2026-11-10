@@ -59,7 +59,8 @@ export function reconcile(brief, claude, codex, existing = {}, at = new Date()) 
     const agreeMaterial = bothValid &&
       first.verdict === "material_candidate" && second.verdict === "material_candidate" &&
       first.target === second.target && first.changeType === second.changeType &&
-      first.sourceId === second.sourceId && first.sourceUrl === second.sourceUrl;
+      first.sourceId === second.sourceId && first.sourceUrl === second.sourceUrl &&
+      (first.evidenceExcerpt.includes(second.evidenceExcerpt) || second.evidenceExcerpt.includes(first.evidenceExcerpt));
     const status = agreeMaterial ? "consensus_candidate" :
       bothValid && first.verdict === "non_material" && second.verdict === "non_material"
         ? "non_material" : "needs_evidence";

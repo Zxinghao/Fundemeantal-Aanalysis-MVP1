@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    },
+    "coverageSummary": {
+      "type": "string"
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "eventId": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "material_candidate",
+              "non_material",
+              "insufficient_evidence"
+            ]
+          },
+          "target": {
+            "type": "string"
+          },
+          "changeType": {
+            "type": "string",
+            "enum": [
+              "capacity_change",
+              "supplier_change",
+              "technology_change",
+              "contract_change",
+              "company_exit",
+              "other",
+              "none"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "claim": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "evidenceExcerpt": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "sourceUrl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "eventId",
+          "verdict",
+          "target",
+          "changeType",
+          "confidence",
+          "claim",
+          "rationale",
+          "evidenceExcerpt",
+          "sourceId",
+          "sourceUrl"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "coverageSummary",
+    "assessments"
+  ],
+  "additionalProperties": false
+}

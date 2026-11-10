@@ -1,118 +1,152 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f3f4f6">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%2312151a' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%2312151a' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23c7352f'/%3E%3C/svg%3E">
     <title>Supply Chain Bottleneck Radar</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="apple-style.css">
-    <link rel="stylesheet" href="review-export.css">
-    <link rel="stylesheet" href="node-cleanup.css">
-    <link rel="stylesheet" href="hero-cleanup.css">
     <link rel="stylesheet" href="research-model.css">
     <link rel="stylesheet" href="analyst-review.css">
     <link rel="stylesheet" href="research-ops.css">
+    <link rel="stylesheet" href="product-journey.css">
   </head>
-  <body>
-    <header class="hero">
-      <div>
-        <h1>Supply Chain Bottleneck Radar</h1>
-        <p class="subtitle">
-          Choose an industry to see its supply chain from end demand to upstream bottlenecks.
-          Click any node to inspect its role, evidence, deterministic bottleneck score, and
-          pending research packets from monitored sources or user-submitted research.
-        </p>
+  <body data-view="chain">
+    <header class="appbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <h1>Bottleneck Radar</h1>
+          <small>供应链瓶颈雷达</small>
+        </div>
       </div>
     </header>
 
-    <main class="layout">
-      <aside class="panel">
-        <label for="industry-select">Select Industry</label>
-        <select id="industry-select"></select>
+    <nav class="view-tabs" aria-label="主要功能">
+      <button type="button" class="view-tab" data-view-target="chain" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 11 16.5 6M7.5 13l9 5"/></svg>
+        <span>产业链</span>
+      </button>
+      <button type="button" class="view-tab" data-view-target="made">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+        <span>产品制造</span>
+      </button>
+      <button type="button" class="view-tab" data-view-target="desk">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM9 9h6M9 13h6M9 17h3"/></svg>
+        <span>研究台</span>
+        <b id="desk-count" class="tab-badge" hidden></b>
+      </button>
+    </nav>
 
-        <section class="method-card">
-          <h2>Hidden Bottleneck Method</h2>
+    <main>
+      <!-- View 1: supply chain -->
+      <section class="view" id="view-chain" data-view="chain">
+        <div class="card chain-head">
+          <div class="field-row">
+            <label for="industry-select">行业</label>
+            <select id="industry-select"></select>
+          </div>
+          <h2 id="industry-title"></h2>
+          <p id="industry-description" class="lede"></p>
+          <div class="chain-tools">
+            <div class="legend" aria-label="图例">
+              <span><i class="dot terminal"></i>终端需求</span>
+              <span><i class="dot chain"></i>环节</span>
+              <span><i class="dot company"></i>公司</span>
+              <span><i class="dot zisu"></i>隐形瓶颈</span>
+            </div>
+            <div class="seg" role="group" aria-label="展示方式">
+              <button type="button" data-map-mode="list" aria-pressed="true">分层</button>
+              <button type="button" data-map-mode="graph" aria-pressed="false">图谱</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="chain-list" class="chain-list" aria-live="polite"></div>
+
+        <section class="card map-shell">
+          <div class="toolbar">
+            <span>左右拖动查看完整图谱，点击节点看详情</span>
+            <button id="reset-view" type="button" class="ghost">回到起点</button>
+          </div>
+          <div id="supply-chain-map" class="map"></div>
+        </section>
+
+        <details class="card method-card">
+          <summary>隐形瓶颈研究方法</summary>
           <ol>
             <li>Start from durable end-market demand and trace dependencies upstream.</li>
             <li>Separate observed evidence from the investment claim it may support.</li>
             <li>Approve explicit database patches only after the claim is verified.</li>
             <li>Rank candidates with the versioned six-factor scoring rubric.</li>
           </ol>
-        </section>
-
-        <section class="legend">
-          <h2>Legend</h2>
-          <div><span class="dot terminal"></span>End demand</div>
-          <div><span class="dot chain"></span>Supply chain node</div>
-          <div><span class="dot company"></span>Important company</div>
-          <div><span class="dot zisu"></span>Hidden bottleneck candidate</div>
-        </section>
-      </aside>
-
-      <section class="map-shell">
-        <div class="toolbar">
-          <div>
-            <h2 id="industry-title"></h2>
-            <p id="industry-description"></p>
-          </div>
-          <button id="reset-view" type="button">Reset View</button>
-        </div>
-        <div id="supply-chain-map" class="map"></div>
+        </details>
       </section>
 
-      <aside class="panel updates-panel">
-        <section class="research-ops">
-          <div class="section-heading">
-            <h2>Research Operations</h2>
-          </div>
-          <p class="research-ops-intro">
-            Live scanner readiness for the selected industry. “Comparable-ready” means a watched-context baseline exists for future diffing; it does not mean a material event exists now.
-          </p>
-          <div id="source-health" aria-live="polite">Loading source health…</div>
-        </section>
+      <!-- View 2: how products are made -->
+      <section class="view" id="view-made" data-view="made" hidden>
+        <div id="product-journey"></div>
+      </section>
 
-        <section>
-          <div class="section-heading">
-            <h2>Review Desk</h2>
-            <select id="review-filter" aria-label="Filter review status">
-              <option value="all">All</option>
-              <option value="pending">Pending</option>
-              <option value="approved">Approved</option>
-              <option value="rejected">Rejected</option>
-              <option value="needs_more_evidence">Need Evidence</option>
-            </select>
-          </div>
-          <div class="review-tools">
-            <button id="export-review" type="button">Export Review Decisions</button>
-            <small id="export-status">Structured scanner events require a completed Analyst Worksheet before approval. Decisions and human review notes are saved locally first, then exported as JSON for the apply workflow.</small>
-          </div>
-          <div id="pending-updates" class="pending-list"></div>
-        </section>
+      <!-- View 3: research desk -->
+      <section class="view" id="view-desk" data-view="desk" hidden>
+        <div class="desk-grid">
+          <section class="card desk-review">
+            <div class="section-heading">
+              <h2>Review Desk</h2>
+              <select id="review-filter" aria-label="Filter review status">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+                <option value="needs_more_evidence">Need Evidence</option>
+              </select>
+            </div>
+            <div id="pending-updates" class="pending-list"></div>
+            <div class="review-tools">
+              <button id="export-review" type="button">Export Review Decisions</button>
+              <small id="export-status">Structured scanner events require a completed Analyst Worksheet before approval. Decisions and human review notes are saved locally first, then exported as JSON for the apply workflow.</small>
+            </div>
+          </section>
 
-        <section class="submit-card">
-          <h2>Submit Evidence</h2>
-          <p>
-            Add official data, filings, investor materials, announcements, or research notes.
-            Submissions enter the review queue before they update the supply chain map.
-          </p>
-          <form id="submission-form">
-            <input id="submission-company" placeholder="Company or node, e.g. Johnson Matthey" required>
-            <input id="submission-source" placeholder="Source link or file note" required>
-            <textarea id="submission-summary" placeholder="Briefly explain what this evidence changes." required></textarea>
-            <select id="submission-impact">
-              <option value="supply_chain_importance">Supply chain importance</option>
-              <option value="bottleneck_judgement">Bottleneck judgement</option>
-              <option value="financial_update">Financial or order update</option>
-              <option value="new_player">New player or relationship</option>
-            </select>
-            <button type="submit">Submit to Review Queue</button>
-          </form>
-        </section>
-      </aside>
+          <div class="desk-side">
+            <section class="card research-ops">
+              <div class="section-heading">
+                <h2>Research Operations</h2>
+              </div>
+              <p class="research-ops-intro">
+                Live scanner readiness for the selected industry. “Comparable-ready” means a watched-context baseline exists for future diffing; it does not mean a material event exists now.
+              </p>
+              <div id="source-health" aria-live="polite">Loading source health…</div>
+            </section>
+
+            <details class="card submit-card">
+              <summary>Submit Evidence</summary>
+              <p>
+                Add official data, filings, investor materials, announcements, or research notes.
+                Submissions enter the review queue before they update the supply chain map.
+              </p>
+              <form id="submission-form">
+                <input id="submission-company" placeholder="Company or node, e.g. Johnson Matthey" required>
+                <input id="submission-source" placeholder="Source link or file note" required>
+                <textarea id="submission-summary" placeholder="Briefly explain what this evidence changes." required></textarea>
+                <select id="submission-impact" aria-label="Impact type">
+                  <option value="supply_chain_importance">Supply chain importance</option>
+                  <option value="bottleneck_judgement">Bottleneck judgement</option>
+                  <option value="financial_update">Financial or order update</option>
+                  <option value="new_player">New player or relationship</option>
+                </select>
+                <button type="submit">Submit to Review Queue</button>
+              </form>
+            </details>
+          </div>
+        </div>
+      </section>
     </main>
 
     <dialog id="company-dialog">
-      <button class="close" id="close-dialog" type="button">x</button>
+      <button class="close" id="close-dialog" type="button" aria-label="关闭">×</button>
       <div id="company-detail"></div>
     </dialog>
 
@@ -125,5 +159,6 @@
     <script type="module" src="analyst-review.js"></script>
     <script type="module" src="research-ops.js"></script>
     <script src="review-export.js"></script>
+    <script src="product-journey.js"></script>
   </body>
 </html>

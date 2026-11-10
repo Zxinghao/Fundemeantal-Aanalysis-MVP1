@@ -1,0 +1,220 @@
+[
+  {
+    "id": "nvidia-ai-gpu",
+    "name": "NVIDIA AI GPU",
+    "variant": "以 Blackwell 架构为例",
+    "maker": "NVIDIA",
+    "summary": "从一张设计图到数据中心里的一整柜算力：一颗 AI GPU 要经过设计、晶圆制造、存储堆叠、先进封装和整机集成。",
+    "duration": "9 步 · 约 2 分钟",
+    "facts": [
+      { "value": "2080 亿", "label": "晶体管 / 每颗 GPU" },
+      { "value": "TSMC 4NP", "label": "制造工艺" },
+      { "value": "72 GPU", "label": "每个 NVL72 机柜" }
+    ],
+    "linkedNames": ["NVIDIA", "GPU Clusters"],
+    "relatedIndustry": {
+      "id": "ai-optics",
+      "label": "机柜之间靠光模块互连 → 查看 AI 光模块产业链"
+    },
+    "disclaimer": "示意性流程，用于理解产业链结构：不是某一型号的完整物料清单（BOM），“行业代表企业”不代表已确认的 NVIDIA 供货关系，也不构成投资建议。",
+    "sources": [
+      {
+        "id": "nvidia-docs",
+        "title": "NVIDIA Docs — The NVIDIA Grace Blackwell Superchip (overview)",
+        "url": "https://docs.nvidia.com/multi-node-nvlink-systems/multi-node-tuning-guide/overview.html"
+      },
+      {
+        "id": "nvidia-blackwell",
+        "title": "NVIDIA — Blackwell architecture",
+        "url": "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/"
+      },
+      {
+        "id": "tsmc-cowos",
+        "title": "TSMC 3DFabric — CoWoS",
+        "url": "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm"
+      },
+      {
+        "id": "asml-euv",
+        "title": "ASML — EUV lithography systems",
+        "url": "https://www.asml.com/en/products/euv-lithography-systems"
+      }
+    ],
+    "steps": [
+      {
+        "id": "design",
+        "scene": "design",
+        "short": "设计",
+        "title": "芯片设计",
+        "en": "Chip design & tape-out",
+        "tagline": "NVIDIA 只画“图纸”，不自己建厂。一颗 GPU 由两颗芯粒拼成。",
+        "input": "算力需求、EDA 软件、IP",
+        "process": "规划电路布局，反复仿真验证，输出设计文件（流片）",
+        "output": "交给晶圆厂的版图文件",
+        "players": [
+          { "name": "NVIDIA", "role": "设计", "confirmed": true },
+          { "name": "Synopsys", "role": "EDA" },
+          { "name": "Cadence", "role": "EDA" }
+        ],
+        "bottleneck": "设计与验证周期长，且必须和特定工艺深度绑定，换代工厂代价极高。",
+        "evidence": "NVIDIA 官方：Blackwell GPU 含 2080 亿晶体管，由两颗达到光罩尺寸上限的芯粒通过 10 TB/s 互连组成。EDA 厂商为行业通用示例。",
+        "sourceIds": ["nvidia-docs", "nvidia-blackwell"]
+      },
+      {
+        "id": "wafer",
+        "scene": "wafer",
+        "short": "硅晶圆",
+        "title": "硅晶圆",
+        "en": "Silicon wafer",
+        "tagline": "把沙子提纯成单晶硅棒，再切成镜面一样的 300mm 圆片。",
+        "input": "高纯多晶硅",
+        "process": "熔化 → 拉出单晶硅棒 → 切片 → 研磨抛光",
+        "output": "300mm 抛光晶圆",
+        "players": [
+          { "name": "Shin-Etsu", "role": "硅片" },
+          { "name": "SUMCO", "role": "硅片" },
+          { "name": "GlobalWafers", "role": "硅片" },
+          { "name": "Siltronic", "role": "硅片" }
+        ],
+        "bottleneck": "先进制程对硅片缺陷要求极高，供应商少、认证周期长。",
+        "evidence": "半导体通用工艺与行业代表企业，未核实其与具体 GPU 型号的供货关系。",
+        "sourceIds": []
+      },
+      {
+        "id": "litho",
+        "scene": "litho",
+        "short": "光刻",
+        "title": "光刻",
+        "en": "EUV lithography",
+        "tagline": "用极紫外光把电路图案“投影”到晶圆上，一格一格地曝光。",
+        "input": "晶圆、光罩、光刻胶",
+        "process": "EUV 光穿过光罩，经镜组缩小后逐格曝光",
+        "output": "印上电路图案的晶圆",
+        "players": [
+          { "name": "ASML", "role": "EUV 光刻机（唯一供应商）" },
+          { "name": "TSMC", "role": "晶圆代工", "confirmed": true },
+          { "name": "JSR / TOK", "role": "光刻胶" }
+        ],
+        "bottleneck": "EUV 光刻机全球只有 ASML 能造，是整条链上最集中的设备环节。",
+        "evidence": "NVIDIA 官方确认 Blackwell 使用 TSMC 定制 4NP 工艺。ASML 是 EUV 光刻系统的唯一供应商。光刻胶厂商为行业示例。",
+        "sourceIds": ["nvidia-docs", "asml-euv"]
+      },
+      {
+        "id": "layers",
+        "scene": "layers",
+        "short": "刻蚀沉积",
+        "title": "刻蚀与沉积",
+        "en": "Etch, deposition & repeat",
+        "tagline": "沉积 → 光刻 → 刻蚀，循环数百次，像盖楼一样一层层叠出晶体管和金属连线。",
+        "input": "曝光后的晶圆、特种气体、化学品",
+        "process": "镀膜、刻掉多余部分、清洗、检测，然后重复",
+        "output": "布满 GPU 芯粒的成品晶圆",
+        "players": [
+          { "name": "Applied Materials", "role": "沉积" },
+          { "name": "Lam Research", "role": "刻蚀" },
+          { "name": "Tokyo Electron", "role": "涂胶显影 / 刻蚀" },
+          { "name": "KLA", "role": "检测" }
+        ],
+        "bottleneck": "一片先进制程晶圆要在厂里走上几个月，产能无法快速扩张；良率决定实际产出。",
+        "evidence": "半导体通用工艺与设备行业代表企业，非特定 GPU 的已确认供应商名单。",
+        "sourceIds": []
+      },
+      {
+        "id": "test",
+        "scene": "test",
+        "short": "测试切割",
+        "title": "晶圆测试与切割",
+        "en": "Wafer sort & dicing",
+        "tagline": "逐颗通电测试，标出坏点，再把晶圆切成一颗颗芯粒，只留良品。",
+        "input": "成品晶圆、探针卡、测试机",
+        "process": "探针逐颗测试 → 标记不良 → 切割",
+        "output": "已知良品芯粒（KGD）",
+        "players": [
+          { "name": "Advantest", "role": "测试机" },
+          { "name": "Teradyne", "role": "测试机" },
+          { "name": "FormFactor", "role": "探针卡" },
+          { "name": "DISCO", "role": "切割" }
+        ],
+        "bottleneck": "GPU 芯粒面积很大，一片晶圆切不出多少颗，一个缺陷就报废一整颗。",
+        "evidence": "通用流程与行业代表企业。具体测试外包分工未核实。",
+        "sourceIds": []
+      },
+      {
+        "id": "hbm",
+        "scene": "hbm",
+        "short": "HBM",
+        "title": "HBM 高带宽存储",
+        "en": "HBM — parallel stream",
+        "tagline": "另一条并行的产线：把多层 DRAM 芯片垂直叠起来，用硅通孔上下打通。",
+        "input": "DRAM 晶圆",
+        "process": "打孔（TSV）→ 减薄 → 逐层堆叠键合 → 测试",
+        "output": "HBM 存储堆叠",
+        "players": [
+          { "name": "SK hynix", "role": "HBM" },
+          { "name": "Samsung", "role": "HBM" },
+          { "name": "Micron", "role": "HBM" }
+        ],
+        "bottleneck": "全球只有三家能量产 HBM，堆叠良率和客户认证是关键；GPU 再多，没有 HBM 也出不了货。",
+        "evidence": "HBM 主要厂商为这三家属行业共识；各家在具体 GPU 型号中的份额未在此核实。",
+        "sourceIds": []
+      },
+      {
+        "id": "cowos",
+        "scene": "cowos",
+        "short": "CoWoS",
+        "title": "CoWoS 先进封装",
+        "en": "Advanced packaging",
+        "tagline": "两条产线在这里汇合：GPU 芯粒和 HBM 并排放到中介层上，再装到基板上。",
+        "input": "GPU 芯粒、HBM、中介层、ABF 基板",
+        "process": "Chip（芯片）on Wafer（中介层）on Substrate（基板）",
+        "output": "完成封装的 GPU",
+        "players": [
+          { "name": "TSMC", "role": "CoWoS 封装" },
+          { "name": "Ibiden", "role": "ABF 基板" },
+          { "name": "Unimicron", "role": "ABF 基板" },
+          { "name": "Ajinomoto", "role": "ABF 膜材料" }
+        ],
+        "bottleneck": "近几年 AI GPU 出货的头号卡点：封装产能、中介层和大尺寸基板都要同步扩张。",
+        "evidence": "CoWoS 为 TSMC 的 2.5D 封装技术（官方资料）。Blackwell 采用 CoWoS-L 及基板厂商来自行业公开报道，未逐一核实；当前产能松紧需另行查证。",
+        "sourceIds": ["tsmc-cowos"]
+      },
+      {
+        "id": "module",
+        "scene": "module",
+        "short": "模块",
+        "title": "模块与服务器组装",
+        "en": "Module & server assembly",
+        "tagline": "封装好的 GPU 装上主板，配上供电和液冷冷板，再做整机测试。",
+        "input": "GPU 封装、CPU、PCB、供电、冷板",
+        "process": "贴装 → 装冷板和管路 → 固件烧录 → 老化测试",
+        "output": "计算托盘（compute tray）",
+        "players": [
+          { "name": "Foxconn", "role": "整机制造" },
+          { "name": "Quanta", "role": "整机制造" },
+          { "name": "Wistron / Wiwynn", "role": "整机制造" }
+        ],
+        "bottleneck": "单颗芯片功耗极高，供电和散热设计成为新的工程瓶颈，风冷已不够用。",
+        "evidence": "NVIDIA 官方：GB200 超级芯片由 2 颗 Blackwell GPU + 1 颗 Grace CPU 组成，NVL72 为液冷设计。代工厂为行业公开报道的代表企业，逐型号分工未核实。",
+        "sourceIds": ["nvidia-docs"]
+      },
+      {
+        "id": "rack",
+        "scene": "rack",
+        "short": "机柜",
+        "title": "机柜与数据中心",
+        "en": "Rack & data center",
+        "tagline": "72 颗 GPU 装进一个液冷机柜，机柜之间用高速网络和光模块连成“AI 工厂”。",
+        "input": "计算托盘、交换机、电源、液冷、光模块",
+        "process": "整柜集成 → 上电验收 → 接入数据中心网络",
+        "output": "可以训练和推理的算力",
+        "players": [
+          { "name": "NVIDIA", "role": "机柜架构 / 网络", "confirmed": true },
+          { "name": "云厂商", "role": "部署运营" },
+          { "name": "光模块厂商", "role": "互连" }
+        ],
+        "bottleneck": "芯片造完不等于算力上线：电力、液冷基础设施和光互连决定部署速度。",
+        "evidence": "NVIDIA 官方：GB200 NVL72 为液冷机柜级方案，含 72 颗 Blackwell GPU 与 36 颗 Grace CPU，组成单一 72-GPU NVLink 域。",
+        "sourceIds": ["nvidia-docs"]
+      }
+    ]
+  }
+]

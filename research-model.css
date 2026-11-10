@@ -28,13 +28,13 @@
 
 .score-row span small {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .score-evidence-record {
   border: 1px solid rgba(120, 92, 56, 0.14);
   border-radius: 12px;
-  margin: -4px 0 12px 120px;
+  margin: -4px 0 12px 0;
   padding: 9px 11px;
   background: rgba(30, 28, 24, 0.025);
 }
@@ -101,7 +101,7 @@
 }
 
 .research-stage code {
-  font-size: 11px;
+  font-size: 12px;
   overflow-wrap: anywhere;
 }
 

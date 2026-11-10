@@ -138,4 +138,5 @@
     })
     .catch(()=>{status.textContent="研究结果暂时不可用";});
   select?.addEventListener("change",render);
+  if(select) new MutationObserver(render).observe(select,{childList:true});
 })();

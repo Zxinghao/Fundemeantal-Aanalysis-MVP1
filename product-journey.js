@@ -34,7 +34,7 @@
       watchDetailDialog();
     })
     .catch(() => {
-      root.innerHTML = `<div class="card"><p class="empty-state">产品制造数据加载失败，请刷新重试。</p></div>`;
+      root.innerHTML = `<div class="card"><p class="empty-state">Product data failed to load. Please refresh.</p></div>`;
     });
 
   document.addEventListener("radar:view", (event) => {
@@ -55,8 +55,8 @@
     product = null;
     root.innerHTML = `
       <div class="jr-intro">
-        <h2>产品是怎么造出来的</h2>
-        <p class="lede">选一个产品，用一步一步的动画看懂它的制造流程，以及每一步卡在哪里。</p>
+        <h2>How products are made</h2>
+        <p class="lede">Pick a product and step through an animation of how it is built, and where each step gets stuck.</p>
       </div>
       <div class="jr-products">
         ${products.map((item) => `
@@ -70,9 +70,9 @@
             <span class="jr-facts">
               ${(item.facts || []).map((fact) => `<span><b>${esc(fact.value)}</b>${esc(fact.label)}</span>`).join("")}
             </span>
-            <span class="jr-product-go">${esc(item.duration || "")}<b>开始 ›</b></span>
+            <span class="jr-product-go">${esc(item.duration || "")}<b>Start ›</b></span>
           </button>
-        `).join("") || `<p class="empty-state">还没有产品。</p>`}
+        `).join("") || `<p class="empty-state">No products yet.</p>`}
       </div>
     `;
     root.querySelectorAll("[data-product]").forEach((button) => {
@@ -102,10 +102,10 @@
     root.innerHTML = `
       <div class="jr">
         <div class="jr-top">
-          <button type="button" class="ghost jr-back">‹ 全部产品</button>
+          <button type="button" class="ghost jr-back">‹ Products</button>
           <div><strong>${esc(product.name)}</strong><small>${esc(product.variant || "")}</small></div>
         </div>
-        <ol class="jr-rail" aria-label="制造步骤">
+        <ol class="jr-rail" aria-label="Manufacturing steps">
           ${product.steps.map((step, i) => `
             <li><button type="button" data-step="${i}"><b>${i + 1}</b><span>${esc(step.short || step.title)}</span></button></li>
           `).join("")}
@@ -113,13 +113,13 @@
         <div class="jr-stage" role="img" tabindex="0">
           <div class="jr-scene"></div>
           <span class="jr-count"></span>
-          <span class="jr-hint">点画面重播 · 左右滑动换步</span>
+          <span class="jr-hint">Tap to replay · swipe to change step</span>
           <div class="jr-progress"><i></i></div>
         </div>
         <div class="jr-controls">
-          <button type="button" class="ghost" data-act="prev" aria-label="上一步">‹ 上一步</button>
-          <button type="button" class="ghost" data-act="play">▶ 自动播放</button>
-          <button type="button" data-act="next" aria-label="下一步">下一步 ›</button>
+          <button type="button" class="ghost" data-act="prev" aria-label="Previous step">‹ Prev</button>
+          <button type="button" class="ghost" data-act="play">▶ Autoplay</button>
+          <button type="button" data-act="next" aria-label="Next step">Next ›</button>
         </div>
         <article class="card jr-body" aria-live="polite"></article>
       </div>
@@ -172,7 +172,7 @@
 
     playScene();
     const stage = root.querySelector(".jr-stage");
-    stage.setAttribute("aria-label", `第 ${index + 1} 步动画：${step.title}。${step.tagline}`);
+    stage.setAttribute("aria-label", `Step ${index + 1} animation: ${step.title}. ${step.tagline}`);
     root.querySelector(".jr-count").textContent = `${index + 1} / ${total}`;
     root.querySelector("[data-act='prev']").disabled = index === 0;
     root.querySelector(".jr-controls [data-act='next']").disabled = last;
@@ -182,43 +182,43 @@
       .filter(Boolean);
 
     root.querySelector(".jr-body").innerHTML = `
-      <p class="eyebrow">第 ${index + 1} 步 · ${esc(step.en || "")}</p>
+      <p class="eyebrow">Step ${index + 1} of ${total}</p>
       <h2>${esc(step.title)}</h2>
       <p class="jr-tagline">${esc(step.tagline)}</p>
 
       <div class="jr-io">
-        <div><small>输入</small><span>${esc(step.input)}</span></div>
-        <div><small>过程</small><span>${esc(step.process)}</span></div>
-        <div><small>产出</small><span>${esc(step.output)}</span></div>
+        <div><small>Input</small><span>${esc(step.input)}</span></div>
+        <div><small>Process</small><span>${esc(step.process)}</span></div>
+        <div><small>Output</small><span>${esc(step.output)}</span></div>
       </div>
 
-      <h3>谁在做</h3>
+      <h3>Who does it</h3>
       <div class="jr-players">
         ${(step.players || []).map((player) => `
           <span class="${player.confirmed ? "confirmed" : ""}">
-            <b>${esc(player.name)}</b>${esc(player.role || "")}${player.confirmed ? "<i>✓ 官方确认</i>" : ""}
+            <b>${esc(player.name)}</b>${esc(player.role || "")}${player.confirmed ? "<i>✓ Confirmed</i>" : ""}
           </span>
         `).join("")}
       </div>
-      <p class="jr-note">未标“官方确认”的为行业代表企业，不代表已确认的供货关系。</p>
+      <p class="jr-note">Companies without “Confirmed” are representative industry players, not confirmed suppliers for this product.</p>
 
       <div class="jr-callout">
-        <strong>瓶颈观察</strong>
+        <strong>Bottleneck watch</strong>
         <p>${esc(step.bottleneck)}</p>
       </div>
 
       <details class="jr-evidence">
-        <summary>证据与边界</summary>
+        <summary>Evidence and limits</summary>
         <p>${esc(step.evidence)}</p>
         ${sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)} ↗</a>`).join("")}
       </details>
 
       ${last ? `
         ${product.relatedIndustry ? `<button type="button" class="jr-next" data-act="related">${esc(product.relatedIndustry.label)} ›</button>` : ""}
-        <button type="button" class="ghost jr-next" data-act="restart">↺ 从第 1 步再看一遍</button>
+        <button type="button" class="ghost jr-next" data-act="restart">↺ Replay from step 1</button>
         <p class="jr-note">${esc(product.disclaimer || "")}</p>
       ` : `
-        <button type="button" class="jr-next" data-act="next">下一步：${esc(product.steps[index + 1].title)} ›</button>
+        <button type="button" class="jr-next" data-act="next">Next: ${esc(product.steps[index + 1].title)} ›</button>
       `}
     `;
   }
@@ -240,7 +240,7 @@
   function startAutoplay() {
     playing = true;
     if (index === product.steps.length - 1) index = 0;
-    root.querySelector("[data-act='play']").textContent = "❚❚ 暂停";
+    root.querySelector("[data-act='play']").textContent = "❚❚ Pause";
     renderStep();
     scheduleAutoplay();
   }
@@ -262,7 +262,7 @@
     playing = false;
     clearTimeout(timer);
     const button = root.querySelector("[data-act='play']");
-    if (button) button.textContent = "▶ 自动播放";
+    if (button) button.textContent = "▶ Autoplay";
     root.querySelector(".jr-progress i")?.classList.remove("run");
   }
 
@@ -321,8 +321,7 @@
 
     const inject = () => {
       const header = detail.querySelector(".detail-header");
-      const name = header?.querySelector("h2")?.textContent?.trim();
-      const match = products.find((item) => (item.linkedNames || []).includes(name));
+      const match = products.find((item) => (item.linkedNodeIds || []).includes(detail.dataset.nodeId));
       const existing = detail.querySelector(".jr-cta");
       if (!header || !match) {
         existing?.remove();
@@ -335,7 +334,7 @@
       button.type = "button";
       button.className = "jr-cta";
       button.dataset.product = match.id;
-      button.textContent = `▶ 看 ${match.name} 是怎么造出来的（${match.steps.length} 步动画）`;
+      button.textContent = `▶ See how the ${match.name} is made (${match.steps.length}-step animation)`;
       button.addEventListener("click", () => {
         dialog.close();
         globalThis.RadarApp?.showView("made");
@@ -378,14 +377,14 @@
         blocks.forEach(([bx, by, w, h, color], k) => {
           out += `<rect class="a-fade" style="${d(0.8 + i * 0.25 + k * 0.18)}" x="${x + bx}" y="${30 + by}" width="${w}" height="${h}" rx="2" fill="${color}" fill-opacity=".55"/>`;
         });
-        out += text(x + 55, 156, `芯粒 ${i + 1}`, { cls: "t s", delay: 0.6 + i * 0.3 });
+        out += text(x + 55, 156, `Die ${i + 1}`, { cls: "t s", delay: 0.6 + i * 0.3 });
       });
       [62, 85, 108].forEach((y) => {
         out += `<path class="a-fade a-flow" style="${d(2.4)}" d="M170 ${y}H190" stroke="${C.cyan}" stroke-width="2"/>`;
       });
-      out += text(180, 24, "高速互连 10 TB/s", { cls: "t s", delay: 2.4, fill: C.cyan });
-      out += text(180, 184, "2 颗芯粒 = 1 颗 GPU · 2080 亿晶体管", { cls: "t b", delay: 2.8 });
-      out += text(180, 204, "版图文件 → 交给晶圆厂", { cls: "t s", delay: 3.3 });
+      out += text(180, 24, "10 TB/s die-to-die link", { cls: "t s", delay: 2.4, fill: C.cyan });
+      out += text(180, 184, "2 dies = 1 GPU · 208B transistors", { cls: "t b", delay: 2.8 });
+      out += text(180, 204, "Layout files → sent to the foundry", { cls: "t s", delay: 3.3 });
       return out;
     },
 
@@ -396,7 +395,7 @@
       out += `<path class="a-pulse" d="M33 160 40 188H100L107 160Z" fill="${C.amber}" fill-opacity=".8"/>`;
       out += `<path d="M70 18V70" stroke="${C.steel}" stroke-width="2"/>`;
       out += `<rect class="a-grow" style="--dur:1.8s;${d(0.2)}" x="57" y="68" width="26" height="96" rx="9" fill="${C.steel}"/>`;
-      out += text(70, 212, "① 拉出单晶硅棒", { cls: "t s" });
+      out += text(70, 212, "1 · Pull crystal ingot", { cls: "t s" });
       out += text(126, 124, "→", { cls: "t b", delay: 2 });
       // 2. slicing
       out += `<rect class="a-fade" style="${d(2)}" x="142" y="98" width="80" height="32" rx="7" fill="${C.steel}"/>`;
@@ -404,7 +403,7 @@
         out += `<path class="a-fade" style="${d(2.5 + k * 0.18)}" d="M${154 + k * 11.5} 92V136" stroke="#0b1020" stroke-width="2.5"/>`;
       }
       out += `<path class="a-fade a-pulse" style="${d(2.5)}" d="M148 88H216" stroke="${C.amber}" stroke-width="1.5" stroke-dasharray="3 3"/>`;
-      out += text(182, 212, "② 切成薄片", { cls: "t s", delay: 2 });
+      out += text(182, 212, "2 · Slice", { cls: "t s", delay: 2 });
       out += text(238, 124, "→", { cls: "t b", delay: 3.6 });
       // 3. polished wafer
       out += `<g class="a-fade" style="${d(3.8)}">
@@ -414,25 +413,25 @@
         <circle class="a-pulse" cx="298" cy="114" r="48" fill="none" stroke="${C.cyan}" stroke-width="1"/>
       </g>`;
       out += `<defs><linearGradient id="jr-shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>`;
-      out += text(298, 212, "③ 抛光 · 300mm 晶圆", { cls: "t s", delay: 3.8 });
+      out += text(298, 212, "3 · Polish · 300mm", { cls: "t s", delay: 3.8 });
       return out;
     },
 
     litho() {
       let out = "";
       out += `<rect x="146" y="8" width="68" height="20" rx="5" fill="${C.panel}" stroke="${C.violet}" stroke-width="1.5"/>`;
-      out += text(180, 22, "EUV 光源", { cls: "t s", fill: C.violet });
+      out += text(180, 22, "EUV source", { cls: "t s", fill: C.violet });
       out += `<path class="a-pulse" d="M166 28h28l22 34h-72z" fill="${C.violet}" fill-opacity=".4"/>`;
       // mask
       out += `<rect x="128" y="62" width="104" height="9" fill="${C.steel}"/>`;
       [140, 158, 172, 190, 208].forEach((x) => {
         out += `<rect x="${x}" y="62" width="8" height="9" fill="#0b1020"/>`;
       });
-      out += text(240, 70, "光罩（电路图案）", { cls: "t s", anchor: "start" });
+      out += text(240, 70, "Mask (circuit pattern)", { cls: "t s", anchor: "start" });
       out += `<path class="a-pulse" d="M150 71h60l-18 32h-24z" fill="${C.violet}" fill-opacity=".4"/>`;
       // optics
       out += `<ellipse cx="180" cy="109" rx="36" ry="8" fill="${C.cyan}" fill-opacity=".18" stroke="${C.cyan}" stroke-width="1.5"/>`;
-      out += text(224, 113, "镜组 · 缩小 4 倍", { cls: "t s", anchor: "start" });
+      out += text(224, 113, "Optics · 4× reduction", { cls: "t s", anchor: "start" });
       out += `<path class="a-pulse" d="M172 117h16l8 42h-32z" fill="${C.violet}" fill-opacity=".55"/>`;
       // wafer stage steps under the beam
       let stage = `<rect x="150" y="159" width="190" height="22" rx="4" fill="${C.panel}" stroke="${C.steel}"/>`;
@@ -442,15 +441,15 @@
         stage += `<rect class="a-fade" style="${d(0.5 + k)}" x="${x}" y="163" width="30" height="14" rx="2" fill="${C.violet}"/>`;
       }
       out += `<g class="a-step">${stage}</g>`;
-      out += text(180, 204, "晶圆一格一格移动 · 逐格曝光", { cls: "t s" });
-      out += text(16, 22, "波长 13.5nm", { cls: "t s", anchor: "start", fill: C.violet });
+      out += text(180, 204, "The wafer steps under the beam, die by die", { cls: "t s" });
+      out += text(16, 22, "13.5nm light", { cls: "t s", anchor: "start", fill: C.violet });
       return out;
     },
 
     layers() {
       let out = "";
       // process loop
-      ["沉积", "光刻", "刻蚀"].forEach((label, k) => {
+      ["Deposit", "Pattern", "Etch"].forEach((label, k) => {
         const y = 40 + k * 44;
         out += `<rect x="24" y="${y}" width="76" height="26" rx="13" fill="${C.panel}" stroke="${C.line}" stroke-width="1.5"/>`;
         out += `<rect class="a-cycle" style="${d(k)}" x="24" y="${y}" width="76" height="26" rx="13" fill="${C.green}"/>`;
@@ -458,16 +457,16 @@
         if (k < 2) out += text(62, y + 39, "↓", { cls: "t s" });
       });
       out += `<path class="a-flow" d="M24 141H10V53H22" fill="none" stroke="${C.green}" stroke-width="1.5"/>`;
-      out += text(62, 178, "循环数百次", { cls: "t s", fill: C.green });
+      out += text(56, 172, "Repeat ×100s", { cls: "t s", fill: C.green });
       // cross-section
       const x0 = 150;
       const w = 190;
       out += `<rect x="${x0}" y="184" width="${w}" height="22" fill="#3b4a78"/>`;
-      out += text(x0 - 6, 199, "硅衬底", { cls: "t s", anchor: "end" });
+      out += text(x0 - 6, 199, "Silicon", { cls: "t s", anchor: "end" });
       for (let k = 0; k < 13; k += 1) {
         out += `<rect class="a-grow" style="--dur:.4s;${d(0.3 + k * 0.05)}" x="${x0 + 8 + k * 14}" y="174" width="7" height="10" fill="${C.green}"/>`;
       }
-      out += text(x0 - 6, 182, "晶体管", { cls: "t s", anchor: "end", delay: 0.3, fill: C.green });
+      out += text(x0 - 6, 182, "Transistors", { cls: "t s", anchor: "end", delay: 0.3, fill: C.green });
       const widths = [[10, 22, 14, 30, 18, 26], [28, 40, 22, 46], [50, 60, 44], [80, 76], [170]];
       widths.forEach((row, i) => {
         const y = 174 - (i + 1) * 22;
@@ -481,8 +480,8 @@
           x += seg + gap;
         });
       });
-      out += text(x0 + w / 2, 52, "金属连线 · 十多层", { cls: "t s", delay: 5.6, fill: C.amber });
-      out += text(x0 + w / 2, 24, "芯片剖面（示意）", { cls: "t s" });
+      out += text(x0 + w / 2, 52, "Metal wiring · 10+ layers", { cls: "t s", delay: 5.6, fill: C.amber });
+      out += text(x0 + w / 2, 24, "Chip cross-section (schematic)", { cls: "t s" });
       return out;
     },
 
@@ -511,38 +510,39 @@
       });
       out += `<rect class="a-scan" x="${cx - 90}" y="${cy - 90}" width="3" height="180" fill="${C.cyan}"/>`;
       const good = dies.filter((die) => !die.bad).length;
-      out += `<rect x="222" y="22" width="10" height="10" rx="2" fill="${C.green}"/>` + text(238, 31, "良品", { cls: "t s", anchor: "start" });
-      out += `<rect x="282" y="22" width="10" height="10" rx="2" fill="${C.red}"/>` + text(298, 31, "不良", { cls: "t s", anchor: "start" });
-      out += text(282, 62, "探针逐颗通电测试", { cls: "t s", delay: 0.4 });
+      out += `<rect x="222" y="22" width="10" height="10" rx="2" fill="${C.green}"/>` + text(238, 31, "Good", { cls: "t s", anchor: "start" });
+      out += `<rect x="282" y="22" width="10" height="10" rx="2" fill="${C.red}"/>` + text(298, 31, "Bad", { cls: "t s", anchor: "start" });
+      out += text(282, 62, "Probe tests every die", { cls: "t s", delay: 0.4 });
       out += `<rect class="a-drop" style="${d(3.8)}" x="254" y="84" width="56" height="56" rx="5" fill="${C.green}" fill-opacity=".25" stroke="${C.green}" stroke-width="2"/>`;
       out += text(282, 117, "KGD", { cls: "t b", delay: 4.1, fill: C.green });
-      out += text(282, 160, "切割 · 只留良品芯粒", { cls: "t s", delay: 4.1 });
-      out += text(282, 190, `示意良率 ${good}/${dies.length}`, { cls: "t b", delay: 4.5 });
+      out += text(282, 160, "Dice · keep good dies", { cls: "t s", delay: 4.1 });
+      out += text(282, 184, "Illustrative yield", { cls: "t s", delay: 4.5 });
+      out += text(282, 202, `${good} / ${dies.length}`, { cls: "t b", delay: 4.5 });
       return out;
     },
 
     hbm() {
       let out = "";
-      out += `<rect x="96" y="6" width="168" height="22" rx="11" fill="${C.panel}" stroke="${C.line}"/>`;
-      out += text(180, 21, "与 GPU 晶圆并行生产", { cls: "t s" });
+      out += `<rect x="78" y="6" width="204" height="22" rx="11" fill="${C.panel}" stroke="${C.line}"/>`;
+      out += text(180, 21, "Built in parallel with the GPU wafers", { cls: "t s" });
       out += `<rect x="100" y="182" width="160" height="14" rx="2" fill="${C.violet}" fill-opacity=".7"/>`;
-      out += text(180, 212, "底部：控制芯片", { cls: "t s" });
+      out += text(180, 212, "Base: logic die", { cls: "t s" });
       for (let k = 0; k < 8; k += 1) {
         out += `<rect class="a-drop" style="${d(0.3 + k * 0.3)}" x="108" y="${166 - k * 15}" width="144" height="11" rx="2" fill="${C.cyan}" fill-opacity=".35" stroke="${C.cyan}"/>`;
       }
       for (let i = 0; i < 7; i += 1) {
         out += `<path class="a-draw" style="--len:140;${d(3 + i * 0.1)}" d="M${120 + i * 20} 190V56" stroke="${C.amber}" stroke-width="2"/>`;
       }
-      out += text(94, 108, "DRAM 芯片", { cls: "t b", anchor: "end", fill: C.cyan });
-      out += text(94, 124, "一层层堆叠", { cls: "t s", anchor: "end" });
-      out += text(266, 108, "TSV 硅通孔", { cls: "t b", anchor: "start", delay: 3, fill: C.amber });
-      out += text(266, 124, "垂直打通每层", { cls: "t s", anchor: "start", delay: 3 });
+      out += text(94, 108, "DRAM dies", { cls: "t b", anchor: "end", fill: C.cyan });
+      out += text(94, 124, "stacked up", { cls: "t s", anchor: "end" });
+      out += text(266, 108, "TSVs", { cls: "t b", anchor: "start", delay: 3, fill: C.amber });
+      out += text(266, 124, "vias through all", { cls: "t s", anchor: "start", delay: 3 });
       return out;
     },
 
     cowos() {
       let out = "";
-      const legend = [[C.green, "Chip：GPU 芯粒 ×2 + HBM", 1.6], [C.steel, "on Wafer：硅中介层", 0.8], ["#2fa37e", "on Substrate：ABF 基板", 0]];
+      const legend = [[C.green, "Chip: 2 GPU dies + HBM", 1.6], [C.steel, "on Wafer: silicon interposer", 0.8], ["#2fa37e", "on Substrate: ABF substrate", 0]];
       legend.forEach(([color, label, t], i) => {
         out += `<rect class="a-fade" style="${d(t)}" x="16" y="${12 + i * 17}" width="9" height="9" rx="2" fill="${color}"/>`;
         out += text(31, 20.5 + i * 17, label, { cls: "t s", anchor: "start", delay: t });
@@ -562,7 +562,7 @@
         out += `<g class="a-drop" style="${d(2.4 + i * 0.3)}">${stack}${text(x + 21, 104, "HBM", { cls: "t b", fill: C.cyan })}</g>`;
       });
       out += `<path class="a-fade a-flow" style="${d(3.2)}" d="M99 155.500H153M207 155.500H261" stroke="${C.amber}" stroke-width="2.5"/>`;
-      out += text(180, 214, "中介层里的细密走线把 GPU 和 HBM 连起来", { cls: "t s", delay: 3.2, fill: C.amber });
+      out += text(180, 214, "Fine interposer wiring links GPU and HBM", { cls: "t s", delay: 3.2, fill: C.amber });
       return out;
     },
 
@@ -572,7 +572,7 @@
       for (let i = 0; i < 8; i += 1) {
         out += `<rect class="a-fade" style="${d(0.3 + i * 0.05)}" x="${72 + i * 28}" y="54" width="16" height="9" rx="1.5" fill="${C.amber}"/>`;
       }
-      out += text(180, 38, "供电模块", { cls: "t s", delay: 0.3, fill: C.amber });
+      out += text(180, 38, "Power delivery", { cls: "t s", delay: 0.3, fill: C.amber });
       out += `<path class="a-fade a-flow" style="${d(2.8)}" d="M8 122H180" stroke="${C.cyan}" stroke-width="5"/>`;
       out += `<path class="a-fade a-flow" style="${d(2.8)}" d="M180 122H352" stroke="${C.red}" stroke-width="5"/>`;
       [[80, "GPU", C.green, 0.8], [220, "GPU", C.green, 1.1]].forEach(([x, label, color, t]) => {
@@ -582,10 +582,10 @@
       [[74, 72], [154, 52], [214, 72]].forEach(([x, w], i) => {
         out += `<rect class="a-drop" style="${d(2.1 + i * 0.15)}" x="${x}" y="86" width="${w}" height="72" rx="9" fill="${C.cyan}" fill-opacity=".22" stroke="${C.cyan}" stroke-width="1.5"/>`;
       });
-      out += text(10, 110, "冷液进", { cls: "t s", anchor: "start", delay: 2.8, fill: C.cyan });
-      out += text(350, 110, "热液出", { cls: "t s", anchor: "end", delay: 2.8, fill: C.red });
-      out += text(180, 172, "液冷冷板压在芯片上", { cls: "t s", delay: 2.1, fill: C.cyan });
-      out += text(180, 204, "2 GPU + 1 CPU = 1 组超级芯片", { cls: "t b", delay: 3.2 });
+      out += text(10, 110, "Cold in", { cls: "t s", anchor: "start", delay: 2.8, fill: C.cyan });
+      out += text(350, 110, "Hot out", { cls: "t s", anchor: "end", delay: 2.8, fill: C.red });
+      out += text(180, 172, "Liquid cold plates sit on the chips", { cls: "t s", delay: 2.1, fill: C.cyan });
+      out += text(180, 204, "2 GPUs + 1 CPU = 1 superchip", { cls: "t b", delay: 3.2 });
       return out;
     },
 
@@ -600,8 +600,8 @@
         out += `<g class="a-fade" style="${d(t)}"><rect x="38" y="${y}" width="92" height="11" rx="2" fill="${color}" fill-opacity=".3" stroke="${color}"/>
           <circle class="a-pulse" cx="124" cy="${y + 5.5}" r="1.8" fill="${color}"/></g>`;
       }
-      out += text(144, 34, "计算托盘", { cls: "t s", anchor: "start", delay: 1.6, fill: C.green });
-      out += text(144, 132, "NVLink 交换机", { cls: "t s", anchor: "start", delay: 1.2, fill: C.violet });
+      out += text(144, 34, "Compute trays", { cls: "t s", anchor: "start", delay: 1.6, fill: C.green });
+      out += text(144, 132, "NVLink switches", { cls: "t s", anchor: "start", delay: 1.2, fill: C.violet });
       for (let rIdx = 0; rIdx < 2; rIdx += 1) {
         for (let c = 0; c < 3; c += 1) {
           const x = 246 + c * 34;
@@ -612,9 +612,9 @@
           out += `<rect class="a-fade a-pulse" style="${d(t)}" x="${x + 4}" y="${y + 6}" width="16" height="3" fill="${C.green}"/>`;
         }
       }
-      out += text(292, 146, "光纤 + 光模块互连", { cls: "t s", delay: 3, fill: C.cyan });
-      out += text(250, 180, "1 柜 = 72 GPU + 36 CPU", { cls: "t b", delay: 3.4 });
-      out += text(250, 200, "液冷 · 高功率供电", { cls: "t s", delay: 3.4 });
+      out += text(292, 146, "Fiber + optical modules", { cls: "t s", delay: 3, fill: C.cyan });
+      out += text(250, 180, "1 rack = 72 GPUs + 36 CPUs", { cls: "t b", delay: 3.4 });
+      out += text(250, 200, "Liquid cooled · high power", { cls: "t s", delay: 3.4 });
       return out;
     }
   };

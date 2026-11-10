@@ -2,6 +2,8 @@ let industries = [];
 
 const defaultPendingUpdates = [
   {
+    id: "seed-jm-progress",
+    industryId: "fuel-cell",
     company: "Johnson Matthey",
     impact: "bottleneck_judgement",
     source: "Official materials / investor materials",
@@ -9,6 +11,8 @@ const defaultPendingUpdates = [
     status: "pending"
   },
   {
+    id: "seed-forvia-orders",
+    industryId: "fuel-cell",
     company: "FORVIA",
     impact: "financial_update",
     source: "Company announcements / financial reports",
@@ -156,10 +160,28 @@ function loadPendingUpdates() {
 }
 
 function saveUserUpdate(update) {
-  const saved = localStorage.getItem("pendingUpdates");
-  const userUpdates = saved ? JSON.parse(saved) : [];
+  let userUpdates = [];
+  try {
+    userUpdates = JSON.parse(localStorage.getItem("pendingUpdates") || "[]");
+  } catch {
+    userUpdates = [];
+  }
   userUpdates.unshift(update);
   localStorage.setItem("pendingUpdates", JSON.stringify(userUpdates));
+}
+
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;"
+  }[character]));
+}
+
+function safeUrl(value) {
+  return /^https?:\/\//i.test(String(value || "")) ? esc(value) : "";
 }
 
 function initIndustrySelect() {
@@ -182,6 +204,8 @@ function bindInteractions() {
   document.querySelector("#close-dialog").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
+    const chip = event.target.closest("[data-open-company]");
+    if (chip) openCompany(chip.dataset.openCompany);
   });
   document.querySelector("#reset-view").addEventListener("click", () => {
     map.scrollTo({ left: 0, top: 0, behavior: "smooth" });
@@ -245,17 +269,16 @@ function renderGraph() {
     element.className = `node ${node.type}`;
     element.style.left = `${node.position.x}px`;
     element.style.top = `${node.position.y}px`;
-    element.title = `${node.title}: ${node.summary}`;
     element.setAttribute("aria-label", `${node.title}. ${node.summary}`);
-    element.innerHTML = `
-      <div class="node-title">${node.title}</div>
-      <div class="node-meta">${shortNodeMeta(node)}</div>
-      <div class="tags"><span class="tag">${primaryNodeBadge(node)}</span></div>
-    `;
-
-    if (findCompany(node.id)) {
-      element.addEventListener("click", () => openCompany(node.id));
-    }
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    tags.append(elementWith("span", "tag", primaryNodeBadge(node)));
+    element.append(
+      elementWith("div", "node-title", node.title),
+      elementWith("div", "node-meta", shortNodeMeta(node)),
+      tags
+    );
+    element.addEventListener("click", () => openDetail(node.id));
 
     canvas.appendChild(element);
   });
@@ -298,7 +321,13 @@ function showView(view, updateHash = true) {
     if (button.dataset.viewTarget === view) button.setAttribute("aria-current", "page");
     else button.removeAttribute("aria-current");
   });
-  if (updateHash && viewFromHash() !== view) history.pushState(null, "", `#${view}`);
+  if (updateHash && viewFromHash() !== view) {
+    try {
+      history.pushState(null, "", `#${view}`);
+    } catch {
+      // Navigation still works without a history entry.
+    }
+  }
   if (updateHash) window.scrollTo(0, 0);
   document.dispatchEvent(new CustomEvent("radar:view", { detail: { view } }));
 }
@@ -335,7 +364,7 @@ function selectIndustry(industryId) {
   return true;
 }
 
-globalThis.RadarApp = { showView, selectIndustry, openCompany: (id) => openCompany(id) };
+globalThis.RadarApp = { showView, selectIndustry, openDetail: (id) => openDetail(id) };
 
 // ---------- Layered supply-chain list (phone-friendly alternative to the graph) ----------
 
@@ -387,7 +416,6 @@ function renderChainList() {
 function chainNodeCard(node, companies) {
   const card = element("article", `node-card ${node.type}`);
 
-  // `.node` + `.node-title` keep node-details.js working for non-company nodes.
   const button = element("button", "node");
   button.type = "button";
   button.append(
@@ -395,6 +423,7 @@ function chainNodeCard(node, companies) {
     element("span", "chev", "›"),
     element("span", "node-summary", node.summary || "")
   );
+  button.addEventListener("click", () => openDetail(node.id));
   card.append(button);
 
   if (companies.length) {
@@ -413,6 +442,10 @@ function companyChip(company) {
   if (badge) chip.append(element("small", "", badge));
   chip.addEventListener("click", () => openCompany(company.id));
   return chip;
+}
+
+function elementWith(tag, className, text) {
+  return element(tag, className, text);
 }
 
 function element(tag, className = "", text = "") {
@@ -448,6 +481,46 @@ function findCompany(nodeId) {
   return state.industry.companies.find((company) => company.id === nodeId);
 }
 
+function openDetail(nodeId) {
+  if (findCompany(nodeId)) openCompany(nodeId);
+  else openNode(nodeId);
+}
+
+function openNode(nodeId) {
+  const industry = state.industry;
+  const node = industry.nodes.find((item) => item.id === nodeId);
+  if (!node) return;
+
+  const companies = industry.companies.filter((company) => (company.linkedNodeIds || []).includes(node.id));
+  const sourceIds = new Set();
+  industry.relationships.forEach((relationship) => {
+    if (relationship.from === node.id || relationship.to === node.id) {
+      (relationship.sourceIds || []).forEach((sourceId) => sourceIds.add(sourceId));
+    }
+  });
+
+  detail.dataset.nodeId = node.id;
+  detail.innerHTML = `
+    <div class="detail-header">
+      <p class="eyebrow">${esc(node.layer || "Supply chain node")}</p>
+      <h2>${esc(node.title)}</h2>
+      <p>${esc(node.summary || "No summary available.")}</p>
+    </div>
+    <div class="tag-row">${(node.tags || []).map((tag) => `<span>${esc(tag)}</span>`).join("")}</div>
+    <h3>Companies at this node</h3>
+    ${companies.length
+      ? `<div class="node-companies in-dialog">${companies.map((company) => `
+          <button type="button" class="company-chip${company.isZisuCandidate ? " zisu" : ""}" data-open-company="${esc(company.id)}"><i></i><span>${esc(company.name)}</span></button>
+        `).join("")}</div>`
+      : `<p class="source-empty">No company record is linked to this node yet.</p>`}
+    <h3>Evidence Sources</h3>
+    ${renderSources([...sourceIds])}
+  `;
+
+  if (!dialog.open) dialog.showModal();
+  dialog.scrollTop = 0;
+}
+
 function openCompany(id) {
   const company = findCompany(id);
   if (!company) return;
@@ -461,9 +534,9 @@ function openCompany(id) {
       const weight = Math.round((config.weight || 0) * 100);
       return `
         <div class="score-row">
-          <span>${config.label || scoreLabel(label)} <small>${weight}%</small></span>
-          <div class="bar"><span style="width: ${value}%"></span></div>
-          <strong>${value}</strong>
+          <span>${esc(config.label || scoreLabel(label))} <small>${weight}%</small></span>
+          <div class="bar"><span style="width: ${Number(value) || 0}%"></span></div>
+          <strong>${esc(value ?? "–")}</strong>
         </div>
       `;
     })
@@ -472,35 +545,37 @@ function openCompany(id) {
   const signals = Object.entries(company.signals)
     .map(([label, value]) => `
       <div class="signal">
-        <strong>${signalLabel(label)}</strong>
-        <span>${value}</span>
+        <strong>${esc(signalLabel(label))}</strong>
+        <span>${esc(value)}</span>
       </div>
     `)
     .join("");
 
+  detail.dataset.nodeId = company.id;
   detail.innerHTML = `
     <div class="detail-header">
-      <h2>${company.name}</h2>
-      <div class="detail-subtitle">${company.ticker} - ${company.region} - ${company.businessRole}</div>
+      <h2>${esc(company.name)}</h2>
+      <div class="detail-subtitle">${esc(company.ticker)} · ${esc(company.region)} · ${esc(company.businessRole)}</div>
     </div>
     ${renderCompanyFlags(company)}
     <div class="signal-grid">${signals}</div>
     <h3>Hidden Bottleneck Composite</h3>
     <div class="composite-score">
       <strong>${Number.isFinite(composite) ? composite.toFixed(1) : "N/A"}</strong>
-      <span>${classification || "Unclassified"}</span>
-      <small>Rubric v${state.scoringRubric.version}. Component inputs are currently ${state.scoringRubric.evidencePolicy?.status || "provisional"}; the composite is arithmetic, not independent evidence.</small>
+      <span>${esc(classification || "Unclassified")}</span>
+      <small>Rubric v${esc(state.scoringRubric.version)}. Component inputs are currently ${esc(state.scoringRubric.evidencePolicy?.status || "provisional")}; the composite is arithmetic, not independent evidence.</small>
     </div>
     <h3>Component Scores</h3>
     ${scores}
-    <p class="score-policy">${state.scoringRubric.evidencePolicy?.requirement || "Component scores require explicit evidence coverage."}</p>
+    <p class="score-policy">${esc(state.scoringRubric.evidencePolicy?.requirement || "Component scores require explicit evidence coverage.")}</p>
     <h3>Recent Updates / Items to Verify</h3>
-    <ul class="recent-list">${company.recentUpdates.map((item) => `<li>${item}</li>`).join("")}</ul>
+    <ul class="recent-list">${(company.recentUpdates || []).map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
     <h3>Evidence Sources</h3>
     ${renderSources(sourceIdsForCompany(company))}
   `;
 
-  dialog.showModal();
+  if (!dialog.open) dialog.showModal();
+  dialog.scrollTop = 0;
 }
 
 function computeCompositeScore(scores) {
@@ -528,9 +603,9 @@ function classifyComposite(score) {
 
 function renderCompanyFlags(company) {
   const flags = [
-    ["Key supplier", company.isKeySupplier],
-    ["Bottleneck", company.isBottleneck],
-    ["Hidden candidate", company.isZisuCandidate]
+    ["Key supplier (manual)", company.isKeySupplier],
+    ["Bottleneck (manual)", company.isBottleneck],
+    ["Hidden candidate (manual)", company.isZisuCandidate]
   ];
 
   return `
@@ -591,9 +666,9 @@ function renderSources(sourceIds = []) {
     <div class="source-list">
       ${sources.map((source) => `
         <div class="source-item">
-          <strong>${source.title}</strong>
-          <span>${source.type} - ${source.note}</span>
-          ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">Open source</a>` : ""}
+          <strong>${esc(source.title)}</strong>
+          <span>${esc(source.type)}${source.note ? ` · ${esc(source.note)}` : ""}</span>
+          ${safeUrl(source.url) ? `<a href="${safeUrl(source.url)}" target="_blank" rel="noreferrer">Open source ↗</a>` : ""}
         </div>
       `).join("")}
     </div>
@@ -616,21 +691,21 @@ function renderPendingUpdates() {
 
   pendingUpdates.innerHTML = visibleUpdates
     .map((update) => `
-      <article class="update-card ${update.reviewStatus}">
-        <strong>${update.company}</strong>
-        <span>${reviewStatusLabel(update.reviewStatus)} - ${update.origin} - ${impactLabel(update.impact)}</span>
-        <p>${update.summary}</p>
+      <article class="update-card ${esc(update.reviewStatus)}">
+        <strong>${esc(update.company)}</strong>
+        <span>${esc(reviewStatusLabel(update.reviewStatus))} · ${esc(update.origin)} · ${esc(impactLabel(update.impact))}</span>
+        <p>${esc(update.summary)}</p>
         <details class="update-more">
           <summary>Evidence, claim &amp; sources</summary>
           ${renderResearchPacket(update.researchPacket)}
           ${renderAnalysis(update.analysis)}
-          <span>Source: ${update.source}</span>
+          <span>Source: ${esc(update.source)}</span>
           ${renderSources(update.sourceIds)}
         </details>
         <div class="review-actions">
-          <button type="button" data-review-id="${update.id}" data-review-status="approved">Approve</button>
-          <button type="button" data-review-id="${update.id}" data-review-status="needs_more_evidence">Need Evidence</button>
-          <button type="button" data-review-id="${update.id}" data-review-status="rejected">Reject</button>
+          <button type="button" data-review-id="${esc(update.id)}" data-review-status="approved">Approve</button>
+          <button type="button" data-review-id="${esc(update.id)}" data-review-status="needs_more_evidence">Need Evidence</button>
+          <button type="button" data-review-id="${esc(update.id)}" data-review-status="rejected">Reject</button>
         </div>
       </article>
     `)
@@ -644,7 +719,9 @@ function buildReviewQueue() {
     .filter((event) => event.industryId === state.industry.id)
     .map((event) => eventToReviewCard(event, "AI scan"));
 
-  const userEvents = state.pendingUpdates.map((update) => ({
+  const userEvents = state.pendingUpdates
+    .filter((update) => !update.industryId || update.industryId === state.industry.id)
+    .map((update) => ({
     id: update.id || stableUpdateId(update),
     company: update.company,
     impact: update.impact,
@@ -654,7 +731,7 @@ function buildReviewQueue() {
     analysis: null,
     researchPacket: null,
     summary: update.summary,
-    reviewStatus: reviewStatusFor(update.id, update.status)
+    reviewStatus: reviewStatusFor(update.id || stableUpdateId(update), update.status)
   }));
 
   return [...generatedEvents, ...industryEvents, ...userEvents];
@@ -683,16 +760,16 @@ function renderResearchPacket(packet) {
   const evidence = (packet.evidence || [])
     .map((item) => `
       <div class="research-evidence">
-        <strong>Evidence ${item.evidenceLevel || "?"}: ${item.pageTitle || item.sourceId || "Source observation"}</strong>
-        <p>${item.observation || "No observation recorded."}</p>
-        ${item.limitation ? `<small>${item.limitation}</small>` : ""}
+        <strong>Evidence ${esc(item.evidenceLevel || "?")}: ${esc(item.pageTitle || item.sourceId || "Source observation")}</strong>
+        <p>${esc(item.observation || "No observation recorded.")}</p>
+        ${item.limitation ? `<small>${esc(item.limitation)}</small>` : ""}
       </div>
     `)
     .join("");
 
   const operations = (packet.proposedPatch?.operations || [])
     .map((operation) => `
-      <li><code>${operation.op}</code> <code>${operation.path}</code>${operation.requiresHumanInput ? " - human input required" : ""}</li>
+      <li><code>${esc(operation.op)}</code> <code>${esc(operation.path)}</code>${operation.requiresHumanInput ? " - human input required" : ""}</li>
     `)
     .join("");
 
@@ -703,12 +780,12 @@ function renderResearchPacket(packet) {
         ${evidence || "<p>No structured evidence.</p>"}
       </div>
       <div class="research-stage">
-        <span>2. Claim - ${packet.claim?.status || "unverified"} / ${packet.claim?.confidence || "low"} confidence</span>
-        <p>${packet.claim?.statement || "No claim statement."}</p>
-        ${packet.claim?.rationale ? `<small>${packet.claim.rationale}</small>` : ""}
+        <span>2. Claim - ${esc(packet.claim?.status || "unverified")} / ${esc(packet.claim?.confidence || "low")} confidence</span>
+        <p>${esc(packet.claim?.statement || "No claim statement.")}</p>
+        ${packet.claim?.rationale ? `<small>${esc(packet.claim.rationale)}</small>` : ""}
       </div>
       <div class="research-stage">
-        <span>3. Proposed Patch - ${packet.proposedPatch?.status || "draft"}${packet.proposedPatch?.executable ? " / executable" : " / not executable"}</span>
+        <span>3. Proposed Patch - ${esc(packet.proposedPatch?.status || "draft")}${packet.proposedPatch?.executable ? " / executable" : " / not executable"}</span>
         ${operations ? `<ul>${operations}</ul>` : "<p>No patch operations.</p>"}
       </div>
     </div>
@@ -719,15 +796,15 @@ function renderAnalysis(analysis) {
   if (!analysis) return "";
 
   const checks = (analysis.recommendedChecks || [])
-    .map((item) => `<li>${item}</li>`)
+    .map((item) => `<li>${esc(item)}</li>`)
     .join("");
 
   return `
     <div class="analysis-box">
-      <strong>Review guidance: ${analysis.reviewPriority || "medium"} priority</strong>
-      <p>${analysis.analystSummary || "Review the source before approving."}</p>
+      <strong>Review guidance: ${esc(analysis.reviewPriority || "medium")} priority</strong>
+      <p>${esc(analysis.analystSummary || "Review the source before approving.")}</p>
       ${checks ? `<ul>${checks}</ul>` : ""}
-      ${analysis.suggestedDatabaseAction ? `<span>${analysis.suggestedDatabaseAction}</span>` : ""}
+      ${analysis.suggestedDatabaseAction ? `<span>${esc(analysis.suggestedDatabaseAction)}</span>` : ""}
     </div>
   `;
 }
@@ -807,6 +884,7 @@ function handleSubmission(event) {
 
   const update = {
     id: `user-${Date.now()}`,
+    industryId: state.industry.id,
     company: document.querySelector("#submission-company").value.trim(),
     source: document.querySelector("#submission-source").value.trim(),
     summary: document.querySelector("#submission-summary").value.trim(),
@@ -823,7 +901,8 @@ function handleSubmission(event) {
 function renderLoadError(error) {
   industryTitle.textContent = "Industry data failed to load";
   industryDescription.textContent = "Open the page through a local web server or the hosted preview link. Some browsers block JSON loading when the file is opened directly.";
-  map.innerHTML = `<div class="load-error">${error.message}</div>`;
+  map.innerHTML = `<div class="load-error">${esc(error.message)}</div>`;
+  chainList.replaceChildren(element("div", "load-error", error.message));
 }
 
 boot();

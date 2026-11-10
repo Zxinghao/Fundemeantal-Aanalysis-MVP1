@@ -15,8 +15,6 @@ Files:
 - `index.html`
 - `app.js`
 - `styles.css`
-- `node-details.js`
-- `company-flags.js`
 - `research-model.css`
 
 Functions:

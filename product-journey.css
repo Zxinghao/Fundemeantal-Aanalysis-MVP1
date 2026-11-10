@@ -101,7 +101,7 @@
 .jr-body h2 { font-size: 22px; margin-top: 2px; }
 .jr-tagline { font-size: 16px; line-height: 1.55; margin-top: 8px; }
 .jr-io { display: grid; gap: 6px; margin-top: 16px; }
-.jr-io div { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; display: grid; gap: 10px; grid-template-columns: 40px 1fr; padding: 10px 12px; position: relative; }
+.jr-io div { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; display: grid; gap: 10px; grid-template-columns: 58px 1fr; padding: 10px 12px; position: relative; }
 .jr-io small { color: var(--brand); font-weight: 700; }
 .jr-io span { font-size: 14px; }
 .jr-players { display: flex; flex-wrap: wrap; gap: 6px; }

@@ -60,7 +60,7 @@ export function buildDailyBrief(industries, watchlist, cache, events, at = new D
         eventId: event.id, detectedAt: event.detectedAt,
         industryId: event.industryId, target: event.analysis?.affectedTarget ||
           (event.companyId ? "company:" + event.companyId : "node:" + event.nodeId),
-        impactType: event.impactType, sourceIds: event.sourceIds,
+        impactType: event.impactType, sourceIds: event.sourceIds.filter((id) => officialSourceIndex.get(event.industryId + ":" + id) === event.sourceUrl),
         sourceUrl: event.sourceUrl, sourceType: event.researchPacket?.evidence?.[0]?.sourceType || "unknown",
         headline: bounded(event.summary, 450),
         change: {

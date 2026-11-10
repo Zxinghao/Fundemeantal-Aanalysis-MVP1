@@ -99,6 +99,24 @@
     renderStage(0);
     section.querySelector(".gpu-step-layout").scrollIntoView({behavior:"smooth",block:"start"});
   });
+  // Bridge the existing NVIDIA company detail to the new product-level explorer.
+  document.addEventListener("click",function(event){
+    const node=event.target.closest("#supply-chain-map .node");
+    if(!node || node.querySelector(".node-title")?.textContent.trim()!=="NVIDIA")return;
+    queueMicrotask(function(){
+      const details=document.querySelector("#company-detail");
+      if(!details || details.querySelector(".gpu-crosslink"))return;
+      const button=document.createElement("button");
+      button.type="button";button.className="gpu-crosslink";
+      button.textContent="探索 NVIDIA GPU 的制造全过程  →";
+      button.addEventListener("click",function(){
+        document.querySelector("#company-dialog")?.close();
+        nav.querySelector('[data-screen="manufacture"]').click();
+        renderStage(0);
+      });
+      details.prepend(button);
+    });
+  });
   let industries=[];
   const select=document.querySelector("#industry-select");
   function renderMobileList(){

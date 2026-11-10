@@ -1,14 +1,14 @@
 /* "How it's made" product journeys.
    Presentation only: reads data/products.json and never touches scoring,
-   scanner, or review data. Each step pairs an animated SVG scene with an
-   input → process → output explanation and explicit evidence boundaries. */
+   scanner, or review data. The journey is one continuous scroll: each step
+   reveals as it enters the viewport and plays its animated SVG scene, while a
+   spine on the left fills to show progress through the build. */
 (function productJourney() {
   "use strict";
 
   const root = document.querySelector("#product-journey");
   if (!root) return;
 
-  const STEP_MS = 7000;
   const C = {
     line: "#2a3558",
     panel: "#141c38",
@@ -22,9 +22,8 @@
 
   let products = [];
   let product = null;
-  let index = 0;
-  let playing = false;
-  let timer = null;
+  let observers = [];
+  let scrollHandler = null;
 
   fetch("data/products.json", { cache: "no-store" })
     .then((response) => (response.ok ? response.json() : Promise.reject(new Error(String(response.status)))))
@@ -38,25 +37,18 @@
     });
 
   document.addEventListener("radar:view", (event) => {
-    if (event.detail.view !== "made") stopAutoplay();
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (!product || document.body.dataset.view !== "made") return;
-    if (event.target.closest("input, textarea, select")) return;
-    if (event.key === "ArrowRight") go(index + 1);
-    if (event.key === "ArrowLeft") go(index - 1);
+    if (event.detail.view === "made" && scrollHandler) scrollHandler();
   });
 
   // ---------- Product list ----------
 
   function renderList() {
-    stopAutoplay();
+    teardown();
     product = null;
     root.innerHTML = `
       <div class="jr-intro">
         <h2>How products are made</h2>
-        <p class="lede">Pick a product and step through an animation of how it is built, and where each step gets stuck.</p>
+        <p class="lede">Pick a product and scroll through how it is built, step by step, and where each step gets stuck.</p>
       </div>
       <div class="jr-products">
         ${products.map((item) => `
@@ -67,9 +59,7 @@
               <strong>${esc(item.name)}</strong>
               <span>${esc(item.summary || "")}</span>
             </span>
-            <span class="jr-facts">
-              ${(item.facts || []).map((fact) => `<span><b>${esc(fact.value)}</b>${esc(fact.label)}</span>`).join("")}
-            </span>
+            <span class="jr-facts">${facts(item)}</span>
             <span class="jr-product-go">${esc(item.duration || "")}<b>Start ›</b></span>
           </button>
         `).join("") || `<p class="empty-state">No products yet.</p>`}
@@ -78,6 +68,10 @@
     root.querySelectorAll("[data-product]").forEach((button) => {
       button.addEventListener("click", () => open(button.dataset.product));
     });
+  }
+
+  function facts(item) {
+    return (item.facts || []).map((fact) => `<span><b>${esc(fact.value)}</b>${esc(fact.label)}</span>`).join("");
   }
 
   function chipArt() {
@@ -92,217 +86,205 @@
       <rect x="52" y="30" width="20" height="40" rx="2" fill="${C.green}" fill-opacity=".7"/></svg>`;
   }
 
-  // ---------- Journey ----------
+  // ---------- Scroll journey ----------
 
-  function open(productId, startIndex = 0) {
+  function open(productId) {
+    teardown();
     product = products.find((item) => item.id === productId) || null;
     if (!product) return;
-    index = startIndex;
+    const steps = product.steps;
+    document.body.classList.add("journey-open");
 
     root.innerHTML = `
-      <div class="jr">
-        <div class="jr-top">
-          <button type="button" class="ghost jr-back">‹ Products</button>
-          <div><strong>${esc(product.name)}</strong><small>${esc(product.variant || "")}</small></div>
+      <div class="sj">
+        <div class="sj-bar">
+          <button type="button" class="sj-back">‹ Products</button>
+          <span class="sj-now"></span>
+          <span class="sj-count"></span>
+          <i class="sj-fill"></i>
         </div>
-        <ol class="jr-rail" aria-label="Manufacturing steps">
-          ${product.steps.map((step, i) => `
-            <li><button type="button" data-step="${i}"><b>${i + 1}</b><span>${esc(step.short || step.title)}</span></button></li>
-          `).join("")}
+
+        <header class="sj-hero">
+          <p class="sj-kicker">How it's made · ${esc(product.variant || "")}</p>
+          <h2>${esc(product.name)}</h2>
+          <p class="sj-lede">${esc(product.summary || "")}</p>
+          <div class="jr-facts">${facts(product)}</div>
+          <p class="sj-scroll">Scroll to follow the build <span aria-hidden="true">↓</span></p>
+        </header>
+
+        <ol class="sj-steps">
+          <i class="sj-spine" aria-hidden="true"><i></i></i>
+          ${steps.map((step, i) => stepMarkup(step, i, steps)).join("")}
         </ol>
-        <div class="jr-stage" role="img" tabindex="0">
-          <div class="jr-scene"></div>
-          <span class="jr-count"></span>
-          <span class="jr-hint">Tap to replay · swipe to change step</span>
-          <div class="jr-progress"><i></i></div>
-        </div>
-        <div class="jr-controls">
-          <button type="button" class="ghost" data-act="prev" aria-label="Previous step">‹ Prev</button>
-          <button type="button" class="ghost" data-act="play">▶ Autoplay</button>
-          <button type="button" data-act="next" aria-label="Next step">Next ›</button>
-        </div>
-        <article class="card jr-body" aria-live="polite"></article>
+
+        <footer class="sj-end">
+          <p class="sj-kicker">End of the line</p>
+          <h3>From a design file to a rack of AI compute.</h3>
+          ${product.relatedIndustry ? `<button type="button" class="sj-related">${esc(product.relatedIndustry.label)} ›</button>` : ""}
+          <button type="button" class="sj-top">↑ Back to the start</button>
+          <p class="sj-note">${esc(product.disclaimer || "")}</p>
+        </footer>
       </div>
     `;
 
-    root.querySelector(".jr-back").addEventListener("click", renderList);
-    root.querySelector(".jr-rail").addEventListener("click", (event) => {
-      const button = event.target.closest("[data-step]");
-      if (button) go(Number(button.dataset.step));
+    root.querySelector(".sj-back").addEventListener("click", () => {
+      renderList();
+      window.scrollTo(0, 0);
     });
-    root.querySelector(".jr-controls").addEventListener("click", (event) => {
-      const action = event.target.closest("[data-act]")?.dataset.act;
-      if (action === "prev") go(index - 1);
-      if (action === "next") go(index + 1);
-      if (action === "play") (playing ? stopAutoplay() : startAutoplay());
+    root.querySelector(".sj-top").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    root.querySelector(".sj-related")?.addEventListener("click", openRelatedIndustry);
+    root.querySelectorAll(".sj-scene").forEach((scene) => {
+      const replay = () => playScene(scene);
+      scene.addEventListener("click", replay);
+      scene.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          replay();
+        }
+      });
     });
-    root.querySelector(".jr-body").addEventListener("click", (event) => {
-      if (event.target.closest("[data-act='next']")) go(index + 1, true);
-      if (event.target.closest("[data-act='restart']")) go(0, true);
-      if (event.target.closest("[data-act='related']")) openRelatedIndustry();
-    });
-    bindStageGestures(root.querySelector(".jr-stage"));
-    renderStep();
+
+    bindScroll();
     window.scrollTo(0, 0);
   }
 
-  function go(nextIndex, scrollToStage = false) {
-    if (!product) return;
-    if (nextIndex < 0 || nextIndex >= product.steps.length) return;
-    index = nextIndex;
-    renderStep();
-    if (playing) scheduleAutoplay();
-    if (scrollToStage) root.querySelector(".jr-rail")?.scrollIntoView({ block: "start", behavior: "smooth" });
-  }
-
-  function renderStep() {
-    const step = product.steps[index];
-    const total = product.steps.length;
-    const last = index === total - 1;
-
-    root.querySelectorAll("[data-step]").forEach((button, i) => {
-      button.classList.toggle("done", i < index);
-      if (i === index) {
-        button.setAttribute("aria-current", "step");
-        button.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
-      } else {
-        button.removeAttribute("aria-current");
-      }
-    });
-
-    playScene();
-    const stage = root.querySelector(".jr-stage");
-    stage.setAttribute("aria-label", `Step ${index + 1} animation: ${step.title}. ${step.tagline}`);
-    root.querySelector(".jr-count").textContent = `${index + 1} / ${total}`;
-    root.querySelector("[data-act='prev']").disabled = index === 0;
-    root.querySelector(".jr-controls [data-act='next']").disabled = last;
-
+  function stepMarkup(step, i, steps) {
+    const number = String(i + 1).padStart(2, "0");
+    const handoff = i === 0 ? "" : (step.handoff || steps[i - 1].output);
     const sources = (step.sourceIds || [])
       .map((id) => (product.sources || []).find((source) => source.id === id))
       .filter(Boolean);
 
-    root.querySelector(".jr-body").innerHTML = `
-      <p class="eyebrow">Step ${index + 1} of ${total}</p>
-      <h2>${esc(step.title)}</h2>
-      <p class="jr-tagline">${esc(step.tagline)}</p>
+    return `
+      <li class="sj-step" data-index="${i}">
+        <span class="sj-marker" aria-hidden="true">${i + 1}</span>
+        ${handoff ? `<p class="sj-handoff reveal"><span aria-hidden="true">↓</span> ${esc(handoff)}</p>` : ""}
+        <p class="sj-number reveal" aria-hidden="true">${number}</p>
+        <h3 class="reveal">${esc(step.title)}</h3>
+        <p class="sj-tagline reveal">${esc(step.tagline)}</p>
 
-      <div class="jr-io">
-        <div><small>Input</small><span>${esc(step.input)}</span></div>
-        <div><small>Process</small><span>${esc(step.process)}</span></div>
-        <div><small>Output</small><span>${esc(step.output)}</span></div>
-      </div>
+        <div class="sj-scene reveal" data-scene="${esc(step.scene)}" role="img" tabindex="0"
+          aria-label="Animation for step ${i + 1}, ${esc(step.title)}. ${esc(step.tagline)} Activate to replay."></div>
 
-      <h3>Who does it</h3>
-      <div class="jr-players">
-        ${(step.players || []).map((player) => `
-          <span class="${player.confirmed ? "confirmed" : ""}">
-            <b>${esc(player.name)}</b>${esc(player.role || "")}${player.confirmed ? "<i>✓ Confirmed</i>" : ""}
-          </span>
-        `).join("")}
-      </div>
-      <p class="jr-note">Companies without “Confirmed” are representative industry players, not confirmed suppliers for this product.</p>
+        <dl class="sj-flow reveal">
+          <div><dt>Input</dt><dd>${esc(step.input)}</dd></div>
+          <div><dt>Process</dt><dd>${esc(step.process)}</dd></div>
+          <div><dt>Output</dt><dd>${esc(step.output)}</dd></div>
+        </dl>
 
-      <div class="jr-callout">
-        <strong>Bottleneck watch</strong>
-        <p>${esc(step.bottleneck)}</p>
-      </div>
+        <div class="sj-who reveal">
+          <h4>Who does it</h4>
+          <div class="sj-players">
+            ${(step.players || []).map((player) => `
+              <span class="${player.confirmed ? "confirmed" : ""}">
+                <b>${esc(player.name)}</b>${esc(player.role || "")}${player.confirmed ? "<i>✓ Confirmed</i>" : ""}
+              </span>
+            `).join("")}
+          </div>
+        </div>
 
-      <details class="jr-evidence">
-        <summary>Evidence and limits</summary>
-        <p>${esc(step.evidence)}</p>
-        ${sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)} ↗</a>`).join("")}
-      </details>
+        <div class="sj-callout reveal">
+          <h4>Bottleneck watch</h4>
+          <p>${esc(step.bottleneck)}</p>
+        </div>
 
-      ${last ? `
-        ${product.relatedIndustry ? `<button type="button" class="jr-next" data-act="related">${esc(product.relatedIndustry.label)} ›</button>` : ""}
-        <button type="button" class="ghost jr-next" data-act="restart">↺ Replay from step 1</button>
-        <p class="jr-note">${esc(product.disclaimer || "")}</p>
-      ` : `
-        <button type="button" class="jr-next" data-act="next">Next: ${esc(product.steps[index + 1].title)} ›</button>
-      `}
+        <details class="sj-evidence reveal">
+          <summary>Evidence and limits</summary>
+          <p>${esc(step.evidence)}</p>
+          <p>Companies without “Confirmed” are representative industry players, not confirmed suppliers for this product.</p>
+          ${sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noreferrer">${esc(source.title)} ↗</a>`).join("")}
+        </details>
+      </li>
     `;
   }
 
-  function playScene() {
-    const step = product.steps[index];
-    const draw = scenes[step.scene];
-    const holder = root.querySelector(".jr-scene");
+  function playScene(holder) {
+    const draw = scenes[holder.dataset.scene];
     holder.innerHTML = draw ? frame(draw()) : "";
-    const bar = root.querySelector(".jr-progress i");
-    bar.classList.remove("run");
-    if (playing) {
-      void bar.offsetWidth; // restart the CSS animation
-      bar.style.animationDuration = `${STEP_MS}ms`;
-      bar.classList.add("run");
+  }
+
+  function bindScroll() {
+    const stepEls = [...root.querySelectorAll(".sj-step")];
+    const list = root.querySelector(".sj-steps");
+    const spineFill = root.querySelector(".sj-spine i");
+    const barFill = root.querySelector(".sj-fill");
+    const now = root.querySelector(".sj-now");
+    const count = root.querySelector(".sj-count");
+
+    if ("IntersectionObserver" in window) {
+      const reveal = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("in");
+          reveal.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+      root.querySelectorAll(".reveal").forEach((node) => reveal.observe(node));
+
+      // A scene plays when it is mostly on screen and re-arms once it has fully left.
+      const play = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const scene = entry.target;
+          if (entry.intersectionRatio >= 0.6 && !scene.dataset.played) {
+            scene.dataset.played = "1";
+            playScene(scene);
+          } else if (entry.intersectionRatio === 0) {
+            delete scene.dataset.played;
+          }
+        });
+      }, { threshold: [0, 0.6] });
+      root.querySelectorAll(".sj-scene").forEach((scene) => play.observe(scene));
+      observers = [reveal, play];
+    } else {
+      root.querySelectorAll(".reveal").forEach((node) => node.classList.add("in"));
+      root.querySelectorAll(".sj-scene").forEach(playScene);
     }
+
+    let queued = false;
+    const update = () => {
+      queued = false;
+      if (!product || document.body.dataset.view !== "made") return;
+      const anchor = window.innerHeight * 0.5;
+      const rect = list.getBoundingClientRect();
+      const progress = Math.min(1, Math.max(0, (anchor - rect.top) / rect.height));
+      spineFill.style.height = `${progress * 100}%`;
+      barFill.style.transform = `scaleX(${progress})`;
+
+      let active = -1;
+      stepEls.forEach((el, i) => {
+        if (el.getBoundingClientRect().top <= anchor) active = i;
+      });
+      stepEls.forEach((el, i) => {
+        el.classList.toggle("seen", i <= active);
+        el.classList.toggle("active", i === active);
+      });
+      if (active < 0) {
+        now.textContent = product.name;
+        count.textContent = `${product.steps.length} steps`;
+      } else {
+        now.textContent = product.steps[active].title;
+        count.textContent = `${active + 1} / ${product.steps.length}`;
+      }
+    };
+    scrollHandler = () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(update);
+    };
+    window.addEventListener("scroll", scrollHandler, { passive: true });
+    window.addEventListener("resize", scrollHandler);
+    update();
   }
 
-  function startAutoplay() {
-    playing = true;
-    if (index === product.steps.length - 1) index = 0;
-    root.querySelector("[data-act='play']").textContent = "❚❚ Pause";
-    renderStep();
-    scheduleAutoplay();
-  }
-
-  function scheduleAutoplay() {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      if (!product || index >= product.steps.length - 1) {
-        stopAutoplay();
-        return;
-      }
-      index += 1;
-      renderStep();
-      scheduleAutoplay();
-    }, STEP_MS);
-  }
-
-  function stopAutoplay() {
-    playing = false;
-    clearTimeout(timer);
-    const button = root.querySelector("[data-act='play']");
-    if (button) button.textContent = "▶ Autoplay";
-    root.querySelector(".jr-progress i")?.classList.remove("run");
-  }
-
-  function bindStageGestures(stage) {
-    let startX = null;
-    let startY = null;
-    let swiped = false;
-
-    stage.addEventListener("touchstart", (event) => {
-      startX = event.touches[0].clientX;
-      startY = event.touches[0].clientY;
-      swiped = false;
-    }, { passive: true });
-
-    stage.addEventListener("touchend", (event) => {
-      if (startX === null) return;
-      const dx = event.changedTouches[0].clientX - startX;
-      const dy = event.changedTouches[0].clientY - startY;
-      startX = null;
-      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-        swiped = true;
-        go(index + (dx < 0 ? 1 : -1));
-      }
-    }, { passive: true });
-
-    stage.addEventListener("click", () => {
-      if (swiped) {
-        swiped = false;
-        return;
-      }
-      playScene();
-      if (playing) scheduleAutoplay();
-    });
-
-    stage.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        playScene();
-      }
-    });
+  function teardown() {
+    observers.forEach((observer) => observer.disconnect());
+    observers = [];
+    if (scrollHandler) {
+      window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("resize", scrollHandler);
+      scrollHandler = null;
+    }
+    document.body.classList.remove("journey-open");
   }
 
   function openRelatedIndustry() {

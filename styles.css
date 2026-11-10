@@ -278,9 +278,14 @@ main { margin: 0 auto; max-width: 1200px; padding: 12px; }
   justify-content: space-between;
   padding: 8px 8px 8px 14px;
 }
-.toolbar button { flex: none; font-size: 12px; min-height: 36px; padding: 4px 12px; }
-.map { height: min(70vh, 640px); overflow: auto; -webkit-overflow-scrolling: touch; position: relative; }
-.map-canvas { position: relative; }
+.zoom-controls { align-items: center; display: flex; flex: none; gap: 4px; }
+.zoom-controls button { font-size: 16px; min-height: 40px; min-width: 40px; padding: 0 10px; }
+.zoom-controls button:disabled { opacity: 0.35; }
+.zoom-controls #reset-view { font-size: 13px; }
+.zoom-controls output { color: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums; min-width: 38px; text-align: center; }
+.map { display: grid; height: min(64vh, 620px); overflow: auto; overscroll-behavior: contain; padding: 8px; position: relative; touch-action: pan-x pan-y; }
+.map-sizer { margin: auto; position: relative; }
+.map-canvas { left: 0; position: absolute; top: 0; transform-origin: 0 0; }
 .edges { inset: 0; pointer-events: none; position: absolute; z-index: 1; }
 .map .node {
   background: var(--surface);

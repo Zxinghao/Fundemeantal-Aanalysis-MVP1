@@ -5,7 +5,7 @@
     "variant": "Blackwell architecture example",
     "maker": "NVIDIA",
     "summary": "From a design file to a rack of compute in a data center: an AI GPU passes through design, wafer fabrication, memory stacking, advanced packaging and system integration.",
-    "duration": "9 steps · about 2 min",
+    "duration": "9 steps · scroll to follow",
     "facts": [
       {
         "value": "208B",
@@ -112,7 +112,8 @@
         "bottleneck": "Leading-edge nodes need near-defect-free wafers; there are few suppliers and qualification is slow.",
         "evidence": "Generic semiconductor process and representative suppliers. Their supply relationship to any specific GPU is not verified here.",
         "sourceIds": [],
-        "scene": "wafer"
+        "scene": "wafer",
+        "handoff": "While the design is finalised, the raw material is prepared"
       },
       {
         "id": "litho",
@@ -143,7 +144,8 @@
           "nvidia-docs",
           "asml-euv"
         ],
-        "scene": "litho"
+        "scene": "litho",
+        "handoff": "Layout files and polished wafers arrive at the foundry"
       },
       {
         "id": "layers",
@@ -174,7 +176,8 @@
         "bottleneck": "A leading-edge wafer spends months in the fab, so capacity cannot be added quickly, and yield decides real output.",
         "evidence": "Generic process flow and representative equipment makers, not a confirmed supplier list for any specific GPU.",
         "sourceIds": [],
-        "scene": "layers"
+        "scene": "layers",
+        "handoff": "The patterned wafer moves on"
       },
       {
         "id": "test",
@@ -205,7 +208,8 @@
         "bottleneck": "GPU dies are huge, so a wafer yields few of them and a single defect scraps a whole die.",
         "evidence": "Generic flow and representative companies. The actual test outsourcing split is not verified.",
         "sourceIds": [],
-        "scene": "test"
+        "scene": "test",
+        "handoff": "The finished wafer leaves the fab line"
       },
       {
         "id": "hbm",
@@ -232,7 +236,8 @@
         "bottleneck": "Only three companies mass-produce HBM. Stacking yield and customer qualification gate supply: no HBM, no GPU shipments.",
         "evidence": "That these three are the main HBM makers is industry consensus. Their share in any given GPU model is not verified here.",
         "sourceIds": [],
-        "scene": "hbm"
+        "scene": "hbm",
+        "handoff": "Meanwhile, on a separate memory line"
       },
       {
         "id": "cowos",
@@ -265,7 +270,8 @@
         "sourceIds": [
           "tsmc-cowos"
         ],
-        "scene": "cowos"
+        "scene": "cowos",
+        "handoff": "Known-good GPU dies and HBM stacks meet"
       },
       {
         "id": "module",
@@ -294,7 +300,8 @@
         "sourceIds": [
           "nvidia-docs"
         ],
-        "scene": "module"
+        "scene": "module",
+        "handoff": "Packaged GPUs ship to system builders"
       },
       {
         "id": "rack",
@@ -324,7 +331,8 @@
         "sourceIds": [
           "nvidia-docs"
         ],
-        "scene": "rack"
+        "scene": "rack",
+        "handoff": "Compute trays slide into the rack"
       }
     ]
   }

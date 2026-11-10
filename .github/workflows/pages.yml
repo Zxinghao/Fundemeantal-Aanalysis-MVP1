@@ -30,6 +30,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B gh-pages
+          # Version every stylesheet/script URL with the commit SHA so a browser
+          # can never pair a freshly deployed index.html with stale cached assets.
+          VERSION="${GITHUB_SHA::8}"
+          sed -i -E "s#(href|src)=\"([A-Za-z0-9._/-]+\.(css|js))\"#\1=\"\2?v=${VERSION}\"#g" index.html
+          sed -i -E "s#(from \"\./scripts/[A-Za-z0-9._-]+\.mjs)\"#\1?v=${VERSION}\"#g" analyst-review.js research-ops.js
+          grep -q "styles.css?v=${VERSION}" index.html
+          git commit -qam "Stamp asset versions for ${VERSION}"
           git push origin gh-pages --force
 
       - name: Request GitHub Pages build

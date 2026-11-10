@@ -206,7 +206,7 @@ main { margin: 0 auto; max-width: 1200px; padding: 12px; }
 .stage + .stage { margin-top: 26px; }
 .stage + .stage::before {
   color: var(--muted);
-  content: "↓ 依赖上游";
+  content: "↓ depends on";
   font-size: 11px;
   left: 14px;
   position: absolute;
@@ -242,6 +242,7 @@ main { margin: 0 auto; max-width: 1200px; padding: 12px; }
 .node-card .node-title { font-size: 15px; font-weight: 700; line-height: 1.3; }
 .node-card .node-summary { color: var(--muted); font-size: 13px; grid-column: 1 / -1; line-height: 1.45; }
 .node-card .chev { align-self: center; color: var(--muted); font-size: 18px; grid-row: 1; grid-column: 2; }
+.node-companies.in-dialog { border: 0; padding: 0; }
 .node-companies {
   border-top: 1px dashed var(--line);
   display: flex;

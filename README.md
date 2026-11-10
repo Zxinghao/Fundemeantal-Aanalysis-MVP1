@@ -10,7 +10,7 @@ Primary GitHub Pages URL:
 
 https://zxinghao.github.io/Fundemeantal-Aanalysis-MVP1/
 
-The repository publishes `main` to `gh-pages` and explicitly requests a GitHub Pages build so repository updates are reflected on the public site.
+The repository publishes `main` to `gh-pages` and explicitly requests a GitHub Pages build so repository updates are reflected on the public site. During publishing, every stylesheet and script URL in `index.html` is stamped with the commit SHA (`?v=<sha>`), so browsers never combine a new page with stale cached assets.
 
 ## Core Features
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -18,23 +18,23 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <div>
           <h1>Bottleneck Radar</h1>
-          <small>供应链瓶颈雷达</small>
+          <small>Supply chain research</small>
         </div>
       </div>
     </header>
 
-    <nav class="view-tabs" aria-label="主要功能">
+    <nav class="view-tabs" aria-label="Primary">
       <button type="button" class="view-tab" data-view-target="chain" aria-current="page">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 11 16.5 6M7.5 13l9 5"/></svg>
-        <span>产业链</span>
+        <span>Supply Chain</span>
       </button>
       <button type="button" class="view-tab" data-view-target="made">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
-        <span>产品制造</span>
+        <span>How It's Made</span>
       </button>
       <button type="button" class="view-tab" data-view-target="desk">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM9 9h6M9 13h6M9 17h3"/></svg>
-        <span>研究台</span>
+        <span>Research Desk</span>
         <b id="desk-count" class="tab-badge" hidden></b>
       </button>
     </nav>
@@ -44,21 +44,21 @@
       <section class="view" id="view-chain" data-view="chain">
         <div class="card chain-head">
           <div class="field-row">
-            <label for="industry-select">行业</label>
+            <label for="industry-select">Industry</label>
             <select id="industry-select"></select>
           </div>
           <h2 id="industry-title"></h2>
           <p id="industry-description" class="lede"></p>
           <div class="chain-tools">
-            <div class="legend" aria-label="图例">
-              <span><i class="dot terminal"></i>终端需求</span>
-              <span><i class="dot chain"></i>环节</span>
-              <span><i class="dot company"></i>公司</span>
-              <span><i class="dot zisu"></i>隐形瓶颈</span>
+            <div class="legend" aria-label="Legend">
+              <span><i class="dot terminal"></i>End demand</span>
+              <span><i class="dot chain"></i>Supply node</span>
+              <span><i class="dot company"></i>Company</span>
+              <span><i class="dot zisu"></i>Hidden bottleneck</span>
             </div>
-            <div class="seg" role="group" aria-label="展示方式">
-              <button type="button" data-map-mode="list" aria-pressed="true">分层</button>
-              <button type="button" data-map-mode="graph" aria-pressed="false">图谱</button>
+            <div class="seg" role="group" aria-label="Layout">
+              <button type="button" data-map-mode="list" aria-pressed="true">Layers</button>
+              <button type="button" data-map-mode="graph" aria-pressed="false">Graph</button>
             </div>
           </div>
         </div>
@@ -67,14 +67,14 @@
 
         <section class="card map-shell">
           <div class="toolbar">
-            <span>左右拖动查看完整图谱，点击节点看详情</span>
-            <button id="reset-view" type="button" class="ghost">回到起点</button>
+            <span>Drag to pan. Tap a node for details.</span>
+            <button id="reset-view" type="button" class="ghost">Reset</button>
           </div>
           <div id="supply-chain-map" class="map"></div>
         </section>
 
         <details class="card method-card">
-          <summary>隐形瓶颈研究方法</summary>
+          <summary>Hidden bottleneck method</summary>
           <ol>
             <li>Start from durable end-market demand and trace dependencies upstream.</li>
             <li>Separate observed evidence from the investment claim it may support.</li>
@@ -146,7 +146,7 @@
     </main>
 
     <dialog id="company-dialog">
-      <button class="close" id="close-dialog" type="button" aria-label="关闭">×</button>
+      <button class="close" id="close-dialog" type="button" aria-label="Close">×</button>
       <div id="company-detail"></div>
     </dialog>
 
@@ -154,8 +154,6 @@
     <script src="app.js"></script>
     <script src="review-queue-gate.js"></script>
     <script src="research-evidence-ui.js"></script>
-    <script src="node-details.js"></script>
-    <script src="company-flags.js"></script>
     <script type="module" src="analyst-review.js"></script>
     <script type="module" src="research-ops.js"></script>
     <script src="review-export.js"></script>

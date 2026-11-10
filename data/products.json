@@ -2,21 +2,33 @@
   {
     "id": "nvidia-ai-gpu",
     "name": "NVIDIA AI GPU",
-    "variant": "以 Blackwell 架构为例",
+    "variant": "Blackwell architecture example",
     "maker": "NVIDIA",
-    "summary": "从一张设计图到数据中心里的一整柜算力：一颗 AI GPU 要经过设计、晶圆制造、存储堆叠、先进封装和整机集成。",
-    "duration": "9 步 · 约 2 分钟",
+    "summary": "From a design file to a rack of compute in a data center: an AI GPU passes through design, wafer fabrication, memory stacking, advanced packaging and system integration.",
+    "duration": "9 steps · about 2 min",
     "facts": [
-      { "value": "2080 亿", "label": "晶体管 / 每颗 GPU" },
-      { "value": "TSMC 4NP", "label": "制造工艺" },
-      { "value": "72 GPU", "label": "每个 NVL72 机柜" }
+      {
+        "value": "208B",
+        "label": "transistors per GPU"
+      },
+      {
+        "value": "TSMC 4NP",
+        "label": "process"
+      },
+      {
+        "value": "72 GPUs",
+        "label": "per NVL72 rack"
+      }
     ],
-    "linkedNames": ["NVIDIA", "GPU Clusters"],
+    "linkedNodeIds": [
+      "nvidia",
+      "gpu-cluster"
+    ],
     "relatedIndustry": {
       "id": "ai-optics",
-      "label": "机柜之间靠光模块互连 → 查看 AI 光模块产业链"
+      "label": "Racks are linked by optical modules: open the AI optical module supply chain"
     },
-    "disclaimer": "示意性流程，用于理解产业链结构：不是某一型号的完整物料清单（BOM），“行业代表企业”不代表已确认的 NVIDIA 供货关系，也不构成投资建议。",
+    "disclaimer": "Illustrative flow for understanding supply-chain structure. It is not a bill of materials for any specific model, representative companies are not confirmed NVIDIA suppliers, and nothing here is investment advice.",
     "sources": [
       {
         "id": "nvidia-docs",
@@ -42,178 +54,277 @@
     "steps": [
       {
         "id": "design",
-        "scene": "design",
-        "short": "设计",
-        "title": "芯片设计",
-        "en": "Chip design & tape-out",
-        "tagline": "NVIDIA 只画“图纸”，不自己建厂。一颗 GPU 由两颗芯粒拼成。",
-        "input": "算力需求、EDA 软件、IP",
-        "process": "规划电路布局，反复仿真验证，输出设计文件（流片）",
-        "output": "交给晶圆厂的版图文件",
+        "short": "Design",
+        "title": "Chip design",
+        "tagline": "NVIDIA only draws the blueprint; it owns no fabs. One GPU is built from two dies.",
+        "input": "Compute targets, EDA software, IP",
+        "process": "Lay out the circuits, simulate and verify, then tape out",
+        "output": "Layout files for the foundry",
         "players": [
-          { "name": "NVIDIA", "role": "设计", "confirmed": true },
-          { "name": "Synopsys", "role": "EDA" },
-          { "name": "Cadence", "role": "EDA" }
+          {
+            "name": "NVIDIA",
+            "role": "Design",
+            "confirmed": true
+          },
+          {
+            "name": "Synopsys",
+            "role": "EDA"
+          },
+          {
+            "name": "Cadence",
+            "role": "EDA"
+          }
         ],
-        "bottleneck": "设计与验证周期长，且必须和特定工艺深度绑定，换代工厂代价极高。",
-        "evidence": "NVIDIA 官方：Blackwell GPU 含 2080 亿晶体管，由两颗达到光罩尺寸上限的芯粒通过 10 TB/s 互连组成。EDA 厂商为行业通用示例。",
-        "sourceIds": ["nvidia-docs", "nvidia-blackwell"]
+        "bottleneck": "Design and verification take years and are tied to one specific process, so switching foundries is very costly.",
+        "evidence": "NVIDIA states that Blackwell GPUs pack 208 billion transistors and use two reticle-limited dies joined by a 10 TB/s chip-to-chip link. The EDA vendors are generic industry examples.",
+        "sourceIds": [
+          "nvidia-docs",
+          "nvidia-blackwell"
+        ],
+        "scene": "design"
       },
       {
         "id": "wafer",
-        "scene": "wafer",
-        "short": "硅晶圆",
-        "title": "硅晶圆",
-        "en": "Silicon wafer",
-        "tagline": "把沙子提纯成单晶硅棒，再切成镜面一样的 300mm 圆片。",
-        "input": "高纯多晶硅",
-        "process": "熔化 → 拉出单晶硅棒 → 切片 → 研磨抛光",
-        "output": "300mm 抛光晶圆",
+        "short": "Wafer",
+        "title": "Silicon wafer",
+        "tagline": "Sand is purified into a single-crystal ingot, then sliced into mirror-flat 300mm discs.",
+        "input": "High-purity polysilicon",
+        "process": "Melt → pull a crystal ingot → slice → grind and polish",
+        "output": "Polished 300mm wafers",
         "players": [
-          { "name": "Shin-Etsu", "role": "硅片" },
-          { "name": "SUMCO", "role": "硅片" },
-          { "name": "GlobalWafers", "role": "硅片" },
-          { "name": "Siltronic", "role": "硅片" }
+          {
+            "name": "Shin-Etsu",
+            "role": "Wafers"
+          },
+          {
+            "name": "SUMCO",
+            "role": "Wafers"
+          },
+          {
+            "name": "GlobalWafers",
+            "role": "Wafers"
+          },
+          {
+            "name": "Siltronic",
+            "role": "Wafers"
+          }
         ],
-        "bottleneck": "先进制程对硅片缺陷要求极高，供应商少、认证周期长。",
-        "evidence": "半导体通用工艺与行业代表企业，未核实其与具体 GPU 型号的供货关系。",
-        "sourceIds": []
+        "bottleneck": "Leading-edge nodes need near-defect-free wafers; there are few suppliers and qualification is slow.",
+        "evidence": "Generic semiconductor process and representative suppliers. Their supply relationship to any specific GPU is not verified here.",
+        "sourceIds": [],
+        "scene": "wafer"
       },
       {
         "id": "litho",
-        "scene": "litho",
-        "short": "光刻",
-        "title": "光刻",
-        "en": "EUV lithography",
-        "tagline": "用极紫外光把电路图案“投影”到晶圆上，一格一格地曝光。",
-        "input": "晶圆、光罩、光刻胶",
-        "process": "EUV 光穿过光罩，经镜组缩小后逐格曝光",
-        "output": "印上电路图案的晶圆",
+        "short": "Lithography",
+        "title": "Lithography",
+        "tagline": "Extreme-ultraviolet light projects the circuit pattern onto the wafer, one die at a time.",
+        "input": "Wafer, photomask, photoresist",
+        "process": "EUV light passes the mask, is reduced by the optics, and exposes die after die",
+        "output": "Wafer printed with circuit patterns",
         "players": [
-          { "name": "ASML", "role": "EUV 光刻机（唯一供应商）" },
-          { "name": "TSMC", "role": "晶圆代工", "confirmed": true },
-          { "name": "JSR / TOK", "role": "光刻胶" }
+          {
+            "name": "ASML",
+            "role": "EUV scanners (sole supplier)"
+          },
+          {
+            "name": "TSMC",
+            "role": "Foundry",
+            "confirmed": true
+          },
+          {
+            "name": "JSR / TOK",
+            "role": "Photoresist"
+          }
         ],
-        "bottleneck": "EUV 光刻机全球只有 ASML 能造，是整条链上最集中的设备环节。",
-        "evidence": "NVIDIA 官方确认 Blackwell 使用 TSMC 定制 4NP 工艺。ASML 是 EUV 光刻系统的唯一供应商。光刻胶厂商为行业示例。",
-        "sourceIds": ["nvidia-docs", "asml-euv"]
+        "bottleneck": "Only ASML can build EUV scanners. It is the most concentrated equipment step in the whole chain.",
+        "evidence": "NVIDIA confirms Blackwell is manufactured on a custom TSMC 4NP process. ASML is the only supplier of EUV lithography systems. Resist vendors are industry examples.",
+        "sourceIds": [
+          "nvidia-docs",
+          "asml-euv"
+        ],
+        "scene": "litho"
       },
       {
         "id": "layers",
-        "scene": "layers",
-        "short": "刻蚀沉积",
-        "title": "刻蚀与沉积",
-        "en": "Etch, deposition & repeat",
-        "tagline": "沉积 → 光刻 → 刻蚀，循环数百次，像盖楼一样一层层叠出晶体管和金属连线。",
-        "input": "曝光后的晶圆、特种气体、化学品",
-        "process": "镀膜、刻掉多余部分、清洗、检测，然后重复",
-        "output": "布满 GPU 芯粒的成品晶圆",
+        "short": "Etch & deposit",
+        "title": "Etch and deposition",
+        "tagline": "Deposit, pattern, etch — repeated hundreds of times to build transistors and wiring layer by layer.",
+        "input": "Exposed wafer, specialty gases, chemicals",
+        "process": "Deposit films, etch away the excess, clean, inspect, repeat",
+        "output": "Finished wafer full of GPU dies",
         "players": [
-          { "name": "Applied Materials", "role": "沉积" },
-          { "name": "Lam Research", "role": "刻蚀" },
-          { "name": "Tokyo Electron", "role": "涂胶显影 / 刻蚀" },
-          { "name": "KLA", "role": "检测" }
+          {
+            "name": "Applied Materials",
+            "role": "Deposition"
+          },
+          {
+            "name": "Lam Research",
+            "role": "Etch"
+          },
+          {
+            "name": "Tokyo Electron",
+            "role": "Coat / develop, etch"
+          },
+          {
+            "name": "KLA",
+            "role": "Inspection"
+          }
         ],
-        "bottleneck": "一片先进制程晶圆要在厂里走上几个月，产能无法快速扩张；良率决定实际产出。",
-        "evidence": "半导体通用工艺与设备行业代表企业，非特定 GPU 的已确认供应商名单。",
-        "sourceIds": []
+        "bottleneck": "A leading-edge wafer spends months in the fab, so capacity cannot be added quickly, and yield decides real output.",
+        "evidence": "Generic process flow and representative equipment makers, not a confirmed supplier list for any specific GPU.",
+        "sourceIds": [],
+        "scene": "layers"
       },
       {
         "id": "test",
-        "scene": "test",
-        "short": "测试切割",
-        "title": "晶圆测试与切割",
-        "en": "Wafer sort & dicing",
-        "tagline": "逐颗通电测试，标出坏点，再把晶圆切成一颗颗芯粒，只留良品。",
-        "input": "成品晶圆、探针卡、测试机",
-        "process": "探针逐颗测试 → 标记不良 → 切割",
-        "output": "已知良品芯粒（KGD）",
+        "short": "Test & dice",
+        "title": "Wafer test and dicing",
+        "tagline": "Every die is probed, bad ones are marked, and the wafer is cut apart. Only good dies move on.",
+        "input": "Finished wafer, probe cards, testers",
+        "process": "Probe each die → mark failures → dice",
+        "output": "Known-good dies (KGD)",
         "players": [
-          { "name": "Advantest", "role": "测试机" },
-          { "name": "Teradyne", "role": "测试机" },
-          { "name": "FormFactor", "role": "探针卡" },
-          { "name": "DISCO", "role": "切割" }
+          {
+            "name": "Advantest",
+            "role": "Testers"
+          },
+          {
+            "name": "Teradyne",
+            "role": "Testers"
+          },
+          {
+            "name": "FormFactor",
+            "role": "Probe cards"
+          },
+          {
+            "name": "DISCO",
+            "role": "Dicing"
+          }
         ],
-        "bottleneck": "GPU 芯粒面积很大，一片晶圆切不出多少颗，一个缺陷就报废一整颗。",
-        "evidence": "通用流程与行业代表企业。具体测试外包分工未核实。",
-        "sourceIds": []
+        "bottleneck": "GPU dies are huge, so a wafer yields few of them and a single defect scraps a whole die.",
+        "evidence": "Generic flow and representative companies. The actual test outsourcing split is not verified.",
+        "sourceIds": [],
+        "scene": "test"
       },
       {
         "id": "hbm",
-        "scene": "hbm",
         "short": "HBM",
-        "title": "HBM 高带宽存储",
-        "en": "HBM — parallel stream",
-        "tagline": "另一条并行的产线：把多层 DRAM 芯片垂直叠起来，用硅通孔上下打通。",
-        "input": "DRAM 晶圆",
-        "process": "打孔（TSV）→ 减薄 → 逐层堆叠键合 → 测试",
-        "output": "HBM 存储堆叠",
+        "title": "High-bandwidth memory",
+        "tagline": "A second production line running in parallel: DRAM dies stacked vertically and wired through with vias.",
+        "input": "DRAM wafers",
+        "process": "Drill vias (TSV) → thin → stack and bond layer by layer → test",
+        "output": "HBM memory stacks",
         "players": [
-          { "name": "SK hynix", "role": "HBM" },
-          { "name": "Samsung", "role": "HBM" },
-          { "name": "Micron", "role": "HBM" }
+          {
+            "name": "SK hynix",
+            "role": "HBM"
+          },
+          {
+            "name": "Samsung",
+            "role": "HBM"
+          },
+          {
+            "name": "Micron",
+            "role": "HBM"
+          }
         ],
-        "bottleneck": "全球只有三家能量产 HBM，堆叠良率和客户认证是关键；GPU 再多，没有 HBM 也出不了货。",
-        "evidence": "HBM 主要厂商为这三家属行业共识；各家在具体 GPU 型号中的份额未在此核实。",
-        "sourceIds": []
+        "bottleneck": "Only three companies mass-produce HBM. Stacking yield and customer qualification gate supply: no HBM, no GPU shipments.",
+        "evidence": "That these three are the main HBM makers is industry consensus. Their share in any given GPU model is not verified here.",
+        "sourceIds": [],
+        "scene": "hbm"
       },
       {
         "id": "cowos",
-        "scene": "cowos",
         "short": "CoWoS",
-        "title": "CoWoS 先进封装",
-        "en": "Advanced packaging",
-        "tagline": "两条产线在这里汇合：GPU 芯粒和 HBM 并排放到中介层上，再装到基板上。",
-        "input": "GPU 芯粒、HBM、中介层、ABF 基板",
-        "process": "Chip（芯片）on Wafer（中介层）on Substrate（基板）",
-        "output": "完成封装的 GPU",
+        "title": "CoWoS advanced packaging",
+        "tagline": "The two lines meet here: GPU dies and HBM sit side by side on an interposer, which is mounted on a substrate.",
+        "input": "GPU dies, HBM, interposer, ABF substrate",
+        "process": "Chip on Wafer (interposer) on Substrate",
+        "output": "Packaged GPU",
         "players": [
-          { "name": "TSMC", "role": "CoWoS 封装" },
-          { "name": "Ibiden", "role": "ABF 基板" },
-          { "name": "Unimicron", "role": "ABF 基板" },
-          { "name": "Ajinomoto", "role": "ABF 膜材料" }
+          {
+            "name": "TSMC",
+            "role": "CoWoS packaging"
+          },
+          {
+            "name": "Ibiden",
+            "role": "ABF substrate"
+          },
+          {
+            "name": "Unimicron",
+            "role": "ABF substrate"
+          },
+          {
+            "name": "Ajinomoto",
+            "role": "ABF film"
+          }
         ],
-        "bottleneck": "近几年 AI GPU 出货的头号卡点：封装产能、中介层和大尺寸基板都要同步扩张。",
-        "evidence": "CoWoS 为 TSMC 的 2.5D 封装技术（官方资料）。Blackwell 采用 CoWoS-L 及基板厂商来自行业公开报道，未逐一核实；当前产能松紧需另行查证。",
-        "sourceIds": ["tsmc-cowos"]
+        "bottleneck": "The best-known choke point for AI GPU shipments in recent years: packaging capacity, interposers and large substrates must all scale together.",
+        "evidence": "CoWoS is TSMC's 2.5D packaging technology (official material). Blackwell's use of CoWoS-L and the substrate vendors come from public industry reporting and are not individually verified; current capacity tightness needs separate checking.",
+        "sourceIds": [
+          "tsmc-cowos"
+        ],
+        "scene": "cowos"
       },
       {
         "id": "module",
-        "scene": "module",
-        "short": "模块",
-        "title": "模块与服务器组装",
-        "en": "Module & server assembly",
-        "tagline": "封装好的 GPU 装上主板，配上供电和液冷冷板，再做整机测试。",
-        "input": "GPU 封装、CPU、PCB、供电、冷板",
-        "process": "贴装 → 装冷板和管路 → 固件烧录 → 老化测试",
-        "output": "计算托盘（compute tray）",
+        "short": "Module",
+        "title": "Module and server assembly",
+        "tagline": "Packaged GPUs go onto a board with power delivery and liquid cold plates, then the system is tested.",
+        "input": "GPU packages, CPU, PCB, power, cold plates",
+        "process": "Mount → fit cold plates and tubing → flash firmware → burn-in test",
+        "output": "Compute tray",
         "players": [
-          { "name": "Foxconn", "role": "整机制造" },
-          { "name": "Quanta", "role": "整机制造" },
-          { "name": "Wistron / Wiwynn", "role": "整机制造" }
+          {
+            "name": "Foxconn",
+            "role": "System manufacturing"
+          },
+          {
+            "name": "Quanta",
+            "role": "System manufacturing"
+          },
+          {
+            "name": "Wistron / Wiwynn",
+            "role": "System manufacturing"
+          }
         ],
-        "bottleneck": "单颗芯片功耗极高，供电和散热设计成为新的工程瓶颈，风冷已不够用。",
-        "evidence": "NVIDIA 官方：GB200 超级芯片由 2 颗 Blackwell GPU + 1 颗 Grace CPU 组成，NVL72 为液冷设计。代工厂为行业公开报道的代表企业，逐型号分工未核实。",
-        "sourceIds": ["nvidia-docs"]
+        "bottleneck": "Each chip draws so much power that power delivery and cooling have become the new engineering limit; air cooling is no longer enough.",
+        "evidence": "NVIDIA states that a GB200 superchip combines two Blackwell GPUs with one Grace CPU and that NVL72 is liquid-cooled. The manufacturers are representative companies from public reporting; the per-model split is not verified.",
+        "sourceIds": [
+          "nvidia-docs"
+        ],
+        "scene": "module"
       },
       {
         "id": "rack",
-        "scene": "rack",
-        "short": "机柜",
-        "title": "机柜与数据中心",
-        "en": "Rack & data center",
-        "tagline": "72 颗 GPU 装进一个液冷机柜，机柜之间用高速网络和光模块连成“AI 工厂”。",
-        "input": "计算托盘、交换机、电源、液冷、光模块",
-        "process": "整柜集成 → 上电验收 → 接入数据中心网络",
-        "output": "可以训练和推理的算力",
+        "short": "Rack",
+        "title": "Rack and data center",
+        "tagline": "72 GPUs fill one liquid-cooled rack, and racks are linked by fast networking and optical modules into an AI factory.",
+        "input": "Compute trays, switches, power, cooling, optics",
+        "process": "Integrate the rack → power-on acceptance → connect to the data-center network",
+        "output": "Compute ready for training and inference",
         "players": [
-          { "name": "NVIDIA", "role": "机柜架构 / 网络", "confirmed": true },
-          { "name": "云厂商", "role": "部署运营" },
-          { "name": "光模块厂商", "role": "互连" }
+          {
+            "name": "NVIDIA",
+            "role": "Rack architecture, networking",
+            "confirmed": true
+          },
+          {
+            "name": "Cloud providers",
+            "role": "Deployment"
+          },
+          {
+            "name": "Optical module makers",
+            "role": "Interconnect"
+          }
         ],
-        "bottleneck": "芯片造完不等于算力上线：电力、液冷基础设施和光互连决定部署速度。",
-        "evidence": "NVIDIA 官方：GB200 NVL72 为液冷机柜级方案，含 72 颗 Blackwell GPU 与 36 颗 Grace CPU，组成单一 72-GPU NVLink 域。",
-        "sourceIds": ["nvidia-docs"]
+        "bottleneck": "A finished chip is not yet online compute: power, liquid-cooling infrastructure and optical interconnect set the pace of deployment.",
+        "evidence": "NVIDIA states that GB200 NVL72 is a liquid-cooled rack-scale system with 72 Blackwell GPUs and 36 Grace CPUs in a single 72-GPU NVLink domain.",
+        "sourceIds": [
+          "nvidia-docs"
+        ],
+        "scene": "rack"
       }
     ]
   }

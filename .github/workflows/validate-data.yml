@@ -28,8 +28,6 @@ jobs:
           node --check research-evidence-ui.js
           node --check analyst-review.js
           node --check research-ops.js
-          node --check node-details.js
-          node --check company-flags.js
           node --check review-export.js
           node --check product-journey.js
           node -e "const p=JSON.parse(require('fs').readFileSync('data/products.json','utf8'));if(!Array.isArray(p)||p.some(x=>!x.id||!Array.isArray(x.steps)||!x.steps.length))throw new Error('products.json malformed')"

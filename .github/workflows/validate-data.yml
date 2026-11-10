@@ -30,6 +30,12 @@ jobs:
           node --check research-ops.js
           node --check review-export.js
           node --check product-journey.js
+          node --check dual-review-ui.js
+          node --check scripts/build-daily-research.mjs
+          node --check scripts/reconcile-dual-research.mjs
+          node --check scripts/telegram-dual-alerts.mjs
+          node --check tests/dual-agent-research.test.mjs
+          node -e "const s=JSON.parse(require('fs').readFileSync('scripts/dual-agent-output.schema.json','utf8')); if(!s.properties?.assessments) process.exit(1)"
           node -e "const p=JSON.parse(require('fs').readFileSync('data/products.json','utf8'));if(!Array.isArray(p)||p.some(x=>!x.id||!Array.isArray(x.steps)||!x.steps.length))throw new Error('products.json malformed')"
           node --check scripts/disclosure-diff.mjs
           node --check scripts/candidate-interpretation.mjs
@@ -57,6 +63,9 @@ jobs:
 
       - name: Run research pipeline regression tests
         run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs tests/analyst-review-workflow.test.mjs tests/scanner-signal-quality.test.mjs tests/source-retry.test.mjs tests/source-health.test.mjs tests/scanner-event-policy.test.mjs
+
+      - name: Test independent research and Telegram gates
+        run: node --test tests/dual-agent-research.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

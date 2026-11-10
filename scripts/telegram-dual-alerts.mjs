@@ -10,7 +10,7 @@ export function notificationCandidates(reviews, ledger) {
   const sent = new Set((ledger?.sent || []).map((item) => item.eventId));
   return (reviews?.findings || []).filter((item) =>
     item.status === "consensus_candidate" && item.humanApprovalRequired === true &&
-    item.graphChanged === false && item.claude?.verdict === "material_candidate" &&
+    item.graphChanged === false && item.checkedAt === reviews.lastRunAt && item.claude?.verdict === "material_candidate" &&
     item.codex?.verdict === "material_candidate" && !sent.has(item.eventId)
   );
 }

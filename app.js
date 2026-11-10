@@ -207,9 +207,7 @@ function bindInteractions() {
     const chip = event.target.closest("[data-open-company]");
     if (chip) openCompany(chip.dataset.openCompany);
   });
-  document.querySelector("#reset-view").addEventListener("click", () => {
-    map.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-  });
+  bindGraphZoom();
 
   form.addEventListener("submit", handleSubmission);
   reviewFilter.addEventListener("change", renderPendingUpdates);
@@ -234,7 +232,7 @@ function renderGraph() {
 
   const maxX = Math.max(...state.industry.nodes.map((node) => node.position.x)) + 250;
   const maxY = Math.max(...state.industry.nodes.map((node) => node.position.y)) + 140;
-  const canvasHeight = Math.max(maxY, 600);
+  const canvasHeight = maxY;
   canvas.style.width = `${maxX}px`;
   canvas.style.height = `${canvasHeight}px`;
 
@@ -283,8 +281,104 @@ function renderGraph() {
     canvas.appendChild(element);
   });
 
+  const sizer = document.createElement("div");
+  sizer.className = "map-sizer";
+  sizer.appendChild(canvas);
   map.innerHTML = "";
-  map.appendChild(canvas);
+  map.appendChild(sizer);
+
+  graph.canvas = canvas;
+  graph.sizer = sizer;
+  graph.width = maxX;
+  graph.height = canvasHeight;
+  graph.userZoomed = false;
+  fitGraph();
+}
+
+// ---------- Graph zoom: buttons, pinch, and ctrl/cmd + wheel ----------
+
+const graph = { canvas: null, sizer: null, width: 0, height: 0, zoom: 1, userZoomed: false };
+const MAX_ZOOM = 1.6;
+
+function fitZoom() {
+  if (!graph.width || !map.clientWidth) return 1;
+  return Math.min(1, (map.clientWidth - 16) / graph.width, (map.clientHeight - 16) / graph.height);
+}
+
+function fitGraph() {
+  if (!graph.canvas || !map.clientWidth) return;
+  graph.userZoomed = false;
+  applyGraphZoom(fitZoom());
+  map.scrollTo(0, 0);
+}
+
+// Zoom while keeping the content under the focal point (viewport coordinates) in place.
+function zoomGraphTo(zoom, focalX = map.clientWidth / 2, focalY = map.clientHeight / 2) {
+  if (!graph.canvas) return;
+  const next = Math.min(MAX_ZOOM, Math.max(fitZoom(), zoom));
+  const offsetX = graph.sizer.offsetLeft;
+  const offsetY = graph.sizer.offsetTop;
+  const contentX = (map.scrollLeft + focalX - offsetX) / graph.zoom;
+  const contentY = (map.scrollTop + focalY - offsetY) / graph.zoom;
+  graph.userZoomed = true;
+  applyGraphZoom(next);
+  map.scrollLeft = contentX * next + graph.sizer.offsetLeft - focalX;
+  map.scrollTop = contentY * next + graph.sizer.offsetTop - focalY;
+}
+
+function applyGraphZoom(zoom) {
+  graph.zoom = zoom;
+  graph.canvas.style.transform = `scale(${zoom})`;
+  graph.sizer.style.width = `${graph.width * zoom}px`;
+  graph.sizer.style.height = `${graph.height * zoom}px`;
+  const label = document.querySelector("#zoom-level");
+  if (label) label.textContent = `${Math.round(zoom * 100)}%`;
+  const atFit = zoom <= fitZoom() + 0.001;
+  document.querySelector("#zoom-out").disabled = atFit;
+  document.querySelector("#zoom-in").disabled = zoom >= MAX_ZOOM - 0.001;
+}
+
+function refitGraphIfUntouched() {
+  if (graph.canvas && !graph.userZoomed) fitGraph();
+}
+
+function bindGraphZoom() {
+  document.querySelector("#zoom-in").addEventListener("click", () => zoomGraphTo(graph.zoom * 1.35));
+  document.querySelector("#zoom-out").addEventListener("click", () => zoomGraphTo(graph.zoom / 1.35));
+  document.querySelector("#reset-view").addEventListener("click", fitGraph);
+  window.addEventListener("resize", refitGraphIfUntouched);
+
+  let pinch = null;
+  const distance = (touches) => Math.hypot(
+    touches[0].clientX - touches[1].clientX,
+    touches[0].clientY - touches[1].clientY
+  );
+
+  map.addEventListener("touchstart", (event) => {
+    if (event.touches.length === 2) pinch = { distance: distance(event.touches), zoom: graph.zoom };
+  }, { passive: true });
+
+  map.addEventListener("touchmove", (event) => {
+    if (!pinch || event.touches.length !== 2) return;
+    event.preventDefault();
+    const rect = map.getBoundingClientRect();
+    const midX = (event.touches[0].clientX + event.touches[1].clientX) / 2 - rect.left;
+    const midY = (event.touches[0].clientY + event.touches[1].clientY) / 2 - rect.top;
+    zoomGraphTo(pinch.zoom * (distance(event.touches) / pinch.distance), midX, midY);
+  }, { passive: false });
+
+  const endPinch = (event) => {
+    if (event.touches.length < 2) pinch = null;
+  };
+  map.addEventListener("touchend", endPinch, { passive: true });
+  map.addEventListener("touchcancel", endPinch, { passive: true });
+
+  map.addEventListener("wheel", (event) => {
+    if (!event.ctrlKey && !event.metaKey) return;
+    event.preventDefault();
+    const rect = map.getBoundingClientRect();
+    zoomGraphTo(graph.zoom * (event.deltaY < 0 ? 1.12 : 1 / 1.12), event.clientX - rect.left, event.clientY - rect.top);
+  }, { passive: false });
 }
 
 // ---------- App shell: view tabs + list/graph toggle ----------
@@ -329,6 +423,7 @@ function showView(view, updateHash = true) {
     }
   }
   if (updateHash) window.scrollTo(0, 0);
+  if (view === "chain") refitGraphIfUntouched();
   document.dispatchEvent(new CustomEvent("radar:view", { detail: { view } }));
 }
 
@@ -338,6 +433,7 @@ function setMapMode(mode, persist) {
     button.setAttribute("aria-pressed", String(button.dataset.mapMode === mode));
   });
   if (persist) writePreference("mapMode", mode);
+  refitGraphIfUntouched();
 }
 
 function readPreference(key) {

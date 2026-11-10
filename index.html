@@ -67,8 +67,13 @@
 
         <section class="card map-shell">
           <div class="toolbar">
-            <span>Drag to pan. Tap a node for details.</span>
-            <button id="reset-view" type="button" class="ghost">Reset</button>
+            <span>Pinch or use + / − to zoom. Tap a node for details.</span>
+            <div class="zoom-controls" role="group" aria-label="Zoom">
+              <button id="zoom-out" type="button" class="ghost" aria-label="Zoom out">−</button>
+              <output id="zoom-level">100%</output>
+              <button id="zoom-in" type="button" class="ghost" aria-label="Zoom in">+</button>
+              <button id="reset-view" type="button" class="ghost">Fit</button>
+            </div>
           </div>
           <div id="supply-chain-map" class="map"></div>
         </section>

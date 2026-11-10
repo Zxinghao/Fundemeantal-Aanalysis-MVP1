@@ -37,6 +37,13 @@ export function buildDailyBrief(industries, watchlist, cache, events, at = new D
       });
     }
   }
+  const officialSourceIndex = new Map();
+  for (const [industryId, config] of Object.entries(watchlist)) {
+    for (const entries of Object.values(config || {})) {
+      if (!Array.isArray(entries)) continue;
+      for (const source of entries) officialSourceIndex.set(industryId + ":" + source.id, source.url);
+    }
+  }
   // Discard old history and pre-baseline noise. Models only see comparable,
   // recent source changes, not the whole historical event store.
   const cases = (events || []).filter((event) => {
@@ -45,7 +52,7 @@ export function buildDailyBrief(industries, watchlist, cache, events, at = new D
     return event.status === "pending" && !event.reviewDecision &&
       diff?.status === "comparable" && diff.addedCount > 0 &&
       Number.isFinite(age) && age >= -1 && age <= 96 &&
-      (event.sourceIds || []).length > 0 && !!event.sourceUrl;
+      (event.sourceIds || []).some((sourceId) => officialSourceIndex.get(event.industryId + ":" + sourceId) === event.sourceUrl);
   }).sort((a, b) => new Date(b.detectedAt) - new Date(a.detectedAt))
     .slice(0, 6).map((event) => {
       const diff = event.changeEvidence || event.researchPacket?.evidence?.[0]?.changeSet;

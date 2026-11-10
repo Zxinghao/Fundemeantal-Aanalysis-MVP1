@@ -86,8 +86,8 @@
     const sources=(report.coverage||[]).filter((item)=>item.industryId===industry);
     dashboard.append(metric("共识候选",consensus.length),metric("需要补证",disagreement.length),
       metric("本轮跟踪来源",sources.length),metric("来源过期或缺失",sources.filter((x)=>x.freshness!=="current").length));
-    const timestamp = new Date(report.lastRunAt);
-    status.textContent=Number.isFinite(timestamp.getTime())?"上次研究："+timestamp.toLocaleString("zh-CN"):"研究时间未知";
+    const timestamp = report.lastRunAt ? new Date(report.lastRunAt) : null;
+    status.textContent=timestamp && Number.isFinite(timestamp.getTime()) ? "上次研究："+timestamp.toLocaleString("zh-CN") : "尚未执行双模型研究";
     const ordered=[...consensus,...disagreement];
     if(!ordered.length){
       const empty=document.createElement("p");empty.className="dual-empty";

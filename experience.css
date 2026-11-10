@@ -102,6 +102,8 @@ body::before,body::after { display:none; }
 .gpu-method-note strong { font-size:16px; }
 .gpu-method-note p { color:#66758b; font-size:13px; line-height:1.7; }
 .gpu-sources { display:flex; gap:17px; flex-wrap:wrap; padding-top:4px; }
+.gpu-crosslink { display:block; width:100%; margin:0 0 20px; padding:14px 16px; background:#245edb; color:#fff; border-radius:12px; text-align:center; font-size:13px; }
+.gpu-crosslink:hover { background:#174aa9; }
 @media(max-width:900px) {
   #experience-layout { display:grid; grid-template-columns:1fr; }
   #experience-layout .explorer-panel { position:static; width:100%; }

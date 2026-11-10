@@ -69,6 +69,8 @@ const industrySelect = document.querySelector("#industry-select");
 const industryTitle = document.querySelector("#industry-title");
 const industryDescription = document.querySelector("#industry-description");
 const map = document.querySelector("#supply-chain-map");
+const chainList = document.querySelector("#chain-list");
+const deskCount = document.querySelector("#desk-count");
 const pendingUpdates = document.querySelector("#pending-updates");
 const dialog = document.querySelector("#company-dialog");
 const detail = document.querySelector("#company-detail");
@@ -76,6 +78,7 @@ const form = document.querySelector("#submission-form");
 const reviewFilter = document.querySelector("#review-filter");
 
 async function boot() {
+  initShell();
   try {
     const [loadedIndustries, generatedEvents, scoringRubric] = await Promise.all([
       loadIndustries(),
@@ -177,6 +180,9 @@ function bindInteractions() {
   });
 
   document.querySelector("#close-dialog").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
   document.querySelector("#reset-view").addEventListener("click", () => {
     map.scrollTo({ left: 0, top: 0, behavior: "smooth" });
   });
@@ -194,18 +200,24 @@ function render() {
 }
 
 function renderMap() {
+  renderChainList();
+  renderGraph();
+}
+
+function renderGraph() {
   const canvas = document.createElement("div");
   canvas.className = "map-canvas";
 
   const maxX = Math.max(...state.industry.nodes.map((node) => node.position.x)) + 250;
   const maxY = Math.max(...state.industry.nodes.map((node) => node.position.y)) + 140;
+  const canvasHeight = Math.max(maxY, 600);
   canvas.style.width = `${maxX}px`;
-  canvas.style.height = `${Math.max(maxY, 680)}px`;
+  canvas.style.height = `${canvasHeight}px`;
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.classList.add("edges");
   svg.setAttribute("width", maxX);
-  svg.setAttribute("height", Math.max(maxY, 680));
+  svg.setAttribute("height", canvasHeight);
 
   state.industry.relationships.forEach(({ from, to }) => {
     const start = state.industry.nodes.find((node) => node.id === from);
@@ -213,14 +225,14 @@ function renderMap() {
     if (!start || !end) return;
 
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    const x1 = start.position.x + 190;
+    const x1 = start.position.x + 184;
     const y1 = start.position.y + 41;
     const x2 = end.position.x;
     const y2 = end.position.y + 41;
     const mid = (x1 + x2) / 2;
     path.setAttribute("d", `M ${x1} ${y1} C ${mid} ${y1}, ${mid} ${y2}, ${x2} ${y2}`);
     path.setAttribute("fill", "none");
-    path.setAttribute("stroke", "#b9aa96");
+    path.setAttribute("stroke", "#b6bcc6");
     path.setAttribute("stroke-width", "2");
     svg.appendChild(path);
   });
@@ -250,6 +262,164 @@ function renderMap() {
 
   map.innerHTML = "";
   map.appendChild(canvas);
+}
+
+// ---------- App shell: view tabs + list/graph toggle ----------
+
+const VIEWS = ["chain", "made", "desk"];
+
+function initShell() {
+  document.querySelectorAll("[data-view-target]").forEach((button) => {
+    button.addEventListener("click", () => showView(button.dataset.viewTarget));
+  });
+  document.querySelectorAll("[data-map-mode]").forEach((button) => {
+    button.addEventListener("click", () => setMapMode(button.dataset.mapMode, true));
+  });
+  window.addEventListener("hashchange", () => showView(viewFromHash(), false));
+
+  const savedMode = readPreference("mapMode");
+  const wide = window.matchMedia("(min-width: 900px)").matches;
+  setMapMode(savedMode === "graph" || savedMode === "list" ? savedMode : (wide ? "graph" : "list"), false);
+  showView(viewFromHash(), false);
+}
+
+function viewFromHash() {
+  const view = window.location.hash.replace("#", "");
+  return VIEWS.includes(view) ? view : "chain";
+}
+
+function showView(view, updateHash = true) {
+  if (!VIEWS.includes(view)) return;
+  document.body.dataset.view = view;
+  document.querySelectorAll(".view").forEach((section) => {
+    section.hidden = section.dataset.view !== view;
+  });
+  document.querySelectorAll("[data-view-target]").forEach((button) => {
+    if (button.dataset.viewTarget === view) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  });
+  if (updateHash && viewFromHash() !== view) history.pushState(null, "", `#${view}`);
+  if (updateHash) window.scrollTo(0, 0);
+  document.dispatchEvent(new CustomEvent("radar:view", { detail: { view } }));
+}
+
+function setMapMode(mode, persist) {
+  document.body.dataset.mapMode = mode;
+  document.querySelectorAll("[data-map-mode]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.mapMode === mode));
+  });
+  if (persist) writePreference("mapMode", mode);
+}
+
+function readPreference(key) {
+  try {
+    return localStorage.getItem(`radar.${key}`);
+  } catch {
+    return null;
+  }
+}
+
+function writePreference(key, value) {
+  try {
+    localStorage.setItem(`radar.${key}`, value);
+  } catch {
+    // Preferences are a convenience only.
+  }
+}
+
+function selectIndustry(industryId) {
+  const industry = industries.find((item) => item.id === industryId);
+  if (!industry) return false;
+  industrySelect.value = industryId;
+  industrySelect.dispatchEvent(new Event("change"));
+  return true;
+}
+
+globalThis.RadarApp = { showView, selectIndustry, openCompany: (id) => openCompany(id) };
+
+// ---------- Layered supply-chain list (phone-friendly alternative to the graph) ----------
+
+function renderChainList() {
+  const industry = state.industry;
+  const companyIds = new Set(industry.companies.map((company) => company.id));
+  const chainNodes = industry.nodes.filter((node) => !companyIds.has(node.id));
+  const columns = [...new Set(chainNodes.map((node) => node.position.x))].sort((a, b) => a - b);
+  const placedCompanies = new Set();
+
+  chainList.replaceChildren();
+
+  columns.forEach((x, index) => {
+    const nodes = chainNodes
+      .filter((node) => node.position.x === x)
+      .sort((a, b) => a.position.y - b.position.y);
+    const layers = [...new Set(nodes.map((node) => node.layer))];
+
+    const stage = element("section", "stage");
+    const head = element("div", "stage-head");
+    head.append(
+      element("b", "", String(index + 1).padStart(2, "0")),
+      element("span", "", layers.join(" · "))
+    );
+    const list = element("div", "stage-nodes");
+
+    nodes.forEach((node) => {
+      const companies = industry.companies.filter((company) => (company.linkedNodeIds || []).includes(node.id));
+      companies.forEach((company) => placedCompanies.add(company.id));
+      list.append(chainNodeCard(node, companies));
+    });
+
+    stage.append(head, list);
+    chainList.append(stage);
+  });
+
+  const orphans = industry.companies.filter((company) => !placedCompanies.has(company.id));
+  if (orphans.length) {
+    const stage = element("section", "stage");
+    const head = element("div", "stage-head");
+    head.append(element("b", "", "+"), element("span", "", "Other companies"));
+    const row = element("div", "node-companies");
+    orphans.forEach((company) => row.append(companyChip(company)));
+    stage.append(head, row);
+    chainList.append(stage);
+  }
+}
+
+function chainNodeCard(node, companies) {
+  const card = element("article", `node-card ${node.type}`);
+
+  // `.node` + `.node-title` keep node-details.js working for non-company nodes.
+  const button = element("button", "node");
+  button.type = "button";
+  button.append(
+    element("span", "node-title", node.title),
+    element("span", "chev", "›"),
+    element("span", "node-summary", node.summary || "")
+  );
+  card.append(button);
+
+  if (companies.length) {
+    const row = element("div", "node-companies");
+    companies.forEach((company) => row.append(companyChip(company)));
+    card.append(row);
+  }
+  return card;
+}
+
+function companyChip(company) {
+  const chip = element("button", `company-chip${company.isZisuCandidate ? " zisu" : ""}`);
+  chip.type = "button";
+  chip.append(element("i"), element("span", "", company.name));
+  const badge = company.isZisuCandidate ? "Hidden" : company.isBottleneck ? "Bottleneck" : "";
+  if (badge) chip.append(element("small", "", badge));
+  chip.addEventListener("click", () => openCompany(company.id));
+  return chip;
+}
+
+function element(tag, className = "", text = "") {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text) node.textContent = text;
+  return node;
 }
 
 function shortNodeMeta(node) {
@@ -433,6 +603,11 @@ function renderSources(sourceIds = []) {
 function renderPendingUpdates() {
   const allUpdates = buildReviewQueue();
   const visibleUpdates = filterReviewQueue(allUpdates);
+  const pendingCount = allUpdates.filter((update) => update.reviewStatus === "pending").length;
+  if (deskCount) {
+    deskCount.textContent = String(pendingCount);
+    deskCount.hidden = pendingCount === 0;
+  }
 
   if (visibleUpdates.length === 0) {
     pendingUpdates.innerHTML = `<div class="empty-state">No update events match the current filter.</div>`;
@@ -445,10 +620,13 @@ function renderPendingUpdates() {
         <strong>${update.company}</strong>
         <span>${reviewStatusLabel(update.reviewStatus)} - ${update.origin} - ${impactLabel(update.impact)}</span>
         <p>${update.summary}</p>
-        ${renderResearchPacket(update.researchPacket)}
-        ${renderAnalysis(update.analysis)}
-        <span>Source: ${update.source}</span>
-        ${renderSources(update.sourceIds)}
+        <details class="update-more">
+          <summary>Evidence, claim &amp; sources</summary>
+          ${renderResearchPacket(update.researchPacket)}
+          ${renderAnalysis(update.analysis)}
+          <span>Source: ${update.source}</span>
+          ${renderSources(update.sourceIds)}
+        </details>
         <div class="review-actions">
           <button type="button" data-review-id="${update.id}" data-review-status="approved">Approve</button>
           <button type="button" data-review-id="${update.id}" data-review-status="needs_more_evidence">Need Evidence</button>

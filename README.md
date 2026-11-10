@@ -205,7 +205,9 @@ It also exposes baseline time, last check, watch-term coverage, captured watched
 ## Important Files
 
 - `index.html`: web entry point.
-- `app.js`: supply-chain map, composite-score presentation, and Review Desk queue.
+- `app.js`: app shell (three views: Supply Chain / How It's Made / Research Desk), layered supply-chain list and graph, composite-score presentation, and Review Desk queue.
+- `styles.css`: mobile-first base styles (bottom tab bar and bottom-sheet dialogs on phones).
+- `product-journey.js` / `product-journey.css` / `data/products.json`: step-by-step animated "how it's made" product journeys (currently an NVIDIA Blackwell-class AI GPU). Presentation only; illustrative, not a confirmed bill of materials.
 - `research-evidence-ui.js`: score-evidence coverage, watched-context diff, and candidate presentation.
 - `analyst-review.js`: Analyst Worksheet and Final Patch Preview UI.
 - `research-ops.js`: source-health / scanner-readiness UI.

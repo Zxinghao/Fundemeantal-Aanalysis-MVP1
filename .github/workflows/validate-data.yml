@@ -31,6 +31,8 @@ jobs:
           node --check node-details.js
           node --check company-flags.js
           node --check review-export.js
+          node --check product-journey.js
+          node -e "const p=JSON.parse(require('fs').readFileSync('data/products.json','utf8'));if(!Array.isArray(p)||p.some(x=>!x.id||!Array.isArray(x.steps)||!x.steps.length))throw new Error('products.json malformed')"
           node --check scripts/disclosure-diff.mjs
           node --check scripts/candidate-interpretation.mjs
           node --check scripts/enrich-semantic-candidates.mjs

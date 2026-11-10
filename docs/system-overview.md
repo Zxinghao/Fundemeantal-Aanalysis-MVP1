@@ -15,7 +15,6 @@ Files:
 - `index.html`
 - `app.js`
 - `styles.css`
-- `apple-style.css`
 - `node-details.js`
 - `company-flags.js`
 - `research-model.css`
@@ -29,13 +28,28 @@ Functions:
 - Display linked evidence and manually curated bottleneck flags.
 - Compute and display a deterministic Hidden Bottleneck Composite separately from the manual flags.
 
+### How It's Made (product journeys)
+
+Files:
+
+- `product-journey.js`
+- `product-journey.css`
+- `data/products.json`
+
+Functions:
+
+- Render a product list and a step-by-step manufacturing walkthrough with one animated SVG scene per step.
+- Show input → process → output, representative industry participants, a bottleneck note, and an explicit evidence boundary for every step.
+- Link from matching supply-chain detail dialogs (e.g. NVIDIA) into the journey.
+- Presentation only: it has no authority over scoring, scanner, or review data.
+
 ### Review Desk
 
 Files:
 
 - `app.js`
 - `review-export.js`
-- `review-export.css`
+- `styles.css`
 - `research-model.css`
 
 Functions:

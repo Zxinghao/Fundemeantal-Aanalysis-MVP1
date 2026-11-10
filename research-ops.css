@@ -1,8 +1,3 @@
-.research-ops {
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 18px;
-  padding-bottom: 18px;
-}
 
 .research-ops-intro {
   color: var(--muted);
@@ -32,7 +27,7 @@
 
 .source-health-metric span {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.25;
 }
 
@@ -50,7 +45,7 @@
 
 .source-health-summary {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.55;
   margin: 10px 0 0;
 }
@@ -106,13 +101,13 @@
 }
 
 .source-health-name {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.35;
 }
 
 .source-health-meta {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 2px;
 }
 
@@ -120,7 +115,7 @@
   border: 1px solid rgba(120, 92, 56, 0.16);
   border-radius: 999px;
   flex: 0 0 auto;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 800;
   padding: 3px 6px;
 }
@@ -140,7 +135,7 @@
 
 .source-health-detail {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.45;
   margin: 7px 0;
 }
@@ -152,7 +147,7 @@
 
 .source-health-facts span {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.4;
 }
 
@@ -163,7 +158,7 @@
 
 .source-health-link {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   margin-top: 7px;
 }

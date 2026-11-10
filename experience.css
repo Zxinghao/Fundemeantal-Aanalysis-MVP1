@@ -50,6 +50,8 @@ body::before,body::after { display:none; }
 .manufacturing-head > p:not(.mini-kicker) { color:#d4e0f0; font-size:15px; line-height:1.7; max-width:750px; margin:0; }
 .product-summary { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
   margin-top:26px; padding:15px 18px; background:rgba(255,255,255,.095); border:1px solid rgba(255,255,255,.14); border-radius:16px; }
+.product-summary { width:100%; text-align:left; color:#fff; box-shadow:none; cursor:pointer; }
+.product-summary:hover { transform:none; box-shadow:none; background:rgba(255,255,255,.18); }
 .product-summary strong,.product-summary small { display:block; }
 .product-summary strong { font-size:16px; }
 .product-summary small { color:#cbd9e8; font-size:12px; margin-top:5px; }

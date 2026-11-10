@@ -64,7 +64,7 @@
   section.innerHTML='<div class="manufacturing-head"><p class="mini-kicker">PRODUCT DEEP DIVE · 01</p>'+
     '<h2>一块 NVIDIA AI GPU<br><span>是怎样制造出来的？</span></h2>'+
     '<p>以 Blackwell 架构为研究样本，逐步追踪设计、晶圆、HBM、先进封装及整机交付。每一步显示投入、加工过程、产出、产业参与者及证据边界。</p>'+
-    '<div class="product-summary"><div><strong>Blackwell-class AI GPU</strong><small>研究样本 · 非特定 SKU 的完整物料清单</small></div><span>9 个制造环节</span></div></div>'+
+    '<button type="button" class="product-summary" id="gpu-product-button" aria-label="打开 NVIDIA Blackwell GPU 制造流程"><div><strong>Blackwell-class AI GPU</strong><small>研究样本 · 非特定 SKU 的完整物料清单</small></div><span>点击探索  →</span></button></div>'+
     '<div class="process-overview"><span>设计</span><b>→</b><span>晶圆</span><b>＋</b><span>HBM</span><b>→</b><span>CoWoS</span><b>→</b><span>整机</span></div>'+
     '<div class="gpu-step-layout"><aside class="gpu-step-rail"><div class="step-rail-heading"><strong>制造步骤</strong><small id="gpu-stage-progress">01 / 09</small></div><div id="gpu-step-list" class="gpu-step-list"></div></aside>'+
     '<article class="gpu-step-detail" id="gpu-step-detail" aria-live="polite"></article></div>'+
@@ -95,6 +95,10 @@
   stageList.addEventListener("click",function(event){const b=event.target.closest("[data-stage]");if(b)renderStage(Number(b.dataset.stage))});
   stageDetail.addEventListener("click",function(event){const b=event.target.closest("[data-shift]");if(b)renderStage(selectedStage+Number(b.dataset.shift))});
   renderStage(0);
+  section.querySelector("#gpu-product-button").addEventListener("click",function(){
+    renderStage(0);
+    section.querySelector(".gpu-step-layout").scrollIntoView({behavior:"smooth",block:"start"});
+  });
   let industries=[];
   const select=document.querySelector("#industry-select");
   function renderMobileList(){

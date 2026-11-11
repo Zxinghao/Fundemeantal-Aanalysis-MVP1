@@ -1,0 +1,51 @@
+name: Diagnose Claude Connection (Safe)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  claude-connection:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Minimal Claude structured-output authentication test
+        id: claude
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          github_token: ${{ github.token }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            This is a minimal provider connectivity test. Do not inspect
+            repository content or call tools. Return an object with ok=true.
+          claude_args: >-
+            --max-turns 2 --allowedTools Read --json-schema '{"type":"object","properties":{"ok":{"type":"boolean"}},"required":["ok"],"additionalProperties":false}'
+          show_full_output: "false"
+      - name: Classify SDK error using private execution file
+        if: ${{ steps.claude.outcome == 'failure' }}
+        run: node scripts/classify-claude-action-error.mjs
+      - name: Confirm minimal Claude response
+        env:
+          CLAUDE_OUTPUT: ${{ steps.claude.outputs.structured_output }}
+        run: |
+          if [ "${{ steps.claude.outcome }}" != "success" ]; then
+            echo "::error::Claude connection test failed; see sanitized diagnostic category above."
+            exit 1
+          fi
+          if [ -z "$CLAUDE_OUTPUT" ]; then
+            echo "::error::Claude action reported success without structured output."
+            exit 1
+          fi
+          node -e 'const a=JSON.parse(process.env.CLAUDE_OUTPUT); if(a.ok!==true) process.exit(1)'
+          echo "Claude authenticated and returned valid minimal structured output."

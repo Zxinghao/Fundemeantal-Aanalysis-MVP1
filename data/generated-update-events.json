@@ -1,5 +1,848 @@
 [
   {
+    "id": "web-ai-optics-2026-11-11-fabrinet-optical-components-3b25657ec18f",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "ai-optics",
+    "companyId": "fabrinet",
+    "nodeId": "packaging-test",
+    "impactType": "capacity_change",
+    "summary": "Fabrinet optical components changed. The scanner isolated 4 added and 4 removed keyword-focused context window(s) on \"Optical Components - Fabrinet\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://fabrinet.com/services/optical-components",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "fabrinet-optical-components"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-11T14:23:53.747Z",
+    "lastSeenAt": "2026-11-11T14:23:53.747Z",
+    "changeSignature": "3b25657ec18f",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Co",
+        "out Careers Investors Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and activ…",
+        "rs Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products.…",
+        "ervices 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products. We produce millions of units annually, making the company …"
+      ],
+      "removed": [
+        "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components",
+        "rvices About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and activ…",
+        "s Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products.…",
+        "Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products. We produce millions of units annually, making the company o…"
+      ],
+      "addedCount": 4,
+      "removedCount": 4,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "optical components",
+        "manufacturing"
+      ],
+      "affectedTarget": "company:fabrinet",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 8 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.fabrinet; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-ai-optics-2026-11-11-fabrinet-optical-components-3b25657ec18f-evidence-1",
+          "sourceId": "fabrinet-optical-components",
+          "sourceType": "company_official",
+          "url": "https://fabrinet.com/services/optical-components",
+          "pageTitle": "Optical Components - Fabrinet",
+          "observedAt": "2026-11-11T14:23:53.747Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "optical components",
+            "manufacturing"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 4 added and 4 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Co",
+              "out Careers Investors Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and activ…",
+              "rs Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products.…",
+              "ervices 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products. We produce millions of units annually, making the company …"
+            ],
+            "removed": [
+              "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components",
+              "rvices About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and activ…",
+              "s Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products.…",
+              "Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products. We produce millions of units annually, making the company o…"
+            ],
+            "addedCount": 4,
+            "removedCount": 4,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-ai-optics-2026-11-11-fabrinet-optical-components-3b25657ec18f-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:fabrinet",
+        "statement": "Potential capacity change affecting company:fabrinet; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.fabrinet.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-11T14:23:53.747Z",
+        "target": "company:fabrinet",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components",
+            "afterExcerpt": "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Co",
+            "matchedKeywords": [
+              "optical components",
+              "manufacturing"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:fabrinet; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-11T14:23:53.747Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-11-garrett-fuel-cell-f41a0bb441c5",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "garrett",
+    "nodeId": "compressor",
+    "impactType": "technology_change",
+    "summary": "Garrett fuel cell technology changed. The scanner isolated 5 added and 5 removed keyword-focused context window(s) on \"Fuel Cell Technology: Boosting Hydrogen-Powered Vehicles\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "garrett-fuel-cell"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-11T14:23:50.142Z",
+    "lastSeenAt": "2026-11-11T14:23:50.142Z",
+    "changeSignature": "f41a0bb441c5",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "red and differentiated... Garrett Fuel Cell Innovation Timeline 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+        "ial Flow Sizes) TEPCO 5MW Phosphoric Acid Fuel Cell Power Plant 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+        "l Power Plant Increased Power &amp; Efficiency Why Do Customers Choose Us? Durability Our fuel cell compressor achieves best-in-class durability with >1 million start-and-stop cycles and over 25,000 hours of life. Effic…",
+        "ough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ...fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+        "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell... February 17, 2026 Garrett Motion Introduces Garrett Original MAXLIFE: A New After…"
+      ],
+      "removed": [
+        "and differentiated&#8230; Garrett Fuel Cell Innovation Timeline 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+        "Cell Power Plant INCREASED POWER & EFFICIENCY Why do customers choose us? Durability Our fuel cell compressor achieves best-in-class durability with >1 million start-and-stop cycles and over 25,000 hours of life. Effici…",
+        "ugh Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ... fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+        "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell ... February 17, 2026 Garrett Motion Introduces Garrett Original MAXLIFE: A New Afte…",
+        "to equal the performance of a V-6-powered sedan. EXPAND YOUR FUEL CELL KNOWLEDGE Electric Air Compressor Development to Meet Future PEM Fuel Cell Needs Discover the major design requirements of air compressors for Proto…"
+      ],
+      "addedCount": 5,
+      "removedCount": 5,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell compressor",
+        "electric compressor",
+        "air compressor",
+        "hydrogen",
+        "fuel cell"
+      ],
+      "affectedTarget": "company:garrett",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 10 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.garrett; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-11-garrett-fuel-cell-f41a0bb441c5-evidence-1",
+          "sourceId": "garrett-fuel-cell",
+          "sourceType": "company_official",
+          "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
+          "pageTitle": "Fuel Cell Technology: Boosting Hydrogen-Powered Vehicles",
+          "observedAt": "2026-11-11T14:23:50.142Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell compressor",
+            "electric compressor",
+            "air compressor",
+            "hydrogen",
+            "fuel cell"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 5 added and 5 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "red and differentiated... Garrett Fuel Cell Innovation Timeline 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+              "ial Flow Sizes) TEPCO 5MW Phosphoric Acid Fuel Cell Power Plant 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+              "l Power Plant Increased Power &amp; Efficiency Why Do Customers Choose Us? Durability Our fuel cell compressor achieves best-in-class durability with >1 million start-and-stop cycles and over 25,000 hours of life. Effic…",
+              "ough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ...fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+              "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell... February 17, 2026 Garrett Motion Introduces Garrett Original MAXLIFE: A New After…"
+            ],
+            "removed": [
+              "and differentiated&#8230; Garrett Fuel Cell Innovation Timeline 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+              "Cell Power Plant INCREASED POWER & EFFICIENCY Why do customers choose us? Durability Our fuel cell compressor achieves best-in-class durability with >1 million start-and-stop cycles and over 25,000 hours of life. Effici…",
+              "ugh Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ... fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+              "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell ... February 17, 2026 Garrett Motion Introduces Garrett Original MAXLIFE: A New Afte…",
+              "to equal the performance of a V-6-powered sedan. EXPAND YOUR FUEL CELL KNOWLEDGE Electric Air Compressor Development to Meet Future PEM Fuel Cell Needs Discover the major design requirements of air compressors for Proto…"
+            ],
+            "addedCount": 5,
+            "removedCount": 5,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-11-garrett-fuel-cell-f41a0bb441c5-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:garrett",
+        "statement": "Potential technology change affecting company:garrett; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.garrett.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-11T14:23:50.142Z",
+        "target": "company:garrett",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "ugh Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ... fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+            "afterExcerpt": "ough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ...fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+            "matchedKeywords": [
+              "fuel cell compressor",
+              "electric compressor",
+              "air compressor",
+              "hydrogen",
+              "fuel cell"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:garrett; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-11T14:23:50.142Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-11-forvia-hydrogen-storage-c9648b03d382",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-11T14:23:47.869Z",
+    "lastSeenAt": "2026-11-11T14:23:47.869Z",
+    "changeSignature": "c9648b03d382",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.68€ +0.35% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-11-forvia-hydrogen-storage-c9648b03d382-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-11-11T14:23:47.869Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.68€ +0.35% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-11-forvia-hydrogen-storage-c9648b03d382-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-11T14:23:47.869Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.68€ +0.35% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.68€ +0.35% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "1.75%",
+            "afterValue": "0.35%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 1.75% → 0.35%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-11T14:23:47.869Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-11-sgl-ir-3227ea6f97e0",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "sgl",
+    "nodeId": "gdl",
+    "impactType": "technology_change",
+    "summary": "SGL Carbon investor relations changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"SGL Investor Relations – shares, publications &amp; events | SGL Carbon\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.sglcarbon.com/en/investor-relations/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "sgl-ir"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-11T14:23:41.370Z",
+    "lastSeenAt": "2026-11-11T14:23:41.370Z",
+    "changeSignature": "3227ea6f97e0",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) See more Overview IR News Upcoming Events 18. March 2027 Full year results 2026 Meeting…"
+      ],
+      "removed": [
+        "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "carbon fiber"
+      ],
+      "affectedTarget": "company:sgl",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.sgl; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-11-sgl-ir-3227ea6f97e0-evidence-1",
+          "sourceId": "sgl-ir",
+          "sourceType": "company_official",
+          "url": "https://www.sglcarbon.com/en/investor-relations/",
+          "pageTitle": "SGL Investor Relations – shares, publications &amp; events | SGL Carbon",
+          "observedAt": "2026-11-11T14:23:41.370Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "carbon fiber"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) See more Overview IR News Upcoming Events 18. March 2027 Full year results 2026 Meeting…"
+            ],
+            "removed": [
+              "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-11-sgl-ir-3227ea6f97e0-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:sgl",
+        "statement": "Potential technology change affecting company:sgl; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.sgl.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-11T14:23:41.370Z",
+        "target": "company:sgl",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…",
+            "afterExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) See more Overview IR News Upcoming Events 18. March 2027 Full year results 2026 Meeting…",
+            "matchedKeywords": [
+              "carbon fiber"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…",
+            "afterExcerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) See more Overview IR News Upcoming Events 18. March 2027 Full year results 2026 Meeting…",
+            "beforeValue": "10",
+            "afterValue": "23",
+            "unit": null,
+            "matchedKeywords": [
+              "carbon fiber"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 10 → 23.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:sgl; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-11T14:23:41.370Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-11-doe-fuel-cells-7a07f3c2bea0",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-11T14:23:39.965Z",
+    "lastSeenAt": "2026-11-11T14:23:39.965Z",
+    "changeSignature": "7a07f3c2bea0",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Unleashing American Energy Innovation Science &amp; Innovation Science &amp; Innov…"
+      ],
+      "removed": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-11-doe-fuel-cells-7a07f3c2bea0-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-11-11T14:23:39.965Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Unleashing American Energy Innovation Science &amp; Innovation Science &amp; Innov…"
+            ],
+            "removed": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-11-doe-fuel-cells-7a07f3c2bea0-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-11T14:23:39.965Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Unleashing American Energy Innovation Science &amp; Innovation Science &amp; Innov…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-11T14:23:39.965Z"
+  },
+  {
     "id": "web-fuel-cell-2026-11-04-garrett-fuel-cell-78ac201de19a",
     "sourceType": "ai_scan",
     "status": "pending",

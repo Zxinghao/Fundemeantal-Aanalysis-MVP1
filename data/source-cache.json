@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:36.180Z",
+      "capturedAt": "2026-11-11T14:23:35.155Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:36.180Z",
+    "lastCheckedAt": "2026-11-11T14:23:35.155Z",
     "lastChangedAt": "2026-10-17T10:44:57.276Z",
     "lastError": null
   },
@@ -191,11 +191,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "a4461ec5e10e56f9738f132324ffc56ff1d4307f88e84bde914802b1d184a47f",
+    "hash": "38fafe1a66065cda38c3ae9200ea4c84b88a1f053dbbdf246cf6ace3cf3fa0e1",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:37.444Z",
+      "capturedAt": "2026-11-11T14:23:35.623Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -219,8 +219,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:37.444Z",
-    "lastChangedAt": "2026-11-10T14:53:37.444Z",
+    "lastCheckedAt": "2026-11-11T14:23:35.623Z",
+    "lastChangedAt": "2026-11-11T14:23:35.623Z",
     "lastError": null
   },
   "garrett-news": {
@@ -229,11 +229,11 @@
     "cadence": "daily",
     "url": "https://www.garrettmotion.com/news/",
     "title": "Newsroom Garrett Motion - Garrett Motion",
-    "hash": "711e629f862abbab078834dffb6daca8a131fcef195e95da81c3333a94509e4e",
+    "hash": "d5bf3653367aad32efafd8a3a2e7ec36eccb441e9415b137e6c9c690ce6e93af",
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:38.819Z",
+      "capturedAt": "2026-11-11T14:23:36.650Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -383,8 +383,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:38.819Z",
-    "lastChangedAt": "2026-10-30T12:56:41.163Z",
+    "lastCheckedAt": "2026-11-11T14:23:36.650Z",
+    "lastChangedAt": "2026-11-11T14:23:36.650Z",
     "lastError": null
   },
   "doe-fuel-cells": {
@@ -393,11 +393,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
     "title": "Alternative Fuels and Feedstocks Office | Department of Energy",
-    "hash": "5ce8b60d8f97e2d68c0ea2c5df8825de7a31976e3587a56dbe712482a5e05021",
+    "hash": "c174126a52e7ad1b35b334f6de98837333aa1bedbc7c3cec497f3884756f003f",
     "baselineAt": "2026-09-09T07:03:51.954Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:32:55.453Z",
+      "capturedAt": "2026-11-11T14:23:39.965Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -498,8 +498,8 @@
           ]
         },
         {
-          "hash": "914610997184ce7254e3dcdcbed8196d0f8db96cfb178208cb016da55a10e498",
-          "excerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Biofuels Biofuels Biofuels Biofuels Reg…",
+          "hash": "0020fc48776bd500b10538c58ae30979712bd3116f44a27bdd8f07f74e90dad6",
+          "excerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Unleashing American Energy Innovation Science &amp; Innovation Science &amp; Innov…",
           "matchedKeywords": [
             "fuel cell"
           ]
@@ -618,8 +618,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:32:55.453Z",
-    "lastChangedAt": "2026-11-04T14:32:55.453Z",
+    "lastCheckedAt": "2026-11-11T14:23:39.965Z",
+    "lastChangedAt": "2026-11-11T14:23:39.965Z",
     "lastError": null
   },
   "umicore-ir": {
@@ -628,11 +628,11 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/investors/",
     "title": "Investor relations | Umicore",
-    "hash": "e3ed7105ace5d1362933c6ed50aeeb0e7cfcf90ab871e5eb420dd0550f3de81d",
+    "hash": "1340ed1d833ea2819eff4eb1ff56e30aac383631868c91b7dbe367ad06c79015",
     "baselineAt": "2026-09-09T07:03:52.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:32:55.587Z",
+      "capturedAt": "2026-11-11T14:23:40.078Z",
       "keywords": [
         "fuel cell",
         "catalyst",
@@ -663,8 +663,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:32:55.587Z",
-    "lastChangedAt": "2026-11-04T14:32:55.587Z",
+    "lastCheckedAt": "2026-11-11T14:23:40.078Z",
+    "lastChangedAt": "2026-11-11T14:23:40.078Z",
     "lastError": null
   },
   "sgl-ir": {
@@ -673,11 +673,11 @@
     "cadence": "weekly",
     "url": "https://www.sglcarbon.com/en/investor-relations/",
     "title": "SGL Investor Relations – shares, publications &amp; events | SGL Carbon",
-    "hash": "c1ee92864ea9e76364cfe8294791d5d33669f31a8f567445aafb54d02a938f0c",
+    "hash": "05eb42ae1ff9387bd5777263fc87e82b0f3aaaf9a619d4a22ecc66f5a565cda2",
     "baselineAt": "2026-09-09T07:03:53.205Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:32:56.784Z",
+      "capturedAt": "2026-11-11T14:23:41.370Z",
       "keywords": [
         "fuel cell",
         "GDL",
@@ -693,16 +693,16 @@
           ]
         },
         {
-          "hash": "89e6ca1bc45c5f87d0be16585a552838e2a6a0452798ec0f7e4b572ace2449a1",
-          "excerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) 2026/10/13 | News SGL Carbon celebrates capacity expansion at its St. Marys site See mo…",
+          "hash": "edfbd74f3e2bdf0084d373f0492df221e4692e19bd85833948ee72ed0eda33da",
+          "excerpt": "ontract 2026/10/23 | Ad hoc notifications Adhoc notification: SGL Carbon sells its former Carbon Fiber facility in Moses Lake (USA) See more Overview IR News Upcoming Events 18. March 2027 Full year results 2026 Meeting…",
           "matchedKeywords": [
             "carbon fiber"
           ]
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:32:56.784Z",
-    "lastChangedAt": "2026-11-04T14:32:56.784Z",
+    "lastCheckedAt": "2026-11-11T14:23:41.370Z",
+    "lastChangedAt": "2026-11-11T14:23:41.370Z",
     "lastError": null
   },
   "hexagon-purus-ir": {
@@ -715,7 +715,7 @@
     "baselineAt": "2026-09-09T07:08:07.547Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:32:56.908Z",
+      "capturedAt": "2026-11-11T14:23:41.957Z",
       "keywords": [
         "results",
         "order",
@@ -784,7 +784,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:32:56.908Z",
+    "lastCheckedAt": "2026-11-11T14:23:41.957Z",
     "lastChangedAt": "2026-10-28T12:55:24.819Z",
     "lastError": null
   },
@@ -1019,7 +1019,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:39.238Z",
+    "lastCheckedAt": "2026-11-11T14:23:52.547Z",
     "lastChangedAt": "2026-10-30T12:56:41.568Z",
     "lastError": "HTTP 403"
   },
@@ -1033,7 +1033,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:39.340Z",
+      "capturedAt": "2026-11-11T14:23:52.656Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1051,7 +1051,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:39.340Z",
+    "lastCheckedAt": "2026-11-11T14:23:52.656Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1065,7 +1065,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:39.918Z",
+      "capturedAt": "2026-11-11T14:23:52.726Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1286,7 +1286,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:39.918Z",
+    "lastCheckedAt": "2026-11-11T14:23:52.726Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1300,7 +1300,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:40.196Z",
+      "capturedAt": "2026-11-11T14:23:53.147Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1403,7 +1403,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:40.196Z",
+    "lastCheckedAt": "2026-11-11T14:23:53.147Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1417,7 +1417,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:40.607Z",
+      "capturedAt": "2026-11-11T14:23:53.585Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1527,7 +1527,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:40.607Z",
+    "lastCheckedAt": "2026-11-11T14:23:53.585Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1537,11 +1537,11 @@
     "cadence": "daily",
     "url": "https://fabrinet.com/services/optical-components",
     "title": "Optical Components - Fabrinet",
-    "hash": "26a3ffbfe26c099340ad2a7e2b72273b1b8f679006570543d3feffb975a79d13",
+    "hash": "33dc524588deeb869f688bb32e5872e90f2379fd908a42e8de96d3a7b0e9f022",
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-10T14:53:40.854Z",
+      "capturedAt": "2026-11-11T14:23:53.747Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1551,29 +1551,29 @@
       ],
       "segments": [
         {
-          "hash": "c3e051fa28c3e991f5f51fbc7319fab6391f69ef04f322c71fcdb2efbd37e596",
-          "excerpt": "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components",
+          "hash": "208b6c31df3000ccf3ddf5f98bea91be17b30e76b37b56af0db558cf9a455ae2",
+          "excerpt": "Optical Components - Fabrinet Markets Services About Careers Investors Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Co",
           "matchedKeywords": [
             "optical components"
           ]
         },
         {
-          "hash": "7c9fc772f572b539a352b3e72ed5c2338194d4d63dce0e0db38b5e045dc3f3c3",
-          "excerpt": "rvices About Careers Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and activ…",
+          "hash": "7b65886ecfacbd2e1e97ad2bdeb22c078dc30582be19079b6fa08849047e4ae8",
+          "excerpt": "out Careers Investors Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and activ…",
           "matchedKeywords": [
             "optical components"
           ]
         },
         {
-          "hash": "b58fa80354fc18b259b39f2877288d46fac2ad2becbe470b274a386534a841b7",
-          "excerpt": "s Investors Contact Partner Login Menu You are here: Home / Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products.…",
+          "hash": "b13603d024ce49cc1b4483353f3b1f2c1603395a0de70b8b5b0beb6564679bd4",
+          "excerpt": "rs Contact Partner Login Menu Menu You are here: Home 1 / Services 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products.…",
           "matchedKeywords": [
             "optical components"
           ]
         },
         {
-          "hash": "715534f8e8bb1aaf6bfefc34cf34719cc4a9352a2ad4f9579d9cdfabdc296e7d",
-          "excerpt": "Services / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products. We produce millions of units annually, making the company o…",
+          "hash": "ba20f18ccfa0361eb0de1389294693f56ae831eda497f288dd15dbbbdeba06ae",
+          "excerpt": "ervices 2 / Optical Components Optical Components Fabrinet manufactures a wide variety of optical components including both passive and active optical products. We produce millions of units annually, making the company …",
           "matchedKeywords": [
             "optical components"
           ]
@@ -1622,8 +1622,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-10T14:53:40.854Z",
-    "lastChangedAt": "2026-06-08T08:07:24.831Z",
+    "lastCheckedAt": "2026-11-11T14:23:53.747Z",
+    "lastChangedAt": "2026-11-11T14:23:53.747Z",
     "lastError": null
   },
   "broadcom-bailly": {
@@ -1636,7 +1636,7 @@
     "baselineAt": "2026-09-09T07:03:57.992Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:10.243Z",
+      "capturedAt": "2026-11-11T14:23:57.191Z",
       "keywords": [
         "Bailly",
         "51.2",
@@ -1857,7 +1857,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:10.243Z",
+    "lastCheckedAt": "2026-11-11T14:23:57.191Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -1871,7 +1871,7 @@
     "baselineAt": "2026-09-09T07:03:58.124Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:10.666Z",
+      "capturedAt": "2026-11-11T14:23:57.313Z",
       "keywords": [
         "PAM4",
         "DSP",
@@ -2092,7 +2092,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:10.666Z",
+    "lastCheckedAt": "2026-11-11T14:23:57.313Z",
     "lastChangedAt": "2026-10-28T12:55:37.229Z",
     "lastError": null
   },
@@ -2106,7 +2106,7 @@
     "baselineAt": "2026-09-09T07:03:58.260Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:10.852Z",
+      "capturedAt": "2026-11-11T14:23:57.964Z",
       "keywords": [
         "800G",
         "optical transceiver",
@@ -2326,7 +2326,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:10.852Z",
+    "lastCheckedAt": "2026-11-11T14:23:57.964Z",
     "lastChangedAt": "2026-09-16T11:35:40.428Z",
     "lastError": null
   },
@@ -2340,7 +2340,7 @@
     "baselineAt": "2026-09-09T06:04:16.623Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:32:57.150Z",
+      "capturedAt": "2026-11-11T14:23:42.799Z",
       "keywords": [
         "fuel cell",
         "catalyst coated membrane",
@@ -2512,7 +2512,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:32:57.150Z",
+    "lastCheckedAt": "2026-11-11T14:23:42.799Z",
     "lastChangedAt": "2026-10-21T11:50:02.678Z",
     "lastError": null
   },
@@ -2522,11 +2522,11 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/markets-products/automotive-mobility/fuel-cell-catalysts/",
     "title": "Fuel cell catalysts | Umicore",
-    "hash": "9cbb511f962e3823ef6a22effd55524cc4d9296b48caa57de3dc801873739178",
+    "hash": "0fdb9f6d8ded257e67a6bf68e6ed5e224195a328c33381646b378bd49fdd2bd8",
     "baselineAt": "2026-09-09T06:04:17.480Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:32:57.935Z",
+      "capturedAt": "2026-11-11T14:23:43.404Z",
       "keywords": [
         "fuel cell catalyst",
         "PEM",
@@ -2692,8 +2692,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:32:57.935Z",
-    "lastChangedAt": "2026-11-04T14:32:57.935Z",
+    "lastCheckedAt": "2026-11-11T14:23:43.404Z",
+    "lastChangedAt": "2026-11-11T14:23:43.404Z",
     "lastError": null
   },
   "sgl-gdl": {
@@ -2702,11 +2702,11 @@
     "cadence": "weekly",
     "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet/",
     "title": "SIGRACET® Fuel Cell Components | SGL Carbon",
-    "hash": "df8725f45f99ff8a42fff9ff189f4a97baaf5a6ac0fc69ba3be0d9d1f1c617d0",
+    "hash": "1898de95e4752284f9c752f5d6dee643c9c56009b9ce624ec373d50ce6b2ddbe",
     "baselineAt": "2026-09-09T06:26:04.221Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:32:58.610Z",
+      "capturedAt": "2026-11-11T14:23:44.188Z",
       "keywords": [
         "SIGRACET",
         "gas diffusion layer",
@@ -2926,8 +2926,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:32:58.610Z",
-    "lastChangedAt": "2026-10-28T12:55:26.801Z",
+    "lastCheckedAt": "2026-11-11T14:23:44.188Z",
+    "lastChangedAt": "2026-11-11T14:23:44.188Z",
     "lastError": null
   },
   "forvia-hydrogen-storage": {
@@ -2936,11 +2936,11 @@
     "cadence": "weekly",
     "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
     "title": "Hydrogen storage systems | FORVIA",
-    "hash": "8f5089193bb78ed8df595b5e2ac4f2fbd72d097b613bc924cebe2283c27028da",
+    "hash": "8db0b425a5817992d1a46a492865271fc284cd49bcb880cd2ddd5d2f9f0439b6",
     "baselineAt": "2026-09-09T06:04:19.454Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:01.692Z",
+      "capturedAt": "2026-11-11T14:23:47.869Z",
       "keywords": [
         "hydrogen storage",
         "Type IV",
@@ -2951,8 +2951,8 @@
       ],
       "segments": [
         {
-          "hash": "3dcf96c2c51149dea785cf81a7ba5f251916640ad9156b787dc079ed5d7e4f1d",
-          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.73€ +1.75% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+          "hash": "49de1c387767ea6429f555e483b61f96b6ecad7c27663d9a9ee76b43b9aae419",
+          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.68€ +0.35% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
           "matchedKeywords": [
             "hydrogen storage"
           ]
@@ -3120,8 +3120,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:01.692Z",
-    "lastChangedAt": "2026-11-04T14:33:01.692Z",
+    "lastCheckedAt": "2026-11-11T14:23:47.869Z",
+    "lastChangedAt": "2026-11-11T14:23:47.869Z",
     "lastError": null
   },
   "hexagon-purus": {
@@ -3134,7 +3134,7 @@
     "baselineAt": "2026-09-09T06:04:20.529Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:02.245Z",
+      "capturedAt": "2026-11-11T14:23:48.378Z",
       "keywords": [
         "hydrogen storage",
         "Type 4",
@@ -3152,7 +3152,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:02.245Z",
+    "lastCheckedAt": "2026-11-11T14:23:48.378Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3162,11 +3162,11 @@
     "cadence": "weekly",
     "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
     "title": "Fuel Cell Technology: Boosting Hydrogen-Powered Vehicles",
-    "hash": "1e46261777bc69de7e5dfa78fd3f66e2c9a03b4c840646bd969540a0e827c8c4",
+    "hash": "017db5a3638312cc037c3947643b09d0c58f37f510625af13dd627dfe488f8ad",
     "baselineAt": "2026-09-09T06:04:22.984Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:04.402Z",
+      "capturedAt": "2026-11-11T14:23:50.142Z",
       "keywords": [
         "fuel cell compressor",
         "electric compressor",
@@ -3184,7 +3184,7 @@
         },
         {
           "hash": "8273151239db3bbad1fad16f5f65fab22d6d4cdc6445873ba316392defaebcbf",
-          "excerpt": "e and Pick-up Light and Medium Size Commercial Vehicle Heavy-Duty and Off-highway Vehicle Fuel Cell Compressor Gen3 Unlock peak performance for fuel cell applications with Garrett’s Fuel Cell Compressor Gen3. This new g…",
+          "excerpt": "e And Pick-Up Light And Medium Size Commercial Vehicle Heavy-Duty And Off-Highway Vehicle Fuel Cell Compressor Gen3 Unlock peak performance for fuel cell applications with Garrett’s Fuel Cell Compressor Gen3. This new g…",
           "matchedKeywords": [
             "fuel cell compressor"
           ]
@@ -3205,7 +3205,7 @@
         },
         {
           "hash": "9f4c14f9f9cd266f32414e3a564aeca68992132c7383c9b416451cf85ac35969",
-          "excerpt": "to a zero-emissions future. View Features Latest Fuel Cell videos March 8, 2024 Hydrogen fuel cell compressor for vehicles Garrett’s high-pressure ratio electric compressors significantly increases the power density of …",
+          "excerpt": "to a zero-emissions future. View Features Latest Fuel Cell Videos March 8, 2024 Hydrogen fuel cell compressor for vehicles Garrett’s high-pressure ratio electric compressors significantly increases the power density of …",
           "matchedKeywords": [
             "fuel cell compressor"
           ]
@@ -3218,8 +3218,8 @@
           ]
         },
         {
-          "hash": "e3dd27a554d56fc5bd00393306999cbbeb5e579e21e17f0131fc7f49339ff775",
-          "excerpt": "and differentiated&#8230; Garrett Fuel Cell Innovation Timeline 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+          "hash": "c2d92c6ab6d25c1355fc22d556653d814bc978fc69744bba29ee2e5affdf149e",
+          "excerpt": "red and differentiated... Garrett Fuel Cell Innovation Timeline 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
           "matchedKeywords": [
             "fuel cell compressor"
           ]
@@ -3232,15 +3232,22 @@
           ]
         },
         {
-          "hash": "3553a68a5fa9c968b99b6c1f1602fe47a9ba42040ff20913889c70b59f564fc3",
-          "excerpt": "Cell Power Plant INCREASED POWER & EFFICIENCY Why do customers choose us? Durability Our fuel cell compressor achieves best-in-class durability with >1 million start-and-stop cycles and over 25,000 hours of life. Effici…",
+          "hash": "fd7586b638d8b4f4a1a252bf3f8323aed4f4f07869ae4f967baa5856736a2a6c",
+          "excerpt": "ial Flow Sizes) TEPCO 5MW Phosphoric Acid Fuel Cell Power Plant 2025 Latest generation of Fuel Cell Compressor with integrated inverter is presented at Vienna Motor Symposium 2023 Portfolio expansion for new application…",
+          "matchedKeywords": [
+            "fuel cell compressor"
+          ]
+        },
+        {
+          "hash": "8cccb03979d0b522eb2a13a31fc7371458819a1d44fd12452fe557a077f27f97",
+          "excerpt": "l Power Plant Increased Power &amp; Efficiency Why Do Customers Choose Us? Durability Our fuel cell compressor achieves best-in-class durability with >1 million start-and-stop cycles and over 25,000 hours of life. Effic…",
           "matchedKeywords": [
             "fuel cell compressor"
           ]
         },
         {
           "hash": "80f0dd194eae6c348b29377acc4eef154811787289fd308dd5d037a5f8580543",
-          "excerpt": "n from our turbocharger business to address core performance and durability challenges in fuel cell compressors; DOWNLOAD WHITEPAPER Have a Question? Connect with Us First Name: * Last Name: * Email: * Phone: Subject: I…",
+          "excerpt": "n from our turbocharger business to address core performance and durability challenges in fuel cell compressors; Download Whitepaper Have A Question? Connect With Us First Name: * Last Name: * Email: * Phone: Subject: I…",
           "matchedKeywords": [
             "fuel cell compressor"
           ]
@@ -3274,8 +3281,8 @@
           ]
         },
         {
-          "hash": "8058e08d406d34af22cd24c7f160fb2c8a00f50c900705f65575fedbca675eb5",
-          "excerpt": "ugh Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ... fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
+          "hash": "e38ea83e630249c1a3eb5896fed5c4d580cff97c02d7f2a32020207eed5eef2e",
+          "excerpt": "ough Oil-Free Centrifugal Compressor Enhances High-Efficiency Liquid Cooling Solutions ...fuel cell compressors for hydrogen fuel cell vehicles, as well as electric propulsion and thermal management systems for automoti…",
           "matchedKeywords": [
             "fuel cell compressor"
           ]
@@ -3295,8 +3302,8 @@
           ]
         },
         {
-          "hash": "d8cecf18b71a5f5c46010a528bb5f9e7aa5bcaf7df499e51e59c77d5b6326aa9",
-          "excerpt": "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell ... February 17, 2026 Garrett Motion Introduces Garrett Original MAXLIFE: A New Afte…",
+          "hash": "f3f25ed606dc213f8bf1add03499b7c973c8b82a089cd3e903f095ea53665ef6",
+          "excerpt": "to advancing turbo applications while leveraging its unique technology solutions, such as fuel cell compressors for hydrogen fuel cell... February 17, 2026 Garrett Motion Introduces Garrett Original MAXLIFE: A New After…",
           "matchedKeywords": [
             "fuel cell compressor"
           ]
@@ -3373,22 +3380,15 @@
         },
         {
           "hash": "bdd52f0c302613ee4fac2c26bf6bd1ee4e1e4dfd0f949e5f74926604ec7a7f53",
-          "excerpt": "ion agreement with Shanghai-based REFIRE Technology Co., Ltd. to jointly develop advanced air compressor technology solutions for the future powertrain system of hydrogen fuel cell vehicles (FCVs). READ MORE A key chall…",
-          "matchedKeywords": [
-            "air compressor"
-          ]
-        },
-        {
-          "hash": "dfb375e19847467ff310c81115802c93e7333e2a65567f62c68bca1bf1934d58",
-          "excerpt": "to equal the performance of a V-6-powered sedan. EXPAND YOUR FUEL CELL KNOWLEDGE Electric Air Compressor Development to Meet Future PEM Fuel Cell Needs Discover the major design requirements of air compressors for Proto…",
+          "excerpt": "ion agreement with Shanghai-based REFIRE Technology Co., Ltd. to jointly develop advanced air compressor technology solutions for the future powertrain system of hydrogen fuel cell vehicles (FCVs). Read More A key chall…",
           "matchedKeywords": [
             "air compressor"
           ]
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:04.402Z",
-    "lastChangedAt": "2026-11-04T14:33:04.402Z",
+    "lastCheckedAt": "2026-11-11T14:23:50.142Z",
+    "lastChangedAt": "2026-11-11T14:23:50.142Z",
     "lastError": null
   },
   "doe-fuel-cell-parts": {
@@ -3397,11 +3397,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
     "title": "Parts of a Fuel Cell | Department of Energy",
-    "hash": "d658a205708ccc9014f65d3362ff21416072076a79b822623c46a6048fb2e634",
+    "hash": "3f76abaf971619ea8a73bdd8aa529ce5fc99b7c3ea5be0ae52979585d5e308f4",
     "baselineAt": "2026-09-09T06:04:26.236Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:06.929Z",
+      "capturedAt": "2026-11-11T14:23:52.301Z",
       "keywords": [
         "membrane electrode assembly",
         "MEA",
@@ -3622,8 +3622,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:06.929Z",
-    "lastChangedAt": "2026-11-04T14:33:06.929Z",
+    "lastCheckedAt": "2026-11-11T14:23:52.301Z",
+    "lastChangedAt": "2026-11-11T14:23:52.301Z",
     "lastError": null
   },
   "doe-hydrogen-storage": {
@@ -3632,11 +3632,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
     "title": "Physical Hydrogen Storage | Department of Energy",
-    "hash": "8f5b0aeeeb41ece08940fbeb013b11ef9e53aa4fea937629a04e872763ca7a96",
+    "hash": "b12980d1fad766a48225f71eba43f3af67523b3fa827c51ae8427cd33396a076",
     "baselineAt": "2026-09-09T06:04:26.527Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-04T14:33:07.003Z",
+      "capturedAt": "2026-11-11T14:23:52.362Z",
       "keywords": [
         "350 bar",
         "700 bar",
@@ -3822,8 +3822,713 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-04T14:33:07.003Z",
-    "lastChangedAt": "2026-11-04T14:33:07.003Z",
+    "lastCheckedAt": "2026-11-11T14:23:52.362Z",
+    "lastChangedAt": "2026-11-11T14:23:52.362Z",
+    "lastError": null
+  },
+  "toray-official-news": {
+    "id": "toray-official-news",
+    "industryId": "fuel-cell",
+    "cadence": "daily",
+    "url": "https://www.toray.com/news/",
+    "title": "Newsroom | TORAY",
+    "hash": "29566ead0cb51358aeaeab1838ee039608b7c82b29e0b6b2dcf73d91e9a62d83",
+    "baselineAt": "2026-11-11T14:23:37.062Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-11-11T14:23:37.062Z",
+      "keywords": [
+        "carbon fiber",
+        "fuel cell",
+        "hydrogen",
+        "gas diffusion",
+        "fuel cell component"
+      ],
+      "segments": [
+        {
+          "hash": "05ef3456a76d60f059f58d6a657a68fd5c5df5f66497e4b3277abc66ad4cb4ee",
+          "excerpt": "s IR CSR Information Year News Tags Management Fibers / Textiles Resins / Chemicals Films Carbon Fiber Composite Materials Electronic and Information Materials Pharmaceuticals / Medical Devices Water Treatment Membrane …",
+          "matchedKeywords": [
+            "carbon fiber"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-11-11T14:23:37.062Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "toyota-hydrogen-news": {
+    "id": "toyota-hydrogen-news",
+    "industryId": "fuel-cell",
+    "cadence": "daily",
+    "url": "https://newsroom.toyota.eu/en?h=1&t=Hydrogen",
+    "title": "Articles tagged with 'Hydrogen' | Toyota Europe",
+    "hash": "866b2fda481e2da7be0a03049d8a4df7d7d856b6230bae23967072962171c206",
+    "baselineAt": "2026-11-11T14:23:37.649Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-11-11T14:23:37.649Z",
+      "keywords": [
+        "fuel cell",
+        "hydrogen",
+        "commercial vehicle",
+        "heavy-duty",
+        "stack",
+        "truck"
+      ],
+      "segments": [
+        {
+          "hash": "aa794d9a84c1083a607da85012e00e5260d9603c8bc8e76eeefeb291a3f56229",
+          "excerpt": "ags corporate hydrogen 14 September 2026 | 11:00 Europe/Amsterdam Toyota expands hydrogen fuel cell technology for heavy-duty transport Toyota partners with Scania to supply its third-generation fuel cell technology for…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "51beed22d6fbb4defe59add51f5be4f6ce51425faba7663cb2b577792372dfd8",
+          "excerpt": "ology for heavy-duty transport Toyota partners with Scania to supply its third-generation fuel cell technology for 40 heavy-duty vehicles to be deployed in real-world operationsToyota partners with IVECO integrating its…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "84c384dd8cd72701edec9d4b793de5cecaf21b4f7852a9ef393075998b9299f0",
+          "excerpt": "world operationsToyota partners with IVECO integrating its technology into new generation fuel cell trucksToyota &hellip; Read more Tags corporate hydrogen 10 September 2026 | 14:00 Europe/Amsterdam Toyota and IVECO joi…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "905a5ca04f6407ee4103554221ad9fda0014633871a0c26feadd4d12b3669e9e",
+          "excerpt": "| 14:00 Europe/Amsterdam Toyota and IVECO join forces to advance next-generation hydrogen fuel cell heavy-duty trucks through the EU-funded EMPOWER project A strategic collaboration combining complementary capabilities …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "1e0950ef8c0f37e7a7557a476b43ce9cf50657509fe2db324c7957f6fc53b635",
+          "excerpt": "EMPOWER project A strategic collaboration combining complementary capabilities to advance fuel cell technology for heavy-duty transport applications through the deployment and validation in customer operationsHigher pow…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "ad796a72bd1dde62cad98c5cceb74ae520eba5da55377f974acc5f87fbc215cc",
+          "excerpt": "07 September 2026 | 14:00 Europe/Amsterdam Toyota and Scania collaborate to test hydrogen fuel cell technology in heavy-duty transport Toyota and Scania announce a partnership to test hydrogen fuel cell solutions for he…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "4ca07d56fe629c758ec98b28d4ead9279060b71a66e9b0f42ea5bcde7fd47b12",
+          "excerpt": "hnology in heavy-duty transport Toyota and Scania announce a partnership to test hydrogen fuel cell solutions for heavy-duty transport.Toyota’s third-generation fuel cell systems will be integrated into 40 Scania heavy-…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "49d0486d7b5c23af12e356dd997c03b55db8eb2669ea6b3de3dac0f1194af072",
+          "excerpt": "p to test hydrogen fuel cell solutions for heavy-duty transport.Toyota’s third-generation fuel cell systems will be integrated into 40 Scania heavy-duty vehicles within Scania’s Pilot Partner programme.The &hellip; Read…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "102ce72bcd8f812586f597aaa8fe45f225213bf1eb0e116f528ae52ee72887cc",
+          "excerpt": "Motor Corporation aims to join Daimler Truck and Volvo Group as equal shareholder in the fuel cell joint venture cellcentric Daimler Truck, the Volvo Group, cellcentric and Toyota Motor Corporation have signed a non-bin…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "cbdd071a8647d072cfa5ab1fb7633da4cfcfc978a07c819fc6d4df5b91413fa5",
+          "excerpt": "Motor Corporation have signed a non-binding Memorandum of Understanding to collaborate on fuel cell technologyToyota intends to join Daimler Truck and the Volvo Group as an equal shareholder in &hellip; Read more Tags c…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "e98ac53536b5a75b068dff31765b03dd39f615245f6f20a8c4a5323b14e409e9",
+          "excerpt": "and the Volvo Group as an equal shareholder in &hellip; Read more Tags corporate hydrogen fuel cell 2025 19 June 2025 | 10:00 Europe/Amsterdam Toyota Motor Europe starts zero tailpipe emissions logistics with fuel cell …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "72757596b761489002a90114ea1ffd413dece314b57d6a6b2641a36e56701c29",
+          "excerpt": "10:00 Europe/Amsterdam Toyota Motor Europe starts zero tailpipe emissions logistics with fuel cell trucks Hydrogen fuel cell trucks built by VDL Groep, using Toyota fuel cell modules, now deployed on Toyota's logistics …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "bc85c7ba40bcce0632ca98bc57a7edb9d7a85070b0381d1898cf10dcce2ea58b",
+          "excerpt": "yota Motor Europe starts zero tailpipe emissions logistics with fuel cell trucks Hydrogen fuel cell trucks built by VDL Groep, using Toyota fuel cell modules, now deployed on Toyota's logistics routes from Toyota’s Euro…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "d059eeead5d007c3337d3901c7631b4a40102b202f94a83c935cc552cfa15742",
+          "excerpt": "ogistics with fuel cell trucks Hydrogen fuel cell trucks built by VDL Groep, using Toyota fuel cell modules, now deployed on Toyota's logistics routes from Toyota’s European Parts Centre in Diest, Belgium to France, the…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "e24aba5db3ddc7b8f46b7ee1faef69db10ed18d0888c9b258097c3cc22448c4b",
+          "excerpt": "nergy Observer’s global voyage Toyota backs Energy Observer’s 2025–2033 voyage, using its Fuel Cell System to generate zero-emission power for marine transportThe initiative reflects Toyota’s multi-pathway approach for …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "0fb475210e87aa93e62a59642f5dfd46b0a50b6ee52cd6136e8ec16800c7c3a6",
+          "excerpt": "ore Tags corporate hydrogen 14 February 2025 | 10:45 Europe/Amsterdam Toyota Develops New Fuel Cell System Toyota City, Japan, February 14, 2025―Toyota Motor Corporation (Toyota) announced today that it has developed a …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "e1a81ce44f73227d49bace6231019a7a71d9deb60aa067d66215537d2fcc4ffe",
+          "excerpt": "ry 14, 2025―Toyota Motor Corporation (Toyota) announced today that it has developed a new fuel cell (FC) system, its third-generation fuel cell system (3rd Gen FC System), as part of its continued efforts toward the &he…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "1ac1325689c16f541fa830221df14046cbc2dcbe7e4d46b7a5a556b8e6b007a3",
+          "excerpt": ") announced today that it has developed a new fuel cell (FC) system, its third-generation fuel cell system (3rd Gen FC System), as part of its continued efforts toward the &hellip; Read more Tags corporate hydrogen 28 J…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "d137ed7102bc77a43796c383ed6e02e1a0146701200d478e68005db9f9f91d5f",
+          "excerpt": "ollaboration Towards the Advancement of a Hydrogen Society Aiming to expand the lineup of fuel cell passenger cars, Toyota and BMW are jointly developing a third-generation fuel cell system and working on infrastructure…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "deb8e3d126174e5d0067a7d075ab091929894ce9af871008708579e787a23f36",
+          "excerpt": "eup of fuel cell passenger cars, Toyota and BMW are jointly developing a third-generation fuel cell system and working on infrastructure development co-creation. Read more Tags corporate hydrogen hydrogen factory TMC 04…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "1ebc624422e815acb025b69d25250070ae6756aaf1173485e56268acf0a0830d",
+          "excerpt": "a carbon-neutral business &hellip; Read more Tags corporate hydrogen h2 hydrogen factory fuel cell 19 October 2023 | 11:00 Europe/Amsterdam Converted zero tailpipe emission coaches with Toyota hydrogen fuel cell modules…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "bc67f290b0c7d726ae9c1286168a49ea077e8fc8bb12bc6eaf78fad6b58daebb",
+          "excerpt": "23 | 11:00 Europe/Amsterdam Converted zero tailpipe emission coaches with Toyota hydrogen fuel cell modules to be used at the Olympic and Paralympic Games Paris 2024 Toyota to supply hydrogen fuel cell modules to replac…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "2abe0b70eb224ed17161cf05d6e3df2362a9c7f0bfede05c21ad13c49eafece8",
+          "excerpt": "dules to be used at the Olympic and Paralympic Games Paris 2024 Toyota to supply hydrogen fuel cell modules to replace diesel engines in converted coachesTen converted coaches will be used by Toyota during Paris 2024 Re…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "ba9d49b3023a04f3b1c2fe82c96b8ade74e3f2143eafb9a4379475dba4c31ac8",
+          "excerpt": "or all inclusive mobility 20 September 2023 | 10:00 Europe/Amsterdam Toyota announces 500 fuel cell Mirai in the official fleet for the Olympic and Paralympic Games Paris 2024 Zero-emission fleet of hydrogen-powered Toy…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "65d1b8540edc5fcf3563dc4b1ab6ff0071adde8afc726ae02f89c1abb321a256",
+          "excerpt": "lympics hydrogen Mirai 05 September 2023 | 01:01 Europe/Amsterdam Toyota reveals hydrogen fuel cell electric Hilux prototype Development project delivers the first prototype of a hydrogen fuel cell electric HiluxProject…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "1fbba4a895695dd9cfef5c6f201fb34e2f188f2b2e8304f6d230959cf5251129",
+          "excerpt": "l electric Hilux prototype Development project delivers the first prototype of a hydrogen fuel cell electric HiluxProject reflects Toyota’s wider European strategy to accelerate development of hydrogen fuel cell solutio…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "bc7226a0f8224c2965459b0a96b1ff18064540d2bdd86ac8cbf419315308160d",
+          "excerpt": "uxProject reflects Toyota’s wider European strategy to accelerate development of hydrogen fuel cell solutions to deliver carbon neutrality across the region Read more Tags corporate fuel cell fuel cell electric vehicle …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "14d6941f155760f955835e341ddb13b7a79457be0d6663b39cec04a1d3dc16b5",
+          "excerpt": "el cell solutions to deliver carbon neutrality across the region Read more Tags corporate fuel cell fuel cell electric vehicle hydrogen hilux 09 May 2023 | 10:00 Europe/Amsterdam Hydrogen fuel cell trucks to decarbonise…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "eb4f645d80d694e443d2ca7e1407f8304e4b0fe44ae9c25e7595f79677706abb",
+          "excerpt": "lutions to deliver carbon neutrality across the region Read more Tags corporate fuel cell fuel cell electric vehicle hydrogen hilux 09 May 2023 | 10:00 Europe/Amsterdam Hydrogen fuel cell trucks to decarbonise Toyota lo…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "7322fadaa78f32e8784c6f4b7c18007bb6c8b83071d5cc33231d57cb03ab8f04",
+          "excerpt": "l fuel cell electric vehicle hydrogen hilux 09 May 2023 | 10:00 Europe/Amsterdam Hydrogen fuel cell trucks to decarbonise Toyota logistics in Europe VDL Groep to convert existing heavy-duty trucks into zero-emission car…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-11-11T14:23:37.649Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "ballard-investor-news": {
+    "id": "ballard-investor-news",
+    "industryId": "fuel-cell",
+    "cadence": "daily",
+    "url": "https://www.ballard.com/investor-hub/",
+    "title": "Investor Hub - Ballard",
+    "hash": "88f088533c6213a4adb50d1220da7e21b90f1e35f62bda8f212cf77aa984bd21",
+    "baselineAt": "2026-11-11T14:23:38.982Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-11-11T14:23:38.982Z",
+      "keywords": [
+        "fuel cell",
+        "production",
+        "stack",
+        "bus",
+        "power systems",
+        "capacity"
+      ],
+      "segments": [
+        {
+          "hash": "0805e2d238975f56ef8a279c19e24ccbdcf160fcccb010281b43dcbf2e16d258",
+          "excerpt": "information, technical support and documentation downloads. Contact us Products Products Fuel Cell Modules FCmove ® Family of fuel cell modules designed for integration in vehicles, delivering zero-emission power for he…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "64bf1613a27f6e7a178d65a8079f2bfe7647c9f3720d5d8de731c4218ed5cb2f",
+          "excerpt": "ocumentation downloads. Contact us Products Products Fuel Cell Modules FCmove ® Family of fuel cell modules designed for integration in vehicles, delivering zero-emission power for heavy duty transportation. FCwave ™ Ca…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "4733c390345a1f8a43f5f66bb66d517ac091e916ce2da852183940dd542fef3f",
+          "excerpt": "les, delivering zero-emission power for heavy duty transportation. FCwave ™ Cabinet based fuel cell module for marine and stationary applications, delivering clean, reliable and efficient power Fuel Cell Stacks FCgen ® …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "a890ec27753852eae31b2e71e8ce438e3b04da6676125c1d2963163ff7f114a6",
+          "excerpt": "le for marine and stationary applications, delivering clean, reliable and efficient power Fuel Cell Stacks FCgen ® Versatile PEM fuel cell stack platforms for mobility and stationary applications, delivering high power …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "db8d3d59d22e7ba61287b5a3ccbbb4c868dd20d8dc313e5207e4a408a27893f3",
+          "excerpt": "ns, delivering clean, reliable and efficient power Fuel Cell Stacks FCgen ® Versatile PEM fuel cell stack platforms for mobility and stationary applications, delivering high power density and durability GeoPura HPU ™ Hy…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "6d20c7421f22d05a37b05077ef193f93c54c24b2222d1a7394ba8db6a6b8f128",
+          "excerpt": "uting diesel alternatives Need Some Help? Product finder A tool to easily match Ballard’s fuel cell products with your specific transportation and power needs. Market Application Application Bus Truck Marine Rail Power …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "9bb7e8ee719989f5ceb5d74623c1386572e1d78cd4cca5d0c42264c3c3b6baa7",
+          "excerpt": "on, providing a comprehensive resources of our products in one convenient location. Ask a Fuel Cell Expert Investor Hub Empower your investment decisions Company profile Financial reports Stock chart Press releases ESG …",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "537a5b68514693e8eb900bda10145a62215258932ea375584ab15860df09a94f",
+          "excerpt": "tal responsibility, we are committed to shaping a sustainable future through cutting-edge fuel cell solutions. Document Library Financial Reports Go to document library US Filings- EDGAR Canadian Filings- SEDAR Document…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "8bb5beaaee95bf22d2750f368b60b8456db8ae17d7234559cd9336ddde25da0c",
+          "excerpt": "X:BLDP Document Library Press releases Go to document library Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus p…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "a2991815d61287e50844c7a305a1a617b7fe996521ab0160551e48a583b4b04c",
+          "excerpt": "ration Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell engine combine compact design, improved performance and tailored service support... November 5, 2026 Document Ballard l…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "d3d91d0d4eec7b23d72e8723292d917f5da6c7f2b76ee68768a72ba8b202004c",
+          "excerpt": "towable unit Designed by GeoPura, manufactured by Siemens Energy and powered by a Ballard fuel cell, HPU Agile-H is available to pre-order now for delivery... October 28, 2026 Document Review of the Ballard Forum Ballar…",
+          "matchedKeywords": [
+            "fuel cell"
+          ]
+        },
+        {
+          "hash": "60ba0e2d0c5fd62f050dea8210872b2edc35812379efb502e301e5a63ccc3978",
+          "excerpt": "releases Go to document library Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell …",
+          "matchedKeywords": [
+            "production"
+          ]
+        },
+        {
+          "hash": "53a1235201aa62bbf4cbeccc3688cb6d85f405182a331328ad4592fc2bf74838",
+          "excerpt": "ine and stationary applications, delivering clean, reliable and efficient power Fuel Cell Stacks FCgen ® Versatile PEM fuel cell stack platforms for mobility and stationary applications, delivering high power density an…",
+          "matchedKeywords": [
+            "stack"
+          ]
+        },
+        {
+          "hash": "d7aface37ef2f816d972ae63b2819a204f4e3aeb9280d7d67fe7fcdda0e1c146",
+          "excerpt": "ring clean, reliable and efficient power Fuel Cell Stacks FCgen ® Versatile PEM fuel cell stack platforms for mobility and stationary applications, delivering high power density and durability GeoPura HPU ™ Hydrogen-pow…",
+          "matchedKeywords": [
+            "stack"
+          ]
+        },
+        {
+          "hash": "dd88694ffc887f77cc533d73f86747ad821f08eeca167dfc1fc32430e1864ad1",
+          "excerpt": "roducts with your specific transportation and power needs. Market Application Application Bus Truck Marine Rail Power Generation Off Road & Material Handling Solutions &amp; Services About Ballard About Ballard Our Comp…",
+          "matchedKeywords": [
+            "bus"
+          ]
+        },
+        {
+          "hash": "f753e1e1d3d83042f36beb898d8af1a53ebc6dae04f501e100a6d3cd8e0c6b4a",
+          "excerpt": "l cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell engine combine compact design, improved performance and tailore…",
+          "matchedKeywords": [
+            "bus"
+          ]
+        },
+        {
+          "hash": "f76d800c85fe619ea281fe76b02774842c49ab879cc88404cf4543e1139504fd",
+          "excerpt": "uction debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell engine combine compact design, improved performance and tailored service support... November 5…",
+          "matchedKeywords": [
+            "bus"
+          ]
+        },
+        {
+          "hash": "abaf2e4eefd8a97c4d7ad4c6c022308ce982249720a060fcc61328a8530b2718",
+          "excerpt": "subscribe. Subscribe Products FCmove ® FCwave ™ FCgen ® HPU ™ Product finder Applications Bus Truck Marine Rail Power Generation Material Handling Solutions Product Solutions &#038; Services News &#038; Resources News H…",
+          "matchedKeywords": [
+            "bus"
+          ]
+        },
+        {
+          "hash": "4bf67272437ee379db46a9edeb5e0815f99426f73cc8e71843ee2bfbb8602895",
+          "excerpt": "allard Announces Acquisition of GeoPura Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marke…",
+          "matchedKeywords": [
+            "power systems"
+          ]
+        },
+        {
+          "hash": "37f87580b75f4119f8a6b6827b04ec52297a72f4a4ddc13109e3dc098bcaacef",
+          "excerpt": "a Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marketers, analysts, engineers, and energy …",
+          "matchedKeywords": [
+            "power systems"
+          ]
+        },
+        {
+          "hash": "aaf9208d0a384d18f5187573153d646e08f49e09c0ab946be3e696f6c8440b81",
+          "excerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $2.10 (-4.98%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.48 (-5.73%) TSX:BLDP Document Library Press releas…",
+          "matchedKeywords": [
+            "power systems"
+          ]
+        },
+        {
+          "hash": "2071e6d8f4ba4c9ab339b9491fb567dbb40837244955777a547687000cf98ab4",
+          "excerpt": "t library TSX:BLDP Ballard Power Systems $2.10 (-4.98%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.48 (-5.73%) TSX:BLDP Document Library Press releases Go to document library Document Ballard FCmove®-SC fuel cel…",
+          "matchedKeywords": [
+            "power systems"
+          ]
+        },
+        {
+          "hash": "a3db544c00a5edd3da811d9e19e791fd9001d7aa98d700894f3666e27c4c6739",
+          "excerpt": "e adj. EBITDA positive by the end of 2027 and full year 2028. VANCOUVER, CANADA – Ballard Power Systems (NASDAQ:... October 22, 2026 Document Ballard and GeoPura put clean energy center stage in a hydrogen-powered summe…",
+          "matchedKeywords": [
+            "power systems"
+          ]
+        },
+        {
+          "hash": "b7cf26fee782b02f87f99e970c21f22350b73c209e9938dbc3f067797d25f209",
+          "excerpt": "5 80 83 45 16 Shareholder Meetings & Annual Reports Notice & Access Notice (2026) Ballard Power Systems Proxy (2026) Voting Information Form (2026) Rules of Conduct and Procedures (2026) 2026 Ballard&#8217;s 2026 Virtua…",
+          "matchedKeywords": [
+            "power systems"
+          ]
+        },
+        {
+          "hash": "9a7081bc7d3b68f0e8655b1f053be3c07db4f0efcf6fe0e41e475a928259c084",
+          "excerpt": "din page Visit Bluesky page Visit YouTube page Visit Facebook page Copyright 2026 Ballard Power Systems",
+          "matchedKeywords": [
+            "power systems"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-11-11T14:23:38.982Z",
+    "lastChangedAt": null,
+    "lastError": null
+  },
+  "innolight-news": {
+    "id": "innolight-news",
+    "industryId": "ai-optics",
+    "cadence": "daily",
+    "url": "https://www.innolight.com/news",
+    "title": "News",
+    "hash": "78c950f015cb4232b8fa671f65fd780f84af7bc24ec935f32ced4635a4cd1672",
+    "baselineAt": "2026-11-11T14:23:56.032Z",
+    "watchSnapshot": {
+      "version": "1.0",
+      "capturedAt": "2026-11-11T14:23:56.032Z",
+      "keywords": [
+        "800G",
+        "1.6T",
+        "transceiver",
+        "optical",
+        "pluggable",
+        "production"
+      ],
+      "segments": [
+        {
+          "hash": "8edbce80b20b6bb24f44316e475712ce267ab88c1ed539006e249a127b7721fd",
+          "excerpt": "Read More --> What’s Hot InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 -- InnoLight Technology, the leade…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "31a49759fb21c67b764b74edc27f401f7b472feaedc48ac9558beca429128931",
+          "excerpt": "OFC 2023 in San Diego, CA Learn More InnoLight Collaborates with Marvell on the Launch of 800G ZR/ZR+ Optical Modules for Data Center Interconnects SAN DIEGO, March 25, 2024 -- Recent surge of regenerative AI demand is …",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "6eca67acb0e279ea2b70b1871eb9a8b3d540f2bed0cbd75d6d1c182938945157",
+          "excerpt": "orks. The Inno InnoLight at OFC 2022 | InnoLight and Spirent jointly demonstrate 400G and 800G test platforms CALABASAS, CA. -March 8, 2022 -Spirent Communications plc (LSE:SPT) announced the availability of its latest …",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "8865e81c99d8f499a7454af321ecab934b50cfe4c2be5088b44514fd1c639511",
+          "excerpt": "2 -Spirent Communications plc (LSE:SPT) announced the availability of its latest 400G and 800G test platforms at OFC2022. InnoLight Technology Conducts Live Demo of 400G QSFP-DD FR4 Optical Transceivers at OFC 2018 SUZH…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "17dd67cb37ea324a44aacba88ebd0233b2907b712ead10c450b913fb61f96b9c",
+          "excerpt": ".. Company information Media reports InnoLight Collaborates with Marvell on the Launch of 800G ZR/ZR+ Optical Modules for Data Center Interconnects SAN DIEGO, March 25, 2024 -- Recent surge of regenerative AI demand is …",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "280ce9bf248cc56515e40a74cc9be0fb997c2c34b51d4b9b48b7f73d3b2f1046",
+          "excerpt": "rks. The Inno 2024-03-26 InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 -- InnoLight Technology, the leade…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "33feab7cbfb5185e980e88e8e6577dc228f61b8e9517abe24de22c20af3ca770",
+          "excerpt": "CA 2024-02-23 InnoLight at OFC 2022 | InnoLight and Spirent jointly demonstrate 400G and 800G test platforms CALABASAS, CA. -March 8, 2022 -Spirent Communications plc (LSE:SPT) announced the availability of its latest 4…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "27ccbb7f55fda42b63386f7839c24ddd7048d4871f22821f9317f8a2c602a51a",
+          "excerpt": "2 -Spirent Communications plc (LSE:SPT) announced the availability of its latest 400G and 800G test platforms at OFC2022. 2022-03-11 InnoLight Technology Conducts Live Demo of 400G QSFP-DD FR4 Optical Transceivers at OF…",
+          "matchedKeywords": [
+            "800G"
+          ]
+        },
+        {
+          "hash": "383469d138f18fc28756e5c5e44d585cb7bfdc7cf3497cbbe91490da0430e85b",
+          "excerpt": "w Trade Compliance ESG Newsroom Read More --> What’s Hot InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 --…",
+          "matchedKeywords": [
+            "1.6T"
+          ]
+        },
+        {
+          "hash": "541eadf2985e1416ec0856ef0b63b104c2184734bf66efc8bb64fb1267eb7356",
+          "excerpt": "ader in data center optics, announced today that it will showcase a live demonstration of 1.6T OSFP-XD DR8+ pluggable optical transceiver at OFC 2023 in San Diego, CA Learn More InnoLight Collaborates with Marvell on th…",
+          "matchedKeywords": [
+            "1.6T"
+          ]
+        },
+        {
+          "hash": "e95e73c8c74ab92a4eb8b87eda9b47d09a73433af7b4003e0f749e7744d2caab",
+          "excerpt": "n and optical transmission networks. The Inno 2024-03-26 InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 --…",
+          "matchedKeywords": [
+            "1.6T"
+          ]
+        },
+        {
+          "hash": "1c08837ac1f275c98b791d4a9d48004c97a96a77ccd0ab18f04b3eed346610c7",
+          "excerpt": "ader in data center optics, announced today that it will showcase a live demonstration of 1.6T OSFP-XD DR8+ pluggable optical transceiver at OFC 2023 in San Diego, CA 2024-02-23 InnoLight at OFC 2022 | InnoLight and Spi…",
+          "matchedKeywords": [
+            "1.6T"
+          ]
+        },
+        {
+          "hash": "8540e0f9f75ed20467b2657e1c6a0b5f7397f2d50476cf7adcae3d0f657f7b72",
+          "excerpt": "What’s Hot InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 -- InnoLight Technology, the leader in data cent…",
+          "matchedKeywords": [
+            "transceiver"
+          ]
+        },
+        {
+          "hash": "eca36974b410b460091fd653a09c7b3b47811864168cebee90100b7e9e2244a0",
+          "excerpt": "d today that it will showcase a live demonstration of 1.6T OSFP-XD DR8+ pluggable optical transceiver at OFC 2023 in San Diego, CA Learn More InnoLight Collaborates with Marvell on the Launch of 800G ZR/ZR+ Optical Modu…",
+          "matchedKeywords": [
+            "transceiver"
+          ]
+        },
+        {
+          "hash": "56881cd71cd2d85331f1b7a3adb2cb08d31df0629891b8d565412756b9701ad4",
+          "excerpt": "platforms at OFC2022. InnoLight Technology Conducts Live Demo of 400G QSFP-DD FR4 Optical Transceivers at OFC 2018 SUZHOU, China and SANTA CLARA, Calif., March 9, 2018 -- InnoLight Technology (Suzhou) Ltd,... Company in…",
+          "matchedKeywords": [
+            "transceiver"
+          ]
+        },
+        {
+          "hash": "4776fbd7b8eb5e97b95e6dd10059ab6c73c580654a8f5a34996f3d1b2d7e31d0",
+          "excerpt": "2024-03-26 InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 -- InnoLight Technology, the leader in data cent…",
+          "matchedKeywords": [
+            "transceiver"
+          ]
+        },
+        {
+          "hash": "9d6f08ca1562aeee03a04629395e9cf0ecc23cbdbef15c156772960090aa0eab",
+          "excerpt": "d today that it will showcase a live demonstration of 1.6T OSFP-XD DR8+ pluggable optical transceiver at OFC 2023 in San Diego, CA 2024-02-23 InnoLight at OFC 2022 | InnoLight and Spirent jointly demonstrate 400G and 80…",
+          "matchedKeywords": [
+            "transceiver"
+          ]
+        },
+        {
+          "hash": "306f6361bfb00440c6a9c627c70614f20721a6864b0b6105bf85ea7637a3bca5",
+          "excerpt": "t OFC2022. 2022-03-11 InnoLight Technology Conducts Live Demo of 400G QSFP-DD FR4 Optical Transceivers at OFC 2018 SUZHOU, China and SANTA CLARA, Calif., March 9, 2018 -- InnoLight Technology (Suzhou) Ltd,... 2018-03-09…",
+          "matchedKeywords": [
+            "transceiver"
+          ]
+        },
+        {
+          "hash": "4e4931cafaaf6af30d8b2549b381422df17ba507b8738eab4c42529fa22ee79e",
+          "excerpt": "ws --> Home Solutions AI and Data Center Networking Mobile Networking Metro and Long Haul Optical Networking About Us Overview Trade Compliance ESG Newsroom Contact Us --> --> 中文 --> --> --> --> Log in --> --> --> News …",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "4945aab20dd4cda99dffe2e682b5903fffb044ddee4ed70de30e1ec382c21f5c",
+          "excerpt": "re Home Solutions --> AI and Data Center Networking Mobile Networking Metro and Long Haul Optical Networking --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> About Us --> Overview Trade Compliance ESG Newsroo…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "99f79956b78aa9fc4eda9c442b548e619c660d851de5b0b901983aaac17ee9d8",
+          "excerpt": "> --> --> --> --> --> --> --> --> --> --> Contact Us --> CN --> --> Search --> A Model of Optical Communication Enterprise Around the World --> --> --> --> 中文 --> English --> --> --> --> --> --> News Center Company info…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "49283240a03891fb8eb6654bc34c74cc49313b553fc5505a78688c860d1cb82b",
+          "excerpt": "More --> What’s Hot InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 -- InnoLight Technology, the leader in …",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "3a9c992243e31a3886b27733892d4f338d98ec7c3d440018c9ddd4fc5f393638",
+          "excerpt": "announced today that it will showcase a live demonstration of 1.6T OSFP-XD DR8+ pluggable optical transceiver at OFC 2023 in San Diego, CA Learn More InnoLight Collaborates with Marvell on the Launch of 800G ZR/ZR+ Opti…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "f4515f9d84381b57e68fb7b580f3a1bdfa7ff35a04491deec0b22339630d9e24",
+          "excerpt": "San Diego, CA Learn More InnoLight Collaborates with Marvell on the Launch of 800G ZR/ZR+ Optical Modules for Data Center Interconnects SAN DIEGO, March 25, 2024 -- Recent surge of regenerative AI demand is driving high…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "4a73e2d5f313770b0ab648de87f868cbd956788eb84208f08428f061dc6ffb88",
+          "excerpt": "er traffic, heightening the requirements for bandwidth in data center interconnection and optical transmission networks. The Inno InnoLight at OFC 2022 | InnoLight and Spirent jointly demonstrate 400G and 800G test plat…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "78ce9c8e90cec1e647370f05313fbc00e3425d3b83e276d2a2e983106eacd262",
+          "excerpt": "0G test platforms at OFC2022. InnoLight Technology Conducts Live Demo of 400G QSFP-DD FR4 Optical Transceivers at OFC 2018 SUZHOU, China and SANTA CLARA, Calif., March 9, 2018 -- InnoLight Technology (Suzhou) Ltd,... Co…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "821fa02b0b352db8f2b238739003279cedde545e9c75570bfd16fa8cc6a4d06b",
+          "excerpt": "nformation Media reports InnoLight Collaborates with Marvell on the Launch of 800G ZR/ZR+ Optical Modules for Data Center Interconnects SAN DIEGO, March 25, 2024 -- Recent surge of regenerative AI demand is driving high…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "89773f31a215b67b76b0de454c7e06221bed2678d810b76408d3faadd748c6c4",
+          "excerpt": "er traffic, heightening the requirements for bandwidth in data center interconnection and optical transmission networks. The Inno 2024-03-26 InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical …",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "6b6892f03a05a4ddae57a64a003b2c4721c45d7202530384fe8078a248d462be",
+          "excerpt": "The Inno 2024-03-26 InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023 SUZHOU, China and SANTA CLARA, California, March 3, 2023 -- InnoLight Technology, the leader in …",
+          "matchedKeywords": [
+            "optical"
+          ]
+        },
+        {
+          "hash": "81f8e86c0c3a92283b16278e1f9d371a886da5fe4a14a395a8526645eab3298a",
+          "excerpt": "announced today that it will showcase a live demonstration of 1.6T OSFP-XD DR8+ pluggable optical transceiver at OFC 2023 in San Diego, CA 2024-02-23 InnoLight at OFC 2022 | InnoLight and Spirent jointly demonstrate 400…",
+          "matchedKeywords": [
+            "optical"
+          ]
+        }
+      ]
+    },
+    "lastCheckedAt": "2026-11-11T14:23:56.032Z",
+    "lastChangedAt": null,
     "lastError": null
   }
 }

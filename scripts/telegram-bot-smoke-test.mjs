@@ -50,7 +50,7 @@ export async function checkSupplyChainBot({ token, chatId, fetchImpl = fetch }) 
   }
   const result = await requestTelegram("sendMessage", token, {
     chat_id: chatId,
-    text: "✅ Supply Chain Bottleneck Radar\n专属 Telegram Bot 已连接成功。\n这是一条手动连接测试消息，不代表 Claude/Codex 已经开始研究或发现新事件。",
+    text: "✅ Supply Chain Bottleneck Radar\nDedicated Telegram bot connected successfully.\nThis is a manual connectivity test. It does not indicate that Claude or Codex has started research or found new events.",
     disable_web_page_preview: true
   }, fetchImpl);
   if (!result?.message_id) throw new Error("Telegram reported success but returned no message ID.");

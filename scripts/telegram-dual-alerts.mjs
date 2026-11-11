@@ -19,14 +19,14 @@ export function telegramText(item, publicUrl) {
   const base = String(publicUrl || "https://zxinghao.github.io/Fundemeantal-Aanalysis-MVP1/").replace(/[?#].*$/, "");
   const url = base + "?event=" + encodeURIComponent(item.eventId) + "#desk";
   return [
-    "🔎 供应链研究：双 Agent 共识候选",
-    "行业：" + item.industryId,
-    "节点：" + item.target,
-    "类型：" + item.changeType,
-    "初步结论：" + String(item.summary).slice(0, 360),
-    "状态：尚未核实／尚未批准／产业链未变动",
-    "来源：" + item.sourceUrl,
-    "打开 Research Desk 查看两份意见及原始证据：",
+    "🔎 Supply Chain Radar: Dual-Agent Research Candidate",
+    "Industry: " + item.industryId,
+    "Target: " + item.target,
+    "Change type: " + item.changeType,
+    "Preliminary assessment: " + String(item.summary).slice(0, 360),
+    "Status: Unverified · Awaiting human approval · Supply-chain graph unchanged",
+    "Source: " + item.sourceUrl,
+    "Open Research Desk to compare both assessments and primary evidence:",
     url
   ].join("\n");
 }

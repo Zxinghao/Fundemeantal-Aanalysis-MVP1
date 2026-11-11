@@ -22,7 +22,7 @@ The previous 4-company rotation and 6-recent-event hard limits are removed. For 
 ## Human message annotation to AI review
 
 1. Open Research Desk and select an industry.
-2. Under a message, expand **添加批注 / 加入 Dual Agents 分析**.
+2. Under a message, expand **Add note / Send to Dual Agents**.
 3. Enter an evidence-based note (at least 10 characters), set its proposed graph-change type:
    - Update company information
    - Update existing node
@@ -30,7 +30,7 @@ The previous 4-company rotation and 6-recent-event hard limits are removed. For 
    - Propose or remove a relationship
    - Revise a relationship
 4. Choose existing target company or nodes and provide the original source URL.
-5. **保存批注** stores a draft only in the current browser. **加入 Dual Agents 分析** opens a prefilled GitHub issue.
+5. **Save Note** stores a draft only in the current browser. **Send to Dual Agents** opens a prefilled GitHub issue.
 6. Log in to the repository-owner GitHub account and click **Submit new issue**. Only then is the nomination sent to the backend. GitHub issue text is public in this public repository: do not include private notes.
 7. \`Research Nomination Intake\` accepts only the exact owner, validates fields, canonical IDs, and any referenced scanner event/source URL, then commits an **unverified** record to \`data/manual-research-requests.json\`.
 8. After a successful intake, \`Daily Dual-Agent Research\` is eligible to run (only when \`DUAL_RESEARCH_ENABLED=true\` and provider secrets are configured). It evaluates the nomination as a candidate. If the nomination is linked to a comparable official scanner event, those original excerpts are preserved; otherwise the nomination has no verified excerpts and cannot pass material-consensus validation.

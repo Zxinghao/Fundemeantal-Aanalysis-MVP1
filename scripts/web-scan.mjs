@@ -86,6 +86,7 @@ export function eventIdForChange(industryId, date, source, changeEvidence) {
 
 export function cadenceDue(cadence, previous, checkedAt, currentUrl = null) {
   if (currentUrl && previous?.url && previous.url !== currentUrl) return true;
+  if (process.env.DAILY_ALL_COMPANIES === "true") return true;
   if (cadence !== "weekly") return true;
   if (previous?.lastError) return true;
   if (!previous?.lastCheckedAt) return true;

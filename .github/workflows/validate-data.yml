@@ -39,6 +39,8 @@ jobs:
           node --check scripts/reconcile-dual-research.mjs
           node --check scripts/telegram-dual-alerts.mjs
           node --check tests/dual-agent-research.test.mjs
+          node --check scripts/telegram-bot-smoke-test.mjs
+          node --check tests/telegram-bot-smoke-test.test.mjs
           node -e "const s=JSON.parse(require('fs').readFileSync('scripts/dual-agent-output.schema.json','utf8')); if(!s.properties?.assessments) process.exit(1)"
           node -e "const p=JSON.parse(require('fs').readFileSync('data/products.json','utf8'));if(!Array.isArray(p)||p.some(x=>!x.id||!Array.isArray(x.steps)||!x.steps.length))throw new Error('products.json malformed')"
           node --check scripts/disclosure-diff.mjs
@@ -70,6 +72,9 @@ jobs:
 
       - name: Test independent research and Telegram gates
         run: node --test tests/dual-agent-research.test.mjs tests/research-nomination-intake.test.mjs tests/research-coverage-integrity.test.mjs
+
+      - name: Test dedicated Telegram bot connection handling
+        run: node --test tests/telegram-bot-smoke-test.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

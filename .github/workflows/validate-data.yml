@@ -34,6 +34,7 @@ jobs:
           node --check review-nominations.js
           node --check scripts/ingest-research-nomination.mjs
           node --check tests/research-nomination-intake.test.mjs
+          node --check tests/english-ui.test.mjs
           node --check tests/research-coverage-integrity.test.mjs
           node --check scripts/build-daily-research.mjs
           node --check scripts/reconcile-dual-research.mjs
@@ -80,6 +81,9 @@ jobs:
         run: node --test tests/classify-claude-action-error.test.mjs
       - name: Test initial dual-agent report notification ledger
         run: node --test tests/dual-agent-notification-ledger.test.mjs
+
+      - name: Validate English-only interface and monitoring layout
+        run: node --test tests/english-ui.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

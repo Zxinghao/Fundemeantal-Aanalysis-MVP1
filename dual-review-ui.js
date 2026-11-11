@@ -118,7 +118,7 @@
     const oldAudit=reportDetails.querySelector(".dual-company-audit");if(oldAudit)oldAudit.remove();
     if(companies.length){
       const audit=document.createElement("details");audit.className="dual-company-audit";
-      const auditTitle=document.createElement("summary");auditTitle.textContent="Company-by-company coverage ("+checked+"/"+companies.length+"）";
+      const auditTitle=document.createElement("summary");auditTitle.textContent="Company-by-company coverage ("+checked+"/"+companies.length+")";
       audit.append(auditTitle);
       for(const company of companies){
         const item=document.createElement("div");item.className="dual-company-row";

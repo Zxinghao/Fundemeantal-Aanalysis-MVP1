@@ -1,7 +1,7 @@
 import {
   buildSourceHealthRows,
   summarizeSourceHealth
-} from "./scripts/source-health-model.mjs";
+} from "./scripts/source-health-model.mjs?v=907ca9ab";
 
 const container = document.querySelector("#source-health");
 const industrySelect = document.querySelector("#industry-select");

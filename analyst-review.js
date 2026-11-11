@@ -2,7 +2,7 @@ import {
   buildPatchPreview,
   buildReviewedPacket,
   validateAnalystReview
-} from "./scripts/analyst-review-model.mjs";
+} from "./scripts/analyst-review-model.mjs?v=907ca9ab";
 
 const STORAGE_KEY = "analystReviews";
 const scoreDimensionLabels = {

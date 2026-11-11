@@ -103,7 +103,10 @@ jobs:
 
   codex:
     needs: prepare
-    runs-on: ubuntu-latest
+    # Codex Action v1 drop-sudo can fail to restrict /run/dbus/system_bus_socket
+    # on ubuntu-latest when it resolves to Ubuntu 26.04. Keep the secure
+    # drop-sudo + :read-only profile; pin only the GitHub runner image.
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:

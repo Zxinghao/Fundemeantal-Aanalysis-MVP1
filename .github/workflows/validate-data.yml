@@ -76,6 +76,8 @@ jobs:
       - name: Test dedicated Telegram bot connection handling
         run: node --test tests/telegram-bot-smoke-test.test.mjs
 
+      - name: Test safe Claude error classification
+        run: node --test tests/classify-claude-action-error.test.mjs
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs
 

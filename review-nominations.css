@@ -37,3 +37,15 @@
   #view-desk .desk-nomination-buttons button { width:100%; }
   #view-desk .desk-nomination-form { padding:11px; }
 }
+
+#view-desk .dual-report-details { margin-top:12px; padding-top:12px; border-top:1px solid #e7edf4; }
+#view-desk .dual-report-details > summary { cursor:pointer; color:#435f87; font-size:12px; font-weight:700; }
+#view-desk .dual-company-audit { margin:14px 0; padding:13px; border:1px solid #e6ebf3; border-radius:12px; background:#f8fafd; }
+#view-desk .dual-company-audit > summary { font-size:12px; color:#465b75; cursor:pointer; font-weight:700; }
+#view-desk .dual-company-row { padding:12px 0; border-bottom:1px solid #e4eaf2; }
+#view-desk .dual-company-row:last-child { border-bottom:0; }
+#view-desk .dual-company-row > strong { display:block; font-size:13px; }
+#view-desk .dual-company-row > small { display:block; color:#7d8ca0; margin-top:3px; }
+#view-desk .dual-company-row .dual-field { border:0; padding-top:6px; margin-top:0; }
+#view-desk .dual-company-row .dual-field strong { font-size:11px; color:#65758b; }
+#view-desk .dual-company-row .dual-field p { margin-top:2px; }

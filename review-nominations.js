@@ -9,19 +9,30 @@
   if(!desk||!container)return;
 
   const heading=desk.querySelector(".desk-review .section-heading h2");
-  if(heading)heading.textContent="行业与公司消息";
+  if(heading)heading.textContent="Industry & Company Updates";
   const intro=document.createElement("p");
   intro.className="desk-feed-intro";
-  intro.textContent="查看监控消息、批注重要变化，选择节点或连线后交给 Dual Agents 核查。批注不是事实验证或发布批准。";
+  intro.textContent="Review monitored updates, add research notes, and nominate a company, node, or connection for independent analysis. Notes are not verified facts or publication approvals.";
   desk.querySelector(".desk-review .section-heading")?.after(intro);
 
+  // Keep the research feed primary. Operational diagnostics stay at the
+  // bottom and remain closed unless the user explicitly opens them.
   const side=desk.querySelector(".desk-side");
-  if(side){
-    const advanced=document.createElement("details");
-    advanced.className="desk-advanced card";
-    const summary=document.createElement("summary");
-    summary.textContent="更多工具：来源健康、手动提交证据";
-    side.before(advanced);advanced.append(summary,side);
+  const grid=desk.querySelector(".desk-grid");
+  if(side && grid){
+    grid.after(side);
+    side.classList.add("desk-bottom-tools");
+    const operations=side.querySelector(".research-ops");
+    if(operations){
+      const systemStatus=document.createElement("details");
+      systemStatus.className="desk-system-status card";
+      const summary=document.createElement("summary");
+      summary.textContent="System Status · Source Monitoring";
+      operations.before(systemStatus);
+      systemStatus.append(summary,operations);
+    }
+    const submitEvidence=side.querySelector(".submit-card");
+    if(submitEvidence)submitEvidence.classList.add("desk-evidence-tools");
   }
 
   const STORE="radar.reviewAnnotations.v2";
@@ -60,32 +71,32 @@
     if(card.querySelector(".desk-nomination"))return;
     const current=read()[item.id]||{};
     const details=makeField("details","desk-nomination");
-    const summary=makeField("summary","","添加批注 / 加入 Dual Agents 分析");
+    const summary=makeField("summary","","Add note / Send to Dual Agents");
     details.append(summary);
     const area=makeField("div","desk-nomination-form");
     const note=makeField("textarea","","");
     note.className="desk-annotation";
     note.rows=3;note.maxLength=1500;
-    note.placeholder="写下你认为这条消息重要的理由、需要核实的事实，以及可能影响哪段供应链（至少10个字符）。";
+    note.placeholder="Explain why this update matters, what still needs verification, and which supply-chain relationship might be affected (at least 10 characters).";
     note.value=current.annotation||"";
-    note.setAttribute("aria-label","研究批注");
+    note.setAttribute("aria-label","Research note");
     const graphChange=makeField("select","desk-graph-change");
-    graphChange.setAttribute("aria-label","建议研究的供应链变化类型");
+    graphChange.setAttribute("aria-label","Proposed supply-chain change");
     options(graphChange,[
-      ["update_company","更新公司信息或瓶颈判断"],
-      ["update_node","修改已有节点"],
-      ["add_node","提议新增节点"],
-      ["add_relationship","提议新增供应链连线"],
-      ["remove_relationship","提议删除供应链连线"],
-      ["update_relationship","提议修订供应链连线"]
+      ["update_company","Update company or bottleneck assessment"],
+      ["update_node","Update existing node"],
+      ["add_node","Propose a new node"],
+      ["add_relationship","Propose a new connection"],
+      ["remove_relationship","Propose removing a connection"],
+      ["update_relationship","Propose changing a connection"]
     ]);
     graphChange.value=current.proposedGraphChange|| (item.companyId?"update_company":"update_node");
 
     const relation=makeField("div","desk-endpoint-fields");
-    const from=makeField("select","");from.setAttribute("aria-label","起点节点");
-    const to=makeField("select","");to.setAttribute("aria-label","终点节点");
-    const company=makeField("select","");company.setAttribute("aria-label","关联公司");
-    const node=makeField("select","");node.setAttribute("aria-label","关联节点");
+    const from=makeField("select","");from.setAttribute("aria-label","From node");
+    const to=makeField("select","");to.setAttribute("aria-label","To node");
+    const company=makeField("select","");company.setAttribute("aria-label","Target company");
+    const node=makeField("select","");node.setAttribute("aria-label","Target node");
     function fill(){
       const industry=currentIndustry();
       if(!industry)return;
@@ -99,24 +110,24 @@
       company.value=current.targetId||item.companyId||companies[0]?.[0]||"";
     }
     fill();
-    const source=makeField("input","desk-source-input");source.type="url";source.placeholder="官方公告链接 https://...";
+    const source=makeField("input","desk-source-input");source.type="url";source.placeholder="Official source URL https://...";
     source.value=current.sourceUrl||sourceFor(item);
-    source.setAttribute("aria-label","证据来源链接");
-    const label=makeField("label","desk-note-label","拟影响的部分");
+    source.setAttribute("aria-label","Evidence source URL");
+    const label=makeField("label","desk-note-label","Proposed change");
     const status=makeField("small","desk-nomination-status",
-      current.annotation?"已有本地批注；尚未提交双 Agent":"批注仅保存在当前浏览器");
+      current.annotation?"Draft saved locally; not submitted to Dual Agents":"Notes are saved only in this browser");
     const row=makeField("div","desk-nomination-buttons");
-    const local=makeField("button","desk-local-save","保存批注");local.type="button";
-    const submit=makeField("button","desk-send-agents","加入 Dual Agents 分析 →");submit.type="button";
+    const local=makeField("button","desk-local-save","Save Note");local.type="button";
+    const submit=makeField("button","desk-send-agents","Send to Dual Agents →");submit.type="button";
     row.append(local,submit);
     const help=makeField("p","desk-nomination-help",
-      "为保护项目写入权限，提交时会打开 GitHub 预填表单；需登录并再点 Submit new issue，后台才会正式入队。内容会在公开仓库 Issue 中可见。");
+      "For security, this opens a prefilled GitHub Issue. Sign in and select Submit new issue to queue the request. Your issue content is visible in the public repository.");
     relation.append(from,to,node,company);
     area.append(note,label,graphChange,relation,source,row,status,help);
     details.append(area);
     const actionSection=card.querySelector(".review-actions");
     const reviewSection=makeField("details","desk-final-review");
-    reviewSection.append(makeField("summary","","最终人工审批（高级）"));
+    reviewSection.append(makeField("summary","","Final Human Approval (Advanced)"));
     if(actionSection){
       actionSection.before(details);
       actionSection.before(reviewSection);
@@ -148,29 +159,29 @@
       };
     }
     function validate(data){
-      if(data.annotation.length<10)return "批注至少10个字符，说明为什么值得核实。";
+      if(data.annotation.length<10)return "Please enter at least 10 characters explaining why this requires investigation.";
       try{const u=new URL(data.sourceUrl);if(!["https:","http:"].includes(u.protocol))throw Error("scheme");}
-      catch{return "请提供有效的 HTTP(S) 原始资料链接。";}
-      if(data.targetType==="relationship"&&data.from===data.to)return "连线起点与终点不能相同。";
-      if(!data.targetId&&data.targetType!=="relationship")return "请先选择目标企业或节点。";
+      catch{return "Please provide a valid HTTP(S) source URL."; }
+      if(data.targetType==="relationship"&&data.from===data.to)return "A connection must have different source and destination nodes.";
+      if(!data.targetId&&data.targetType!=="relationship")return "Please choose a target company or node.";
       return null;
     }
     local.addEventListener("click",()=>{
       const value=draft();save(item.id,value);
-      status.textContent="批注已保存在当前浏览器，尚未提交分析。";
+      status.textContent="Note saved in this browser; not yet submitted for analysis.";
     });
     submit.addEventListener("click",()=>{
       const data=draft();const error=validate(data);
       if(error){status.textContent=error;details.open=true;return;}
       save(item.id,data);
-      const issueBody="## Supply Chain Research Desk 提名\n\n"+
-        "由仓库所有者在网页端发起，属于**待核实的研究假设**；不构成批准或产业链变更。\n\n"+
+      const issueBody="## Supply Chain Research Desk Nomination\n\n"+
+        "Submitted by the repository owner. This is an **unverified research hypothesis**, not an approval or an authorized change to the supply-chain graph.\n\n"+
         "<!-- RADAR_RESEARCH_NOMINATION_V1_BEGIN -->\n"+
         JSON.stringify(data,null,2)+"\n<!-- RADAR_RESEARCH_NOMINATION_V1_END -->\n";
       const title="[RADAR NOMINATION] "+data.industryId+" · "+data.proposedGraphChange+" · "+data.headline.slice(0,55);
       const url="https://github.com/Zxinghao/Fundemeantal-Aanalysis-MVP1/issues/new?"+
         new URLSearchParams({title,body:issueBody}).toString();
-      status.textContent="已准备 GitHub 提交表单。请在新页面确认提交 Issue；否则仅保留本地草稿。";
+      status.textContent="GitHub Issue draft opened. Confirm Submit new issue on GitHub to queue this request; otherwise it remains a local draft.";
       const popup=window.open(url,"_blank","noopener,noreferrer");
       if(!popup)window.location.href=url;
     });

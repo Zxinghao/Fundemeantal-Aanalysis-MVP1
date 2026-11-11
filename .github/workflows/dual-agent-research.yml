@@ -179,8 +179,8 @@ jobs:
         run: node scripts/reconcile-dual-research.mjs
       - name: Send Telegram consensus alerts once
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.SUPPLY_CHAIN_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.SUPPLY_CHAIN_TELEGRAM_CHAT_ID }}
           REVIEW_PUBLIC_URL: https://zxinghao.github.io/Fundemeantal-Aanalysis-MVP1/
         run: node scripts/telegram-dual-alerts.mjs
       - name: Commit audit report and notification receipts (never industry data)

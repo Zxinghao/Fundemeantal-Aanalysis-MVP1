@@ -12,6 +12,14 @@ https://zxinghao.github.io/Fundemeantal-Aanalysis-MVP1/
 
 The repository publishes `main` to `gh-pages` and explicitly requests a GitHub Pages build so repository updates are reflected on the public site. During publishing, every stylesheet and script URL in `index.html` is stamped with the commit SHA (`?v=<sha>`), so browsers never combine a new page with stale cached assets.
 
+## Language policy
+
+The entire **first-party user experience is English-only**: navigation, product journeys, research cards, note and approval controls, operational status, messages, timestamps, and Supply Chain Telegram notifications. New UI features and error messages must use English; CI enforces this for the main interface and user-facing notification scripts.
+
+Source documents, verbatim evidence quotations, and user-entered research notes are **not silently translated or rewritten**, because doing so would alter auditable primary evidence. Summaries or commentary on non-English materials should be written in English while preserving the original source text and attribution.
+
+Research Operations is retained for troubleshooting but appears under the collapsed **System Status** section at the bottom of Research Desk. Users see an issue count in the section header when source coverage needs attention.
+
 ## Core Features
 
 - Render an industry supply-chain map from one canonical industry database.

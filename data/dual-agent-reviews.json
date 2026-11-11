@@ -1,14 +1,707 @@
 {
   "schemaVersion": "1.0",
-  "lastRunAt": null,
-  "coverage": [],
-  "focus": [],
-  "claudeCoverageSummary": "",
-  "codexCoverageSummary": "",
+  "lastRunAt": "2026-11-11T02:33:02.957Z",
+  "coverage": [
+    {
+      "industryId": "fuel-cell",
+      "companyId": "jm",
+      "sourceId": "jm-news",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "forvia",
+      "sourceId": "forvia-news",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "garrett",
+      "sourceId": "garrett-news",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "toray",
+      "sourceId": "toray-official-news",
+      "freshness": "stale_or_missing"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "toyota",
+      "sourceId": "toyota-hydrogen-news",
+      "freshness": "stale_or_missing"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "ballard",
+      "sourceId": "ballard-investor-news",
+      "freshness": "stale_or_missing"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": null,
+      "sourceId": "doe-fuel-cells",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "umicore",
+      "sourceId": "umicore-ir",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "sgl",
+      "sourceId": "sgl-ir",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "hexagon",
+      "sourceId": "hexagon-purus-ir",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "jm",
+      "sourceId": "jm-fuel-cell-tech",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "umicore",
+      "sourceId": "umicore-fuel-cell-catalysts",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "sgl",
+      "sourceId": "sgl-gdl",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "forvia",
+      "sourceId": "forvia-hydrogen-storage",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "hexagon",
+      "sourceId": "hexagon-purus",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "garrett",
+      "sourceId": "garrett-fuel-cell",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": null,
+      "sourceId": "doe-fuel-cell-parts",
+      "freshness": "current"
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": null,
+      "sourceId": "doe-hydrogen-storage",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "nvidia",
+      "sourceId": "nvidia-spectrum-x-photonics",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "broadcom",
+      "sourceId": "broadcom-cpo",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "marvell",
+      "sourceId": "marvell-optical-dsp",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "coherent",
+      "sourceId": "coherent-datacenter",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "lumentum",
+      "sourceId": "lumentum-eml",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "fabrinet",
+      "sourceId": "fabrinet-optical-components",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "innolight",
+      "sourceId": "innolight-news",
+      "freshness": "stale_or_missing"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "broadcom",
+      "sourceId": "broadcom-bailly",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "marvell",
+      "sourceId": "marvell-pam4-dsp",
+      "freshness": "current"
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "eoptolink",
+      "sourceId": "eoptolink-800g",
+      "freshness": "current"
+    }
+  ],
+  "companyCoverage": [
+    {
+      "industryId": "fuel-cell",
+      "companyId": "ballard",
+      "name": "Ballard Power",
+      "sourceStatus": "stale",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "ballard",
+        "result": "stale_sources",
+        "summary": "ballard-investor-news is stale or missing, with no check recorded and no excerpts. Not verified."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "ballard",
+        "result": "stale_sources",
+        "summary": "Investor-news source has no check timestamp or excerpts; no current evidence is available."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "forvia",
+      "name": "FORVIA",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "forvia",
+        "result": "current_evidence_checked",
+        "summary": "Newsroom and hydrogen-storage pages were checked. They show only routine press items and marketing stats. No structural change found."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "forvia",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 newsroom and November 4 storage snapshots. Excerpts show news headings and existing storage operations; no comparable diff establishes a new event."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "garrett",
+      "name": "Garrett Motion",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "garrett",
+        "result": "current_evidence_checked",
+        "summary": "The news and fuel-cell pages show navigation text and the Gen3 compressor product description. No change evidence."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "garrett",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 news and November 4 technology snapshots. Gen3 compressor features are described, but no dated new supply-chain change is established."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "hexagon",
+      "name": "Hexagon Purus",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "hexagon",
+        "result": "current_evidence_checked",
+        "summary": "The exchange listing shows a CEO transition on 21 Oct 2026 and Q3 results. No case was supplied and no supply-chain change is evidenced."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "hexagon",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 4 exchange and company snapshots. Results and CEO-transition headings and existing Type IV offerings do not establish a substantive supply-chain change."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "jm",
+      "name": "Johnson Matthey",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "jm",
+        "result": "current_evidence_checked",
+        "summary": "The news and technology pages contain only navigation and product-category text. No change evidence."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "jm",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 news and November 4 technology snapshots. Excerpts are largely navigation and product categories, with insufficient substantive disclosure to establish a new event."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "sgl",
+      "name": "SGL Carbon",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "sgl",
+        "result": "current_evidence_checked",
+        "summary": "The IR page mentions the sale of the Moses Lake carbon fiber facility and a St. Marys capacity expansion. Neither is tied to the fuel-cell GDL chain, and no case was supplied. The GDL page is a product description."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "sgl",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 4 investor and GDL snapshots. Facility-sale and capacity-expansion headings lack underlying details establishing fuel-cell relevance or a comparable change; GDL text describes existing production."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "toray",
+      "name": "Toray",
+      "sourceStatus": "stale",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "toray",
+        "result": "stale_sources",
+        "summary": "toray-official-news is stale or missing, with no check recorded and no excerpts. Not verified."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "toray",
+        "result": "stale_sources",
+        "summary": "Official-news source has no check timestamp or excerpts; no current evidence is available."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "toyota",
+      "name": "Toyota",
+      "sourceStatus": "stale",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "toyota",
+        "result": "stale_sources",
+        "summary": "toyota-hydrogen-news is stale or missing, with no check recorded and no excerpts. Not verified."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "toyota",
+        "result": "stale_sources",
+        "summary": "Hydrogen-news source has no check timestamp or excerpts; no current evidence is available."
+      }
+    },
+    {
+      "industryId": "fuel-cell",
+      "companyId": "umicore",
+      "name": "Umicore",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "fuel-cell",
+        "companyId": "umicore",
+        "result": "current_evidence_checked",
+        "summary": "The IR page shows H1 2026 earnings and a guidance upgrade. The catalyst page is a product description. No structural change evidenced."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "companyId": "umicore",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 4 investor and catalyst snapshots. Financial highlights and existing catalyst capabilities do not establish a new fuel-cell supply-chain event."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "broadcom",
+      "name": "Broadcom",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "broadcom",
+        "result": "current_evidence_checked",
+        "summary": "The CPO page has only a title. The Bailly press release is from March 2024. No new change evidence."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "broadcom",
+        "result": "current_evidence_checked",
+        "summary": "November 10 CPO snapshot contains only a title. November 4 Bailly snapshot describes a March 2024 announcement; its recent check does not make the disclosure new."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "coherent",
+      "name": "Coherent",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "coherent",
+        "result": "current_evidence_checked",
+        "summary": "The datacenter page contains marketing and navigation text only. No change evidence."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "coherent",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 datacenter snapshot. General optical-connectivity descriptions provide no dated capacity, supplier, contract or technology change."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "eoptolink",
+      "name": "Eoptolink",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "eoptolink",
+        "result": "current_evidence_checked",
+        "summary": "The 800G page is a product description of 800G and 1.6T transceivers. No change evidence."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "eoptolink",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 4 product snapshot describing 800G and 1.6T offerings. No comparable disclosure establishes a new launch or production change."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "fabrinet",
+      "name": "Fabrinet",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "fabrinet",
+        "result": "current_evidence_checked",
+        "summary": "The optical components services page is a capability description. No change evidence."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "fabrinet",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 optical-components snapshot. Existing manufacturing capabilities and annual unit-volume language do not demonstrate a capacity change."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "innolight",
+      "name": "Innolight",
+      "sourceStatus": "stale",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "innolight",
+        "result": "stale_sources",
+        "summary": "innolight-news is stale or missing, with no check recorded and no excerpts. Not verified."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "innolight",
+        "result": "stale_sources",
+        "summary": "News source has no check timestamp or excerpts; no current evidence is available."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "lumentum",
+      "name": "Lumentum",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "lumentum",
+        "result": "current_evidence_checked",
+        "summary": "The EML page is a product description. No change evidence."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "lumentum",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 EML snapshot. Product architecture and application descriptions do not establish a new supply-chain event."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "marvell",
+      "name": "Marvell",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "marvell",
+        "result": "current_evidence_checked",
+        "summary": "The optical DSP and PAM4 pages are product marketing. No change evidence."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "marvell",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 optical-DSP and November 4 PAM4 snapshots. Portfolio and bandwidth descriptions lack comparable evidence of a new event."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "companyId": "nvidia",
+      "name": "NVIDIA",
+      "sourceStatus": "current",
+      "claude": {
+        "industryId": "ai-optics",
+        "companyId": "nvidia",
+        "result": "current_evidence_checked",
+        "summary": "The source is the March 2025 Spectrum-X Photonics press release, which is not new. No change evidence."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "companyId": "nvidia",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed November 10 snapshot of the March 18, 2025 photonics announcement. The historical disclosure does not establish a new November 2026 development."
+      }
+    }
+  ],
+  "industryCoverage": [
+    {
+      "industryId": "fuel-cell",
+      "name": "Automotive Fuel Cell Industry",
+      "claude": {
+        "industryId": "fuel-cell",
+        "result": "current_evidence_checked",
+        "summary": "The three DOE sources (checked 2026-11-04) and the current company sources were reviewed. No cases were supplied. Ballard, Toray and Toyota are stale, which is a coverage gap."
+      },
+      "codex": {
+        "industryId": "fuel-cell",
+        "result": "current_evidence_checked",
+        "summary": "Reviewed three DOE snapshots checked November 4 and available company snapshots. DOE excerpts describe fuel-cell components, storage and program context; they do not establish a new supply-chain event. Ballard, Toray and Toyota lack current evidence."
+      }
+    },
+    {
+      "industryId": "ai-optics",
+      "name": "AI Optical Module Industry",
+      "claude": {
+        "industryId": "ai-optics",
+        "result": "stale_sources",
+        "summary": "The industry has no industry-level sources. Seven companies have current monitored sources. Innolight is stale or missing. No cases were supplied."
+      },
+      "codex": {
+        "industryId": "ai-optics",
+        "result": "unmonitored",
+        "summary": "No dedicated industry sources are configured. Reviewed available company snapshots, but these provide partial coverage and cannot establish comprehensive industry developments. Innolight lacks current evidence."
+      }
+    }
+  ],
+  "focus": [
+    {
+      "industryId": "fuel-cell",
+      "industryName": "Automotive Fuel Cell Industry",
+      "industryThesis": "Use commercial vehicle fuel-cell demand as the anchor, then trace upstream to high-barrier nodes such as stacks, MEAs, catalysts, GDL, onboard hydrogen storage, and BOP air compressors.",
+      "sources": [
+        "doe-fuel-cells",
+        "doe-fuel-cell-parts",
+        "doe-hydrogen-storage"
+      ],
+      "companies": [
+        {
+          "id": "ballard",
+          "name": "Ballard Power",
+          "businessRole": "Fuel-cell stack and system supplier",
+          "sourceIds": [
+            "ballard-investor-news"
+          ],
+          "sourceStatus": "stale"
+        },
+        {
+          "id": "forvia",
+          "name": "FORVIA",
+          "businessRole": "Onboard hydrogen storage systems supplier",
+          "sourceIds": [
+            "forvia-news",
+            "forvia-hydrogen-storage"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "garrett",
+          "name": "Garrett Motion",
+          "businessRole": "Fuel-cell electric compressor and air management technology supplier",
+          "sourceIds": [
+            "garrett-news",
+            "garrett-fuel-cell"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "hexagon",
+          "name": "Hexagon Purus",
+          "businessRole": "Type IV high-pressure hydrogen tanks and systems",
+          "sourceIds": [
+            "hexagon-purus-ir",
+            "hexagon-purus"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "jm",
+          "name": "Johnson Matthey",
+          "businessRole": "Core supplier in fuel-cell catalysts, CCM, and MEA-related activities",
+          "sourceIds": [
+            "jm-news",
+            "jm-fuel-cell-tech"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "sgl",
+          "name": "SGL Carbon",
+          "businessRole": "GDL and carbon materials supplier",
+          "sourceIds": [
+            "sgl-ir",
+            "sgl-gdl"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "toray",
+          "name": "Toray",
+          "businessRole": "GDL, carbon paper, and carbon materials supplier",
+          "sourceIds": [
+            "toray-official-news"
+          ],
+          "sourceStatus": "stale"
+        },
+        {
+          "id": "toyota",
+          "name": "Toyota",
+          "businessRole": "Fuel-cell vehicle, system, and technology roadmap leader",
+          "sourceIds": [
+            "toyota-hydrogen-news"
+          ],
+          "sourceStatus": "stale"
+        },
+        {
+          "id": "umicore",
+          "name": "Umicore",
+          "businessRole": "Fuel-cell catalyst and precious-metals recycling company",
+          "sourceIds": [
+            "umicore-ir",
+            "umicore-fuel-cell-catalysts"
+          ],
+          "sourceStatus": "current"
+        }
+      ]
+    },
+    {
+      "industryId": "ai-optics",
+      "industryName": "AI Optical Module Industry",
+      "industryThesis": "Start from AI cluster scale-out demand, then trace upstream to scarce optical interconnect nodes: high-speed switches, pluggable optical modules, PAM4 DSPs, silicon photonics, EML and laser devices, CPO external light sources, packaging, and high-yield module manufacturing.",
+      "sources": [],
+      "companies": [
+        {
+          "id": "broadcom",
+          "name": "Broadcom",
+          "businessRole": "Switch ASIC, CPO platform, DSP, optical engine, and pluggable laser source supplier",
+          "sourceIds": [
+            "broadcom-cpo",
+            "broadcom-bailly"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "coherent",
+          "name": "Coherent",
+          "businessRole": "Datacenter optics, InP EML, lasers, and optical component supplier",
+          "sourceIds": [
+            "coherent-datacenter"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "eoptolink",
+          "name": "Eoptolink",
+          "businessRole": "800G optical transceiver module supplier",
+          "sourceIds": [
+            "eoptolink-800g"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "fabrinet",
+          "name": "Fabrinet",
+          "businessRole": "Optical component manufacturing, packaging, alignment, and test services provider",
+          "sourceIds": [
+            "fabrinet-optical-components"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "innolight",
+          "name": "Innolight",
+          "businessRole": "High-speed optical transceiver module supplier",
+          "sourceIds": [
+            "innolight-news"
+          ],
+          "sourceStatus": "stale"
+        },
+        {
+          "id": "lumentum",
+          "name": "Lumentum",
+          "businessRole": "EML and modulated laser supplier for data-center optical modules",
+          "sourceIds": [
+            "lumentum-eml"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "marvell",
+          "name": "Marvell",
+          "businessRole": "PAM4 optical DSP silicon supplier for high-speed optical modules",
+          "sourceIds": [
+            "marvell-optical-dsp",
+            "marvell-pam4-dsp"
+          ],
+          "sourceStatus": "current"
+        },
+        {
+          "id": "nvidia",
+          "name": "NVIDIA",
+          "businessRole": "AI networking system provider and major demand shaper for CPO and silicon-photonics architectures",
+          "sourceIds": [
+            "nvidia-spectrum-x-photonics"
+          ],
+          "sourceStatus": "current"
+        }
+      ]
+    }
+  ],
+  "claudeCoverageSummary": "Both industries (fuel-cell, ai-optics) and all 17 listed companies are accounted for. The input has no cases, so there are no assessments and no material candidates. Fuel-cell: the DOE sources and the current company sources (FORVIA, Garrett, Hexagon Purus, Johnson Matthey, SGL Carbon, Umicore) were checked. The sources for Ballard, Toray and Toyota are stale or missing, with no check recorded. ai-optics: it has no industry-level sources. Broadcom, Coherent, Eoptolink, Fabrinet, Lumentum, Marvell and NVIDIA have current sources. The Innolight source is stale or missing. Only monitored snapshots were assessed. No live broad-web verification is claimed. The excerpts are navigation and product-page text, not evidence of structural change.",
+  "codexCoverageSummary": "Examined the supplied snapshots for both industries and all 17 companies. The input contains zero cases, so assessments is empty. Ballard, Toray, Toyota and Innolight have stale or missing sources, null check timestamps and no excerpts. AI optics has no dedicated industry sources; company coverage is partial. Current snapshot checks do not establish recent disclosures: several pages contain historical announcements or general product information. No diff evidence was supplied. No internet or Claude review was accessed.",
   "run": {
     "candidates": 0,
     "consensus": 0,
     "conflicts": 0
   },
-  "findings": []
+  "findings": [],
+  "replayedFrom": {
+    "sourceRunId": "42946757714",
+    "recoveredAt": "2026-11-11T02:48:08.560Z"
+  }
 }

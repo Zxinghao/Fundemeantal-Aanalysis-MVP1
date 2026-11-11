@@ -31,6 +31,9 @@ jobs:
           node --check review-export.js
           node --check product-journey.js
           node --check dual-review-ui.js
+          node --check review-nominations.js
+          node --check scripts/ingest-research-nomination.mjs
+          node --check tests/research-nomination-intake.test.mjs
           node --check scripts/build-daily-research.mjs
           node --check scripts/reconcile-dual-research.mjs
           node --check scripts/telegram-dual-alerts.mjs
@@ -65,7 +68,7 @@ jobs:
         run: node --test tests/research-pipeline.test.mjs tests/semantic-candidate.test.mjs tests/llm-research-agent.test.mjs tests/analyst-review-workflow.test.mjs tests/scanner-signal-quality.test.mjs tests/source-retry.test.mjs tests/source-health.test.mjs tests/scanner-event-policy.test.mjs
 
       - name: Test independent research and Telegram gates
-        run: node --test tests/dual-agent-research.test.mjs
+        run: node --test tests/dual-agent-research.test.mjs tests/research-nomination-intake.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

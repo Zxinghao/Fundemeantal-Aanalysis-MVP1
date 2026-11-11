@@ -1,0 +1,39 @@
+/* Keep the daily agent review as the single top-level panel; news is the working queue. */
+#view-desk .desk-grid { display:block; }
+#view-desk .desk-review { width:100%; min-width:0; }
+#view-desk .desk-feed-intro { margin:9px 0 18px; color:#66758a; font-size:13px; line-height:1.6; }
+#view-desk .desk-advanced { margin-top:16px; padding:0; }
+#view-desk .desk-advanced > summary { cursor:pointer; padding:17px 20px; font-weight:650; font-size:13px; }
+#view-desk .desk-advanced .desk-side { padding:10px 16px 18px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:12px; }
+#view-desk .desk-advanced .research-ops,#view-desk .desk-advanced .submit-card { position:static; margin:0; height:auto; min-width:0; }
+#view-desk .desk-nomination { border:1px solid #e0e8f2; border-radius:12px; background:#f8fafd; margin-top:14px; overflow:hidden; }
+#view-desk .desk-nomination summary { cursor:pointer; font-weight:650; font-size:13px; color:#1b58ae; padding:13px 15px; }
+#view-desk .desk-nomination[open] summary { border-bottom:1px solid #e6ecf5; }
+#view-desk .desk-nomination-form { display:grid; gap:12px; padding:14px; }
+#view-desk .desk-nomination-form textarea { font-size:14px; line-height:1.6; min-height:95px; }
+#view-desk .desk-nomination-form select,#view-desk .desk-nomination-form input { font-size:13px; max-width:100%; }
+#view-desk .desk-note-label { font-size:12px; font-weight:700; color:#455671; }
+#view-desk .desk-endpoint-fields { display:grid; gap:8px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+#view-desk .desk-endpoint-fields select[hidden] { display:none !important; }
+#view-desk .desk-endpoint-fields:not(.is-relationship) { grid-template-columns:1fr; }
+#view-desk .desk-nomination-buttons { display:flex; gap:10px; flex-wrap:wrap; }
+#view-desk .desk-nomination-buttons button { padding:11px 13px; border-radius:10px; font-size:12px; }
+#view-desk .desk-local-save { background:#e9eef7; color:#374966; }
+#view-desk .desk-send-agents { background:#1459ba; color:#fff; }
+#view-desk .desk-nomination-help,#view-desk .desk-nomination-status { font-size:11px; color:#74829a; line-height:1.55; margin:0; }
+#view-desk .desk-nomination-status { color:#19599a; font-weight:700; }
+#view-desk .desk-final-review { margin-top:12px; border-top:1px solid #edf0f5; }
+#view-desk .desk-final-review > summary { color:#65738a; padding:12px 0; font-size:12px; cursor:pointer; }
+#view-desk .desk-final-review .review-actions { padding-top:8px; }
+#view-desk .dual-review-heading p { font-size:12px; }
+#view-desk .dual-review-panel { margin-bottom:12px; }
+#view-desk .dual-review-dashboard { margin-top:14px; }
+#view-desk .dual-finding { margin-top:9px; }
+@media(max-width:760px) {
+  #view-desk .desk-advanced .desk-side { display:block; padding:8px 12px 14px; }
+  #view-desk .desk-advanced .research-ops { margin-bottom:12px; }
+  #view-desk .desk-endpoint-fields { grid-template-columns:1fr; }
+  #view-desk .desk-nomination-buttons { display:grid; grid-template-columns:1fr; }
+  #view-desk .desk-nomination-buttons button { width:100%; }
+  #view-desk .desk-nomination-form { padding:11px; }
+}

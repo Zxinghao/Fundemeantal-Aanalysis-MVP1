@@ -1,0 +1,98 @@
+name: Recover Dual-Agent Report (No AI Calls)
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: GitHub Actions run ID with completed Claude/Codex artifacts
+        required: true
+        default: "42946757714"
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: dual-agent-report-recovery
+  cancel-in-progress: false
+
+jobs:
+  replay-verified-artifacts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate artifact source belongs to a manual Dual-Agent run on main
+        env:
+          SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [[ ! "$SOURCE_RUN_ID" =~ ^[0-9]{6,15}$ ]]; then
+            echo "::error::A numeric source run ID is required."
+            exit 1
+          fi
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN_ID" > "$RUNNER_TEMP/source-run.json"
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const d=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+"/source-run.json","utf8"));
+            if(d.repository?.full_name!==process.env.GITHUB_REPOSITORY || d.name!=="Daily Dual-Agent Research" ||
+               d.head_branch!=="main" || d.event!=="workflow_dispatch" || d.status!=="completed") {
+              console.error("Not a completed manual Dual-Agent Research run on this repository main branch.");
+              process.exit(1);
+            }
+            console.log("Source run verified; replay requires no model credentials or Telegram secrets.");
+          '
+      - name: Download immutable daily research snapshot
+        uses: actions/download-artifact@v4
+        with:
+          name: daily-research-brief
+          path: artifacts
+          run-id: ${{ inputs.source_run_id }}
+          github-token: ${{ github.token }}
+      - name: Download Claude structured result
+        uses: actions/download-artifact@v4
+        with:
+          name: claude-assessment
+          path: artifacts
+          run-id: ${{ inputs.source_run_id }}
+          github-token: ${{ github.token }}
+      - name: Download Codex structured result
+        uses: actions/download-artifact@v4
+        with:
+          name: codex-assessment
+          path: artifacts
+          run-id: ${{ inputs.source_run_id }}
+          github-token: ${{ github.token }}
+      - name: Reconcile the two existing model reports (no AI calls)
+        env:
+          SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+        run: |
+          node scripts/reconcile-dual-research.mjs
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const brief=JSON.parse(fs.readFileSync("artifacts/daily-research-input.json","utf8"));
+          const report=JSON.parse(fs.readFileSync("data/dual-agent-reviews.json","utf8"));
+          if(!brief.generatedAt || !Array.isArray(report.companyCoverage) || !Array.isArray(report.industryCoverage)) {
+            throw new Error("Invalid replay report or source timestamp.");
+          }
+          // Preserve the actual research time rather than claiming replay occurred then.
+          report.lastRunAt=brief.generatedAt;
+          report.replayedFrom={sourceRunId:process.env.SOURCE_RUN_ID,recoveredAt:new Date().toISOString()};
+          for(const finding of report.findings || []) {
+            // The report is an audit replay, not a new source check.
+            if(finding.checkedAt===report.replayedFrom.recoveredAt) finding.checkedAt=brief.generatedAt;
+          }
+          fs.writeFileSync("data/dual-agent-reviews.json",JSON.stringify(report,null,2)+"\n");
+          console.log(`Report ready: ${report.companyCoverage.length} company checks, ${report.industryCoverage.length} industry checks, ${report.run.consensus} consensus candidates.`);
+          NODE
+      - name: Commit only the audit report (no graph modifications and no Telegram)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Recover dual-agent research report from existing artifacts"
+          file_pattern: "data/dual-agent-reviews.json"

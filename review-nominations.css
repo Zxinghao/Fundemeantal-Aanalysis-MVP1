@@ -2,10 +2,6 @@
 #view-desk .desk-grid { display:block; }
 #view-desk .desk-review { width:100%; min-width:0; }
 #view-desk .desk-feed-intro { margin:9px 0 18px; color:#66758a; font-size:13px; line-height:1.6; }
-#view-desk .desk-advanced { margin-top:16px; padding:0; }
-#view-desk .desk-advanced > summary { cursor:pointer; padding:17px 20px; font-weight:650; font-size:13px; }
-#view-desk .desk-advanced .desk-side { padding:10px 16px 18px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:12px; }
-#view-desk .desk-advanced .research-ops,#view-desk .desk-advanced .submit-card { position:static; margin:0; height:auto; min-width:0; }
 #view-desk .desk-nomination { border:1px solid #e0e8f2; border-radius:12px; background:#f8fafd; margin-top:14px; overflow:hidden; }
 #view-desk .desk-nomination summary { cursor:pointer; font-weight:650; font-size:13px; color:#1b58ae; padding:13px 15px; }
 #view-desk .desk-nomination[open] summary { border-bottom:1px solid #e6ecf5; }
@@ -30,8 +26,6 @@
 #view-desk .dual-review-dashboard { margin-top:14px; }
 #view-desk .dual-finding { margin-top:9px; }
 @media(max-width:760px) {
-  #view-desk .desk-advanced .desk-side { display:block; padding:8px 12px 14px; }
-  #view-desk .desk-advanced .research-ops { margin-bottom:12px; }
   #view-desk .desk-endpoint-fields { grid-template-columns:1fr; }
   #view-desk .desk-nomination-buttons { display:grid; grid-template-columns:1fr; }
   #view-desk .desk-nomination-buttons button { width:100%; }
@@ -49,3 +43,50 @@
 #view-desk .dual-company-row .dual-field { border:0; padding-top:6px; margin-top:0; }
 #view-desk .dual-company-row .dual-field strong { font-size:11px; color:#65758b; }
 #view-desk .dual-company-row .dual-field p { margin-top:2px; }
+
+/* All monitoring diagnostics live BELOW the editorial research feed. */
+#view-desk .desk-bottom-tools {
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:12px;
+  margin-top:12px;
+}
+#view-desk .desk-system-status {
+  padding:0;
+  overflow:hidden;
+}
+#view-desk .desk-system-status > summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  cursor:pointer;
+  padding:17px 20px;
+  font-size:13px;
+  font-weight:700;
+  color:#475671;
+}
+#view-desk .desk-system-status > summary::after {
+  content:"Expand";
+  font-size:11px;
+  font-weight:500;
+  color:#8190a4;
+}
+#view-desk .desk-system-status[open] > summary::after { content:"Collapse"; }
+#view-desk .desk-system-status .research-ops {
+  position:static;
+  height:auto;
+  min-width:0;
+  margin:0;
+  padding:18px;
+  box-shadow:none;
+  border:0;
+  border-top:1px solid #e8edf4;
+  border-radius:0;
+}
+#view-desk .desk-evidence-tools { margin:0; }
+@media(max-width:760px) {
+  #view-desk .desk-bottom-tools { margin-top:10px; }
+  #view-desk .desk-system-status > summary { padding:16px; }
+  #view-desk .desk-system-status .research-ops { padding:14px; }
+}

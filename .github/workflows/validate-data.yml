@@ -78,6 +78,9 @@ jobs:
 
       - name: Test safe Claude error classification
         run: node --test tests/classify-claude-action-error.test.mjs
+      - name: Test initial dual-agent report notification ledger
+        run: node --test tests/dual-agent-notification-ledger.test.mjs
+
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs
 

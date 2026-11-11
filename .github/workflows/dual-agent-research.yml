@@ -7,7 +7,8 @@ on:
     types: [completed]
 
 # Source Scan updates monitored evidence; approved-owner nominations also trigger research.
-# Explicit opt-in prevents spending model credits before credentials are configured.
+# Manual workflow_dispatch is permitted for a one-off test. Scheduled workflow_run
+# requires DUAL_RESEARCH_ENABLED=true to prevent unintended recurring API costs.
 concurrency:
   group: dual-agent-research-main
   cancel-in-progress: false
@@ -18,8 +19,8 @@ permissions:
 jobs:
   prepare:
     if: >-
-      ${{ vars.DUAL_RESEARCH_ENABLED == 'true' &&
-         (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success') }}
+      ${{ github.event_name == 'workflow_dispatch' ||
+         (vars.DUAL_RESEARCH_ENABLED == 'true' && github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -178,6 +179,7 @@ jobs:
       - name: Strict deterministic cross-model reconciliation
         run: node scripts/reconcile-dual-research.mjs
       - name: Send Telegram consensus alerts once
+        if: ${{ github.event_name != 'workflow_dispatch' }}
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.SUPPLY_CHAIN_TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.SUPPLY_CHAIN_TELEGRAM_CHAT_ID }}

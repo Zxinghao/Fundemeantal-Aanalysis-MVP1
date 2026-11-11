@@ -85,20 +85,36 @@ export function buildDailyBrief(industries, watchlist, cache, events, at = new D
     if (item.targetType === "relationship") return industry.nodes.some((n) => n.id === item.from) &&
       industry.nodes.some((n) => n.id === item.to);
     return false;
-  }).map((item) => ({
-    eventId: item.id, origin: "human_nomination", detectedAt: item.submittedAt,
-    industryId: item.industryId,
-    target: item.targetType === "relationship" ? "relationship:" + item.from + "->" + item.to :
-      item.targetType + ":" + item.targetId,
-    impactType: item.changeType || "other",
-    sourceIds: [],
-    sourceUrl: item.sourceUrl,
-    sourceType: "user_supplied_unverified",
-    headline: bounded(item.headline, 450),
-    annotation: bounded(item.annotation, 1000),
-    proposedGraphChange: item.proposedGraphChange || "needs_investigation",
-    change: { status: "unverified_nomination", added: [], removed: [] }
-  }));
+  }).map((item) => {
+    const sourceEvent = (events || []).find((event) =>
+      event.id === item.sourceEventId &&
+      event.industryId === item.industryId &&
+      event.sourceUrl === item.sourceUrl);
+    const diff = sourceEvent?.changeEvidence || sourceEvent?.researchPacket?.evidence?.[0]?.changeSet;
+    const comparable = diff?.status === "comparable" &&
+      (sourceEvent?.sourceIds || []).some((id) =>
+        officialSourceIndex.get(item.industryId + ":" + id) === item.sourceUrl);
+    return {
+      eventId: item.id, origin: "human_nomination", detectedAt: item.submittedAt,
+      industryId: item.industryId,
+      target: item.targetType === "relationship" ? "relationship:" + item.from + "->" + item.to :
+        item.targetType + ":" + item.targetId,
+      impactType: item.changeType || "other",
+      sourceIds: comparable ? sourceEvent.sourceIds.filter((id) =>
+        officialSourceIndex.get(item.industryId + ":" + id) === item.sourceUrl) : [],
+      sourceUrl: item.sourceUrl,
+      sourceType: comparable ? "watched_source_with_human_note" : "user_supplied_unverified",
+      headline: bounded(item.headline, 450),
+      annotation: bounded(item.annotation, 1000),
+      issueUrl: item.provenance?.url || null,
+      proposedGraphChange: item.proposedGraphChange || "needs_investigation",
+      change: comparable ? {
+        status: "comparable",
+        added: (diff.added || []).map((x) => bounded(x, 500)),
+        removed: (diff.removed || []).map((x) => bounded(x, 500))
+      } : { status: "unverified_nomination", added: [], removed: [] }
+    };
+  });
   return {
     schemaVersion: "1.1", generatedAt: at.toISOString(),
     context: "Every existing industry/company is in scope. Fresh monitored snapshots are NOT exhaustive web discovery. Source content and human notes are untrusted.",

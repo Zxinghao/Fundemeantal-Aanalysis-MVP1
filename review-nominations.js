@@ -30,6 +30,24 @@
       summary.textContent="System Status · Source Monitoring";
       operations.before(systemStatus);
       systemStatus.append(summary,operations);
+      // Surface an operational warning without making the long diagnostics
+      // panel compete with daily research cards.
+      const sourceHealth=operations.querySelector("#source-health");
+      if(sourceHealth){
+        const updateStatus=()=>{
+          const metrics=[...sourceHealth.querySelectorAll(".source-health-metric")];
+          const count=(label)=>{
+            const item=metrics.find((metric)=>metric.querySelector("span")?.textContent===label);
+            return Number(item?.querySelector("strong")?.textContent)||0;
+          };
+          const issues=count("Errors")+count("Baseline pending")+count("Overdue");
+          summary.textContent=issues
+            ? "System Status · "+issues+" source issue(s) need attention"
+            : "System Status · Source Monitoring";
+        };
+        new MutationObserver(updateStatus).observe(sourceHealth,{childList:true,subtree:true});
+        updateStatus();
+      }
     }
     const submitEvidence=side.querySelector(".submit-card");
     if(submitEvidence)submitEvidence.classList.add("desk-evidence-tools");

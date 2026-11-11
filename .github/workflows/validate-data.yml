@@ -37,6 +37,8 @@ jobs:
           node --check tests/research-coverage-integrity.test.mjs
           node --check scripts/build-daily-research.mjs
           node --check scripts/reconcile-dual-research.mjs
+          node --check scripts/diagnose-claude-failure.mjs
+          node --check tests/claude-failure-diagnostics.test.mjs
           node --check scripts/telegram-dual-alerts.mjs
           node --check tests/dual-agent-research.test.mjs
           node --check scripts/telegram-bot-smoke-test.mjs
@@ -75,6 +77,9 @@ jobs:
 
       - name: Test dedicated Telegram bot connection handling
         run: node --test tests/telegram-bot-smoke-test.test.mjs
+
+      - name: Test safe Claude failure diagnostics
+        run: node --test tests/claude-failure-diagnostics.test.mjs
 
       - name: Validate research data integrity
         run: node scripts/validate-data.mjs

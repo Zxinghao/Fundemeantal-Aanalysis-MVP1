@@ -1,0 +1,35 @@
+name: Research Nomination Intake
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: research-nomination-intake
+  cancel-in-progress: false
+
+jobs:
+  accept-owner-nomination:
+    if: >-
+      github.event.sender.login == 'Zxinghao' &&
+      github.event.issue.user.login == 'Zxinghao' &&
+      startsWith(github.event.issue.title, '[RADAR NOMINATION]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate signed-in owner submission against canonical nodes and event source
+        run: node scripts/ingest-research-nomination.mjs
+      - name: Store research nomination without updating the supply chain
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Queue owner research nomination"
+          file_pattern: data/manual-research-requests.json

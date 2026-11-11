@@ -26,7 +26,9 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Run web scanner
+      - name: Run daily full-company source scan
+        env:
+          DAILY_ALL_COMPANIES: "true"
         run: node scripts/web-scan.mjs
 
       - name: Enrich scanner events with semantic candidates
@@ -34,16 +36,6 @@ jobs:
 
       - name: Validate semantic candidate invariants
         run: node scripts/validate-semantic-candidates.mjs
-
-      - name: Enrich eligible events with OpenAI research candidates
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_RESEARCH_MODEL: gpt-5.6-luna
-          OPENAI_RESEARCH_MAX_EVENTS: "5"
-        run: node scripts/openai-research-agent.mjs
-
-      - name: Validate LLM research candidate invariants
-        run: node scripts/validate-llm-candidates.mjs
 
       - name: Commit scan outputs
         uses: stefanzweifel/git-auto-commit-action@v5

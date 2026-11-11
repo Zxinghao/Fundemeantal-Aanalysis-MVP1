@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { buildDailyBrief } from "../scripts/build-daily-research.mjs";
-import { parseAgentOutput, reconcile } from "../scripts/reconcile-dual-research.mjs";
+import { parseAgentOutput, reconcile, validateFullCoverage } from "../scripts/reconcile-dual-research.mjs";
 import { notificationCandidates, telegramText, notifyTelegram } from "../scripts/telegram-dual-alerts.mjs";
 
 const now = new Date("2026-11-11T09:00:00Z");
@@ -25,9 +25,9 @@ const assessment = {
   sourceId: "official-abc", sourceUrl: raw.sourceUrl,
   evidenceExcerpt: "supplier confirmed a new verified manufacturing capacity expansion"
 };
-const agent = (a = assessment) => ({ schemaVersion: "1.0", coverageSummary: "Monitored sources checked; unmonitored entities remain unverified.", assessments: [a] });
+const agent = (a = assessment) => ({ schemaVersion: "1.0", coverageSummary: "Monitored sources checked; unmonitored entities remain unverified.", assessments: [a], industryChecks: [], companyChecks: [] });
 
-test("daily brief rotates industry companies and never treats old events as fresh", () => {
+test("daily brief covers all registered companies and never treats old events as fresh", () => {
   const industries = [{ id: "ai-optics", name: "AI Optics", companies: [{ id: "abc", name: "ABC" }] }];
   const watch = { "ai-optics": { daily: [{ id: "official-abc", companyId: "abc", url: raw.sourceUrl, sourceType: "company_official" }] } };
   const cache = { "official-abc": { lastCheckedAt: "2026-11-11T08:00:00Z", watchSnapshot: { segments: [{ excerpt: "capacity" }] } } };
@@ -78,4 +78,48 @@ test("Telegram notification is deduplicated; dry run never sends", async () => {
   assert.equal(dry.pending, 1);
   assert.equal(dry.sent.length, 0);
   assert.match(telegramText(result.findings[0]), /Research Desk/);
+});
+
+
+test("all existing companies are included daily, with explicit missing-coverage status", () => {
+  const companies = Array.from({ length: 8 }, (_, n) => ({ id: "co" + n, name: "Company " + n }));
+  const data = [{ id: "sector", name: "Sector", companies, nodes: [] }];
+  const watch = { sector: { daily: [{ id: "source-co0", companyId: "co0", url: "https://company.example", sourceType: "company_official" }] } };
+  const cache = { "source-co0": { lastCheckedAt: now.toISOString(), watchSnapshot: { segments: [] } } };
+  const result = buildDailyBrief(data, watch, cache, [], now);
+  assert.equal(result.focus[0].companies.length, 8);
+  assert.equal(result.focus[0].companies[0].sourceStatus, "current");
+  assert.equal(result.focus[0].companies[7].sourceStatus, "unmonitored");
+  const checks = result.focus[0].companies.map((company) => ({
+    industryId: "sector", companyId: company.id,
+    result: company.sourceStatus === "current" ? "current_evidence_checked" : "unmonitored",
+    summary: "Reviewed the available primary source coverage."
+  }));
+  const output = { companyChecks: checks, industryChecks: [{ industryId: "sector", result: "current_evidence_checked", summary: "Monitored sources checked." }] };
+  assert.equal(validateFullCoverage(result, output, "TestAgent"), true);
+  assert.throws(() => validateFullCoverage(result, { ...output, companyChecks: checks.slice(0, 4) }, "TestAgent"), /incomplete company coverage/);
+  assert.throws(() => validateFullCoverage(result, { ...output, companyChecks: checks.map((x) => ({ ...x, result: "current_evidence_checked" })) }, "TestAgent"), /invented source coverage/);
+});
+
+test("human nomination enters both analyses but cannot become verified evidence automatically", () => {
+  const industries = [{ id: "ai-optics", name: "AI optics", companies: [{ id: "abc", name: "ABC" }],
+    nodes: [{ id: "laser" }, { id: "packaging" }] }];
+  const nominations = [{
+    id: "nomination-issue-23", submittedAt: now.toISOString(), status: "pending",
+    industryId: "ai-optics", targetType: "relationship", from: "laser", to: "packaging",
+    proposedGraphChange: "add_relationship", headline: "Possible connection",
+    annotation: "Please inspect whether this upstream supply relationship exists.",
+    sourceUrl: "https://official.example.com/report"
+  }];
+  const generated = buildDailyBrief(industries, {}, {}, [], now, nominations);
+  assert.equal(generated.cases.length, 1);
+  assert.equal(generated.cases[0].target, "relationship:laser->packaging");
+  assert.deepEqual(generated.cases[0].change.added, []);
+  const noSourceCase = { ...generated, focus: [], coverage: [] };
+  const claimedMaterial = { ...assessment, eventId: "nomination-issue-23", target: "relationship:laser->packaging",
+    sourceId: "", changeType: "supplier_change" };
+  const out = { ...agent(claimedMaterial), industryChecks: [], companyChecks: [] };
+  const report = reconcile(noSourceCase, out, out, {}, now);
+  assert.equal(report.run.consensus, 0);
+  assert.equal(report.findings[0].graphChanged, false);
 });

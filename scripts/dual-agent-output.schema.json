@@ -79,12 +79,74 @@
         ],
         "additionalProperties": false
       }
+    },
+    "industryChecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "industryId": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "current_evidence_checked",
+              "stale_sources",
+              "unmonitored"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "industryId",
+          "result",
+          "summary"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "companyChecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "industryId": {
+            "type": "string"
+          },
+          "companyId": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "current_evidence_checked",
+              "stale_sources",
+              "unmonitored"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "industryId",
+          "companyId",
+          "result",
+          "summary"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [
     "schemaVersion",
     "coverageSummary",
-    "assessments"
+    "assessments",
+    "industryChecks",
+    "companyChecks"
   ],
   "additionalProperties": false
 }

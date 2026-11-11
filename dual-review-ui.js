@@ -41,6 +41,7 @@
   grid.before(panel);
 
   let report = null;
+  let companyDirectory = [];
   function safeLink(url) {
     try { const u=new URL(url); return ["http:","https:"].includes(u.protocol)?u.href:null; }
     catch { return null; }
@@ -83,7 +84,13 @@
   }
   function render() {
     dashboard.replaceChildren();findings.replaceChildren();
-    if (!report) { status.textContent="无双模型研究记录";return; }
+    if (!report || !report.lastRunAt) {
+      const registered=companyDirectory.reduce((n,ind)=>n+(ind.companies||[]).length,0);
+      dashboard.append(metric("已登记行业",companyDirectory.length),
+        metric("已登记公司",registered),metric("双 Agent 运行","尚未开始"),metric("待核实共识",0));
+      status.textContent="尚未完成真实双 Agent 研究";
+      return;
+    }
     const industry=select?.value;
     const items=(report.findings||[]).filter((item)=>item.industryId===industry);
     const consensus=items.filter((item)=>item.status==="consensus_candidate");
@@ -92,7 +99,7 @@
     const companies=(report.companyCoverage||[]).filter((item)=>item.industryId===industry);
     const checked=companies.filter((item)=>item.claude && item.codex).length;
     const uncovered=companies.filter((item)=>item.sourceStatus==="unmonitored"||item.sourceStatus==="stale").length;
-    dashboard.append(metric("本行业已登记企业",companies.length),
+    dashboard.append(metric("本行业已登记企业",companies.length || (companyDirectory.find((x)=>x.id===industry)?.companies?.length||0)),
       metric("双 Agent 已逐一处理",report.lastRunAt?checked:"未运行"),
       metric("缺少近期资料",uncovered),
       metric("共识候选",consensus.length));
@@ -155,6 +162,10 @@
     }
   }
 
+  fetch("data/industries.json",{cache:"no-store"})
+    .then((response)=>response.ok?response.json():[])
+    .then((data)=>{companyDirectory=Array.isArray(data)?data:[];render();})
+    .catch(()=>{});
   fetch("data/dual-agent-reviews.json",{cache:"no-store"})
     .then((response)=>response.ok?response.json():null)
     .then((data)=>{ report=data; render();

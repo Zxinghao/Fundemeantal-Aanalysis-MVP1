@@ -69,6 +69,16 @@ jobs:
           path: artifacts
           run-id: ${{ inputs.source_run_id }}
           github-token: ${{ github.token }}
+      - name: Refuse replay over a newer completed research report
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const brief=JSON.parse(fs.readFileSync("artifacts/daily-research-input.json","utf8"));
+          const current=JSON.parse(fs.readFileSync("data/dual-agent-reviews.json","utf8"));
+          if(!brief.generatedAt || (current.lastRunAt && new Date(current.lastRunAt)>new Date(brief.generatedAt))) {
+            throw new Error("Replay source predates the current research report or has no timestamp.");
+          }
+          NODE
       - name: Reconcile the two existing model reports (no AI calls)
         env:
           SOURCE_RUN_ID: ${{ inputs.source_run_id }}
@@ -84,9 +94,10 @@ jobs:
           // Preserve the actual research time rather than claiming replay occurred then.
           report.lastRunAt=brief.generatedAt;
           report.replayedFrom={sourceRunId:process.env.SOURCE_RUN_ID,recoveredAt:new Date().toISOString()};
+          const replayIds=new Set(brief.cases.map(x=>x.eventId));
           for(const finding of report.findings || []) {
-            // The report is an audit replay, not a new source check.
-            if(finding.checkedAt===report.replayedFrom.recoveredAt) finding.checkedAt=brief.generatedAt;
+            // Reconciliation on the archived snapshot must not imply fresh checking today.
+            if(replayIds.has(finding.eventId))finding.checkedAt=brief.generatedAt;
           }
           fs.writeFileSync("data/dual-agent-reviews.json",JSON.stringify(report,null,2)+"\n");
           console.log(`Report ready: ${report.companyCoverage.length} company checks, ${report.industryCoverage.length} industry checks, ${report.run.consensus} consensus candidates.`);

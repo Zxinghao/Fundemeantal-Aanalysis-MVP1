@@ -129,7 +129,7 @@
       findings.append(empty);return;
     }
     for(const item of ordered.slice(0,20)){
-      const card=document.createElement("article");card.className="dual-finding "+item.status;
+      const card=document.createElement("article");card.className="dual-finding "+item.status;card.dataset.eventId=item.eventId;
       const top=document.createElement("div");top.className="dual-finding-top";
       const badge=document.createElement("span");badge.className="dual-finding-badge";badge.textContent=label[item.status]||item.status;
       const target=document.createElement("strong");target.textContent=item.target||item.eventId;
@@ -172,6 +172,12 @@
       const wanted=new URLSearchParams(location.search).get("event");
       const match=data?.findings?.find((item)=>item.eventId===wanted);
       if(match){
+        if(match.origin==="human_nomination"){
+          reportDetails.open=true;
+          const card=[...findings.querySelectorAll(".dual-finding")].find((element)=>element.dataset.eventId===match.eventId);
+          card?.scrollIntoView({behavior:"smooth",block:"center"});
+          return;
+        }
         const attempt=()=>{
           if(select?.options?.length && [...select.options].some((o)=>o.value===match.industryId)){
             openEvent(match.eventId,match.industryId);return true;

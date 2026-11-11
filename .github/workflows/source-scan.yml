@@ -26,7 +26,9 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Run web scanner
+      - name: Run daily full-company source scan
+        env:
+          DAILY_ALL_COMPANIES: "true"
         run: node scripts/web-scan.mjs
 
       - name: Enrich scanner events with semantic candidates

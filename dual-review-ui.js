@@ -15,7 +15,7 @@
   const title = document.createElement("h2");
   title.textContent = "Dual Agents";
   const subtitle = document.createElement("p");
-  subtitle.textContent = "Claude Code × Codex · 每天逐一覆盖所有已登记行业和企业";
+  subtitle.textContent = "Claude Code × Codex · Daily research across every registered industry and company";
   heading.append(title, subtitle);
   const status = document.createElement("span");
   status.className = "dual-run-status"; status.textContent = "Loading…";
@@ -26,16 +26,16 @@
   findings.className = "dual-findings";
   const note = document.createElement("p");
   note.className = "dual-review-note";
-  note.textContent = "双模型一致不等于事实已核实。批准按钮首先保存浏览器本地决定，当前正式发布仍需执行 GitHub 的 Approve And Promote 工作流。";
+  note.textContent = "Agreement is not independent verification. Decisions are saved locally; publication still requires the protected GitHub Approve And Promote workflow.";
   const actions = document.createElement("div");actions.className="dual-actions";
   const help = document.createElement("a");
   help.href = "https://github.com/Zxinghao/Fundemeantal-Aanalysis-MVP1/actions/workflows/approve-and-promote.yml";
-  help.target="_blank";help.rel="noopener noreferrer";help.textContent="前往人工审核发布工作流 ↗";
+  help.target="_blank";help.rel="noopener noreferrer";help.textContent="Open protected approval workflow ↗";
   actions.append(help);
   const reportDetails=document.createElement("details");
   reportDetails.className="dual-report-details";
   const reportSummary=document.createElement("summary");
-  reportSummary.textContent="展开查看双 Agent 的证据、分歧和历史候选";
+  reportSummary.textContent="View evidence, disagreements, and past research candidates";
   reportDetails.append(reportSummary,findings,note,actions);
   panel.append(header,dashboard,reportDetails);
   grid.before(panel);
@@ -46,10 +46,21 @@
     try { const u=new URL(url); return ["http:","https:"].includes(u.protocol)?u.href:null; }
     catch { return null; }
   }
+  const sourceLabel = (status) => ({ current: "Current", stale: "Stale",
+    unmonitored: "Not monitored" })[status] || status || "Unknown";
+  const changeLabel = (change) => ({
+    update_company: "Update company assessment", update_node: "Update existing node",
+    add_node: "Add node", add_relationship: "Add connection",
+    remove_relationship: "Remove connection", update_relationship: "Change connection"
+  })[change] || change || "Not specified";
+  const verdictLabel = (verdict) => ({
+    material_candidate: "Potential material change", non_material: "No material change",
+    insufficient_evidence: "Insufficient evidence"
+  })[verdict] || verdict || "Unverified";
   const label = {
-    consensus_candidate: "双模型共识候选 · 待人工核实",
-    needs_evidence: "意见冲突 / 证据不足",
-    non_material: "无重大产业链变化"
+    consensus_candidate: "Agent consensus · Pending human verification",
+    needs_evidence: "Conflicting findings / Insufficient evidence",
+    non_material: "No material supply-chain change"
   };
   function metric(name, value) {
     const card = document.createElement("div");
@@ -61,7 +72,7 @@
   function field(name, value) {
     const wrap=document.createElement("div");wrap.className="dual-field";
     const bold=document.createElement("strong");bold.textContent=name;
-    const paragraph=document.createElement("p");paragraph.textContent=value || "未提供";
+    const paragraph=document.createElement("p");paragraph.textContent=value || "Not provided";
     wrap.append(bold,paragraph);return wrap;
   }
   function openEvent(eventId, industryId) {
@@ -86,9 +97,9 @@
     dashboard.replaceChildren();findings.replaceChildren();
     if (!report || !report.lastRunAt) {
       const registered=companyDirectory.reduce((n,ind)=>n+(ind.companies||[]).length,0);
-      dashboard.append(metric("已登记行业",companyDirectory.length),
-        metric("已登记公司",registered),metric("双 Agent 运行","尚未开始"),metric("待核实共识",0));
-      status.textContent="尚未完成真实双 Agent 研究";
+      dashboard.append(metric("Registered industries",companyDirectory.length),
+        metric("Registered companies",registered),metric("Dual-Agent run","Not started"),metric("Consensus candidates",0));
+      status.textContent="No completed dual-agent research run";
       return;
     }
     const industry=select?.value;
@@ -99,33 +110,33 @@
     const companies=(report.companyCoverage||[]).filter((item)=>item.industryId===industry);
     const checked=companies.filter((item)=>item.claude && item.codex).length;
     const uncovered=companies.filter((item)=>item.sourceStatus==="unmonitored"||item.sourceStatus==="stale").length;
-    dashboard.append(metric("本行业已登记企业",companies.length || (companyDirectory.find((x)=>x.id===industry)?.companies?.length||0)),
-      metric("双 Agent 已逐一处理",report.lastRunAt?checked:"未运行"),
-      metric("缺少近期资料",uncovered),
-      metric("共识候选",consensus.length));
-    reportSummary.textContent="研究详情 · "+disagreement.length+" 条争议 / "+consensus.length+" 条待核实共识";
+    dashboard.append(metric("Registered companies",companies.length || (companyDirectory.find((x)=>x.id===industry)?.companies?.length||0)),
+      metric("Both agents reviewed",report.lastRunAt?checked:"Not run"),
+      metric("Sources stale or missing",uncovered),
+      metric("Consensus candidates",consensus.length));
+    reportSummary.textContent="Research details · "+disagreement.length+" disagreements / "+consensus.length+" pending consensus candidates";
     const oldAudit=reportDetails.querySelector(".dual-company-audit");if(oldAudit)oldAudit.remove();
     if(companies.length){
       const audit=document.createElement("details");audit.className="dual-company-audit";
-      const auditTitle=document.createElement("summary");auditTitle.textContent="逐公司研究覆盖清单（"+checked+"/"+companies.length+"）";
+      const auditTitle=document.createElement("summary");auditTitle.textContent="Company-by-company coverage ("+checked+"/"+companies.length+"）";
       audit.append(auditTitle);
       for(const company of companies){
         const item=document.createElement("div");item.className="dual-company-row";
         const name=document.createElement("strong");name.textContent=company.name||company.companyId;
-        const source=document.createElement("small");source.textContent="来源状态："+company.sourceStatus;
+        const source=document.createElement("small");source.textContent="Source status: "+sourceLabel(company.sourceStatus);
         item.append(name,source);
-        item.append(field("Claude",company.claude?.summary||"未运行"));
-        item.append(field("Codex",company.codex?.summary||"未运行"));
+        item.append(field("Claude",company.claude?.summary||"Not run"));
+        item.append(field("Codex",company.codex?.summary||"Not run"));
         audit.append(item);
       }
       reportDetails.insertBefore(audit,findings);
     }
     const timestamp = report.lastRunAt ? new Date(report.lastRunAt) : null;
-    status.textContent=timestamp && Number.isFinite(timestamp.getTime()) ? "上次研究："+timestamp.toLocaleString("zh-CN") : "尚未执行双模型研究";
+    status.textContent=timestamp && Number.isFinite(timestamp.getTime()) ? "Last research: "+timestamp.toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"}) : "No completed dual-agent research run";
     const ordered=[...consensus,...disagreement];
     if(!ordered.length){
       const empty=document.createElement("p");empty.className="dual-empty";
-      empty.textContent="目前该行业没有需要升级的双模型研究候选；这不代表行业没有新事件。";
+      empty.textContent="No candidate currently qualifies for escalation in this industry. This does not mean no developments occurred.";
       findings.append(empty);return;
     }
     for(const item of ordered.slice(0,20)){
@@ -136,25 +147,25 @@
       top.append(badge,target);card.append(top);
       const summary=document.createElement("p");summary.textContent=item.summary;card.append(summary);
       if(item.origin==="human_nomination"){
-        card.append(field("人工批注",item.annotation));
-        card.append(field("拟评估的结构变化",item.proposedGraphChange));
+        card.append(field("Research note",item.annotation));
+        card.append(field("Proposed graph change",changeLabel(item.proposedGraphChange)));
       }
       const compare=document.createElement("details");compare.className="dual-compare";
-      const toggler=document.createElement("summary");toggler.textContent="查看 Claude / Codex 独立意见与证据";
+      const toggler=document.createElement("summary");toggler.textContent="View independent Claude / Codex opinions and evidence";
       compare.append(toggler);
-      compare.append(field("Claude Code · "+(item.claude?.verdict||"未验证"), item.claude?.rationale));
-      compare.append(field("Codex · "+(item.codex?.verdict||"未验证"), item.codex?.rationale));
-      compare.append(field("证据节选（原文）",item.claude?.evidenceExcerpt || item.codex?.evidenceExcerpt));
+      compare.append(field("Claude Code · "+(verdictLabel(item.claude?.verdict)), item.claude?.rationale));
+      compare.append(field("Codex · "+(verdictLabel(item.codex?.verdict)), item.codex?.rationale));
+      compare.append(field("Verbatim evidence excerpt",item.claude?.evidenceExcerpt || item.codex?.evidenceExcerpt));
       card.append(compare);
       const bottom=document.createElement("div");bottom.className="dual-finding-actions";
       const source=safeLink(item.sourceUrl);
-      if(source){const link=document.createElement("a");link.href=source;link.target="_blank";link.rel="noopener noreferrer";link.textContent="原始来源 ↗";bottom.append(link);}
+      if(source){const link=document.createElement("a");link.href=source;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Original source ↗";bottom.append(link);}
       if(item.origin==="human_nomination" && safeLink(item.issueUrl)){
         const nominationLink=document.createElement("a");nominationLink.href=item.issueUrl;
-        nominationLink.target="_blank";nominationLink.rel="noopener noreferrer";nominationLink.textContent="查看原始提名 ↗";
+        nominationLink.target="_blank";nominationLink.rel="noopener noreferrer";nominationLink.textContent="View original nomination ↗";
         bottom.append(nominationLink);
       } else if(item.origin!=="human_nomination"){
-        const view=document.createElement("button");view.type="button";view.textContent="在消息中查看 →";
+        const view=document.createElement("button");view.type="button";view.textContent="View in update feed →";
         view.addEventListener("click",()=>openEvent(item.eventId,item.industryId));
         bottom.append(view);
       }
@@ -191,7 +202,7 @@
         }
       }
     })
-    .catch(()=>{status.textContent="研究结果暂时不可用";});
+    .catch(()=>{status.textContent="Research results temporarily unavailable";});
   select?.addEventListener("change",render);
   if(select) new MutationObserver(render).observe(select,{childList:true});
 })();

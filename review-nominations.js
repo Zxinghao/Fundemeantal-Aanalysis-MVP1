@@ -176,6 +176,7 @@
     });
   }
   function enhance(){
+    if(!industryData.length || !currentIndustry())return;
     const queue=typeof buildReviewQueue==="function"?buildReviewQueue():[];
     const byId=new Map(queue.map((item)=>[String(item.id),item]));
     const cards=[...container.querySelectorAll(".update-card")];

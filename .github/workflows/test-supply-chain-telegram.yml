@@ -1,0 +1,22 @@
+name: Test Supply Chain Telegram Bot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  telegram-connection-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify dedicated bot identity and deliver one test message
+        env:
+          SUPPLY_CHAIN_TELEGRAM_BOT_TOKEN: ${{ secrets.SUPPLY_CHAIN_TELEGRAM_BOT_TOKEN }}
+          SUPPLY_CHAIN_TELEGRAM_CHAT_ID: ${{ secrets.SUPPLY_CHAIN_TELEGRAM_CHAT_ID }}
+        run: node scripts/telegram-bot-smoke-test.mjs

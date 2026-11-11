@@ -35,7 +35,7 @@ function formatTimestamp(value) {
   if (!value) return "Never";
   const date = new Date(value);
   if (!Number.isFinite(date.getTime())) return "Unknown";
-  return date.toLocaleString(undefined, {
+  return date.toLocaleString("en-GB", {
     year: "numeric",
     month: "short",
     day: "2-digit",

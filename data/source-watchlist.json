@@ -10,7 +10,13 @@
         "url": "https://matthey.com/news",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["fuel cell", "hydrogen", "catalyst", "MEA", "CCM"]
+        "watchFor": [
+          "fuel cell",
+          "hydrogen",
+          "catalyst",
+          "MEA",
+          "CCM"
+        ]
       },
       {
         "id": "forvia-news",
@@ -20,7 +26,12 @@
         "url": "https://www.forvia.com/en/newsroom",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["hydrogen", "storage", "commercial vehicle", "tank"]
+        "watchFor": [
+          "hydrogen",
+          "storage",
+          "commercial vehicle",
+          "tank"
+        ]
       },
       {
         "id": "garrett-news",
@@ -30,7 +41,62 @@
         "url": "https://www.garrettmotion.com/news/",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["fuel cell", "compressor", "hydrogen", "electric compressor"]
+        "watchFor": [
+          "fuel cell",
+          "compressor",
+          "hydrogen",
+          "electric compressor"
+        ]
+      },
+      {
+        "id": "toray-official-news",
+        "companyId": "toray",
+        "nodeId": "gdl",
+        "name": "Toray global newsroom",
+        "url": "https://www.toray.com/news/",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": [
+          "carbon fiber",
+          "fuel cell",
+          "hydrogen",
+          "gas diffusion",
+          "fuel cell component"
+        ]
+      },
+      {
+        "id": "toyota-hydrogen-news",
+        "companyId": "toyota",
+        "nodeId": "vehicle",
+        "name": "Toyota Europe hydrogen newsroom",
+        "url": "https://newsroom.toyota.eu/en?h=1&t=Hydrogen",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": [
+          "fuel cell",
+          "hydrogen",
+          "commercial vehicle",
+          "heavy-duty",
+          "stack",
+          "truck"
+        ]
+      },
+      {
+        "id": "ballard-investor-news",
+        "companyId": "ballard",
+        "nodeId": "stack",
+        "name": "Ballard official investor newsroom",
+        "url": "https://www.ballard.com/investor-hub/",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": [
+          "fuel cell",
+          "production",
+          "stack",
+          "bus",
+          "power systems",
+          "capacity"
+        ]
       }
     ],
     "weekly": [
@@ -42,7 +108,13 @@
         "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
         "sourceType": "government",
         "language": "en",
-        "watchFor": ["fuel cell", "hydrogen", "funding", "storage", "infrastructure"]
+        "watchFor": [
+          "fuel cell",
+          "hydrogen",
+          "funding",
+          "storage",
+          "infrastructure"
+        ]
       },
       {
         "id": "umicore-ir",
@@ -52,7 +124,12 @@
         "url": "https://www.umicore.com/en/investors/",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["fuel cell", "catalyst", "precious metals", "guidance"]
+        "watchFor": [
+          "fuel cell",
+          "catalyst",
+          "precious metals",
+          "guidance"
+        ]
       },
       {
         "id": "sgl-ir",
@@ -62,7 +139,12 @@
         "url": "https://www.sglcarbon.com/en/investor-relations/",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["fuel cell", "GDL", "Sigracet", "carbon fiber"]
+        "watchFor": [
+          "fuel cell",
+          "GDL",
+          "Sigracet",
+          "carbon fiber"
+        ]
       },
       {
         "id": "hexagon-purus-ir",
@@ -72,7 +154,15 @@
         "url": "https://live.euronext.com/en/listview/company-press-release/251919",
         "sourceType": "exchange_filing",
         "language": "en",
-        "watchFor": ["results", "order", "hydrogen", "storage", "commercial vehicle", "capacity", "customer"]
+        "watchFor": [
+          "results",
+          "order",
+          "hydrogen",
+          "storage",
+          "commercial vehicle",
+          "capacity",
+          "customer"
+        ]
       },
       {
         "id": "jm-fuel-cell-tech",
@@ -82,7 +172,13 @@
         "url": "https://matthey.com/products-and-services/fuel-cells/fuel-cells-technology",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["fuel cell", "catalyst coated membrane", "CCM", "membrane electrode assembly", "MEA"]
+        "watchFor": [
+          "fuel cell",
+          "catalyst coated membrane",
+          "CCM",
+          "membrane electrode assembly",
+          "MEA"
+        ]
       },
       {
         "id": "umicore-fuel-cell-catalysts",
@@ -92,7 +188,13 @@
         "url": "https://www.umicore.com/en/markets-products/automotive-mobility/fuel-cell-catalysts/",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["fuel cell catalyst", "PEM", "platinum", "catalyst", "hydrogen"]
+        "watchFor": [
+          "fuel cell catalyst",
+          "PEM",
+          "platinum",
+          "catalyst",
+          "hydrogen"
+        ]
       },
       {
         "id": "sgl-gdl",
@@ -102,7 +204,12 @@
         "url": "https://www.sglcarbon.com/en/markets-solutions/material/sigracet/",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["SIGRACET", "gas diffusion layer", "GDL", "fuel cell"]
+        "watchFor": [
+          "SIGRACET",
+          "gas diffusion layer",
+          "GDL",
+          "fuel cell"
+        ]
       },
       {
         "id": "forvia-hydrogen-storage",
@@ -112,7 +219,14 @@
         "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["hydrogen storage", "Type IV", "tank", "700 bar", "capacity", "commercial vehicle"]
+        "watchFor": [
+          "hydrogen storage",
+          "Type IV",
+          "tank",
+          "700 bar",
+          "capacity",
+          "commercial vehicle"
+        ]
       },
       {
         "id": "hexagon-purus",
@@ -122,7 +236,13 @@
         "url": "https://hexagongroup.com/hexagon-purus",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["hydrogen storage", "Type 4", "Type IV", "700 bar", "commercial vehicle"]
+        "watchFor": [
+          "hydrogen storage",
+          "Type 4",
+          "Type IV",
+          "700 bar",
+          "commercial vehicle"
+        ]
       },
       {
         "id": "garrett-fuel-cell",
@@ -132,7 +252,13 @@
         "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["fuel cell compressor", "electric compressor", "air compressor", "hydrogen", "fuel cell"]
+        "watchFor": [
+          "fuel cell compressor",
+          "electric compressor",
+          "air compressor",
+          "hydrogen",
+          "fuel cell"
+        ]
       },
       {
         "id": "doe-fuel-cell-parts",
@@ -142,7 +268,13 @@
         "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
         "sourceType": "government",
         "language": "en",
-        "watchFor": ["membrane electrode assembly", "MEA", "gas diffusion layer", "catalyst", "bipolar plate"]
+        "watchFor": [
+          "membrane electrode assembly",
+          "MEA",
+          "gas diffusion layer",
+          "catalyst",
+          "bipolar plate"
+        ]
       },
       {
         "id": "doe-hydrogen-storage",
@@ -152,7 +284,13 @@
         "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
         "sourceType": "government",
         "language": "en",
-        "watchFor": ["350 bar", "700 bar", "compressed hydrogen", "Type IV", "storage tank"]
+        "watchFor": [
+          "350 bar",
+          "700 bar",
+          "compressed hydrogen",
+          "Type IV",
+          "storage tank"
+        ]
       }
     ]
   },
@@ -167,7 +305,13 @@
         "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["Spectrum-X", "Quantum-X", "co-packaged optics", "silicon photonics", "AI factories"]
+        "watchFor": [
+          "Spectrum-X",
+          "Quantum-X",
+          "co-packaged optics",
+          "silicon photonics",
+          "AI factories"
+        ]
       },
       {
         "id": "broadcom-cpo",
@@ -177,7 +321,13 @@
         "url": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["co-packaged optics", "pluggable laser source", "DSP", "switch ASIC", "packaging"]
+        "watchFor": [
+          "co-packaged optics",
+          "pluggable laser source",
+          "DSP",
+          "switch ASIC",
+          "packaging"
+        ]
       },
       {
         "id": "marvell-optical-dsp",
@@ -187,7 +337,13 @@
         "url": "https://www.marvell.com/solutions/data-center/optical-dsp.html",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["optical DSP", "PAM4", "1.6T", "AI infrastructure", "data center"]
+        "watchFor": [
+          "optical DSP",
+          "PAM4",
+          "1.6T",
+          "AI infrastructure",
+          "data center"
+        ]
       },
       {
         "id": "coherent-datacenter",
@@ -197,7 +353,14 @@
         "url": "https://www.coherent.com/datacenter-communications",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["datacenter", "800G", "1.6T", "EML", "laser", "transceiver"]
+        "watchFor": [
+          "datacenter",
+          "800G",
+          "1.6T",
+          "EML",
+          "laser",
+          "transceiver"
+        ]
       },
       {
         "id": "lumentum-eml",
@@ -207,7 +370,13 @@
         "url": "https://www.lumentum.com/en/products/data-center/modulated-lasers/emls",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["EML", "modulated laser", "data center", "800G", "1.6T"]
+        "watchFor": [
+          "EML",
+          "modulated laser",
+          "data center",
+          "800G",
+          "1.6T"
+        ]
       },
       {
         "id": "fabrinet-optical-components",
@@ -217,7 +386,30 @@
         "url": "https://fabrinet.com/services/optical-components",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["optical components", "packaging", "test", "precision assembly", "manufacturing"]
+        "watchFor": [
+          "optical components",
+          "packaging",
+          "test",
+          "precision assembly",
+          "manufacturing"
+        ]
+      },
+      {
+        "id": "innolight-news",
+        "companyId": "innolight",
+        "nodeId": "optical-modules",
+        "name": "InnoLight official news",
+        "url": "https://www.innolight.com/news",
+        "sourceType": "company_official",
+        "language": "en",
+        "watchFor": [
+          "800G",
+          "1.6T",
+          "transceiver",
+          "optical",
+          "pluggable",
+          "production"
+        ]
       }
     ],
     "weekly": [
@@ -229,7 +421,13 @@
         "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-delivers-industrys-first-512-tbps-co-packaged-optics",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["Bailly", "51.2", "CPO", "Ethernet switch", "AI systems"]
+        "watchFor": [
+          "Bailly",
+          "51.2",
+          "CPO",
+          "Ethernet switch",
+          "AI systems"
+        ]
       },
       {
         "id": "marvell-pam4-dsp",
@@ -239,7 +437,13 @@
         "url": "https://www.marvell.com/products/pam-dsp.html",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["PAM4", "DSP", "800G", "1.6T", "AI networks"]
+        "watchFor": [
+          "PAM4",
+          "DSP",
+          "800G",
+          "1.6T",
+          "AI networks"
+        ]
       },
       {
         "id": "eoptolink-800g",
@@ -249,7 +453,12 @@
         "url": "https://eoptolink.com/product-solutions/800g",
         "sourceType": "company_official",
         "language": "en",
-        "watchFor": ["800G", "optical transceiver", "data center", "module"]
+        "watchFor": [
+          "800G",
+          "optical transceiver",
+          "data center",
+          "module"
+        ]
       }
     ]
   }

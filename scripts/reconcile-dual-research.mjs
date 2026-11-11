@@ -112,6 +112,7 @@ export function reconcile(brief, claude, codex, existing = {}, at = new Date()) 
       target: original.target, origin: original.origin || "scanner",
       annotation: original.origin === "human_nomination" ? original.annotation || "" : null,
       proposedGraphChange: original.proposedGraphChange || null,
+      issueUrl: original.issueUrl || null,
       sourceUrl: original.sourceUrl,
       sourceId: original.sourceIds[0], detectedAt: original.detectedAt,
       status, changeType: agreeMaterial ? first.changeType : null,

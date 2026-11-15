@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:19.139Z",
+      "capturedAt": "2026-11-15T13:56:21.941Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:19.139Z",
+    "lastCheckedAt": "2026-11-15T13:56:21.941Z",
     "lastChangedAt": "2026-11-13T14:35:21.458Z",
     "lastError": null
   },
@@ -195,7 +195,7 @@
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:19.748Z",
+      "capturedAt": "2026-11-15T13:56:22.427Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -219,7 +219,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:19.748Z",
+    "lastCheckedAt": "2026-11-15T13:56:22.427Z",
     "lastChangedAt": "2026-11-14T13:31:19.748Z",
     "lastError": null
   },
@@ -233,7 +233,7 @@
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:21.516Z",
+      "capturedAt": "2026-11-15T13:56:23.320Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -383,7 +383,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:21.516Z",
+    "lastCheckedAt": "2026-11-15T13:56:23.320Z",
     "lastChangedAt": "2026-11-11T14:23:36.650Z",
     "lastError": null
   },
@@ -397,7 +397,7 @@
     "baselineAt": "2026-09-09T07:03:51.954Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:24.692Z",
+      "capturedAt": "2026-11-15T13:56:25.773Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -618,7 +618,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:24.692Z",
+    "lastCheckedAt": "2026-11-15T13:56:25.773Z",
     "lastChangedAt": "2026-11-14T13:31:24.692Z",
     "lastError": null
   },
@@ -632,7 +632,7 @@
     "baselineAt": "2026-09-09T07:03:52.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:24.823Z",
+      "capturedAt": "2026-11-15T13:56:25.815Z",
       "keywords": [
         "fuel cell",
         "catalyst",
@@ -663,7 +663,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:24.823Z",
+    "lastCheckedAt": "2026-11-15T13:56:25.815Z",
     "lastChangedAt": "2026-11-14T13:31:24.823Z",
     "lastError": null
   },
@@ -677,7 +677,7 @@
     "baselineAt": "2026-09-09T07:03:53.205Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:26.415Z",
+      "capturedAt": "2026-11-15T13:56:26.858Z",
       "keywords": [
         "fuel cell",
         "GDL",
@@ -701,7 +701,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:26.415Z",
+    "lastCheckedAt": "2026-11-15T13:56:26.858Z",
     "lastChangedAt": "2026-11-11T14:23:41.370Z",
     "lastError": null
   },
@@ -715,7 +715,7 @@
     "baselineAt": "2026-09-09T07:08:07.547Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:27.311Z",
+      "capturedAt": "2026-11-15T13:56:27.222Z",
       "keywords": [
         "results",
         "order",
@@ -784,7 +784,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:27.311Z",
+    "lastCheckedAt": "2026-11-15T13:56:27.222Z",
     "lastChangedAt": "2026-11-12T15:15:45.732Z",
     "lastError": null
   },
@@ -1019,7 +1019,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:39.918Z",
+    "lastCheckedAt": "2026-11-15T13:56:35.846Z",
     "lastChangedAt": "2026-10-30T12:56:41.568Z",
     "lastError": "HTTP 403"
   },
@@ -1033,7 +1033,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:40.107Z",
+      "capturedAt": "2026-11-15T13:56:35.872Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1051,7 +1051,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:40.107Z",
+    "lastCheckedAt": "2026-11-15T13:56:35.872Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1065,7 +1065,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:40.253Z",
+      "capturedAt": "2026-11-15T13:56:35.948Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1286,7 +1286,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:40.253Z",
+    "lastCheckedAt": "2026-11-15T13:56:35.948Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1300,7 +1300,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:40.494Z",
+      "capturedAt": "2026-11-15T13:56:36.273Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1403,7 +1403,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:40.494Z",
+    "lastCheckedAt": "2026-11-15T13:56:36.273Z",
     "lastChangedAt": "2026-09-30T12:35:48.265Z",
     "lastError": null
   },
@@ -1417,7 +1417,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:40.686Z",
+      "capturedAt": "2026-11-15T13:56:36.587Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1527,7 +1527,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:40.686Z",
+    "lastCheckedAt": "2026-11-15T13:56:36.587Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1541,7 +1541,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:40.827Z",
+      "capturedAt": "2026-11-15T13:56:36.626Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1622,7 +1622,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:40.827Z",
+    "lastCheckedAt": "2026-11-15T13:56:36.626Z",
     "lastChangedAt": "2026-11-11T14:23:53.747Z",
     "lastError": null
   },
@@ -1636,7 +1636,7 @@
     "baselineAt": "2026-09-09T07:03:57.992Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:43.471Z",
+      "capturedAt": "2026-11-15T13:56:40.291Z",
       "keywords": [
         "Bailly",
         "51.2",
@@ -1857,7 +1857,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:43.471Z",
+    "lastCheckedAt": "2026-11-15T13:56:40.291Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -1871,7 +1871,7 @@
     "baselineAt": "2026-09-09T07:03:58.124Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:43.690Z",
+      "capturedAt": "2026-11-15T13:56:40.561Z",
       "keywords": [
         "PAM4",
         "DSP",
@@ -2092,7 +2092,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:43.690Z",
+    "lastCheckedAt": "2026-11-15T13:56:40.561Z",
     "lastChangedAt": "2026-10-28T12:55:37.229Z",
     "lastError": null
   },
@@ -2106,7 +2106,7 @@
     "baselineAt": "2026-09-09T07:03:58.260Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:43.789Z",
+      "capturedAt": "2026-11-15T13:56:40.607Z",
       "keywords": [
         "800G",
         "optical transceiver",
@@ -2326,7 +2326,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:43.789Z",
+    "lastCheckedAt": "2026-11-15T13:56:40.607Z",
     "lastChangedAt": "2026-09-16T11:35:40.428Z",
     "lastError": null
   },
@@ -2340,7 +2340,7 @@
     "baselineAt": "2026-09-09T06:04:16.623Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:28.302Z",
+      "capturedAt": "2026-11-15T13:56:27.691Z",
       "keywords": [
         "fuel cell",
         "catalyst coated membrane",
@@ -2512,7 +2512,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:28.302Z",
+    "lastCheckedAt": "2026-11-15T13:56:27.691Z",
     "lastChangedAt": "2026-11-13T14:35:32.489Z",
     "lastError": null
   },
@@ -2526,7 +2526,7 @@
     "baselineAt": "2026-09-09T06:04:17.480Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:29.158Z",
+      "capturedAt": "2026-11-15T13:56:28.298Z",
       "keywords": [
         "fuel cell catalyst",
         "PEM",
@@ -2692,7 +2692,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:29.158Z",
+    "lastCheckedAt": "2026-11-15T13:56:28.298Z",
     "lastChangedAt": "2026-11-11T14:23:43.404Z",
     "lastError": null
   },
@@ -2706,7 +2706,7 @@
     "baselineAt": "2026-09-09T06:26:04.221Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:30.016Z",
+      "capturedAt": "2026-11-15T13:56:28.982Z",
       "keywords": [
         "SIGRACET",
         "gas diffusion layer",
@@ -2926,7 +2926,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:30.016Z",
+    "lastCheckedAt": "2026-11-15T13:56:28.982Z",
     "lastChangedAt": "2026-11-11T14:23:44.188Z",
     "lastError": null
   },
@@ -2940,7 +2940,7 @@
     "baselineAt": "2026-09-09T06:04:19.454Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:36.018Z",
+      "capturedAt": "2026-11-15T13:56:33.015Z",
       "keywords": [
         "hydrogen storage",
         "Type IV",
@@ -3120,7 +3120,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:36.018Z",
+    "lastCheckedAt": "2026-11-15T13:56:33.015Z",
     "lastChangedAt": "2026-11-14T13:31:36.018Z",
     "lastError": null
   },
@@ -3134,7 +3134,7 @@
     "baselineAt": "2026-09-09T06:04:20.529Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:36.821Z",
+      "capturedAt": "2026-11-15T13:56:33.529Z",
       "keywords": [
         "hydrogen storage",
         "Type 4",
@@ -3152,7 +3152,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:36.821Z",
+    "lastCheckedAt": "2026-11-15T13:56:33.529Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3166,7 +3166,7 @@
     "baselineAt": "2026-09-09T06:04:22.984Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:39.129Z",
+      "capturedAt": "2026-11-15T13:56:34.855Z",
       "keywords": [
         "fuel cell compressor",
         "electric compressor",
@@ -3387,7 +3387,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:39.129Z",
+    "lastCheckedAt": "2026-11-15T13:56:34.855Z",
     "lastChangedAt": "2026-11-11T14:23:50.142Z",
     "lastError": null
   },
@@ -3401,7 +3401,7 @@
     "baselineAt": "2026-09-09T06:04:26.236Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:39.297Z",
+      "capturedAt": "2026-11-15T13:56:35.657Z",
       "keywords": [
         "membrane electrode assembly",
         "MEA",
@@ -3622,7 +3622,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:39.297Z",
+    "lastCheckedAt": "2026-11-15T13:56:35.657Z",
     "lastChangedAt": "2026-11-14T13:31:39.297Z",
     "lastError": null
   },
@@ -3636,7 +3636,7 @@
     "baselineAt": "2026-09-09T06:04:26.527Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:39.465Z",
+      "capturedAt": "2026-11-15T13:56:35.686Z",
       "keywords": [
         "350 bar",
         "700 bar",
@@ -3822,7 +3822,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:39.465Z",
+    "lastCheckedAt": "2026-11-15T13:56:35.686Z",
     "lastChangedAt": "2026-11-14T13:31:39.465Z",
     "lastError": null
   },
@@ -3836,7 +3836,7 @@
     "baselineAt": "2026-11-11T14:23:37.062Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:21.831Z",
+      "capturedAt": "2026-11-15T13:56:23.455Z",
       "keywords": [
         "carbon fiber",
         "fuel cell",
@@ -3854,7 +3854,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:21.831Z",
+    "lastCheckedAt": "2026-11-15T13:56:23.455Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3868,7 +3868,7 @@
     "baselineAt": "2026-11-11T14:23:37.649Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:22.089Z",
+      "capturedAt": "2026-11-15T13:56:23.669Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -4090,7 +4090,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:22.089Z",
+    "lastCheckedAt": "2026-11-15T13:56:23.669Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -4104,7 +4104,7 @@
     "baselineAt": "2026-11-11T14:23:38.982Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:23.830Z",
+      "capturedAt": "2026-11-15T13:56:24.979Z",
       "keywords": [
         "fuel cell",
         "production",
@@ -4291,7 +4291,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:23.830Z",
+    "lastCheckedAt": "2026-11-15T13:56:24.979Z",
     "lastChangedAt": "2026-11-14T13:31:23.830Z",
     "lastError": null
   },
@@ -4305,7 +4305,7 @@
     "baselineAt": "2026-11-11T14:23:56.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-14T13:31:42.609Z",
+      "capturedAt": "2026-11-15T13:56:38.869Z",
       "keywords": [
         "800G",
         "1.6T",
@@ -4527,7 +4527,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-14T13:31:42.609Z",
+    "lastCheckedAt": "2026-11-15T13:56:38.869Z",
     "lastChangedAt": null,
     "lastError": null
   }

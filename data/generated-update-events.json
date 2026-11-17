@@ -1,5 +1,508 @@
 [
   {
+    "id": "web-fuel-cell-2026-11-17-forvia-hydrogen-storage-1461c70b4fa2",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-17T16:00:20.168Z",
+    "lastSeenAt": "2026-11-17T16:00:20.168Z",
+    "changeSignature": "1461c70b4fa2",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.24€ -2.16% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-17-forvia-hydrogen-storage-1461c70b4fa2-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-11-17T16:00:20.168Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.24€ -2.16% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-17-forvia-hydrogen-storage-1461c70b4fa2-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-17T16:00:20.168Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.24€ -2.16% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.24€ -2.16% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "2.16%",
+            "afterValue": "1.09%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 2.16% → 1.09%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-17T16:00:20.168Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-17-ballard-investor-news-fa002e5c2dbd",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "ballard",
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "Ballard official investor newsroom changed. The scanner isolated 8 added and 7 removed keyword-focused context window(s) on \"Investor Hub - Ballard\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.ballard.com/investor-hub/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "ballard-investor-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-17T16:00:04.551Z",
+    "lastSeenAt": "2026-11-17T16:00:04.551Z",
+    "changeSignature": "fa002e5c2dbd",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "financial results for the third quarter... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus pl…",
+        "towable unit Designed by GeoPura, manufactured by Siemens Energy and powered by a Ballard fuel cell, HPU Agile-H is available to pre-order now for delivery... October 28, 2026 Document Review of the Ballard Forum Ballar…",
+        "rd quarter... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell …",
+        "Ballard Q3 2026 Results Conference Call Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marke…",
+        "l Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marketers, analysts, engineers, and energy …"
+      ],
+      "removed": [
+        "ur Q3 2026 Earnings Webcast Webcast URL:... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus p…",
+        "towable unit Designed by GeoPura, manufactured by Siemens Energy and powered by a Ballard fuel cell, HPU Agile-H is available to pre-order now for delivery... October 28, 2026 Go to document library Here for the world O…",
+        "bcast URL:... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell …",
+        "allard Announces Acquisition of GeoPura Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marke…",
+        "a Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marketers, analysts, engineers, and energy …"
+      ],
+      "addedCount": 8,
+      "removedCount": 7,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "production",
+        "stack",
+        "bus",
+        "power systems"
+      ],
+      "affectedTarget": "company:ballard",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 15 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.ballard; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-17-ballard-investor-news-fa002e5c2dbd-evidence-1",
+          "sourceId": "ballard-investor-news",
+          "sourceType": "company_official",
+          "url": "https://www.ballard.com/investor-hub/",
+          "pageTitle": "Investor Hub - Ballard",
+          "observedAt": "2026-11-17T16:00:04.551Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "production",
+            "stack",
+            "bus",
+            "power systems"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 8 added and 7 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "financial results for the third quarter... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus pl…",
+              "towable unit Designed by GeoPura, manufactured by Siemens Energy and powered by a Ballard fuel cell, HPU Agile-H is available to pre-order now for delivery... October 28, 2026 Document Review of the Ballard Forum Ballar…",
+              "rd quarter... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell …",
+              "Ballard Q3 2026 Results Conference Call Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marke…",
+              "l Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marketers, analysts, engineers, and energy …"
+            ],
+            "removed": [
+              "ur Q3 2026 Earnings Webcast Webcast URL:... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus p…",
+              "towable unit Designed by GeoPura, manufactured by Siemens Energy and powered by a Ballard fuel cell, HPU Agile-H is available to pre-order now for delivery... October 28, 2026 Go to document library Here for the world O…",
+              "bcast URL:... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus platform and transit fuel cell …",
+              "allard Announces Acquisition of GeoPura Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marke…",
+              "a Acquisition Webcast Recording Stock Chart Ballard Power Systems Company Profile Ballard Power Systems (NASDAQ: BLDP, TSX: BLDP) is a dynamic team of professionals, including marketers, analysts, engineers, and energy …"
+            ],
+            "addedCount": 8,
+            "removedCount": 7,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-17-ballard-investor-news-fa002e5c2dbd-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "company:ballard",
+        "statement": "Potential policy change affecting company:ballard; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.ballard.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-17T16:00:04.551Z",
+        "target": "company:ballard",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "ur Q3 2026 Earnings Webcast Webcast URL:... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus p…",
+            "afterExcerpt": "financial results for the third quarter... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus pl…",
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "ur Q3 2026 Earnings Webcast Webcast URL:... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus p…",
+            "afterExcerpt": "financial results for the third quarter... November 16, 2026 Document Ballard FCmove®-SC fuel cell engine makes series-production debut in next-generation Solaris Urbino 12 hydrogen bus New purpose-built hydrogen bus pl…",
+            "beforeValue": "16",
+            "afterValue": "12",
+            "unit": null,
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 16 → 12.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for company:ballard; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-17T16:00:04.551Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-17-forvia-news-0cd6fa4e9c26",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA news changed. The scanner isolated 0 added and 1 removed keyword-focused context window(s) on \"Press | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/newsroom",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-17T15:59:59.259Z",
+    "lastSeenAt": "2026-11-17T15:59:59.259Z",
+    "changeSignature": "0cd6fa4e9c26",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [],
+      "removed": [
+        "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment More At FORVIA, we pioneer technology for mobility experiences that matter to people. Who we are Elect…"
+      ],
+      "addedCount": 0,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 1 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-17-forvia-news-0cd6fa4e9c26-evidence-1",
+          "sourceId": "forvia-news",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/newsroom",
+          "pageTitle": "Press | FORVIA",
+          "observedAt": "2026-11-17T15:59:59.259Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 0 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [],
+            "removed": [
+              "ress Release 2nd September 2026 IAA Transportation 2026: FORVIA accelerates growth in the commercial vehicle segment More At FORVIA, we pioneer technology for mobility experiences that matter to people. Who we are Elect…"
+            ],
+            "addedCount": 0,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-17-forvia-news-0cd6fa4e9c26-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-17T15:59:59.259Z",
+        "target": "company:forvia",
+        "observedFacts": [],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-17T15:59:59.259Z"
+  },
+  {
     "id": "web-fuel-cell-2026-11-16-forvia-hydrogen-storage-cc23566ca40a",
     "sourceType": "ai_scan",
     "status": "pending",

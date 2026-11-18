@@ -1,5 +1,535 @@
 [
   {
+    "id": "web-ai-optics-2026-11-18-coherent-datacenter-de2032f9b397",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "ai-optics",
+    "companyId": "coherent",
+    "nodeId": "laser",
+    "impactType": "technology_change",
+    "summary": "Coherent data-center communications changed. The scanner isolated 30 added and 13 removed keyword-focused context window(s) on \"Datacenter and Communications | Coherent\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.coherent.com/datacenter-communications",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "coherent-datacenter"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-18T15:40:37.643Z",
+    "lastSeenAt": "2026-11-18T15:40:37.643Z",
+    "changeSignature": "de2032f9b397",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Datacenter and Communications | Coherent JavaScript seems to be disabled in your browser. For the best experience on our site, be sure to turn on Javascript in",
+        "- Booth 4805, San Francisco, CA &middot; January 30 &ndash; February 4, 2027 Language: EN Datacenter and Communications Products Applications Optical Transceivers Optical Circuit Switch Interconnect Cables Optical Instr…",
+        "ces Communication Components Wavelength Management Advanced Thermal Management PhotonLink Datacenter Enterprise Networking Terrestrial Communications Submarine Telecom Space-Based Telecom Quantum Technologies Advanced T…",
+        "tainability Careers Locations Event Legal ISO Certificates Contact Us Supply Chain Browse Datacenter and Communications Industrial Company Datacenter and Communications Products Applications Products Explore All Product…",
+        "tificates Contact Us Supply Chain Browse Datacenter and Communications Industrial Company Datacenter and Communications Products Applications Products Explore All Products Optical Transceivers Optical Circuit Switch Int…"
+      ],
+      "removed": [
+        "Datacenter and Communications | Coherent --> Open Navigation Menu Close Navigation Menu Contact Sales English (US) English (US) English (US) Deutsch 中文 日本語 한국어",
+        "red field If you need technical support or service, please visit Support . Privacy Policy Datacenter and Communications Industrial Company Products End-to-End Optical Connectivity and Photonic Innovation​ AI-driven infr…",
+        "d and scale. Our advanced optical solutions power next-generation AI networks, hyperscale datacenters, and global communications.​ Applications Connecting The World​​ Learn how we are enabling the next generation of hig…",
+        "re enabling the next generation of high-speed optical transmission systems, networks, and datacenter solutions. Products Engineered Materials and High-Precision Laser Solutions​ Advancing industrial performance with eng…",
+        "pany Open Careers Coherent Labs Locations Events Legal ISO Certificates Contact Us Home > Datacenter and Communications Datacenter and Communications AI-driven infrastructure demands unprecedented speed and scale. Our a…"
+      ],
+      "addedCount": 30,
+      "removedCount": 13,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "datacenter",
+        "laser",
+        "transceiver"
+      ],
+      "affectedTarget": "company:coherent",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 43 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.coherent; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-ai-optics-2026-11-18-coherent-datacenter-de2032f9b397-evidence-1",
+          "sourceId": "coherent-datacenter",
+          "sourceType": "company_official",
+          "url": "https://www.coherent.com/datacenter-communications",
+          "pageTitle": "Datacenter and Communications | Coherent",
+          "observedAt": "2026-11-18T15:40:37.643Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "datacenter",
+            "laser",
+            "transceiver"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 30 added and 13 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Datacenter and Communications | Coherent JavaScript seems to be disabled in your browser. For the best experience on our site, be sure to turn on Javascript in",
+              "- Booth 4805, San Francisco, CA &middot; January 30 &ndash; February 4, 2027 Language: EN Datacenter and Communications Products Applications Optical Transceivers Optical Circuit Switch Interconnect Cables Optical Instr…",
+              "ces Communication Components Wavelength Management Advanced Thermal Management PhotonLink Datacenter Enterprise Networking Terrestrial Communications Submarine Telecom Space-Based Telecom Quantum Technologies Advanced T…",
+              "tainability Careers Locations Event Legal ISO Certificates Contact Us Supply Chain Browse Datacenter and Communications Industrial Company Datacenter and Communications Products Applications Products Explore All Product…",
+              "tificates Contact Us Supply Chain Browse Datacenter and Communications Industrial Company Datacenter and Communications Products Applications Products Explore All Products Optical Transceivers Optical Circuit Switch Int…"
+            ],
+            "removed": [
+              "Datacenter and Communications | Coherent --> Open Navigation Menu Close Navigation Menu Contact Sales English (US) English (US) English (US) Deutsch 中文 日本語 한국어",
+              "red field If you need technical support or service, please visit Support . Privacy Policy Datacenter and Communications Industrial Company Products End-to-End Optical Connectivity and Photonic Innovation​ AI-driven infr…",
+              "d and scale. Our advanced optical solutions power next-generation AI networks, hyperscale datacenters, and global communications.​ Applications Connecting The World​​ Learn how we are enabling the next generation of hig…",
+              "re enabling the next generation of high-speed optical transmission systems, networks, and datacenter solutions. Products Engineered Materials and High-Precision Laser Solutions​ Advancing industrial performance with eng…",
+              "pany Open Careers Coherent Labs Locations Events Legal ISO Certificates Contact Us Home > Datacenter and Communications Datacenter and Communications AI-driven infrastructure demands unprecedented speed and scale. Our a…"
+            ],
+            "addedCount": 30,
+            "removedCount": 13,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-ai-optics-2026-11-18-coherent-datacenter-de2032f9b397-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:coherent",
+        "statement": "Potential technology change affecting company:coherent; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.coherent.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-18T15:40:37.643Z",
+        "target": "company:coherent",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Datacenter and Communications | Coherent --> Open Navigation Menu Close Navigation Menu Contact Sales English (US) English (US) English (US) Deutsch 中文 日本語 한국어",
+            "afterExcerpt": "Datacenter and Communications | Coherent JavaScript seems to be disabled in your browser. For the best experience on our site, be sure to turn on Javascript in",
+            "matchedKeywords": [
+              "datacenter",
+              "laser",
+              "transceiver"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:coherent; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-18T15:40:37.643Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-18-forvia-hydrogen-storage-7187d3466c3a",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-18T15:40:32.864Z",
+    "lastSeenAt": "2026-11-18T15:40:32.864Z",
+    "changeSignature": "7187d3466c3a",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-18-forvia-hydrogen-storage-7187d3466c3a-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-11-18T15:40:32.864Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-18-forvia-hydrogen-storage-7187d3466c3a-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-18T15:40:32.864Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "1.09%",
+            "afterValue": "0.66%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 1.09% → 0.66%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-18T15:40:32.864Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-18-ballard-investor-news-42cd43311a3c",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "ballard",
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "Ballard official investor newsroom changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Investor Hub - Ballard\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.ballard.com/investor-hub/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "ballard-investor-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-18T15:40:17.892Z",
+    "lastSeenAt": "2026-11-18T15:40:17.892Z",
+    "changeSignature": "42cd43311a3c",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+        "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+      ],
+      "removed": [
+        "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releas…",
+        "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "production",
+        "stack",
+        "bus",
+        "power systems"
+      ],
+      "affectedTarget": "company:ballard",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.ballard; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-18-ballard-investor-news-42cd43311a3c-evidence-1",
+          "sourceId": "ballard-investor-news",
+          "sourceType": "company_official",
+          "url": "https://www.ballard.com/investor-hub/",
+          "pageTitle": "Investor Hub - Ballard",
+          "observedAt": "2026-11-18T15:40:17.892Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "production",
+            "stack",
+            "bus",
+            "power systems"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+              "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+            ],
+            "removed": [
+              "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releas…",
+              "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-18-ballard-investor-news-42cd43311a3c-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "company:ballard",
+        "statement": "Potential policy change affecting company:ballard; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.ballard.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-18T15:40:17.892Z",
+        "target": "company:ballard",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releas…",
+            "afterExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releas…",
+            "afterExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+            "beforeValue": "9.50%",
+            "afterValue": "6.14%",
+            "unit": "%",
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 9.50% → 6.14%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for company:ballard; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-18T15:40:17.892Z"
+  },
+  {
     "id": "web-fuel-cell-2026-11-17-forvia-hydrogen-storage-1461c70b4fa2",
     "sourceType": "ai_scan",
     "status": "pending",

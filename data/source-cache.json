@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T15:59:58.606Z",
+      "capturedAt": "2026-11-18T15:40:12.744Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -181,7 +181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T15:59:58.606Z",
+    "lastCheckedAt": "2026-11-18T15:40:12.744Z",
     "lastChangedAt": "2026-11-13T14:35:21.458Z",
     "lastError": null
   },
@@ -191,11 +191,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "3f32bd062cb91560f530edb871b6873b458113812dbe1d96a9fca477b3e47382",
+    "hash": "1fc622606651d93d776325eac23b0aac7165c2a0bbe2521100a48c0efa09c8ef",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T15:59:59.259Z",
+      "capturedAt": "2026-11-18T15:40:13.371Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -212,8 +212,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T15:59:59.259Z",
-    "lastChangedAt": "2026-11-17T15:59:59.259Z",
+    "lastCheckedAt": "2026-11-18T15:40:13.371Z",
+    "lastChangedAt": "2026-11-18T15:40:13.371Z",
     "lastError": null
   },
   "garrett-news": {
@@ -222,11 +222,11 @@
     "cadence": "daily",
     "url": "https://www.garrettmotion.com/news/",
     "title": "Newsroom Garrett Motion - Garrett Motion",
-    "hash": "dee324eedcdad9be720176528047f8c8379846cf86b3b66bc21078007f2f0336",
+    "hash": "d5bf3653367aad32efafd8a3a2e7ec36eccb441e9415b137e6c9c690ce6e93af",
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:00.882Z",
+      "capturedAt": "2026-11-18T15:40:15.024Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -376,8 +376,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:00.882Z",
-    "lastChangedAt": "2026-11-17T16:00:00.882Z",
+    "lastCheckedAt": "2026-11-18T15:40:15.024Z",
+    "lastChangedAt": "2026-11-18T15:40:15.024Z",
     "lastError": null
   },
   "doe-fuel-cells": {
@@ -386,11 +386,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
     "title": "Alternative Fuels and Feedstocks Office | Department of Energy",
-    "hash": "ba5dd7e81889ff093f0536f6877eea9339dce7c63dfded64c58fab295c715fbf",
+    "hash": "88bf3294b67bc9b3ef52cf6514771ee959d5d7729612fed68d9fe4f80e1f105a",
     "baselineAt": "2026-09-09T07:03:51.954Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:06.051Z",
+      "capturedAt": "2026-11-18T15:40:18.553Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -611,8 +611,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:06.051Z",
-    "lastChangedAt": "2026-11-14T13:31:24.692Z",
+    "lastCheckedAt": "2026-11-18T15:40:18.553Z",
+    "lastChangedAt": "2026-11-18T15:40:18.553Z",
     "lastError": null
   },
   "umicore-ir": {
@@ -621,11 +621,11 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/investors/",
     "title": "Investor relations | Umicore",
-    "hash": "14a463ffd3f46d0ed13eaebefaee2aaf5b50ebc3501143787d933d3fde8cbc88",
+    "hash": "926dd9e5841543a5a81b2201edfe5fbfe58a4fe22aca8125bb61f255b33018af",
     "baselineAt": "2026-09-09T07:03:52.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:06.270Z",
+      "capturedAt": "2026-11-18T15:40:18.708Z",
       "keywords": [
         "fuel cell",
         "catalyst",
@@ -656,8 +656,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:06.270Z",
-    "lastChangedAt": "2026-11-17T16:00:06.270Z",
+    "lastCheckedAt": "2026-11-18T15:40:18.708Z",
+    "lastChangedAt": "2026-11-18T15:40:18.708Z",
     "lastError": null
   },
   "sgl-ir": {
@@ -670,7 +670,7 @@
     "baselineAt": "2026-09-09T07:03:53.205Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:07.770Z",
+      "capturedAt": "2026-11-18T15:40:20.330Z",
       "keywords": [
         "fuel cell",
         "GDL",
@@ -694,7 +694,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:07.770Z",
+    "lastCheckedAt": "2026-11-18T15:40:20.330Z",
     "lastChangedAt": "2026-11-11T14:23:41.370Z",
     "lastError": null
   },
@@ -708,7 +708,7 @@
     "baselineAt": "2026-09-09T07:08:07.547Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:13.883Z",
+      "capturedAt": "2026-11-18T15:40:25.824Z",
       "keywords": [
         "results",
         "order",
@@ -777,7 +777,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:13.883Z",
+    "lastCheckedAt": "2026-11-18T15:40:25.824Z",
     "lastChangedAt": "2026-11-16T15:48:11.263Z",
     "lastError": null
   },
@@ -1012,7 +1012,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:28.086Z",
+    "lastCheckedAt": "2026-11-18T15:40:37.051Z",
     "lastChangedAt": "2026-10-30T12:56:41.568Z",
     "lastError": "HTTP 403"
   },
@@ -1026,7 +1026,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:28.356Z",
+      "capturedAt": "2026-11-18T15:40:37.133Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1044,7 +1044,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:28.356Z",
+    "lastCheckedAt": "2026-11-18T15:40:37.133Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1058,7 +1058,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:29.063Z",
+      "capturedAt": "2026-11-18T15:40:37.221Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1279,7 +1279,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:29.063Z",
+    "lastCheckedAt": "2026-11-18T15:40:37.221Z",
     "lastChangedAt": "2026-10-17T10:45:00.074Z",
     "lastError": null
   },
@@ -1289,11 +1289,11 @@
     "cadence": "daily",
     "url": "https://www.coherent.com/datacenter-communications",
     "title": "Datacenter and Communications | Coherent",
-    "hash": "53e9493225e3cf8287cb5f1fe676ef327d505d8872093f1817c90a826ecc9a33",
+    "hash": "e79044c2fc7b8806000c3f61c24633bdef7d836da31f7e5be579d6c4dd1ae981",
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:29.418Z",
+      "capturedAt": "2026-11-18T15:40:37.643Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1304,100 +1304,219 @@
       ],
       "segments": [
         {
-          "hash": "dc504b86ec8307320f524c793a3a56398dd56c1dcbf6e01cbf189b1fb961f6c1",
-          "excerpt": "Datacenter and Communications | Coherent --> Open Navigation Menu Close Navigation Menu Contact Sales English (US) English (US) English (US) Deutsch 中文 日本語 한국어",
+          "hash": "01f0494088c94166e793f2633969c3153be4ed45927ba5ad59caad2229a323d8",
+          "excerpt": "Datacenter and Communications | Coherent JavaScript seems to be disabled in your browser. For the best experience on our site, be sure to turn on Javascript in",
           "matchedKeywords": [
             "datacenter"
           ]
         },
         {
-          "hash": "d9769fb5483cee55eb1d3e6ca8339824dce459f7449076cfe6b0cef13cd127a6",
-          "excerpt": "red field If you need technical support or service, please visit Support . Privacy Policy Datacenter and Communications Industrial Company Products End-to-End Optical Connectivity and Photonic Innovation​ AI-driven infr…",
+          "hash": "a4b17b267cd616e22244b23f536058e8df41a032726da75572f911625aa01b74",
+          "excerpt": "- Booth 4805, San Francisco, CA &middot; January 30 &ndash; February 4, 2027 Language: EN Datacenter and Communications Products Applications Optical Transceivers Optical Circuit Switch Interconnect Cables Optical Instr…",
           "matchedKeywords": [
             "datacenter"
           ]
         },
         {
-          "hash": "7f0c0f90caa16666297e53e18e4a208d030ddf6639fdc63114e1f761ba677d29",
-          "excerpt": "d and scale. Our advanced optical solutions power next-generation AI networks, hyperscale datacenters, and global communications.​ Applications Connecting The World​​ Learn how we are enabling the next generation of hig…",
+          "hash": "763ea1f8134ad0b38dd592fec1c16febc52c54e0575ef064450b655763830639",
+          "excerpt": "ces Communication Components Wavelength Management Advanced Thermal Management PhotonLink Datacenter Enterprise Networking Terrestrial Communications Submarine Telecom Space-Based Telecom Quantum Technologies Advanced T…",
           "matchedKeywords": [
             "datacenter"
           ]
         },
         {
-          "hash": "4ded17055a6216e0c0b0265c05d7056859e936210cba1a3aa936e65d328aac66",
-          "excerpt": "re enabling the next generation of high-speed optical transmission systems, networks, and datacenter solutions. Products Engineered Materials and High-Precision Laser Solutions​ Advancing industrial performance with eng…",
+          "hash": "f681f5a6387d0ed6132a9decd221317308a64099b77ff40249fedb4d741a182a",
+          "excerpt": "tainability Careers Locations Event Legal ISO Certificates Contact Us Supply Chain Browse Datacenter and Communications Industrial Company Datacenter and Communications Products Applications Products Explore All Product…",
           "matchedKeywords": [
             "datacenter"
           ]
         },
         {
-          "hash": "06ee5667e2a66e3be66b4ae10a0fd169a70730b3f175396d1fdb1f5ec067fd04",
-          "excerpt": "pany Open Careers Coherent Labs Locations Events Legal ISO Certificates Contact Us Home > Datacenter and Communications Datacenter and Communications AI-driven infrastructure demands unprecedented speed and scale. Our a…",
+          "hash": "5f11d94b5c3a60c0a00a0031429041f6455c5ffc8d7c7e76e235d3f49b7aa663",
+          "excerpt": "tificates Contact Us Supply Chain Browse Datacenter and Communications Industrial Company Datacenter and Communications Products Applications Products Explore All Products Optical Transceivers Optical Circuit Switch Int…",
           "matchedKeywords": [
             "datacenter"
           ]
         },
         {
-          "hash": "a99120a7e4573a4fc3f8040a523e2a1faa2720057ca263ed9944a6641e827536",
-          "excerpt": "s Locations Events Legal ISO Certificates Contact Us Home > Datacenter and Communications Datacenter and Communications AI-driven infrastructure demands unprecedented speed and scale. Our advanced optical solutions powe…",
+          "hash": "f06ba0d8e6caefbba986c21c9d94bffe3aa849293957d5fc02b8fdae88bdf1b7",
+          "excerpt": "ing Platform PhotonLink PhotonLink Generate Shape Guide Receive Applications Applications Datacenter Enterprise Networking Terrestrial Communications Submarine Telecom Space-Based Telecom Quantum Technologies Advanced T…",
           "matchedKeywords": [
             "datacenter"
           ]
         },
         {
-          "hash": "e73edbbf046bd2bd86d92391d55f870a1642a1de05910a61aacc2b7925fe1d9d",
-          "excerpt": "d and scale. Our advanced optical solutions power next-generation AI networks, hyperscale datacenters, and global communications. Optical Transceiver • Datacom • Telecom Optical Circuit Switch Interconnect Cables • Acti…",
+          "hash": "5a786970507a52f56b48663f6d9ac816581c23f4f6b44ef6c968f16f1459cdc6",
+          "excerpt": "CE, PLEASE VISIT SUPPORT. I have read &amp; accept the Privacy Statement Submit Home &gt; Datacenter and Communications CONNECTING THE WORLD Optical connectivity is essential to the continued growth of AI infrastructure…",
           "matchedKeywords": [
             "datacenter"
           ]
         },
         {
-          "hash": "076f890feb779fb728b2ba70b400d56017bb702b5c801c00e8f07fe0da1f1e04",
-          "excerpt": "ems, networks, and datacenter solutions. Products Engineered Materials and High-Precision Laser Solutions​ Advancing industrial performance with engineered materials and high-precision laser technologies that drive next…",
+          "hash": "7f7abf0e6f49d0fcb09edf813e5a88a1d27caf59cd17e728bc1f1dc4640e1727",
+          "excerpt": "nologies and solutions that enable high-bandwidth, reliable connections - from inside the datacenter to across AI factories and over terrestrial, submarine, and space-based links. Driving Innovation in Optical Communica…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "5d196dabf8dbc11fb109c5d65d9365032c6114dc6e6b6baf277bc67d550d3c96",
+          "excerpt": "transformative power of AI, it spans cities, crosses oceans, and even reaches into space. Datacenter Enable optical connectivity across the full AI datacenter architecture: from chip-to-chip and scale-up links within sy…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "199bf9019a7a38eb6c29f6709ff05ca5e1c3a116f040a0372be090cba85639dc",
+          "excerpt": "s, and even reaches into space. Datacenter Enable optical connectivity across the full AI datacenter architecture: from chip-to-chip and scale-up links within systems to scale-out connections across racks and clusters. …",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "e13fb54f84620da00335224204b294ebbd15610fe35d26a3d4b90526f6131da7",
+          "excerpt": "lications. Learn More Terrestrial Communications Enable scale-across connectivity between datacenters and AI factories along with DCI and x-haul links, as well as long-haul and ultra-long-haul terrestrial networks. Lear…",
+          "matchedKeywords": [
+            "datacenter"
+          ]
+        },
+        {
+          "hash": "bd87b86f4310ab50e8881cb007c8763227edc7b805be07ed870257b8b40c2b6b",
+          "excerpt": "tors &amp; Receivers Dynamic Components Passive Components Integrated Sub-Assemblies Pump Lasers Amplifiers Dynamic Modules Optical Monitoring Passive Modules Pluggable Optical Line Systems Subsystems &amp; Line Cards M…",
           "matchedKeywords": [
             "laser"
           ]
         },
         {
-          "hash": "105e90a6f422d5c35ab3c4dc6e1cf69a1324e7f8d36cd00cc78d9f63e794831f",
-          "excerpt": "Solutions​ Advancing industrial performance with engineered materials and high-precision laser technologies that drive next-generation manufacturing and research applications. Solutions Solutions Start Here​ Discover ho…",
+          "hash": "67aab4f7714e7f7e47f9724c0a9914f99304dcc05625ed19791b66fce3bf64d3",
+          "excerpt": "al Networking Platform Generate Shape Guide Receive Industrial Products Solutions Support Lasers Machines &amp; Systems Components &amp; Accessories Optics Laser Measurement Instruments Ceramics &amp; Metal Matrix Ion I…",
           "matchedKeywords": [
             "laser"
           ]
         },
         {
-          "hash": "b5ce2f624b71ca94c3f888cc0bf901fd8e32be7a29b39f0e1dcf4d4fb0294fb2",
-          "excerpt": "wafers to medical diagnostics. Support Maximize Performance ​ Coherent Service keeps your laser systems performing at their peak — safeguarding productivity, maximizing uptime, and protecting your investment. Company Ab…",
+          "hash": "0132f988e12fab7175264193d88661d07497f8f856ab14ea3878b302df922000",
+          "excerpt": "ducts Solutions Support Lasers Machines &amp; Systems Components &amp; Accessories Optics Laser Measurement Instruments Ceramics &amp; Metal Matrix Ion Implantation Engineered Materials Wide-Bandgap Electronics Semicond…",
           "matchedKeywords": [
             "laser"
           ]
         },
         {
-          "hash": "05a999e47f0be9c0e35186837c8d99b4dcbda73d61f1303b7f0adde46cafdc6d",
-          "excerpt": "ables • Direct Attach Cables Optical Instrument Optoelectronic Devices • GaAs VCSEL • InP Lasers • Photodiodes • Integrated Circuit Communication Components • Photodetectors &amp; Receivers • Dynamic Components • Integr…",
+          "hash": "298b7f1e0cabf3161222f3af50dbcdf5829dc46a52aa56812fcf14bf6106c1c9",
+          "excerpt": "l Equipment Precision Manufacturing Automotive &amp; Energy Solutions Instrumentation CO2 Lasers Diode Laser Modules Diode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW S…",
           "matchedKeywords": [
             "laser"
           ]
         },
         {
-          "hash": "1a62fcd78c0e81b5eeb9274eb434a04ff91c91bf2a4c9f8e5dd295cae395ff84",
-          "excerpt": "p; Receivers • Dynamic Components • Integrated Sub Assemblies • Passive Components • Pump Lasers Wavelength Management • Amplifiers • Dynamic Modules • Optical Monitoring • Passive Modules • Pluggable Optical Line Syste…",
+          "hash": "3a86e3dff3fd791ab86ef387e3a636b8bbfb8eed0f1c6ce26cb7effa25dc7804",
+          "excerpt": "recision Manufacturing Automotive &amp; Energy Solutions Instrumentation CO2 Lasers Diode Laser Modules Diode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State La…",
           "matchedKeywords": [
             "laser"
           ]
         },
         {
-          "hash": "ccadba6d24193f9ee35cc5e1b37bfa5a13db227a320207f76face089dc91657e",
-          "excerpt": "r next-generation AI networks, hyperscale datacenters, and global communications. Optical Transceiver • Datacom • Telecom Optical Circuit Switch Interconnect Cables • Active Optical Cables • Direct Attach Cables Optical…",
+          "hash": "bfb039f4fb6eba839b3017f608c33f693a2bd87dcce3a29ad927463052527e0d",
+          "excerpt": "ng Automotive &amp; Energy Solutions Instrumentation CO2 Lasers Diode Laser Modules Diode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Laser…",
           "matchedKeywords": [
-            "transceiver"
+            "laser"
+          ]
+        },
+        {
+          "hash": "d47213e1fafea22c1872ed9c57c6b3e9dd6a14d932fb44c23ea308916cbdb1ca",
+          "excerpt": "amp; Energy Solutions Instrumentation CO2 Lasers Diode Laser Modules Diode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond La…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "c3e443ed007e5ed954252d56a8906a8ae01e9aa3440ea06fc21470287f9644b6",
+          "excerpt": "Instrumentation CO2 Lasers Diode Laser Modules Diode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Las…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "7284f5a1252a1032398d2d7ca7d67ca934f2d8a2f59854996234a62333a97e21",
+          "excerpt": "tation CO2 Lasers Diode Laser Modules Diode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cuttin…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "ebae94d419e410132bf4a784bda9fffbea2ee52cbb34610a762d117cd3bfb7b7",
+          "excerpt": "r Modules Diode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Las…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "309e624cf41ac0a0afc6cf0a101dcc34b6b724d8bbf22290cf8853fb0422d7a0",
+          "excerpt": "iode Lasers Excimer Lasers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding …",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "d1d7eb334c60ee3ab5ca460f511bbb8fdc8dcd09c4332d51c5256d093c7dbdaa",
+          "excerpt": "sers Machine Vision Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Syst…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "9bf35551acd1702bb0b66e360cd52f6b46e25e9aead9d8bbe10d5d9581fd452c",
+          "excerpt": "on Lasers - Laser Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Systems Diode Laser C…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "2d6cd37e4cd21fcdbe5c5464ed966080b4cff9b13a2c840aa64c52b1b92dfdf5",
+          "excerpt": "Line Generators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Systems Diode Laser Components Lasers f…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "f93c53cc2a9fb14082158300773e3f482fe3eed3f80d9635c90bff048dcb260c",
+          "excerpt": "nerators Fiber Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Systems Diode Laser Components Lasers for Sens…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "77e354ff5a1a14e0927bda225c1520c967ac9d6a47762df0d50278ec17b562d8",
+          "excerpt": "Lasers Ion Lasers CW Solid State Lasers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Systems Diode Laser Components Lasers for Sensing Specialty O…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "8b531a510770e79e7593a9a060b207ec2f87188d81e7234cd6bceaa5c026e678",
+          "excerpt": "ers Ultrafast Lasers Nanosecond Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Systems Diode Laser Components Lasers for Sensing Specialty Optical Fibers Optical Fiber Assembli…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "ead07f1d2ccd664bfcc05e51e9ae976ac3555448860b5fc8864d28b171191107",
+          "excerpt": "econd Lasers Laser Engines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Systems Diode Laser Components Lasers for Sensing Specialty Optical Fibers Optical Fiber Assemblies Beam Delivery Component…",
+          "matchedKeywords": [
+            "laser"
+          ]
+        },
+        {
+          "hash": "608be108961d9fff5d5cd3ff72ca21a407f3ba6dc75638ce1b2b50c23110ab3b",
+          "excerpt": "ngines Laser Cutting &amp; Drilling Systems Laser Welding Machines UV Laser Systems Diode Laser Components Lasers for Sensing Specialty Optical Fibers Optical Fiber Assemblies Beam Delivery Components Processing Heads F…",
+          "matchedKeywords": [
+            "laser"
           ]
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:29.418Z",
-    "lastChangedAt": "2026-09-30T12:35:48.265Z",
+    "lastCheckedAt": "2026-11-18T15:40:37.643Z",
+    "lastChangedAt": "2026-11-18T15:40:37.643Z",
     "lastError": null
   },
   "lumentum-eml": {
@@ -1410,7 +1529,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:29.704Z",
+      "capturedAt": "2026-11-18T15:40:39.801Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1520,7 +1639,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:29.704Z",
+    "lastCheckedAt": "2026-11-18T15:40:39.801Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1534,7 +1653,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:30.000Z",
+      "capturedAt": "2026-11-18T15:40:40.631Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1615,7 +1734,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:30.000Z",
+    "lastCheckedAt": "2026-11-18T15:40:40.631Z",
     "lastChangedAt": "2026-11-11T14:23:53.747Z",
     "lastError": null
   },
@@ -1629,7 +1748,7 @@
     "baselineAt": "2026-09-09T07:03:57.992Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:32.983Z",
+      "capturedAt": "2026-11-18T15:40:44.458Z",
       "keywords": [
         "Bailly",
         "51.2",
@@ -1850,7 +1969,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:32.983Z",
+    "lastCheckedAt": "2026-11-18T15:40:44.458Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -1864,7 +1983,7 @@
     "baselineAt": "2026-09-09T07:03:58.124Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:33.336Z",
+      "capturedAt": "2026-11-18T15:40:44.806Z",
       "keywords": [
         "PAM4",
         "DSP",
@@ -2085,7 +2204,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:33.336Z",
+    "lastCheckedAt": "2026-11-18T15:40:44.806Z",
     "lastChangedAt": "2026-10-28T12:55:37.229Z",
     "lastError": null
   },
@@ -2099,7 +2218,7 @@
     "baselineAt": "2026-09-09T07:03:58.260Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:33.822Z",
+      "capturedAt": "2026-11-18T15:40:44.960Z",
       "keywords": [
         "800G",
         "optical transceiver",
@@ -2319,7 +2438,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:33.822Z",
+    "lastCheckedAt": "2026-11-18T15:40:44.960Z",
     "lastChangedAt": "2026-09-16T11:35:40.428Z",
     "lastError": null
   },
@@ -2333,7 +2452,7 @@
     "baselineAt": "2026-09-09T06:04:16.623Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:15.183Z",
+      "capturedAt": "2026-11-18T15:40:26.756Z",
       "keywords": [
         "fuel cell",
         "catalyst coated membrane",
@@ -2505,7 +2624,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:15.183Z",
+    "lastCheckedAt": "2026-11-18T15:40:26.756Z",
     "lastChangedAt": "2026-11-13T14:35:32.489Z",
     "lastError": null
   },
@@ -2519,7 +2638,7 @@
     "baselineAt": "2026-09-09T06:04:17.480Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:16.185Z",
+      "capturedAt": "2026-11-18T15:40:27.757Z",
       "keywords": [
         "fuel cell catalyst",
         "PEM",
@@ -2685,7 +2804,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:16.185Z",
+    "lastCheckedAt": "2026-11-18T15:40:27.757Z",
     "lastChangedAt": "2026-11-11T14:23:43.404Z",
     "lastError": null
   },
@@ -2699,7 +2818,7 @@
     "baselineAt": "2026-09-09T06:26:04.221Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:17.178Z",
+      "capturedAt": "2026-11-18T15:40:29.027Z",
       "keywords": [
         "SIGRACET",
         "gas diffusion layer",
@@ -2919,7 +3038,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:17.178Z",
+    "lastCheckedAt": "2026-11-18T15:40:29.027Z",
     "lastChangedAt": "2026-11-11T14:23:44.188Z",
     "lastError": null
   },
@@ -2929,11 +3048,11 @@
     "cadence": "weekly",
     "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
     "title": "Hydrogen storage systems | FORVIA",
-    "hash": "658f44ca0cbd4ea71728a81c0ef53ceab2d96a6f288db61fbe7a5569ed94b291",
+    "hash": "c0dda2b1f59b32e9774d6bbf27638dc5796bdca841c3f84b082d2fbed5620ada",
     "baselineAt": "2026-09-09T06:04:19.454Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:20.168Z",
+      "capturedAt": "2026-11-18T15:40:32.864Z",
       "keywords": [
         "hydrogen storage",
         "Type IV",
@@ -2944,8 +3063,8 @@
       ],
       "segments": [
         {
-          "hash": "5de15108f4cae7102720ae8ce44f8d2ac382de7c4d2064a1e077eeb18a444ddf",
-          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.20€ -1.09% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+          "hash": "0377636ca2fb6b33858780733af0cac30d1da3d26743419703a7c76d8c07056b",
+          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
           "matchedKeywords": [
             "hydrogen storage"
           ]
@@ -3113,8 +3232,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:20.168Z",
-    "lastChangedAt": "2026-11-17T16:00:20.168Z",
+    "lastCheckedAt": "2026-11-18T15:40:32.864Z",
+    "lastChangedAt": "2026-11-18T15:40:32.864Z",
     "lastError": null
   },
   "hexagon-purus": {
@@ -3127,7 +3246,7 @@
     "baselineAt": "2026-09-09T06:04:20.529Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:21.387Z",
+      "capturedAt": "2026-11-18T15:40:33.822Z",
       "keywords": [
         "hydrogen storage",
         "Type 4",
@@ -3145,7 +3264,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:21.387Z",
+    "lastCheckedAt": "2026-11-18T15:40:33.822Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3155,11 +3274,11 @@
     "cadence": "weekly",
     "url": "https://www.garrettmotion.com/electric-hybrid/fuel-cell-technology/",
     "title": "Fuel Cell Technology: Boosting Hydrogen-Powered Vehicles",
-    "hash": "50f7d9edbc6ead55af6f5a54a7ea0076238ca4a1f936ec116a8692107babefc7",
+    "hash": "017db5a3638312cc037c3947643b09d0c58f37f510625af13dd627dfe488f8ad",
     "baselineAt": "2026-09-09T06:04:22.984Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:24.047Z",
+      "capturedAt": "2026-11-18T15:40:36.325Z",
       "keywords": [
         "fuel cell compressor",
         "electric compressor",
@@ -3380,8 +3499,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:24.047Z",
-    "lastChangedAt": "2026-11-16T15:48:21.390Z",
+    "lastCheckedAt": "2026-11-18T15:40:36.325Z",
+    "lastChangedAt": "2026-11-18T15:40:36.325Z",
     "lastError": null
   },
   "doe-fuel-cell-parts": {
@@ -3390,11 +3509,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/parts-fuel-cell",
     "title": "Parts of a Fuel Cell | Department of Energy",
-    "hash": "adae20b04dab671d778e453bd7142656f9e912fa3e0ba81eba3a5a5b2aff67b2",
+    "hash": "45516c23832e04dc975bb215ccfcdc26afb81df0817ca711862e86776a0ee240",
     "baselineAt": "2026-09-09T06:04:26.236Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:26.414Z",
+      "capturedAt": "2026-11-18T15:40:36.553Z",
       "keywords": [
         "membrane electrode assembly",
         "MEA",
@@ -3615,8 +3734,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:26.414Z",
-    "lastChangedAt": "2026-11-14T13:31:39.297Z",
+    "lastCheckedAt": "2026-11-18T15:40:36.553Z",
+    "lastChangedAt": "2026-11-18T15:40:36.553Z",
     "lastError": null
   },
   "doe-hydrogen-storage": {
@@ -3625,11 +3744,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
     "title": "Physical Hydrogen Storage | Department of Energy",
-    "hash": "07c85fbfd454d62a4fb7a7d43c7cf99be989286ab9d80e09c34b45f889340375",
+    "hash": "b1981ff9fb1faf6022591869609eef92d6adce8ac48dac1f2ecb3518851f6e6f",
     "baselineAt": "2026-09-09T06:04:26.527Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:26.700Z",
+      "capturedAt": "2026-11-18T15:40:36.835Z",
       "keywords": [
         "350 bar",
         "700 bar",
@@ -3815,8 +3934,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:26.700Z",
-    "lastChangedAt": "2026-11-14T13:31:39.465Z",
+    "lastCheckedAt": "2026-11-18T15:40:36.835Z",
+    "lastChangedAt": "2026-11-18T15:40:36.835Z",
     "lastError": null
   },
   "toray-official-news": {
@@ -3829,7 +3948,7 @@
     "baselineAt": "2026-11-11T14:23:37.062Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:01.571Z",
+      "capturedAt": "2026-11-18T15:40:15.643Z",
       "keywords": [
         "carbon fiber",
         "fuel cell",
@@ -3847,7 +3966,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:01.571Z",
+    "lastCheckedAt": "2026-11-18T15:40:15.643Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3861,7 +3980,7 @@
     "baselineAt": "2026-11-11T14:23:37.649Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:02.497Z",
+      "capturedAt": "2026-11-18T15:40:16.182Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -4083,7 +4202,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:02.497Z",
+    "lastCheckedAt": "2026-11-18T15:40:16.182Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -4093,11 +4212,11 @@
     "cadence": "daily",
     "url": "https://www.ballard.com/investor-hub/",
     "title": "Investor Hub - Ballard",
-    "hash": "a3d0afb1776de89ee8a3ea738302cf2429b8044cea654555e260529935971a12",
+    "hash": "7b88f790245e9b0bacfbcae425003f98eeb045b4d5a671cc1fe386a6cdbd9714",
     "baselineAt": "2026-11-11T14:23:38.982Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:04.551Z",
+      "capturedAt": "2026-11-18T15:40:17.892Z",
       "keywords": [
         "fuel cell",
         "production",
@@ -4248,15 +4367,15 @@
           ]
         },
         {
-          "hash": "628d90964cbc9415abd99c4b056a485fada313ad0a019f830267ca4f4d3a5e0d",
-          "excerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releas…",
+          "hash": "d72275a772e56f2b0e95cc5ff9df376a936871ed7abf5ea07f815f57864f0924",
+          "excerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
           "matchedKeywords": [
             "power systems"
           ]
         },
         {
-          "hash": "73ee9471f01da6862c380b98ba668597c9d06a5f8ed31b734bda578d4423f39d",
-          "excerpt": "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.13 (-9.60%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…",
+          "hash": "4de6ad11438cf67ed31dd1c0e48c29baf2bef133bfc9568c4793d8047bce39d4",
+          "excerpt": "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…",
           "matchedKeywords": [
             "power systems"
           ]
@@ -4291,8 +4410,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:04.551Z",
-    "lastChangedAt": "2026-11-17T16:00:04.551Z",
+    "lastCheckedAt": "2026-11-18T15:40:17.892Z",
+    "lastChangedAt": "2026-11-18T15:40:17.892Z",
     "lastError": null
   },
   "innolight-news": {
@@ -4305,7 +4424,7 @@
     "baselineAt": "2026-11-11T14:23:56.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-17T16:00:31.938Z",
+      "capturedAt": "2026-11-18T15:40:43.514Z",
       "keywords": [
         "800G",
         "1.6T",
@@ -4527,7 +4646,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-17T16:00:31.938Z",
+    "lastCheckedAt": "2026-11-18T15:40:43.514Z",
     "lastChangedAt": null,
     "lastError": null
   }

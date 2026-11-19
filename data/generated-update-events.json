@@ -1,5 +1,702 @@
 [
   {
+    "id": "web-fuel-cell-2026-11-19-forvia-hydrogen-storage-50fd0247fdd4",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-19T15:45:15.939Z",
+    "lastSeenAt": "2026-11-19T15:45:15.939Z",
+    "changeSignature": "50fd0247fdd4",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.05€ -0.64% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-19-forvia-hydrogen-storage-50fd0247fdd4-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-11-19T15:45:15.939Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.05€ -0.64% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-19-forvia-hydrogen-storage-50fd0247fdd4-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-19T15:45:15.939Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.05€ -0.64% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.15€ -0.66% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.05€ -0.64% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "beforeValue": "0.66%",
+            "afterValue": "0.64%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 0.66% → 0.64%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-19T15:45:15.939Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-19-doe-fuel-cells-8c171e8c66cf",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "U.S. DOE fuel cells office changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Alternative Fuels and Feedstocks Office | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-fuel-cells"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-19T15:45:09.776Z",
+    "lastSeenAt": "2026-11-19T15:45:09.776Z",
+    "changeSignature": "8c171e8c66cf",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Energy Workforce Energy Workforce Energ…"
+      ],
+      "removed": [
+        "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Unleashing American Energy Innovation Science &amp; Innovation Science &amp; Innov…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "funding",
+        "storage",
+        "infrastructure"
+      ],
+      "affectedTarget": "node:stack",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node stack; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-19-doe-fuel-cells-8c171e8c66cf-evidence-1",
+          "sourceId": "doe-fuel-cells",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office",
+          "pageTitle": "Alternative Fuels and Feedstocks Office | Department of Energy",
+          "observedAt": "2026-11-19T15:45:09.776Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "funding",
+            "storage",
+            "infrastructure"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Energy Workforce Energy Workforce Energ…"
+            ],
+            "removed": [
+              "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Unleashing American Energy Innovation Science &amp; Innovation Science &amp; Innov…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-19-doe-fuel-cells-8c171e8c66cf-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "node:stack",
+        "statement": "Potential policy change affecting node:stack; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.stack.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-19T15:45:09.776Z",
+        "target": "node:stack",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Unleashing American Energy Innovation Science &amp; Innovation Science &amp; Innov…",
+            "afterExcerpt": "and Publications Find more information about past bioenergy technologies and hydrogen and fuel cells technologies news and publications. Advancing Energy Addition, Not Subtraction Energy Workforce Energy Workforce Energ…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "funding",
+              "storage",
+              "infrastructure"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for node:stack; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-19T15:45:09.776Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-19-ballard-investor-news-d7305256daef",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "ballard",
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "Ballard official investor newsroom changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Investor Hub - Ballard\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.ballard.com/investor-hub/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "ballard-investor-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-19T15:45:09.007Z",
+    "lastSeenAt": "2026-11-19T15:45:09.007Z",
+    "changeSignature": "d7305256daef",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.16 (-2.52%) TSX:BLDP Document Library Press releas…",
+        "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.16 (-2.52%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+      ],
+      "removed": [
+        "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+        "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "production",
+        "stack",
+        "bus",
+        "power systems"
+      ],
+      "affectedTarget": "company:ballard",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.ballard; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-19-ballard-investor-news-d7305256daef-evidence-1",
+          "sourceId": "ballard-investor-news",
+          "sourceType": "company_official",
+          "url": "https://www.ballard.com/investor-hub/",
+          "pageTitle": "Investor Hub - Ballard",
+          "observedAt": "2026-11-19T15:45:09.007Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "production",
+            "stack",
+            "bus",
+            "power systems"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.16 (-2.52%) TSX:BLDP Document Library Press releas…",
+              "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.16 (-2.52%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+            ],
+            "removed": [
+              "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+              "t library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-19-ballard-investor-news-d7305256daef-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "company:ballard",
+        "statement": "Potential policy change affecting company:ballard; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.ballard.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-19T15:45:09.007Z",
+        "target": "company:ballard",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+            "afterExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.16 (-2.52%) TSX:BLDP Document Library Press releas…",
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.21 (+6.14%) TSX:BLDP Document Library Press releas…",
+            "afterExcerpt": "Financial Reports First Quarter 2026 May 7, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.81 (-9.50%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.16 (-2.52%) TSX:BLDP Document Library Press releas…",
+            "beforeValue": "9.50%",
+            "afterValue": "2.52%",
+            "unit": "%",
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 9.50% → 2.52%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for company:ballard; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-19T15:45:09.007Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-19-jm-news-be57f8b349dd",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "jm",
+    "nodeId": "catalyst",
+    "impactType": "technology_change",
+    "summary": "Johnson Matthey news changed. The scanner isolated 1 added and 3 removed keyword-focused context window(s) on \"News | Johnson Matthey\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://matthey.com/news",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "jm-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-19T15:45:06.204Z",
+    "lastSeenAt": "2026-11-19T15:45:06.204Z",
+    "changeSignature": "be57f8b349dd",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> 20 Entries &nbsp;Per Page 4 &nbsp;Entries per Page 8 &nbsp;Entries per…"
+      ],
+      "removed": [
+        "new SAF facility in Texas, USA --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydrogen internal combustion engine testing facility in Gothenburg --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydro…",
+        "testing facility in Gothenburg --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydrogen internal combustion engine testing facility in Gothenburg --> --> 20 Entries &nbsp;Per Page 4 &nbsp;Entries per Page 8 &n…",
+        "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> --> 10 Sep 2025 USA BioEnergy secures JM and Honeywell technologies fo…"
+      ],
+      "addedCount": 1,
+      "removedCount": 3,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "hydrogen",
+        "catalyst"
+      ],
+      "affectedTarget": "company:jm",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.jm; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-19-jm-news-be57f8b349dd-evidence-1",
+          "sourceId": "jm-news",
+          "sourceType": "company_official",
+          "url": "https://matthey.com/news",
+          "pageTitle": "News | Johnson Matthey",
+          "observedAt": "2026-11-19T15:45:06.204Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "hydrogen",
+            "catalyst"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 3 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> 20 Entries &nbsp;Per Page 4 &nbsp;Entries per Page 8 &nbsp;Entries per…"
+            ],
+            "removed": [
+              "new SAF facility in Texas, USA --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydrogen internal combustion engine testing facility in Gothenburg --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydro…",
+              "testing facility in Gothenburg --> --> --> 24 Jul 2025 Johnson Matthey to open its first hydrogen internal combustion engine testing facility in Gothenburg --> --> 20 Entries &nbsp;Per Page 4 &nbsp;Entries per Page 8 &n…",
+              "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> --> 10 Sep 2025 USA BioEnergy secures JM and Honeywell technologies fo…"
+            ],
+            "addedCount": 1,
+            "removedCount": 3,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-19-jm-news-be57f8b349dd-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:jm",
+        "statement": "Potential technology change affecting company:jm; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.jm.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-19T15:45:06.204Z",
+        "target": "company:jm",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> --> 10 Sep 2025 USA BioEnergy secures JM and Honeywell technologies fo…",
+            "afterExcerpt": "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> 20 Entries &nbsp;Per Page 4 &nbsp;Entries per Page 8 &nbsp;Entries per…",
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "catalyst"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> --> 10 Sep 2025 USA BioEnergy secures JM and Honeywell technologies fo…",
+            "afterExcerpt": "yst Technologies and pre close trading update --> --> --> 09 Oct 2025 Reclassification of Catalyst Technologies and pre close trading update --> --> 20 Entries &nbsp;Per Page 4 &nbsp;Entries per Page 8 &nbsp;Entries per…",
+            "beforeValue": "09",
+            "afterValue": "20",
+            "unit": null,
+            "matchedKeywords": [
+              "fuel cell",
+              "hydrogen",
+              "catalyst"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 09 → 20.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:jm; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-19T15:45:06.204Z"
+  },
+  {
     "id": "web-ai-optics-2026-11-18-coherent-datacenter-de2032f9b397",
     "sourceType": "ai_scan",
     "status": "pending",

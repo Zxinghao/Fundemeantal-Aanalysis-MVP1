@@ -9,7 +9,7 @@
     "baselineAt": "2026-09-08T22:06:30.139Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:16.460Z",
+      "capturedAt": "2026-11-23T18:09:37.248Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -167,7 +167,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:16.460Z",
+    "lastCheckedAt": "2026-11-23T18:09:37.248Z",
     "lastChangedAt": "2026-11-19T15:45:06.204Z",
     "lastError": null
   },
@@ -177,11 +177,11 @@
     "cadence": "daily",
     "url": "https://www.forvia.com/en/newsroom",
     "title": "Press | FORVIA",
-    "hash": "17f36925734ab0787e7c4d62f5dbe7adc7c90c4db4411774590a213cc5a18870",
+    "hash": "d62c7b248c019a79992bd001904564257433cadb5a3c6a6581dff1f2b4984a52",
     "baselineAt": "2026-09-08T22:06:30.788Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:17.058Z",
+      "capturedAt": "2026-11-23T18:09:37.677Z",
       "keywords": [
         "hydrogen",
         "storage",
@@ -198,8 +198,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:17.058Z",
-    "lastChangedAt": "2026-11-21T14:39:50.210Z",
+    "lastCheckedAt": "2026-11-23T18:09:37.677Z",
+    "lastChangedAt": "2026-11-23T18:09:37.677Z",
     "lastError": null
   },
   "garrett-news": {
@@ -208,11 +208,11 @@
     "cadence": "daily",
     "url": "https://www.garrettmotion.com/news/",
     "title": "Newsroom Garrett Motion - Garrett Motion",
-    "hash": "d5bf3653367aad32efafd8a3a2e7ec36eccb441e9415b137e6c9c690ce6e93af",
+    "hash": "2b5bb8d78e4492aa5f49509b3fb8ba319048372f166a9dc0dc221962d61713d4",
     "baselineAt": "2026-09-08T22:06:32.629Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:18.711Z",
+      "capturedAt": "2026-11-23T18:09:39.713Z",
       "keywords": [
         "fuel cell",
         "compressor",
@@ -312,15 +312,8 @@
           ]
         },
         {
-          "hash": "8f9565b2fd081b2eeeea17ac030248a3ffae88e065d93270da8aa205d6a287be",
-          "excerpt": "Technology October 29, 2026 Industrial Applications Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Enabling Multistack’s next-generation CRAC-DX (direct expansion c…",
-          "matchedKeywords": [
-            "compressor"
-          ]
-        },
-        {
-          "hash": "a3b304470d24857219bf66f15ebf00bdfb5af7a6df9277df97d60a977f975cf9",
-          "excerpt": "arrett Motion enter a multiyear strategic partnership to advance next generation oil‑free compressor technology for industrial air compression systems across key verticals,&#8230; See all advancing tech Performance &#03…",
+          "hash": "67e13f4be564d8b556be49f39719f0d24e8f039df4cdb5fe371912ec974e636d",
+          "excerpt": "er growth. October 29, 2026 Industrial Applications Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Enabling Multistack’s next-generation CRAC-DX (direct expansion c…",
           "matchedKeywords": [
             "compressor"
           ]
@@ -362,8 +355,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:18.711Z",
-    "lastChangedAt": "2026-11-18T15:40:15.024Z",
+    "lastCheckedAt": "2026-11-23T18:09:39.713Z",
+    "lastChangedAt": "2026-11-23T18:09:39.713Z",
     "lastError": null
   },
   "doe-fuel-cells": {
@@ -376,7 +369,7 @@
     "baselineAt": "2026-09-09T07:03:51.954Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:22.035Z",
+      "capturedAt": "2026-11-23T18:09:43.528Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -597,7 +590,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:22.035Z",
+    "lastCheckedAt": "2026-11-23T18:09:43.528Z",
     "lastChangedAt": "2026-11-20T15:27:41.606Z",
     "lastError": null
   },
@@ -607,11 +600,11 @@
     "cadence": "weekly",
     "url": "https://www.umicore.com/en/investors/",
     "title": "Investor relations | Umicore",
-    "hash": "9ea8180db825e0ffcf4b230820497e708e3170963acde15e90c6e869218a2d30",
+    "hash": "fa7b5916adfa1fc059a87102a59ebeae163be663241d6fba97c4a0ed625e867b",
     "baselineAt": "2026-09-09T07:03:52.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:22.189Z",
+      "capturedAt": "2026-11-23T18:09:43.671Z",
       "keywords": [
         "fuel cell",
         "catalyst",
@@ -642,8 +635,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:22.189Z",
-    "lastChangedAt": "2026-11-21T14:39:54.016Z",
+    "lastCheckedAt": "2026-11-23T18:09:43.671Z",
+    "lastChangedAt": "2026-11-23T18:09:43.671Z",
     "lastError": null
   },
   "sgl-ir": {
@@ -656,7 +649,7 @@
     "baselineAt": "2026-09-09T07:03:53.205Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:23.839Z",
+      "capturedAt": "2026-11-23T18:09:44.621Z",
       "keywords": [
         "fuel cell",
         "GDL",
@@ -680,7 +673,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:23.839Z",
+    "lastCheckedAt": "2026-11-23T18:09:44.621Z",
     "lastChangedAt": "2026-11-11T14:23:41.370Z",
     "lastError": null
   },
@@ -690,11 +683,11 @@
     "cadence": "weekly",
     "url": "https://live.euronext.com/en/listview/company-press-release/251919",
     "title": "Company press releases - Euronext exchange Live quotes",
-    "hash": "20f8c15f9e62462d08ecb3e83dbc3123dd80e04c64b6d050b6d9b5a643e99508",
+    "hash": "c2bd1027e97c114524648138f8ce9159b50689bbe12c212d74402349c297c48b",
     "baselineAt": "2026-09-09T07:08:07.547Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:23.942Z",
+      "capturedAt": "2026-11-23T18:09:44.689Z",
       "keywords": [
         "results",
         "order",
@@ -763,8 +756,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:23.942Z",
-    "lastChangedAt": "2026-11-16T15:48:11.263Z",
+    "lastCheckedAt": "2026-11-23T18:09:44.689Z",
+    "lastChangedAt": "2026-11-23T18:09:44.689Z",
     "lastError": null
   },
   "nvidia-spectrum-x-photonics": {
@@ -998,7 +991,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:35.447Z",
+    "lastCheckedAt": "2026-11-23T18:09:55.957Z",
     "lastChangedAt": "2026-10-30T12:56:41.568Z",
     "lastError": "HTTP 403"
   },
@@ -1012,7 +1005,7 @@
     "baselineAt": "2026-09-08T22:06:34.846Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:35.568Z",
+      "capturedAt": "2026-11-23T18:09:56.053Z",
       "keywords": [
         "co-packaged optics",
         "pluggable laser source",
@@ -1030,7 +1023,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:35.568Z",
+    "lastCheckedAt": "2026-11-23T18:09:56.053Z",
     "lastChangedAt": "2026-06-08T08:07:23.825Z",
     "lastError": null
   },
@@ -1044,7 +1037,7 @@
     "baselineAt": "2026-09-08T22:06:34.938Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:35.660Z",
+      "capturedAt": "2026-11-23T18:09:56.121Z",
       "keywords": [
         "optical DSP",
         "PAM4",
@@ -1265,7 +1258,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:35.660Z",
+    "lastCheckedAt": "2026-11-23T18:09:56.121Z",
     "lastChangedAt": "2026-11-21T14:40:07.454Z",
     "lastError": null
   },
@@ -1279,7 +1272,7 @@
     "baselineAt": "2026-09-08T22:06:35.436Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:35.955Z",
+      "capturedAt": "2026-11-23T18:09:56.237Z",
       "keywords": [
         "datacenter",
         "800G",
@@ -1501,7 +1494,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:35.955Z",
+    "lastCheckedAt": "2026-11-23T18:09:56.237Z",
     "lastChangedAt": "2026-11-19T15:45:19.482Z",
     "lastError": null
   },
@@ -1515,7 +1508,7 @@
     "baselineAt": "2026-09-08T22:06:35.710Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:37.735Z",
+      "capturedAt": "2026-11-23T18:09:56.798Z",
       "keywords": [
         "EML",
         "modulated laser",
@@ -1625,7 +1618,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:37.735Z",
+    "lastCheckedAt": "2026-11-23T18:09:56.798Z",
     "lastChangedAt": "2026-06-08T08:07:24.628Z",
     "lastError": null
   },
@@ -1639,7 +1632,7 @@
     "baselineAt": "2026-09-08T22:06:35.829Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:38.599Z",
+      "capturedAt": "2026-11-23T18:09:57.264Z",
       "keywords": [
         "optical components",
         "packaging",
@@ -1720,7 +1713,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:38.599Z",
+    "lastCheckedAt": "2026-11-23T18:09:57.264Z",
     "lastChangedAt": "2026-11-11T14:23:53.747Z",
     "lastError": null
   },
@@ -1734,7 +1727,7 @@
     "baselineAt": "2026-09-09T07:03:57.992Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:41.233Z",
+      "capturedAt": "2026-11-23T18:10:00.658Z",
       "keywords": [
         "Bailly",
         "51.2",
@@ -1955,7 +1948,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:41.233Z",
+    "lastCheckedAt": "2026-11-23T18:10:00.658Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -1969,7 +1962,7 @@
     "baselineAt": "2026-09-09T07:03:58.124Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:41.368Z",
+      "capturedAt": "2026-11-23T18:10:00.742Z",
       "keywords": [
         "PAM4",
         "DSP",
@@ -2190,7 +2183,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:41.368Z",
+    "lastCheckedAt": "2026-11-23T18:10:00.742Z",
     "lastChangedAt": "2026-11-21T14:40:11.880Z",
     "lastError": null
   },
@@ -2204,7 +2197,7 @@
     "baselineAt": "2026-09-09T07:03:58.260Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:41.437Z",
+      "capturedAt": "2026-11-23T18:10:01.150Z",
       "keywords": [
         "800G",
         "optical transceiver",
@@ -2424,7 +2417,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:41.437Z",
+    "lastCheckedAt": "2026-11-23T18:10:01.150Z",
     "lastChangedAt": "2026-09-16T11:35:40.428Z",
     "lastError": null
   },
@@ -2438,7 +2431,7 @@
     "baselineAt": "2026-09-09T06:04:16.623Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:24.339Z",
+      "capturedAt": "2026-11-23T18:09:45.586Z",
       "keywords": [
         "fuel cell",
         "catalyst coated membrane",
@@ -2610,7 +2603,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:24.339Z",
+    "lastCheckedAt": "2026-11-23T18:09:45.586Z",
     "lastChangedAt": "2026-11-13T14:35:32.489Z",
     "lastError": null
   },
@@ -2624,7 +2617,7 @@
     "baselineAt": "2026-09-09T06:04:17.480Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:25.265Z",
+      "capturedAt": "2026-11-23T18:09:46.074Z",
       "keywords": [
         "fuel cell catalyst",
         "PEM",
@@ -2790,7 +2783,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:25.265Z",
+    "lastCheckedAt": "2026-11-23T18:09:46.074Z",
     "lastChangedAt": "2026-11-11T14:23:43.404Z",
     "lastError": null
   },
@@ -2804,7 +2797,7 @@
     "baselineAt": "2026-09-09T06:26:04.221Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:26.075Z",
+      "capturedAt": "2026-11-23T18:09:46.752Z",
       "keywords": [
         "SIGRACET",
         "gas diffusion layer",
@@ -3024,7 +3017,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:26.075Z",
+    "lastCheckedAt": "2026-11-23T18:09:46.752Z",
     "lastChangedAt": "2026-11-11T14:23:44.188Z",
     "lastError": null
   },
@@ -3034,11 +3027,11 @@
     "cadence": "weekly",
     "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
     "title": "Hydrogen storage systems | FORVIA",
-    "hash": "27398868308bac5b901b2831348b7517a834e5a583339902c7225904ae384ee0",
+    "hash": "542944a4f2261b8c7d0dfc1f605875a17868294c2d1b34511243944e55371203",
     "baselineAt": "2026-09-09T06:04:19.454Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:29.735Z",
+      "capturedAt": "2026-11-23T18:09:51.944Z",
       "keywords": [
         "hydrogen storage",
         "Type IV",
@@ -3049,8 +3042,8 @@
       ],
       "segments": [
         {
-          "hash": "26c4052977b17b9235751a3eea4d32719f15cb52fa9fe335718e1187cd9b4ef9",
-          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 7.49€ -7.11% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+          "hash": "86fad0fdd77332594bea7963e86800c1c99565a7e9b9c4314043d376e15a9636",
+          "excerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.28€ +10.52% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
           "matchedKeywords": [
             "hydrogen storage"
           ]
@@ -3218,8 +3211,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:29.735Z",
-    "lastChangedAt": "2026-11-21T14:40:01.885Z",
+    "lastCheckedAt": "2026-11-23T18:09:51.944Z",
+    "lastChangedAt": "2026-11-23T18:09:51.944Z",
     "lastError": null
   },
   "hexagon-purus": {
@@ -3232,7 +3225,7 @@
     "baselineAt": "2026-09-09T06:04:20.529Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:30.763Z",
+      "capturedAt": "2026-11-23T18:09:53.172Z",
       "keywords": [
         "hydrogen storage",
         "Type 4",
@@ -3250,7 +3243,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:30.763Z",
+    "lastCheckedAt": "2026-11-23T18:09:53.172Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3264,7 +3257,7 @@
     "baselineAt": "2026-09-09T06:04:22.984Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:32.875Z",
+      "capturedAt": "2026-11-23T18:09:55.058Z",
       "keywords": [
         "fuel cell compressor",
         "electric compressor",
@@ -3485,7 +3478,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:32.875Z",
+    "lastCheckedAt": "2026-11-23T18:09:55.058Z",
     "lastChangedAt": "2026-11-18T15:40:36.325Z",
     "lastError": null
   },
@@ -3499,7 +3492,7 @@
     "baselineAt": "2026-09-09T06:04:26.236Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:35.084Z",
+      "capturedAt": "2026-11-23T18:09:55.844Z",
       "keywords": [
         "membrane electrode assembly",
         "MEA",
@@ -3720,7 +3713,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:35.084Z",
+    "lastCheckedAt": "2026-11-23T18:09:55.844Z",
     "lastChangedAt": "2026-11-20T15:27:53.218Z",
     "lastError": null
   },
@@ -3730,11 +3723,11 @@
     "cadence": "weekly",
     "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
     "title": "Physical Hydrogen Storage | Department of Energy",
-    "hash": "20258968246b69d9058293f76b41068584c442d30c759fed1c0a8819393b0d24",
+    "hash": "82c53d26266d0704868e143c88eb9d98b49b7ff23f08b3367ae3bb51200c60db",
     "baselineAt": "2026-09-09T06:04:26.527Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:35.168Z",
+      "capturedAt": "2026-11-23T18:09:55.880Z",
       "keywords": [
         "350 bar",
         "700 bar",
@@ -3920,8 +3913,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:35.168Z",
-    "lastChangedAt": "2026-11-20T15:27:53.473Z",
+    "lastCheckedAt": "2026-11-23T18:09:55.880Z",
+    "lastChangedAt": "2026-11-23T18:09:55.880Z",
     "lastError": null
   },
   "toray-official-news": {
@@ -3934,7 +3927,7 @@
     "baselineAt": "2026-11-11T14:23:37.062Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:19.327Z",
+      "capturedAt": "2026-11-23T18:09:40.016Z",
       "keywords": [
         "carbon fiber",
         "fuel cell",
@@ -3952,7 +3945,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:19.327Z",
+    "lastCheckedAt": "2026-11-23T18:09:40.016Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -3966,7 +3959,7 @@
     "baselineAt": "2026-11-11T14:23:37.649Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:19.852Z",
+      "capturedAt": "2026-11-23T18:09:40.528Z",
       "keywords": [
         "fuel cell",
         "hydrogen",
@@ -4188,7 +4181,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:19.852Z",
+    "lastCheckedAt": "2026-11-23T18:09:40.528Z",
     "lastChangedAt": null,
     "lastError": null
   },
@@ -4198,11 +4191,11 @@
     "cadence": "daily",
     "url": "https://www.ballard.com/investor-hub/",
     "title": "Investor Hub - Ballard",
-    "hash": "66b60b5ea4c109b9209d45e311614ca0f458093f45809e59b15542e57066e014",
+    "hash": "6b0ab51ae2bb3c4584c104138298647e42cd963470225f39101a986a9c72c044",
     "baselineAt": "2026-11-11T14:23:38.982Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:21.468Z",
+      "capturedAt": "2026-11-23T18:09:42.546Z",
       "keywords": [
         "fuel cell",
         "production",
@@ -4353,15 +4346,15 @@
           ]
         },
         {
-          "hash": "d5e14898af04733cbaf84690efad3fba6ef60e8f3a972145dd222c79b842c55c",
-          "excerpt": "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.51 (-7.93%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.07 (-6.14%) TSX:BLDP Document Library Press relea…",
+          "hash": "2938656567a223e74d6624f7e467b2d40218a856d872013a2c434f62a7c30550",
+          "excerpt": "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.53 (+1.32%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.07 (0.00%) TSX:BLDP Document Library Press releas…",
           "matchedKeywords": [
             "power systems"
           ]
         },
         {
-          "hash": "ae0b50ff434ad29d8baaae967e5a9bd397680e8accac2e2ce38fb15793403dc9",
-          "excerpt": "t library TSX:BLDP Ballard Power Systems $1.51 (-7.93%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.07 (-6.14%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…",
+          "hash": "35d9a3d3b6f56fd110d2c09ab953c2496a4d6cc3d7b1466953e34ce2efe073f3",
+          "excerpt": "t library TSX:BLDP Ballard Power Systems $1.53 (+1.32%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.07 (0.00%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Resu…",
           "matchedKeywords": [
             "power systems"
           ]
@@ -4396,8 +4389,8 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:21.468Z",
-    "lastChangedAt": "2026-11-21T14:39:53.175Z",
+    "lastCheckedAt": "2026-11-23T18:09:42.546Z",
+    "lastChangedAt": "2026-11-23T18:09:42.546Z",
     "lastError": null
   },
   "innolight-news": {
@@ -4410,7 +4403,7 @@
     "baselineAt": "2026-11-11T14:23:56.032Z",
     "watchSnapshot": {
       "version": "1.0",
-      "capturedAt": "2026-11-22T14:35:40.326Z",
+      "capturedAt": "2026-11-23T18:09:59.373Z",
       "keywords": [
         "800G",
         "1.6T",
@@ -4632,7 +4625,7 @@
         }
       ]
     },
-    "lastCheckedAt": "2026-11-22T14:35:40.326Z",
+    "lastCheckedAt": "2026-11-23T18:09:59.373Z",
     "lastChangedAt": null,
     "lastError": null
   }

@@ -1,5 +1,684 @@
 [
   {
+    "id": "web-fuel-cell-2026-11-25-doe-hydrogen-storage-2f59daa1d57d",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": null,
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "U.S. DOE physical hydrogen storage changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Physical Hydrogen Storage | Department of Energy\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "doe-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-25T17:14:06.772Z",
+    "lastSeenAt": "2026-11-25T17:14:06.772Z",
+    "changeSignature": "2f59daa1d57d",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "f balance of plant components. This chart shows one potential cost reduction strategy for 700 bar compressed systems. This was last updated June 4, 2026 . Note - Interaction with this form and collection of this data is…"
+      ],
+      "removed": [
+        "f balance of plant components. This chart shows one potential cost reduction strategy for 700 bar compressed systems. This was last updated June 4, 2026 . Committed to Restoring America’s Energy Dominance. Follow Us Lin…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "medium",
+      "matchedKeywords": [
+        "350 bar",
+        "700 bar",
+        "compressed hydrogen",
+        "Type IV",
+        "storage tank"
+      ],
+      "affectedTarget": "node:tank",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review node tank; prepare an explicit patch only if the disclosure changes the node thesis."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-25-doe-hydrogen-storage-2f59daa1d57d-evidence-1",
+          "sourceId": "doe-hydrogen-storage",
+          "sourceType": "government",
+          "url": "https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage",
+          "pageTitle": "Physical Hydrogen Storage | Department of Energy",
+          "observedAt": "2026-11-25T17:14:06.772Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "350 bar",
+            "700 bar",
+            "compressed hydrogen",
+            "Type IV",
+            "storage tank"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "f balance of plant components. This chart shows one potential cost reduction strategy for 700 bar compressed systems. This was last updated June 4, 2026 . Note - Interaction with this form and collection of this data is…"
+            ],
+            "removed": [
+              "f balance of plant components. This chart shows one potential cost reduction strategy for 700 bar compressed systems. This was last updated June 4, 2026 . Committed to Restoring America’s Energy Dominance. Follow Us Lin…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-25-doe-hydrogen-storage-2f59daa1d57d-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "node:tank",
+        "statement": "Potential capacity change affecting node:tank; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "nodes.tank.summary",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-25T17:14:06.772Z",
+        "target": "node:tank",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "f balance of plant components. This chart shows one potential cost reduction strategy for 700 bar compressed systems. This was last updated June 4, 2026 . Committed to Restoring America’s Energy Dominance. Follow Us Lin…",
+            "afterExcerpt": "f balance of plant components. This chart shows one potential cost reduction strategy for 700 bar compressed systems. This was last updated June 4, 2026 . Note - Interaction with this form and collection of this data is…",
+            "matchedKeywords": [
+              "350 bar",
+              "700 bar",
+              "compressed hydrogen",
+              "Type IV",
+              "storage tank"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for node:tank; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-25T17:14:06.772Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-25-forvia-hydrogen-storage-642fbbb555e5",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "forvia",
+    "nodeId": "tank",
+    "impactType": "capacity_change",
+    "summary": "FORVIA hydrogen storage systems changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Hydrogen storage systems | FORVIA\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "forvia-hydrogen-storage"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-25T17:13:58.235Z",
+    "lastSeenAt": "2026-11-25T17:13:58.235Z",
+    "changeSignature": "642fbbb555e5",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.10€ +0.5% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+      ],
+      "removed": [
+        "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.06€ -2.68% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "hydrogen storage",
+        "tank",
+        "700 bar"
+      ],
+      "affectedTarget": "company:forvia",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.forvia; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-25-forvia-hydrogen-storage-642fbbb555e5-evidence-1",
+          "sourceId": "forvia-hydrogen-storage",
+          "sourceType": "company_official",
+          "url": "https://www.forvia.com/en/pioneering-technologies/electrification-and-energy-management/hydrogen-storage-systems",
+          "pageTitle": "Hydrogen storage systems | FORVIA",
+          "observedAt": "2026-11-25T17:13:58.235Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "hydrogen storage",
+            "tank",
+            "700 bar"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.10€ +0.5% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e"
+            ],
+            "removed": [
+              "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.06€ -2.68% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-25-forvia-hydrogen-storage-642fbbb555e5-claim-1",
+        "status": "unverified",
+        "type": "capacity_change",
+        "target": "company:forvia",
+        "statement": "Potential capacity change affecting company:forvia; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.forvia.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-25T17:13:58.235Z",
+        "target": "company:forvia",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.06€ -2.68% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.10€ +0.5% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.06€ -2.68% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce",
+            "afterExcerpt": "Hydrogen storage systems | FORVIA Skip to main content Share price : 8.10€ +0.5% Forvia Search Low Carbon Mode Enable Browse FORVIA.com in Low-Carbon Mode to reduce e",
+            "beforeValue": "2.68%",
+            "afterValue": "0.5%",
+            "unit": "%",
+            "matchedKeywords": [
+              "hydrogen storage",
+              "tank",
+              "700 bar"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 2.68% → 0.5%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "capacity_change",
+          "statement": "Potential capacity change disclosure change for company:forvia; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "scarcity"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-25T17:13:58.235Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-25-ballard-investor-news-89cc57de49c4",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "ballard",
+    "nodeId": "stack",
+    "impactType": "policy_change",
+    "summary": "Ballard official investor newsroom changed. The scanner isolated 2 added and 2 removed keyword-focused context window(s) on \"Investor Hub - Ballard\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.ballard.com/investor-hub/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "ballard-investor-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-25T17:13:49.682Z",
+    "lastSeenAt": "2026-11-25T17:13:49.682Z",
+    "changeSignature": "89cc57de49c4",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.38 (-4.83%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $0.97 (-4.90%) TSX:BLDP Document Library Press relea…",
+        "t library TSX:BLDP Ballard Power Systems $1.38 (-4.83%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $0.97 (-4.90%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+      ],
+      "removed": [
+        "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.43 (-5.92%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.01 (-4.72%) TSX:BLDP Document Library Press relea…",
+        "t library TSX:BLDP Ballard Power Systems $1.43 (-5.92%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.01 (-4.72%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+      ],
+      "addedCount": 2,
+      "removedCount": 2,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "production",
+        "stack",
+        "bus",
+        "power systems"
+      ],
+      "affectedTarget": "company:ballard",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 4 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.ballard; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-25-ballard-investor-news-89cc57de49c4-evidence-1",
+          "sourceId": "ballard-investor-news",
+          "sourceType": "company_official",
+          "url": "https://www.ballard.com/investor-hub/",
+          "pageTitle": "Investor Hub - Ballard",
+          "observedAt": "2026-11-25T17:13:49.682Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "production",
+            "stack",
+            "bus",
+            "power systems"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 2 added and 2 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.38 (-4.83%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $0.97 (-4.90%) TSX:BLDP Document Library Press relea…",
+              "t library TSX:BLDP Ballard Power Systems $1.38 (-4.83%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $0.97 (-4.90%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+            ],
+            "removed": [
+              "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.43 (-5.92%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.01 (-4.72%) TSX:BLDP Document Library Press relea…",
+              "t library TSX:BLDP Ballard Power Systems $1.43 (-5.92%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.01 (-4.72%) TSX:BLDP Document Library Press releases Go to document library Document Ballard Reports Q3 2026 Res…"
+            ],
+            "addedCount": 2,
+            "removedCount": 2,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-25-ballard-investor-news-89cc57de49c4-claim-1",
+        "status": "unverified",
+        "type": "policy_change",
+        "target": "company:ballard",
+        "statement": "Potential policy change affecting company:ballard; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.ballard.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-25T17:13:49.682Z",
+        "target": "company:ballard",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.43 (-5.92%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.01 (-4.72%) TSX:BLDP Document Library Press relea…",
+            "afterExcerpt": "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.38 (-4.83%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $0.97 (-4.90%) TSX:BLDP Document Library Press relea…",
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          },
+          {
+            "id": "fact-numeric-change-1",
+            "type": "numeric_change_candidate",
+            "status": "candidate",
+            "beforeExcerpt": "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.43 (-5.92%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $1.01 (-4.72%) TSX:BLDP Document Library Press relea…",
+            "afterExcerpt": "ument MD&#038;A Second Quarter 2026 July 31, 2026 Go to document library TSX:BLDP Ballard Power Systems $1.38 (-4.83%) NASDAQ: BLDP NASDAQ: BLDP Ballard Power Systems $0.97 (-4.90%) TSX:BLDP Document Library Press relea…",
+            "beforeValue": "5.92%",
+            "afterValue": "4.83%",
+            "unit": "%",
+            "matchedKeywords": [
+              "fuel cell",
+              "production",
+              "stack",
+              "bus",
+              "power systems"
+            ],
+            "statement": "Possible numeric disclosure change in watched context: 5.92% → 4.83%.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "policy_change",
+          "statement": "Potential policy change disclosure change for company:ballard; a numeric value changed in keyword-focused context and requires primary-source verification.",
+          "confidence": "medium",
+          "rationale": "The same keyword-focused context contains a changed comparable numeric token. This is a review lead, not proof that the number has the same business meaning in both excerpts.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "supplyChainImportance",
+            "marketUnderappreciation"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-25T17:13:49.682Z"
+  },
+  {
+    "id": "web-fuel-cell-2026-11-25-garrett-news-698b266a2b82",
+    "sourceType": "ai_scan",
+    "status": "pending",
+    "industryId": "fuel-cell",
+    "companyId": "garrett",
+    "nodeId": "compressor",
+    "impactType": "technology_change",
+    "summary": "Garrett Motion news changed. The scanner isolated 1 added and 1 removed keyword-focused context window(s) on \"Newsroom Garrett Motion - Garrett Motion\". Review the excerpts before changing the supply-chain thesis.",
+    "sourceUrl": "https://www.garrettmotion.com/news/",
+    "sourceNote": "Candidate event generated after the web scanner detected a page-content fingerprint change. Watched-context excerpts narrow the review target but do not prove semantic materiality.",
+    "sourceIds": [
+      "garrett-news"
+    ],
+    "submittedBy": "ai",
+    "reviewDecision": null,
+    "reviewedAt": null,
+    "detectedAt": "2026-11-25T17:13:46.609Z",
+    "lastSeenAt": "2026-11-25T17:13:46.609Z",
+    "changeSignature": "698b266a2b82",
+    "confidence": "medium",
+    "evidenceLevel": "A",
+    "changeEvidence": {
+      "status": "comparable",
+      "method": "watched-context-diff-v1",
+      "added": [
+        "ish Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…"
+      ],
+      "removed": [
+        "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…"
+      ],
+      "addedCount": 1,
+      "removedCount": 1,
+      "currentRelevant": [],
+      "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+    },
+    "analysis": {
+      "reviewPriority": "high",
+      "matchedKeywords": [
+        "fuel cell",
+        "compressor",
+        "hydrogen",
+        "electric compressor"
+      ],
+      "affectedTarget": "company:garrett",
+      "changeEvidenceStatus": "comparable",
+      "analystSummary": "The page changed and 2 keyword-focused context window(s) changed. Review the surfaced excerpts before forming a claim.",
+      "recommendedChecks": [
+        "Read the added and removed watched-context excerpts, then open the primary source for surrounding context.",
+        "Separate the observed text change from the investment claim it may support.",
+        "If a score changes, attach a dimension-specific scoreEvidence record with rationale, source IDs, evidence date, and provenance."
+      ],
+      "suggestedDatabaseAction": "Review companies.garrett; prepare an explicit evidence-backed patch only if the disclosure changes a supported field."
+    },
+    "researchPacket": {
+      "schemaVersion": "1.0",
+      "evidence": [
+        {
+          "id": "web-fuel-cell-2026-11-25-garrett-news-698b266a2b82-evidence-1",
+          "sourceId": "garrett-news",
+          "sourceType": "company_official",
+          "url": "https://www.garrettmotion.com/news/",
+          "pageTitle": "Newsroom Garrett Motion - Garrett Motion",
+          "observedAt": "2026-11-25T17:13:46.609Z",
+          "evidenceLevel": "A",
+          "matchedKeywords": [
+            "fuel cell",
+            "compressor",
+            "hydrogen",
+            "electric compressor"
+          ],
+          "observation": "The page fingerprint changed and the watched-context diff isolated 1 added and 1 removed context window(s).",
+          "changeSet": {
+            "status": "comparable",
+            "method": "watched-context-diff-v1",
+            "added": [
+              "ish Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…"
+            ],
+            "removed": [
+              "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…"
+            ],
+            "addedCount": 1,
+            "removedCount": 1,
+            "currentRelevant": [],
+            "note": "The page fingerprint changed and one or more keyword-focused context windows also changed. These excerpts are review candidates, not semantic conclusions."
+          },
+          "limitation": "The watched-context diff narrows the changed text around configured keywords, but it is not semantic interpretation. Dynamic page content or nearby boilerplate can still create noise; verify the primary source before supporting a claim."
+        }
+      ],
+      "claim": {
+        "id": "web-fuel-cell-2026-11-25-garrett-news-698b266a2b82-claim-1",
+        "status": "unverified",
+        "type": "technology_change",
+        "target": "company:garrett",
+        "statement": "Potential technology change affecting company:garrett; exact materiality is not yet verified.",
+        "confidence": "medium",
+        "rationale": "A changed monitored page also contains changed keyword-focused context. This narrows the review target but does not prove the investment implication."
+      },
+      "proposedPatch": {
+        "status": "draft",
+        "executable": false,
+        "operations": [
+          {
+            "op": "review",
+            "path": "companies.garrett.recentUpdates",
+            "value": null,
+            "reason": "Replace this review placeholder with an evidence-specific operation only after the exact disclosure is verified.",
+            "requiresHumanInput": true
+          }
+        ]
+      },
+      "semanticCandidate": {
+        "schemaVersion": "1.0",
+        "status": "candidate",
+        "generator": {
+          "type": "deterministic_heuristic",
+          "version": "1.0"
+        },
+        "createdAt": "2026-11-25T17:13:46.609Z",
+        "target": "company:garrett",
+        "observedFacts": [
+          {
+            "id": "fact-context-change-1",
+            "type": "watched_context_change",
+            "status": "candidate",
+            "beforeExcerpt": "한국어 Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…",
+            "afterExcerpt": "ish Home &gt; Newsroom Garrett Motion Featured News Garrett Motion’s Oil-Free Centrifugal Compressor Technology Advances Data Center Cooling Applications Engineered for industrial HVAC and cooling applications, Garrett&…",
+            "matchedKeywords": [
+              "fuel cell",
+              "compressor",
+              "hydrogen",
+              "electric compressor"
+            ],
+            "statement": "A keyword-focused source context changed between the previous and current snapshots.",
+            "requiresPrimarySourceVerification": true
+          }
+        ],
+        "interpretation": {
+          "status": "candidate",
+          "type": "technology_change",
+          "statement": "Potential technology change disclosure change for company:garrett; watched context changed and requires primary-source verification.",
+          "confidence": "low",
+          "rationale": "Keyword-focused context changed, but no reliable comparable numeric before/after candidate was isolated.",
+          "requiresPrimarySourceVerification": true
+        },
+        "scoreImpact": {
+          "status": "review_required",
+          "candidateDimensions": [
+            "validationBarrier",
+            "switchingCost"
+          ],
+          "direction": null,
+          "proposedScores": {},
+          "reason": "These rubric dimensions may be relevant to the event type, but no direction or score change is proposed before the disclosure is verified."
+        }
+      }
+    },
+    "firstDetectedAt": "2026-11-25T17:13:46.609Z"
+  },
+  {
     "id": "web-fuel-cell-2026-11-24-garrett-fuel-cell-781a8faf94e0",
     "sourceType": "ai_scan",
     "status": "pending",
